@@ -1,0 +1,119 @@
+/*
+ * clock.c
+ *
+ *  Created on: 29/04/2017
+ *      Author: joao
+ */
+
+#include "../../code/clock/clock.h"
+#include "../../code/error/error_clock.h"
+
+
+t_status clock_module_supported( void )
+{
+  return STATUS_SUCCESS;	// Posix supports clocks
+}
+
+t_status clock_time_set( t_time	tm )
+{
+ t_status st;
+
+ status_reset( & st );
+
+ return st;
+}
+
+t_status clock_time_get( t_time * p_tm )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  if( p_tm == (t_time *) 0 )
+      status_set( CLOCK, f_clock_time_get, e_clock_params, &st );
+  else if( time( p_tm ) == -1 )
+           status_set( CLOCK, f_clock_time_get, (unsigned int) errno, &st );
+
+  return st;
+}
+
+t_status clock_time_print( t_time tm, const char * format )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+t_status clock_time_diff( t_time t1, t_time t2, t_time * p_timeDiff )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+
+// - Time based for high resolution
+
+t_status clock_htTime_get( t_hrTime * p_hrTm )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+
+}
+
+t_status clock_hrTime_print( t_hrTime hrTm, const char * format	)
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+
+}
+
+t_status clock_hrTime_diff( t_hrTime t1, t_hrTime t2, t_hrTime * p_hrTimeDiff )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+// - Clock based for full time and date functionality
+
+t_status clock_localTime_get( t_clock * p_ltm )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+t_status clock_timeZone_set( t_clock * p_tz )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+t_status clock_timeZone_get( t_clock * p_tz )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  return st;
+}
+
+
