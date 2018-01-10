@@ -6,13 +6,13 @@
  */
 
 
-#include "../../code/util/util.h"
+#include <util/util.h>
 
-#include "../../code/error/error_util.h"
+#include <error/error_util.h>
 
 
 t_status util_module_supported( void )
 {
-  return STATUS_SUCCESS;
+  RETURN_STATUS_SUCCESS;
 }
 

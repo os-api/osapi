@@ -8,6 +8,6 @@
 #ifndef CLOCK_SOLARIS_H_
 #define CLOCK_SOLARIS_H_
 
-#include "../../code/clock/clock_posix.h"
+#include <clock/clock_posix.h>
 
 #endif /* CLOCK_SOLARIS_H_ */

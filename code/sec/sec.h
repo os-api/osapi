@@ -14,12 +14,14 @@ extern "C" {
 #endif
 
 
-#include "../../code/status/status.h"
-#include "../../code/sec/sec_defs.h"
-#include "../../code/sec/sec_platform.h"
+#include <status/status.h>
+#include <sec/sec_defs.h>
+#include <sec/sec_platform.h>
 
 // Functions bellow
-t_status sec_module_supported		( void					);
+t_status sec_module_supported		( void			);
+t_status sec_userID_get			( t_user_id	*	);
+t_status sec_groupID_get		( t_group_id	*	);
 
 // End of header with C++ declaration
 #ifdef __cplusplus

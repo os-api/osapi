@@ -8,6 +8,6 @@
 #ifndef PROC_PROC_LINUX_H_
 #define PROC_PROC_LINUX_H_
 
-#include "../../code/proc/proc_posix.h"
+#include <proc/proc_posix.h>
 
 #endif /* PROC_PROC_LINUX_H_ */

@@ -9,17 +9,15 @@
 #define ERROR_SEC_H_
 
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
 // Define SEC module private errors
 
-enum
-{
-	e_sec_generic = OSAPI_ERROR_BASE,
-	e_sec_support,
-	e_sec_params,					// Wrong entry parameters
-	e_sec_unknown = OSAPI_ERROR_MAX
+#define error_sec_X(a, b, c) a b,
+enum sec_X {
+	  #include <error/table_sec.h>
 };
+#undef error_sec_X
 
 
 #endif /* ERROR_SEC_H_ */

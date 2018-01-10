@@ -6,17 +6,17 @@
  */
 
 
-#include "../../code/string/string.h"
+#include <string/string.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include "../../code/error/error_string.h"
+#include <error/error_string.h>
 
 t_status string_module_supported( void )
 {
-  return STATUS_SUCCESS;
+  RETURN_STATUS_SUCCESS;
 }
 
 t_status string_instance_new( t_size size, t_string * p_string )
@@ -26,7 +26,7 @@ t_status string_instance_new( t_size size, t_string * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER || size == 0 )
-      status_set( STRING, f_string_instance_new, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING,__func__, e_string_params, &st );
   else
     {
       errno = 0;
@@ -34,7 +34,7 @@ t_status string_instance_new( t_size size, t_string * p_string )
       p_string->ps_location = (char *) calloc(1, size + 1 );
 
       if( p_string->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_new, (unsigned int) errno, &st );
+	  status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
       else
 	{
 	  p_string->tsize = size;	// Don't count the null char
@@ -52,14 +52,14 @@ t_status string_instance_delete( t_string * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instance_delete, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       p_string->tsize = 0;
       p_string->csize = 0;
 
       if( p_string->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_delete, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
       else
 	  free( (void *) p_string->ps_location );
     }
@@ -75,7 +75,7 @@ t_status string_instance_create( const char * p_initial_string, t_string * p_str
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER || p_initial_string == OSAPI_NULL_CHAR_POINTER )
-      status_set( STRING, f_string_instance_new, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       len = (t_size) strlen( p_initial_string );
@@ -85,7 +85,7 @@ t_status string_instance_create( const char * p_initial_string, t_string * p_str
       p_string->ps_location = (char *) calloc(1, len + 1 );
 
       if( p_string->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_create, (unsigned int) errno, &st );
+	  status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
       else
 	{
 	  if( strcpy( p_string->ps_location, p_initial_string ) != OSAPI_NULL_CHAR_POINTER )
@@ -94,7 +94,7 @@ t_status string_instance_create( const char * p_initial_string, t_string * p_str
 	    {
 	      // Unable to copy string, release memory
 	      string_instance_delete( p_string );
-	      status_set( STRING, f_string_instance_create, e_string_create, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_create, &st );
 	    }
 	}
     }
@@ -109,12 +109,12 @@ t_status string_instance_clone( t_string * ps_old, t_string * ps_new )
   status_reset( & st );
 
   if( ps_old == OSAPI_STRING_NULL_POINTER || ps_new == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instance_delete, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       // Make sure that new string is not already bounded to some heap address
       if( ps_new->ps_location != OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_clone, (unsigned int) e_string_exists, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_exists, &st );
       else
 	  st = string_instance_create( ps_old->ps_location, ps_new );
     }
@@ -130,25 +130,25 @@ t_status string_instance_put( const char * message, t_string * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instance_put, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       if( p_string->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_put, (unsigned int) e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
       else
 	{
 	  if( p_string->csize > 0 )
-	      status_set( STRING, f_string_instance_put, (unsigned int) e_string_exists, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_exists, &st );
 	  else
 	    {
 	      len = (t_size) strlen( message );
 	      if( p_string->tsize < len )
-		  status_set( STRING, f_string_instance_put, (unsigned int) e_string_noSpace, &st );
+		  status_iset( OSAPI_MODULE_STRING, __func__, e_string_noSpace, &st );
 	      else
 		{
 		  errno = 0;
 		  if( strncpy( p_string->ps_location, message, (size_t) len ) == OSAPI_NULL_CHAR_POINTER )
-		      status_set( STRING, f_string_instance_put, (unsigned int) errno, &st );
+		      status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
 		}
 	    }
 	}
@@ -165,11 +165,11 @@ t_status string_instance_set( const char * message, t_string * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instance_set, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       if( p_string->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instance_set, (unsigned int) e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
       else
 	{
 	  len = (t_size) strlen( message );
@@ -179,7 +179,7 @@ t_status string_instance_set( const char * message, t_string * p_string )
 
 	  errno = 0;
 	  if( strncpy( p_string->ps_location, message, (size_t) len ) == OSAPI_NULL_CHAR_POINTER )
-	      status_set( STRING, f_string_instance_set, (unsigned int) errno, &st );
+	      status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
 	}
     }
 
@@ -193,7 +193,7 @@ t_status string_instance_size( t_string * p_string, t_size * p_size )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instance_size, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
       *p_size = p_string->csize;
 
@@ -207,7 +207,7 @@ t_status string_instance_print( t_string * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_message_print, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
       printf("%.*s\n", (int) p_string->csize, p_string->ps_location );
 
@@ -221,12 +221,12 @@ t_status string_message_get( t_string * p_string, t_size maxSize, char * message
   status_reset( & st );
 
   if( p_string == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_message_get, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       errno = 0;
       if( strncpy( message, p_string->ps_location, (size_t) maxSize ) == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_message_get, (unsigned int) errno, &st );
+	  status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
     }
 
   return st;
@@ -239,11 +239,11 @@ t_status string_instances_concat( t_string * ps_str1, t_string * ps_str2, t_stri
   status_reset( & st );
 
   if( ps_final == OSAPI_STRING_NULL_POINTER || ps_str1 == OSAPI_STRING_NULL_POINTER || ps_str2 == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instances_concat, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       if( ps_final->ps_location == ps_str1->ps_location || ps_final->ps_location == ps_str2->ps_location )
-	  status_set( STRING, f_string_instances_concat, (unsigned int) e_string_sameString, &st );		// One of the string is the same as the destination string
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_sameString, &st );		// One of the string is the same as the destination string
       else
 	{
 	  string_instance_delete( ps_final );		  // Make sure to release memory of current string
@@ -252,19 +252,19 @@ t_status string_instances_concat( t_string * ps_str1, t_string * ps_str2, t_stri
 	  ps_final->ps_location = calloc( 1, ps_str1->csize + ps_str2->csize + 1 );
 
 	  if( ps_final->ps_location == OSAPI_NULL_CHAR_POINTER )
-	      status_set( STRING, f_string_instances_concat, (unsigned int) e_string_nullPointer, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
 	  else
 	    {
 	      ps_final->tsize = ps_str1->csize + ps_str2->csize;
 
 	      errno = 0;
 	      if( strncpy( ps_final->ps_location, ps_str1->ps_location, (size_t) ps_str1->csize ) == OSAPI_NULL_CHAR_POINTER )
-		  status_set( STRING, f_string_instances_concat, (unsigned int) errno, &st );
+		  status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
 	      else
 		{
 		  errno = 0;
 		  if( strncpy( ps_final->ps_location, ps_str1->ps_location, (size_t) ps_str1->csize ) == OSAPI_NULL_CHAR_POINTER )
-		      status_set( STRING, f_string_instances_concat, (unsigned int) errno, &st );
+		      status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
 		  else
 		      ps_final->csize = (t_size) strlen( ps_final->ps_location );
 		}
@@ -282,11 +282,11 @@ t_status string_instances_compare( t_string * ps_str1, t_string * ps_str2, Byte 
   status_reset( & st );
 
   if( ps_str1 == OSAPI_STRING_NULL_POINTER || ps_str2 == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instances_compare, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       if( ps_str1->ps_location == OSAPI_NULL_CHAR_POINTER || ps_str1->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instances_compare, (unsigned int) e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
       else
 	  *p_result = (Byte) strcmp( ps_str1->ps_location, ps_str2->ps_location );
     }
@@ -302,7 +302,7 @@ t_status string_instances_equal( t_string * ps_str1, t_string * ps_str2, _Bool *
   *p_result = 0;	// Assume FALSE
 
   if( ps_str1 == OSAPI_STRING_NULL_POINTER || ps_str2 == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instances_equal, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       // Strings must have equal size in the first place
@@ -312,7 +312,7 @@ t_status string_instances_equal( t_string * ps_str1, t_string * ps_str2, _Bool *
 	  if( strncmp( ps_str1->ps_location, ps_str2->ps_location, (size_t) ps_str1->csize ) == 0 )
 	      *p_result = 0;
 	  else
-	      status_set( STRING, f_string_instances_equal, (unsigned int) errno, &st );
+	      status_eset( OSAPI_MODULE_STRING, __func__, errno, &st );
 	}
     }
 
@@ -326,11 +326,11 @@ t_status string_instances_compareIcase( t_string * ps_str1, t_string * ps_str2, 
   status_reset( & st );
 
   if( ps_str1 == OSAPI_STRING_NULL_POINTER || ps_str2 == OSAPI_STRING_NULL_POINTER )
-      status_set( STRING, f_string_instances_compareIcase, (unsigned int) e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
   else
     {
       if( ps_str1->ps_location == OSAPI_NULL_CHAR_POINTER || ps_str1->ps_location == OSAPI_NULL_CHAR_POINTER )
-	  status_set( STRING, f_string_instances_compareIcase, (unsigned int) e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
       else
 	  *p_result = (Byte) strcasecmp( ps_str1->ps_location, ps_str2->ps_location );
     }

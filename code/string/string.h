@@ -14,9 +14,9 @@ extern "C" {
 #endif
 
 
-#include "../../code/status/status.h"
-#include "../../code/string/string_platform.h"
-#include "../../code/string/string_defs.h"
+#include <status/status.h>
+#include <string/string_platform.h>
+#include <string/string_defs.h>
 
 
 // Functions bellow

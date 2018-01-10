@@ -9,17 +9,14 @@
 #define ERROR_HW_H_
 
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
-// Define HW module private errors
+// Define IO module private errors
 
-enum
-{
-	e_hw_generic = OSAPI_ERROR_BASE,
-	e_hw_support,
-	e_hw_params,					// Wrong entry parameters
-	e_hw_unknown = OSAPI_ERROR_MAX
+#define error_hw_X(a, b, c) a b,
+enum hw_X {
+	  #include <error/table_hw.h>
 };
-
+#undef error_hw_X
 
 #endif /* ERROR_HW_H_ */

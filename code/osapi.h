@@ -14,14 +14,16 @@
 extern "C" {
 #endif
 
-#include "../code/proc/proc.h"
-// #include <machine/machine.h>
-#include "../code/hw/hw.h"
-#include "../code/os/os.h"
-#include "../code/sec/sec.h"
-#include "../code/clock/clock.h"
-#include "../code/util/util.h"
-#include "../code/string/string.h"
+#include <general/general_baseline.h>
+
+#include <proc/proc.h>
+//#include <machine/machine.h>
+#include <hw/hw.h>
+#include <os/os.h>
+#include <sec/sec.h>
+#include <clock/clock.h>
+#include <util/util.h>
+#include <string/string.h>
 
 // End of header with C++ declaration
 #ifdef __cplusplus

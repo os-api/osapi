@@ -10,7 +10,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include "../../code/hw/hw_linux.h"
+	#include <hw/hw_linux.h>
 #elif OS_SOLARIS
 	#include <hw/hw_solaris.h>
 #endif

@@ -8,14 +8,15 @@
 #ifndef ERROR_PRIV_OS_H_
 #define ERROR_PRIV_OS_H_
 
-#include "../../code/error/error_os.h"
+#include <error/error_os.h>
 
-static const char * os_errors[ OSAPI_ERROR_NUMBERS ] =
+#define error_os_X(a, b, c) [a]=c,
+
+static const char * os_errors[] =
 {
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+  #include <error/table_os.h>
 };
+
+#undef error_os_X
 
 #endif /* ERROR_PRIV_OS_H_ */

@@ -14,9 +14,9 @@ extern "C" {
 #endif
 
 
-#include "../../code/status/status.h"
-#include "../../code/hw/hw_defs.h"
-#include "../../code/hw/hw_platform.h"
+#include <status/status.h>
+#include <hw/hw_defs.h>
+#include <hw/hw_platform.h>
 
 // Functions bellow
 t_status	hw_module_supported		( void					);

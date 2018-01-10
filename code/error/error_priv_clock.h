@@ -8,16 +8,15 @@
 #ifndef ERROR_PRIV_CLOCK_H_
 #define ERROR_PRIV_CLOCK_H_
 
-#include "../../code/error/error_clock.h"
+#include <error/error_clock.h>
 
-// Define Clock module private errors
+#define error_clock_X(a, b, c) [a]=c,
 
-static const char * clock_errors[ OSAPI_ERROR_NUMBERS ] =
+static const char * clock_errors[] =
 {
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+  #include <error/table_clock.h>
 };
+
+#undef error_clock_X
 
 #endif /* ERROR_PRIV_CLOCK_H_ */

@@ -10,7 +10,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include "../../code/proc/proc_linux.h"
+	#include <proc/proc_linux.h>
 #elif OS_SOLARIS
 	#include <proc/proc_solaris.h>
 #endif

@@ -14,9 +14,9 @@ extern "C" {
 #endif
 
 
-#include "../../code/status/status.h"
-#include "../../code/os/os_defs.h"
-#include "../../code/os/os_platform.h"
+#include <status/status.h>
+#include <os/os_defs.h>
+#include <os/os_platform.h>
 
 t_status os_module_supported		( void					);
 t_status os_info_get			( t_osInfo * p_osInfo			);

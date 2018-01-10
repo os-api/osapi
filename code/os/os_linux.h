@@ -14,7 +14,7 @@ extern "C" {
 #endif
 
 
-#include "../../code/os/os_posix.h"
+#include <os/os_posix.h>
 
 // End of header with C++ declaration
 #ifdef __cplusplus

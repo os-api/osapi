@@ -9,16 +9,12 @@
 #define ERROR_CLOCK_H_
 
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
-enum
-{
-	e_clock_generic = OSAPI_ERROR_BASE,
-	e_clock_support,
-	e_clock_params,					// Wrong entry parameters
-	e_clock_unknown = OSAPI_ERROR_MAX
+#define error_clock_X(a, b, c) a b,
+enum clock_X {
+	  #include <error/table_clock.h>
 };
-
-
+#undef error_clock_X
 
 #endif /* ERROR_CLOCK_H_ */

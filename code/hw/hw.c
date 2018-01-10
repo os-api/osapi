@@ -5,11 +5,11 @@
  *      Author: joao
  */
 
-#include "../../code/hw/hw.h"
+#include <hw/hw.h>
 
-#include "../../code/error/error_hw.h"
+#include <error/error_hw.h>
 
 t_status hw_module_supported( void )
 {
-  return STATUS_SUCCESS;	// Posix supports clocks
+  RETURN_STATUS_SUCCESS;	// Posix supports clocks
 }

@@ -6,11 +6,11 @@
  */
 
 
-#include "../../code/sec/sec.h"
+#include <sec/sec.h>
 
-#include "../../code/error/error_sec.h"
+#include <error/error_sec.h>
 
 t_status sec_module_supported( void )
 {
-  return STATUS_SUCCESS;	// Posix supports clocks
+  RETURN_STATUS_SUCCESS;	// Posix supports clocks
 }

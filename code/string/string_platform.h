@@ -10,7 +10,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include "../../code/string/string_posix.h"
+	#include <string/string_posix.h>
 #elif OS_SOLARIS
 	#include <string/string_posix.h>
 #endif

@@ -5,13 +5,12 @@
  *      Author: joao
  */
 
-#include "../../code/clock/clock.h"
-#include "../../code/error/error_clock.h"
-
+#include <clock/clock.h>
+#include <error/error_clock.h>
 
 t_status clock_module_supported( void )
 {
-  return STATUS_SUCCESS;	// Posix supports clocks
+  RETURN_STATUS_SUCCESS;			// Posix supports clocks
 }
 
 t_status clock_time_set( t_time	tm )
@@ -30,9 +29,9 @@ t_status clock_time_get( t_time * p_tm )
   status_reset( & st );
 
   if( p_tm == (t_time *) 0 )
-      status_set( CLOCK, f_clock_time_get, e_clock_params, &st );
+      status_iset( OSAPI_MODULE_CLOCK, __func__, e_clock_params, &st );
   else if( time( p_tm ) == -1 )
-           status_set( CLOCK, f_clock_time_get, (unsigned int) errno, &st );
+      status_eset( OSAPI_MODULE_CLOCK, __func__, errno, &st );
 
   return st;
 }

@@ -5,12 +5,12 @@
  *      Author: joao
  */
 
-#include "../../code/os/os_posix.h"
+#include <os/os_posix.h>
 
 #include <string.h>
 
-#include "../../code/error/error_os.h"
-#include "../../code/os/os.h"
+#include <error/error_os.h>
+#include <os/os.h>
 
 t_status os_info_get( t_osInfo * p_osInfo )
 {
@@ -20,7 +20,7 @@ t_status os_info_get( t_osInfo * p_osInfo )
 
  errno = 0;
  if( uname( p_osInfo ) )
-	 status_set( OS, f_os_info_get, (unsigned int) errno, &st );
+     status_eset( OSAPI_MODULE_OS, __func__, errno, &st );
 
  return st;
 }
@@ -32,12 +32,12 @@ t_status os_name_get( t_osInfo * p_osInfo, char * p_osName )
  status_reset( & st );
 
  if( p_osInfo == (t_osInfo *) 0 || (p_osName == (char *) 0) )
-	 status_set( OS, f_os_name_get, (unsigned int) e_os_params, &st );
+     status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st );
  else
    {
-	 errno = 0;
-	 if( strcpy( p_osName, p_osInfo->sysname ) )
-	     status_set( OS, f_os_name_get, (unsigned int) errno, &st );
+     errno = 0;
+     if( strcpy( p_osName, p_osInfo->sysname ) )
+	 status_eset( OSAPI_MODULE_OS, __func__, errno, &st );
    }
 
  return st;

@@ -8,18 +8,17 @@
 #ifndef ERROR_PROC_H_
 #define ERROR_PROC_H_
 
+#include <limits.h>
+
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
-// Define Clock module private errors
+// Define Proc module private errors
 
-enum
-{
-	e_proc_generic = OSAPI_ERROR_BASE,
-	e_proc_support,
-	e_proc_params,					// Wrong entry parameters
-	e_proc_unknown = OSAPI_ERROR_MAX
+#define error_proc_X(a, b, c) a b,
+enum proc_X {
+	  #include <error/table_proc.h>
 };
-
+#undef error_proc_X
 
 #endif /* ERROR_PROC_H_ */

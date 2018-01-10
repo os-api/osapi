@@ -8,14 +8,15 @@
 #ifndef ERROR_PRIV_UTIL_H_
 #define ERROR_PRIV_UTIL_H_
 
-#include "../../code/error/error_util.h"
+#include <error/error_util.h>
 
-static const char * util_errors[ OSAPI_ERROR_NUMBERS ] =
+#define error_util_X(a, b, c) [a]=c,
+
+static const char * util_errors[] =
 {
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+  #include <error/table_util.h>
 };
+
+#undef error_util_X
 
 #endif /* ERROR_PRIV_UTIL_H_ */

@@ -14,9 +14,9 @@ extern "C" {
 #endif
 
 
-#include "../../code/status/status.h"
-#include "../../code/util/util_defs.h"
-#include "../../code/util/util_platform.h"
+#include <status/status.h>
+#include <util/util_defs.h>
+#include <util/util_platform.h>
 
 // Functions bellow
 t_status util_module_supported			( void					);

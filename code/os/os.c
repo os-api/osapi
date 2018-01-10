@@ -5,11 +5,12 @@
  *      Author: joao
  */
 
-#include "../../code/os/os.h"
+#include <os/os.h>
 
-#include "../../code/error/error_os.h"
+#include <error/error_os.h>
+
 
 t_status os_module_supported( void )
 {
-  return STATUS_SUCCESS;	// Posix supports clocks
+  RETURN_STATUS_SUCCESS;
 }

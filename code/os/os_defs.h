@@ -14,24 +14,6 @@ extern "C" {
 #endif
 
 
-/* Import OS specific definitions
-#ifdef	OS_LINUX
-	#include "os/os_linux_defs.h"
-#elif OS_SOLARIS
-	#include "os/os_solaris_defs.h"
-#endif
-*/
-
-// Define function IDs
-enum
-{
-	f_os_none = 0,
-	f_os_module_supported,
-	f_os_info_get,
-	f_os_name_get,
-	f_os_other
-};
-
 
 
 // End of header with C++ declaration

@@ -9,17 +9,14 @@
 #define ERROR_IO_H_
 
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
 // Define IO module private errors
 
-enum
-{
-	e_io_generic = OSAPI_ERROR_BASE,
-	e_io_support,
-	e_io_params,					// Wrong entry parameters
-	e_io_unknown = OSAPI_ERROR_MAX
+#define error_io_X(a, b, c) a b,
+enum io_X {
+	  #include <error/table_io.h>
 };
-
+#undef error_io_X
 
 #endif /* ERROR_IO_H_ */

@@ -14,6 +14,7 @@ extern "C" {
 #endif
 
 #include <stdint.h>
+#include <general/general_baseline.h>
 
 #define	OSAPI_NULL_CHAR_POINTER		( (char * ) 0 )
 
@@ -22,6 +23,16 @@ extern "C" {
 typedef uint64_t			t_size;
 
 typedef uint8_t				Byte;
+
+
+#define module_X(a, b, c) a b,
+enum module_id
+{
+  #include <general/table_modules.h>
+};
+
+#undef module_X
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus

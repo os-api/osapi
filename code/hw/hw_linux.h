@@ -16,7 +16,7 @@ extern "C" {
 
 #include <sys/sysinfo.h>
 
-#include "../../code/status/status.h"
+#include <status/status.h>
 
 typedef struct sysinfo		t_mem;
 

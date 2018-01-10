@@ -8,14 +8,14 @@
 #ifndef ERROR_PRIV_PROC_H_
 #define ERROR_PRIV_PROC_H_
 
-#include "../../code/error/error_sec.h"
+#include <error/error_proc.h>
 
-static const char * proc_errors[ OSAPI_ERROR_NUMBERS ] =
-{
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+#define error_proc_X(a, b, c) [a]=c,
+
+static const char * proc_errors[] = {
+  #include <error/table_proc.h>
 };
+
+#undef error_proc_X
 
 #endif /* ERROR_PRIV_PROC_H_ */

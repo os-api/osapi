@@ -8,6 +8,6 @@
 #ifndef CLOCK_LINUX_H_
 #define CLOCK_LINUX_H_
 
-#include "../../code/clock/clock_posix.h"
+#include <clock/clock_posix.h>
 
 #endif /* CLOCK_LINUX_H_ */

@@ -14,9 +14,9 @@
 extern "C" {
 #endif
 
-#include "../../code/status/status.h"
-#include "../../code/clock/clock_defs.h"
-#include "../../code/clock/clock_platform.h"
+#include <status/status.h>
+#include <clock/clock_defs.h>
+#include <clock/clock_platform.h>
 
 
 // There are three function types:

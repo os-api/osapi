@@ -8,14 +8,15 @@
 #ifndef ERROR_PRIV_HW_H_
 #define ERROR_PRIV_HW_H_
 
-#include "../../code/error/error_hw.h"
+#include <error/error_hw.h>
 
-static const char * hw_errors[ OSAPI_ERROR_NUMBERS ] =
+#define error_hw_X(a, b, c) [a]=c,
+
+static const char * hw_errors[] =
 {
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+  #include <error/table_hw.h>
 };
+
+#undef error_hw_X
 
 #endif /* ERROR_PRIV_HW_H_ */

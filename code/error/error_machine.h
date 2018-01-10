@@ -9,17 +9,15 @@
 #define ERROR_MACHINE_H_
 
 // Include General error definitions
-#include "../../code/error/error_def.h"
+#include <error/error_def.h>
 
 // Define Machine module private errors
 
-enum
-{
-	e_machine_generic = OSAPI_ERROR_BASE,
-	e_machine_support,
-	e_machine_params,					// Wrong entry parameters
-	e_machine_unknown = OSAPI_ERROR_MAX
+#define error_machine_X(a, b, c) a b,
+enum machine_X {
+	  #include <error/table_machine.h>
 };
+#undef error_machine_X
 
 
 #endif /* ERROR_MACHINE_H_ */

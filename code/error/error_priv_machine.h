@@ -8,14 +8,15 @@
 #ifndef ERROR_PRIV_MACHINE_H_
 #define ERROR_PRIV_MACHINE_H_
 
-#include "../../code/error/error_machine.h"
+#include <error/error_machine.h>
 
-static const char * machine_errors[ OSAPI_ERROR_NUMBERS ] =
+#define error_machine_X(a, b, c) [a]=c,
+
+static const char * machine_errors[] =
 {
-	OSAPI_ERROR_GENERIC,
-	OSAPI_ERROR_SUPPORT,
-	OSAPI_ERROR_INVPARAM,
-	OSAPI_ERROR_UNKNOWN
+  #include <error/table_machine.h>
 };
+
+#undef error_machine_X
 
 #endif /* ERROR_PRIV_MACHINE_H_ */

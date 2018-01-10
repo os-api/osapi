@@ -10,7 +10,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- 	#include "../../code/clock/clock_linux.h"
+ 	#include <clock/clock_linux.h>
 #elif OS_SOLARIS
   	#include <clock/clock_solaris.h>
 #endif
