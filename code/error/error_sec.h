@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_SEC_H_
-#define ERROR_SEC_H_
+#ifndef CODE_ERR_ERROR_SEC_H_
+#define CODE_ERR_ERROR_SEC_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -20,4 +20,4 @@ enum sec_X {
 #undef error_sec_X
 
 
-#endif /* ERROR_SEC_H_ */
+#endif /* CODE_ERR_ERROR_SEC_H_ */

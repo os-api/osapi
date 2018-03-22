@@ -13,12 +13,13 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-code/util \
-code/string \
-code/status \
-code/sec \
-code/proc \
-code/os \
-code/hw \
 code/clock \
+code/hw \
+code/log \
+code/os \
+code/proc \
+code/sec \
+code/status \
+code/string \
+code/util \
 

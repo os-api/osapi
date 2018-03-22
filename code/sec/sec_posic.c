@@ -6,10 +6,10 @@
  */
 
 #include <errno.h>
+#include <error/error_sec.h>
 
 #include <sec/sec.h>
 #include <sec/sec_posix.h>
-#include <error/error_sec.h>
 
 t_status sec_userID_get( t_user_id * p_id )
 {

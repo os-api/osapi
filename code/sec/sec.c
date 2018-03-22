@@ -6,9 +6,9 @@
  */
 
 
+#include <error/error_sec.h>
 #include <sec/sec.h>
 
-#include <error/error_sec.h>
 
 t_status sec_module_supported( void )
 {

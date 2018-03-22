@@ -24,6 +24,7 @@ extern "C" {
 #include <clock/clock.h>
 #include <util/util.h>
 #include <string/string.h>
+#include <log/log.h>
 
 // End of header with C++ declaration
 #ifdef __cplusplus

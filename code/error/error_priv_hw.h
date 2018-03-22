@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_HW_H_
-#define ERROR_PRIV_HW_H_
+#ifndef CODE_ERR_ERROR_PRIV_HW_H_
+#define CODE_ERR_ERROR_PRIV_HW_H_
 
 #include <error/error_hw.h>
 
@@ -19,4 +19,4 @@ static const char * hw_errors[] =
 
 #undef error_hw_X
 
-#endif /* ERROR_PRIV_HW_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_HW_H_ */

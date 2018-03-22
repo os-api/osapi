@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_STRING_H_
-#define ERROR_STRING_H_
+#ifndef CODE_ERR_ERROR_STRING_H_
+#define CODE_ERR_ERROR_STRING_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -20,4 +20,4 @@ enum string_X {
 #undef error_string_X
 
 
-#endif /* ERROR_STRING_H_ */
+#endif /* CODE_ERR_ERROR_STRING_H_ */

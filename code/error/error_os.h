@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_OS_H_
-#define ERROR_OS_H_
+#ifndef CODE_ERR_ERROR_OS_H_
+#define CODE_ERR_ERROR_OS_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -20,4 +20,4 @@ enum os_X {
 #undef error_os_X
 
 
-#endif /* ERROR_OS_H_ */
+#endif /* CODE_ERR_ERROR_OS_H_ */

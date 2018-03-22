@@ -15,4 +15,5 @@ module_X( OSAPI_MODULE_SEC, 		,	"SECURITY"	)
 module_X( OSAPI_MODULE_HW, 		,	"HW"		)
 module_X( OSAPI_MODULE_UTIL, 		,	"UTIL"		)
 module_X( OSAPI_MODULE_IO, 		,	"IO"		)
+module_X( OSAPI_MODULE_LOG, 		,	"LOG"		)
 

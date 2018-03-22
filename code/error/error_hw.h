@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_HW_H_
-#define ERROR_HW_H_
+#ifndef CODE_ERR_ERROR_HW_H_
+#define CODE_ERR_ERROR_HW_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -19,4 +19,4 @@ enum hw_X {
 };
 #undef error_hw_X
 
-#endif /* ERROR_HW_H_ */
+#endif /* CODE_ERR_ERROR_HW_H_ */

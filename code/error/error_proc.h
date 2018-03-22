@@ -5,13 +5,13 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PROC_H_
-#define ERROR_PROC_H_
+#ifndef CODE_ERR_ERROR_PROC_H_
+#define CODE_ERR_ERROR_PROC_H_
 
+#include <error/error_def.h>
 #include <limits.h>
 
 // Include General error definitions
-#include <error/error_def.h>
 
 // Define Proc module private errors
 
@@ -21,4 +21,4 @@ enum proc_X {
 };
 #undef error_proc_X
 
-#endif /* ERROR_PROC_H_ */
+#endif /* CODE_ERR_ERROR_PROC_H_ */

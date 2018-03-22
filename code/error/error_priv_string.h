@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_STRING_H_
-#define ERROR_PRIV_STRING_H_
+#ifndef CODE_ERR_ERROR_PRIV_STRING_H_
+#define CODE_ERR_ERROR_PRIV_STRING_H_
 
 #include <error/error_string.h>
 
@@ -19,4 +19,4 @@ static const char * string_errors[] =
 
 #undef error_string_X
 
-#endif /* ERROR_PRIV_STRING_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_STRING_H_ */

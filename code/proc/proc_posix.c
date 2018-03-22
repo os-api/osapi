@@ -5,11 +5,11 @@
  *      Author: joao
  */
 
+#include <error/error_proc.h>
 #include <signal.h>
 
 #include <proc/proc.h>
 #include <proc/proc_posix.h>
-#include <error/error_proc.h>
 
 t_status proc_module_supported( void )
 {

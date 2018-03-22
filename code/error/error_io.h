@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_IO_H_
-#define ERROR_IO_H_
+#ifndef CODE_ERR_ERROR_IO_H_
+#define CODE_ERR_ERROR_IO_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -19,4 +19,4 @@ enum io_X {
 };
 #undef error_io_X
 
-#endif /* ERROR_IO_H_ */
+#endif /* CODE_ERR_ERROR_IO_H_ */

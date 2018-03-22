@@ -5,15 +5,12 @@
  *      Author: joao
  */
 
-#ifndef ERRORS_PRIV_H_
-#define ERRORS_PRIV_H_
+#ifndef CODE_ERR_ERRORS_PRIV_H_
+#define CODE_ERR_ERRORS_PRIV_H_
 
+#include <stddef.h>
 
 // Include module information
-#include <general/general_defs.h>
-#include <general/general_priv.h>
-
-// Include General error definitions
 #include <error/error_def.h>
 #include <error/error_priv_clock.h>
 #include <error/error_priv_hw.h>
@@ -24,6 +21,10 @@
 #include <error/error_priv_sec.h>
 #include <error/error_priv_string.h>
 #include <error/error_priv_util.h>
+#include <general/general_defs.h>
+#include <general/general_priv.h>
+
+// Include General error definitions
 
 static const char * error_none [] =
 {
@@ -52,4 +53,4 @@ static const char ** osapi_errors[] =
 
 
 
-#endif /* ERRORS_PRIV_H_ */
+#endif /* CODE_ERR_ERRORS_PRIV_H_ */

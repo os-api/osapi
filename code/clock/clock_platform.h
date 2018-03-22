@@ -10,10 +10,9 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- 	#include <clock/clock_linux.h>
+#include <clock/clock_linux.h>
 #elif OS_SOLARIS
-  	#include <clock/clock_solaris.h>
+#include <clock/clock_solaris.h>
 #endif
-
 
 #endif /* CLOCK_PLATFORM_H_ */

@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_CLOCK_H_
-#define ERROR_CLOCK_H_
+#ifndef CODE_ERR_ERROR_CLOCK_H_
+#define CODE_ERR_ERROR_CLOCK_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -17,4 +17,4 @@ enum clock_X {
 };
 #undef error_clock_X
 
-#endif /* ERROR_CLOCK_H_ */
+#endif /* CODE_ERR_ERROR_CLOCK_H_ */

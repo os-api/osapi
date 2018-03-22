@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_UTIL_H_
-#define ERROR_UTIL_H_
+#ifndef CODE_ERR_ERROR_UTIL_H_
+#define CODE_ERR_ERROR_UTIL_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -20,4 +20,4 @@ enum util_X {
 #undef error_util_X
 
 
-#endif /* ERROR_UTIL_H_ */
+#endif /* CODE_ERR_ERROR_UTIL_H_ */

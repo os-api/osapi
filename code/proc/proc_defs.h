@@ -5,7 +5,7 @@
  *      Author: joao
  */
 
-#ifndef PROC_PROC_DEFS_H_
+#ifndef PROC_LOG_DEFS_H_
 #define PROC_PROC_DEFS_H_
 
 // Make sure that header is easily imported from c++
@@ -23,6 +23,7 @@ extern "C" {
 */
 
 // Define function IDs
+  /*
 enum
 {
         f_proc_none = 0,
@@ -31,7 +32,7 @@ enum
 	f_proc_parentPid_get,
 	f_proc_signal_send
 };
-
+*/
 // End of header with C++ declaration
 #ifdef __cplusplus
 }

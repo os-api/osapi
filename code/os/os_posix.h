@@ -17,10 +17,23 @@ extern "C" {
   #define _POSIX_SOURCE
 #endif
 
-#include <sys/utsname.h>
-#include <errno.h>
+struct s_osInfo
+{
+  char		kernel		[ OSAPI_OS_MAX_KERNEL_NAME	];
+  char		node		[ OSAPI_OS_MAX_NODE_NAME	];
+  char		release		[ OSAPI_OS_MAX_RELEASE_NAME	];
+  char		version		[ OSAPI_OS_MAX_VERSION		];
+  char		machine		[ OSAPI_OS_MAX_MACHINE_NAME	];
+  char		domain		[ OSAPI_OS_MAX_DOMAIN_NAME	];
+  char		provider	[ OSAPI_OS_MAX_PROVIDER_NAME	];
+  char		provider_release[ OSAPI_OS_MAX_PROVIDER_RELEASE	];
+};
 
-typedef struct utsname		t_osInfo;
+typedef struct s_osInfo		t_osInfo;
+
+// Internal POSIX module functions
+t_status os_posix_info_get( t_osInfo * p_osInfo );
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus

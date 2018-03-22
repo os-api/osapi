@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_IO_H_
-#define ERROR_PRIV_IO_H_
+#ifndef CODE_ERR_ERROR_PRIV_IO_H_
+#define CODE_ERR_ERROR_PRIV_IO_H_
 
 #include <error/error_io.h>
 
@@ -19,4 +19,4 @@ static const char * io_errors[] =
 
 #undef error_io_X
 
-#endif /* ERROR_PRIV_IO_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_IO_H_ */

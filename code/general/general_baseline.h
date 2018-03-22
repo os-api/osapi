@@ -5,11 +5,25 @@
  *      Author: joao
  */
 
-#ifndef CODE_GENERAL_GENERAL_BASELINE_H_
-#define CODE_GENERAL_GENERAL_BASELINE_H_
+#ifndef GENERAL_BASELINE_H_
+#define GENERAL_BASELINE_H_
+
+#ifdef __cplusplus
+extern "C"
+  {
+
+#else
 
 #if __STDC_VERSION__ != 201112L
 #  error "Wrong C standard version"
 #endif
 
-#endif /* CODE_GENERAL_GENERAL_BASELINE_H_ */
+#endif
+
+// End of header with C++ declaration
+#ifdef __cplusplus
+}
+#endif
+
+
+#endif /* GENERAL_BASELINE_H_ */

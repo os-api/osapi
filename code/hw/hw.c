@@ -5,9 +5,9 @@
  *      Author: joao
  */
 
+#include <error/error_hw.h>
 #include <hw/hw.h>
 
-#include <error/error_hw.h>
 
 t_status hw_module_supported( void )
 {

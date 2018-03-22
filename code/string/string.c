@@ -6,13 +6,13 @@
  */
 
 
+#include <error/error_string.h>
 #include <string/string.h>
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-#include <error/error_string.h>
 
 t_status string_module_supported( void )
 {

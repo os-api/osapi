@@ -14,6 +14,7 @@ RM := rm -rf
 -include code/sec/subdir.mk
 -include code/proc/subdir.mk
 -include code/os/subdir.mk
+-include code/log/subdir.mk
 -include code/hw/subdir.mk
 -include code/clock/subdir.mk
 -include subdir.mk
@@ -46,6 +47,5 @@ clean:
 	-@echo ' '
 
 .PHONY: all clean dependents
-.SECONDARY:
 
 -include ../makefile.targets

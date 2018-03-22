@@ -8,5 +8,4 @@
 #ifndef CLOCK_DEFS_H_
 #define CLOCK_DEFS_H_
 
-
 #endif /* CLOCK_DEFS_H_ */

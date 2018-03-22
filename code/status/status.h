@@ -20,9 +20,12 @@ extern "C" {
 
 // Function section
 
-void status_reset( t_status * );
-void status_set( int, Byte, const char *, int, t_status * );
-void status_message_print( t_status );
+void		status_reset( t_status * );
+void		status_set( int, Byte, const char *, int, t_status * );
+void		status_message_print( t_status );
+const char *	status_module_get( t_status * );
+const char *	status_function_get( t_status * );
+const char *	status_error_get( t_status * );
 
 // Macro section
 

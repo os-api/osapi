@@ -6,9 +6,9 @@
  */
 
 
+#include <error/error_util.h>
 #include <util/util.h>
 
-#include <error/error_util.h>
 
 
 t_status util_module_supported( void )

@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_MACHINE_H_
-#define ERROR_MACHINE_H_
+#ifndef CODE_ERR_ERROR_MACHINE_H_
+#define CODE_ERR_ERROR_MACHINE_H_
 
 // Include General error definitions
 #include <error/error_def.h>
@@ -20,4 +20,4 @@ enum machine_X {
 #undef error_machine_X
 
 
-#endif /* ERROR_MACHINE_H_ */
+#endif /* CODE_ERR_ERROR_MACHINE_H_ */

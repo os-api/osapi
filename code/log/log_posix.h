@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef PROC_PROC_POSIX_H_
-#define PROC_PROC_POSIX_H_
+#ifndef LOG_LOG_POSIX_H_
+#define LOG_LOG_POSIX_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -17,19 +17,24 @@ extern "C" {
   #define _POSIX_SOURCE
 #endif
 
-
-#include <unistd.h>
-#include <sys/types.h>
-#include <signal.h>
-#include <errno.h>
+#include <syslog.h>
 
 
-#define t_pid		pid_t
-#define t_signal	int
+struct s_logGlobalOptions
+{
+  const char * ident;
+  int option;
+  int facility;
+};
+
+typedef struct s_logGlobalOptions	t_logGlobalOptions;
+typedef int				t_logOptions;
+
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* PROC_PROC_POSIX_H_ */
+#endif /* LOG_LOG_POSIX_H_ */

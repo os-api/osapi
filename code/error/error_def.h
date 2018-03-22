@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_DEF_H_
-#define ERROR_DEF_H_
+#ifndef CODE_ERR_ERROR_DEF_H_
+#define CODE_ERR_ERROR_DEF_H_
 
 #include <limits.h>
 #include <errno.h>
@@ -21,4 +21,4 @@
 #define OSAPI_ERROR_UNKNOWN	"Unknown error"
 
 
-#endif /* ERROR_DEF_H_ */
+#endif /* CODE_ERR_ERROR_DEF_H_ */

@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_CLOCK_H_
-#define ERROR_PRIV_CLOCK_H_
+#ifndef CODE_ERR_ERROR_PRIV_CLOCK_H_
+#define CODE_ERR_ERROR_PRIV_CLOCK_H_
 
 #include <error/error_clock.h>
 
@@ -19,4 +19,4 @@ static const char * clock_errors[] =
 
 #undef error_clock_X
 
-#endif /* ERROR_PRIV_CLOCK_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_CLOCK_H_ */

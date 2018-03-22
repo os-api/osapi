@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_MACHINE_H_
-#define ERROR_PRIV_MACHINE_H_
+#ifndef CODE_ERR_ERROR_PRIV_MACHINE_H_
+#define CODE_ERR_ERROR_PRIV_MACHINE_H_
 
 #include <error/error_machine.h>
 
@@ -19,4 +19,4 @@ static const char * machine_errors[] =
 
 #undef error_machine_X
 
-#endif /* ERROR_PRIV_MACHINE_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_MACHINE_H_ */

@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_UTIL_H_
-#define ERROR_PRIV_UTIL_H_
+#ifndef CODE_ERR_ERROR_PRIV_UTIL_H_
+#define CODE_ERR_ERROR_PRIV_UTIL_H_
 
 #include <error/error_util.h>
 
@@ -19,4 +19,4 @@ static const char * util_errors[] =
 
 #undef error_util_X
 
-#endif /* ERROR_PRIV_UTIL_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_UTIL_H_ */

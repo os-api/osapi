@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef ERROR_PRIV_OS_H_
-#define ERROR_PRIV_OS_H_
+#ifndef CODE_ERR_ERROR_PRIV_OS_H_
+#define CODE_ERR_ERROR_PRIV_OS_H_
 
 #include <error/error_os.h>
 
@@ -19,4 +19,4 @@ static const char * os_errors[] =
 
 #undef error_os_X
 
-#endif /* ERROR_PRIV_OS_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_OS_H_ */

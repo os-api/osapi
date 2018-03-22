@@ -5,13 +5,13 @@
  *      Author: joao
  */
 
+#include <error/errors_priv.h>
 #include <status/status.h>
 
 #include <stdio.h>
 #include <string.h>
 
 
-#include <error/errors_priv.h>
 
 void status_message_iprint( t_status status );
 void status_message_eprint( t_status status );
@@ -34,29 +34,50 @@ void status_set( int module, Byte tp, const char * fname, int code, t_status * s
 }
 
 
-void status_message_iprint( t_status status )
+void status_message_iprint( t_status s )
 {
   printf("Module %s, function %s with status: %s.\n",
-	 module_name[ status.module ],
-	 status.funcname,
-	 osapi_errors[ status.module ][ status.code ] );
+	 module_name[ s.module ],
+	 s.funcname,
+	 osapi_errors[ s.module ][ s.code ] );
 }
 
-void status_message_eprint( t_status status )
+void status_message_eprint( t_status s )
 {
   printf("Module %s, function %s with status: %s.\n",
-	 module_name[ status.module ],
-	 status.funcname,
-	 strerror(status.code) );
+	 module_name[ s.module ],
+	 s.funcname,
+	 strerror(s.code) );
 }
 
-void status_message_print( t_status status )
+void status_message_print( t_status s )
 {
-  printf("Status: (type, code)=(%d,%d)\n", status.type, status.code );
+  printf("Status: (type, code)=(%d,%d)\n", s.type, s.code );
 
-  if( status.type == STATUS_INTERNAL )
-      status_message_iprint( status );
+  if( s.type == STATUS_INTERNAL )
+      status_message_iprint( s );
   else
-      status_message_eprint( status );
+      status_message_eprint( s );
 }
+
+
+const char * status_module_get( t_status * ps )
+{
+  return module_name[ ps->module ];
+}
+
+const char * status_function_get( t_status * ps )
+{
+  return ps->funcname;
+}
+
+const char * status_error_get( t_status * ps )
+{
+  if( ps->type == STATUS_INTERNAL )
+      return osapi_errors[ ps->module ][ ps->code ];
+  else
+      return strerror(ps->code);
+}
+
+
 

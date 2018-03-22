@@ -1,2 +1,0 @@
-# osapi
-Open System API
