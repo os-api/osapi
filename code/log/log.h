@@ -17,12 +17,23 @@ extern "C" {
 #include <log/log_defs.h>
 #include <log/log_platform.h>
 
+struct s_log
+{
+ t_log_name			name;
+ t_log_options			options;
+ t_log_facility			facility;
+};
 
-t_status	log_module_supported		( void 						);
-t_status	log_optionsPosix_set		( const char *, int, int, t_logGlobalOptions *	);
-t_status	log_system_open			( t_logGlobalOptions 					);
-t_status	log_system_close		( void						);
-t_status	log_system_write		( t_logOptions, const char *			);
+typedef struct s_log		t_log;
+
+
+t_status	log_module_supported	( void 							);
+t_status 	log_options_set		( t_log_name, t_log_facility, t_log *			);
+t_status	log_posix_set		( t_log_posix,   t_log *				);
+t_status	log_windows_set		( t_log_windows, t_log *				);
+t_status	log_system_open		( t_log		 					);
+t_status	log_system_close	( t_log							);
+t_status	log_system_write	( t_log, t_log_level, t_log_message			);
 
 
 // End of header with C++ declaration

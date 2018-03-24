@@ -19,18 +19,20 @@ extern "C" {
 
 #include <syslog.h>
 
-
-struct s_logGlobalOptions
+struct s_options
 {
-  const char * ident;
-  int option;
-  int facility;
+  int		open;
 };
 
-typedef struct s_logGlobalOptions	t_logGlobalOptions;
-typedef int				t_logOptions;
+typedef const char *			t_log_name;
+typedef const char *			t_log_message;
+typedef struct s_options		t_log_posix;		// POSIX only options
+typedef int				t_log_windows;		// WINDOWS only options - Placeholder type
+typedef int				t_log_facility;
+typedef int				t_log_level;
 
-
+// The generic type is an alias for the particular type
+typedef t_log_posix			t_log_options;
 
 // End of header with C++ declaration
 #ifdef __cplusplus
