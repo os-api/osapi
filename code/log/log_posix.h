@@ -21,18 +21,16 @@ extern "C" {
 
 struct s_options
 {
+  char *	name;
   int		open;
+  int		facility;
 };
 
 typedef const char *			t_log_name;
 typedef const char *			t_log_message;
-typedef struct s_options		t_log_posix;		// POSIX only options
-typedef int				t_log_windows;		// WINDOWS only options - Placeholder type
+typedef struct s_options		t_log_options;
 typedef int				t_log_facility;
 typedef int				t_log_level;
-
-// The generic type is an alias for the particular type
-typedef t_log_posix			t_log_options;
 
 // End of header with C++ declaration
 #ifdef __cplusplus

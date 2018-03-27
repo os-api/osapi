@@ -15,18 +15,7 @@ t_status log_module_supported( void )
   RETURN_STATUS_SUCCESS;	// Posix supports syslog interface
 }
 
-t_status log_optionsWindows_set( t_log_windows options )
-{
-  t_status	st;
-
-  // Unsupported function in POSIX
-  status_iset( OSAPI_MODULE_LOG, __func__, e_log_support, &st );
-
-  return st;
-}
-
-// Support of syslog type of logging
-t_status log_optionsPosix_set( t_log_posix options , t_log * p_log )
+t_status log_options_set( t_log_options options, t_log * p_log )
 {
   t_status	st;
 
@@ -36,25 +25,9 @@ t_status log_optionsPosix_set( t_log_posix options , t_log * p_log )
       status_iset( OSAPI_MODULE_LOG, __func__, e_log_params, &st );
   else
     {
-      p_log->options    = options;
-    }
-
-  return st;
-}
-
-// Set Cross platform logging options
-t_status log_options_set( t_log_name name, t_log_facility fac, t_log * p_log )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( name == ((char *) 0) || p_log == ((t_log *) 0) )
-      status_iset( OSAPI_MODULE_LOG, __func__, e_log_params, &st );
-  else
-    {
-      p_log->name    	= name;
-      p_log->facility	= fac;
+      p_log->options.name    	= options.name;
+      p_log->options.facility	= options.facility;
+      p_log->options.open	= options.open;
     }
 
   return st;

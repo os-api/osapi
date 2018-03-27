@@ -28,9 +28,7 @@ typedef struct s_log		t_log;
 
 
 t_status	log_module_supported	( void 							);
-t_status 	log_options_set		( t_log_name, t_log_facility, t_log *			);
-t_status	log_posix_set		( t_log_posix,   t_log *				);
-t_status	log_windows_set		( t_log_windows, t_log *				);
+t_status 	log_options_set		( t_log_options, t_log *				);
 t_status	log_system_open		( t_log		 					);
 t_status	log_system_close	( t_log							);
 t_status	log_system_write	( t_log, t_log_level, t_log_message			);
