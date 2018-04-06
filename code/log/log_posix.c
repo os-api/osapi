@@ -15,29 +15,10 @@ t_status log_module_supported( void )
   RETURN_STATUS_SUCCESS;	// Posix supports syslog interface
 }
 
-t_status log_options_set( t_log_options options, t_log * p_log )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_log == ((t_log *) 0) )
-      status_iset( OSAPI_MODULE_LOG, __func__, e_log_params, &st );
-  else
-    {
-      p_log->options.name    	= options.name;
-      p_log->options.facility	= options.facility;
-      p_log->options.open	= options.open;
-    }
-
-  return st;
-}
-
-
 
 t_status log_system_open( t_log log )
 {
-  openlog( log.name, log.options.open, log.facility );
+  openlog( log.ident, log.option, log.facility );
 
   RETURN_STATUS_SUCCESS;
 }
@@ -57,3 +38,32 @@ t_status log_system_write( t_log log, t_log_level level, t_log_message message )
   // syslog doesn't return feedback about success or failure
   RETURN_STATUS_SUCCESS;
 }
+
+inline t_status log_debug_write( t_log log, t_log_message message )
+{
+  return log_system_write( log, LOG_DEBUG, message );
+}
+
+inline t_status log_info_write( t_log log, t_log_message message )
+{
+  return log_system_write( log, LOG_DEBUG, message );
+}
+
+
+inline t_status log_warning_write( t_log log, t_log_message message )
+{
+  return log_system_write( log, LOG_DEBUG, message );
+}
+
+
+inline t_status log_error_write( t_log log, t_log_message message )
+{
+  return log_system_write( log, LOG_DEBUG, message );
+}
+
+
+inline t_status log_fatal_write( t_log log, t_log_message message )
+{
+  return log_system_write( log, LOG_DEBUG, message );
+}
+

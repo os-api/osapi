@@ -79,5 +79,19 @@ const char * status_error_get( t_status * ps )
       return strerror(ps->code);
 }
 
+const char * status_errorByType_get( int code, Byte module, Byte type )
+{
+  if( type == STATUS_INTERNAL )
+      return osapi_errors[ module ][ code ];
+  else
+      return strerror(code);
+}
+
+const char * status_moduleByID_get( Byte module )
+{
+  return module_name[ module ];
+}
+
+
 
 

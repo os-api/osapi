@@ -19,18 +19,22 @@ extern "C" {
 
 #include <syslog.h>
 
-struct s_options
+struct s_log
 {
-  char *	name;
-  int		open;
-  int		facility;
+ const char *			ident;
+ int				option;
+ int				facility;
 };
 
-typedef const char *			t_log_name;
-typedef const char *			t_log_message;
-typedef struct s_options		t_log_options;
-typedef int				t_log_facility;
-typedef int				t_log_level;
+typedef struct s_log		t_log;
+typedef const char *		t_log_message;
+typedef int			t_log_level;
+
+// Macro section
+
+#define	log_source(s,x)		x->ident=s
+#define	log_options(o,x)	x->option=o
+#define	log_facility(f,x)	x->facility=f
 
 // End of header with C++ declaration
 #ifdef __cplusplus
