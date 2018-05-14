@@ -19,6 +19,8 @@ extern "C"
 #include <clock/clock_defs.h>
 #include <clock/clock_platform.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
+
 // There are three function types:
 
 // - Time in seconds
@@ -48,6 +50,8 @@ t_status
 clock_timeZone_set (t_clock *);
 t_status
 clock_timeZone_get (t_clock *);
+
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

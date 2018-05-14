@@ -18,6 +18,8 @@ extern "C" {
 #include <os/os_defs.h>
 #include <os/os_platform.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
+
 t_status os_module_supported		( void					);
 t_status os_info_get			( t_osInfo * 				);
 t_status os_name_get			( t_osInfo *, char **			);
@@ -28,6 +30,8 @@ t_status os_machine_get			( t_osInfo *, char **			);
 t_status os_domain_get			( t_osInfo *, char **			);
 t_status os_provider_get		( t_osInfo *, char **			);
 t_status os_providerRelease_get		( t_osInfo *, char **			);
+
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

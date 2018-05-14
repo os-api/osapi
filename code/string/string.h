@@ -18,6 +18,7 @@ extern "C" {
 #include <string/string_platform.h>
 #include <string/string_defs.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
 
 // Functions bellow
 t_status string_module_supported			( void					);
@@ -43,6 +44,8 @@ t_status string_instances_equal				( t_string *, t_string *, _Bool	*	);
 t_status string_instances_compare			( t_string *, t_string *, Byte	*	);
 t_status string_instances_compareIcase			( t_string *, t_string *, Byte	*	);
 t_status string_instances_concat			( t_string *, t_string *, t_string *	);
+
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

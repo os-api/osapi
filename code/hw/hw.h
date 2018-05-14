@@ -18,8 +18,12 @@ extern "C" {
 #include <hw/hw_defs.h>
 #include <hw/hw_platform.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
+
 // Functions bellow
 t_status	hw_module_supported		( void					);
+
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

@@ -17,9 +17,10 @@ extern "C" {
 #include <log/log_defs.h>
 #include <log/log_platform.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
 
-t_status	log_module_supported	( void 							);
-t_status	log_system_open		( t_log		 					);
+t_status 	log_module_supported	( void 							);
+t_status	log_system_open		( const char *, const char *, const char * [], t_log *	);
 t_status	log_system_close	( t_log							);
 t_status	log_system_write	( t_log, t_log_level, t_log_message			);
 
@@ -30,7 +31,7 @@ t_status	log_warning_write	( t_log, t_log_message					);
 t_status	log_error_write		( t_log, t_log_message					);
 t_status	log_fatal_write		( t_log, t_log_message					);
 
-
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

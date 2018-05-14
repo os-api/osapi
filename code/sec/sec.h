@@ -18,10 +18,14 @@ extern "C" {
 #include <sec/sec_defs.h>
 #include <sec/sec_platform.h>
 
+#pragma GCC visibility push(default)		// Start of public interface
+
 // Functions bellow
 t_status sec_module_supported		( void			);
 t_status sec_userID_get			( t_user_id	*	);
 t_status sec_groupID_get		( t_group_id	*	);
+
+#pragma GCC visibility pop			// End of public interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

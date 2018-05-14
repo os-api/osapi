@@ -16,7 +16,7 @@ extern "C" {
 #include <general/general_defs.h>
 #include <status/status_defs.h>
 
-
+#pragma GCC visibility push(default)		// Start of public interface
 
 // Function section
 
@@ -28,6 +28,8 @@ const char *	status_function_get( t_status * );
 const char *	status_error_get( t_status * );
 const char *	status_errorByType_get( int, Byte, Byte );
 const char *	status_moduleByID_get( Byte );
+
+#pragma GCC visibility pop			// End of public interface
 
 // Macro section
 

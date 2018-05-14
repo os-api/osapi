@@ -40,7 +40,7 @@ typedef struct s_status		t_status;
 #define STATUS_SYSTEM		1
 
 // Expansion of structure arguments
-#define STATUS(x)		x.code,x.module,x.type,x.funcname
+#define OSAPI_STATUS(x)		status(x.code,x.module,x.type,x.funcname)
 
 #define RETURN_STATUS_SUCCESS	{ t_status st; status_reset( &st ); return st; }
 
