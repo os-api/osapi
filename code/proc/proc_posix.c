@@ -5,9 +5,10 @@
  *      Author: joao
  */
 
-#include <error/error_proc.h>
+#include <sys/types.h>
 #include <signal.h>
 
+#include <error/error_proc.h>
 #include <proc/proc.h>
 #include <proc/proc_posix.h>
 

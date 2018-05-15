@@ -5,7 +5,7 @@
  *      Author: joao
  */
 
-#ifndef PROC_LOG_DEFS_H_
+#ifndef PROC_PROC_DEFS_H_
 #define PROC_PROC_DEFS_H_
 
 // Make sure that header is easily imported from c++
