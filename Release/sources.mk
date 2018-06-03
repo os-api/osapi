@@ -15,6 +15,7 @@ C_DEPS :=
 SUBDIRS := \
 code/clock \
 code/hw \
+code/ipc \
 code/log \
 code/os \
 code/proc \

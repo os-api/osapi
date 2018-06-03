@@ -8,15 +8,13 @@
 #include <clock/clock.h>
 #include <error/error_clock.h>
 
-t_status
-clock_module_supported (void)
+t_status clock_module_supported (void)
 {
   RETURN_STATUS_SUCCESS
   ;			// Posix supports clocks
 }
 
-t_status
-clock_time_set (t_time tm)
+t_status clock_time_set (t_time tm)
 {
   t_status st;
 
@@ -25,8 +23,7 @@ clock_time_set (t_time tm)
   return st;
 }
 
-t_status
-clock_time_get (t_time * p_tm)
+t_status clock_time_get (t_time * p_tm)
 {
   t_status st;
 
@@ -40,8 +37,7 @@ clock_time_get (t_time * p_tm)
   return st;
 }
 
-t_status
-clock_time_print (t_time tm, const char * format)
+t_status clock_time_print (t_time tm, const char * format)
 {
   t_status st;
 
@@ -50,8 +46,7 @@ clock_time_print (t_time tm, const char * format)
   return st;
 }
 
-t_status
-clock_time_diff (t_time t1, t_time t2, t_time * p_timeDiff)
+t_status clock_time_diff (t_time t1, t_time t2, t_time * p_timeDiff)
 {
   t_status st;
 
