@@ -1,0 +1,223 @@
+#include <unistd.h>
+#include <stdlib.h>
+#include <errno.h>
+#include <sys/types.h>
+#include <string.h>
+#include <pwd.h>
+#include <grp.h>
+
+#include "general/general_defs.h"
+#include "status/status.h"
+#include "common/common_types_posix.h"
+
+size_t get_size_pwd_entry( void );
+size_t get_size_grp_entry( void );
+void   set_common_status ( int code, const char * funcname, t_status * p_status );
+
+size_t get_size_pwd_entry( void )
+{
+  size_t size = (size_t) sysconf(_SC_GETPW_R_SIZE_MAX );
+  
+  if( size == -1 )          /* Value was indeterminate */
+      size = 16384;        /* Should be more than enough */
+
+ return size;
+}
+
+size_t get_size_grp_entry( void )
+{
+  size_t size = (size_t) sysconf( _SC_GETGR_R_SIZE_MAX );
+  
+  if( size == -1 )          /* Value was indeterminate */
+      size = 16384;        /* Should be more than enough */
+
+ return size;
+}
+
+
+void set_common_status( int code, const char * funcname, t_status * p_status )
+{
+ if( code == 0 )
+     status_iset( OSAPI_MODULE_NONE, funcname, 1, p_status );		// Empty result
+ else
+     status_iset( OSAPI_MODULE_NONE, funcname, code, p_status );	// Some error
+}
+
+// User functions
+
+t_status get_userID( t_uid * p_id )
+{
+  t_status st;
+
+  status_reset( &st );
+  
+  if( p_id == (t_uid *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+  else
+      *p_id = getuid();   
+
+  return st;
+}
+
+t_status set_userID( t_uid id )
+{
+  t_status st;
+  int	   rc = -1;
+
+  status_reset( &st );
+  
+  rc = setuid( id );
+  
+  if( rc != 0 )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+
+  return st;
+}
+
+
+t_status get_username_from_id( t_uid uid, size_t max_name, char * p_name )
+{
+  t_status 			st;
+  int				rc;
+  char *			buf;
+  struct passwd		pwd;
+  struct passwd *	result;
+
+  status_reset( &st );
+
+  size_t bufsize = get_size_pwd_entry();
+  buf = malloc( bufsize );
+  
+  if( buf == NULL )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+  else
+    {
+      rc = getpwuid_r( uid, &pwd, buf, bufsize, &result);
+      if( result == NULL )
+          set_common_status( rc, __func__, &st );
+      else
+          strncpy( p_name, pwd.pw_name, max_name );
+        
+      free( buf );
+    }
+    
+  return st;
+}
+
+t_status get_userID_from_name( char * username, t_uid * p_uid )
+{
+  t_status 			st;
+  int				rc;
+  char *			buf;
+  struct passwd		pwd;
+  struct passwd *	result;
+
+  status_reset( &st );
+
+  size_t bufsize = get_size_pwd_entry();
+  buf = malloc( bufsize );
+    
+  if( buf == NULL )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+  else
+    {
+      rc = getpwnam_r( username, &pwd, buf, bufsize, &result );
+      if( result == NULL )
+          set_common_status( rc, __func__, &st );
+      else
+          *p_uid = pwd.pw_uid;
+        
+      free( buf );
+    }
+    
+  return st;
+}
+
+// Group functions
+
+t_status get_groupID( t_gid * p_gid )
+{
+  t_status st;
+
+  status_reset( &st );
+  
+  if( p_gid == (t_gid *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+  else
+      *p_gid = getgid();   
+
+  return st;
+}
+
+t_status set_groupID( t_uid id )
+{
+  t_status st;
+  int	   rc = -1;
+
+  status_reset (&st);
+  
+  rc = setuid( id );
+  
+  if( rc != 0 )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+
+  return st;
+}
+
+t_status get_groupname_from_id( t_gid gid, size_t max_name, char * p_groupname )
+{
+  t_status 			st;
+  int				rc;
+  char *			buf;
+  struct group		grp;
+  struct group *	result;
+
+  status_reset( &st );
+
+  size_t bufsize = get_size_grp_entry();
+  buf = malloc( bufsize );
+    
+  if( buf == NULL )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+  else
+    {
+      rc = getgrgid_r( gid, &grp, buf, bufsize, &result );
+      if( result == NULL )
+          set_common_status( rc, __func__, &st );
+      else
+          strncpy( p_groupname, grp.gr_name, max_name );
+        
+      free( buf );
+    }
+    
+  return st;
+}
+
+t_status get_groupID_from_name( char * groupname, t_gid * p_gid )
+{
+  t_status 			st;
+  int				rc;
+  char *			buf;
+  struct group		grp;
+  struct group *	result;
+
+  status_reset( &st );
+
+  size_t bufsize = get_size_grp_entry();
+  buf = malloc( bufsize );
+     
+  if( buf == NULL )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+  else
+    {
+      rc = getgrnam_r( groupname, &grp, buf, bufsize, &result );
+      if( result == NULL )
+          set_common_status( rc, __func__, &st );
+      else
+          *p_gid = grp.gr_gid;
+        
+      free( buf );
+    }
+    
+  return st;
+}

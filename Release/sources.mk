@@ -14,6 +14,7 @@ C_DEPS :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 code/clock \
+code/common \
 code/hw \
 code/ipc \
 code/log \

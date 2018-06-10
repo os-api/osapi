@@ -22,17 +22,6 @@ extern "C" {
 #endif
 */
 
-// Define function IDs
-  /*
-enum
-{
-        f_proc_none = 0,
-	f_proc_module_supported,
-	f_proc_pid_get,
-	f_proc_parentPid_get,
-	f_proc_signal_send
-};
-*/
 // End of header with C++ declaration
 #ifdef __cplusplus
 }

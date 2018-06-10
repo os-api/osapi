@@ -17,14 +17,19 @@ extern "C" {
 
 #define STATUS_MAX_ERROR_SIZE	1025
 
+typedef int			t_status_error;
+typedef Byte			t_status_mod;
+typedef Byte			t_status_type;
+typedef const char *		t_status_funcname;
+
 // Definition of opaque status type
 
 struct s_status
 {
-  int		code;
-  Byte		module;
-  Byte		type;
-  const char *	funcname;
+  t_status_error	code;
+  t_status_mod		module;
+  t_status_type		type;
+  t_status_funcname	funcname;
 };
 
 typedef struct s_status		t_status;
@@ -35,6 +40,7 @@ typedef struct s_status		t_status;
 // Helper definitions for a correct way to check for success/failure of operations
 #define status_success( x )	( x.code == 0 )
 #define status_failure( x )	( x.code != 0 )
+#define status_error( x )	( x.code )
 
 #define STATUS_INTERNAL		0
 #define STATUS_SYSTEM		1
