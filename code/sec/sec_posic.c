@@ -5,6 +5,7 @@
  *      Author: joao
  */
 
+#include <stdio.h>
 #include <limits.h>
 
 #include "errno.h"
@@ -72,7 +73,7 @@ t_status sec_user_getIdFromName( char * username, t_uid * p_uid )
   return st;
 }
 
-t_status sec_user_getNameFromID( t_uid uid, t_size size, char * username )
+t_status sec_user_getNameFromID( t_uid uid, t_size max_name, char * username )
 {
   t_status	st;
 
@@ -82,7 +83,8 @@ t_status sec_user_getNameFromID( t_uid uid, t_size size, char * username )
       status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
   else
     {
-      size_t max_name = (size_t) sysconf( _POSIX_LOGIN_NAME_MAX );
+      // size_t max_name = (size_t) sysconf( _POSIX_LOGIN_NAME_MAX );
+
       st = get_username_from_id( uid, max_name, username );
 
       t_status_error err = status_error( st );

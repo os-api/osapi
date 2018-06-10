@@ -1,3 +1,5 @@
+
+#include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <errno.h>
@@ -97,7 +99,7 @@ t_status get_username_from_id( t_uid uid, size_t max_name, char * p_name )
           set_common_status( rc, __func__, &st );
       else
           strncpy( p_name, pwd.pw_name, max_name );
-        
+
       free( buf );
     }
     
@@ -176,7 +178,7 @@ t_status get_groupname_from_id( t_gid gid, size_t max_name, char * p_groupname )
 
   size_t bufsize = get_size_grp_entry();
   buf = malloc( bufsize );
-    
+ 
   if( buf == NULL )
       status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
   else

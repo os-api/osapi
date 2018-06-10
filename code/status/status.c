@@ -52,7 +52,7 @@ void status_message_eprint( t_status s )
 
 void status_message_print( t_status s )
 {
-  printf("Status: (type, code)=(%d,%d)\n", s.type, s.code );
+  //printf("Status: (type, code)=(%d,%d)\n", s.type, s.code );
 
   if( s.type == STATUS_INTERNAL )
       status_message_iprint( s );

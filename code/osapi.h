@@ -14,17 +14,18 @@
 extern "C" {
 #endif
 
-#include <general/general_baseline.h>
+#include "general/general_baseline.h"
 
-#include <proc/proc.h>
-//#include <machine/machine.h>
-#include <hw/hw.h>
-#include <os/os.h>
-#include <sec/sec.h>
-#include <clock/clock.h>
-#include <util/util.h>
-#include <string/string.h>
-#include <log/log.h>
+// Functional Modules
+
+#include "proc/proc.h"
+#include "hw/hw.h"
+#include "os/os.h"
+#include "sec/sec.h"
+#include "clock/clock.h"
+#include "util/util.h"
+#include "string/string.h"
+#include "log/log.h"
 
 // End of header with C++ declaration
 #ifdef __cplusplus
