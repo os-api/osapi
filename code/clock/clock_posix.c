@@ -1,12 +1,36 @@
-/*
- * clock.c
- *
- *  Created on: 29/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Clock module using a POSIX compliant implementation
+//
+// *****************************************************************************************
 
-#include <clock/clock.h>
-#include <error/error_clock.h>
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_clock.h"
+#include "status/status.h"
+
+// Own declarations
+#include "clock/clock.h"
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
+
 
 t_status clock_module_supported (void)
 {
@@ -121,3 +145,6 @@ clock_timeZone_get (t_clock * p_tz)
   return st;
 }
 
+
+
+#endif	// If POSIX is defined

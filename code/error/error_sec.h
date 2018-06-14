@@ -1,21 +1,29 @@
-/*
- * error_sec.h
- *
- *  Created on: 03/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Sec Error type declarations
+//
+// *****************************************************************************************
 
 #ifndef CODE_ERR_ERROR_SEC_H_
 #define CODE_ERR_ERROR_SEC_H_
 
-// Include General error definitions
-#include <error/error_def.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-// Define SEC module private errors
+// Include General error definitions
+#include "error/error_types.h"
+
+// Include own error definitions
 
 #define error_sec_X(a, b, c) a b,
 enum sec_X {
-	  #include <error/table_sec.h>
+	  #include "error/table_sec.h"
 };
 #undef error_sec_X
 

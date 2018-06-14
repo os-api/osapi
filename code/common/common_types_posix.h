@@ -1,12 +1,18 @@
-/*
- * common_types_posix.h
- *
- *  Created on: 10/06/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Common POSIX declarations
+//
+// *****************************************************************************************
 
 #ifndef COMMON_TYPES_POSIX_H_
 #define COMMON_TYPES_POSIX_H_
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -26,5 +32,6 @@ typedef gid_t	t_gid;		// Group ID
  }
 #endif
 
+#endif	// Posix only
 
 #endif /* COMMON_TYPES_POSIX_H_ */

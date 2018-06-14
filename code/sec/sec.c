@@ -1,14 +1,33 @@
-/*
- * sec.c
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Security Module entry point implementation file
+//
+// *****************************************************************************************
 
 
-#include <error/error_sec.h>
-#include <sec/sec.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_sec.h"
+#include "status/status.h"
+
+// Own declarations
+#include "sec/sec.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 t_status sec_module_supported( void )
 {

@@ -1,9 +1,11 @@
-/*
- * hw_platform.h
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	IPC platform OS selection file
+//
+// *****************************************************************************************
 
 #ifndef IPC_IPC_PLATFORM_H_
 #define IPC_IPC_PLATFORM_H_

@@ -1,9 +1,11 @@
-/*
- * util_platform.h
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Util module platform OS selection file
+//
+// *****************************************************************************************
 
 #ifndef UTIL_UTIL_PLATFORM_H_
 #define UTIL_UTIL_PLATFORM_H_

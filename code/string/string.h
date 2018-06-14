@@ -1,9 +1,11 @@
-/*
- * util.h
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide String module API
+//
+// *****************************************************************************************
 
 #ifndef STRING_STRING_H_
 #define STRING_STRING_H_
@@ -14,9 +16,9 @@ extern "C" {
 #endif
 
 
-#include <status/status.h>
-#include <string/string_platform.h>
-#include <string/string_defs.h>
+#include "status/status_types.h"
+#include "string/string_platform.h"
+#include <string/string_types.h>
 
 #pragma GCC visibility push(default)		// Start of public interface
 

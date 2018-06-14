@@ -1,16 +1,22 @@
-/*
- * proc_posix.h
- *
- *  Created on: 28/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Log module POSIX declarations
+//
+// *****************************************************************************************
 
 #ifndef LOG_LOG_POSIX_H_
 #define LOG_LOG_POSIX_H_
 
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
-extern "C" {
+ extern "C" {
 #endif
 
 #ifndef _POSIX_SOURCE
@@ -33,7 +39,9 @@ typedef int			t_log_level;
 
 // End of header with C++ declaration
 #ifdef __cplusplus
-}
+ }
 #endif
+
+#endif	// End of POSIX declarations
 
 #endif /* LOG_LOG_POSIX_H_ */

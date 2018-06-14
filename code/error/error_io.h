@@ -1,21 +1,29 @@
-/*
- * error_io.h
- *
- *  Created on: 03/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	IO Error type declarations
+//
+// *****************************************************************************************
 
 #ifndef CODE_ERR_ERROR_IO_H_
 #define CODE_ERR_ERROR_IO_H_
 
-// Include General error definitions
-#include <error/error_def.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-// Define IO module private errors
+// Include General error definitions
+#include "error/error_types.h"
+
+// Include own error definitions
 
 #define error_io_X(a, b, c) a b,
 enum io_X {
-	  #include <error/table_io.h>
+	  #include "error/table_io.h"
 };
 #undef error_io_X
 

@@ -1,9 +1,11 @@
-/*
- * hw.h
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide Hardware Module API
+//
+// *****************************************************************************************
 
 #ifndef HW_HW_H_
 #define HW_HW_H_
@@ -14,8 +16,8 @@ extern "C" {
 #endif
 
 
-#include <status/status.h>
-#include <hw/hw_defs.h>
+#include <status/status_types.h>
+#include <hw/hw_types.h>
 #include <hw/hw_platform.h>
 
 #pragma GCC visibility push(default)		// Start of public interface

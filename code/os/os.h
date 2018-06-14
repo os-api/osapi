@@ -1,9 +1,11 @@
-/*
- * os.h
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide OS (Operating System) module API
+//
+// *****************************************************************************************
 
 #ifndef OS_OS_H_
 #define OS_OS_H_
@@ -14,9 +16,9 @@ extern "C" {
 #endif
 
 
-#include <status/status.h>
-#include <os/os_defs.h>
-#include <os/os_platform.h>
+#include "status/status_types.h"
+#include <os/os_types.h>
+#include "os/os_platform.h"
 
 #pragma GCC visibility push(default)		// Start of public interface
 

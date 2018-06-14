@@ -1,16 +1,18 @@
-/*
- * proc_platform.h
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	System Log platform OS selection file
+//
+// *****************************************************************************************
 
 #ifndef LOG_LOG_PLATFORM_H_
 #define LOG_LOG_PLATFORM_H_
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include <log/log_linux.h>
+	#include "log/log_linux.h"
 #endif
 
 

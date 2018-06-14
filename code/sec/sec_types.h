@@ -1,21 +1,21 @@
 /*
- * os_solaris.h
+ * sec_defs.h
  *
- *  Created on: 01/04/2017
+ *  Created on: 23/04/2017
  *      Author: joao
  */
 
-#ifndef OS_OS_SOLARIS_H_
-#define OS_OS_SOLARIS_H_
+#ifndef SEC_SEC_TYPES_H_
+#define SEC_SEC_TYPES_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-
-#include <os/os_posix.h>
-
+#ifdef OS_LINUX
+   #include "sec/sec_linux.h"
+#endif
 
 // End of header with C++ declaration
 #ifdef __cplusplus
@@ -23,4 +23,4 @@ extern "C" {
 #endif
 
 
-#endif /* OS_OS_SOLARIS_H_ */
+#endif /* SEC_SEC_TYPES_H_ */

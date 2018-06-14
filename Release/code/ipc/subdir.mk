@@ -4,13 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/ipc/semaphore.c 
+../code/ipc/semaphore_posix.c 
 
 OBJS += \
-./code/ipc/semaphore.o 
+./code/ipc/semaphore_posix.o 
 
 C_DEPS += \
-./code/ipc/semaphore.d 
+./code/ipc/semaphore_posix.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

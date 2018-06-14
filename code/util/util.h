@@ -1,9 +1,11 @@
-/*
- * util.h
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide Util(ities) module API
+//
+// *****************************************************************************************
 
 #ifndef UTIL_UTIL_H_
 #define UTIL_UTIL_H_
@@ -14,9 +16,9 @@ extern "C" {
 #endif
 
 
-#include <status/status.h>
-#include <util/util_defs.h>
-#include <util/util_platform.h>
+#include "status/status_types.h"
+#include <util/util_types.h>
+#include "util/util_platform.h"
 
 #pragma GCC visibility push(default)		// Start of public interface
 

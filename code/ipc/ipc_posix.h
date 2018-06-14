@@ -1,17 +1,28 @@
-/*
- * hw_linux.h
- *
- *  Created on: 01/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	IPC POSIX declarations
+//
+// *****************************************************************************************
 
 #ifndef IPC_IPC_POSIX_H_
 #define IPC_IPC_POSIX_H_
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+
 
 union semun_posix
 {
@@ -27,5 +38,6 @@ typedef union semun_posix	t_semun_posix;
 }
 #endif
 
+#endif	// End of POSIX declarations
 
 #endif /* IPC_IPC_POSIX_H_ */

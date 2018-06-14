@@ -8,6 +8,9 @@
 #ifndef OS_OS_LINUX_H_
 #define OS_OS_LINUX_H_
 
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
+
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
@@ -39,5 +42,6 @@ t_status os_info_provider_get( t_osInfo * );
 }
 #endif
 
+#endif	// End of OS Linux
 
 #endif /* OS_OS_LINUX_H_ */

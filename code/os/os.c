@@ -1,14 +1,35 @@
-/*
- * os.c
- *
- *  Created on: 01/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	OS module entry point implementation file
+//
+// *****************************************************************************************
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System includes
 #include <string.h>
-#include <error/error_os.h>
-#include <os/os.h>
 
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_os.h"
+#include "status/status.h"
+
+// Own declarations
+#include "os/os.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 t_status os_module_supported( void )
 {

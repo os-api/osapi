@@ -1,9 +1,11 @@
-/*
- * hw_platform.h
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	HW platform OS selection file
+//
+// *****************************************************************************************
 
 #ifndef HW_HW_PLATFORM_H_
 #define HW_HW_PLATFORM_H_

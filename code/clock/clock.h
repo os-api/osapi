@@ -1,10 +1,11 @@
-/*
- * clock.h
- *
- *  Created on: 29/04/2017
- *      Author: joao
- *      Purpose: Provide Calendar time API interface
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide Calendar time API
+//
+// *****************************************************************************************
 
 #ifndef CLOCK_H_
 #define CLOCK_H_
@@ -15,8 +16,8 @@ extern "C"
   {
 #endif
 
-#include <status/status.h>
-#include <clock/clock_defs.h>
+#include <status/status_types.h>
+#include <clock/clock_types.h>
 #include <clock/clock_platform.h>
 
 #pragma GCC visibility push(default)		// Start of public interface

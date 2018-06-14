@@ -1,20 +1,35 @@
-/*
- * error_priv_util.h
- *
- *  Created on: 01/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Util private error declarations
+//
+// *****************************************************************************************
 
 #ifndef CODE_ERR_ERROR_PRIV_UTIL_H_
 #define CODE_ERR_ERROR_PRIV_UTIL_H_
 
-#include <error/error_util.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Include own error public declarations
+#include "error/error_util.h"
+
+// *****************************************************************************************
+//
+// Section: Clock Error Definitions
+//
+// *****************************************************************************************
 
 #define error_util_X(a, b, c) [a]=c,
 
 static const char * util_errors[] =
 {
-  #include <error/table_util.h>
+  #include "error/table_util.h"
 };
 
 #undef error_util_X

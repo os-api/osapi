@@ -1,4 +1,22 @@
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Common module using a POSIX compliant implementation
+//
+// *****************************************************************************************
 
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System includes
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -8,13 +26,25 @@
 #include <pwd.h>
 #include <grp.h>
 
-#include "general/general_defs.h"
+// Generic OSAPI includes
+#include "general/general.h"
 #include "status/status.h"
+
+// Own declarations
 #include "common/common_types_posix.h"
+
+
 
 size_t get_size_pwd_entry( void );
 size_t get_size_grp_entry( void );
 void   set_common_status ( int code, const char * funcname, t_status * p_status );
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 size_t get_size_pwd_entry( void )
 {
@@ -135,6 +165,47 @@ t_status get_userID_from_name( char * username, t_uid * p_uid )
   return st;
 }
 
+t_status get_user_group_list( t_uid uid, t_gid * p_groupList )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( p_gidList == (t_gid *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+  else
+    {
+
+    }
+
+  return st;
+
+}
+
+
+t_status get_max_length_username( t_size * p_size )
+{
+  t_status	st;
+  long		size = -1;
+
+  status_reset( & st );
+
+  if( p_size == NULL )
+      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+  else
+    {
+      errno = 0;
+      size = sysconf( _POSIX_LOGIN_NAME_MAX );
+      if( size == -1 && errno != 0 )			// Got error
+	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      else
+          *p_size = (t_size) size;
+    }
+
+  return st;
+}
+
+
 // Group functions
 
 t_status get_groupID( t_gid * p_gid )
@@ -223,3 +294,28 @@ t_status get_groupID_from_name( char * groupname, t_gid * p_gid )
     
   return st;
 }
+
+t_status get_max_number_groups( t_size * p_size	)
+{
+  t_status	st;
+  long		size = -1;
+
+  status_reset( & st );
+
+  if( p_size == NULL )
+      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+  else
+    {
+      errno = 0;
+      size = sysconf( _SC_NGROUPS_MAX + 1 );
+      if( size == -1 && errno != 0 )			// Got error
+	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      else
+          *p_size = (t_size) size;
+    }
+
+  return st;
+}
+
+
+#endif	// If POSIX is defined

@@ -1,18 +1,17 @@
 /*
- * os_defs.h
+ * util_defs.h
  *
- *  Created on: 01/04/2017
+ *  Created on: 23/04/2017
  *      Author: joao
  */
 
-#ifndef OS_OS_DEFS_H_
-#define OS_OS_DEFS_H_
+#ifndef UTIL_UTIL_DEFS_H_
+#define UTIL_UTIL_DEFS_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 
 
@@ -22,4 +21,4 @@ extern "C" {
 #endif
 
 
-#endif /* OS_OS_DEFS_H_ */
+#endif /* UTIL_UTIL_DEFS_H_ */

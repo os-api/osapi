@@ -5,8 +5,8 @@
  *      Author: joao
  */
 
-#ifndef CODE_GENERAL_GENERAL_PRIV_H_
-#define CODE_GENERAL_GENERAL_PRIV_H_
+#ifndef GENERAL_PRIV_H_
+#define GENERAL_PRIV_H_
 
 #define module_X(a, b, c) [a]=c,
 
@@ -16,4 +16,4 @@ static const char * module_name[] = {
 
 #undef module_X
 
-#endif /* CODE_GENERAL_GENERAL_PRIV_H_ */
+#endif /* GENERAL_PRIV_H_ */

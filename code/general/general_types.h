@@ -1,9 +1,11 @@
-/*
- * general_defs.h
- *
- *  Created on: 23/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Generic type declarations
+//
+// *****************************************************************************************
 
 #ifndef GENERAL_GENERAL_DEFS_H_
 #define GENERAL_GENERAL_DEFS_H_
@@ -14,8 +16,6 @@ extern "C" {
 #endif
 
 #include <stdint.h>
-#include <general/general_baseline.h>
-
 
 #define	OSAPI_NULL_CHAR_POINTER		( (char * ) 0 )
 

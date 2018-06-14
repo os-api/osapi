@@ -1,9 +1,11 @@
-/*
- * status.h
- *
- *  Created on: 28/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide Status module API
+//
+// *****************************************************************************************
 
 #ifndef STATUS_STATUS_H_
 #define STATUS_STATUS_H_
@@ -13,8 +15,8 @@
 extern "C" {
 #endif
 
-#include <general/general_defs.h>
-#include <status/status_defs.h>
+#include "general/general_types.h"
+#include "status/status_types.h"
 
 #pragma GCC visibility push(default)		// Start of public interface
 
@@ -31,10 +33,8 @@ const char *	status_moduleByID_get( Byte );
 
 #pragma GCC visibility pop			// End of public interface
 
-// Macro section
 
-#define status_iset(m,f,e,r) 		status_set( m, STATUS_INTERNAL, f, e, r )
-#define status_eset(m,f,e,r) 		status_set( m, STATUS_SYSTEM  , f, e, r )
+#include "status/status_defs.h"
 
 // End of header with C++ declaration
 #ifdef __cplusplus

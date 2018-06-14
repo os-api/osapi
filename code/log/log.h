@@ -1,21 +1,24 @@
-/*
- * log.h
- *
- *  Created on: 20/03/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide System Log module API
+//
+// *****************************************************************************************
 
-#ifndef LOG_H_
-#define LOG_H_
+#ifndef LOG_LOG_H_
+#define LOG_LOG_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
-extern "C" {
+ extern "C" {
 #endif
 
-#include <status/status.h>
-#include <log/log_defs.h>
-#include <log/log_platform.h>
+#include "general/general.h"
+#include "status/status_types.h"
+#include "log/log_types.h"
+#include "log/log_platform.h"
 
 #pragma GCC visibility push(default)		// Start of public interface
 
@@ -38,4 +41,4 @@ t_status	log_fatal_write		( t_log, t_log_message					);
  }
 #endif
 
-#endif /* LOG_H_ */
+#endif /* LOG_LOG_H_ */

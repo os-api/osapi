@@ -1,15 +1,33 @@
-/*
- * status.c
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Status module entry point implementation file
+//
+// *****************************************************************************************
 
-#include <error/errors_priv.h>
-#include <status/status.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
+// System headers
+#include <error/errors_status.h>
 #include <stdio.h>
 #include <string.h>
+
+// // Generic OSAPI includes
+#include "general/general.h"
+#include "status/status.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 
 

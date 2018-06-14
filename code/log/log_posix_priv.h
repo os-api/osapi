@@ -8,6 +8,10 @@
 #ifndef LOG_POSIX_PRIV_H_
 #define LOG_POSIX_PRIV_H_
 
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
@@ -74,5 +78,7 @@ static const struct s_log_option log_options[] = {
 #ifdef __cplusplus
  }
 #endif
+
+#endif	// End of POSIX declarations
 
 #endif /* LOG_POSIX_PRIV_H_ */

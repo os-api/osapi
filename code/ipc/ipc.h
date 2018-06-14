@@ -1,9 +1,11 @@
-/*
- * hw.h
- *
- *  Created on: 29/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide IPC (InterProcess Communication) module API
+//
+// *****************************************************************************************
 
 #ifndef IPC_IPC_H_
 #define IPC_IPC_H_
@@ -13,10 +15,10 @@
 extern "C" {
 #endif
 
-
-#include <status/status.h>
-#include <ipc/ipc_defs.h>
-#include <ipc/ipc_platform.h>
+#include "general/general_types.h"
+#include "status/status_types.h"
+#include <ipc/ipc_types.h>
+#include "ipc/ipc_platform.h"
 
 #pragma GCC visibility push(default)		// Start of public interface
 

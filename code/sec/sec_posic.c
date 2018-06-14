@@ -1,21 +1,42 @@
-/*
- * sec_posic.c
- *
- *  Created on: 03/01/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Sec(urity) module using a POSIX compliant implementation
+//
+// *****************************************************************************************
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System includes
 #include <stdio.h>
 #include <limits.h>
+#include <errno.h>
 
-#include "errno.h"
+// Generic OSAPI includes
+#include "general/general.h"
 #include "error/error_sec.h"
-
 #include "status/status.h"
 #include "common/common.h"
-#include "sec/sec.h"
-#include "sec/sec_posix.h"
 
+// Own declarations
+#include "sec/sec.h"
+
+
+// Only relevant is OS is Linux
+#ifdef OSAPI_POSIX
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 // User ID functions
 
@@ -86,6 +107,32 @@ t_status sec_user_getNameFromID( t_uid uid, t_size max_name, char * username )
       // size_t max_name = (size_t) sysconf( _POSIX_LOGIN_NAME_MAX );
 
       st = get_username_from_id( uid, max_name, username );
+
+      t_status_error err = status_error( st );
+      if( status_failure( st ) )
+          status_eset( OSAPI_MODULE_SEC, __func__, err, &st );
+    }
+
+  return st;
+}
+
+
+t_status sec_user_getMaxSize( t_size * p_size )
+{
+ return get_max_length_username( p_size );
+}
+
+t_status sec_user_getGroups( t_uid uid, t_gid *  p_groupList )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_groupList == NULL )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      st = get_user_group_list( uid, p_groupList );
 
       t_status_error err = status_error( st );
       if( status_failure( st ) )
@@ -174,4 +221,16 @@ t_status sec_group_getNameFromID( t_gid gid, t_size size, char * groupname )
   return st;
 }
 
+
+t_status sec_group_getMaxSize( t_size * p_size )
+{
+  return get_max_length_groupname( p_size );
+}
+
+t_status sec_group_getMaxNumber( t_size * p_size )
+{
+  return get_max_number_groups( p_size );
+}
+
+#endif	// End of POSIX Implementation
 

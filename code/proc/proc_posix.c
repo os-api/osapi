@@ -1,16 +1,36 @@
-/*
- * proc_posix.c
- *
- *  Created on: 28/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Proc(ess) module using a POSIX compliant implementation
+//
+// *****************************************************************************************
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System includes
 #include <sys/types.h>
 #include <signal.h>
 
-#include <error/error_proc.h>
-#include <proc/proc.h>
-#include <proc/proc_posix.h>
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_proc.h"
+#include "status/status.h"
+
+// Own declarations
+#include "proc/proc.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 t_status proc_module_supported( void )
 {

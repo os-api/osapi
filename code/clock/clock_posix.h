@@ -1,12 +1,19 @@
-/*
- * clock_posix.h
- *
- *  Created on: 29/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Clock POSIX declarations
+//
+// *****************************************************************************************
 
 #ifndef CLOCK_POSIX_H_
 #define CLOCK_POSIX_H_
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
 
 #ifndef _POSIX_SOURCE
 #define _POSIX_SOURCE
@@ -27,5 +34,8 @@ struct s_clock
 };
 
 typedef struct s_clock t_clock;
+
+
+#endif	// If POSIX is defined
 
 #endif /* CLOCK_POSIX_H_ */

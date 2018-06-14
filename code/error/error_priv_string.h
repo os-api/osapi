@@ -1,20 +1,35 @@
-/*
- * error_priv_string.h
- *
- *  Created on: 01/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	String private error declarations
+//
+// *****************************************************************************************
 
 #ifndef CODE_ERR_ERROR_PRIV_STRING_H_
 #define CODE_ERR_ERROR_PRIV_STRING_H_
 
-#include <error/error_string.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Include own error public declarations
+#include "error/error_string.h"
+
+// *****************************************************************************************
+//
+// Section: Clock Error Definitions
+//
+// *****************************************************************************************
 
 #define error_string_X(a, b, c) [a]=c,
 
 static const char * string_errors[] =
 {
-  #include <error/table_string.h>
+  #include "error/table_string.h"
 };
 
 #undef error_string_X

@@ -1,12 +1,17 @@
-/*
- * hw_linux.h
- *
- *  Created on: 01/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	IPC Linux OS declarations
+//
+// *****************************************************************************************
 
 #ifndef IPC_IPC_LINUX_H_
 #define IPC_IPC_LINUX_H_
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -30,5 +35,6 @@ typedef union semun_linux	t_semun;
 }
 #endif
 
+#endif	// End of OS Linux
 
 #endif /* IPC_IPC_LINUX_H_ */

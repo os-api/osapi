@@ -1,9 +1,11 @@
-/*
- * sec_platform.h
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Sec module platform OS selection file
+//
+// *****************************************************************************************
 
 #ifndef SEC_SEC_PLATFORM_H_
 #define SEC_SEC_PLATFORM_H_

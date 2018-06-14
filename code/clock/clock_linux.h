@@ -1,13 +1,20 @@
-/*
- * clock_linux.h
- *
- *  Created on: 29/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Clock Linux OS declarations
+//
+// *****************************************************************************************
 
 #ifndef CLOCK_LINUX_H_
 #define CLOCK_LINUX_H_
 
-#include <clock/clock_posix.h>
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
+
+#include "clock/clock_posix.h"
+
+#endif	// Linux OS
 
 #endif /* CLOCK_LINUX_H_ */

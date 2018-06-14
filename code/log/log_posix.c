@@ -1,18 +1,41 @@
-/*
- * proc_posix.c
- *
- *  Created on: 28/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Log module using a POSIX compliant implementation
+//
+// *****************************************************************************************
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Include System headers
 #include <strings.h>
 
-#include <general/general_defs.h>
-#include <error/error_log.h>
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_log.h"
+#include "status/status.h"
 
-#include <log/log.h>
-#include <log/log_posix.h>
-#include <log/log_posix_priv.h>
+// Own declarations
+#include "log/log.h"
+#include "log/log_posix.h"
+#include "log/log_posix_priv.h"
 
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 
 // Definition: Private functions
@@ -122,3 +145,6 @@ t_status log_fatal_write( t_log log, t_log_message message )
   return log_system_write( log, LOG_DEBUG, message );
 }
 
+
+
+#endif	// Conditional POSIX compilation

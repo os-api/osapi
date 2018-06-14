@@ -1,21 +1,29 @@
-/*
- * error_string.h
- *
- *  Created on: 03/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	String Error type declarations
+//
+// *****************************************************************************************
 
 #ifndef CODE_ERR_ERROR_STRING_H_
 #define CODE_ERR_ERROR_STRING_H_
 
-// Include General error definitions
-#include <error/error_def.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-// Define STRING module private errors
+// Include General error definitions
+#include "error/error_types.h"
+
+// Include own error definitions
 
 #define error_string_X(a, b, c) a b,
 enum string_X {
-	  #include <error/table_string.h>
+	  #include "error/table_string.h"
 };
 #undef error_string_X
 

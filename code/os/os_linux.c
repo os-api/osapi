@@ -1,9 +1,23 @@
-/*
- * os_linux.c
- *
- *  Created on: 12/02/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	OS module using a Linux implementation
+//
+// *****************************************************************************************
+
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Include System headers
 
 #include <stdio.h>
 #include <unistd.h>
@@ -11,8 +25,21 @@
 #include <string.h>
 #include <limits.h>
 
-#include <error/error_os.h>
-#include <os/os.h>
+// Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_os.h"
+#include "status/status.h"
+
+// Own declarations
+#include "os/os.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
+
 
 t_status os_info_provider_get( t_osInfo * p_osInfo )
 {
@@ -84,3 +111,6 @@ t_status os_info_get( t_osInfo * p_osInfo )
 
   return st;
 }
+
+
+#endif	// End of OS Linux implementation

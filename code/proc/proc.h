@@ -1,9 +1,11 @@
-/*
- * proc.h
- *
- *  Created on: 05/03/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide Proc(ess) module API
+//
+// *****************************************************************************************
 
 #ifndef PROC_H_
 #define PROC_H_
@@ -13,10 +15,10 @@
 extern "C" {
 #endif
 
-
-#include "status/status.h"
+#include "general/general.h"
+#include "status/status_types.h"
 #include "common/common_types.h"
-#include "proc/proc_defs.h"
+#include "proc/proc_types.h"
 #include "proc/proc_platform.h"
 
 #pragma GCC visibility push(default)		// Start of public interface

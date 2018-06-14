@@ -1,17 +1,44 @@
-/*
- * hw.c
- *
- *  Created on: 05/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	IPC module using a POSIX compliant implementation
+//
+// *****************************************************************************************
 
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
+
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System includes
 #include <errno.h>
+#include <ipc/ipc.h>
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/sem.h>
 
+// Generic OSAPI includes
+#include "general/general.h"
 #include "error/error_ipc.h"
+#include "status/status.h"
+
+// Own declarations
 #include "ipc/ipc.h"
+#include "ipc/ipc_posix.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 
 t_status semaphor_module_supported( void )
@@ -166,4 +193,6 @@ t_status ipc_semaphore_getValue( int semid, int * p_value )
   return st;
 }
 
+
+#endif	// If POSIX is defined
 

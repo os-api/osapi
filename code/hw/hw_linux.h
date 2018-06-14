@@ -1,12 +1,18 @@
-/*
- * hw_linux.h
- *
- *  Created on: 01/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	HW Linux OS declarations
+//
+// *****************************************************************************************
 
 #ifndef HW_HW_LINUX_H_
 #define HW_HW_LINUX_H_
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
+
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -27,5 +33,6 @@ t_status hw_physicalRam_get( t_mem *, uint64_t );
 }
 #endif
 
+#endif	// End of OS Linux
 
 #endif /* HW_HW_LINUX_H_ */
