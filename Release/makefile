@@ -14,9 +14,9 @@ RM := rm -rf
 -include code/sec/subdir.mk
 -include code/proc/subdir.mk
 -include code/os/subdir.mk
+-include code/machine/subdir.mk
 -include code/log/subdir.mk
 -include code/ipc/subdir.mk
--include code/hw/subdir.mk
 -include code/general/subdir.mk
 -include code/common/subdir.mk
 -include code/clock/subdir.mk

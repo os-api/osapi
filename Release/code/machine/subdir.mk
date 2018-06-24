@@ -4,23 +4,17 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/string/string.c \
-../code/string/string_basic.c \
-../code/string/string_wide.c 
+../code/machine/machine.c 
 
 OBJS += \
-./code/string/string.o \
-./code/string/string_basic.o \
-./code/string/string_wide.o 
+./code/machine/machine.o 
 
 C_DEPS += \
-./code/string/string.d \
-./code/string/string_basic.d \
-./code/string/string_wide.d 
+./code/machine/machine.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-code/string/%.o: ../code/string/%.c
+code/machine/%.o: ../code/machine/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: GCC C Compiler'
 	gcc -std=c11 -DOS_LINUX -I"../code" -I/usr/include -O3 -Wall -Wconversion -c -fmessage-length=0 -fvisibility=hidden -fPIC -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@)" -o "$@" "$<"

@@ -13,6 +13,9 @@
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
 // Include System headers
 #include <string.h>
 
@@ -23,6 +26,9 @@
 
 // Own declarations
 #include "os/os.h"
+
+// Only relevant is OS is POSIX compliant
+#ifdef OSAPI_POSIX
 
 
 // *****************************************************************************************
@@ -60,3 +66,5 @@ t_status os_posix_info_get( t_osInfo * p_osInfo )
 
 
 
+
+#endif	// End of POSIX compilation

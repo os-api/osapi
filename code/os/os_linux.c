@@ -8,14 +8,20 @@
 // *****************************************************************************************
 
 
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
-
 // *****************************************************************************************
 //
 // Section: Import headers
 //
 // *****************************************************************************************
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
+
+// The following define is required to include getdomainname/setdomainname
+#define _DEFAULT_SOURCE
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
 
 // Include System headers
 
@@ -32,7 +38,6 @@
 
 // Own declarations
 #include "os/os.h"
-
 
 // *****************************************************************************************
 //
@@ -66,13 +71,13 @@ t_status os_info_provider_get( t_osInfo * p_osInfo )
 		 if( strncmp( line, "NAME=", 5 ) == 0 )		// Found Provider name
 		   {
 		     // Copy the string property value but removing the commas
-		     strncpy( p_osInfo->provider, &line[ 6 ], nread - 8 );
+		     strncpy( p_osInfo->provider, &line[ 6 ], (unsigned long) nread - 8 );
 		     continue;
 		   }
 		 if( strncmp( line, "VERSION_ID=", 11 ) == 0 )	// Found Provider Release
 		   {
 		     // Copy the string property value but removing the commas
-		     strncpy( p_osInfo->provider_release, &line[ 12 ], nread - 14 );
+		     strncpy( p_osInfo->provider_release, &line[ 12 ], (unsigned long) nread - 14 );
 		     continue;
 		   }
 		 // Other Distribution properties can be added here...

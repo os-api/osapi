@@ -16,9 +16,30 @@ extern "C"
   {
 #endif
 
-#include <status/status_types.h>
-#include <clock/clock_types.h>
-#include <clock/clock_platform.h>
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// Generic OSAPI includes
+#include "general/general.h"
+#include "status/status_types.h"
+
+// Own declarations
+#include "clock/clock_types.h"
+#include "clock/clock_platform.h"
+
+
+// *****************************************************************************************
+//
+// Section: Clock module API
+//
+// *****************************************************************************************
+
 
 #pragma GCC visibility push(default)		// Start of public interface
 

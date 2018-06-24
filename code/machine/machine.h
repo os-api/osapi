@@ -3,17 +3,18 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide IPC (InterProcess Communication) module API
+// Purpose:	Provide Hardware Module API
 //
 // *****************************************************************************************
 
-#ifndef IPC_IPC_H_
-#define IPC_IPC_H_
+#ifndef MACHINE_MACHINE_H_
+#define MACHINE_MACHINE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 
 // *****************************************************************************************
 //
@@ -26,28 +27,36 @@ extern "C" {
 #include "status/status_types.h"
 
 // Own declarations
-#include "ipc/ipc_types.h"
-#include "ipc/ipc_platform.h"
+#include "machine/machine_types.h"
+#include "machine/machine_platform.h"
 
 
 // *****************************************************************************************
 //
-// Section: IPC module API
+// Section: Machine module API
 //
 // *****************************************************************************************
+
 
 #pragma GCC visibility push(default)		// Start of public interface
 
 // Functions bellow
-t_status	ipc_module_supported	( void								);
+t_status	machine_module_supported		( void					);
 
-// Functions dealing with semaphores
-t_status	ipc_semaphore_create	( key_t key, int sem_value, int sem_options, int * p_semid	);
-t_status	ipc_semaphore_destroy	( int semid							);
-t_status	ipc_semaphore_open	( key_t key, int * p_semid 					);
-t_status	ipc_semaphore_lock	( int semid 							);
-t_status	ipc_semaphore_unlock	( int semid 							);
-t_status	ipc_semaphore_getValue	( int semid, int * p_value					);
+// Hostname related calls
+/*
+t_status	machine_hostname_get			( t_size maxlen, t_char * hostname	);
+t_status	machine_hostname_set			( t_char * hostname			);
+*/
+
+// HW related
+/*
+t_status	machine_hw_getList			( 	);
+*/
+
+/* IP related
+t_status	machine_ip_getList			( 	);
+ */
 
 
 #pragma GCC visibility pop			// End of public interface
@@ -57,4 +66,4 @@ t_status	ipc_semaphore_getValue	( int semid, int * p_value					);
 }
 #endif
 
-#endif /* IPC_IPC_H_ */
+#endif /* MACHINE_MACHINE_H_ */

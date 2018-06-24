@@ -16,9 +16,26 @@ extern "C" {
 #endif
 
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Generic OSAPI includes
+#include "general/general.h"
 #include "status/status_types.h"
-#include <os/os_types.h>
+
+// Own declarations
+#include "os/os_types.h"
 #include "os/os_platform.h"
+
+
+// *****************************************************************************************
+//
+// Section: OS module API
+//
+// *****************************************************************************************
 
 #pragma GCC visibility push(default)		// Start of public interface
 

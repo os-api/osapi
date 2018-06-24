@@ -10,10 +10,27 @@
 #ifndef GENERAL_H_
 #define GENERAL_H_
 
-#include "general/general_version.h"
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Generic OSAPI & Own includes
+
 #include "general/general_baseline.h"
+#include "general/general_version.h"
 #include "general/general_types.h"
 
-// #include "general/general_"
+// *****************************************************************************************
+//
+// Section: OSAPI bootstrap API
+//
+// *****************************************************************************************
+
+unsigned long	osapi_get_version			( void );
+int		osapi_get_version_stability		( void );
+const char *	osapi_get_version_string		( void );
+const char *	osapi_get_version_stability_string	( void );
 
 #endif /* GENERAL_H_ */

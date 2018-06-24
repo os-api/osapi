@@ -13,6 +13,9 @@
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
 // System includes
 #include <string.h>
 

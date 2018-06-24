@@ -19,6 +19,9 @@
 #include "error/error_sec.h"
 #include "status/status.h"
 
+// Import common
+#include "common/common.h"
+
 // Own declarations
 #include "sec/sec.h"
 
@@ -33,3 +36,5 @@ t_status sec_module_supported( void )
 {
   RETURN_STATUS_SUCCESS;	// Posix supports clocks
 }
+
+

@@ -3,19 +3,21 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Log module POSIX declarations
+// Purpose:	HW Linux OS declarations
 //
 // *****************************************************************************************
 
-#ifndef LOG_LOG_POSIX_H_
-#define LOG_LOG_POSIX_H_
+#ifndef MACHINE_MACHINE_LINUX_H_
+#define MACHINE_MACHINE_LINUX_H_
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
 
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
- extern "C" {
+extern "C" {
 #endif
-
 
 // *****************************************************************************************
 //
@@ -23,12 +25,11 @@
 //
 // *****************************************************************************************
 
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
+// Include System headers
+#include <sys/sysinfo.h>
 
-// System headers
-#include <syslog.h>
-
+// Generic OSAPI includes
+#include "status/status_types.h"
 
 // *****************************************************************************************
 //
@@ -36,24 +37,24 @@
 //
 // *****************************************************************************************
 
+typedef struct sysinfo		t_mem;
 
-struct s_log
-{
- const char *			ident;
- int				option;
- int				facility;
-};
 
-typedef struct s_log		t_log;
-typedef const char *		t_log_message;
-typedef int			t_log_level;
+// *****************************************************************************************
+//
+// Section: Function Declarations
+//
+// *****************************************************************************************
+
+
+t_status machine_physicalRam_get( t_mem *, uint64_t );
 
 
 // End of header with C++ declaration
 #ifdef __cplusplus
- }
+}
 #endif
 
-#endif	// End of POSIX declarations
+#endif	// End of OS Linux
 
-#endif /* LOG_LOG_POSIX_H_ */
+#endif /* MACHINE_MACHINE_LINUX_H_ */

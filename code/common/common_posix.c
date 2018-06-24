@@ -7,14 +7,15 @@
 //
 // *****************************************************************************************
 
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
 
 // *****************************************************************************************
 //
 // Section: Import headers
 //
 // *****************************************************************************************
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
 
 // System includes
 #include <stdio.h>
@@ -28,16 +29,15 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
+#include "error/error_types.h"
 #include "status/status.h"
 
 // Own declarations
-#include "common/common_types_posix.h"
+#include "common/common.h"
+#include "common/common_priv_posix.h"
 
-
-
-size_t get_size_pwd_entry( void );
-size_t get_size_grp_entry( void );
-void   set_common_status ( int code, const char * funcname, t_status * p_status );
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
 
 
 // *****************************************************************************************
@@ -70,9 +70,9 @@ size_t get_size_grp_entry( void )
 void set_common_status( int code, const char * funcname, t_status * p_status )
 {
  if( code == 0 )
-     status_iset( OSAPI_MODULE_NONE, funcname, 1, p_status );		// Empty result
+     status_iset( OSAPI_MODULE_NONE, funcname, OSAPI_ERROR_UNKNOWN, p_status );			// Empty result
  else
-     status_iset( OSAPI_MODULE_NONE, funcname, code, p_status );	// Some error
+     status_iset( OSAPI_MODULE_NONE, funcname, code, p_status );				// Some error
 }
 
 // User functions
@@ -84,7 +84,7 @@ t_status get_userID( t_uid * p_id )
   status_reset( &st );
   
   if( p_id == (t_uid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
       *p_id = getuid();   
 
@@ -102,6 +102,35 @@ t_status set_userID( t_uid id )
   
   if( rc != 0 )
       status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+
+  return st;
+}
+
+t_status get_primaryGroupID( t_uid uid, t_gid * primaryGroupID )
+{
+  t_status 			st;
+  int				rc;
+  char *			buf;
+  struct passwd			pwd;
+  struct passwd *		result;
+
+  status_reset( &st );
+
+  size_t bufsize = get_size_pwd_entry();
+  buf = malloc( bufsize );
+
+  if( buf == NULL )
+      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+  else
+    {
+      rc = getpwuid_r( uid, &pwd, buf, bufsize, &result);
+      if( result == NULL )
+          set_common_status( rc, __func__, &st );
+      else
+	  *primaryGroupID = pwd.pw_gid;
+
+      free( buf );
+    }
 
   return st;
 }
@@ -165,23 +194,6 @@ t_status get_userID_from_name( char * username, t_uid * p_uid )
   return st;
 }
 
-t_status get_user_group_list( t_uid uid, t_gid * p_groupList )
-{
-  t_status st;
-
-  status_reset( &st );
-
-  if( p_gidList == (t_gid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
-  else
-    {
-
-    }
-
-  return st;
-
-}
-
 
 t_status get_max_length_username( t_size * p_size )
 {
@@ -191,7 +203,7 @@ t_status get_max_length_username( t_size * p_size )
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
     {
       errno = 0;
@@ -206,6 +218,7 @@ t_status get_max_length_username( t_size * p_size )
 }
 
 
+
 // Group functions
 
 t_status get_groupID( t_gid * p_gid )
@@ -215,7 +228,7 @@ t_status get_groupID( t_gid * p_gid )
   status_reset( &st );
   
   if( p_gid == (t_gid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
       *p_gid = getgid();   
 
@@ -303,7 +316,7 @@ t_status get_max_number_groups( t_size * p_size	)
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_NONE, __func__, 1, &st );
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
     {
       errno = 0;

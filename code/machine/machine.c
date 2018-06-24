@@ -3,12 +3,9 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	HW private error declarations
+// Purpose:	HW module entry point implementation file
 //
 // *****************************************************************************************
-
-#ifndef CODE_ERR_ERROR_PRIV_HW_H_
-#define CODE_ERR_ERROR_PRIV_HW_H_
 
 // *****************************************************************************************
 //
@@ -16,22 +13,27 @@
 //
 // *****************************************************************************************
 
-// Include own error public declarations
-#include "error/error_hw.h"
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// System headers <here>
+
+// Generic OSAPI includes
+
+#include "general/general.h"
+#include "error/error_machine.h"
+#include "status/status.h"
+
+// Own declarations
+#include "machine/machine.h"
 
 // *****************************************************************************************
 //
-// Section: HW Error Definitions
+// Section: Function definition
 //
 // *****************************************************************************************
 
-#define error_hw_X(a, b, c) [a]=c,
-
-static const char * hw_errors[] =
+t_status machine_module_supported( void )
 {
-  #include "error/table_hw.h"
-};
-
-#undef error_hw_X
-
-#endif /* CODE_ERR_ERROR_PRIV_HW_H_ */
+  RETURN_STATUS_SUCCESS;	// Posix supports HW related functions
+}

@@ -1,9 +1,11 @@
-/*
- * status_types.h
- *
- *  Created on: 14/06/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Status module declarations
+//
+// *****************************************************************************************
 
 #ifndef STATUS_TYPES_H_
 #define STATUS_TYPES_H_
@@ -13,11 +15,28 @@
 extern "C" {
 #endif
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// System headers
 #include <stdint.h>
 
+// OSAPI headers
 #include "general/general_types.h"
 
-#define STATUS_MAX_ERROR_SIZE	1025
+
+// *****************************************************************************************
+//
+// Section: Type declarations
+//
+// *****************************************************************************************
+
 
 typedef int			t_status_error;
 typedef Byte			t_status_mod;

@@ -16,9 +16,9 @@ SUBDIRS := \
 code/clock \
 code/common \
 code/general \
-code/hw \
 code/ipc \
 code/log \
+code/machine \
 code/os \
 code/proc \
 code/sec \

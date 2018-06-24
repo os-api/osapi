@@ -3,13 +3,8 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide Common Module Linux function implementation
+// Purpose:	Provide enum to string mappings for OSAPI versioning
 //
 // *****************************************************************************************
 
-
-
-#ifdef OS_LINUX
-
-#endif
-
+osapi_version_X( e_osapi_version, = 2 ,	"2" )

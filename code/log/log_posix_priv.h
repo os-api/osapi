@@ -1,9 +1,11 @@
-/*
- * log_posix_priv.h
- *
- *  Created on: 29/04/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Log Module POSIX private header
+//
+// *****************************************************************************************
 
 #ifndef LOG_POSIX_PRIV_H_
 #define LOG_POSIX_PRIV_H_

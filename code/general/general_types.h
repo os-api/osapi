@@ -15,8 +15,24 @@
 extern "C" {
 #endif
 
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System headers
 #include <stdint.h>
 
+
+// *****************************************************************************************
+//
+// Section: Type declarations
+//
+// *****************************************************************************************
+
+// Generic OSAPI wide types
 #define	OSAPI_NULL_CHAR_POINTER		( (char * ) 0 )
 
 #define OSAPI_EMPTY_STRING		""
@@ -25,7 +41,10 @@ typedef uint64_t			t_size;
 
 typedef uint8_t				Byte;
 
+typedef char				t_char;
 
+
+// Own module types
 
 #define module_X(a, b, c) a b,
 enum module_id

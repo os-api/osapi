@@ -1,9 +1,11 @@
-/*
- * general_version.h
- *
- *  Created on: 13/06/2018
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	General version declaration
+//
+// *****************************************************************************************
 
 #ifndef GENERAL_VERSION_H_
 #define GENERAL_VERSION_H_
@@ -16,11 +18,22 @@
 //
 // *****************************************************************************************
 
+// Include own version definitions
+#define osapi_version_X(a, b, c) a b,
+enum version_X {
+	  #include "general/table_version.h"
+};
+#undef osapi_version_X
+
+
+#define osapi_quality_X(a, b, c) a b,
+enum version_quality_X {
+	  #include "general/table_version_quality.h"
+};
+#undef osapi_quality_X
+
+
 // Define first the OSAPI LIB VERSION related information for client applications
-#define OSAPI_VERSION			1
-#define OSAPI_VERSION_QUALITY		UNSTABLE		// Under development
-
-
-
+#define OSAPI_VERSION_QUALITY		e_version_unstable 		// Under development
 
 #endif /* GENERAL_VERSION_H_ */

@@ -12,7 +12,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include <hw/hw_linux.h>
+	#include <machine/machine_linux.h>
 #elif OS_SOLARIS
 	#include <hw/hw_solaris.h>
 #endif

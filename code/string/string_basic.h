@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_H_
-#define STRING_STRING_H_
+#ifndef STRING_STRING_BASIC_H_
+#define STRING_STRING_BASIC_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -27,7 +27,7 @@ extern "C" {
 #include "status/status_types.h"
 
 // Own declarations
-#include <string/string_types.h>
+#include <string/string_types_basic.h>
 #include "string/string_platform.h"
 
 
@@ -39,19 +39,33 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-// Module query function
-t_status string_module_supported		( void					);
+// + Basic String management (single byte)
+// ++ Life cycle
+t_status string_basic_new			( t_size, t_string *			);
+t_status string_basic_create			( const char *, t_string *		);
+t_status string_basic_delete			( t_string *				);
+
+// ++ Operations
+t_status string_basic_put			( const char *, t_string *		);
+t_status string_basic_copy			( const char *, t_string *		);
+t_status string_basic_size			( t_string *, t_size *			);
+t_status string_basic_clone			( t_string *, t_string *		);
+
+// + Content management
+t_status string_basic_print			( t_string *				);
+t_status string_basic_get			( t_string *, t_size, char *		);
+
+// + Instances management
+t_status string_basic_equal			( t_string *, t_string *, _Bool	*	);
+t_status string_basic_compare			( t_string *, t_string *, Byte	*	);
+t_status string_basic_compareIcase		( t_string *, t_string *, Byte	*	);
+t_status string_basic_concat			( t_string *, t_string *, t_string *	);
 
 #pragma GCC visibility pop			// End of public interface
-
-// Include remaining submodules
-#include "string/string_basic.h"
-//#include "string/string_wide.h"
-
 
 // End of header with C++ declaration
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* STRING_STRING_H_ */
+#endif /* STRING_STRING_BASIC_H_ */

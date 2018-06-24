@@ -20,21 +20,20 @@
 #include <stddef.h>
 
 // OSAPI module error information
-#include <general/general_types.h>
-#include <general/general_priv.h>
+#include "general/general_types.h"
+#include "general/general_priv.h"
 
 // Error information
-#include <error/error_types.h>
+#include "error/error_types.h"
 
-#include <error/error_priv_clock.h>
-#include <error/error_priv_hw.h>
-#include <error/error_priv_io.h>
-#include <error/error_priv_machine.h>
-#include <error/error_priv_os.h>
-#include <error/error_priv_proc.h>
-#include <error/error_priv_sec.h>
-#include <error/error_priv_string.h>
-#include <error/error_priv_util.h>
+#include "error/error_priv_clock.h"
+#include "error/error_priv_io.h"
+#include "error/error_priv_machine.h"
+#include "error/error_priv_os.h"
+#include "error/error_priv_proc.h"
+#include "error/error_priv_sec.h"
+#include "error/error_priv_string.h"
+#include "error/error_priv_util.h"
 
 
 
@@ -62,7 +61,6 @@ static const char ** osapi_errors[] =
   proc_errors,
   clock_errors,
   sec_errors,
-  hw_errors,
   io_errors,
   util_errors,
   NULL

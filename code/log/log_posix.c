@@ -7,15 +7,15 @@
 //
 // *****************************************************************************************
 
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
-
 
 // *****************************************************************************************
 //
 // Section: Import headers
 //
 // *****************************************************************************************
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
 
 // Include System headers
 #include <strings.h>
@@ -29,6 +29,9 @@
 #include "log/log.h"
 #include "log/log_posix.h"
 #include "log/log_posix_priv.h"
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
 
 
 // *****************************************************************************************

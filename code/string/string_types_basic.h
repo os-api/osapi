@@ -3,10 +3,17 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Util(ities) module entry point implementation file
+// Purpose:	String module declarations
 //
 // *****************************************************************************************
 
+#ifndef STRING_STRING_TYPES_BASIC_H_
+#define STRING_STRING_TYPES_BASIC_H_
+
+// Make sure that header is easily imported from c++
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 // *****************************************************************************************
 //
@@ -17,27 +24,31 @@
 // Force baseline before system headers
 #include "general/general_baseline.h"
 
-// System includes
-
-
-// Generic OSAPI includes
-#include "general/general.h"
-#include "error/error_util.h"
-#include "status/status.h"
-
-// Own declarations
-#include "util/util.h"
-
+// System headers
+#include <stdint.h>
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Type declarations
 //
 // *****************************************************************************************
 
-
-t_status util_module_supported( void )
+struct osapi_basic_string
 {
-  RETURN_STATUS_SUCCESS;
-}
+  uint64_t	tsize;			// Total size of the allocated string memory
+  uint64_t	csize;			// Current used size
+  char	    *	ps_location;		// Pointer to String location
+};
 
+typedef struct osapi_basic_string	t_string;
+
+#define OSAPI_STRING_NULL_POINTER	(( t_string  *) 0)
+
+
+// End of header with C++ declaration
+#ifdef __cplusplus
+}
+#endif
+
+
+#endif /* STRING_STRING_TYPES_BASIC_H_ */

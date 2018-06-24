@@ -15,10 +15,29 @@
  extern "C" {
 #endif
 
-#include "general/general.h"
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// Generic OSAPI includes
+#include "general/general_types.h"
 #include "status/status_types.h"
+
+// Own declarations
 #include "log/log_types.h"
 #include "log/log_platform.h"
+
+
+// *****************************************************************************************
+//
+// Section: Log module API
+//
+// *****************************************************************************************
 
 #pragma GCC visibility push(default)		// Start of public interface
 

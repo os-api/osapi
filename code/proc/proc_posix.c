@@ -13,6 +13,9 @@
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
 // System includes
 #include <sys/types.h>
 #include <signal.h>
@@ -24,6 +27,9 @@
 
 // Own declarations
 #include "proc/proc.h"
+
+// Only relevant is OS is POSIX compliant
+#ifdef OSAPI_POSIX
 
 
 // *****************************************************************************************
@@ -92,3 +98,6 @@ t_status proc_signal_send( t_pid pid, t_signal sig )
 
  return st;
 }
+
+
+#endif	// End of POSIX compilation
