@@ -43,11 +43,15 @@ extern "C" {
 // Functions bellow
 t_status	machine_module_supported		( void					);
 
-// Hostname related calls
-/*
-t_status	machine_hostname_get			( t_size maxlen, t_char * hostname	);
-t_status	machine_hostname_set			( t_char * hostname			);
-*/
+// Host name related calls
+
+t_status	machine_host_getName			( t_size maxlen, t_char * hostname	);
+t_status	machine_host_setName			( t_char * hostname			);
+
+// Domain name related calls
+
+t_status	machine_domain_getName			( t_size maxlen, t_char * hostname	);
+t_status	machine_domain_setName			( t_char * hostname			);
 
 // HW related
 /*

@@ -3,15 +3,18 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Machine module declarations
+// Purpose:	Common Linux OS declarations
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_MACHINE_TYPES_H_
-#define MACHINE_MACHINE_TYPES_H_
+#ifndef MACHINE_TYPES_LINUX_H_
+#define MACHINE_TYPES_LINUX_H_
 
+// Only relevant is OS is Linux
 #ifdef OS_LINUX
- #include "machine/machine_types_linux.h"
-#endif
 
-#endif /* MACHINE_MACHINE_TYPES_H_ */
+#include "machine/machine_types_posix.h"
+
+#endif	// OS Linux
+
+#endif /* MACHINE_TYPES_LINUX_H_ */

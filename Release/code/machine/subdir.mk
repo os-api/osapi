@@ -4,13 +4,19 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/machine/machine.c 
+../code/machine/machine.c \
+../code/machine/machine_linux.c \
+../code/machine/machine_posix.c 
 
 OBJS += \
-./code/machine/machine.o 
+./code/machine/machine.o \
+./code/machine/machine_linux.o \
+./code/machine/machine_posix.o 
 
 C_DEPS += \
-./code/machine/machine.d 
+./code/machine/machine.d \
+./code/machine/machine_linux.d \
+./code/machine/machine_posix.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

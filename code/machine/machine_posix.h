@@ -3,21 +3,9 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	HW Linux OS declarations
+// Purpose:	Machine module using a POSIX compliant implementation
 //
 // *****************************************************************************************
-
-#ifndef MACHINE_MACHINE_LINUX_H_
-#define MACHINE_MACHINE_LINUX_H_
-
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
-
-
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 // *****************************************************************************************
 //
@@ -25,30 +13,30 @@ extern "C" {
 //
 // *****************************************************************************************
 
-// Include System headers
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// System includes
 
 // Generic OSAPI includes
+#include "general/general.h"
+#include "error/error_sec.h"
+#include "status/status.h"
+//#include "common/common.h"
+
+// Own declarations
+#include "machine/machine.h"
+
 
 // *****************************************************************************************
 //
-// Section: Type declarations
+// Section: Function definition
 //
 // *****************************************************************************************
 
-
-// *****************************************************************************************
-//
-// Section: Function Declarations
-//
-// *****************************************************************************************
+// Only relevant is OS is POSIX compliant
+#ifdef OSAPI_POSIX
 
 
+#endif	// End of POSIX Implementation
 
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
-
-#endif	// End of OS Linux
-
-#endif /* MACHINE_MACHINE_LINUX_H_ */
