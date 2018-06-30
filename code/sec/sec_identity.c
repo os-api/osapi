@@ -39,6 +39,51 @@
 
 // User ID functions
 
+t_status sec_user_stringToId( char * p_string, t_gid * p_uid )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_uid == NULL || p_string == NULL )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = stringTo_uid( p_string, p_uid );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+}
+
+
+t_status sec_user_idToString( t_uid uid, t_size strSize, char * p_string )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( strSize <= 0 || p_string == NULL )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = uidTo_string( uid, strSize, p_string );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+}
+
+t_status sec_user_compare( t_uid uid1, t_uid uid2, bool * p_result )
+{
+  return uid_compare( uid1, uid2, p_result );
+}
+
+
 t_status sec_user_getId( t_uid * p_uid )
 {
   t_status	st;
@@ -142,6 +187,51 @@ t_status sec_user_getGroups( t_uid uid, size_t groupListMaxSize, size_t * p_grou
 
 
 // Group ID functions
+
+t_status sec_group_stringToId( char * p_string, t_gid * p_gid )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_gid == NULL || p_string == NULL )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = stringTo_gid( p_string, p_gid );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+}
+
+
+t_status sec_group_idToString( t_gid gid, t_size strSize, char * p_string )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( strSize <= 0 || p_string == NULL )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = gidTo_string( gid, strSize, p_string );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+}
+
+t_status sec_group_compare( t_gid gid1, t_gid gid2, bool * p_result )
+{
+  return gid_compare( gid1, gid2, p_result );
+}
+
 
 t_status sec_group_getId( t_gid * p_gid )
 {

@@ -21,6 +21,7 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdbool.h>
 #include <errno.h>
 #include <sys/types.h>
 #include <string.h>
@@ -76,6 +77,42 @@ void set_common_status( int code, const char * funcname, t_status * p_status )
 }
 
 // User functions
+
+t_status stringTo_uid( const char * p_string, t_uid * p_uid	)
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( p_uid == (t_uid *) 0 || p_string == (char *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_uid = (t_uid) atoll( p_string );
+
+  return st;
+}
+
+
+t_status uidTo_string( t_uid uid, t_size strSize, char * p_string )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( strSize <= 0 || p_string == (char *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      snprintf( p_string, strSize, "%u", uid );
+
+  return st;
+}
+
+t_status uid_compare( t_uid uid1, t_uid uid2, bool * p_result )
+{
+  *p_result = (uid1 == uid2) ? true: false;
+
+  RETURN_STATUS_SUCCESS
+}
 
 t_status get_userID( t_uid * p_id )
 {
@@ -220,6 +257,44 @@ t_status get_max_length_username( t_size * p_size )
 
 
 // Group functions
+
+t_status stringTo_gid( const char * p_string, t_gid * p_gid )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( p_gid == (t_gid *) 0 || p_string == (char *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_gid = (t_gid) atoll( p_string );
+
+  return st;
+}
+
+
+t_status gidTo_string( t_gid gid, t_size strSize, char * p_string )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( strSize <= 0 || p_string == (char *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      snprintf( p_string, strSize, "%u", gid );
+
+  return st;
+}
+
+
+t_status gid_compare( t_gid gid1, t_gid gid2, bool * p_result )
+{
+  *p_result = (gid1 == gid2) ? true: false;
+
+  RETURN_STATUS_SUCCESS
+}
+
 
 t_status get_groupID( t_gid * p_gid )
 {
