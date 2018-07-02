@@ -80,7 +80,41 @@ t_status sec_user_idToString( t_uid uid, t_size strSize, char * p_string )
 
 t_status sec_user_compare( t_uid uid1, t_uid uid2, bool * p_result )
 {
-  return uid_compare( uid1, uid2, p_result );
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_result == (bool) 0 )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = uid_compare( uid1, uid2, p_result );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+
+}
+
+t_status sec_user_copy( t_uid source, t_uid * p_target )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_target == (t_uid *) 0 )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = uid_copy( source, p_target );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
 }
 
 
@@ -229,7 +263,40 @@ t_status sec_group_idToString( t_gid gid, t_size strSize, char * p_string )
 
 t_status sec_group_compare( t_gid gid1, t_gid gid2, bool * p_result )
 {
-  return gid_compare( gid1, gid2, p_result );
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_result == (bool) 0 )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = gid_compare( gid1, gid2, p_result );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
+}
+
+t_status sec_group_copy( t_gid source, t_gid * p_target )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_target == (t_gid *) 0 )
+      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+  else
+    {
+      t_status nst = gid_copy( source, p_target );
+
+      if( status_failure( nst ) )
+          status_set( OSAPI_MODULE_SEC, nst.type, __func__, nst.code, &st );
+    }
+
+  return st;
 }
 
 

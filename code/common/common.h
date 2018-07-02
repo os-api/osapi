@@ -50,6 +50,7 @@ t_status	get_max_number_groups		( t_size * p_size 									);
 t_status	stringTo_gid			( const char * p_string, t_gid * p_gid							);
 t_status	gidTo_string			( t_gid gid, t_size strSize, char * p_string						);
 t_status	gid_compare			( t_gid gid1, t_gid gid2, bool * p_result						);
+t_status	gid_copy			( t_gid source, t_gid * p_target							);
 
 // Functions for Users
 t_status	get_userID			( t_uid * p_id		  								);
@@ -62,6 +63,7 @@ t_status	get_user_group_list		( t_uid uid, size_t groupListMaxSize, size_t * p_g
 t_status	stringTo_uid			( const char * p_string, t_gid * p_uid							);
 t_status	uidTo_string			( t_uid uid, t_size strSize, char * p_string						);
 t_status	uid_compare			( t_uid uid1, t_uid uid2, bool * p_result						);
+t_status	uid_copy			( t_uid source, t_uid * p_target							);
 
 #pragma GCC visibility pop			// End of internal interface
 

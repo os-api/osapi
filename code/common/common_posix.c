@@ -109,10 +109,33 @@ t_status uidTo_string( t_uid uid, t_size strSize, char * p_string )
 
 t_status uid_compare( t_uid uid1, t_uid uid2, bool * p_result )
 {
-  *p_result = (uid1 == uid2) ? true: false;
+  t_status st;
 
-  RETURN_STATUS_SUCCESS
+  status_reset( &st );
+
+  if( p_result == (bool) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_result = (uid1 == uid2) ? true: false;
+
+  return st;
 }
+
+
+t_status uid_copy( t_uid source, t_uid * p_target )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( p_target == (t_uid *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_target = source;
+
+  return st;
+}
+
 
 t_status get_userID( t_uid * p_id )
 {
@@ -290,10 +313,33 @@ t_status gidTo_string( t_gid gid, t_size strSize, char * p_string )
 
 t_status gid_compare( t_gid gid1, t_gid gid2, bool * p_result )
 {
-  *p_result = (gid1 == gid2) ? true: false;
+  t_status st;
 
-  RETURN_STATUS_SUCCESS
+  status_reset( &st );
+
+  if( p_result == (bool) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_result = (gid1 == gid2) ? true: false;
+
+  return st;
 }
+
+
+t_status gid_copy( t_gid source, t_gid * p_target )
+{
+  t_status st;
+
+  status_reset( &st );
+
+  if( p_target == (t_gid *) 0 )
+      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+  else
+      *p_target = source;
+
+  return st;
+}
+
 
 
 t_status get_groupID( t_gid * p_gid )
