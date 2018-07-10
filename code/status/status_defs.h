@@ -17,9 +17,11 @@
 // *****************************************************************************************
 
 // Helper definitions for a correct way to check for success/failure of operations
-#define status_success( x )	( x.code == 0 )
-#define status_failure( x )	( x.code != 0 )
-#define status_error( x )	( x.code )
+#define status_success( x )	( x.code == 0    )
+#define status_failure( x )	( x.code != 0    )
+#define status_error( x )	( x.code         )
+#define status_true( x )	( x.code ? 0 : 1 )
+#define status_false( x )	( x.code ? 1 : 0 )
 
 // Expansion of structure arguments (this avoids that client applications need to know internal details of t_status)
 #define OSAPI_STATUS(x)		status(x.code,x.module,x.type,x.funcname)
