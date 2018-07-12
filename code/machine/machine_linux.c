@@ -14,12 +14,17 @@
 //
 // *****************************************************************************************
 
-// System includes
-#define _DEFAULT_SOURCE
-  #include <unistd.h>
-#undef _DEFAULT_SOURCE
+// Project baseline
+#include "general/general_baseline.h"
 
+// System includes
 #include <string.h>
+
+// (Re)define system functions due to different define symbols required in different Linux versions
+extern int gethostname	(char *name, size_t len		);
+extern int sethostname	(const char *name, size_t len	);
+extern int getdomainname(char *name, size_t len		);
+extern int setdomainname(const char *name, size_t len	);
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -29,6 +34,8 @@
 // Own declarations
 #include "machine/machine.h"
 #include "machine/machine_linux.h"
+
+
 
 // *****************************************************************************************
 //
