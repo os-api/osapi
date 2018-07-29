@@ -3,15 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common POSIX declarations
+// Purpose:	Common declarations for machine interface type
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_TYPES_POSIX_H_
-#define MACHINE_TYPES_POSIX_H_
-
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
+#ifndef COMMON_TYPES_IF_H_
+#define COMMON_TYPES_IF_H_
 
 // *****************************************************************************************
 //
@@ -19,7 +16,14 @@
 //
 // *****************************************************************************************
 
-// Include System headers
+// System headers
+#include <stdbool.h>
+
+// OSAPI headers
+#include "general/general_types.h"
+#include "general/general_protocol.h"
+
+#include "common/common_types_platform.h"
 
 
 // *****************************************************************************************
@@ -29,14 +33,15 @@
 // *****************************************************************************************
 
 
+
 // *****************************************************************************************
 //
-// Section: Type declarations
+// Section: Type definitions
 //
 // *****************************************************************************************
 
 
 
-#endif	// Posix only
 
-#endif /* MACHINE_TYPES_POSIX_H_ */
+
+#endif /* COMMON_TYPES_IP_H_ */

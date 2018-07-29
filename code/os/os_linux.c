@@ -7,18 +7,14 @@
 //
 // *****************************************************************************************
 
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
 
 // *****************************************************************************************
 //
 // Section: Import headers
 //
 // *****************************************************************************************
-
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
-
-// The following define is required to include getdomainname/setdomainname
-#define _DEFAULT_SOURCE
 
 // Force baseline before system headers
 #include "general/general_baseline.h"
@@ -31,6 +27,9 @@
 #include <string.h>
 #include <limits.h>
 
+// Declare Linux/BSD specific function to avoid symbols definitions
+int getdomainname( char *, size_t );
+
 // Generic OSAPI includes
 #include "general/general.h"
 #include "error/error_os.h"
@@ -38,6 +37,7 @@
 
 // Own declarations
 #include "os/os.h"
+
 
 // *****************************************************************************************
 //

@@ -3,15 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common POSIX declarations
+// Purpose:	Net(work) private error declarations
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_TYPES_POSIX_H_
-#define MACHINE_TYPES_POSIX_H_
-
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
+#ifndef CODE_ERR_ERROR_PRIV_NET_H_
+#define CODE_ERR_ERROR_PRIV_NET_H_
 
 // *****************************************************************************************
 //
@@ -19,24 +16,22 @@
 //
 // *****************************************************************************************
 
-// Include System headers
-
-
-// *****************************************************************************************
-//
-// Section: Macros/Constant definitions
-//
-// *****************************************************************************************
-
+// Include own error public declarations
+#include "error/error_net.h"
 
 // *****************************************************************************************
 //
-// Section: Type declarations
+// Section: Clock Error Definitions
 //
 // *****************************************************************************************
 
+#define error_net_X(a, b, c) [a]=c,
 
+static const char * net_errors[] =
+{
+  #include "error/table_net.h"
+};
 
-#endif	// Posix only
+#undef error_net_X
 
-#endif /* MACHINE_TYPES_POSIX_H_ */
+#endif /* CODE_ERR_ERROR_PRIV_NET_H_ */

@@ -24,14 +24,8 @@
 #include <limits.h>
 #include <errno.h>
 
-// Defines to import function getgrouplist
-//#define _DEFAULT_SOURCE		// Glibc since  2.19
-//#define _BSD_SOURCE		// Glibc before 2.19
-#define __USE_MISC
-#include <grp.h>
-
-//#undef _BSD_SOURCE
-//#undef _DEFAULT_SOURCE
+// Declare Linux/BSD specific function to avoid symbols definitions
+extern int getgrouplist(const char *, gid_t, gid_t *, int * );
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -40,6 +34,13 @@
 
 // Own declarations
 #include "common/common.h"
+
+
+// *****************************************************************************************
+//
+// Section: Function definition
+//
+// *****************************************************************************************
 
 
 t_status get_max_length_groupname( t_size * p_size )
@@ -109,4 +110,4 @@ t_status get_user_group_list( t_uid uid, size_t groupListMaxSize, size_t * p_gro
 
 
 
-#endif
+#endif	// OS_LINUX

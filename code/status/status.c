@@ -17,12 +17,12 @@
 #include "general/general_baseline.h"
 
 // System headers
-#include <error/errors_status.h>
 #include <stdio.h>
 #include <string.h>
 
 // // Generic OSAPI includes
 #include "general/general.h"
+#include "error/errors_status.h"
 #include "status/status.h"
 
 
@@ -65,7 +65,7 @@ void status_message_iprint( t_status s )
 
 void status_message_eprint( t_status s )
 {
-  printf("Module %s, function %s with status: %s.\n",
+  printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
 	 module_name[ s.module ],
 	 s.funcname,
 	 strerror(s.code) );

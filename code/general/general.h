@@ -10,6 +10,13 @@
 #ifndef GENERAL_H_
 #define GENERAL_H_
 
+
+// Make sure that header is easily imported from c++
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 // *****************************************************************************************
 //
 // Section: Import headers
@@ -28,9 +35,20 @@
 //
 // *****************************************************************************************
 
-unsigned long	osapi_get_version			( void );
-int		osapi_get_version_stability		( void );
-const char *	osapi_get_version_string		( void );
-const char *	osapi_get_version_stability_string	( void );
+#pragma GCC visibility push(default)		// Start of public interface
+
+unsigned long	osapi_get_version			( void		);
+int		osapi_get_version_stability		( void		);
+const char *	osapi_get_version_string		( void		);
+const char *	osapi_get_version_stability_string	( void 		);
+const char * 	osapi_get_protocol_version_string	( t_protocol id );
+
+#pragma GCC visibility pop			// End of public interface
+
+
+// End of header with C++ declaration
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* GENERAL_H_ */

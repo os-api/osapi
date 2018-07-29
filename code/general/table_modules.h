@@ -19,4 +19,5 @@ module_X( OSAPI_MODULE_UTIL, 		,	"UTIL"		)
 module_X( OSAPI_MODULE_IO, 		,	"IO"		)
 module_X( OSAPI_MODULE_LOG, 		,	"LOG"		)
 module_X( OSAPI_MODULE_IPC, 		,	"IPC"		)
+module_X( OSAPI_MODULE_NET, 		,	"NET"		)
 

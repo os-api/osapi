@@ -34,7 +34,8 @@
 #include "error/error_priv_sec.h"
 #include "error/error_priv_string.h"
 #include "error/error_priv_util.h"
-
+#include "error/error_priv_ipc.h"
+#include "error/error_priv_net.h"
 
 
 // *****************************************************************************************
@@ -63,6 +64,8 @@ static const char ** osapi_errors[] =
   sec_errors,
   io_errors,
   util_errors,
+  ipc_errors,
+  net_errors,
   NULL
 };
 

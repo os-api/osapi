@@ -3,17 +3,11 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	HW platform OS selection file
+// Purpose:	Provide enum to string mappings for OSAPI Protocols Selectors
 //
 // *****************************************************************************************
 
-#ifndef HW_HW_PLATFORM_H_
-#define HW_HW_PLATFORM_H_
-
-/* Import OS specific definitions */
-#ifdef	OS_LINUX
- #include <machine/machine_linux.h>
-#endif
+// Protocol generic selectors
+osapi__protocol_selector_X( e_protocol_ip, = -1,	"IP" )
 
 
-#endif /* HW_HW_PLATFORM_H_ */

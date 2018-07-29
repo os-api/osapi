@@ -7,10 +7,6 @@
 //
 // *****************************************************************************************
 
-// Compile only if is a POSIX implementation
-#ifdef OSAPI_POSIX
-
-
 // *****************************************************************************************
 //
 // Section: Import headers
@@ -35,6 +31,9 @@
 // Own declarations
 #include "ipc/ipc.h"
 #include "ipc/ipc_posix.h"
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
 
 
 // *****************************************************************************************

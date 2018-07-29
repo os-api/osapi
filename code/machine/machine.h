@@ -28,7 +28,6 @@ extern "C" {
 
 // Own declarations
 #include "machine/machine_types.h"
-#include "machine/machine_platform.h"
 
 
 // *****************************************************************************************
@@ -41,26 +40,35 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 // Functions bellow
-t_status	machine_module_supported		( void					);
+t_status	machine_module_supported	( void					);
 
 // Host name related calls
 
-t_status	machine_host_getName			( t_size maxlen, t_char * hostname	);
-t_status	machine_host_setName			( t_char * hostname			);
+t_status	machine_host_getName		( t_size maxlen, t_char * hostname	);
+t_status	machine_host_setName		( t_char * hostname			);
 
 // Domain name related calls
 
-t_status	machine_domain_getName			( t_size maxlen, t_char * hostname	);
-t_status	machine_domain_setName			( t_char * hostname			);
+t_status	machine_domain_getName		( t_size maxlen, t_char * hostname	);
+t_status	machine_domain_setName		( t_char * hostname			);
 
 // HW related
 /*
-t_status	machine_hw_getList			( 	);
+// Get total available RAM
+t_status	machine_memory_getTotal
+// Get total physical CPUs / Sockets
+t_status	machine_cpu_getTotal
+// Get total Ethernet Ports
+t_status	machine_ports_getTotal
+// Get total physical disks
+t_status	machine_disks_getTotal
 */
 
-/* IP related
-t_status	machine_ip_getList			( 	);
- */
+// IP related
+t_status	machine_ip_getNumber		( t_protocol selector, t_size * number					);
+t_status	machine_ip_getList		( t_protocol selector, t_size number, t_ip * list			);
+t_status	machine_ip_getStringSize	( t_protocol prot, t_size * p_size 					);
+t_status	machine_ip_toString		( t_protocol protocol, t_ip_address * p_address, t_size, char * string	);
 
 
 #pragma GCC visibility pop			// End of public interface

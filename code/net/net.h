@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide Proc(ess) module API
+// Purpose:	Provide Net(work) module API
 //
 // *****************************************************************************************
 
-#ifndef PROC_H_
-#define PROC_H_
+#ifndef NET_NET_H_
+#define NET_NET_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -26,47 +26,28 @@ extern "C" {
 #include "general/general.h"
 #include "status/status_types.h"
 
-// Common includes
-#include "common/common_types.h"
-
 // Own declarations
-#include "proc/proc_types.h"
-#include "proc/proc_platform.h"
-
+// #include "net/net_types.h"
+// #include "net/net_platform.h"
 
 // *****************************************************************************************
 //
-// Section: Proc(ess) module API
+// Section: Net module API
 //
 // *****************************************************************************************
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-t_status	proc_module_supported		( void 			);
 
-// + Instance management
-// ++ Life cycle
-t_status proc_instance_new			( t_proc * p_process			);
-t_status proc_instance_create			( t_proc * p_process			);
-t_status proc_instance_destroy			( t_proc * p_process			);
-
-// ++ Operations
-
-// + Identity management
-t_status	proc_id_get			( t_pid * 		);
-t_status	proc_parentID_get		( t_pid * 		);
-
-// + Signal handling
-t_status	proc_signal_send		( t_pid, t_signal 	);
-
-
-// Resource management
-/*
-t_status	proc_usage_getMemory
-t_status	proc_usage_getCPU
-t_status	proc_usage_getIO
-t_status	proc_usage_getNetwork
- */
+// Functions bellow
+t_status net_module_supported		( void						);
+t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
+t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
+t_status net_ip_getTarget		( t_ip * p_ip, t_size size, char * p_string	);	// Broadcast or P2P
+t_status net_ip_isV4			( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isV6			( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isBroadcast		( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isP2P			( t_ip * p_ip, bool * p_result			);
 
 
 #pragma GCC visibility pop			// End of public interface
@@ -76,4 +57,4 @@ t_status	proc_usage_getNetwork
 }
 #endif
 
-#endif /* PROC_H_ */
+#endif /* NET_NET_H_ */

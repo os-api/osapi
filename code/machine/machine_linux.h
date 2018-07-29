@@ -26,15 +26,12 @@ extern "C" {
 // *****************************************************************************************
 
 // Include System headers
+#include <ifaddrs.h>
 
 // Generic OSAPI includes
 
-// *****************************************************************************************
-//
-// Section: Type declarations
-//
-// *****************************************************************************************
-
+// Own headers
+#include "machine/machine_types_linux.h"
 
 // *****************************************************************************************
 //
@@ -42,6 +39,8 @@ extern "C" {
 //
 // *****************************************************************************************
 
+static t_status copy_ip			( struct sockaddr * saddress, void * address	);
+static t_status fill_ip_structure	( struct ifaddrs * address, t_ip * ip		);
 
 
 // End of header with C++ declaration

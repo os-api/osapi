@@ -13,24 +13,36 @@
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
 
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
- extern "C" {
-#endif
-
-
+// Import system headers
 #include <sys/types.h>
+
+
+// *****************************************************************************************
+//
+// Section: Macros/Constant definitions
+//
+// *****************************************************************************************
+
+
+
+// *****************************************************************************************
+//
+// Section: Type declarations
+//
+// *****************************************************************************************
 
 // Define POSIX opaque types that are cross functional modules
 typedef uid_t	t_uid;		// User  ID
 typedef gid_t	t_gid;		// Group ID
 
 
-// End of header with C++ declaration
-#ifdef __cplusplus
- }
-#endif
+
 
 #endif	// Posix only
 

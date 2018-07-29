@@ -16,6 +16,7 @@
 
 // Own declarations
 #include "general/general.h"
+#include "general/general_protocol.h"
 
 // *****************************************************************************************
 //
@@ -47,6 +48,18 @@ static const char * osapi_version_quality[] =
 #undef osapi_quality_X
 
 
+// Version stability string
+#define osapi_protocol_X(a, b, c) [a]=c,
+
+static const char * osapi_protocol[] =
+{
+  #include "general/table_protocol.h"
+};
+
+#undef osapi_protocol_X
+
+
+
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -76,4 +89,9 @@ const char * osapi_get_version_stability_string( void )
   return osapi_version_quality[ OSAPI_VERSION_QUALITY ];
 }
 
+
+const char * osapi_get_protocol_version_string( t_protocol id )
+{
+  return osapi_protocol[ id ];
+}
 

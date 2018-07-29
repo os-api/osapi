@@ -28,8 +28,9 @@
 #include "os/os.h"
 #include "log/log.h"
 #include "proc/proc.h"
+#include "ipc/ipc.h"
+#include "net/net.h"
 #include "util/util.h"
-
 
 
 #endif /* OSAPI_H_ */

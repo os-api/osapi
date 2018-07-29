@@ -3,18 +3,17 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Generic type declarations
+// Purpose:	Provide Sec(urity) module API
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_GENERAL_DEFS_H_
-#define GENERAL_GENERAL_DEFS_H_
+#ifndef NET_PRIVATE_H_
+#define NET_PRIVATE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
-
 
 // *****************************************************************************************
 //
@@ -22,38 +21,27 @@ extern "C" {
 //
 // *****************************************************************************************
 
-// System headers
-#include <stdint.h>
+// Include standard headers
+
+// Generic OSAPI includes
+#include "general/general.h"
+#include "general/general_protocol.h"
+#include "status/status_types.h"
+
+// Common includes
+#include "common/common_types.h"
+
+// Own declarations
 
 
 // *****************************************************************************************
 //
-// Section: Type declarations
+// Section: Net(work) module private functions
 //
 // *****************************************************************************************
 
-// Generic OSAPI wide types
-#define	OSAPI_NULL_CHAR_POINTER		( (char * ) 0 )
 
-#define OSAPI_EMPTY_STRING		""
-
-typedef uint64_t			t_size;
-
-typedef uint8_t				Byte;
-
-typedef char				t_char;
-
-typedef int				t_protocol;
-
-// Own module types
-
-#define module_X(a, b, c) a b,
-enum module_id
-{
-  #include <general/table_modules.h>
-};
-
-#undef module_X
+t_status get_ip_string( t_protocol protocol, void * location, t_size strSize, char * string );
 
 
 // End of header with C++ declaration
@@ -61,4 +49,4 @@ enum module_id
 }
 #endif
 
-#endif /* GENERAL_GENERAL_DEFS_H_ */
+#endif /* NET_PRIVATE_H_ */

@@ -19,6 +19,7 @@ code/general \
 code/ipc \
 code/log \
 code/machine \
+code/net \
 code/os \
 code/proc \
 code/sec \
