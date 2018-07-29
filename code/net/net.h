@@ -41,6 +41,8 @@ extern "C" {
 
 // Functions bellow
 t_status net_module_supported		( void						);
+
+t_status net_ip_getStringSize		( t_protocol prot, t_size * p_size		);
 t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
 t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
 t_status net_ip_getTarget		( t_ip * p_ip, t_size size, char * p_string	);	// Broadcast or P2P

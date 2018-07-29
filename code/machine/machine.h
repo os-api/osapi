@@ -67,9 +67,6 @@ t_status	machine_disks_getTotal
 // IP related
 t_status	machine_ip_getNumber		( t_protocol selector, t_size * number					);
 t_status	machine_ip_getList		( t_protocol selector, t_size number, t_ip * list			);
-t_status	machine_ip_getStringSize	( t_protocol prot, t_size * p_size 					);
-t_status	machine_ip_toString		( t_protocol protocol, t_ip_address * p_address, t_size, char * string	);
-
 
 #pragma GCC visibility pop			// End of public interface
 

@@ -44,6 +44,30 @@
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
 
+t_status net_ip_getStringSize( t_protocol prot, t_size * p_size )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_size == NULL )
+      status_iset( OSAPI_MODULE_MACHINE, __func__, e_net_params, &st );
+  else
+    {
+      if( prot == e_protocol_ipv4 )
+	  *p_size = INET_ADDRSTRLEN;
+      else if( prot == e_protocol_ipv6 )
+	  *p_size = INET6_ADDRSTRLEN;
+      else
+	{
+	  *p_size = 0;
+	  status_iset( OSAPI_MODULE_MACHINE, __func__, e_net_support, &st );
+	}
+    }
+
+  return st;
+}
+
 
 t_status net_ip_getHost( t_ip * p_ip, t_size size, char * p_string )
 {

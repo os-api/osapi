@@ -57,7 +57,6 @@ t_status get_max_length_groupname( t_size * p_size )
   return st;
 }
 
-#include <stdio.h>
 t_status get_user_group_list( t_uid uid, size_t groupListMaxSize, size_t * p_groupListCurSize, t_gid *  p_groupList )
 {
   t_status st;

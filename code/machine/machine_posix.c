@@ -63,29 +63,6 @@ t_status machine_host_getName( t_size maxlen, t_char * hostname	)
 }
 
 
-t_status machine_ip_getStringSize( t_protocol prot, t_size * p_size )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_size == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
-  else
-    {
-      if( prot == e_protocol_ipv4 )
-	  *p_size = INET_ADDRSTRLEN;
-      else if( prot == e_protocol_ipv6 )
-	  *p_size = INET6_ADDRSTRLEN;
-      else
-	{
-	  *p_size = 0;
-	  status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_support, &st );
-	}
-    }
-
-  return st;
-}
 
 
 
