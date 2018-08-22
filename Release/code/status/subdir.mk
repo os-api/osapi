@@ -4,13 +4,16 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/status/status.c 
+../code/status/status.c \
+../code/status/status_posix.c 
 
 OBJS += \
-./code/status/status.o 
+./code/status/status.o \
+./code/status/status_posix.o 
 
 C_DEPS += \
-./code/status/status.d 
+./code/status/status.d \
+./code/status/status_posix.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

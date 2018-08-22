@@ -65,6 +65,10 @@ t_status	uidTo_string			( t_uid uid, t_size strSize, char * p_string						);
 t_status	uid_compare			( t_uid uid1, t_uid uid2, bool * p_result						);
 t_status	uid_copy			( t_uid source, t_uid * p_target							);
 
+
+// Utility functions
+int		common_options_get		( const t_option * moduleOptions, const char * providedOptions[]			);
+
 #pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration

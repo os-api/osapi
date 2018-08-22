@@ -25,6 +25,8 @@
 #include "error/errors_status.h"
 #include "status/status.h"
 
+#include "status/status_platform.h"
+
 
 // *****************************************************************************************
 //
@@ -35,7 +37,6 @@
 
 
 void status_message_iprint( t_status status );
-void status_message_eprint( t_status status );
 
 
 void status_reset( t_status * p_status )
@@ -63,13 +64,6 @@ void status_message_iprint( t_status s )
 	 osapi_errors[ s.module ][ s.code ] );
 }
 
-void status_message_eprint( t_status s )
-{
-  printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
-	 module_name[ s.module ],
-	 s.funcname,
-	 strerror(s.code) );
-}
 
 void status_message_print( t_status status )
 {
@@ -97,7 +91,7 @@ const char * status_error_get( t_status * p_status )
   if( p_status->type == STATUS_INTERNAL )
       return osapi_errors[ p_status->module ][ p_status->code ];
   else
-      return strerror(p_status->code);
+      return status_error_getSystem( p_status->code );
 }
 
 const char * status_errorByType_get( int code, Byte module, Byte type )
@@ -105,7 +99,7 @@ const char * status_errorByType_get( int code, Byte module, Byte type )
   if( type == STATUS_INTERNAL )
       return osapi_errors[ module ][ code ];
   else
-      return strerror(code);
+      return status_error_getSystem( code );
 }
 
 const char * status_moduleByID_get( Byte module )

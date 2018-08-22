@@ -42,6 +42,7 @@ extern "C" {
 // Functions bellow
 t_status net_module_supported		( void						);
 
+// IP related facility
 t_status net_ip_getStringSize		( t_protocol prot, t_size * p_size		);
 t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
 t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
@@ -50,6 +51,9 @@ t_status net_ip_isV4			( t_ip * p_ip, bool * p_result			);
 t_status net_ip_isV6			( t_ip * p_ip, bool * p_result			);
 t_status net_ip_isBroadcast		( t_ip * p_ip, bool * p_result			);
 t_status net_ip_isP2P			( t_ip * p_ip, bool * p_result			);
+
+// Port related facility
+
 
 
 #pragma GCC visibility pop			// End of public interface

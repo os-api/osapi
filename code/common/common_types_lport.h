@@ -3,18 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Proc Module Linux header
+// Purpose:	Common declarations for UDP/TCP logical ports
 //
 // *****************************************************************************************
 
-#ifndef PROC_LINUX_H_
-#define PROC_LINUX_H_
-
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
-
+#ifndef COMMON_TYPES_LPORT_H_
+#define COMMON_TYPES_LPORT_H_
 
 // *****************************************************************************************
 //
@@ -22,8 +16,15 @@ extern "C" {
 //
 // *****************************************************************************************
 
-// Import own headers
-#include <proc/proc_linux_types.h>
+// System headers
+#include <stdbool.h>
+
+// OSAPI headers
+#include "general/general_types.h"
+#include "general/general_protocol.h"
+
+// Include own headers
+
 
 // *****************************************************************************************
 //
@@ -31,25 +32,23 @@ extern "C" {
 //
 // *****************************************************************************************
 
-const t_option lib_options[] = {
-        { "RTLD_LAZY", 	 RTLD_LAZY 		},
-	{ "RTLD_NOW", 	 RTLD_NOW 		},
-	{ "RTLD_GLOBAL", RTLD_GLOBAL	 	},
-	{ "RTLD_LOCAL",  RTLD_LOCAL 		},
-        { "",		 OSAPI_OPTIONS_END	},
+
+// *****************************************************************************************
+//
+// Section: Type definitions
+//
+// *****************************************************************************************
+
+
+//typedef int		t_address_type;
+
+struct s_lport
+{
+
 };
 
-
-// *****************************************************************************************
-//
-// Section: Private function declarations
-//
-// *****************************************************************************************
+typedef struct s_lport	t_lport;
 
 
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
 
-#endif /* PROC_LINUX_H_ */
+#endif /* COMMON_TYPES_LPORT_H_ */

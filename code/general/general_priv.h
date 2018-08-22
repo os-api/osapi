@@ -1,9 +1,11 @@
-/*
- * general_priv.h
- *
- *  Created on: 10/12/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Define module names
+//
+// *****************************************************************************************
 
 #ifndef GENERAL_PRIV_H_
 #define GENERAL_PRIV_H_

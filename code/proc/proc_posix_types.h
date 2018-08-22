@@ -10,11 +10,6 @@
 #ifndef PROC_PROC_POSIX_TYPES_H_
 #define PROC_PROC_POSIX_TYPES_H_
 
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 // *****************************************************************************************
 //
 // Section: Import headers
@@ -54,10 +49,7 @@ struct  s_proc
 
 typedef struct s_proc		t_proc;
 
+typedef void *			t_library;
 
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
 
 #endif /* PROC_PROC_POSIX_TYPES_H_ */

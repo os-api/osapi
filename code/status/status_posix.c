@@ -3,10 +3,9 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Proc module using a Linux implementation
+// Purpose:	Status module entry point implementation file
 //
 // *****************************************************************************************
-
 
 // *****************************************************************************************
 //
@@ -17,24 +16,17 @@
 // Force baseline before system headers
 #include "general/general_baseline.h"
 
-// System includes <here>
-#include <strings.h>
-#include <dlfcn.h>
+// System headers
+#include <stdio.h>
+#include <string.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_os.h"
-#include "common/common.h"
+#include "general/general_priv.h"
+#include "status/status.h"
 
-// Include own headers
-#include "proc/proc.h"
-#include "proc/proc_linux.h"
-#include "proc/proc_posix.h"
-
-
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
-
+// Import own headers
+#include "status/status_posix.h"
 
 // *****************************************************************************************
 //
@@ -42,15 +34,22 @@
 //
 // *****************************************************************************************
 
-t_status proc_library_load( const char * pathname, const char * options[], t_library * p_library )
+
+void status_message_eprint( t_status s )
 {
-  int	opt = 0;
+  printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
+	 module_name[ s.module ],
+	 s.funcname,
+	 strerror(s.code) );
+}
 
-  opt = common_options_get( lib_options, options );
 
-  return posix_library_load( pathname, opt, p_library );
+const char * status_error_getSystem( int error )
+{
+  return strerror( error );
 }
 
 
 
-#endif	// End of OS Linux
+
+

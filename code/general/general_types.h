@@ -37,6 +37,8 @@ extern "C" {
 
 #define OSAPI_EMPTY_STRING		""
 
+#define OSAPI_OPTIONS_END		-999999
+
 typedef uint64_t			t_size;
 
 typedef uint8_t				Byte;
@@ -55,6 +57,14 @@ enum module_id
 
 #undef module_X
 
+// Define a generic pair name/value structure
+struct s_optional_pair
+{
+  char *	name;
+  int		value;
+};
+
+typedef struct s_optional_pair	t_option;
 
 // End of header with C++ declaration
 #ifdef __cplusplus

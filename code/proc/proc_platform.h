@@ -12,7 +12,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include <proc/proc_linux.h>
+	#include "proc/proc_linux_types.h"
 #endif
 
 

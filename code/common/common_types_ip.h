@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common declarations for IP (IP type is used by several modules
+// Purpose:	Common declarations for IP (IP type is used by several modules)
 //
 // *****************************************************************************************
 

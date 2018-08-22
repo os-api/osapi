@@ -3,10 +3,17 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Proc module using a Linux implementation
+// Purpose:	Proc(ess) POSIX declarations
 //
 // *****************************************************************************************
 
+#ifndef PROC_POSIX_H_
+#define PROC_POSIX_H_
+
+// Make sure that header is easily imported from c++
+#ifdef __cplusplus
+ extern "C" {
+#endif
 
 // *****************************************************************************************
 //
@@ -14,27 +21,8 @@
 //
 // *****************************************************************************************
 
-// Force baseline before system headers
-#include "general/general_baseline.h"
-
-// System includes <here>
-#include <strings.h>
-#include <dlfcn.h>
-
-// Generic OSAPI includes
-#include "general/general.h"
-#include "error/error_os.h"
-#include "common/common.h"
-
 // Include own headers
-#include "proc/proc.h"
-#include "proc/proc_linux.h"
-#include "proc/proc_posix.h"
-
-
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
-
+#include "proc/proc_posix_types.h"
 
 // *****************************************************************************************
 //
@@ -42,15 +30,13 @@
 //
 // *****************************************************************************************
 
-t_status proc_library_load( const char * pathname, const char * options[], t_library * p_library )
-{
-  int	opt = 0;
-
-  opt = common_options_get( lib_options, options );
-
-  return posix_library_load( pathname, opt, p_library );
-}
+t_status posix_library_load( const char * pathname, int options, t_library * p_library );
 
 
+// End of header with C++ declaration
+#ifdef __cplusplus
+ }
+#endif
 
-#endif	// End of OS Linux
+
+#endif /* PROC_POSIX_H_ */
