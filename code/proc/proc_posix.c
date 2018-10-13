@@ -38,6 +38,15 @@
 
 // *****************************************************************************************
 //
+// Section: Function declarations (private)
+//
+// *****************************************************************************************
+
+t_status proc_library_getError( t_size size, char * p_error );
+
+
+// *****************************************************************************************
+//
 // Section: Function definition
 //
 // *****************************************************************************************
@@ -115,10 +124,16 @@ t_status posix_library_load( const char * pathname, int options, t_library * p_l
   else
     {
       handle = dlopen( pathname, options );
-      if( handle == NULL )
-          status_iset( OSAPI_MODULE_PROC, __func__, e_proc_libload, &st );
-      else
+      if( handle != NULL )
 	  *p_library = handle;
+      else
+	{
+	  char errorString[ OSAPI_STATUS_STRING_SIZE ];
+	  st = proc_library_getError( OSAPI_STATUS_STRING_SIZE, errorString );
+
+	  if( status_success( st ) )	// Success in getting external error information
+              status_setString( OSAPI_MODULE_PROC, e_library_loader, __func__, errorString, &st );
+	}
     }
 
   return st;
@@ -137,7 +152,13 @@ t_status proc_library_unload( t_library library )
     {
       rc = dlclose( library );
       if( rc != 0 )
-	  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_libunload, &st );
+	{
+	  char errorString[ OSAPI_STATUS_STRING_SIZE ];
+	  st = proc_library_getError( OSAPI_STATUS_STRING_SIZE, errorString );
+
+	  if( status_success( st ) )	// Success in getting external error information
+              status_setString( OSAPI_MODULE_PROC, e_library_loader, __func__, errorString, &st );
+	}
     }
 
   return st;

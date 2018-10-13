@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_STATUS_H_
-#define STATUS_STATUS_H_
+#ifndef ERROR_ERROR_H_
+#define ERROR_ERROR_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -22,12 +22,15 @@ extern "C" {
 //
 // *****************************************************************************************
 
+// Include standard types
+#include <stdbool.h>
+
 // Generic OSAPI includes
 #include "general/general.h"
 #include "general/general_types.h"
 
 // Own declarations
-#include "status/status_types.h"
+#include "error/error_types.h"
 
 // *****************************************************************************************
 //
@@ -37,19 +40,8 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-
-void		status_reset		( t_status * 										);
-void		status_set		( t_module, t_status_type, t_status_funcname, t_error, t_status *			);
-void		status_setString	( t_module, t_status_type, t_status_funcname, t_status_string, t_status * 		);
-
-void		status_message_print	( t_status										);
-void		status_message_get	( t_status, t_size, t_char *								);
-
-// Get component strings of a t_status type
-const char *	status_module_get	( t_status										);
-const char *	status_function_get	( t_status 										);
-const char *	status_error_get	( t_status 										);
-
+const char * 	error_string_get	( t_module module, t_error code	);
+bool 		error_code_isValid	( t_error code 			);
 
 #pragma GCC visibility pop			// End of public interface
 
@@ -60,13 +52,10 @@ const char *	status_error_get	( t_status 										);
 //
 // *****************************************************************************************
 
-// Import macros
-#include "status/status_defs.h"
-
 
 // End of header with C++ declaration
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* STATUS_STATUS_H_ */
+#endif /* ERROR_ERROR_H_ */

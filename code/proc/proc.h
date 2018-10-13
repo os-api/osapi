@@ -70,7 +70,7 @@ t_status	proc_usage_getNetwork
 
 t_status	proc_library_load		( const char * pathname, const char * options[], t_library * lib	);
 t_status	proc_library_unload		( t_library lib								);
-t_status	proc_library_getError		( t_size size, char * p_error						);
+
 
 #pragma GCC visibility pop			// End of public interface
 

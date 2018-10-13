@@ -17,47 +17,7 @@
 // Own declarations
 #include "general/general.h"
 #include "general/general_protocol.h"
-
-// *****************************************************************************************
-//
-// Section: Type definitions
-//
-// Purpose: Define OSAPI wide static information
-//
-// *****************************************************************************************
-
-// Version string
-#define osapi_version_X(a, b, c) [a]=c,
-
-static const char * osapi_version[] =
-{
-  #include "general/table_version.h"
-};
-
-#undef osapi_version_X
-
-
-// Version stability string
-#define osapi_quality_X(a, b, c) [a]=c,
-
-static const char * osapi_version_quality[] =
-{
-  #include "general/table_version_quality.h"
-};
-
-#undef osapi_quality_X
-
-
-// Version stability string
-#define osapi_protocol_X(a, b, c) [a]=c,
-
-static const char * osapi_protocol[] =
-{
-  #include "general/table_protocol.h"
-};
-
-#undef osapi_protocol_X
-
+#include "general/general_priv.h"
 
 
 // *****************************************************************************************
@@ -94,4 +54,16 @@ const char * osapi_get_protocol_version_string( t_protocol id )
 {
   return osapi_protocol[ id ];
 }
+
+
+// Module related functions
+
+const char * osapi_getModule( t_module module )
+{
+  if( general_is_valid_module( module ) )
+      return module_name[ module ];
+  else
+      return OSAPI_EMPTY_STRING;
+}
+
 

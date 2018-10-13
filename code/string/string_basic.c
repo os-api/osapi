@@ -21,7 +21,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
-
+#include <stdbool.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -315,7 +315,7 @@ t_status string_basic_compare( t_string * ps_str1, t_string * ps_str2, Byte * p_
   return st;
 }
 
-t_status string_basic_equal( t_string * ps_str1, t_string * ps_str2, _Bool * p_result )
+t_status string_basic_equal( t_string * ps_str1, t_string * ps_str2, bool * p_result )
 {
   t_status	st;
 

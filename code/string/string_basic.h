@@ -26,6 +26,9 @@ extern "C" {
 #include "general/general.h"
 #include "status/status_types.h"
 
+// Standard types
+#include <stdbool.h>
+
 // Own declarations
 #include <string/string_types_basic.h>
 #include "string/string_platform.h"
@@ -56,7 +59,7 @@ t_status string_basic_print			( t_string *				);
 t_status string_basic_get			( t_string *, t_size, char *		);
 
 // + Instances management
-t_status string_basic_equal			( t_string *, t_string *, _Bool	*	);
+t_status string_basic_equal			( t_string *, t_string *, bool	*	);
 t_status string_basic_compare			( t_string *, t_string *, Byte	*	);
 t_status string_basic_compareIcase		( t_string *, t_string *, Byte	*	);
 t_status string_basic_concat			( t_string *, t_string *, t_string *	);

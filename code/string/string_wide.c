@@ -22,7 +22,7 @@
 //#include <string.h>
 #include <strings.h>
 #include <wchar.h>
-
+#include <stdbool.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -315,7 +315,7 @@ t_status string_wide_compare( t_wString * ps_str1, t_wString * ps_str2, Byte * p
   return st;
 }
 
-t_status string_wide_equal( t_wString * ps_str1, t_wString * ps_str2, _Bool * p_result )
+t_status string_wide_equal( t_wString * ps_str1, t_wString * ps_str2, bool * p_result )
 {
   t_status	st;
 

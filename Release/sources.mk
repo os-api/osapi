@@ -15,6 +15,7 @@ C_DEPS :=
 SUBDIRS := \
 code/clock \
 code/common \
+code/error \
 code/general \
 code/ipc \
 code/log \

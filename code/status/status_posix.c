@@ -22,7 +22,6 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "general/general_priv.h"
 #include "status/status.h"
 
 // Import own headers
@@ -35,10 +34,10 @@
 // *****************************************************************************************
 
 
-void status_message_eprint( t_status s )
+void status_message_cPrint( t_status s )
 {
   printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
-	 module_name[ s.module ],
+	 osapi_getModule( s.module ),
 	 s.funcname,
 	 strerror(s.code) );
 }
@@ -49,6 +48,11 @@ const char * status_error_getSystem( int error )
   return strerror( error );
 }
 
+void status_message_cGet( t_status status, t_size size, t_char * p_message )
+{
+  if( p_message != OSAPI_NULL_CHAR_POINTER && size > 0 )
+      strncpy( p_message, strerror( status.code ), size );
+}
 
 
 

@@ -26,6 +26,9 @@ extern "C" {
 #include "general/general.h"
 #include "status/status_types.h"
 
+// Standard headers
+#include <stdbool.h>
+
 // Include own types
 #include "string/string_types_wide.h"
 
@@ -56,10 +59,10 @@ t_status string_wide_print			( t_wString *							);
 t_status string_wide_get			( t_wString *, t_size, wchar_t *				);
 
 // + Instances management
-t_status string_wide_equal			( t_wString *, t_wString *, _Bool	*	);
-t_status string_wide_compare			( t_wString *, t_wString *, Byte	*	);
-// t_status string_wide_compareIcase		( t_wString *, t_wString *, Byte	*	);
-t_status string_wide_concat			( t_wString *, t_wString *, t_wString *	);
+t_status string_wide_equal			( t_wString *, t_wString *, bool	*			);
+t_status string_wide_compare			( t_wString *, t_wString *, Byte	*			);
+// t_status string_wide_compareIcase		( t_wString *, t_wString *, Byte	*			);
+t_status string_wide_concat			( t_wString *, t_wString *, t_wString *				);
 
 
 #pragma GCC visibility pop			// End of public interface

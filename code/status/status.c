@@ -22,10 +22,31 @@
 
 // // Generic OSAPI includes
 #include "general/general.h"
-#include "error/errors_status.h"
+#include "error/error.h"
 #include "status/status.h"
 
 #include "status/status_platform.h"
+
+
+// *****************************************************************************************
+//
+// Section: Local declarations/definitions
+//
+// *****************************************************************************************
+
+_Thread_local	static char	osapi_status_string[ OSAPI_STATUS_STRING_SIZE ];
+
+
+// *****************************************************************************************
+//
+// Section: Function declarations (private)
+//
+// *****************************************************************************************
+
+void 		status_message_iPrint		( t_status 			);
+void 		status_message_sPrint		( t_status 			);
+void		status_message_iGet		( t_status, t_size, t_char * 	);
+void		status_message_sGet		( t_status, t_size, t_char * 	);
 
 
 // *****************************************************************************************
@@ -35,77 +56,134 @@
 // *****************************************************************************************
 
 
-
-void status_message_iprint( t_status status );
-
-
 void status_reset( t_status * p_status )
 {
   p_status->module	=	OSAPI_MODULE_NONE;
-  p_status->type 	= 	STATUS_INTERNAL;
+  p_status->type 	= 	e_library_osapi;
   p_status->code 	= 	0;
   p_status->funcname	=	OSAPI_EMPTY_STRING;
 }
 
-void status_set( int module, Byte tp, const char * fname, int code, t_status * p_status )
+void status_set( t_module module, t_status_type type, t_status_funcname fname, t_error code, t_status * p_status )
 {
   p_status->module	= (Byte) module;
-  p_status->type	= tp;
+  p_status->type	= type;
   p_status->code	= code;
   p_status->funcname	= fname;
 }
 
+void status_setString( t_module module, t_status_type type, t_status_funcname fname, t_status_string statusString, t_status * p_status )
+{
+  p_status->module	= (Byte) module;
+  p_status->type	= type;
+  p_status->funcname	= fname;
 
-void status_message_iprint( t_status s )
+  // Copy the string to the thread local storage and assign the status string pointer to it
+  strncpy( osapi_status_string, statusString, OSAPI_STATUS_STRING_SIZE );
+  osapi_status_string[ OSAPI_STATUS_STRING_SIZE -1 ] = '\0';		// Enforce the null termination
+  p_status->string	= osapi_status_string;
+}
+
+
+void status_message_iPrint( t_status status )
 {
   printf("Module %s, function %s with status: %s.\n",
-	 module_name[ s.module ],
-	 s.funcname,
-	 osapi_errors[ s.module ][ s.code ] );
+	 osapi_getModule( status.module ),
+	 status.funcname,
+	 error_string_get( status.module, status.code ) );
+}
+
+void status_message_sPrint( t_status status )
+{
+  printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
+	 osapi_getModule( status.module ),
+	 status.funcname,
+	 status.string );
+}
+
+void status_message_iGet( t_status status, t_size size, t_char * p_message )
+{
+  if( p_message != OSAPI_NULL_CHAR_POINTER && size > 0 )
+      snprintf( p_message, size, "V%s: Module %s, function %s with status: %s.",
+		osapi_get_version_string(),
+		osapi_getModule( status.module ),
+		status.funcname,
+		error_string_get( status.module, status.code )
+	      );
+}
+
+void status_message_sGet( t_status status, t_size size, t_char * p_message )
+{
+  if( p_message != OSAPI_NULL_CHAR_POINTER && size > 0 )
+      snprintf( p_message, size, "V%s: Module %s, function %s with status: %s.",
+		osapi_get_version_string(),
+		osapi_getModule( status.module ),
+		status.funcname,
+		status.string
+	      );
 }
 
 
 void status_message_print( t_status status )
 {
-  //printf("Status: (type, code)=(%d,%d)\n", s.type, s.code );
+  // Search the library type that produce the status information
 
-  if( status.type == STATUS_INTERNAL )
-      status_message_iprint( status );
+  switch( status.type )
+	{
+	  case	e_library_osapi: 	status_message_iPrint( status );
+				        break;
+	  case	e_library_c:	 	status_message_cPrint( status );
+					break;
+	  case	e_library_loader:	status_message_sPrint( status );
+					break;
+	  default:		 	break;		// Do nothing
+	}
+}
+
+void status_message_get( t_status status, t_size size, t_char * p_message )
+{
+  // Search the library type that produce the status information
+
+  switch( status.type )
+	{
+	  case	e_library_osapi: 	status_message_iGet( status, size, p_message );
+					break;
+	  case	e_library_c:	 	status_message_cGet( status, size, p_message );
+					break;
+	  case	e_library_loader:	status_message_sGet( status, size, p_message );
+					break;
+
+	  default:		 	break;		// Do nothing
+	}
+}
+
+const char * status_module_get( t_status status )
+{
+  return osapi_getModule( status.module );
+}
+
+const char * status_function_get( t_status status )
+{
+  if( status.funcname == OSAPI_NULL_CHAR_POINTER )
+      return OSAPI_EMPTY_STRING;
   else
-      status_message_eprint( status );
+      return status.funcname;
 }
 
-
-const char * status_module_get( t_status * p_status )
+const char * status_error_get( t_status status )
 {
-  return module_name[ p_status->module ];
+  // Search the library type that produce the status information
+
+  switch( status.type )
+	{
+	  case	e_library_osapi: 	return error_string_get( status.module, status.code );
+	  case	e_library_c:	 	return status_error_getSystem( status.code );
+	  case	e_library_loader:	return osapi_status_string;
+	  default:		 	return OSAPI_EMPTY_STRING;
+	}
+
 }
 
-const char * status_function_get( t_status * p_status )
-{
-  return p_status->funcname;
-}
-
-const char * status_error_get( t_status * p_status )
-{
-  if( p_status->type == STATUS_INTERNAL )
-      return osapi_errors[ p_status->module ][ p_status->code ];
-  else
-      return status_error_getSystem( p_status->code );
-}
-
-const char * status_errorByType_get( int code, Byte module, Byte type )
-{
-  if( type == STATUS_INTERNAL )
-      return osapi_errors[ module ][ code ];
-  else
-      return status_error_getSystem( code );
-}
-
-const char * status_moduleByID_get( Byte module )
-{
-  return module_name[ module ];
-}
 
 
 

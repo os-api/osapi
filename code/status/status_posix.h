@@ -22,9 +22,9 @@
 //
 // *****************************************************************************************
 
-void		status_message_eprint	( t_status status 	);
-const char *	status_error_getSystem	( int error 		);
-
+void		status_message_cPrint	( t_status status 		);
+const char *	status_error_getSystem	( int error 			);
+void		status_message_cGet	( t_status, t_size, t_char *	);
 
 
 #endif /* STATUS_POSIX_H_ */

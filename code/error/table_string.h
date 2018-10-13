@@ -7,6 +7,8 @@
 //
 // *****************************************************************************************
 
+error_string_X( e_string_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE		)
+
 error_string_X( e_string_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC	)
 error_string_X( e_string_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT	)
 error_string_X( e_string_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM	)
@@ -18,3 +20,4 @@ error_string_X( e_string_exists, , 				"String exists already"		)
 error_string_X( e_string_noSpace, , 				"Not enough space"		)
 error_string_X( e_string_sameString, , 				"The string is the same"	)
 
+error_string_X( e_string_max, ,					OSAPI_ERROR_STRING_UNKNOWN	)

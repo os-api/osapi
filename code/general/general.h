@@ -28,6 +28,8 @@ extern "C" {
 #include "general/general_baseline.h"
 #include "general/general_version.h"
 #include "general/general_types.h"
+#include "general/general_modules.h"
+#include "general/general_defs.h"
 
 // *****************************************************************************************
 //
@@ -42,6 +44,9 @@ int		osapi_get_version_stability		( void		);
 const char *	osapi_get_version_string		( void		);
 const char *	osapi_get_version_stability_string	( void 		);
 const char * 	osapi_get_protocol_version_string	( t_protocol id );
+
+// Module related
+const char *	osapi_getModule				( t_module	);
 
 #pragma GCC visibility pop			// End of public interface
 

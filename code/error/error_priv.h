@@ -21,7 +21,7 @@
 
 // OSAPI module error information
 #include "general/general_types.h"
-#include "general/general_priv.h"
+
 
 // Error information
 #include "error/error_types.h"
@@ -52,6 +52,7 @@ static const char * error_none [] =
   NULL
 };
 
+
 // Aggregate errors from all modules
 static const char ** osapi_errors[] =
 {
@@ -69,6 +70,14 @@ static const char ** osapi_errors[] =
   NULL
 };
 
+
+// *****************************************************************************************
+//
+// Section: Macro Definitions
+//
+// *****************************************************************************************
+
+//#define error_is_valid( x )	( x >= 0 && x )
 
 
 #endif /* CODE_ERR_ERRORS_PRIV_H_ */
