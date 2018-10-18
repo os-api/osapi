@@ -53,7 +53,7 @@ static const char * error_none [] =
 };
 
 
-// Aggregate errors from all modules
+// Aggregate error strings from all modules
 static const char ** osapi_errors[] =
 {
   error_none,			// Pseudo-error
@@ -68,6 +68,25 @@ static const char ** osapi_errors[] =
   ipc_errors,
   net_errors,
   NULL
+};
+
+
+// Aggregate max error codes from all modules
+
+static const t_error osapi_max_errors[ OSAPI_MODULE_MAX ] =
+{
+  OSAPI_MODULE_NONE,
+  e_string_max,
+  e_os_max,
+  e_machine_max,
+  e_proc_max,
+  e_clock_max,
+  e_sec_max,
+  e_io_max,
+  e_util_max,
+  e_ipc_max,
+  e_net_max,
+
 };
 
 

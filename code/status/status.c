@@ -23,8 +23,9 @@
 // // Generic OSAPI includes
 #include "general/general.h"
 #include "error/error.h"
-#include "status/status.h"
 
+// Include own headers
+#include "status/status.h"
 #include "status/status_platform.h"
 
 

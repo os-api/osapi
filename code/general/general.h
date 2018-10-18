@@ -23,7 +23,7 @@ extern "C" {
 //
 // *****************************************************************************************
 
-// Generic OSAPI & Own includes
+// Own headers
 
 #include "general/general_baseline.h"
 #include "general/general_version.h"

@@ -25,15 +25,6 @@
 
 
 
-
-// *****************************************************************************************
-//
-// Section: Function declarations (private)
-//
-// *****************************************************************************************
-
-
-
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -41,15 +32,21 @@
 // *****************************************************************************************
 
 
-bool error_code_isValid( t_error code )
+bool error_code_isValid( t_module module, t_error code )
 {
-  return true;
+  bool valid = false;
+
+  // Verify, for each module, the validity of the error code
+  if( code >= OSAPI_ERROR_BASE && code < osapi_max_errors[ module ] )
+      valid = true;
+
+  return valid;
 }
 
 const char * error_string_get( t_module module, t_error code )
 {
   if( general_is_valid_module( module ) )
-      if( error_code_isValid( code ) )
+      if( error_code_isValid( module, code ) )
  	  return osapi_errors[ module ][ code ];
 
   return OSAPI_EMPTY_STRING;
