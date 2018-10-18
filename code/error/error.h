@@ -34,17 +34,12 @@ extern "C" {
 
 // *****************************************************************************************
 //
-// Section: Status module API
+// Section: Error module OSAPI internal API
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of public interface
-
 const char * 	error_string_get	( t_module module, t_error code	);
 bool 		error_code_isValid	( t_module module, t_error code	);
-
-#pragma GCC visibility pop			// End of public interface
-
 
 // *****************************************************************************************
 //
