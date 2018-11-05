@@ -11,7 +11,7 @@ A clear and concise description of what the bug is.
 How to reproduce the behavior:
 1. Which OSAPI version?
 2. Which library call was used?
-3. What was the error returned by the library
+3. What was the error returned by the library?
 
 **Expected behavior**
 A clear and concise description of what you expected to happen.
