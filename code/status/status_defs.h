@@ -26,8 +26,6 @@
 #define status_true(  x )	( status_failure( x ) ? 0 : 1 )
 #define status_false( x )	( status_success( x ) ? 1 : 0 )
 
-// Expansion of structure arguments (this avoids that client applications need to know internal details of t_status)
-#define OSAPI_STATUS(x)		status(x.code,x.module,x.type,x.funcname)
 
 
 // *****************************************************************************************
