@@ -42,7 +42,7 @@
 //
 // *****************************************************************************************
 
-t_status proc_library_load( const char * pathname, const char * options[], t_library * p_library )
+t_status proc_library_load( char * pathname, char * options[], t_library * p_library )
 {
   int	opt = 0;
 

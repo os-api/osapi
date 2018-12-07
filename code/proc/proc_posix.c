@@ -88,7 +88,7 @@ t_status proc_parentID_get( t_pid * p_pid )
    {
      *p_pid = (t_pid) getppid();
      if( *p_pid == -1 )
-         status_iset( OSAPI_MODULE_PROC, __func__, errno, &st );
+         status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
    }
 
  return st;
@@ -111,6 +111,74 @@ t_status proc_signal_send( t_pid pid, t_signal sig )
 
  return st;
 }
+
+
+t_status proc_thread_suspend( void )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( pause() != EINTR )
+     status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+
+ return st;
+}
+
+t_status proc_handler_register( t_signal signo, t_sig_func dispatcher_function, t_sig_action * p_action )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_action == ( ( t_sig_action * ) 0 ) )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     sigemptyset( &( p_action->sa_mask ) );
+     p_action->sa_flags   = 0;
+     p_action->sa_handler = dispatcher_function;
+
+     sigprocmask( SIG_SETMASK, &( p_action->sa_mask ), ( sigset_t * ) 0 );
+
+     if( sigaction( signo, p_action, ( t_sig_action * ) 0 ) < 0 )
+         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_setsignal, &st );
+   }
+
+ return st;
+}
+
+t_status proc_handler_unregister( t_signal signo, t_sig_action * p_action )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_action == ( ( t_sig_action * ) 0 ) )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( signal( signo, SIG_IGN ) != 0 )
+         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_unsetsignal, &st );
+   }
+
+ return st;
+}
+
+
+/*
+t_status proc_thread_resume( void )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( pause() != EINTR )
+     status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+
+ return st;
+}
+*/
 
 t_status posix_library_load( const char * pathname, int options, t_library * p_library )
 {

@@ -59,16 +59,6 @@ const t_option log_options[] = {
       { "",		OSAPI_OPTIONS_END	},
 };
 
-// *****************************************************************************************
-//
-// Section: Private function declarations
-//
-// *****************************************************************************************
-/*
-static int	get_facility	( const char * target 		);
-static int	get_option	( const char * options[]	);
-*/
-
 
 #endif	// End of POSIX declarations
 

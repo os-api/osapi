@@ -47,11 +47,11 @@ t_status	log_system_close	( t_log							);
 t_status	log_system_write	( t_log, t_log_level, t_log_message			);
 
 // Utility functions
-t_status	log_debug_write		( t_log, t_log_message					);
-t_status	log_info_write		( t_log, t_log_message					);
-t_status	log_warning_write	( t_log, t_log_message					);
-t_status	log_error_write		( t_log, t_log_message					);
-t_status	log_fatal_write		( t_log, t_log_message					);
+t_status	log_debug_write		( t_log, t_log_message	);
+t_status	log_info_write		( t_log, t_log_message	);
+t_status	log_warning_write	( t_log, t_log_message	);
+t_status	log_error_write		( t_log, t_log_message	);
+t_status	log_fatal_write		( t_log, t_log_message	);
 
 #pragma GCC visibility pop			// End of public interface
 

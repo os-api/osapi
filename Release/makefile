@@ -42,7 +42,7 @@ all: libosapi.so
 libosapi.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -shared -o "libosapi.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -shared -p -pg -ftest-coverage -fprofile-arcs -o "libosapi.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

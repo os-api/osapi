@@ -42,50 +42,6 @@
 // *****************************************************************************************
 
 
-/* Definition: Private functions
-static int get_facility( const char * target )
-{
- int	fac = 0;
-
- if( target != OSAPI_NULL_CHAR_POINTER )
-   {
-     for( int i=0; log_facility[ i ].value != OSAPI_LOG_END; i++ )
-        {
-          if( strcasecmp( target, log_facility[ i ].name ) == 0 )
-            {
-              fac = log_facility[ i ].value;
-              break;
-            }
-        }
-   }
-
- return fac;
-}
-*/
-/* Convert a set of string options into a single int option
-
-static int get_option( const char * options[] )
-{
- int	opt = 0;
-
- for( int i=0; options[ i ] != OSAPI_NULL_CHAR_POINTER; i++  )
-   {
-     for( int j=0; log_options[ j ].value != OSAPI_LOG_END; j++ )
-        {
-	  // Compares current option[i] with list of all available options
-          if( strcasecmp( options[ i ], log_options[ j ].name ) == 0 )
-            {
-              // Match found: Add option to the list (int/opt)
-              opt |= log_options[ j ].value;
-              break;
-            }
-        }
-   }
-
- return opt;
-}
-*/
-
 // Definition: Public functions
 
 t_status log_module_supported( void )
@@ -103,10 +59,8 @@ t_status log_system_open( const char * source, const char * target, const char *
   targets[1] = NULL;
 
   log->ident    = source;
-  log->facility = common_options_get( log_facility, targets );
-  //log->facility = get_facility( target  );
-  //log->option   = get_option  ( options );
-  log->option   = common_options_get( log_options, options );
+  log->facility = common_options_get( log_facility, (char **) targets );
+  log->option   = common_options_get( log_options,  (char **) options );
 
   openlog( log->ident, log->option, log->facility );
 

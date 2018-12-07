@@ -46,9 +46,9 @@ t_status	proc_module_supported		( void 			);
 
 // + Instance management
 // ++ Life cycle
-t_status proc_instance_new			( t_proc * p_process			);
-t_status proc_instance_create			( t_proc * p_process			);
-t_status proc_instance_destroy			( t_proc * p_process			);
+t_status proc_instance_new			( t_proc * p_process	);
+t_status proc_instance_create			( t_proc * p_process	);
+t_status proc_instance_destroy			( t_proc * p_process	);
 
 // ++ Operations
 
@@ -56,9 +56,14 @@ t_status proc_instance_destroy			( t_proc * p_process			);
 t_status	proc_id_get			( t_pid * 		);
 t_status	proc_parentID_get		( t_pid * 		);
 
+// State management
+t_status	proc_thread_suspend		( void			);
+//t_status	proc_thread_resume		( void			);
+
 // + Signal handling
 t_status	proc_signal_send		( t_pid, t_signal 	);
-
+t_status	proc_handler_register		( t_signal, t_sig_func, t_sig_action * );
+t_status	proc_handler_unregister		( t_signal, t_sig_action * );
 
 // Resource management
 /*
@@ -68,8 +73,8 @@ t_status	proc_usage_getIO
 t_status	proc_usage_getNetwork
  */
 
-t_status	proc_library_load		( const char * pathname, const char * options[], t_library * lib	);
-t_status	proc_library_unload		( t_library lib								);
+t_status	proc_library_load		( char * pathname, char * options[], t_library * lib	);
+t_status	proc_library_unload		( t_library lib						);
 
 
 #pragma GCC visibility pop			// End of public interface

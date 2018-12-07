@@ -34,7 +34,7 @@
 //
 // *****************************************************************************************
 
-int common_options_get( const t_option * moduleOptions, const char * providedOptions[] )
+int common_options_get( const t_option * moduleOptions, char * providedOptions[] )
 {
  int	opt = 0;
 

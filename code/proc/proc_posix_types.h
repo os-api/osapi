@@ -16,6 +16,9 @@
 //
 // *****************************************************************************************
 
+// Include standard headers
+#include <signal.h>
+
 // Generic OSAPI includes
 #include "general/general.h"
 #include "common/common_types.h"
@@ -50,6 +53,10 @@ struct  s_proc
 typedef struct s_proc		t_proc;
 
 typedef void *			t_library;
+
+typedef struct sigaction	t_sig_action;
+
+typedef void 			(* t_sig_func)();
 
 
 #endif /* PROC_PROC_POSIX_TYPES_H_ */
