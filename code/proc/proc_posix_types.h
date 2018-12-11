@@ -22,6 +22,7 @@
 // Generic OSAPI includes
 #include "general/general.h"
 #include "common/common_types.h"
+#include "proc/proc_signal_types.h"
 
 // *****************************************************************************************
 //
@@ -56,7 +57,7 @@ typedef void *			t_library;
 
 typedef struct sigaction	t_sig_action;
 
-typedef void 			(* t_sig_func)();
+typedef void 			(* t_sig_func)( int );
 
 
 #endif /* PROC_PROC_POSIX_TYPES_H_ */

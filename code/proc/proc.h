@@ -54,16 +54,21 @@ t_status proc_instance_destroy			( t_proc * p_process	);
 
 // + Identity management
 t_status	proc_id_get			( t_pid * 		);
-t_status	proc_parentID_get		( t_pid * 		);
+t_status	proc_id_getParent		( t_pid * 		);
 
 // State management
-t_status	proc_thread_suspend		( void			);
-//t_status	proc_thread_resume		( void			);
+t_status	proc_execution_suspend		( void			);
+//t_status	proc_execution_resume		( void			);
 
 // + Signal handling
+t_status	proc_signal_supported		( int * p_level		);
+t_status	proc_signal_clearAll		( void			);
 t_status	proc_signal_send		( t_pid, t_signal 	);
-t_status	proc_handler_register		( t_signal, t_sig_func, t_sig_action * );
-t_status	proc_handler_unregister		( t_signal, t_sig_action * );
+t_status	proc_signal_setHandler		( t_signal, t_sig_func	);
+t_status	proc_signal_resetHandler	( t_signal		);
+
+// Add a cut through function to allow setting specific settings
+//t_status	proc_signal_setAction		( t_signal, t_sig_func, t_sig_action * );
 
 // Resource management
 /*
@@ -73,6 +78,7 @@ t_status	proc_usage_getIO
 t_status	proc_usage_getNetwork
  */
 
+t_status	proc_library_supported		( void 							);
 t_status	proc_library_load		( char * pathname, char * options[], t_library * lib	);
 t_status	proc_library_unload		( t_library lib						);
 
