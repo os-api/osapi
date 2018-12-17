@@ -20,16 +20,14 @@
 // System includes
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <common/types/common_types_if.h>
+#include <common/types/common_types_ip.h>
+#include <error/modules/error_net.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
 #include "general/general_protocol.h"
-#include "error/error_net.h"
 #include "status/status.h"
-#include "common/common_types_if.h"
-#include "common/common_types_ip.h"
-
-// Own declarations
 #include "net/net_private.h"
 
 

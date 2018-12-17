@@ -20,10 +20,10 @@
 #include <stdio.h>
 #include <limits.h>
 #include <errno.h>
+#include <error/modules/error_sec.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_sec.h"
 #include "status/status.h"
 #include "common/common.h"
 

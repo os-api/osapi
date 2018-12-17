@@ -54,6 +54,13 @@ struct s_optional_pair
 
 typedef struct s_optional_pair	t_option;
 
+// Work around C/C++ attribute mismatches
+#if __cplusplus
+  #define OSAPI_NORETURN	[[noreturn]]
+#else
+  #define OSAPI_NORETURN	_Noreturn
+#endif
+
 
 
 #endif /* GENERAL_GENERAL_TYPES_H_ */

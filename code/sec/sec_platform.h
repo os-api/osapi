@@ -12,7 +12,7 @@
 
 // Import OS specific definitions
 #ifdef	OS_LINUX
-	#include "sec/sec_linux.h"
+	#include "sec/linux/sec_linux.h"
 //#elif OS_SOLARIS
 //	#include <sec/sec_solaris.h>
 #endif

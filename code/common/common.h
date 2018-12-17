@@ -29,7 +29,7 @@
 #include "status/status_types.h"
 
 // Own declarations
-#include "common/common_types.h"
+#include <common/types/common_types.h>
 
 
 // *****************************************************************************************

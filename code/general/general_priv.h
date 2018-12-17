@@ -16,7 +16,7 @@
 
 static const char * osapi_version[] =
 {
-  #include "general/table_version.h"
+  #include "general/mappings/table_version.h"
 };
 
 #undef osapi_version_X
@@ -27,7 +27,7 @@ static const char * osapi_version[] =
 
 static const char * osapi_version_quality[] =
 {
-  #include "general/table_version_quality.h"
+  #include "general/mappings/table_version_quality.h"
 };
 
 #undef osapi_quality_X
@@ -38,7 +38,7 @@ static const char * osapi_version_quality[] =
 
 static const char * osapi_protocol[] =
 {
-  #include "general/table_protocol.h"
+  #include "general/mappings/table_protocol.h"
 };
 
 #undef osapi_protocol_X
@@ -48,7 +48,7 @@ static const char * osapi_protocol[] =
 #define module_X(a, b, c) [a]=c,
 
 static const char * module_name[] = {
-  #include <general/table_modules.h>
+  #include "general/mappings/table_modules.h"
 };
 
 #undef module_X

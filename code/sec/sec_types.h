@@ -14,7 +14,7 @@ extern "C" {
 #endif
 
 #ifdef OS_LINUX
-   #include "sec/sec_linux.h"
+   #include <sec/linux/sec_linux.h>
 #endif
 
 // End of header with C++ declaration

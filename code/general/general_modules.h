@@ -21,7 +21,7 @@
 #define module_X(a, b, c) a b,
 enum module_id
 {
-  #include <general/table_modules.h>
+  #include "general/mappings/table_modules.h"
 };
 
 #undef module_X

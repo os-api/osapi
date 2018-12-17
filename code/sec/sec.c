@@ -14,9 +14,11 @@
 //
 // *****************************************************************************************
 
+// Include baseline before system headers
+#include "general/general_baseline.h"
+
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_sec.h"
 #include "status/status.h"
 
 // Import common
@@ -24,7 +26,7 @@
 
 // Own declarations
 #include "sec/sec.h"
-
+#include "error/modules/error_sec.h"
 
 // *****************************************************************************************
 //

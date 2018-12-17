@@ -21,7 +21,7 @@
 #define signal_level_X(a, b, c) a b,
 enum osapi_signal_level
 {
-  #include "proc/table_signal.h"
+  #include <proc/linux/table_signal.h>
 };
 
 #undef signal_level_X

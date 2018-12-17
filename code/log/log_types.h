@@ -22,7 +22,7 @@ extern "C" {
 //
 // *****************************************************************************************
 
-#include "log/log_linux.h"
+#include <log/linux/log_linux.h>
 
 
 // End of header with C++ declaration

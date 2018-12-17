@@ -18,7 +18,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-  #include "status/status_linux.h"
+  #include <status/linux/status_linux.h>
 #endif
 
 

@@ -21,11 +21,11 @@
 // Generic OSAPI includes
 
 #include "general/general.h"
-#include "error/error_machine.h"
 #include "status/status.h"
 
 // Own declarations
 #include "machine/machine.h"
+#include "error/modules/error_machine.h"
 
 // *****************************************************************************************
 //

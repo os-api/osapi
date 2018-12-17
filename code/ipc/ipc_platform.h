@@ -12,8 +12,8 @@
 
 /* Import OS specific definitions */
 #ifdef OS_LINUX
-	#include <ipc/ipc_posix.h>
-	#include <ipc/ipc_linux.h>
+	#include <ipc/posix/ipc_posix.h>
+	#include <ipc/linux/ipc_linux.h>
 #endif
 
 

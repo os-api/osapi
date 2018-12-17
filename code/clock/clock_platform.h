@@ -12,7 +12,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- #include "clock/clock_linux.h"
+ #include <clock/linux/clock_linux.h>
 #endif
 
 #endif /* CLOCK_PLATFORM_H_ */

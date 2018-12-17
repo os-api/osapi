@@ -12,7 +12,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- #include <machine/machine_linux.h>
+ #include <machine/linux/machine_linux.h>
 #endif
 
 

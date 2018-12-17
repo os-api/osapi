@@ -25,12 +25,11 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_string.h"
 #include "status/status.h"
 
 // Own declarations
 #include "string/string_basic.h"
-
+#include "error/modules/error_string.h"
 
 
 // *****************************************************************************************

@@ -21,12 +21,11 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_os.h"
 #include "status/status.h"
 
 // Own declarations
 #include "os/os.h"
-
+#include "error/modules/error_os.h"
 
 // *****************************************************************************************
 //

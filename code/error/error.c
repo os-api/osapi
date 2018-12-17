@@ -13,16 +13,15 @@
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// Import system headers
+#include <stdio.h>
+
 // Import own module headers
 #include "error/error.h"
-#include "error/error_priv.h"
-
-// *****************************************************************************************
-//
-// Section: Local declarations/definitions
-//
-// *****************************************************************************************
-
+#include "error/private/error_priv.h"
 
 
 // *****************************************************************************************
@@ -30,7 +29,6 @@
 // Section: Function definition
 //
 // *****************************************************************************************
-#include <stdio.h>
 
 bool error_code_isValid( t_module module, t_error code )
 {

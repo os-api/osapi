@@ -12,7 +12,7 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include "log/log_linux.h"
+	#include "log/linux/log_linux.h"
 #endif
 
 
