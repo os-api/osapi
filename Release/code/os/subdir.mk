@@ -4,19 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/os/os.c \
-../code/os/os_linux.c \
-../code/os/os_posix.c 
+../code/os/os.c 
 
 OBJS += \
-./code/os/os.o \
-./code/os/os_linux.o \
-./code/os/os_posix.o 
+./code/os/os.o 
 
 C_DEPS += \
-./code/os/os.d \
-./code/os/os_linux.d \
-./code/os/os_posix.d 
+./code/os/os.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -72,6 +72,8 @@ t_status proc_instance_destroy( t_pid pid, int forced )
   return st;
 }
 
+
+
 t_status proc_instance_clone( int * p_isChild )
 {
   t_status	st;

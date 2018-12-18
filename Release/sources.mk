@@ -13,17 +13,28 @@ C_DEPS :=
 
 # Every subdirectory with source files must be described here
 SUBDIRS := \
-code/clock \
+code/clock/posix \
 code/common \
+code/common/linux \
+code/common/posix \
 code/error \
 code/general \
-code/ipc \
-code/log \
+code/ipc/posix \
+code/log/posix \
+code/machine/linux \
 code/machine \
+code/machine/posix \
 code/net \
+code/net/posix \
+code/os/linux \
 code/os \
+code/os/posix \
+code/proc/linux \
+code/proc/posix \
 code/proc \
+code/sec/posix \
 code/sec \
+code/status/posix \
 code/status \
 code/string \
 code/util \

@@ -5,17 +5,14 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../code/net/net_ip.c \
-../code/net/net_posix.c \
 ../code/net/net_private.c 
 
 OBJS += \
 ./code/net/net_ip.o \
-./code/net/net_posix.o \
 ./code/net/net_private.o 
 
 C_DEPS += \
 ./code/net/net_ip.d \
-./code/net/net_posix.d \
 ./code/net/net_private.d 
 
 

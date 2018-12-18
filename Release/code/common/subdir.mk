@@ -4,19 +4,13 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/common/common.c \
-../code/common/common_linux.c \
-../code/common/common_posix.c 
+../code/common/common.c 
 
 OBJS += \
-./code/common/common.o \
-./code/common/common_linux.o \
-./code/common/common_posix.o 
+./code/common/common.o 
 
 C_DEPS += \
-./code/common/common.d \
-./code/common/common_linux.d \
-./code/common/common_posix.d 
+./code/common/common.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

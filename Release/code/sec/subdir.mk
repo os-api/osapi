@@ -5,18 +5,15 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../code/sec/sec.c \
-../code/sec/sec_identity.c \
-../code/sec/sec_posic.c 
+../code/sec/sec_identity.c 
 
 OBJS += \
 ./code/sec/sec.o \
-./code/sec/sec_identity.o \
-./code/sec/sec_posic.o 
+./code/sec/sec_identity.o 
 
 C_DEPS += \
 ./code/sec/sec.d \
-./code/sec/sec_identity.d \
-./code/sec/sec_posic.d 
+./code/sec/sec_identity.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
