@@ -136,7 +136,7 @@ t_status proc_instance_isRunning( t_pid search_pid )
 
   status_reset( & st );
 
-  if( search_pid <=0 (int *) 0 )
+  if( search_pid <= (pid_t) 0 )
       status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
   else
     {
