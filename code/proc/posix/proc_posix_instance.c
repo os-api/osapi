@@ -130,6 +130,25 @@ t_status proc_instance_suspendExecution( void )
  return st;
 }
 
+t_status proc_instance_isRunning( t_pid search_pid )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( search_pid <=0 (int *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+    {
+      // Signal 0 to check if a processing is running
+      if( kill( search_pid, 0 )  == -1 )
+	  // Either the process is not running or the calling process has no permissions to check the process status
+	  status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+    }
+
+  return st;
+}
+
 
 
 #endif	// End of POSIX compilation
