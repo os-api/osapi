@@ -27,7 +27,7 @@ extern "C" {
 #include "status/status_types.h"
 
 // Common includes
-#include <common/types/common_types.h>
+#include "common/types/common_types.h"
 
 // Own declarations
 #include "proc/proc_types.h"
@@ -66,12 +66,10 @@ t_status proc_data_setEnvironment		( t_size, char *[], t_proc * );
 // + Identity management
 t_status	proc_id_get			( t_pid * 		);
 t_status	proc_id_getParent		( t_pid * 		);
-/*
-t_status	proc_id_getGroup		( t_pid, t_pid * 	);
-t_status	proc_id_setGroup		( t_pid  		);
-*/
+t_status	proc_id_getGroup		( t_pid, t_gid *	);
+t_status	proc_id_setGroup		( t_gid   		);
 t_status	proc_id_getSession		( t_pid, t_pid *	);
-t_status	proc_id_setSetssion		( void  		);
+t_status	proc_id_setSession		( void  		);
 
 // + Signal handling
 t_status	proc_signal_supported		( int * 		);

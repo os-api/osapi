@@ -31,6 +31,7 @@
 #include "ipc/ipc.h"
 #include "net/net.h"
 #include "util/util.h"
+#include "io/io.h"
 
 
 #endif /* OSAPI_H_ */

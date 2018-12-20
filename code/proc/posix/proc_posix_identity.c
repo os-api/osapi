@@ -87,7 +87,7 @@ t_status proc_id_getParent( t_pid * p_pid )
 }
 
 
-t_status proc_id_setSetssion( void )
+t_status proc_id_setSession( void )
 {
 t_status st;
 
@@ -118,5 +118,50 @@ t_status proc_id_getSession( t_pid search_pid, t_pid * p_session_id )
 
  return st;
 }
+
+
+t_status proc_id_setGroup( t_gid gid )
+{
+t_status st;
+
+ status_reset( & st );
+
+ if( gid <= (t_gid) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( setgid( gid ) == -1 )
+	 status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+   }
+
+ return st;
+}
+
+
+t_status proc_id_getGroup( t_pid search_pid, t_gid * p_group_id )
+{
+ t_status st;
+
+ status_reset( & st );
+
+ if( search_pid < (t_pid) 0 || p_group_id == (t_gid *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( search_pid == 0 )
+         *p_group_id = getgid();
+     // Otherwise perform more expensive search
+     /*
+     else
+       {
+	 if( *p_group_id == -1 )
+	     status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+       }
+     */
+   }
+
+ return st;
+}
+
 
 #endif	// End of POSIX compilation

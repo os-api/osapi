@@ -23,7 +23,7 @@
 
 #define error_io_X(a, b, c) a b,
 enum io_X {
-	  #include <error/mappings/table_io.h>
+	  #include "error/mappings/table_io.h"
 };
 #undef error_io_X
 
