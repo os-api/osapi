@@ -16,14 +16,24 @@ extern "C" {
 #endif
 
 
+// Only relevant is OS is POSIX compliant
+#ifdef OS_LINUX
+
+
 // *****************************************************************************************
 //
 // Section: Import headers
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+// System includes
+#include <dlfcn.h>
+
 // Import own headers
-#include <proc/linux/proc_linux_types.h>
+#include "proc/linux/proc_linux_types.h"
 
 // *****************************************************************************************
 //
@@ -40,12 +50,7 @@ const t_option lib_options[] = {
 };
 
 
-// *****************************************************************************************
-//
-// Section: Private function declarations
-//
-// *****************************************************************************************
-
+#endif	// OS_LINUX
 
 // End of header with C++ declaration
 #ifdef __cplusplus

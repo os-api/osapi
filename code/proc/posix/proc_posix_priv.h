@@ -3,12 +3,13 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Proc module using a Linux implementation
+// Purpose:	Proc(ess) module using a POSIX compliant implementation
 //
 // *****************************************************************************************
 
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
+#ifndef PROC_POSIX_PRIV_H_
+#define PROC_POSIX_PRIV_H_
+
 
 // *****************************************************************************************
 //
@@ -16,37 +17,31 @@
 //
 // *****************************************************************************************
 
+
 // Force baseline before system headers
 #include "general/general_baseline.h"
 
-// System includes <here>
+// Only relevant is OS is POSIX compliant
+#ifdef OSAPI_POSIX
+
+// System includes
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "common/common.h"
+#include "status/status.h"
 
-// Include own headers
-#include "proc/proc.h"
-#include "error/modules/error_os.h"
-#include "proc/posix/proc_posix.h"
-#include "proc/linux/proc_linux.h"
-
+#include "proc/proc_types.h"
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Module Process POSIX private declarations
 //
 // *****************************************************************************************
 
-t_status proc_library_load( char * pathname, char * options[], t_library * p_library )
-{
-  int	opt = 0;
 
-  opt = common_options_get( lib_options, options );
-
-  return posix_library_load( pathname, opt, p_library );
-}
+OSAPI_NORETURN void	proc_app_launch		( t_proc * 				);
 
 
+#endif	// POSIX
 
-#endif	// End of OS Linux
+#endif // PROC_POSIX_PRIV_H_

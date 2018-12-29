@@ -18,10 +18,13 @@
 
 // Include standard headers
 #include <signal.h>
+#include <stdbool.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
 #include "common/types/common_types.h"
+
+// Own module types
 #include "proc/proc_signal_types.h"
 
 // *****************************************************************************************
@@ -59,6 +62,41 @@ typedef void *			t_library;
 typedef struct sigaction	t_sig_action;
 
 typedef void 			(* t_sig_func)( int );
+
+// Process status
+
+struct s_proc_status
+{
+  bool		running;	// Terminated or still running?
+  bool		alive;		// A process may not be running but still alive (if suspended/SIGSTOP)
+  struct details
+  {
+   unsigned int code:8;		// Returned status of the dead process
+   unsigned int normal:1;	// Normal exit? if so them there is a status available..
+   unsigned int signal:1;	// Exit due to signal ?
+   unsigned int core:1;		// Core dump generated ?
+   unsigned int stopped:1;	// Process in stopped state
+   unsigned int cont:1;		// Process was resumed by a CONT signal
+  } exit;
+
+  t_signal	signumber;	// Signal that caused the termination/stop/continuation
+  // Any other
+};
+
+
+typedef struct s_proc_status	t_proc_status;
+
+// Macros for client applications to check the status of the process
+#define proc_alive( x )		(x.alive)
+#define proc_running( x )	(x.running)
+
+#define proc_exitNormal( x )	(x.exit.normal  ? 1: 0 )
+#define proc_exitSignal( x )	(x.exit.signal  ? 1: 0 )
+#define proc_core( x )		(x.exit.core    ? 1: 0 )
+
+#define proc_getSignal( x )	(x.exit.signal  ? x.signumber: 0 )
+#define proc_getStatus( x )	(x.exit.code)
+
 
 
 #endif /* PROC_PROC_POSIX_TYPES_H_ */

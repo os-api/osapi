@@ -19,5 +19,7 @@ error_proc_X( e_proc_setsignal, ,			"Error when registering signal handler"		)
 error_proc_X( e_proc_unsetsignal, ,			"Error when unregistering signal handler"	)
 error_proc_X( e_proc_alloc, ,				"Error when allocating memory"			)
 error_proc_X( e_proc_pid, ,				"Invalid PID"					)
+error_proc_X( e_proc_exec, ,				"Process execution failed"			)
+error_proc_X( e_proc_wait, ,				"Process PID mismatch"				)
 
 error_proc_X( e_proc_max, ,				OSAPI_ERROR_STRING_UNKNOWN			)

@@ -20,6 +20,7 @@
 #ifdef OSAPI_POSIX
 
 // System includes
+#include <string.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -50,11 +51,49 @@ t_status proc_module_supported( void )
 }
 
 
+t_status proc_user_add( t_uid user, t_proc * p_proc )
+{
+ t_status st;
+
+ status_reset( & st );
+
+ if( user < ((t_uid) 0) || p_proc == ((t_proc *) 0) )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+     p_proc->uid = user;
+
+ return st;
+}
 
 
+t_status proc_group_add( t_gid group, t_proc * p_proc )
+{
+ t_status st;
+
+ status_reset( & st );
+
+ if( group < ((t_uid) 0) || p_proc == ((t_proc *) 0) )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+     p_proc->gid = group;
+
+ return st;
+}
 
 
+t_status proc_signal_getName( t_signal signo, t_char ** p_signal_string )
+{
+  t_status st;
 
+  status_reset( & st );
+
+  if( signo <= 0 || p_signal_string == (t_char **) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+      *p_signal_string = strsignal( signo );
+
+  return st;
+}
 
 
 #endif	// End of POSIX compilation

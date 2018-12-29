@@ -29,6 +29,7 @@
 #include "general/general.h"
 #include <error/modules/error_proc.h>
 #include "status/status.h"
+#include "common/common.h"
 
 // Own declarations
 #include "proc/proc.h"
@@ -122,19 +123,7 @@ t_status proc_id_getSession( t_pid search_pid, t_pid * p_session_id )
 
 t_status proc_id_setGroup( t_gid gid )
 {
-t_status st;
-
- status_reset( & st );
-
- if( gid <= (t_gid) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
- else
-   {
-     if( setgid( gid ) == -1 )
-	 status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
-   }
-
- return st;
+ return set_groupID( gid );
 }
 
 
@@ -149,7 +138,41 @@ t_status proc_id_getGroup( t_pid search_pid, t_gid * p_group_id )
  else
    {
      if( search_pid == 0 )
-         *p_group_id = getgid();
+         get_groupID( p_group_id );
+     // Otherwise perform more expensive search
+     /*
+     else
+       {
+	 if( *p_group_id == -1 )
+	     status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+       }
+     */
+   }
+
+ return st;
+}
+
+
+
+t_status proc_id_setUser( t_uid uid )
+{
+ return set_userID( uid );
+}
+
+
+t_status proc_id_getUser( t_pid search_pid, t_gid * p_user_id )
+{
+ t_status st;
+
+ status_reset( & st );
+
+ if( search_pid < (t_pid) 0 || p_user_id == (t_uid *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( search_pid == 0 )
+         get_userID( p_user_id );
+
      // Otherwise perform more expensive search
      /*
      else

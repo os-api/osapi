@@ -28,11 +28,14 @@
 // Generic OSAPI includes
 #include "general/general.h"
 #include "status/status.h"
+#include "common/common.h"
 
 // Own declarations
 #include "proc/proc.h"
 #include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
+#include "proc/linux/proc_linux_priv.h"
+#include "proc/posix/proc_posix_priv.h"
 
 
 
@@ -45,8 +48,39 @@
 t_status proc_instance_create( t_proc * p_process )
 {
   t_status	st;
+  t_pid		pid;
 
   status_reset( & st );
+
+  if( p_process == (t_proc *) 0 )
+    {
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      return st;
+    }
+
+  if( ( pid = fork() ) < 0 )
+    {
+      status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+      return st;
+    }
+
+ if( pid == 0)      /* Child process */
+   {
+     if( status_success( st ) )       set_groupID( p_process->gid );
+
+     // The user change must be the last before executing the application
+     if( status_success( st ) )       set_userID( p_process->uid );
+
+     if( status_success( st ) )       proc_app_launch( p_process );
+
+     // If the application returned, an error occurred
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_exec, &st );
+   }
+ else
+   {
+     // Wait sometime to see if child dies
+
+   }
 
   return st;
 }
@@ -147,6 +181,30 @@ t_status proc_instance_isRunning( t_pid search_pid )
     }
 
   return st;
+}
+
+
+
+t_status proc_instance_getStatus( t_pid target_pid, t_proc_status * p_status )
+{
+ t_status	st;
+ t_pid		pid;
+
+ // Wait for a specific process
+ st = proc_status_get( target_pid, &pid, p_status );
+
+ // Extra check
+ if( status_success( st ) && target_pid != pid )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_wait, &st );
+
+ return st;
+}
+
+
+t_status proc_instance_getChildStatus( t_pid * p_pid, t_proc_status * p_status )
+{
+ // Wait for any child process
+ return proc_status_get( -1, p_pid, p_status );
 }
 
 

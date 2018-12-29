@@ -3,39 +3,33 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Definition of Signal types
+// Purpose:	Proc(ess) POSIX type declarations
 //
 // *****************************************************************************************
 
-#ifndef PROC_SIGNAL_TYPES_H_
-#define PROC_SIGNAL_TYPES_H_
-
-
-// *****************************************************************************************
-//
-// Section: Import Headers
-//
-// *****************************************************************************************
-
-// Own headers
-#include "proc/posix/proc_posix_signal_macros.h"
+#ifndef PROC_POSIX_SIGNAL_MACROS_H_
+#define PROC_POSIX_SIGNAL_MACROS_H_
 
 // *****************************************************************************************
 //
-// Section: Type declarations
+// Section: Import headers
 //
 // *****************************************************************************************
 
+// Include standard headers
+#include <signal.h>
+#include <stdbool.h>
 
-#define signal_level_X(a, b, c) a b,
-enum osapi_signal_level
-{
-  #include "proc/linux/table_signal.h"
-};
+// *****************************************************************************************
+//
+// Section: Macro definitions
+//
+// *****************************************************************************************
 
-#undef signal_level_X
+#define proc_isSignalChild( x )		(x == SIGCHLD)
+#define proc_isSignalTerm( x )		(x == SIGTERM)
+#define proc_isSignalKill( x )		(x == SIGKILL)
+#define proc_isSignalHup( x )		(x == SIGHUP)
+#define proc_isSignalAbort( x )		(x == SIGABRT)
 
-
-
-
-#endif /* PROC_SIGNAL_TYPES_H_ */
+#endif /* PROC_POSIX_SIGNAL_MACROS_H_ */

@@ -28,6 +28,7 @@
 #include <string.h>
 #include <pwd.h>
 #include <grp.h>
+#include <limits.h>
 
 // Generic OSAPI includes
 #include "general/general.h"

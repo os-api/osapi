@@ -58,7 +58,7 @@ t_status sec_group_getMaxNumber		( t_size * p_size									);
 
 
 // User ID functions
-t_status sec_user_stringToId		( char * p_string, t_gid * p_uid							);
+t_status sec_user_stringToId		( char * p_string, t_uid * p_uid							);
 t_status sec_user_idToString		( t_uid uid, t_size strSize, char * p_string						);
 t_status sec_user_compare		( t_uid uid1, t_uid uid2, bool * p_result						);
 t_status sec_user_copy			( t_uid source, t_uid * p_target							);

@@ -10,6 +10,16 @@
 #ifndef STATUS_STATUS_DEFS_H_
 #define STATUS_STATUS_DEFS_H_
 
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+#include "error/error_types.h"
+
+
 // *****************************************************************************************
 //
 // Section: Constants/Macros for client applications
@@ -22,10 +32,14 @@
 #define status_success( x )	( x.code == 0 && x.type == e_library_osapi	)
 #define status_failure( x )	( x.code != 0 || x.type != e_library_osapi	)
 
-#define status_error( x )	status_failure( x )
+// Match a given error
+#define status_error( s, e )	( s.code == e )
+
 #define status_true(  x )	( status_failure( x ) ? 0 : 1 )
 #define status_false( x )	( status_success( x ) ? 1 : 0 )
 
+// Find if a module or facility is supported
+#define status_unsupported( s )	( s.code == OSAPI_ERROR_SUPPORT )
 
 
 // *****************************************************************************************

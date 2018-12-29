@@ -45,47 +45,60 @@ extern "C" {
 t_status	proc_module_supported		( void 			);
 
 // + Instance management
-// ++ Life cycle
-t_status proc_instance_create			( t_proc * 	);
-t_status proc_instance_destroy			( t_pid, int	);
-t_status proc_instance_clone			( int * 	);
-t_status proc_instance_isRunning		( t_pid 	);
 
-// ++ State management
-t_status	proc_instance_suspendExecution	( void		);
-//t_status	proc_instance_resumeExecution	( void		);
+//++ Build up functions for instance creation
+// Add User/Group as owners of a process
+t_status	proc_user_add			( t_uid, t_proc *		);
+t_status	proc_group_add			( t_gid, t_proc *		);
+
+// ++ Life cycle
+t_status proc_instance_create			( t_proc * 			);
+t_status proc_instance_destroy			( t_pid, int			);
+t_status proc_instance_clone			( int * 			);
+t_status proc_instance_isRunning		( t_pid 			);
+t_status proc_instance_getChildStatus		( t_pid *, t_proc_status *	);
+t_status proc_instance_getStatus		( t_pid, t_proc_status *	);
 
 OSAPI_NORETURN
-void	 proc_instance_terminate		( int 		);
+void	 proc_instance_terminate		( int 				);
+
+// ++ State management
+t_status	proc_instance_suspendExecution	( void				);
+//t_status	proc_instance_resumeExecution	( void				);
+
 
 // ++ Operations
 // + Building process data
-t_status proc_data_setCmdLine			( t_size, char *[], t_proc * );
-t_status proc_data_setEnvironment		( t_size, char *[], t_proc * );
+t_status proc_data_setCmdLine			( t_size, char *[], t_proc * 	);
+t_status proc_data_setEnvironment		( t_size, char *[], t_proc * 	);
 
 // + Identity management
-t_status	proc_id_get			( t_pid * 		);
-t_status	proc_id_getParent		( t_pid * 		);
-t_status	proc_id_getGroup		( t_pid, t_gid *	);
-t_status	proc_id_setGroup		( t_gid   		);
-t_status	proc_id_getSession		( t_pid, t_pid *	);
-t_status	proc_id_setSession		( void  		);
+t_status	proc_id_get			( t_pid * 			);
+t_status	proc_id_getParent		( t_pid * 			);
+
+// Get the User/Group ID of a given process
+t_status	proc_id_getUser			( t_pid, t_uid *		);
+t_status	proc_id_getGroup		( t_pid, t_gid *		);
+
+t_status	proc_id_getSession		( t_pid, t_pid *		);
+t_status	proc_id_setSession		( void  			);
 
 // + Signal handling
-t_status	proc_signal_supported		( int * 		);
-t_status	proc_signal_clearAll		( void			);
-t_status	proc_signal_send		( t_pid, t_signal 	);
-t_status	proc_signal_setHandler		( t_signal, t_sig_func	);
-t_status	proc_signal_resetHandler	( t_signal		);
+t_status	proc_signal_supported		( int * 			);
+t_status	proc_signal_clearAll		( void				);
+t_status	proc_signal_send		( t_pid, t_signal 		);
+t_status	proc_signal_setHandler		( t_signal, t_sig_func		);
+t_status	proc_signal_resetHandler	( t_signal			);
+t_status	proc_signal_getName		( t_signal, t_char **		);
 
 // Add a cut through function to allow setting specific settings
 //t_status	proc_signal_setAction		( t_signal, t_sig_func, t_sig_action * );
 
 // Resource management
 // + Memory management
-t_status	proc_memory_allocate		( t_size, void **	);
-t_status	proc_memory_deallocate		( void * 		);
-t_status	proc_memory_clear		( t_size size, void *  	);
+t_status	proc_memory_allocate		( t_size, void **		);
+t_status	proc_memory_deallocate		( void * 			);
+t_status	proc_memory_clear		( t_size size, void *  		);
 
 // + Consumption monitoring
 /*

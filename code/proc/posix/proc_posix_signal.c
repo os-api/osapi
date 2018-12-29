@@ -28,7 +28,7 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include <error/modules/error_proc.h>
+#include "error/modules/error_proc.h"
 #include "status/status.h"
 
 // Own declarations

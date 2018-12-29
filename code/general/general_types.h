@@ -61,6 +61,14 @@ typedef struct s_optional_pair	t_option;
   #define OSAPI_NORETURN	_Noreturn
 #endif
 
+// *****************************************************************************************
+//
+// Section: Macro definitions
+//
+// *****************************************************************************************
+
+#define	osapi_bit_on(  x )	(x=1)
+#define	osapi_bit_off( x )	(x=0)
 
 
 #endif /* GENERAL_GENERAL_TYPES_H_ */
