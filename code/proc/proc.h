@@ -42,14 +42,14 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-t_status	proc_module_supported		( void 			);
+t_status	proc_module_supported		( void 				);
 
 // + Instance management
 
 //++ Build up functions for instance creation
 // Add User/Group as owners of a process
-t_status	proc_user_add			( t_uid, t_proc *		);
-t_status	proc_group_add			( t_gid, t_proc *		);
+t_status proc_user_add				( t_uid, t_proc *		);
+t_status proc_group_add				( t_gid, t_proc *		);
 
 // ++ Life cycle
 t_status proc_instance_create			( t_proc * 			);
@@ -58,12 +58,13 @@ t_status proc_instance_clone			( int * 			);
 t_status proc_instance_isRunning		( t_pid 			);
 t_status proc_instance_getChildStatus		( t_pid *, t_proc_status *	);
 t_status proc_instance_getStatus		( t_pid, t_proc_status *	);
+t_status proc_instance_getNumberOfDescendents	( t_size * 			);
 
 OSAPI_NORETURN
 void	 proc_instance_terminate		( int 				);
 
 // ++ State management
-t_status	proc_instance_suspendExecution	( void				);
+t_status proc_instance_suspendExecution		( void				);
 //t_status	proc_instance_resumeExecution	( void				);
 
 
@@ -73,23 +74,27 @@ t_status proc_data_setCmdLine			( t_size, char *[], t_proc * 	);
 t_status proc_data_setEnvironment		( t_size, char *[], t_proc * 	);
 
 // + Identity management
-t_status	proc_id_get			( t_pid * 			);
-t_status	proc_id_getParent		( t_pid * 			);
+t_status proc_id_get				( t_pid * 			);
+t_status proc_id_getParent			( t_pid * 			);
+t_status proc_id_getDescendents			( t_size, t_size *,t_pid (*)[]	);
 
 // Get the User/Group ID of a given process
-t_status	proc_id_getUser			( t_pid, t_uid *		);
-t_status	proc_id_getGroup		( t_pid, t_gid *		);
+t_status proc_id_getUser			( t_pid, t_uid *		);
+t_status proc_id_getGroup			( t_pid, t_gid *		);
 
-t_status	proc_id_getSession		( t_pid, t_pid *		);
-t_status	proc_id_setSession		( void  			);
+t_status proc_id_getSession			( t_pid, t_pid *		);
+t_status proc_id_setSession			( void  			);
 
 // + Signal handling
-t_status	proc_signal_supported		( int * 			);
-t_status	proc_signal_clearAll		( void				);
-t_status	proc_signal_send		( t_pid, t_signal 		);
-t_status	proc_signal_setHandler		( t_signal, t_sig_func		);
-t_status	proc_signal_resetHandler	( t_signal			);
-t_status	proc_signal_getName		( t_signal, t_char **		);
+t_status proc_signal_supported			( int * 			);
+t_status proc_signal_clearAll			( void				);
+t_status proc_signal_send			( t_pid, t_signal 		);
+t_status proc_signal_sendByName			( t_pid, t_char * 		);
+t_status proc_signal_setHandler			( t_signal, t_sig_func		);
+t_status proc_signal_setHandlerByName		( t_char *, t_sig_func		);
+t_status proc_signal_resetHandler		( t_signal			);
+t_status proc_signal_resetHandlerByName		( t_char *			);
+t_status proc_signal_getName			( t_signal, t_char **		);
 
 // Add a cut through function to allow setting specific settings
 //t_status	proc_signal_setAction		( t_signal, t_sig_func, t_sig_action * );

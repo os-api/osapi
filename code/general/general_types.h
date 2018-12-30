@@ -30,6 +30,7 @@
 #define	OSAPI_NULL_CHAR_POINTER		( (char * ) 0 )
 
 #define OSAPI_EMPTY_STRING		""
+#define OSAPI_SPACE_STRING		" "
 
 #define OSAPI_OPTIONS_END		-999999
 

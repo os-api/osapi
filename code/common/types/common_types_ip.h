@@ -17,7 +17,6 @@
 // *****************************************************************************************
 
 // System headers
-#include <common/types/common_types_if.h>
 #include <stdbool.h>
 
 // OSAPI headers
@@ -25,6 +24,7 @@
 #include "general/general_protocol.h"
 
 // Include own headers
+#include "common/types/common_types_if.h"
 
 // *****************************************************************************************
 //

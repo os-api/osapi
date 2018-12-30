@@ -22,6 +22,7 @@
 #include "general/general_baseline.h"
 
 // System includes
+#include <stdio.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -35,8 +36,11 @@
 //
 // *****************************************************************************************
 
-t_status proc_status_get( t_pid, t_pid *, t_proc_status * );
-
+t_status 	proc_status_get			( t_pid, t_pid *, t_proc_status * 	);
+t_status 	parse_linux_proc_stat_line	( char *, t_proc_info * 		);
+t_status 	parse_linux_proc_stat_file	( t_pid,  t_proc_info *			);
+t_status 	choose_linux_proc_stat_decoder	( FILE *, t_proc_info *			);
+bool		has_linux_proc_stat_file_spaces	( char *				);
 
 
 

@@ -28,12 +28,14 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/modules/error_proc.h"
 #include "status/status.h"
+#include "common/common.h"
 
 // Own declarations
 #include "proc/proc.h"
+#include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
+#include "proc/posix/proc_signal_defs.h"
 
 
 // *****************************************************************************************
@@ -41,7 +43,6 @@
 // Section: Constant declarations/definitions
 //
 // *****************************************************************************************
-
 
 
 // *****************************************************************************************
@@ -152,6 +153,103 @@ t_status proc_signal_clearAll( void )
  return st;
 }
 
+
+t_status proc_signal_getName( t_signal signo, t_char ** p_signal_string )
+{
+  t_status st;
+
+  status_reset( & st );
+
+  if( signo <= 0 || p_signal_string == (t_char **) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+      *p_signal_string = strsignal( signo );
+
+  return st;
+}
+
+t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
+{
+ t_status 	st;
+ int		signal_number = 0;
+ char * 	signal_name[2];
+
+ status_reset( & st );
+
+ if( sigName == (t_char *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     // Convert from a single pointer to an array of pointers for usage in common_options_get call
+     signal_name[0] = sigName;
+     signal_name[1] = NULL;
+
+     // Find a matching signal number
+     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+
+     // Send signal
+     if( signal_number > 0 )
+         st = proc_signal_send( pid, signal_number );
+   }
+
+
+ return st;
+}
+
+t_status proc_signal_setHandlerByName( t_char * sigName, t_sig_func signal_handler )
+{
+ t_status 	st;
+ int		signal_number = 0;
+ char * 	signal_name[2];
+
+ status_reset( & st );
+
+ if( sigName == ((t_char *) 0) || signal_handler == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     // Convert from a single pointer to an array of pointers for usage in common_options_get call
+     signal_name[0] = sigName;
+     signal_name[1] = NULL;
+
+     // Find a matching signal number
+     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+
+     // Install handler
+     if( signal_number > 0 )
+	 st = proc_signal_setHandler( signal_number, signal_handler );
+   }
+
+ return st;
+}
+
+t_status proc_signal_resetHandlerByName( t_char * sigName )
+{
+ t_status st;
+ int		signal_number = 0;
+ char * 	signal_name[2];
+
+ status_reset( & st );
+
+ if( sigName == ((t_char *) 0) )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     // Convert from a single pointer to an array of pointers for usage in common_options_get call
+     signal_name[0] = sigName;
+     signal_name[1] = NULL;
+
+     // Find a matching signal number
+     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+
+     // Reset signal to default
+     if( signal_number > 0 )
+	 proc_signal_resetHandler( signal_number );
+   }
+
+
+ return st;
+}
 
 
 

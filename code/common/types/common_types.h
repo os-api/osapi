@@ -10,8 +10,13 @@
 #ifndef TYPES_COMMON_TYPES_H_
 #define TYPES_COMMON_TYPES_H_
 
-#ifdef OS_LINUX
- #include <common/linux/common_types_linux.h>
-#endif
+// Platform types first
+#include "common/types/common_types_platform.h"
+
+// Generic types after
+#include "common/types/common_types_fs.h"
+#include "common/types/common_types_if.h"
+#include "common/types/common_types_ip.h"
+#include "common/types/common_types_lport.h"
 
 #endif /* TYPES_COMMON_TYPES_H_ */

@@ -13,13 +13,6 @@
 // Import OS specific definitions
 #ifdef	OS_LINUX
 	#include "common/linux/common_types_linux.h"
-/*
-#elif OS_SOLARIS
-	#include <util/util_solaris.h>
-*/
-
-
-
 #endif
 
 #endif /* COMMON_COMON_TYPES_PLATFORM_H_ */

@@ -15,7 +15,6 @@
 // *****************************************************************************************
 
 // Force baseline before system headers
-#include <common/posix/common_priv_posix.h>
 #include "general/general_baseline.h"
 
 // System includes
@@ -37,6 +36,7 @@
 
 // Own declarations
 #include "common/common.h"
+#include "common/posix/common_priv_posix.h"
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX

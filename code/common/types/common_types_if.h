@@ -17,13 +17,14 @@
 // *****************************************************************************************
 
 // System headers
-#include <common/types/common_types_platform.h>
 #include <stdbool.h>
 
 // OSAPI headers
 #include "general/general_types.h"
 #include "general/general_protocol.h"
 
+// Own headers
+#include "common/types/common_types_platform.h"
 
 
 // *****************************************************************************************

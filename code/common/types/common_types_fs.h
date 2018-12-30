@@ -3,15 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common Linux OS declarations
+// Purpose:	Common declarations for file system types
 //
 // *****************************************************************************************
 
-#ifndef COMMON_TYPES_LINUX_H_
-#define COMMON_TYPES_LINUX_H_
-
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
+#ifndef TYPES_COMMON_TYPES_FS_H_
+#define TYPES_COMMON_TYPES_FS_H_
 
 // *****************************************************************************************
 //
@@ -19,12 +16,12 @@
 //
 // *****************************************************************************************
 
-// Include first the more general POSIX header
-#include "common/posix/common_types_posix.h"
+// System headers
+#include <stdbool.h>
 
-// Import Linux specific system headers
-#define	__USE_MISC	1	// To select the inclusion of required symbols on the next header
-#include <net/if.h>
+// OSAPI headers
+#include "general/general_types.h"
+#include "general/general_protocol.h"
 
 
 // *****************************************************************************************
@@ -33,7 +30,6 @@
 //
 // *****************************************************************************************
 
-#define OSAPI_INTERFACE_MAX_NAME_SIZE		(IF_NAMESIZE + 1)
 
 
 // *****************************************************************************************
@@ -43,6 +39,7 @@
 // *****************************************************************************************
 
 
-#endif	// OS Linux
 
-#endif /* COMMON_TYPES_LINUX_H_ */
+
+
+#endif /* TYPES_COMMON_TYPES_FS_H_ */
