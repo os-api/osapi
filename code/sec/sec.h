@@ -26,11 +26,10 @@ extern "C" {
 #include "status/status_types.h"
 
 // Common includes
-#include <common/types/common_types.h>
+#include "common/types/common_types.h"
 
 // Own declarations
 #include "sec/sec_types.h"
-#include "sec/sec_platform.h"
 
 
 // *****************************************************************************************

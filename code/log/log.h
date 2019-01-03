@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOG_LOG_H_
-#define LOG_LOG_H_
+#ifndef OSAPI_LOG_H_
+#define OSAPI_LOG_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -60,4 +60,4 @@ t_status	log_fatal_write		( t_log, t_log_message	);
  }
 #endif
 
-#endif /* LOG_LOG_H_ */
+#endif /* OSAPI_LOG_H_ */

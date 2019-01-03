@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOG_LOG_POSIX_H_
-#define LOG_LOG_POSIX_H_
+#ifndef OSAPI_LOG_POSIX_H_
+#define OSAPI_LOG_POSIX_H_
 
 
 // Make sure that header is easily imported from c++
@@ -56,4 +56,4 @@ typedef int			t_log_level;
 
 #endif	// End of POSIX declarations
 
-#endif /* LOG_LOG_POSIX_H_ */
+#endif /* OSAPI_LOG_POSIX_H_ */

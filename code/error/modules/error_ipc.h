@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_IPC_H_
-#define CODE_ERR_ERROR_IPC_H_
+#ifndef OSAPI_ERROR_IPC_H_
+#define OSAPI_ERROR_IPC_H_
 
 // *****************************************************************************************
 //
@@ -23,8 +23,8 @@
 
 #define error_ipc_X(a, b, c) a b,
 enum ipc_X {
-	  #include <error/mappings/table_ipc.h>
+	  #include "error/mappings/table_ipc.h"
 };
 #undef error_ipc_X
 
-#endif /* CODE_ERR_ERROR_IPC_H_ */
+#endif /* OSAPI_ERROR_IPC_H_ */

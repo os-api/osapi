@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_STATUS_DEFS_H_
-#define STATUS_STATUS_DEFS_H_
+#ifndef OSAPI_STATUS_DEFS_H_
+#define OSAPI_STATUS_DEFS_H_
 
 
 // *****************************************************************************************
@@ -70,4 +70,4 @@ enum osapi_library_id
 #define status_eset(m,f,e,r) 		status_set( m, e_library_c,     f, e, r )
 
 
-#endif /* STATUS_STATUS_DEFS_H_ */
+#endif /* OSAPI_STATUS_DEFS_H_ */

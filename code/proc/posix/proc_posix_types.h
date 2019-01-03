@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_PROC_POSIX_TYPES_H_
-#define PROC_PROC_POSIX_TYPES_H_
+#ifndef OSAPI_PROC_POSIX_TYPES_H_
+#define OSAPI_PROC_POSIX_TYPES_H_
 
 // *****************************************************************************************
 //
@@ -99,4 +99,4 @@ typedef struct s_proc_status	t_proc_status;
 
 
 
-#endif /* PROC_PROC_POSIX_TYPES_H_ */
+#endif /* OSAPI_PROC_POSIX_TYPES_H_ */

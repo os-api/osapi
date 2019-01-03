@@ -7,8 +7,11 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_PROC_LINUX_TYPES_H_
-#define PROC_PROC_LINUX_TYPES_H_
+#ifndef OSAPI_PROC_LINUX_TYPES_H_
+#define OSAPI_PROC_LINUX_TYPES_H_
+
+// Only relevant is OS is Linux
+#ifdef OS_LINUX
 
 // *****************************************************************************************
 //
@@ -18,18 +21,14 @@
 
 // Include Linux specific system headers
 #include <linux/limits.h>
+#include <dlfcn.h>
 
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
- #include "proc/posix/proc_posix_types.h"
+// Import own headers
+#include "proc/posix/proc_posix_types.h"
+
+
+
+
 #endif	// End of OS Linux
 
-
-// *****************************************************************************************
-//
-// Section: Define Linux process related types
-//
-// *****************************************************************************************
-
-
-#endif /* PROC_PROC_LINUX_TYPES_H_ */
+#endif /* OSAPI_PROC_LINUX_TYPES_H_ */

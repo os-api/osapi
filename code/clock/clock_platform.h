@@ -7,12 +7,18 @@
 //
 // *****************************************************************************************
 
-#ifndef CLOCK_PLATFORM_H_
-#define CLOCK_PLATFORM_H_
+#ifndef OSAPI_CLOCK_PLATFORM_H_
+#define OSAPI_CLOCK_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- #include <clock/linux/clock_linux.h>
+ #include "clock/linux/clock_linux.h"
 #endif
 
-#endif /* CLOCK_PLATFORM_H_ */
+#endif /* OSAPI_CLOCK_PLATFORM_H_ */

@@ -38,7 +38,7 @@ extern int setdomainname(const char *name, size_t len	);
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include <error/modules/error_machine.h>
+#include "error/modules/error_machine.h"
 #include "status/status.h"
 
 // Own declarations

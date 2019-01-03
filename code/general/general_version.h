@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_VERSION_H_
-#define GENERAL_VERSION_H_
+#ifndef OSAPI_GENERAL_VERSION_H_
+#define OSAPI_GENERAL_VERSION_H_
 
 // *****************************************************************************************
 //
@@ -36,4 +36,4 @@ enum version_quality_X {
 // Define first the OSAPI LIB VERSION related information for client applications
 #define OSAPI_VERSION_QUALITY		e_version_unstable 		// Under development
 
-#endif /* GENERAL_VERSION_H_ */
+#endif /* OSAPI_GENERAL_VERSION_H_ */

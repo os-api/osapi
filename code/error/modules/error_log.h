@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_LOG_H_
-#define CODE_ERR_ERROR_LOG_H_
+#ifndef OSAPI_ERROR_LOG_H_
+#define OSAPI_ERROR_LOG_H_
 
 // *****************************************************************************************
 //
@@ -23,8 +23,8 @@
 
 #define error_log_X(a, b, c) a b,
 enum log_X {
-	  #include <error/mappings/table_log.h>
+	  #include "error/mappings/table_log.h"
 };
 #undef error_log_X
 
-#endif /* CODE_ERR_ERROR_LOG_H_ */
+#endif /* OSAPI_ERROR_LOG_H_ */

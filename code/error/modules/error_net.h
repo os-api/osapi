@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_NET_H_
-#define CODE_ERR_ERROR_NET_H_
+#ifndef OSAPI_ERROR_NET_H_
+#define OSAPI_ERROR_NET_H_
 
 // *****************************************************************************************
 //
@@ -23,9 +23,9 @@
 
 #define error_net_X(a, b, c) a b,
 enum net_X {
-	  #include <error/mappings/table_net.h>
+	  #include "error/mappings/table_net.h"
 };
 #undef error_net_X
 
 
-#endif /* CODE_ERR_ERROR_NET_H_ */
+#endif /* OSAPI_ERROR_NET_H_ */

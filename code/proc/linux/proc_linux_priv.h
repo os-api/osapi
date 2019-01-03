@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_LINUX_PRIV_H_
-#define PROC_LINUX_PRIV_H_
+#ifndef OSAPI_PROC_LINUX_PRIV_H_
+#define OSAPI_PROC_LINUX_PRIV_H_
 
 #ifdef OS_LINUX
 
@@ -28,11 +28,12 @@
 #include "general/general.h"
 #include "status/status.h"
 
+// Own declarations
 #include "proc/proc_types.h"
 
 // *****************************************************************************************
 //
-// Section: Module Process POSIX private declarations
+// Section: Module Process Linux private declarations
 //
 // *****************************************************************************************
 
@@ -46,4 +47,4 @@ bool		has_linux_proc_stat_file_spaces	( char *				);
 
 #endif // OS Linux
 
-#endif /* PROC_LINUX_PRIV_H_ */
+#endif /* OSAPI_PROC_LINUX_PRIV_H_ */

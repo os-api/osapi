@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_POSIX_H_
-#define PROC_POSIX_H_
+#ifndef OSAPI_PROC_POSIX_H_
+#define OSAPI_PROC_POSIX_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -26,7 +26,7 @@
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
@@ -39,4 +39,4 @@ t_status posix_library_load( const char * pathname, int options, t_library * p_l
 #endif
 
 
-#endif /* PROC_POSIX_H_ */
+#endif /* OSAPI_PROC_POSIX_H_ */

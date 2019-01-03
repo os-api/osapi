@@ -7,8 +7,10 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_POSIX_H_
-#define STATUS_POSIX_H_
+#ifndef OSAPI_STATUS_POSIX_H_
+#define OSAPI_STATUS_POSIX_H_
+
+#ifdef	OSAPI_POSIX
 
 // *****************************************************************************************
 //
@@ -27,4 +29,7 @@ const char *	status_error_getSystem	( int error 			);
 void		status_message_cGet	( t_status, t_size, t_char *	);
 
 
-#endif /* STATUS_POSIX_H_ */
+
+#endif	// OSAPI_POSIX
+
+#endif /* OSAPI_STATUS_POSIX_H_ */

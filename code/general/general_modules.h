@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_GENERAL_MODULES_H_
-#define GENERAL_GENERAL_MODULES_H_
+#ifndef OSAPI_GENERAL_MODULES_H_
+#define OSAPI_GENERAL_MODULES_H_
 
 
 // *****************************************************************************************
@@ -26,4 +26,4 @@ enum module_id
 
 #undef module_X
 
-#endif /* GENERAL_GENERAL_MODULES_H_ */
+#endif /* OSAPI_GENERAL_MODULES_H_ */

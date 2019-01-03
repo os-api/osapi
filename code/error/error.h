@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef ERROR_ERROR_H_
-#define ERROR_ERROR_H_
+#ifndef OSAPI_ERROR_H_
+#define OSAPI_ERROR_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -53,4 +53,4 @@ bool 		error_code_isValid	( t_module module, t_error code	);
 }
 #endif
 
-#endif /* ERROR_ERROR_H_ */
+#endif /* OSAPI_ERROR_H_ */

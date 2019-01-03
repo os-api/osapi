@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_SIGNAL_DEFS_H_
-#define PROC_SIGNAL_DEFS_H_
+#ifndef OSAPI_PROC_SIGNAL_DEFS_H_
+#define OSAPI_PROC_SIGNAL_DEFS_H_
 
 
 // Compile only if is a POSIX implementation
@@ -61,4 +61,4 @@ const t_option osapi_signal[] = {
 
 #endif	// OSAPI_POSIX
 
-#endif	// PROC_SIGNAL_DEFS_H_
+#endif	// OSAPI_PROC_SIGNAL_DEFS_H_

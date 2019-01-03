@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_CLOCK_H_
-#define CODE_ERR_ERROR_PRIV_CLOCK_H_
+#ifndef OSAPI_ERROR_PRIV_CLOCK_H_
+#define OSAPI_ERROR_PRIV_CLOCK_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_clock.h>
+#include "error/modules/error_clock.h"
 
 // *****************************************************************************************
 //
@@ -30,9 +30,9 @@
 
 static const char * clock_errors[] =
 {
-  #include <error/mappings/table_clock.h>
+  #include "error/mappings/table_clock.h"
 };
 
 #undef error_clock_X
 
-#endif /* CODE_ERR_ERROR_PRIV_CLOCK_H_ */
+#endif /* OSAPI_ERROR_PRIV_CLOCK_H_ */

@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	String module declarations
+// Purpose:	String module declarations for all C String types: basic, wide, etc.
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_TYPES_H_
-#define STRING_STRING_TYPES_H_
+#ifndef OSAPI_STRING_TYPES_H_
+#define OSAPI_STRING_TYPES_H_
 
 // *****************************************************************************************
 //
@@ -20,4 +20,4 @@
 //#include "string/string_types_wide.h"
 
 
-#endif /* STRING_STRING_TYPES_H_ */
+#endif /* OSAPI_STRING_TYPES_H_ */

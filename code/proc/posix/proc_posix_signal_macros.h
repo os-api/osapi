@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_POSIX_SIGNAL_MACROS_H_
-#define PROC_POSIX_SIGNAL_MACROS_H_
+#ifndef OSAPI_PROC_POSIX_SIGNAL_MACROS_H_
+#define OSAPI_PROC_POSIX_SIGNAL_MACROS_H_
 
 // *****************************************************************************************
 //
@@ -32,4 +32,4 @@
 #define proc_isSignalHup( x )		(x == SIGHUP)
 #define proc_isSignalAbort( x )		(x == SIGABRT)
 
-#endif /* PROC_POSIX_SIGNAL_MACROS_H_ */
+#endif /* OSAPI_PROC_POSIX_SIGNAL_MACROS_H_ */

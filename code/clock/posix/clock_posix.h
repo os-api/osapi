@@ -7,17 +7,23 @@
 //
 // *****************************************************************************************
 
-#ifndef CLOCK_POSIX_H_
-#define CLOCK_POSIX_H_
+#ifndef OSAPI_CLOCK_POSIX_H_
+#define OSAPI_CLOCK_POSIX_H_
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
 
 
-
 #ifndef _POSIX_SOURCE
 #define _POSIX_SOURCE
 #endif
+
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 #include <unistd.h>
 #include <time.h>
@@ -38,4 +44,4 @@ typedef struct s_clock t_clock;
 
 #endif	// If POSIX is defined
 
-#endif /* CLOCK_POSIX_H_ */
+#endif /* OSAPI_CLOCK_POSIX_H_ */

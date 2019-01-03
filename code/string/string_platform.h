@@ -7,8 +7,14 @@
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_PLATFORM_H_
-#define STRING_STRING_PLATFORM_H_
+#ifndef OSAPI_STRING_PLATFORM_H_
+#define OSAPI_STRING_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
@@ -17,4 +23,4 @@
 
 
 
-#endif /* STRING_STRING_PLATFORM_H_ */
+#endif /* OSAPI_STRING_PLATFORM_H_ */

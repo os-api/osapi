@@ -1,35 +1,36 @@
-/*
- * os_posix.h
- *
- *  Created on: 01/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Provide OS (Operating System) module declarations for POSIX
+//
+// *****************************************************************************************
 
-#ifndef OS_OS_POSIX_H_
-#define OS_OS_POSIX_H_
+#ifndef OSAPI_OS_POSIX_H_
+#define OSAPI_OS_POSIX_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-#ifndef _POSIX_SOURCE
-  #define _POSIX_SOURCE
-#endif
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-struct s_osInfo
-{
-  char		kernel		[ OSAPI_OS_MAX_KERNEL_NAME	];
-  char		node		[ OSAPI_OS_MAX_NODE_NAME	];
-  char		release		[ OSAPI_OS_MAX_RELEASE_NAME	];
-  char		version		[ OSAPI_OS_MAX_VERSION		];
-  char		machine		[ OSAPI_OS_MAX_MACHINE_NAME	];
-  char		domain		[ OSAPI_OS_MAX_DOMAIN_NAME	];
-  char		provider	[ OSAPI_OS_MAX_PROVIDER_NAME	];
-  char		provider_release[ OSAPI_OS_MAX_PROVIDER_RELEASE	];
-};
+// Import system headers
 
-typedef struct s_osInfo		t_osInfo;
+// Import own headers
+#include "os/posix/os_posix_types.h"
+
+// *****************************************************************************************
+//
+// Section: Module Process POSIX private declarations
+//
+// *****************************************************************************************
 
 // Internal POSIX module functions
 t_status os_posix_info_get( t_osInfo * p_osInfo );
@@ -41,4 +42,4 @@ t_status os_posix_info_get( t_osInfo * p_osInfo );
 #endif
 
 
-#endif /* OS_OS_POSIX_H_ */
+#endif /* OSAPI_OS_POSIX_H_ */

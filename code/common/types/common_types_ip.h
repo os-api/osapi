@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef TYPES_COMMON_TYPES_IP_H_
-#define TYPES_COMMON_TYPES_IP_H_
+#ifndef OSAPI_COMMON_TYPES_IP_H_
+#define OSAPI_COMMON_TYPES_IP_H_
 
 // *****************************************************************************************
 //
@@ -101,4 +101,4 @@ typedef struct s_ip	t_ip;
 
 
 
-#endif /* TYPES_COMMON_TYPES_IP_H_ */
+#endif /* OSAPI_COMMON_TYPES_IP_H_ */

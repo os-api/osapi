@@ -22,7 +22,6 @@
 #include <string.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <error/modules/error_machine.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -31,6 +30,7 @@
 
 // Own declarations
 #include "machine/machine.h"
+#include "error/modules/error_machine.h"
 #include "machine/posix/machine_posix.h"
 
 // *****************************************************************************************

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_PROC_TYPES_H_
-#define PROC_PROC_TYPES_H_
+#ifndef OSAPI_PROC_TYPES_H_
+#define OSAPI_PROC_TYPES_H_
 
 
 // *****************************************************************************************
@@ -21,6 +21,7 @@
 #include "general/general_baseline.h"
 
 // System includes
+#include <time.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -68,9 +69,10 @@ struct s_proc_info
   char		**	args;
   // t_proc_term	term;
   t_proc_resources	resources;
+  time_t		starttime;
 };
 
 typedef struct s_proc_info	t_proc_info;
 
 
-#endif /* PROC_PROC_TYPES_H_ */
+#endif /* OSAPI_PROC_TYPES_H_ */

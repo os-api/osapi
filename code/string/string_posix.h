@@ -1,14 +1,16 @@
-/*
- * string_posix.h
- *
- *  Created on: 07/05/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	String module using a POSIX implementation
+//
+// *****************************************************************************************
 
-#ifndef STRING_POSIX_H_
-#define STRING_POSIX_H_
+#ifndef OSAPI_STRING_POSIX_H_
+#define OSAPI_STRING_POSIX_H_
 
-// Only relevant is OS is Linux
+// Only relevant is OS is POSIX compliant
 #ifdef OSAPI_POSIX
 
 // The following definition is required by the system headers below
@@ -18,4 +20,4 @@
 
 #endif	// End of POSIX declarations
 
-#endif /* STRING_POSIX_H_ */
+#endif /* OSAPI_STRING_POSIX_H_ */

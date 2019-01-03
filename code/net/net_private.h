@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef NET_PRIVATE_H_
-#define NET_PRIVATE_H_
+#ifndef OSAPI_NET_PRIVATE_H_
+#define OSAPI_NET_PRIVATE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -29,7 +29,7 @@ extern "C" {
 #include "status/status_types.h"
 
 // Common includes
-#include <common/types/common_types.h>
+#include "common/types/common_types.h"
 
 // Own declarations
 
@@ -49,4 +49,4 @@ t_status get_ip_string( t_protocol protocol, void * location, t_size strSize, ch
 }
 #endif
 
-#endif /* NET_PRIVATE_H_ */
+#endif /* OSAPI_NET_PRIVATE_H_ */

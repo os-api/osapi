@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_SEC_H_
-#define CODE_ERR_ERROR_SEC_H_
+#ifndef OSAPI_ERROR_SEC_H_
+#define OSAPI_ERROR_SEC_H_
 
 // *****************************************************************************************
 //
@@ -23,9 +23,9 @@
 
 #define error_sec_X(a, b, c) a b,
 enum sec_X {
-	  #include <error/mappings/table_sec.h>
+	  #include "error/mappings/table_sec.h"
 };
 #undef error_sec_X
 
 
-#endif /* CODE_ERR_ERROR_SEC_H_ */
+#endif /* OSAPI_ERROR_SEC_H_ */

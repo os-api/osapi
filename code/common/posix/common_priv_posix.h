@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef COMMON_PRIV_POSIX_H_
-#define COMMON_PRIV_POSIX_H_
+#ifndef OSAPI_COMMON_PRIV_POSIX_H_
+#define OSAPI_COMMON_PRIV_POSIX_H_
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
@@ -28,4 +28,4 @@ void		set_common_status	( int code, const char * funcname, t_status * p_status	)
 
 #endif // Only in POSIX mode
 
-#endif // END of COMMON_PRIV_POSIX_H_
+#endif // OSAPI_COMMON_PRIV_POSIX_H_

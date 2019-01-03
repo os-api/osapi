@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_PRIV_H_
-#define GENERAL_PRIV_H_
+#ifndef OSAPI_GENERAL_PRIV_H_
+#define OSAPI_GENERAL_PRIV_H_
 
 
 // Version string
@@ -56,4 +56,4 @@ static const char * module_name[] = {
 
 
 
-#endif /* GENERAL_PRIV_H_ */
+#endif /* OSAPI_GENERAL_PRIV_H_ */

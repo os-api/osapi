@@ -7,8 +7,10 @@
 //
 // *****************************************************************************************
 
-#ifndef LINUX_STATUS_LINUX_H_
-#define LINUX_STATUS_LINUX_H_
+#ifndef OSAPI_STATUS_LINUX_H_
+#define OSAPI_STATUS_LINUX_H_
+
+#ifdef OS_LINUX
 
 // *****************************************************************************************
 //
@@ -17,9 +19,10 @@
 // *****************************************************************************************
 
 /* Import POSIX specific definitions */
-#ifdef	OSAPI_POSIX
-  #include <status/posix/status_posix.h>
-#endif
+#include "status/posix/status_posix.h"
 
 
-#endif /* LINUX_STATUS_LINUX_H_ */
+
+#endif	// OS_LINUX
+
+#endif /* OSAPI_STATUS_LINUX_H_ */

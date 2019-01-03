@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_PROTOCOL_H_
-#define GENERAL_PROTOCOL_H_
+#ifndef OSAPI_GENERAL_PROTOCOL_H_
+#define OSAPI_GENERAL_PROTOCOL_H_
 
 // Include protocol IDs
 
@@ -27,4 +27,4 @@ enum selectors_X {
 
 
 
-#endif /* GENERAL_PROTOCOL_H_ */
+#endif /* OSAPI_GENERAL_PROTOCOL_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_STATUS_H_
-#define STATUS_STATUS_H_
+#ifndef OSAPI_STATUS_H_
+#define OSAPI_STATUS_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -69,4 +69,4 @@ const char *	status_error_get	( t_status 										);
 }
 #endif
 
-#endif /* STATUS_STATUS_H_ */
+#endif /* OSAPI_STATUS_H_ */

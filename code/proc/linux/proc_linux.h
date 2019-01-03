@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_LINUX_H_
-#define PROC_LINUX_H_
+#ifndef OSAPI_PROC_LINUX_H_
+#define OSAPI_PROC_LINUX_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -37,17 +37,10 @@ extern "C" {
 
 // *****************************************************************************************
 //
-// Section: Macros/Constant definitions
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-const t_option lib_options[] = {
-        { "RTLD_LAZY", 	 RTLD_LAZY 		},
-	{ "RTLD_NOW", 	 RTLD_NOW 		},
-	{ "RTLD_GLOBAL", RTLD_GLOBAL	 	},
-	{ "RTLD_LOCAL",  RTLD_LOCAL 		},
-        { "",		 OSAPI_OPTIONS_END	},
-};
 
 
 #endif	// OS_LINUX
@@ -57,4 +50,4 @@ const t_option lib_options[] = {
 }
 #endif
 
-#endif /* PROC_LINUX_H_ */
+#endif /* OSAPI_PROC_LINUX_H_ */

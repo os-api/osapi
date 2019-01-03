@@ -53,6 +53,16 @@
 
 extern const char * OSAPI_FS_PROC_NAME;
 
+const t_option lib_options[] = {
+        { "RTLD_LAZY", 	 RTLD_LAZY 		},
+	{ "RTLD_NOW", 	 RTLD_NOW 		},
+	{ "RTLD_GLOBAL", RTLD_GLOBAL	 	},
+	{ "RTLD_LOCAL",  RTLD_LOCAL 		},
+        { "",		 OSAPI_OPTIONS_END	},
+};
+
+
+
 // *****************************************************************************************
 //
 // Section: Function definition
@@ -155,6 +165,23 @@ t_status proc_id_getDescendents( t_size nchildrens, t_size * p_nFoundChildren, t
 
  return st;
 }
+
+
+t_status proc_info_get( t_pid pid, t_proc_info * p_pinfo )
+{
+  t_status		st;
+
+  status_reset( & st );
+
+  if( p_pinfo == (t_proc_info *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+      if( pid > 0 ) st = parse_linux_proc_stat_file( pid, p_pinfo );
+
+  return st;
+}
+
+
 
 
 #endif	// End of OS Linux

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IO_H_
-#define IO_H_
+#ifndef OSAPI_IO_H_
+#define OSAPI_IO_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -70,4 +70,4 @@ t_status	io_file_write			( t_file, t_size, t_stream	);
 #endif
 
 
-#endif /* IO_H_ */
+#endif /* OSAPI_IO_H_ */

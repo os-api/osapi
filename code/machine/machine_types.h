@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_MACHINE_TYPES_H_
-#define MACHINE_MACHINE_TYPES_H_
+#ifndef OSAPI_MACHINE_TYPES_H_
+#define OSAPI_MACHINE_TYPES_H_
 
 
 // *****************************************************************************************
@@ -20,14 +20,12 @@
 // System headers
 
 // OSAPI headers
-#include <common/types/common_types_ip.h>		// Import IP OSAPI generic type
 #include "general/general_types.h"
 #include "general/general_protocol.h"
+#include "common/types/common_types_ip.h"		// Import IP OSAPI generic type
 
 // Platform own headers
-#ifdef OS_LINUX
- #include <machine/linux/machine_types_linux.h>
-#endif
+#include "machine/machine_platform_types.h"
 
 
 // *****************************************************************************************
@@ -48,4 +46,4 @@
 
 
 
-#endif /* MACHINE_MACHINE_TYPES_H_ */
+#endif /* OSAPI_MACHINE_TYPES_H_ */

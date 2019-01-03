@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_H_
-#define STRING_STRING_H_
+#ifndef OSAPI_STRING_H_
+#define OSAPI_STRING_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -27,7 +27,7 @@ extern "C" {
 #include "status/status_types.h"
 
 // Own declarations
-#include <string/string_types.h>
+#include "string/string_types.h"
 #include "string/string_platform.h"
 
 
@@ -54,4 +54,4 @@ t_status string_module_supported		( void					);
 }
 #endif
 
-#endif /* STRING_STRING_H_ */
+#endif /* OSAPI_STRING_H_ */

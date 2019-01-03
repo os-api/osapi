@@ -7,8 +7,14 @@
 //
 // *****************************************************************************************
 
-#ifndef LINUX_CLOCK_LINUX_H_
-#define LINUX_CLOCK_LINUX_H_
+#ifndef OSAPI_CLOCK_LINUX_H_
+#define OSAPI_CLOCK_LINUX_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 // Only relevant is OS is Linux
 #ifdef OS_LINUX
@@ -17,4 +23,4 @@
 
 #endif	// Linux OS
 
-#endif /* LINUX_CLOCK_LINUX_H_ */
+#endif /* OSAPI_CLOCK_LINUX_H_ */

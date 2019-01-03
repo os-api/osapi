@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IO_IO_PLATFORM_H_
-#define IO_IO_PLATFORM_H_
+#ifndef OSAPI_IO_PLATFORM_H_
+#define OSAPI_IO_PLATFORM_H_
 
 /* Import OS specific definitions
 #ifdef	OS_LINUX
@@ -17,4 +17,4 @@
 */
 
 
-#endif /* IO_IO_PLATFORM_H_ */
+#endif /* OSAPI_IO_PLATFORM_H_ */

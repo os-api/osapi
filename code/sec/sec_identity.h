@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef SEC_SEC_IDENTITY_H_
-#define SEC_SEC_IDENTITY_H_
+#ifndef OSAPI_SEC_IDENTITY_H_
+#define OSAPI_SEC_IDENTITY_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -76,4 +76,4 @@ t_status sec_user_getGroups		( t_uid uid, size_t groupListMaxSize, size_t * p_gr
 }
 #endif
 
-#endif /* SEC_SEC_IDENTITY_H_ */
+#endif /* OSAPI_SEC_IDENTITY_H_ */

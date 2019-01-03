@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_BASELINE_H_
-#define GENERAL_BASELINE_H_
+#ifndef OSAPI_GENERAL_BASELINE_H_
+#define OSAPI_GENERAL_BASELINE_H_
 
 // Language baseline: C or C++
 
@@ -26,4 +26,4 @@
 #endif
 
 
-#endif /* GENERAL_BASELINE_H_ */
+#endif /* OSAPI_GENERAL_BASELINE_H_ */

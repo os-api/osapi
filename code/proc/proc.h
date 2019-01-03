@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_H_
-#define PROC_H_
+#ifndef OSAPI_PROC_H_
+#define OSAPI_PROC_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -105,10 +105,16 @@ t_status	proc_memory_allocate		( t_size, void **		);
 t_status	proc_memory_deallocate		( void * 			);
 t_status	proc_memory_clear		( t_size size, void *  		);
 
+// + Process general information
+t_status proc_info_get				( t_pid, t_proc_info *		);
+
 // + Consumption monitoring
+t_status	proc_usage_getVirtualMemory	( t_pid, t_size *		);
+t_status	proc_usage_getRealMemory	( t_pid, t_size *		);
+t_status	proc_usage_getCPU		( t_pid, t_size *		);
+t_status	proc_usage_getThreads		( t_pid, t_size *		);
+
 /*
-t_status	proc_usage_getMemory
-t_status	proc_usage_getCPU
 t_status	proc_usage_getIO
 t_status	proc_usage_getNetwork
  */
@@ -125,4 +131,4 @@ t_status	proc_library_unload		( t_library lib			);
 }
 #endif
 
-#endif /* PROC_H_ */
+#endif /* OSAPI_PROC_H_ */

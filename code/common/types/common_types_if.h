@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef TYPES_COMMON_TYPES_IF_H_
-#define TYPES_COMMON_TYPES_IF_H_
+#ifndef OSAPI_COMMON_TYPES_IF_H_
+#define OSAPI_COMMON_TYPES_IF_H_
 
 // *****************************************************************************************
 //
@@ -45,4 +45,4 @@
 
 
 
-#endif /* COMMON_TYPES_IP_H_ */
+#endif /* OSAPI_TYPES_IP_H_ */

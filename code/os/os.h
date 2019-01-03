@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef OS_OS_H_
-#define OS_OS_H_
+#ifndef OSAPI_OS_H_
+#define OSAPI_OS_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -58,4 +58,4 @@ t_status os_providerRelease_get		( t_osInfo *, char **			);
 #endif
 
 
-#endif /* OS_OS_H_ */
+#endif /* OSAPI_OS_H_ */

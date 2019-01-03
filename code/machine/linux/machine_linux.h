@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_MACHINE_LINUX_H_
-#define MACHINE_MACHINE_LINUX_H_
+#ifndef OSAPI_MACHINE_LINUX_H_
+#define OSAPI_MACHINE_LINUX_H_
 
 // Only relevant is OS is Linux
 #ifdef OS_LINUX
@@ -31,7 +31,7 @@ extern "C" {
 // Generic OSAPI includes
 
 // Own headers
-#include <machine/linux/machine_types_linux.h>
+#include <machine/linux/machine_linux_types.h>
 
 // *****************************************************************************************
 //
@@ -50,4 +50,4 @@ static t_status fill_ip_structure	( struct ifaddrs * address, t_ip * ip		);
 
 #endif	// End of OS Linux
 
-#endif /* MACHINE_MACHINE_LINUX_H_ */
+#endif /* OSAPI_MACHINE_LINUX_H_ */

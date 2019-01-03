@@ -3,12 +3,15 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common declarations for file system types
+// Purpose:	Common POSIX declarations
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_COMMON_TYPES_FS_H_
-#define OSAPI_COMMON_TYPES_FS_H_
+#ifndef OSAPI_MACHINE_POSIX_TYPES_H_
+#define OSAPI_MACHINE_POSIX_TYPES_H_
+
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
 
 // *****************************************************************************************
 //
@@ -16,12 +19,7 @@
 //
 // *****************************************************************************************
 
-// System headers
-#include <stdbool.h>
-
-// OSAPI headers
-#include "general/general_types.h"
-#include "general/general_protocol.h"
+// Include System headers
 
 
 // *****************************************************************************************
@@ -31,15 +29,14 @@
 // *****************************************************************************************
 
 
-
 // *****************************************************************************************
 //
-// Section: Type definitions
+// Section: Type declarations
 //
 // *****************************************************************************************
 
 
 
+#endif	// Posix only
 
-
-#endif /* OSAPI_COMMON_TYPES_FS_H_ */
+#endif /* OSAPI_MACHINE_POSIX_TYPES_H_ */

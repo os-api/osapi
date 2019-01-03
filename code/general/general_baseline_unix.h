@@ -9,8 +9,8 @@
 
 
 
-#ifndef GENERAL_BASELINE_UNIX_H_
-#define GENERAL_BASELINE_UNIX_H_
+#ifndef OSAPI_GENERAL_BASELINE_UNIX_H_
+#define OSAPI_GENERAL_BASELINE_UNIX_H_
 
 // Define target UNIX standards
 #define _POSIX_C_SOURCE 200809L
@@ -57,4 +57,4 @@
 #define OSAPI_POSIX
 
 
-#endif /* GENERAL_BASELINE_UNIX_H_ */
+#endif /* OSAPI_GENERAL_BASELINE_UNIX_H_ */

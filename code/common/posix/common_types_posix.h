@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef COMMON_TYPES_POSIX_H_
-#define COMMON_TYPES_POSIX_H_
+#ifndef OSAPI_COMMON_TYPES_POSIX_H_
+#define OSAPI_COMMON_TYPES_POSIX_H_
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
@@ -46,4 +46,4 @@ typedef gid_t	t_gid;		// Group ID
 
 #endif	// Posix only
 
-#endif /* COMMON_TYPES_POSIX_H_ */
+#endif /* OSAPI_COMMON_TYPES_POSIX_H_ */

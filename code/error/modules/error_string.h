@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_STRING_H_
-#define CODE_ERR_ERROR_STRING_H_
+#ifndef OSAPI_ERROR_STRING_H_
+#define OSAPI_ERROR_STRING_H_
 
 // *****************************************************************************************
 //
@@ -23,9 +23,9 @@
 
 #define error_string_X(a, b, c) a b,
 enum string_X {
-	  #include <error/mappings/table_string.h>
+	  #include "error/mappings/table_string.h"
 };
 #undef error_string_X
 
 
-#endif /* CODE_ERR_ERROR_STRING_H_ */
+#endif /* OSAPI_ERROR_STRING_H_ */

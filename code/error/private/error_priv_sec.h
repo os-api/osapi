@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_SEC_H_
-#define CODE_ERR_ERROR_PRIV_SEC_H_
+#ifndef OSAPI_ERROR_PRIV_SEC_H_
+#define OSAPI_ERROR_PRIV_SEC_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_sec.h>
+#include "error/modules/error_sec.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * sec_errors[] =
 {
-  #include <error/mappings/table_sec.h>
+  #include "error/mappings/table_sec.h"
 };
 
 #undef error_sec_X
 
-#endif /* CODE_ERR_ERROR_PRIV_SEC_H_ */
+#endif /* OSAPI_ERROR_PRIV_SEC_H_ */

@@ -7,22 +7,19 @@
 //
 // *****************************************************************************************
 
-#ifndef SEC_SEC_TYPES_H_
-#define SEC_SEC_TYPES_H_
+#ifndef OSAPI_SEC_TYPES_H_
+#define OSAPI_SEC_TYPES_H_
 
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-#ifdef OS_LINUX
-   #include "sec/linux/sec_linux.h"
-#endif
-
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
+// Own headers
+#include "sec/sec_platform.h"
 
 
-#endif /* SEC_SEC_TYPES_H_ */
+
+
+#endif /* OSAPI_SEC_TYPES_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_DEF_H_
-#define CODE_ERR_ERROR_DEF_H_
+#ifndef OSAPI_ERROR_TYPES_H_
+#define OSAPI_ERROR_TYPES_H_
 
 // *****************************************************************************************
 //
@@ -44,4 +44,4 @@
 typedef	int				t_error;
 
 
-#endif /* CODE_ERR_ERROR_DEF_H_ */
+#endif /* OSAPI_ERROR_TYPES_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_IO_H_
-#define CODE_ERR_ERROR_IO_H_
+#ifndef OSAPI_ERROR_IO_H_
+#define OSAPI_ERROR_IO_H_
 
 // *****************************************************************************************
 //
@@ -27,4 +27,4 @@ enum io_X {
 };
 #undef error_io_X
 
-#endif /* CODE_ERR_ERROR_IO_H_ */
+#endif /* OSAPI_ERROR_IO_H_ */

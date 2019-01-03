@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef OS_OS_TYPES_H_
-#define OS_OS_TYPES_H_
+#ifndef OSAPI_OS_TYPES_H_
+#define OSAPI_OS_TYPES_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -24,4 +24,4 @@ extern "C" {
 #endif
 
 
-#endif /* OS_OS_TYPES_H_ */
+#endif /* OSAPI_OS_TYPES_H_ */

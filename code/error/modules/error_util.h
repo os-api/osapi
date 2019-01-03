@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_UTIL_H_
-#define CODE_ERR_ERROR_UTIL_H_
+#ifndef OSAPI_ERROR_UTIL_H_
+#define OSAPI_ERROR_UTIL_H_
 
 // *****************************************************************************************
 //
@@ -23,9 +23,9 @@
 
 #define error_util_X(a, b, c) a b,
 enum util_X {
-	  #include <error/mappings/table_util.h>
+	  #include "error/mappings/table_util.h"
 };
 #undef error_util_X
 
 
-#endif /* CODE_ERR_ERROR_UTIL_H_ */
+#endif /* OSAPI_ERROR_UTIL_H_ */

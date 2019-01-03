@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_TYPES_LINUX_H_
-#define MACHINE_TYPES_LINUX_H_
+#ifndef OSAPI_MACHINE_LINUX_TYPES_H_
+#define OSAPI_MACHINE_LINUX_TYPES_H_
 
 // Only relevant is OS is Linux
 #ifdef OS_LINUX
@@ -24,7 +24,7 @@
 #include <net/if.h>
 
 // Own headers
-#include "machine/posix/machine_types_posix.h"
+#include "machine/posix/machine_posix_types.h"
 
 
 // *****************************************************************************************
@@ -37,4 +37,4 @@
 
 #endif	// OS Linux
 
-#endif /* MACHINE_TYPES_LINUX_H_ */
+#endif /* OSAPI_MACHINE_LINUX_TYPES_H_ */

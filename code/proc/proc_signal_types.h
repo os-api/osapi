@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_SIGNAL_TYPES_H_
-#define PROC_SIGNAL_TYPES_H_
+#ifndef OSAPI_PROC_SIGNAL_TYPES_H_
+#define OSAPI_PROC_SIGNAL_TYPES_H_
 
 
 // *****************************************************************************************
@@ -30,7 +30,7 @@
 #define signal_level_X(a, b, c) a b,
 enum osapi_signal_level
 {
-  #include "proc/linux/table_signal.h"
+  #include "proc/mappings/table_signal.h"
 };
 
 #undef signal_level_X
@@ -38,4 +38,4 @@ enum osapi_signal_level
 
 
 
-#endif /* PROC_SIGNAL_TYPES_H_ */
+#endif /* OSAPI_PROC_SIGNAL_TYPES_H_ */

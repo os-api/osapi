@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOG_POSIX_PRIV_H_
-#define LOG_POSIX_PRIV_H_
+#ifndef OSAPI_LOG_POSIX_PRIV_H_
+#define OSAPI_LOG_POSIX_PRIV_H_
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
@@ -62,4 +62,4 @@ const t_option log_options[] = {
 
 #endif	// End of POSIX declarations
 
-#endif /* LOG_POSIX_PRIV_H_ */
+#endif /* OSAPI_LOG_POSIX_PRIV_H_ */

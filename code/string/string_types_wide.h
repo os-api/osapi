@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	String module declarations
+// Purpose:	String module declarations for wide C String types
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_TYPES_WIDE_H_
-#define STRING_STRING_TYPES_WIDE_H_
+#ifndef OSAPI_STRING_TYPES_WIDE_H_
+#define OSAPI_STRING_TYPES_WIDE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -52,4 +52,4 @@ typedef struct osapi_wide_string	t_wString;
 #endif
 
 
-#endif /* STRING_STRING_TYPES_WIDE_H_ */
+#endif /* OSAPI_STRING_TYPES_WIDE_H_ */

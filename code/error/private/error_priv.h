@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERRORS_PRIV_H_
-#define CODE_ERR_ERRORS_PRIV_H_
+#ifndef OSAPI_ERROR_PRIV_H_
+#define OSAPI_ERROR_PRIV_H_
 
 // *****************************************************************************************
 //
@@ -76,4 +76,4 @@ static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
 };
 
 
-#endif /* CODE_ERR_ERRORS_PRIV_H_ */
+#endif /* OSAPI_ERROR_PRIV_H_ */

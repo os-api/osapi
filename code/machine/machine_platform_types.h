@@ -3,12 +3,13 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	LOG Linux OS declarations
+// Purpose:	HW platform OS selection file
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_LOG_LINUX_H_
-#define OSAPI_LOG_LINUX_H_
+#ifndef OSAPI_MACHINE_PLATFORM_TYPES_H_
+#define OSAPI_MACHINE_PLATFORM_TYPES_H_
+
 
 // *****************************************************************************************
 //
@@ -16,11 +17,10 @@
 //
 // *****************************************************************************************
 
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
+/* Import OS specific definitions */
+#ifdef	OS_LINUX
+ #include "machine/linux/machine_linux_types.h"
+#endif
 
-#include <log/posix/log_posix.h>
 
-#endif	// End of OS Linux
-
-#endif /* OSAPI_LOG_LINUX_H_ */
+#endif /* OSAPI_MACHINE_PLATFORM_TYPES_H_ */

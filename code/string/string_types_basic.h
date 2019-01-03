@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	String module declarations
+// Purpose:	String module declarations for basic C strings
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_TYPES_BASIC_H_
-#define STRING_STRING_TYPES_BASIC_H_
+#ifndef OSAPI_STRING_TYPES_BASIC_H_
+#define OSAPI_STRING_TYPES_BASIC_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -51,4 +51,4 @@ typedef struct osapi_basic_string	t_string;
 #endif
 
 
-#endif /* STRING_STRING_TYPES_BASIC_H_ */
+#endif /* OSAPI_STRING_TYPES_BASIC_H_ */

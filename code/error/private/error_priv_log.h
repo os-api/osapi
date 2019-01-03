@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_LOG_H_
-#define CODE_ERR_ERROR_PRIV_LOG_H_
+#ifndef OSAPI_ERROR_PRIV_LOG_H_
+#define OSAPI_ERROR_PRIV_LOG_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_log.h>
+#include "error/modules/error_log.h"
 
 // *****************************************************************************************
 //
@@ -33,4 +33,4 @@ static const char * log_errors[] = {
 
 #undef error_log_X
 
-#endif /* CODE_ERR_ERROR_PRIV_LOG_H_ */
+#endif /* OSAPI_ERROR_PRIV_LOG_H_ */

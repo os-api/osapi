@@ -7,7 +7,7 @@
 //
 // *****************************************************************************************
 
-#ifndef CLOCK_TYPES_H_
-#define CLOCK_TYPES_H_
+#ifndef OSAPI_CLOCK_TYPES_H_
+#define OSAPI_CLOCK_TYPES_H_
 
-#endif /* CLOCK_TYPES_H_ */
+#endif /* OSAPI_CLOCK_TYPES_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef UTIL_UTIL_H_
-#define UTIL_UTIL_H_
+#ifndef OSAPI_UTIL_H_
+#define OSAPI_UTIL_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -50,4 +50,4 @@ t_status util_module_supported			( void					);
 }
 #endif
 
-#endif /* UTIL_UTIL_H_ */
+#endif /* OSAPI_UTIL_H_ */

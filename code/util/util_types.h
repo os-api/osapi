@@ -1,24 +1,15 @@
-/*
- * util_defs.h
- *
- *  Created on: 23/04/2017
- *      Author: joao
- */
+// *****************************************************************************************
+//
+// File description:
+//
+// Author:	Joao Costa
+// Purpose:	Util module type declaration
+//
+// *****************************************************************************************
 
-#ifndef UTIL_UTIL_DEFS_H_
-#define UTIL_UTIL_DEFS_H_
-
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
+#ifndef OSAPI_UTIL_DEFS_H_
+#define OSAPI_UTIL_DEFS_H_
 
 
 
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
-
-
-#endif /* UTIL_UTIL_DEFS_H_ */
+#endif /* OSAPI_UTIL_DEFS_H_ */

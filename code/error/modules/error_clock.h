@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_CLOCK_H_
-#define CODE_ERR_ERROR_CLOCK_H_
+#ifndef OSAPI_ERROR_CLOCK_H_
+#define OSAPI_ERROR_CLOCK_H_
 
 // *****************************************************************************************
 //
@@ -22,8 +22,8 @@
 // Include own error definitions
 #define error_clock_X(a, b, c) a b,
 enum clock_X {
-	  #include <error/mappings/table_clock.h>
+	  #include "error/mappings/table_clock.h"
 };
 #undef error_clock_X
 
-#endif /* CODE_ERR_ERROR_CLOCK_H_ */
+#endif /* OSAPI_ERROR_CLOCK_H_ */

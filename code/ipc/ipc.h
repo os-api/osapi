@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IPC_IPC_H_
-#define IPC_IPC_H_
+#ifndef OSAPI_IPC_H_
+#define OSAPI_IPC_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -57,4 +57,4 @@ t_status	ipc_semaphore_getValue	( int semid, int * p_value					);
 }
 #endif
 
-#endif /* IPC_IPC_H_ */
+#endif /* OSAPI_IPC_H_ */

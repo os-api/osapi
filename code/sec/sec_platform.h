@@ -7,16 +7,20 @@
 //
 // *****************************************************************************************
 
-#ifndef SEC_SEC_PLATFORM_H_
-#define SEC_SEC_PLATFORM_H_
+#ifndef OSAPI_SEC_PLATFORM_H_
+#define OSAPI_SEC_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 // Import OS specific definitions
-#ifdef	OS_LINUX
+#ifdef OS_LINUX
 	#include "sec/linux/sec_linux.h"
-//#elif OS_SOLARIS
-//	#include <sec/sec_solaris.h>
 #endif
 
 
 
-#endif /* SEC_SEC_PLATFORM_H_ */
+#endif /* OSAPI_SEC_PLATFORM_H_ */

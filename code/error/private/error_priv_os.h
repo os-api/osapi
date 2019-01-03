@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_OS_H_
-#define CODE_ERR_ERROR_PRIV_OS_H_
+#ifndef OSAPI_ERROR_PRIV_OS_H_
+#define OSAPI_ERROR_PRIV_OS_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_os.h>
+#include "error/modules/error_os.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * os_errors[] =
 {
-  #include <error/mappings/table_os.h>
+  #include "error/mappings/table_os.h"
 };
 
 #undef error_os_X
 
-#endif /* CODE_ERR_ERROR_PRIV_OS_H_ */
+#endif /* OSAPI_ERROR_PRIV_OS_H_ */

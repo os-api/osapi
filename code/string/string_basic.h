@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_BASIC_H_
-#define STRING_STRING_BASIC_H_
+#ifndef OSAPI_STRING_BASIC_H_
+#define OSAPI_STRING_BASIC_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -30,7 +30,7 @@ extern "C" {
 #include <stdbool.h>
 
 // Own declarations
-#include <string/string_types_basic.h>
+#include "string/string_types_basic.h"
 #include "string/string_platform.h"
 
 
@@ -71,4 +71,4 @@ t_status string_basic_concat			( t_string *, t_string *, t_string *	);
 }
 #endif
 
-#endif /* STRING_STRING_BASIC_H_ */
+#endif /* OSAPI_STRING_BASIC_H_ */

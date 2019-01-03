@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_IO_H_
-#define CODE_ERR_ERROR_PRIV_IO_H_
+#ifndef OSAPI_ERROR_PRIV_IO_H_
+#define OSAPI_ERROR_PRIV_IO_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_io.h>
+#include "error/modules/error_io.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * io_errors[] =
 {
-  #include <error/mappings/table_io.h>
+  #include "error/mappings/table_io.h"
 };
 
 #undef error_io_X
 
-#endif /* CODE_ERR_ERROR_PRIV_IO_H_ */
+#endif /* OSAPI_ERROR_PRIV_IO_H_ */

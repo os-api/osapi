@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef LOG_LOG_TYPES_H_
-#define LOG_LOG_TYPES_H_
+#ifndef OSAPI_LOG_TYPES_H_
+#define OSAPI_LOG_TYPES_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -22,7 +22,7 @@ extern "C" {
 //
 // *****************************************************************************************
 
-#include <log/linux/log_linux.h>
+#include "log/linux/log_linux.h"
 
 
 // End of header with C++ declaration
@@ -31,4 +31,4 @@ extern "C" {
 #endif
 
 
-#endif /* LOG_LOG_TYPES_H_ */
+#endif /* OSAPI_LOG_TYPES_H_ */

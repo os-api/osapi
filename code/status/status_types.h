@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_TYPES_H_
-#define STATUS_TYPES_H_
+#ifndef OSAPI_STATUS_TYPES_H_
+#define OSAPI_STATUS_TYPES_H_
 
 
 // *****************************************************************************************
@@ -55,4 +55,4 @@ struct s_status
 typedef struct s_status		t_status;
 
 
-#endif /* STATUS_TYPES_H_ */
+#endif /* OSAPI_STATUS_TYPES_H_ */

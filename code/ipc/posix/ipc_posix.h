@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IPC_IPC_POSIX_H_
-#define IPC_IPC_POSIX_H_
+#ifndef OSAPI_IPC_POSIX_H_
+#define OSAPI_IPC_POSIX_H_
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
@@ -40,4 +40,4 @@ typedef union semun_posix	t_semun_posix;
 
 #endif	// End of POSIX declarations
 
-#endif /* IPC_IPC_POSIX_H_ */
+#endif /* OSAPI_IPC_POSIX_H_ */

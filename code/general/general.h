@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_H_
-#define GENERAL_H_
+#ifndef OSAPI_GENERAL_H_
+#define OSAPI_GENERAL_H_
 
 
 // Make sure that header is easily imported from c++
@@ -56,4 +56,4 @@ const char *	osapi_getModule				( t_module	);
 }
 #endif
 
-#endif /* GENERAL_H_ */
+#endif /* OSAPI_GENERAL_H_ */

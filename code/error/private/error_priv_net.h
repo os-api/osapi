@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_NET_H_
-#define CODE_ERR_ERROR_PRIV_NET_H_
+#ifndef OSAPI_ERROR_PRIV_NET_H_
+#define OSAPI_ERROR_PRIV_NET_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_net.h>
+#include "error/modules/error_net.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * net_errors[] =
 {
-  #include <error/mappings/table_net.h>
+  #include "error/mappings/table_net.h"
 };
 
 #undef error_net_X
 
-#endif /* CODE_ERR_ERROR_PRIV_NET_H_ */
+#endif /* OSAPI_ERROR_PRIV_NET_H_ */

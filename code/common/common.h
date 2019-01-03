@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_COMMON_H_
-#define CODE_COMMON_H_
+#ifndef OSAPI_COMMON_H_
+#define OSAPI_COMMON_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -77,4 +77,4 @@ int		common_options_get		( const t_option * moduleOptions, char * providedOption
 #endif
 
 
-#endif /* CODE_COMMON_H_ */
+#endif /* OSAPI__COMMON_H_ */

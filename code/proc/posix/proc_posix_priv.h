@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_POSIX_PRIV_H_
-#define PROC_POSIX_PRIV_H_
+#ifndef OSAPI_PROC_POSIX_PRIV_H_
+#define OSAPI_PROC_POSIX_PRIV_H_
 
 
 // *****************************************************************************************
@@ -44,4 +44,4 @@ OSAPI_NORETURN void	proc_app_launch		( t_proc * 				);
 
 #endif	// POSIX
 
-#endif // PROC_POSIX_PRIV_H_
+#endif // OSAPI_PROC_POSIX_PRIV_H_

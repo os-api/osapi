@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_OS_H_
-#define CODE_ERR_ERROR_OS_H_
+#ifndef OSAPI_ERROR_OS_H_
+#define OSAPI_ERROR_OS_H_
 
 // *****************************************************************************************
 //
@@ -23,9 +23,9 @@
 
 #define error_os_X(a, b, c) a b,
 enum os_X {
-	  #include <error/mappings/table_os.h>
+	  #include "error/mappings/table_os.h"
 };
 #undef error_os_X
 
 
-#endif /* CODE_ERR_ERROR_OS_H_ */
+#endif /* OSAPI_ERROR_OS_H_ */

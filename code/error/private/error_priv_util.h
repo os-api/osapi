@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_UTIL_H_
-#define CODE_ERR_ERROR_PRIV_UTIL_H_
+#ifndef OSAPI_ERROR_PRIV_UTIL_H_
+#define OSAPI_ERROR_PRIV_UTIL_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_util.h>
+#include "error/modules/error_util.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * util_errors[] =
 {
-  #include <error/mappings/table_util.h>
+  #include "error/mappings/table_util.h"
 };
 
 #undef error_util_X
 
-#endif /* CODE_ERR_ERROR_PRIV_UTIL_H_ */
+#endif /* OSAPI_ERROR_PRIV_UTIL_H_ */

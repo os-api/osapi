@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_MACHINE_H_
-#define MACHINE_MACHINE_H_
+#ifndef OSAPI_MACHINE_H_
+#define OSAPI_MACHINE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -77,4 +77,4 @@ t_status	machine_ip_getList		( t_protocol selector, t_size number, t_ip * list	)
 }
 #endif
 
-#endif /* MACHINE_MACHINE_H_ */
+#endif /* OSAPI_MACHINE_H_ */

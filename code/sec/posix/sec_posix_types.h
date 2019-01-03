@@ -3,15 +3,21 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common POSIX declarations
+// Purpose:	Security module POSIX declarations
 //
 // *****************************************************************************************
 
-#ifndef MACHINE_TYPES_POSIX_H_
-#define MACHINE_TYPES_POSIX_H_
+#ifndef OSAPI_SEC_POSIX_TYPES_H_
+#define OSAPI_SEC_POSIX_TYPES_H_
 
-// Compile only if is a POSIX implementation
+// Only relevant is OS is Linux
 #ifdef OSAPI_POSIX
+
+// The following definition is required by the system headers below
+#ifndef _POSIX_SOURCE
+  #define _POSIX_SOURCE
+#endif
+
 
 // *****************************************************************************************
 //
@@ -19,24 +25,25 @@
 //
 // *****************************************************************************************
 
-// Include System headers
+// Import System headers
+#include <unistd.h>
+#include <sys/types.h>
+
 
 
 // *****************************************************************************************
 //
-// Section: Macros/Constant definitions
+// Section: Type definition
 //
 // *****************************************************************************************
 
-
-// *****************************************************************************************
-//
-// Section: Type declarations
-//
-// *****************************************************************************************
+typedef uid_t		t_user_id;
+typedef gid_t		t_group_id;
 
 
 
-#endif	// Posix only
 
-#endif /* MACHINE_TYPES_POSIX_H_ */
+
+#endif	// End of POSIX Implementation
+
+#endif /* OSAPI_SEC_POSIX_TYPES_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IPC_IPC_LINUX_H_
-#define IPC_IPC_LINUX_H_
+#ifndef OSAPI_IPC_LINUX_H_
+#define OSAPI_IPC_LINUX_H_
 
 // Only relevant is OS is Linux
 #ifdef OS_LINUX
@@ -37,4 +37,4 @@ typedef union semun_linux	t_semun;
 
 #endif	// End of OS Linux
 
-#endif /* IPC_IPC_LINUX_H_ */
+#endif /* OSAPI_IPC_LINUX_H_ */

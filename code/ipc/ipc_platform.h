@@ -7,8 +7,14 @@
 //
 // *****************************************************************************************
 
-#ifndef IPC_IPC_PLATFORM_H_
-#define IPC_IPC_PLATFORM_H_
+#ifndef OSAPI_IPC_PLATFORM_H_
+#define OSAPI_IPC_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 /* Import OS specific definitions */
 #ifdef OS_LINUX
@@ -17,4 +23,4 @@
 #endif
 
 
-#endif /* IPC_IPC_PLATFORM_H_ */
+#endif /* OSAPI_IPC_PLATFORM_H_ */

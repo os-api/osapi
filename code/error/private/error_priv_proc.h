@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_PROC_H_
-#define CODE_ERR_ERROR_PRIV_PROC_H_
+#ifndef OSAPI_ERROR_PRIV_PROC_H_
+#define OSAPI_ERROR_PRIV_PROC_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_proc.h>
+#include "error/modules/error_proc.h"
 
 // *****************************************************************************************
 //
@@ -28,9 +28,9 @@
 #define error_proc_X(a, b, c) [a]=c,
 
 static const char * proc_errors[] = {
-  #include <error/mappings/table_proc.h>
+  #include "error/mappings/table_proc.h"
 };
 
 #undef error_proc_X
 
-#endif /* CODE_ERR_ERROR_PRIV_PROC_H_ */
+#endif /* OSAPI_ERROR_PRIV_PROC_H_ */

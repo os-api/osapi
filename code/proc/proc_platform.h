@@ -7,13 +7,19 @@
 //
 // *****************************************************************************************
 
-#ifndef PROC_PROC_PLATFORM_H_
-#define PROC_PROC_PLATFORM_H_
+#ifndef OSAPI_PROC_PLATFORM_H_
+#define OSAPI_PROC_PLATFORM_H_
 
-/* Import OS specific definitions */
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+/* Import Own OS specific definitions */
 #ifdef	OS_LINUX
 	#include "proc/linux/proc_linux_types.h"
 #endif
 
 
-#endif /* PROC_PROC_PLATFORM_H_ */
+#endif /* OSAPI_PROC_PLATFORM_H_ */

@@ -7,13 +7,19 @@
 //
 // *****************************************************************************************
 
-#ifndef OS_OS_PLATFORM_H_
-#define OS_OS_PLATFORM_H_
+#ifndef OSAPI_OS_PLATFORM_H_
+#define OSAPI_OS_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-	#include <os/linux/os_linux.h>
+	#include "os/linux/os_linux.h"
 #endif
 
 
-#endif /* OS_OS_PLATFORM_H_ */
+#endif /* OSAPI_OS_PLATFORM_H_ */

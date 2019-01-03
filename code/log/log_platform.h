@@ -7,8 +7,14 @@
 //
 // *****************************************************************************************
 
-#ifndef LOG_LOG_PLATFORM_H_
-#define LOG_LOG_PLATFORM_H_
+#ifndef OSAPI_LOG_PLATFORM_H_
+#define OSAPI_LOG_PLATFORM_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
@@ -16,4 +22,4 @@
 #endif
 
 
-#endif /* LOG_LOG_PLATFORM_H_ */
+#endif /* OSAPI_LOG_PLATFORM_H_ */

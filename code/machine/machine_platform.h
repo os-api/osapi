@@ -7,13 +7,13 @@
 //
 // *****************************************************************************************
 
-#ifndef HW_HW_PLATFORM_H_
-#define HW_HW_PLATFORM_H_
+#ifndef OSAPI_MACHINE_PLATFORM_H_
+#define OSAPI_MACHINE_PLATFORM_H_
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
- #include <machine/linux/machine_linux.h>
+ #include "machine/linux/machine_linux.h"
 #endif
 
 
-#endif /* HW_HW_PLATFORM_H_ */
+#endif /* OSAPI_MACHINE_PLATFORM_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_IPC_H_
-#define CODE_ERR_ERROR_PRIV_IPC_H_
+#ifndef OSAPI_ERROR_PRIV_IPC_H_
+#define OSAPI_ERROR_PRIV_IPC_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_ipc.h>
+#include "error/modules/error_ipc.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * ipc_errors[] =
 {
-  #include <error/mappings/table_ipc.h>
+  #include "error/mappings/table_ipc.h"
 };
 
 #undef error_ipc_X
 
-#endif /* CODE_ERR_ERROR_PRIV_IPC_H_ */
+#endif /* OSAPI_ERROR_PRIV_IPC_H_ */

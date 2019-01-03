@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef STATUS_PLATFORM_H_
-#define STATUS_PLATFORM_H_
+#ifndef OSAPI_STATUS_PLATFORM_H_
+#define OSAPI_STATUS_PLATFORM_H_
 
 // *****************************************************************************************
 //
@@ -18,9 +18,9 @@
 
 /* Import OS specific definitions */
 #ifdef	OS_LINUX
-  #include <status/linux/status_linux.h>
+  #include "status/linux/status_linux.h"
 #endif
 
 
 
-#endif /* STATUS_PLATFORM_H_ */
+#endif /* OSAPI_STATUS_PLATFORM_H_ */

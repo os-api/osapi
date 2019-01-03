@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CLOCK_H_
-#define CLOCK_H_
+#ifndef OSAPI_CLOCK_H_
+#define OSAPI_CLOCK_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -69,4 +69,4 @@ t_status clock_timeZone_get (t_clock *);
 }
 #endif
 
-#endif /* CLOCK_H_ */
+#endif /* OSAPI_CLOCK_H_ */

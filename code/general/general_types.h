@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef GENERAL_GENERAL_TYPES_H_
-#define GENERAL_GENERAL_TYPES_H_
+#ifndef OSAPI_GENERAL_TYPES_H_
+#define OSAPI_GENERAL_TYPES_H_
 
 // *****************************************************************************************
 //
@@ -72,4 +72,4 @@ typedef struct s_optional_pair	t_option;
 #define	osapi_bit_off( x )	(x=0)
 
 
-#endif /* GENERAL_GENERAL_TYPES_H_ */
+#endif /* OSAPI_GENERAL_TYPES_H_ */

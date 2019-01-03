@@ -7,6 +7,10 @@
 //
 // *****************************************************************************************
 
+#ifndef OSAPI_MACHINE_POSIX_H_
+#define OSAPI_MACHINE_POSIX_H_
+
+
 // *****************************************************************************************
 //
 // Section: Import headers
@@ -14,7 +18,6 @@
 // *****************************************************************************************
 
 // Force baseline before system headers
-#include <error/modules/error_sec.h>
 #include "general/general_baseline.h"
 
 // System includes
@@ -28,15 +31,21 @@
 #include "machine/machine.h"
 
 
+// Only relevant is OS is POSIX compliant
+#ifdef OSAPI_POSIX
+
+
 // *****************************************************************************************
 //
 // Section: Function definition
 //
 // *****************************************************************************************
 
-// Only relevant is OS is POSIX compliant
-#ifdef OSAPI_POSIX
+
+
+
 
 
 #endif	// End of POSIX Implementation
 
+#endif /* OSAPI_MACHINE_POSIX_H_ */

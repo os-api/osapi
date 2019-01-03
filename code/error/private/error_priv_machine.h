@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef CODE_ERR_ERROR_PRIV_MACHINE_H_
-#define CODE_ERR_ERROR_PRIV_MACHINE_H_
+#ifndef OSAPI_ERROR_PRIV_MACHINE_H_
+#define OSAPI_ERROR_PRIV_MACHINE_H_
 
 // *****************************************************************************************
 //
@@ -17,7 +17,7 @@
 // *****************************************************************************************
 
 // Include own error public declarations
-#include <error/modules/error_machine.h>
+#include "error/modules/error_machine.h"
 
 // *****************************************************************************************
 //
@@ -29,9 +29,9 @@
 
 static const char * machine_errors[] =
 {
-  #include <error/mappings/table_machine.h>
+  #include "error/mappings/table_machine.h"
 };
 
 #undef error_machine_X
 
-#endif /* CODE_ERR_ERROR_PRIV_MACHINE_H_ */
+#endif /* OSAPI_ERROR_PRIV_MACHINE_H_ */

@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef IO_IO_TYPES_H_
-#define IO_IO_TYPES_H_
+#ifndef OSAPI_IO_TYPES_H_
+#define OSAPI_IO_TYPES_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -23,4 +23,4 @@ extern "C" {
 #endif
 
 
-#endif /* IO_IO_TYPES_H_ */
+#endif /* OSAPI_IO_TYPES_H_ */

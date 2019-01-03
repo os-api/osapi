@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide String module API
+// Purpose:	Provide String module API for wide C string types
 //
 // *****************************************************************************************
 
-#ifndef STRING_STRING_WIDE_H_
-#define STRING_STRING_WIDE_H_
+#ifndef OSAPI_STRING_WIDE_H_
+#define OSAPI_STRING_WIDE_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -72,4 +72,4 @@ t_status string_wide_concat			( t_wString *, t_wString *, t_wString *				);
 }
 #endif
 
-#endif /* STRING_STRING_WIDE_H_ */
+#endif /* OSAPI_STRING_WIDE_H_ */

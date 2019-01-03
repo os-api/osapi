@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef TYPES_COMMON_TYPES_LPORT_H_
-#define TYPES_COMMON_TYPES_LPORT_H_
+#ifndef OSAPI_COMMON_TYPES_LPORT_H_
+#define OSAPI_COMMON_TYPES_LPORT_H_
 
 // *****************************************************************************************
 //
@@ -51,4 +51,4 @@ typedef struct s_lport	t_lport;
 
 
 
-#endif /* TYPES_COMMON_TYPES_LPORT_H_ */
+#endif /* OSAPI_COMMON_TYPES_LPORT_H_ */

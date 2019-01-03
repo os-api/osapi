@@ -7,8 +7,8 @@
 //
 // *****************************************************************************************
 
-#ifndef NET_NET_H_
-#define NET_NET_H_
+#ifndef OSAPI_NET_H_
+#define OSAPI_NET_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -63,4 +63,4 @@ t_status net_ip_isP2P			( t_ip * p_ip, bool * p_result			);
 }
 #endif
 
-#endif /* NET_NET_H_ */
+#endif /* OSAPI_NET_H_ */

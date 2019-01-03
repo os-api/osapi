@@ -7,8 +7,14 @@
 //
 // *****************************************************************************************
 
-#ifndef TYPES_COMMON_TYPES_H_
-#define TYPES_COMMON_TYPES_H_
+#ifndef OSAPI_COMMON_TYPES_H_
+#define OSAPI_COMMON_TYPES_H_
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
 // Platform types first
 #include "common/types/common_types_platform.h"
@@ -19,4 +25,4 @@
 #include "common/types/common_types_ip.h"
 #include "common/types/common_types_lport.h"
 
-#endif /* TYPES_COMMON_TYPES_H_ */
+#endif /* COMMON_TYPES_H_ */
