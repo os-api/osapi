@@ -32,13 +32,34 @@ extern "C" {
 // Own declarations
 #include "error/error_types.h"
 
+
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup ERROR
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: Error module OSAPI internal API
 //
 // *****************************************************************************************
 
+/// @fn const char * error_string_get( t_module module, t_error code )
+/// @brief Get the error string for an OSAPI module and error number
+/// @param in module number
+/// @param in error code
+/// @return Formated error string
 const char * 	error_string_get	( t_module module, t_error code	);
+
+/// @fn bool error_code_isValid( t_module module, t_error code )
+/// @brief Verify if a given error number is valid for the provided OSAPI module
+/// @param in module number
+/// @param in error code
+/// @return True or False
 bool 		error_code_isValid	( t_module module, t_error code	);
 
 // *****************************************************************************************
@@ -46,6 +67,10 @@ bool 		error_code_isValid	( t_module module, t_error code	);
 // Section: Help macros
 //
 // *****************************************************************************************
+
+
+///@}
+///@}
 
 
 // End of header with C++ declaration

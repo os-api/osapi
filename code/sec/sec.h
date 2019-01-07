@@ -32,6 +32,16 @@ extern "C" {
 #include "sec/sec_types.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup SEC
+///@{
+///
+/// *****************************************************************************************
+
+
 // *****************************************************************************************
 //
 // Section: Sec(urity) module API
@@ -47,6 +57,11 @@ t_status sec_module_supported		( void											);
 
 // Include the submodules that compose the Security module
 #include "sec/sec_identity.h"
+
+
+///@}
+///@}
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus

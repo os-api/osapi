@@ -31,6 +31,16 @@ extern "C" {
 #include "general/general_modules.h"
 #include "general/general_defs.h"
 
+
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup GENERAL
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: OSAPI bootstrap API
@@ -39,16 +49,43 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
+/// @fn unsigned long osapi_get_version( void	)
+/// @brief Get the version number of the Library
+/// @return Version number
 unsigned long	osapi_get_version			( void		);
+
+/// @fn int osapi_get_version_stability( void )
+/// @brief Get the library stability type: Stable vs Unstable
+/// @return enum that describes the stability type
 int		osapi_get_version_stability		( void		);
+
+/// @fn const char * osapi_get_version_string( void )
+/// @brief Get the version string of the Library
+/// @return C String library version
 const char *	osapi_get_version_string		( void		);
+
+/// @fn const char * osapi_get_version_stability_string( void )
+/// @brief Get the string describing the library stability type: Stable vs Unstable
+/// @return C String library stability type
 const char *	osapi_get_version_stability_string	( void 		);
-const char * 	osapi_get_protocol_version_string	( t_protocol id );
+
+/// @fn const char * osapi_get_protocol_string( t_protocol id )
+/// @brief Get the OSAPI Protocol name
+/// @param in Protocol ID
+/// @return C String for the given Protocol ID
+const char * 	osapi_get_protocol_string		( t_protocol id );
 
 // Module related
+/// @fn const char * osapi_getModule( t_module )
+/// @brief Get the module string
+/// @param in module ID
+/// @return C String for the given module ID
 const char *	osapi_getModule				( t_module	);
 
 #pragma GCC visibility pop			// End of public interface
+
+///@}
+///@}
 
 
 // End of header with C++ declaration

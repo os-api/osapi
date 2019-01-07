@@ -35,6 +35,15 @@ extern "C" {
 #include "sec/sec_types.h"
 #include "sec/sec_platform.h"
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup SEC
+///@{
+///
+/// *****************************************************************************************
+
 
 // *****************************************************************************************
 //
@@ -70,6 +79,11 @@ t_status sec_user_getMaxSize		( t_size * p_size									);
 t_status sec_user_getGroups		( t_uid uid, size_t groupListMaxSize, size_t * p_groupListCurSize, t_gid *  p_groupList	);
 
 #pragma GCC visibility pop			// End of public interface
+
+
+///@}
+///@}
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus

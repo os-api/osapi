@@ -10,6 +10,11 @@
 #ifndef OSAPI_H_
 #define OSAPI_H_
 
+/// @addtogroup OSAPI
+/// @brief The Open System API library
+///@{
+
+
 // *****************************************************************************************
 //
 // Section: Import OS API headers
@@ -33,5 +38,7 @@
 #include "util/util.h"
 #include "io/io.h"
 
+
+///@}
 
 #endif /* OSAPI_H_ */

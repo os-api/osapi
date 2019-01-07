@@ -31,6 +31,16 @@ extern "C" {
 #include "string/string_platform.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STRING
+///@{
+///
+/// *****************************************************************************************
+
+
 // *****************************************************************************************
 //
 // Section: String module API
@@ -47,6 +57,10 @@ t_status string_module_supported		( void					);
 // Include remaining submodules
 #include "string/string_basic.h"
 //#include "string/string_wide.h"
+
+
+///@}
+///@}
 
 
 // End of header with C++ declaration

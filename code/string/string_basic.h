@@ -34,6 +34,16 @@ extern "C" {
 #include "string/string_platform.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STRING
+///@{
+///
+/// *****************************************************************************************
+
+
 // *****************************************************************************************
 //
 // Section: String module API
@@ -65,6 +75,10 @@ t_status string_basic_compareIcase		( t_string *, t_string *, Byte	*	);
 t_status string_basic_concat			( t_string *, t_string *, t_string *	);
 
 #pragma GCC visibility pop			// End of public interface
+
+
+///@}
+///@}
 
 // End of header with C++ declaration
 #ifdef __cplusplus

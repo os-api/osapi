@@ -34,6 +34,16 @@ extern "C" {
 #include "proc/proc_platform.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup PROC
+///@{
+///
+/// *****************************************************************************************
+
+
 // *****************************************************************************************
 //
 // Section: Proc(ess) module API
@@ -125,6 +135,10 @@ t_status	proc_library_unload		( t_library lib			);
 
 
 #pragma GCC visibility pop			// End of public interface
+
+
+///@}
+///@}
 
 // End of header with C++ declaration
 #ifdef __cplusplus

@@ -30,6 +30,19 @@ extern "C" {
 #include "util/util_types.h"
 #include "util/util_platform.h"
 
+
+// *****************************************************************************************
+//
+// Section: Documentation
+//
+// *****************************************************************************************
+
+/** @addtogroup OSAPI
+* @{
+* @addtogroup UTIL
+* @{
+*/
+
 // *****************************************************************************************
 //
 // Section: Util module API
@@ -44,6 +57,10 @@ t_status util_module_supported			( void					);
 
 
 #pragma GCC visibility pop			// End of public interface
+
+
+/** @} */
+/** @} */
 
 // End of header with C++ declaration
 #ifdef __cplusplus

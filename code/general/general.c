@@ -50,7 +50,7 @@ const char * osapi_get_version_stability_string( void )
 }
 
 
-const char * osapi_get_protocol_version_string( t_protocol id )
+const char * osapi_get_protocol_string( t_protocol id )
 {
   return osapi_protocol[ id ];
 }

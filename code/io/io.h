@@ -34,6 +34,15 @@ extern "C" {
 #include "io/io_platform.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup IO
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: Proc(ess) module API
@@ -42,10 +51,17 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
+/// @fn t_status io_module_supported( void )
+/// @brief Declares if the module is supported on the current implementation
+/// @return SUCCESS or FAILURE
 t_status	io_module_supported		( void 			);
 
 // Directory facilities
-t_status	io_directory_change		( t_char *		);
+/// @fn t_status io_directory_change( t_char * dirname	)
+/// @brief Change the current process working directory to <dirname>
+/// @param in New working directory name
+/// @return Operation status
+t_status	io_directory_change		( t_char * dirname	);
 
 /*
 t_status	io_directory_create		( t_char *		);
@@ -63,6 +79,9 @@ t_status	io_file_write			( t_file, t_size, t_stream	);
 */
 
 #pragma GCC visibility pop			// End of public interface
+
+///@}
+///@}
 
 // End of header with C++ declaration
 #ifdef __cplusplus

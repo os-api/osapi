@@ -33,6 +33,16 @@ extern "C" {
 #include "string/string_types_wide.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STRING
+///@{
+///
+/// *****************************************************************************************
+
+
 // *****************************************************************************************
 //
 // Section: String module API
@@ -66,6 +76,11 @@ t_status string_wide_concat			( t_wString *, t_wString *, t_wString *				);
 
 
 #pragma GCC visibility pop			// End of public interface
+
+
+///@}
+///@}
+
 
 // End of header with C++ declaration
 #ifdef __cplusplus

@@ -29,6 +29,16 @@ extern "C" {
 // Own declarations
 #include "status/status_types.h"
 
+
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STATUS
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: Status module API
@@ -62,6 +72,9 @@ const char *	status_error_get	( t_status 										);
 
 // Import macros
 #include "status/status_defs.h"
+
+///@}
+///@}
 
 
 // End of header with C++ declaration
