@@ -51,7 +51,7 @@ t_status proc_module_supported( void )
 }
 
 
-t_status proc_user_add( t_uid user, t_proc * p_proc )
+t_status proc_data_setUser( t_uid user, t_proc * p_proc )
 {
  t_status st;
 
@@ -66,7 +66,7 @@ t_status proc_user_add( t_uid user, t_proc * p_proc )
 }
 
 
-t_status proc_group_add( t_gid group, t_proc * p_proc )
+t_status proc_data_setGroup( t_gid group, t_proc * p_proc )
 {
  t_status st;
 

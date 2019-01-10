@@ -51,14 +51,12 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-/// @fn t_status io_module_supported( void )
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status	io_module_supported		( void 			);
 
 // Directory facilities
-/// @fn t_status io_directory_change( t_char * dirname	)
-/// @brief Change the current process working directory to <dirname>
+/// @brief Change the current process working directory
 /// @param in New working directory name
 /// @return Operation status
 t_status	io_directory_change		( t_char * dirname	);

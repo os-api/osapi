@@ -1,5 +1,6 @@
 var group___i_p_c =
 [
+    [ "ipc_module_supported", "group___i_p_c.html#ga6936cdb5c70e59fa7fd13634465b441b", null ],
     [ "ipc_semaphore_create", "group___i_p_c.html#ga3e86d95f70672229e80af8c62870925b", null ],
     [ "ipc_semaphore_destroy", "group___i_p_c.html#ga0d15f5a388005154c0905d1f3200a094", null ],
     [ "ipc_semaphore_getValue", "group___i_p_c.html#ga1a6aa2ac884773c260e9e8ab1ea541f2", null ],

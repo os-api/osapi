@@ -1,0 +1,6 @@
+<map id="proc_info_get" name="proc_info_get">
+<area shape="rect" id="node2" href="$group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7" title="Get the size of the process virtual memory. " alt="" coords="153,5,352,32"/>
+<area shape="rect" id="node3" href="$group___p_r_o_c.html#ga1d5868b50b883fa4b57279834c7f5e91" title="Get the size of the process real memory, i.e. ram usage. " alt="" coords="159,56,347,83"/>
+<area shape="rect" id="node4" href="$group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc" title="Get the process CPU consumption (summary of user and system) " alt="" coords="181,107,324,133"/>
+<area shape="rect" id="node5" href="$group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62" title="Get the number of process kernel threads / LWPs. " alt="" coords="172,157,333,184"/>
+</map>

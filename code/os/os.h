@@ -49,7 +49,6 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-/// @fn t_status os_module_supported( void )
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status os_module_supported		( void					);

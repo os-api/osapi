@@ -48,21 +48,18 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 
-/// @fn t_status net_module_supported( void )
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status net_module_supported		( void						);
 
 // IP related facility
 
-/// @fn t_status net_ip_getStringSize( t_protocol prot, t_size * size )
 /// @brief Obtain the required size to store a C-String for the given IP protocol
 /// @param in IP protocol (IPv4/6)
 /// @param out Required size
 /// @return Operation status
 t_status net_ip_getStringSize		( t_protocol prot, t_size * p_size		);
 
-/// @fn t_status net_ip_getHost( t_ip * ip, t_size size, char * string )
 /// @brief Get the source IP
 /// @param in IP type
 /// @param in size of the C-String
@@ -70,7 +67,6 @@ t_status net_ip_getStringSize		( t_protocol prot, t_size * p_size		);
 /// @return Operation status
 t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
 
-/// @fn t_status net_ip_getMask( t_ip * ip, t_size size, char * string )
 /// @brief Get the mask associated with the IP
 /// @param in IP
 /// @param in size of the C-String
@@ -78,7 +74,6 @@ t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
 /// @return Operation status
 t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
 
-/// @fn t_status net_ip_getTarget( t_ip * ip, t_size size, char * string )
 /// @brief Obtain the C-String for the target protocol: Broadcast, Point to Point,
 /// @param in IP type
 /// @param in Size of the C-String
@@ -86,28 +81,24 @@ t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
 /// @return Operation status
 t_status net_ip_getTarget		( t_ip * p_ip, t_size size, char * p_string	);	// Broadcast or P2P
 
-/// @fn t_status net_ip_isV4( t_ip * ip, bool * result )
 /// @brief Verify if the IP is Version 4
 /// @param in IP type
 /// @param out True/False
 /// @return Operation status
 t_status net_ip_isV4			( t_ip * p_ip, bool * p_result			);
 
-/// @fn t_status net_ip_isV6( t_ip * ip, bool * result )
 /// @brief Verify if the IP is Version 6
 /// @param in IP type
 /// @param out True/False
 /// @return Operation status
 t_status net_ip_isV6			( t_ip * p_ip, bool * p_result			);
 
-/// @fn t_status net_ip_isBroadcast( t_ip * ip, bool * result )
 /// @brief Verify if the IP is of type broadcast
 /// @param in IP type
 /// @param out True/False
 /// @return Operation status
 t_status net_ip_isBroadcast		( t_ip * p_ip, bool * p_result			);
 
-/// @fn t_status net_ip_isP2P( t_ip * ip, bool * result )
 /// @brief Verify if the IP is of type Point to Point
 /// @param in IP type
 /// @param out True/False

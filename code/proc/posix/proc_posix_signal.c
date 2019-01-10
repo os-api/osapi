@@ -168,6 +168,35 @@ t_status proc_signal_getName( t_signal signo, t_char ** p_signal_string )
   return st;
 }
 
+
+t_status proc_signal_getNumber( t_char * p_name, t_signal * p_signal_number )
+{
+  t_status 	st;
+  char * 	signal_name[2];
+
+  status_reset( & st );
+
+  if( p_name == NULL || p_signal_number == (t_signal *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+    {
+      // Convert from a single pointer to an array of pointers for usage in common_options_get call
+      signal_name[0] = p_name;
+      signal_name[1] = NULL;
+
+      // Find a matching signal number
+      *p_signal_number = common_options_get( osapi_signal, (char **) signal_name );
+
+      // Send signal
+      if( *p_signal_number < 1 )
+	  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_notFound, &st );
+
+    }
+
+  return st;
+}
+
+
 t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
 {
  t_status 	st;
@@ -188,7 +217,9 @@ t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
      signal_number = common_options_get( osapi_signal, (char **) signal_name );
 
      // Send signal
-     if( signal_number > 0 )
+     if( signal_number < 1 )
+         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_notFound, &st );
+     else
          st = proc_signal_send( pid, signal_number );
    }
 

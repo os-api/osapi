@@ -48,14 +48,12 @@ extern "C" {
 //
 // *****************************************************************************************
 
-/// @fn const char * error_string_get( t_module module, t_error code )
 /// @brief Get the error string for an OSAPI module and error number
 /// @param in module number
 /// @param in error code
 /// @return Formated error string
 const char * 	error_string_get	( t_module module, t_error code	);
 
-/// @fn bool error_code_isValid( t_module module, t_error code )
 /// @brief Verify if a given error number is valid for the provided OSAPI module
 /// @param in module number
 /// @param in error code

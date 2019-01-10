@@ -52,86 +52,273 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
+/// @brief
+/// @param in
+/// @param out
+/// @return Operation status
 t_status	proc_module_supported		( void 				);
 
 // + Instance management
 
-//++ Build up functions for instance creation
-// Add User/Group as owners of a process
-t_status proc_user_add				( t_uid, t_proc *		);
-t_status proc_group_add				( t_gid, t_proc *		);
-
 // ++ Life cycle
-t_status proc_instance_create			( t_proc * 			);
-t_status proc_instance_destroy			( t_pid, int			);
-t_status proc_instance_clone			( int * 			);
-t_status proc_instance_isRunning		( t_pid 			);
-t_status proc_instance_getChildStatus		( t_pid *, t_proc_status *	);
-t_status proc_instance_getStatus		( t_pid, t_proc_status *	);
-t_status proc_instance_getNumberOfDescendents	( t_size * 			);
+/// @brief Create a new process instance
+/// @param in proc - process type
+/// @return Operation status
+t_status proc_instance_create( t_proc * proc );
 
+/// @brief Terminate a running process
+/// @param in pid - The process to terminate
+/// @param in forced - Normal or forced termination
+/// @return Operation status
+t_status proc_instance_destroy( t_pid pid, int forced );
+
+/// @brief Clone the current process
+/// @param out isChild - Child or father
+/// @return Operation status
+t_status proc_instance_clone( int * isChild );
+
+/// @brief Is a process instance running
+/// @param in pid - Process ID to check
+/// @return SUCCESS (Running) / FAILURE
+t_status proc_instance_isRunning		( t_pid 			);
+
+/// @brief Obtain status of a child process
+/// @param in pid - Process ID
+/// @param out status - Status of child process
+/// @return Operation status
+t_status proc_instance_getChildStatus		( t_pid * pid, t_proc_status * status );
+
+/// @brief Obtain a status of a process
+/// @param in pid - Process ID
+/// @param out status - Status of child process
+/// @return Operation status
+t_status proc_instance_getStatus( t_pid pid, t_proc_status * status );
+
+/// @brief Obtain the number of children processes
+/// @param out number - Number of children processes
+/// @return Operation status
+t_status proc_instance_getNumberOfDescendents( t_size * number );
+
+/// @brief Terminate the current process. It always succeeds.
+/// @param in code - Exit status code
+/// @param out
 OSAPI_NORETURN
-void	 proc_instance_terminate		( int 				);
+void proc_instance_terminate( int code );
 
 // ++ State management
+/// @brief Suspend the execution of the current thread until an event occurs such as a signal in UNIX
+/// @return Operation status
 t_status proc_instance_suspendExecution		( void				);
+
 //t_status	proc_instance_resumeExecution	( void				);
 
 
 // ++ Operations
 // + Building process data
-t_status proc_data_setCmdLine			( t_size, char *[], t_proc * 	);
-t_status proc_data_setEnvironment		( t_size, char *[], t_proc * 	);
+/// @brief Change the current process User ID
+/// @param in uid - New User ID
+/// @param out proc - process type
+/// @return Operation status
+t_status proc_data_setUser( t_uid uid, t_proc * proc );
+
+/// @brief Change the current process Group ID
+/// @param in gid - New Group ID
+/// @param out proc - process type
+/// @return Operation status
+t_status proc_data_setGroup( t_gid gid, t_proc * proc );
+
+/// @brief Fills a process data structure with the execution command line
+/// @param in size - Number of elements of the C-String array
+/// @param in array - The command line array
+/// @param out proc - The process type
+/// @return Operation status
+t_status proc_data_setCmdLine( t_size size, char * array[], t_proc * proc );
+
+/// @brief Fills a process data structure with the new process environment
+/// @param in size - Number of elements of the C-String array
+/// @param in array - The environment array
+/// @param out proc - The process type
+/// @return Operation status
+t_status proc_data_setEnvironment( t_size size, char * array[], t_proc * proc );
 
 // + Identity management
-t_status proc_id_get				( t_pid * 			);
-t_status proc_id_getParent			( t_pid * 			);
-t_status proc_id_getDescendents			( t_size, t_size *,t_pid (*)[]	);
+/// @brief Get the current process ID
+/// @param out pid - The process ID
+/// @return Operation status
+t_status proc_id_get( t_pid * pid );
 
-// Get the User/Group ID of a given process
-t_status proc_id_getUser			( t_pid, t_uid *		);
-t_status proc_id_getGroup			( t_pid, t_gid *		);
+/// @brief Get the parent process ID
+/// @param out ppid - The parent process ID
+/// @return Operation status
+t_status proc_id_getParent( t_pid * ppid );
 
-t_status proc_id_getSession			( t_pid, t_pid *		);
-t_status proc_id_setSession			( void  			);
+/// @brief Get list of process IDs of children processes
+/// @param in tsize - The size of the array
+/// @param out csize - The number of found children processes
+/// @param out array - List of process IDs of children
+/// @return Operation status
+t_status proc_id_getDescendents( t_size tsize, t_size * csize, t_pid (* array)[] );
+
+/// @brief Get the User ID of the given process
+/// @param in pid  - Target Process ID
+/// @param out uid - User ID
+/// @return Operation status
+t_status proc_id_getUser( t_pid pid, t_uid * uid );
+
+/// @brief Get the Group ID of the current process
+/// @param in pid - Target Process ID
+/// @param out gid - User ID
+/// @return Operation status
+t_status proc_id_getGroup( t_pid pid, t_gid * gid );
+
+/// @brief Get Session Identifier
+/// @param in pid - Target Process ID
+/// @param out sid - Session ID
+/// @return Operation status
+t_status proc_id_getSession( t_pid pid, t_pid * sid );
+
+/// @brief Create a new Session.
+/// A new session is created with the current PID as being the Session ID
+/// @return Operation status
+t_status proc_id_setSession( void );
 
 // + Signal handling
-t_status proc_signal_supported			( int * 			);
-t_status proc_signal_clearAll			( void				);
-t_status proc_signal_send			( t_pid, t_signal 		);
-t_status proc_signal_sendByName			( t_pid, t_char * 		);
-t_status proc_signal_setHandler			( t_signal, t_sig_func		);
-t_status proc_signal_setHandlerByName		( t_char *, t_sig_func		);
-t_status proc_signal_resetHandler		( t_signal			);
-t_status proc_signal_resetHandlerByName		( t_char *			);
-t_status proc_signal_getName			( t_signal, t_char **		);
+/// @brief Are signals supported by the OSAPI library?
+/// @param out supportLevel - The level of support may vary, for instance, standard POSIX signals may be supported but not real time signals.
+/// @return Operation status
+t_status proc_signal_supported( int * supportLevel );
+
+/// @brief Unblock of all signals.
+/// If there are any blocked signal, these will be unblocked
+/// @return Operation status
+t_status proc_signal_clearAll( void );
+
+/// @brief Send a signal to a process
+/// The signal identifier will be the standard POSIX constant SIG_xxx
+/// @param in pid - Target Process ID
+/// @param out sigNumber - Signal identifier
+/// @return Operation status
+t_status proc_signal_send( t_pid pid, t_signal sigNumber );
+
+/// @brief Send a signal to a process
+/// The signal identifier will be the standard POSIX name "SIG_xxx"
+/// @param in pid - Target Process ID
+/// @param out sigNumber - Signal name
+/// @return Operation status
+t_status proc_signal_sendByName( t_pid pid, t_char * sigName );
+
+/// @brief Set a signal handler function for a given signal number
+/// @param in sigNumber - The POSIX signal constant (e.g. SIG_TERM)
+/// @param out sigFunc - The function name/address
+/// @return Operation status
+t_status proc_signal_setHandler( t_signal sigNumber, t_sig_func sigFunc );
+
+/// @brief Set a signal handler function for a given signal name
+/// @param in sigNumber - The POSIX signal name (e.g. "SIG_TERM")
+/// @param out sigFunc - The function name/address
+/// @return Operation status
+t_status proc_signal_setHandlerByName( t_char * sigName, t_sig_func sigFunc );
+
+/// @brief Reset a signal to the default behavior
+/// @param in sigNumber - The POSIX signal constant (e.g. SIG_TERM)
+/// @return Operation status
+t_status proc_signal_resetHandler( t_signal sigNumber );
+
+/// @brief Reset a signal to the default behavior
+/// @param in sigNumber - The POSIX signal name (e.g. "SIG_TERM")
+/// @return Operation status
+t_status proc_signal_resetHandlerByName( t_char * sigName );
+
+/// @brief Get the name of a signal
+/// The function maps a signal number to a signal name
+/// @param in sigNumber - The POSIX signal constant (e.g. SIG_TERM)
+/// @param out sigName - The POSIX signal name (e.g. "SIG_TERM")
+/// @return Operation status
+t_status proc_signal_getName( t_signal sigNumber, t_char ** sigName );
+
+/// @brief Get the name of a signal
+/// The function maps a signal number to a signal name
+/// @param in sigName - The POSIX signal name (e.g. "SIG_TERM")
+/// @param out sigNumber - The signal number
+/// @return Operation status
+t_status proc_signal_getNumber( t_char * sigName, t_signal * sigNumber );
 
 // Add a cut through function to allow setting specific settings
 //t_status	proc_signal_setAction		( t_signal, t_sig_func, t_sig_action * );
 
 // Resource management
 // + Memory management
-t_status	proc_memory_allocate		( t_size, void **		);
-t_status	proc_memory_deallocate		( void * 			);
-t_status	proc_memory_clear		( t_size size, void *  		);
+
+/// @brief Allocate memory in the process heap
+/// @param in size - Required memory size
+/// @param out location - Address of the new memory block
+/// @return Operation status
+t_status proc_memory_allocate( t_size size, void ** location );
+
+/// @brief Deallocate a previously allocated heap memory block
+/// @param in location - Address of the new memory block
+/// @return Operation status
+t_status proc_memory_deallocate( void * location );
+
+/// @brief Clear contents of memory block
+/// @param in size - How many bytes have to be cleared
+/// @param out location - Starting address of memory to clear
+/// @return Operation status
+t_status proc_memory_clear( t_size size, void * location );
 
 // + Process general information
-t_status proc_info_get				( t_pid, t_proc_info *		);
+/// @brief Obtain raw process information
+/// This is the function call that allows clients to make a single call and obtain all raw process data
+/// @param in pid - Process ID
+/// @param out procInfo - Process information
+/// @return Operation status
+t_status proc_info_get( t_pid pid, t_proc_info * procInfo );
 
 // + Consumption monitoring
-t_status	proc_usage_getVirtualMemory	( t_pid, t_size *		);
-t_status	proc_usage_getRealMemory	( t_pid, t_size *		);
-t_status	proc_usage_getCPU		( t_pid, t_size *		);
-t_status	proc_usage_getThreads		( t_pid, t_size *		);
+/// @brief Get the size of the process virtual memory
+/// @param in pid - Process ID
+/// @param out size - Virtual memory size in bytes
+/// @return Operation status
+t_status proc_usage_getVirtualMemory( t_pid pid, t_size * size );
+
+/// @brief Get the size of the process real memory, i.e. ram usage
+/// @param in pid - Process ID
+/// @param out size - Real memory size in bytes
+/// @return Operation status
+t_status proc_usage_getRealMemory( t_pid, t_size *		);
+
+/// @brief Get the process CPU consumption (summary of user and system)
+/// @param in pid - Process ID
+/// @param out size - Percentage of consumed process CPU
+/// @return Operation status
+t_status proc_usage_getCPU( t_pid pid, t_size * size );
+
+/// @brief Get the number of process kernel threads / LWPs
+/// @param in pid - Process ID
+/// @param out number - Number of process threads
+/// @return Operation status
+t_status proc_usage_getThreads( t_pid pid, t_size * number );
 
 /*
 t_status	proc_usage_getIO
 t_status	proc_usage_getNetwork
  */
 
-t_status	proc_library_supported		( void 				);
-t_status	proc_library_load		( char *, char *[], t_library *	);
-t_status	proc_library_unload		( t_library lib			);
+/// @brief Is the load/unload of libraries supported in the platform?
+/// @return SUCCESS / FAILURE
+t_status proc_library_supported( void );
+
+/// @brief Load a library into the current process
+/// @param in path - Path to the library
+/// @param in options - C-String array with list of system specific options
+/// @param out lib - library type
+/// @return Operation status
+t_status proc_library_load( char * path, char * options[], t_library * lib );
+
+/// @brief Unload a library from the current process
+/// @param in lib - library type
+/// @return Operation status
+t_status proc_library_unload( t_library lib );
 
 
 #pragma GCC visibility pop			// End of public interface

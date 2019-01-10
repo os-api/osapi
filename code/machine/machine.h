@@ -49,21 +49,18 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-/// @fn t_status machine_module_supported( void )
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status	machine_module_supported	( void					);
 
 // Host name related calls
 
-/// @fn t_status machine_host_getName( t_size maxlen, t_char * hostname )
 /// @brief Obtain the machine hostname
 /// @param in Size of C-String
 /// @param out Hostname
 /// @return Operation status
 t_status	machine_host_getName		( t_size maxlen, t_char * hostname	);
 
-/// @fn t_status machine_host_setName( t_char * hostname )
 /// @brief Set the machine hostname
 /// @param in New hostname
 /// @return Operation status
@@ -71,14 +68,12 @@ t_status	machine_host_setName		( t_char * hostname			);
 
 // Domain name related calls
 
-/// @fn t_status machine_domain_getName( t_size maxlen, t_char * hostname )
 /// @brief Get the machine domain name
 /// @param in Size of C-String
 /// @param in Domain name
 /// @return Operation status
 t_status	machine_domain_getName		( t_size maxlen, t_char * hostname	);
 
-/// @fn t_status machine_domain_setName( t_char * hostname )
 /// @brief Set the machine domain name
 /// @param in New domain name
 /// @return Operation status
@@ -98,14 +93,12 @@ t_status	machine_disks_getTotal
 
 // IP related
 
-/// @fn t_status machine_ip_getNumber( t_protocol selector, t_size * number )
 /// @brief Obtain the number of IPs for the given protocol
 /// @param in IP protocol (IPv4/6 or all)
 /// @param out Number of machine IPs
 /// @return Operation status
 t_status	machine_ip_getNumber		( t_protocol selector, t_size * number			);
 
-/// @fn t_status machine_ip_getList( t_protocol selector, t_size number, t_ip * list )
 /// @brief Retrieves a list containing the machine IPs
 /// @param in IP protocol (IPv4/6 or all)
 /// @param in Size of the IP List

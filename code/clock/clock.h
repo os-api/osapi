@@ -54,30 +54,28 @@ extern "C"
 
 // There are three function types:
 
-/// @fn t_status clock_module_supported( void )
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status clock_module_supported( void );
 
 // - Time in seconds
-/// @fn t_status clock_time_set(t_time newTime)
 /// @brief Set the system clock with the supplied time data
 /// @param in newTime
 /// @return Operation status
 t_status clock_time_set ( t_time newTime );
-/// @fn t_status clock_time_get( t_time * curtime )
+
 /// @brief Get the current time in seconds from the epoch
 /// @param in,out curtime
 /// @return Operation status
+
 t_status clock_time_get( t_time * curtime );
-/// @fn t_status clock_time_print( t_time ctime, const char * tmString )
+
 /// @brief Return the current time in seconds from the epoch in human readable format
 /// @param in current time
 /// @param out Formated time string
 /// @return Operation status
 t_status clock_time_print( t_time ctime, const char * tmString );
 
-/// @fn t_status clock_time_diff(t_time t1, t_time t2, t_time * diff)
 /// @brief Return the difference between two times, in seconds
 /// @param in t1,t2
 /// @param out diff
@@ -92,17 +90,16 @@ t_status clock_hrTime_diff( t_hrTime, t_hrTime, t_hrTime * );
 */
 
 // - Clock based - Full time/date/time zone capabilities
-/// @fn t_status clock_localTime_get (t_clock * clk)
 /// @brief Get the current local time (considering the timezone)
 /// @param in,out clk
 /// @return Operation status
 t_status clock_localTime_get( t_clock * clk );
-/// @fn t_status clock_timeZone_set( t_clock * clk )
+
 /// @brief Set the current timezone
 /// @param in,out clk
 /// @return Operation status
 t_status clock_timeZone_set( t_clock * clk );
-/// @fn t_status clock_timeZone_get( t_clock * clk )
+
 /// @brief Get the current timezone
 /// @param in,out clk
 /// @return Operation status

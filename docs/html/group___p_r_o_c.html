@@ -78,132 +78,1590 @@ Collaboration diagram for PROC:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaff083748285b5d82bba6ece8dd1dde30"><td class="memItemLeft" align="right" valign="top"><a id="gaff083748285b5d82bba6ece8dd1dde30"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_module_supported</b> (void)</td></tr>
+<tr class="memitem:gaff083748285b5d82bba6ece8dd1dde30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaff083748285b5d82bba6ece8dd1dde30">proc_module_supported</a> (void)</td></tr>
 <tr class="separator:gaff083748285b5d82bba6ece8dd1dde30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7bb948d87e0bbab27a28e21cc2030841"><td class="memItemLeft" align="right" valign="top"><a id="ga7bb948d87e0bbab27a28e21cc2030841"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_user_add</b> (t_uid, <a class="el" href="structs__proc.html">t_proc</a> *)</td></tr>
-<tr class="separator:ga7bb948d87e0bbab27a28e21cc2030841"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gace8ac5852b1717869dccad1c7b330f8e"><td class="memItemLeft" align="right" valign="top"><a id="gace8ac5852b1717869dccad1c7b330f8e"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_group_add</b> (t_gid, <a class="el" href="structs__proc.html">t_proc</a> *)</td></tr>
-<tr class="separator:gace8ac5852b1717869dccad1c7b330f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1e640c71203e34c94a9269f93b38fb91"><td class="memItemLeft" align="right" valign="top"><a id="ga1e640c71203e34c94a9269f93b38fb91"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_create</b> (<a class="el" href="structs__proc.html">t_proc</a> *)</td></tr>
-<tr class="separator:ga1e640c71203e34c94a9269f93b38fb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9f44cec7100ccd2c8d07b00559a8b8fe"><td class="memItemLeft" align="right" valign="top"><a id="ga9f44cec7100ccd2c8d07b00559a8b8fe"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_destroy</b> (t_pid, int)</td></tr>
-<tr class="separator:ga9f44cec7100ccd2c8d07b00559a8b8fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4e9deac2c8602371efdb0548aa4be1da"><td class="memItemLeft" align="right" valign="top"><a id="ga4e9deac2c8602371efdb0548aa4be1da"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_clone</b> (int *)</td></tr>
-<tr class="separator:ga4e9deac2c8602371efdb0548aa4be1da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga160600d5a17f344876bf28f09ac7b157"><td class="memItemLeft" align="right" valign="top"><a id="ga160600d5a17f344876bf28f09ac7b157"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_isRunning</b> (t_pid)</td></tr>
+<tr class="memitem:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga240bd0f4702a7f2a6c0f5dcfa33d456c">proc_instance_create</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new process instance.  <a href="#ga240bd0f4702a7f2a6c0f5dcfa33d456c">More...</a><br /></td></tr>
+<tr class="separator:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1e5828e58a0194282de4f47c4069f59a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1e5828e58a0194282de4f47c4069f59a">proc_instance_destroy</a> (t_pid pid, int forced)</td></tr>
+<tr class="memdesc:ga1e5828e58a0194282de4f47c4069f59a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate a running process.  <a href="#ga1e5828e58a0194282de4f47c4069f59a">More...</a><br /></td></tr>
+<tr class="separator:ga1e5828e58a0194282de4f47c4069f59a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b525204e9ca70d79552c915387c59eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga4b525204e9ca70d79552c915387c59eb">proc_instance_clone</a> (int *isChild)</td></tr>
+<tr class="memdesc:ga4b525204e9ca70d79552c915387c59eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone the current process.  <a href="#ga4b525204e9ca70d79552c915387c59eb">More...</a><br /></td></tr>
+<tr class="separator:ga4b525204e9ca70d79552c915387c59eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga160600d5a17f344876bf28f09ac7b157"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga160600d5a17f344876bf28f09ac7b157">proc_instance_isRunning</a> (t_pid)</td></tr>
+<tr class="memdesc:ga160600d5a17f344876bf28f09ac7b157"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is a process instance running.  <a href="#ga160600d5a17f344876bf28f09ac7b157">More...</a><br /></td></tr>
 <tr class="separator:ga160600d5a17f344876bf28f09ac7b157"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4e4593deca6a2a65f8e7cf112b204a8c"><td class="memItemLeft" align="right" valign="top"><a id="ga4e4593deca6a2a65f8e7cf112b204a8c"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_getChildStatus</b> (t_pid *, <a class="el" href="structs__proc__status.html">t_proc_status</a> *)</td></tr>
-<tr class="separator:ga4e4593deca6a2a65f8e7cf112b204a8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0ea2c6862b0413a0164cdebd81b12472"><td class="memItemLeft" align="right" valign="top"><a id="ga0ea2c6862b0413a0164cdebd81b12472"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_getStatus</b> (t_pid, <a class="el" href="structs__proc__status.html">t_proc_status</a> *)</td></tr>
-<tr class="separator:ga0ea2c6862b0413a0164cdebd81b12472"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5ac4444986af10de200974dce54661fc"><td class="memItemLeft" align="right" valign="top"><a id="ga5ac4444986af10de200974dce54661fc"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_getNumberOfDescendents</b> (t_size *)</td></tr>
-<tr class="separator:ga5ac4444986af10de200974dce54661fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9488a9695992304395ad0f01dcd70eff"><td class="memItemLeft" align="right" valign="top"><a id="ga9488a9695992304395ad0f01dcd70eff"></a>
-OSAPI_NORETURN void&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_terminate</b> (int)</td></tr>
-<tr class="separator:ga9488a9695992304395ad0f01dcd70eff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafa078c64b33f1c4d7798fb69386662a1"><td class="memItemLeft" align="right" valign="top"><a id="gafa078c64b33f1c4d7798fb69386662a1"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_instance_suspendExecution</b> (void)</td></tr>
+<tr class="memitem:ga54da94d4dc39c7157eff983240afe5a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga54da94d4dc39c7157eff983240afe5a2">proc_instance_getChildStatus</a> (t_pid *pid, <a class="el" href="structs__proc__status.html">t_proc_status</a> *status)</td></tr>
+<tr class="memdesc:ga54da94d4dc39c7157eff983240afe5a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain status of a child process.  <a href="#ga54da94d4dc39c7157eff983240afe5a2">More...</a><br /></td></tr>
+<tr class="separator:ga54da94d4dc39c7157eff983240afe5a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab19fcb557ca9a9cf8cd74e3f683c12a7">proc_instance_getStatus</a> (t_pid pid, <a class="el" href="structs__proc__status.html">t_proc_status</a> *status)</td></tr>
+<tr class="memdesc:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a status of a process.  <a href="#gab19fcb557ca9a9cf8cd74e3f683c12a7">More...</a><br /></td></tr>
+<tr class="separator:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf2ff6406fe1091889d2e54325d3f2fdf">proc_instance_getNumberOfDescendents</a> (t_size *number)</td></tr>
+<tr class="memdesc:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of children processes.  <a href="#gaf2ff6406fe1091889d2e54325d3f2fdf">More...</a><br /></td></tr>
+<tr class="separator:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="memItemLeft" align="right" valign="top">OSAPI_NORETURN void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga27cf67e6f59c7ddca6833e0e30fcc115">proc_instance_terminate</a> (int code)</td></tr>
+<tr class="memdesc:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the current process. It always succeeds.  <a href="#ga27cf67e6f59c7ddca6833e0e30fcc115">More...</a><br /></td></tr>
+<tr class="separator:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa078c64b33f1c4d7798fb69386662a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafa078c64b33f1c4d7798fb69386662a1">proc_instance_suspendExecution</a> (void)</td></tr>
+<tr class="memdesc:gafa078c64b33f1c4d7798fb69386662a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend the execution of the current thread until an event occurs such as a signal in UNIX.  <a href="#gafa078c64b33f1c4d7798fb69386662a1">More...</a><br /></td></tr>
 <tr class="separator:gafa078c64b33f1c4d7798fb69386662a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa0e57cd8fc0471ff30e22ed50614ebfe"><td class="memItemLeft" align="right" valign="top"><a id="gaa0e57cd8fc0471ff30e22ed50614ebfe"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_data_setCmdLine</b> (t_size, char *[], <a class="el" href="structs__proc.html">t_proc</a> *)</td></tr>
-<tr class="separator:gaa0e57cd8fc0471ff30e22ed50614ebfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaac87bfee53f54e1d5843e9a62689deeb"><td class="memItemLeft" align="right" valign="top"><a id="gaac87bfee53f54e1d5843e9a62689deeb"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_data_setEnvironment</b> (t_size, char *[], <a class="el" href="structs__proc.html">t_proc</a> *)</td></tr>
-<tr class="separator:gaac87bfee53f54e1d5843e9a62689deeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55cbd89efbe7bbdfbac4e5cfc5dc5218"><td class="memItemLeft" align="right" valign="top"><a id="ga55cbd89efbe7bbdfbac4e5cfc5dc5218"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_get</b> (t_pid *)</td></tr>
-<tr class="separator:ga55cbd89efbe7bbdfbac4e5cfc5dc5218"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1c896cc5534f4c26f874d1546c029c1b"><td class="memItemLeft" align="right" valign="top"><a id="ga1c896cc5534f4c26f874d1546c029c1b"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_getParent</b> (t_pid *)</td></tr>
-<tr class="separator:ga1c896cc5534f4c26f874d1546c029c1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5e305a5042a5fe5f4cefb3f77efd8479"><td class="memItemLeft" align="right" valign="top"><a id="ga5e305a5042a5fe5f4cefb3f77efd8479"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_getDescendents</b> (t_size, t_size *, t_pid(*)[])</td></tr>
-<tr class="separator:ga5e305a5042a5fe5f4cefb3f77efd8479"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga452c048195f3e77c4c88d5cc556b2534"><td class="memItemLeft" align="right" valign="top"><a id="ga452c048195f3e77c4c88d5cc556b2534"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_getUser</b> (t_pid, t_uid *)</td></tr>
-<tr class="separator:ga452c048195f3e77c4c88d5cc556b2534"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf326523616a4651e3642d4ad32dcffe8"><td class="memItemLeft" align="right" valign="top"><a id="gaf326523616a4651e3642d4ad32dcffe8"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_getGroup</b> (t_pid, t_gid *)</td></tr>
-<tr class="separator:gaf326523616a4651e3642d4ad32dcffe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0c9858ee146cadb01e0be8a9b997c9a1"><td class="memItemLeft" align="right" valign="top"><a id="ga0c9858ee146cadb01e0be8a9b997c9a1"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_getSession</b> (t_pid, t_pid *)</td></tr>
-<tr class="separator:ga0c9858ee146cadb01e0be8a9b997c9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabf476c72813669007d753d68d316dac3"><td class="memItemLeft" align="right" valign="top"><a id="gabf476c72813669007d753d68d316dac3"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_id_setSession</b> (void)</td></tr>
+<tr class="memitem:ga933a3894c184cc965d55d5e35d043c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga933a3894c184cc965d55d5e35d043c24">proc_data_setUser</a> (t_uid uid, <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:ga933a3894c184cc965d55d5e35d043c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current process User ID.  <a href="#ga933a3894c184cc965d55d5e35d043c24">More...</a><br /></td></tr>
+<tr class="separator:ga933a3894c184cc965d55d5e35d043c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0baff383f9476d35a85ba2fb2f5a7da9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga0baff383f9476d35a85ba2fb2f5a7da9">proc_data_setGroup</a> (t_gid gid, <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:ga0baff383f9476d35a85ba2fb2f5a7da9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current process Group ID.  <a href="#ga0baff383f9476d35a85ba2fb2f5a7da9">More...</a><br /></td></tr>
+<tr class="separator:ga0baff383f9476d35a85ba2fb2f5a7da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga19270c4ef1cdded8d5d991921be5dc19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga19270c4ef1cdded8d5d991921be5dc19">proc_data_setCmdLine</a> (t_size size, char *array[], <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:ga19270c4ef1cdded8d5d991921be5dc19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a process data structure with the execution command line.  <a href="#ga19270c4ef1cdded8d5d991921be5dc19">More...</a><br /></td></tr>
+<tr class="separator:ga19270c4ef1cdded8d5d991921be5dc19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad81668bfdeac438927d3154e2666a092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad81668bfdeac438927d3154e2666a092">proc_data_setEnvironment</a> (t_size size, char *array[], <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:gad81668bfdeac438927d3154e2666a092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a process data structure with the new process environment.  <a href="#gad81668bfdeac438927d3154e2666a092">More...</a><br /></td></tr>
+<tr class="separator:gad81668bfdeac438927d3154e2666a092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc07f910a20dc520f1471b79ad3345e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3">proc_id_get</a> (t_pid *pid)</td></tr>
+<tr class="memdesc:gafc07f910a20dc520f1471b79ad3345e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process ID.  <a href="#gafc07f910a20dc520f1471b79ad3345e3">More...</a><br /></td></tr>
+<tr class="separator:gafc07f910a20dc520f1471b79ad3345e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaa091b8750060eb12db53fe9329f2c6c9">proc_id_getParent</a> (t_pid *ppid)</td></tr>
+<tr class="memdesc:gaa091b8750060eb12db53fe9329f2c6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent process ID.  <a href="#gaa091b8750060eb12db53fe9329f2c6c9">More...</a><br /></td></tr>
+<tr class="separator:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga686441f7888c85eb31235a47eef24b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga686441f7888c85eb31235a47eef24b04">proc_id_getDescendents</a> (t_size tsize, t_size *csize, t_pid(*array)[])</td></tr>
+<tr class="memdesc:ga686441f7888c85eb31235a47eef24b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of process IDs of children processes.  <a href="#ga686441f7888c85eb31235a47eef24b04">More...</a><br /></td></tr>
+<tr class="separator:ga686441f7888c85eb31235a47eef24b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad5bfc95a356a7c5b2db8c45a80f03d41">proc_id_getUser</a> (t_pid pid, t_uid *uid)</td></tr>
+<tr class="memdesc:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the User ID of the given process.  <a href="#gad5bfc95a356a7c5b2db8c45a80f03d41">More...</a><br /></td></tr>
+<tr class="separator:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gadac5762d74bdbe77b7e9badeece3b1b7">proc_id_getGroup</a> (t_pid pid, t_gid *gid)</td></tr>
+<tr class="memdesc:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Group ID of the current process.  <a href="#gadac5762d74bdbe77b7e9badeece3b1b7">More...</a><br /></td></tr>
+<tr class="separator:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga05bdbe6f5656dc5bd6949583d9db27b4">proc_id_getSession</a> (t_pid pid, t_pid *sid)</td></tr>
+<tr class="memdesc:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Session Identifier.  <a href="#ga05bdbe6f5656dc5bd6949583d9db27b4">More...</a><br /></td></tr>
+<tr class="separator:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf476c72813669007d753d68d316dac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gabf476c72813669007d753d68d316dac3">proc_id_setSession</a> (void)</td></tr>
+<tr class="memdesc:gabf476c72813669007d753d68d316dac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Session. A new session is created with the current PID as being the Session ID.  <a href="#gabf476c72813669007d753d68d316dac3">More...</a><br /></td></tr>
 <tr class="separator:gabf476c72813669007d753d68d316dac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5a3e35edf3163cf71a1b3641a870aaef"><td class="memItemLeft" align="right" valign="top"><a id="ga5a3e35edf3163cf71a1b3641a870aaef"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_supported</b> (int *)</td></tr>
-<tr class="separator:ga5a3e35edf3163cf71a1b3641a870aaef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaee5955e954595a763c202bfcb5aacb55"><td class="memItemLeft" align="right" valign="top"><a id="gaee5955e954595a763c202bfcb5aacb55"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_clearAll</b> (void)</td></tr>
+<tr class="memitem:ga712c42828e2df3e1c7402a760b024fbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga712c42828e2df3e1c7402a760b024fbb">proc_signal_supported</a> (int *supportLevel)</td></tr>
+<tr class="memdesc:ga712c42828e2df3e1c7402a760b024fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are signals supported by the OSAPI library?  <a href="#ga712c42828e2df3e1c7402a760b024fbb">More...</a><br /></td></tr>
+<tr class="separator:ga712c42828e2df3e1c7402a760b024fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee5955e954595a763c202bfcb5aacb55"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaee5955e954595a763c202bfcb5aacb55">proc_signal_clearAll</a> (void)</td></tr>
+<tr class="memdesc:gaee5955e954595a763c202bfcb5aacb55"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unblock of all signals. If there are any blocked signal, these will be unblocked.  <a href="#gaee5955e954595a763c202bfcb5aacb55">More...</a><br /></td></tr>
 <tr class="separator:gaee5955e954595a763c202bfcb5aacb55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga69b96350b5c1eb9e02b42c95c6a8851e"><td class="memItemLeft" align="right" valign="top"><a id="ga69b96350b5c1eb9e02b42c95c6a8851e"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_send</b> (t_pid, t_signal)</td></tr>
-<tr class="separator:ga69b96350b5c1eb9e02b42c95c6a8851e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga55674f3bf69a43488d62ba5c6e21a488"><td class="memItemLeft" align="right" valign="top"><a id="ga55674f3bf69a43488d62ba5c6e21a488"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_sendByName</b> (t_pid, t_char *)</td></tr>
-<tr class="separator:ga55674f3bf69a43488d62ba5c6e21a488"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga50698b4806312bef0cece1348a2252a6"><td class="memItemLeft" align="right" valign="top"><a id="ga50698b4806312bef0cece1348a2252a6"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_setHandler</b> (t_signal, t_sig_func)</td></tr>
-<tr class="separator:ga50698b4806312bef0cece1348a2252a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga843cd2bd9ae0e59c0b5f096b3d82dc65"><td class="memItemLeft" align="right" valign="top"><a id="ga843cd2bd9ae0e59c0b5f096b3d82dc65"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_setHandlerByName</b> (t_char *, t_sig_func)</td></tr>
-<tr class="separator:ga843cd2bd9ae0e59c0b5f096b3d82dc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae780c14552a3e4c47408c3e8e7a913de"><td class="memItemLeft" align="right" valign="top"><a id="gae780c14552a3e4c47408c3e8e7a913de"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_resetHandler</b> (t_signal)</td></tr>
-<tr class="separator:gae780c14552a3e4c47408c3e8e7a913de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga46e4d7474aaecb69a3a8eef9d1491040"><td class="memItemLeft" align="right" valign="top"><a id="ga46e4d7474aaecb69a3a8eef9d1491040"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_resetHandlerByName</b> (t_char *)</td></tr>
-<tr class="separator:ga46e4d7474aaecb69a3a8eef9d1491040"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaacdc9594e7de81e99e8a7287a62df90b"><td class="memItemLeft" align="right" valign="top"><a id="gaacdc9594e7de81e99e8a7287a62df90b"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_signal_getName</b> (t_signal, t_char **)</td></tr>
-<tr class="separator:gaacdc9594e7de81e99e8a7287a62df90b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga15b0a168c7ebfda5539dd3f31df52383"><td class="memItemLeft" align="right" valign="top"><a id="ga15b0a168c7ebfda5539dd3f31df52383"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_memory_allocate</b> (t_size, void **)</td></tr>
-<tr class="separator:ga15b0a168c7ebfda5539dd3f31df52383"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6deb99b920cedcf5982d329650a01aec"><td class="memItemLeft" align="right" valign="top"><a id="ga6deb99b920cedcf5982d329650a01aec"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_memory_deallocate</b> (void *)</td></tr>
-<tr class="separator:ga6deb99b920cedcf5982d329650a01aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ecaf396974da866f548b665b836aa7a"><td class="memItemLeft" align="right" valign="top"><a id="ga1ecaf396974da866f548b665b836aa7a"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_memory_clear</b> (t_size size, void *)</td></tr>
-<tr class="separator:ga1ecaf396974da866f548b665b836aa7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaef78a99738dce1b2d1dd91584cf2ad3b"><td class="memItemLeft" align="right" valign="top"><a id="gaef78a99738dce1b2d1dd91584cf2ad3b"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_info_get</b> (t_pid, <a class="el" href="structs__proc__info.html">t_proc_info</a> *)</td></tr>
-<tr class="separator:gaef78a99738dce1b2d1dd91584cf2ad3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga26449eb92748cc7878800a2a9f5b7899"><td class="memItemLeft" align="right" valign="top"><a id="ga26449eb92748cc7878800a2a9f5b7899"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_usage_getVirtualMemory</b> (t_pid, t_size *)</td></tr>
-<tr class="separator:ga26449eb92748cc7878800a2a9f5b7899"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1d5868b50b883fa4b57279834c7f5e91"><td class="memItemLeft" align="right" valign="top"><a id="ga1d5868b50b883fa4b57279834c7f5e91"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_usage_getRealMemory</b> (t_pid, t_size *)</td></tr>
+<tr class="memitem:gad51e323ee34c8c0170c2c6c529af1497"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad51e323ee34c8c0170c2c6c529af1497">proc_signal_send</a> (t_pid pid, t_signal sigNumber)</td></tr>
+<tr class="memdesc:gad51e323ee34c8c0170c2c6c529af1497"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a signal to a process The signal identifier will be the standard POSIX constant SIG_xxx.  <a href="#gad51e323ee34c8c0170c2c6c529af1497">More...</a><br /></td></tr>
+<tr class="separator:gad51e323ee34c8c0170c2c6c529af1497"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga168b8a18afd3f4d95b514327fcb2b829"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga168b8a18afd3f4d95b514327fcb2b829">proc_signal_sendByName</a> (t_pid pid, t_char *sigName)</td></tr>
+<tr class="memdesc:ga168b8a18afd3f4d95b514327fcb2b829"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send a signal to a process The signal identifier will be the standard POSIX name "SIG_xxx".  <a href="#ga168b8a18afd3f4d95b514327fcb2b829">More...</a><br /></td></tr>
+<tr class="separator:ga168b8a18afd3f4d95b514327fcb2b829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2bc3e015ddbf8e6d656cc1ef1b3e3b34"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2bc3e015ddbf8e6d656cc1ef1b3e3b34">proc_signal_setHandler</a> (t_signal sigNumber, t_sig_func sigFunc)</td></tr>
+<tr class="memdesc:ga2bc3e015ddbf8e6d656cc1ef1b3e3b34"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a signal handler function for a given signal number.  <a href="#ga2bc3e015ddbf8e6d656cc1ef1b3e3b34">More...</a><br /></td></tr>
+<tr class="separator:ga2bc3e015ddbf8e6d656cc1ef1b3e3b34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga346a334c7e93d9eb48c865f0fd25cfaa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga346a334c7e93d9eb48c865f0fd25cfaa">proc_signal_setHandlerByName</a> (t_char *sigName, t_sig_func sigFunc)</td></tr>
+<tr class="memdesc:ga346a334c7e93d9eb48c865f0fd25cfaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a signal handler function for a given signal name.  <a href="#ga346a334c7e93d9eb48c865f0fd25cfaa">More...</a><br /></td></tr>
+<tr class="separator:ga346a334c7e93d9eb48c865f0fd25cfaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e376b576c5cd3f48c5ffc5c64e5d169"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga3e376b576c5cd3f48c5ffc5c64e5d169">proc_signal_resetHandler</a> (t_signal sigNumber)</td></tr>
+<tr class="memdesc:ga3e376b576c5cd3f48c5ffc5c64e5d169"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset a signal to the default behavior.  <a href="#ga3e376b576c5cd3f48c5ffc5c64e5d169">More...</a><br /></td></tr>
+<tr class="separator:ga3e376b576c5cd3f48c5ffc5c64e5d169"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf01f6844f5a0c79c99ac7ebbf228cdd5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf01f6844f5a0c79c99ac7ebbf228cdd5">proc_signal_resetHandlerByName</a> (t_char *sigName)</td></tr>
+<tr class="memdesc:gaf01f6844f5a0c79c99ac7ebbf228cdd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset a signal to the default behavior.  <a href="#gaf01f6844f5a0c79c99ac7ebbf228cdd5">More...</a><br /></td></tr>
+<tr class="separator:gaf01f6844f5a0c79c99ac7ebbf228cdd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga97033a595fe3d33cd549f9721f5d1506"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga97033a595fe3d33cd549f9721f5d1506">proc_signal_getName</a> (t_signal sigNumber, t_char **sigName)</td></tr>
+<tr class="memdesc:ga97033a595fe3d33cd549f9721f5d1506"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of a signal The function maps a signal number to a signal name.  <a href="#ga97033a595fe3d33cd549f9721f5d1506">More...</a><br /></td></tr>
+<tr class="separator:ga97033a595fe3d33cd549f9721f5d1506"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga56abcfdb6f28d052b71c283f6d0a4c1f">proc_signal_getNumber</a> (t_char *sigName, t_signal *sigNumber)</td></tr>
+<tr class="memdesc:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of a signal The function maps a signal number to a signal name.  <a href="#ga56abcfdb6f28d052b71c283f6d0a4c1f">More...</a><br /></td></tr>
+<tr class="separator:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga785e9b08db64c427e53e7b5088f7927b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b">proc_memory_allocate</a> (t_size size, void **location)</td></tr>
+<tr class="memdesc:ga785e9b08db64c427e53e7b5088f7927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga785e9b08db64c427e53e7b5088f7927b">More...</a><br /></td></tr>
+<tr class="separator:ga785e9b08db64c427e53e7b5088f7927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1dc9234262321bada770a1c44876110c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1dc9234262321bada770a1c44876110c">proc_memory_deallocate</a> (void *location)</td></tr>
+<tr class="memdesc:ga1dc9234262321bada770a1c44876110c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#ga1dc9234262321bada770a1c44876110c">More...</a><br /></td></tr>
+<tr class="separator:ga1dc9234262321bada770a1c44876110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4a656676ce292a2a455a0aafcf732b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac4a656676ce292a2a455a0aafcf732b4">proc_memory_clear</a> (t_size size, void *location)</td></tr>
+<tr class="memdesc:gac4a656676ce292a2a455a0aafcf732b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear contents of memory block.  <a href="#gac4a656676ce292a2a455a0aafcf732b4">More...</a><br /></td></tr>
+<tr class="separator:gac4a656676ce292a2a455a0aafcf732b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86fe2663b56cd27b21974815be7fba9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d">proc_info_get</a> (t_pid pid, <a class="el" href="structs__proc__info.html">t_proc_info</a> *procInfo)</td></tr>
+<tr class="memdesc:ga86fe2663b56cd27b21974815be7fba9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain raw process information This is the function call that allows clients to make a single call and obtain all raw process data.  <a href="#ga86fe2663b56cd27b21974815be7fba9d">More...</a><br /></td></tr>
+<tr class="separator:ga86fe2663b56cd27b21974815be7fba9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7">proc_usage_getVirtualMemory</a> (t_pid pid, t_size *size)</td></tr>
+<tr class="memdesc:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process virtual memory.  <a href="#ga010fc4f853e10d00b7eadfbbbedfc9d7">More...</a><br /></td></tr>
+<tr class="separator:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1d5868b50b883fa4b57279834c7f5e91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1d5868b50b883fa4b57279834c7f5e91">proc_usage_getRealMemory</a> (t_pid, t_size *)</td></tr>
+<tr class="memdesc:ga1d5868b50b883fa4b57279834c7f5e91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process real memory, i.e. ram usage.  <a href="#ga1d5868b50b883fa4b57279834c7f5e91">More...</a><br /></td></tr>
 <tr class="separator:ga1d5868b50b883fa4b57279834c7f5e91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed320bbef55461d0e85761f9a4114ac9"><td class="memItemLeft" align="right" valign="top"><a id="gaed320bbef55461d0e85761f9a4114ac9"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_usage_getCPU</b> (t_pid, t_size *)</td></tr>
-<tr class="separator:gaed320bbef55461d0e85761f9a4114ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0614de0457ae821e9b10fe7e0cc4cad4"><td class="memItemLeft" align="right" valign="top"><a id="ga0614de0457ae821e9b10fe7e0cc4cad4"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_usage_getThreads</b> (t_pid, t_size *)</td></tr>
-<tr class="separator:ga0614de0457ae821e9b10fe7e0cc4cad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memItemLeft" align="right" valign="top"><a id="gaccfece10ffb25e27bf250cc0aebd428b"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_library_supported</b> (void)</td></tr>
+<tr class="memitem:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc">proc_usage_getCPU</a> (t_pid pid, t_size *size)</td></tr>
+<tr class="memdesc:ga1a29780a5de557c9e64abcea163a3fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the process CPU consumption (summary of user and system)  <a href="#ga1a29780a5de557c9e64abcea163a3fbc">More...</a><br /></td></tr>
+<tr class="separator:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62">proc_usage_getThreads</a> (t_pid pid, t_size *number)</td></tr>
+<tr class="memdesc:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of process kernel threads / LWPs.  <a href="#gaaa4306b8ae7885ce918aa03b7a779a62">More...</a><br /></td></tr>
+<tr class="separator:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaccfece10ffb25e27bf250cc0aebd428b">proc_library_supported</a> (void)</td></tr>
+<tr class="memdesc:gaccfece10ffb25e27bf250cc0aebd428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the load/unload of libraries supported in the platform?  <a href="#gaccfece10ffb25e27bf250cc0aebd428b">More...</a><br /></td></tr>
 <tr class="separator:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga58d6b5525a7576250b0c52d90ecf94f5"><td class="memItemLeft" align="right" valign="top"><a id="ga58d6b5525a7576250b0c52d90ecf94f5"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_library_load</b> (char *, char *[], t_library *)</td></tr>
-<tr class="separator:ga58d6b5525a7576250b0c52d90ecf94f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memItemLeft" align="right" valign="top"><a id="gaf6622299218d5c8712a68a9f0e7533e8"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>proc_library_unload</b> (t_library lib)</td></tr>
+<tr class="memitem:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga87fd88644614d224ef9b98bf8ef5e49f">proc_library_load</a> (char *path, char *options[], t_library *lib)</td></tr>
+<tr class="memdesc:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a library into the current process.  <a href="#ga87fd88644614d224ef9b98bf8ef5e49f">More...</a><br /></td></tr>
+<tr class="separator:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf6622299218d5c8712a68a9f0e7533e8">proc_library_unload</a> (t_library lib)</td></tr>
+<tr class="memdesc:gaf6622299218d5c8712a68a9f0e7533e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a library from the current process.  <a href="#gaf6622299218d5c8712a68a9f0e7533e8">More...</a><br /></td></tr>
 <tr class="separator:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <hr/>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga19270c4ef1cdded8d5d991921be5dc19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga19270c4ef1cdded8d5d991921be5dc19">&#9670;&nbsp;</a></span>proc_data_setCmdLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_data_setCmdLine </td>
+          <td>(</td>
+          <td class="paramtype">t_size&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>array</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills a process data structure with the execution command line. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>size - Number of elements of the C-String array </td></tr>
+    <tr><td class="paramname">in</td><td>array - The command line array </td></tr>
+    <tr><td class="paramname">out</td><td>proc - The process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gad81668bfdeac438927d3154e2666a092"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad81668bfdeac438927d3154e2666a092">&#9670;&nbsp;</a></span>proc_data_setEnvironment()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_data_setEnvironment </td>
+          <td>(</td>
+          <td class="paramtype">t_size&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>array</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fills a process data structure with the new process environment. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>size - Number of elements of the C-String array </td></tr>
+    <tr><td class="paramname">in</td><td>array - The environment array </td></tr>
+    <tr><td class="paramname">out</td><td>proc - The process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga0baff383f9476d35a85ba2fb2f5a7da9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0baff383f9476d35a85ba2fb2f5a7da9">&#9670;&nbsp;</a></span>proc_data_setGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_data_setGroup </td>
+          <td>(</td>
+          <td class="paramtype">t_gid&#160;</td>
+          <td class="paramname"><em>gid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the current process Group ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>gid - New Group ID </td></tr>
+    <tr><td class="paramname">out</td><td>proc - process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga933a3894c184cc965d55d5e35d043c24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga933a3894c184cc965d55d5e35d043c24">&#9670;&nbsp;</a></span>proc_data_setUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_data_setUser </td>
+          <td>(</td>
+          <td class="paramtype">t_uid&#160;</td>
+          <td class="paramname"><em>uid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the current process User ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>uid - New User ID </td></tr>
+    <tr><td class="paramname">out</td><td>proc - process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gafc07f910a20dc520f1471b79ad3345e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc07f910a20dc520f1471b79ad3345e3">&#9670;&nbsp;</a></span>proc_id_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_get </td>
+          <td>(</td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>pid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current process ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>pid - The process ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga686441f7888c85eb31235a47eef24b04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga686441f7888c85eb31235a47eef24b04">&#9670;&nbsp;</a></span>proc_id_getDescendents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_getDescendents </td>
+          <td>(</td>
+          <td class="paramtype">t_size&#160;</td>
+          <td class="paramname"><em>tsize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname"><em>csize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_pid(*)&#160;</td>
+          <td class="paramname"><em>array</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get list of process IDs of children processes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>tsize - The size of the array </td></tr>
+    <tr><td class="paramname">out</td><td>csize - The number of found children processes </td></tr>
+    <tr><td class="paramname">out</td><td>array - List of process IDs of children </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gadac5762d74bdbe77b7e9badeece3b1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadac5762d74bdbe77b7e9badeece3b1b7">&#9670;&nbsp;</a></span>proc_id_getGroup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_getGroup </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_gid *&#160;</td>
+          <td class="paramname"><em>gid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Group ID of the current process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Target Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>gid - User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaa091b8750060eb12db53fe9329f2c6c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa091b8750060eb12db53fe9329f2c6c9">&#9670;&nbsp;</a></span>proc_id_getParent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_getParent </td>
+          <td>(</td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>ppid</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the parent process ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>ppid - The parent process ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga05bdbe6f5656dc5bd6949583d9db27b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05bdbe6f5656dc5bd6949583d9db27b4">&#9670;&nbsp;</a></span>proc_id_getSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_getSession </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>sid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get Session Identifier. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Target Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>sid - Session ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gad5bfc95a356a7c5b2db8c45a80f03d41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5bfc95a356a7c5b2db8c45a80f03d41">&#9670;&nbsp;</a></span>proc_id_getUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_getUser </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_uid *&#160;</td>
+          <td class="paramname"><em>uid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the User ID of the given process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Target Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>uid - User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gabf476c72813669007d753d68d316dac3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf476c72813669007d753d68d316dac3">&#9670;&nbsp;</a></span>proc_id_setSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_id_setSession </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new Session. A new session is created with the current PID as being the Session ID. </p>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga86fe2663b56cd27b21974815be7fba9d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga86fe2663b56cd27b21974815be7fba9d">&#9670;&nbsp;</a></span>proc_info_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_info_get </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc__info.html">t_proc_info</a> *&#160;</td>
+          <td class="paramname"><em>procInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain raw process information This is the function call that allows clients to make a single call and obtain all raw process data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>procInfo - Process information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___p_r_o_c_ga86fe2663b56cd27b21974815be7fba9d_icgraph.png" border="0" usemap="#group___p_r_o_c_ga86fe2663b56cd27b21974815be7fba9d_icgraph" alt=""/></div>
+<map name="group___p_r_o_c_ga86fe2663b56cd27b21974815be7fba9d_icgraph" id="group___p_r_o_c_ga86fe2663b56cd27b21974815be7fba9d_icgraph">
+<area shape="rect" id="node2" href="group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7" title="Get the size of the process virtual memory. " alt="" coords="153,5,352,32"/>
+<area shape="rect" id="node3" href="group___p_r_o_c.html#ga1d5868b50b883fa4b57279834c7f5e91" title="Get the size of the process real memory, i.e. ram usage. " alt="" coords="159,56,347,83"/>
+<area shape="rect" id="node4" href="group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc" title="Get the process CPU consumption (summary of user and system) " alt="" coords="181,107,324,133"/>
+<area shape="rect" id="node5" href="group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62" title="Get the number of process kernel threads / LWPs. " alt="" coords="172,157,333,184"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga4b525204e9ca70d79552c915387c59eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b525204e9ca70d79552c915387c59eb">&#9670;&nbsp;</a></span>proc_instance_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_clone </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>isChild</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clone the current process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>isChild - Child or father </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga240bd0f4702a7f2a6c0f5dcfa33d456c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga240bd0f4702a7f2a6c0f5dcfa33d456c">&#9670;&nbsp;</a></span>proc_instance_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new process instance. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>proc - process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga1e5828e58a0194282de4f47c4069f59a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e5828e58a0194282de4f47c4069f59a">&#9670;&nbsp;</a></span>proc_instance_destroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_destroy </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>forced</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Terminate a running process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - The process to terminate </td></tr>
+    <tr><td class="paramname">in</td><td>forced - Normal or forced termination </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga54da94d4dc39c7157eff983240afe5a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54da94d4dc39c7157eff983240afe5a2">&#9670;&nbsp;</a></span>proc_instance_getChildStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_getChildStatus </td>
+          <td>(</td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc__status.html">t_proc_status</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain status of a child process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>status - Status of child process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaf2ff6406fe1091889d2e54325d3f2fdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2ff6406fe1091889d2e54325d3f2fdf">&#9670;&nbsp;</a></span>proc_instance_getNumberOfDescendents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_getNumberOfDescendents </td>
+          <td>(</td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname"><em>number</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the number of children processes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>number - Number of children processes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gab19fcb557ca9a9cf8cd74e3f683c12a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab19fcb557ca9a9cf8cd74e3f683c12a7">&#9670;&nbsp;</a></span>proc_instance_getStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_getStatus </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structs__proc__status.html">t_proc_status</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain a status of a process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>status - Status of child process </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga160600d5a17f344876bf28f09ac7b157"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga160600d5a17f344876bf28f09ac7b157">&#9670;&nbsp;</a></span>proc_instance_isRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_isRunning </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is a process instance running. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS (Running) / FAILURE </dd></dl>
+
+</div>
+</div>
+<a id="gafa078c64b33f1c4d7798fb69386662a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafa078c64b33f1c4d7798fb69386662a1">&#9670;&nbsp;</a></span>proc_instance_suspendExecution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_instance_suspendExecution </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Suspend the execution of the current thread until an event occurs such as a signal in UNIX. </p>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga27cf67e6f59c7ddca6833e0e30fcc115"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27cf67e6f59c7ddca6833e0e30fcc115">&#9670;&nbsp;</a></span>proc_instance_terminate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">OSAPI_NORETURN void proc_instance_terminate </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>code</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Terminate the current process. It always succeeds. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>code - Exit status code </td></tr>
+    <tr><td class="paramname">out</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga87fd88644614d224ef9b98bf8ef5e49f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87fd88644614d224ef9b98bf8ef5e49f">&#9670;&nbsp;</a></span>proc_library_load()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_library_load </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>options</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_library *&#160;</td>
+          <td class="paramname"><em>lib</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load a library into the current process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>path - Path to the library </td></tr>
+    <tr><td class="paramname">in</td><td>options - C-String array with list of system specific options </td></tr>
+    <tr><td class="paramname">out</td><td>lib - library type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaccfece10ffb25e27bf250cc0aebd428b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaccfece10ffb25e27bf250cc0aebd428b">&#9670;&nbsp;</a></span>proc_library_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_library_supported </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is the load/unload of libraries supported in the platform? </p>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS / FAILURE </dd></dl>
+
+</div>
+</div>
+<a id="gaf6622299218d5c8712a68a9f0e7533e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6622299218d5c8712a68a9f0e7533e8">&#9670;&nbsp;</a></span>proc_library_unload()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_library_unload </td>
+          <td>(</td>
+          <td class="paramtype">t_library&#160;</td>
+          <td class="paramname"><em>lib</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unload a library from the current process. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>lib - library type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga785e9b08db64c427e53e7b5088f7927b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga785e9b08db64c427e53e7b5088f7927b">&#9670;&nbsp;</a></span>proc_memory_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_memory_allocate </td>
+          <td>(</td>
+          <td class="paramtype">t_size&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate memory in the process heap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>size - Required memory size </td></tr>
+    <tr><td class="paramname">out</td><td>location - Address of the new memory block </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gac4a656676ce292a2a455a0aafcf732b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac4a656676ce292a2a455a0aafcf732b4">&#9670;&nbsp;</a></span>proc_memory_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_memory_clear </td>
+          <td>(</td>
+          <td class="paramtype">t_size&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>location</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear contents of memory block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>size - How many bytes have to be cleared </td></tr>
+    <tr><td class="paramname">out</td><td>location - Starting address of memory to clear </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga1dc9234262321bada770a1c44876110c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1dc9234262321bada770a1c44876110c">&#9670;&nbsp;</a></span>proc_memory_deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_memory_deallocate </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deallocate a previously allocated heap memory block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>location - Address of the new memory block </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaff083748285b5d82bba6ece8dd1dde30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff083748285b5d82bba6ece8dd1dde30">&#9670;&nbsp;</a></span>proc_module_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_module_supported </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td></td></tr>
+    <tr><td class="paramname">out</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaee5955e954595a763c202bfcb5aacb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee5955e954595a763c202bfcb5aacb55">&#9670;&nbsp;</a></span>proc_signal_clearAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_clearAll </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Unblock of all signals. If there are any blocked signal, these will be unblocked. </p>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga97033a595fe3d33cd549f9721f5d1506"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97033a595fe3d33cd549f9721f5d1506">&#9670;&nbsp;</a></span>proc_signal_getName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_getName </td>
+          <td>(</td>
+          <td class="paramtype">t_signal&#160;</td>
+          <td class="paramname"><em>sigNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_char **&#160;</td>
+          <td class="paramname"><em>sigName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name of a signal The function maps a signal number to a signal name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigNumber - The POSIX signal constant (e.g. SIG_TERM) </td></tr>
+    <tr><td class="paramname">out</td><td>sigName - The POSIX signal name (e.g. "SIG_TERM") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga56abcfdb6f28d052b71c283f6d0a4c1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56abcfdb6f28d052b71c283f6d0a4c1f">&#9670;&nbsp;</a></span>proc_signal_getNumber()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_getNumber </td>
+          <td>(</td>
+          <td class="paramtype">t_char *&#160;</td>
+          <td class="paramname"><em>sigName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_signal *&#160;</td>
+          <td class="paramname"><em>sigNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the name of a signal The function maps a signal number to a signal name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigName - The POSIX signal name (e.g. "SIG_TERM") </td></tr>
+    <tr><td class="paramname">out</td><td>sigNumber - The signal number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga3e376b576c5cd3f48c5ffc5c64e5d169"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3e376b576c5cd3f48c5ffc5c64e5d169">&#9670;&nbsp;</a></span>proc_signal_resetHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_resetHandler </td>
+          <td>(</td>
+          <td class="paramtype">t_signal&#160;</td>
+          <td class="paramname"><em>sigNumber</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset a signal to the default behavior. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigNumber - The POSIX signal constant (e.g. SIG_TERM) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaf01f6844f5a0c79c99ac7ebbf228cdd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf01f6844f5a0c79c99ac7ebbf228cdd5">&#9670;&nbsp;</a></span>proc_signal_resetHandlerByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_resetHandlerByName </td>
+          <td>(</td>
+          <td class="paramtype">t_char *&#160;</td>
+          <td class="paramname"><em>sigName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset a signal to the default behavior. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigNumber - The POSIX signal name (e.g. "SIG_TERM") </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gad51e323ee34c8c0170c2c6c529af1497"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad51e323ee34c8c0170c2c6c529af1497">&#9670;&nbsp;</a></span>proc_signal_send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_send </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_signal&#160;</td>
+          <td class="paramname"><em>sigNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a signal to a process The signal identifier will be the standard POSIX constant SIG_xxx. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Target Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>sigNumber - Signal identifier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga168b8a18afd3f4d95b514327fcb2b829"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga168b8a18afd3f4d95b514327fcb2b829">&#9670;&nbsp;</a></span>proc_signal_sendByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_sendByName </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_char *&#160;</td>
+          <td class="paramname"><em>sigName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Send a signal to a process The signal identifier will be the standard POSIX name "SIG_xxx". </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Target Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>sigNumber - Signal name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga2bc3e015ddbf8e6d656cc1ef1b3e3b34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bc3e015ddbf8e6d656cc1ef1b3e3b34">&#9670;&nbsp;</a></span>proc_signal_setHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_setHandler </td>
+          <td>(</td>
+          <td class="paramtype">t_signal&#160;</td>
+          <td class="paramname"><em>sigNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_sig_func&#160;</td>
+          <td class="paramname"><em>sigFunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a signal handler function for a given signal number. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigNumber - The POSIX signal constant (e.g. SIG_TERM) </td></tr>
+    <tr><td class="paramname">out</td><td>sigFunc - The function name/address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga346a334c7e93d9eb48c865f0fd25cfaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga346a334c7e93d9eb48c865f0fd25cfaa">&#9670;&nbsp;</a></span>proc_signal_setHandlerByName()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_setHandlerByName </td>
+          <td>(</td>
+          <td class="paramtype">t_char *&#160;</td>
+          <td class="paramname"><em>sigName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_sig_func&#160;</td>
+          <td class="paramname"><em>sigFunc</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set a signal handler function for a given signal name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>sigNumber - The POSIX signal name (e.g. "SIG_TERM") </td></tr>
+    <tr><td class="paramname">out</td><td>sigFunc - The function name/address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga712c42828e2df3e1c7402a760b024fbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga712c42828e2df3e1c7402a760b024fbb">&#9670;&nbsp;</a></span>proc_signal_supported()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_signal_supported </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>supportLevel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Are signals supported by the OSAPI library? </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>supportLevel - The level of support may vary, for instance, standard POSIX signals may be supported but not real time signals. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga1a29780a5de557c9e64abcea163a3fbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a29780a5de557c9e64abcea163a3fbc">&#9670;&nbsp;</a></span>proc_usage_getCPU()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_usage_getCPU </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the process CPU consumption (summary of user and system) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>size - Percentage of consumed process CPU </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___p_r_o_c_ga1a29780a5de557c9e64abcea163a3fbc_cgraph.png" border="0" usemap="#group___p_r_o_c_ga1a29780a5de557c9e64abcea163a3fbc_cgraph" alt=""/></div>
+<map name="group___p_r_o_c_ga1a29780a5de557c9e64abcea163a3fbc_cgraph" id="group___p_r_o_c_ga1a29780a5de557c9e64abcea163a3fbc_cgraph">
+<area shape="rect" id="node2" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="196,5,296,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga1d5868b50b883fa4b57279834c7f5e91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d5868b50b883fa4b57279834c7f5e91">&#9670;&nbsp;</a></span>proc_usage_getRealMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_usage_getRealMemory </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the size of the process real memory, i.e. ram usage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>size - Real memory size in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___p_r_o_c_ga1d5868b50b883fa4b57279834c7f5e91_cgraph.png" border="0" usemap="#group___p_r_o_c_ga1d5868b50b883fa4b57279834c7f5e91_cgraph" alt=""/></div>
+<map name="group___p_r_o_c_ga1d5868b50b883fa4b57279834c7f5e91_cgraph" id="group___p_r_o_c_ga1d5868b50b883fa4b57279834c7f5e91_cgraph">
+<area shape="rect" id="node2" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="241,5,341,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaaa4306b8ae7885ce918aa03b7a779a62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa4306b8ae7885ce918aa03b7a779a62">&#9670;&nbsp;</a></span>proc_usage_getThreads()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_usage_getThreads </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of process kernel threads / LWPs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>number - Number of process threads </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___p_r_o_c_gaaa4306b8ae7885ce918aa03b7a779a62_cgraph.png" border="0" usemap="#group___p_r_o_c_gaaa4306b8ae7885ce918aa03b7a779a62_cgraph" alt=""/></div>
+<map name="group___p_r_o_c_gaaa4306b8ae7885ce918aa03b7a779a62_cgraph" id="group___p_r_o_c_gaaa4306b8ae7885ce918aa03b7a779a62_cgraph">
+<area shape="rect" id="node2" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="215,5,315,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga010fc4f853e10d00b7eadfbbbedfc9d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga010fc4f853e10d00b7eadfbbbedfc9d7">&#9670;&nbsp;</a></span>proc_usage_getVirtualMemory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structs__status.html">t_status</a> proc_usage_getVirtualMemory </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_size *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the size of the process virtual memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>pid - Process ID </td></tr>
+    <tr><td class="paramname">out</td><td>size - Virtual memory size in bytes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___p_r_o_c_ga010fc4f853e10d00b7eadfbbbedfc9d7_cgraph.png" border="0" usemap="#group___p_r_o_c_ga010fc4f853e10d00b7eadfbbbedfc9d7_cgraph" alt=""/></div>
+<map name="group___p_r_o_c_ga010fc4f853e10d00b7eadfbbbedfc9d7_cgraph" id="group___p_r_o_c_ga010fc4f853e10d00b7eadfbbbedfc9d7_cgraph">
+<area shape="rect" id="node2" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="252,5,352,32"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
