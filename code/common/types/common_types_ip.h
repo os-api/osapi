@@ -63,40 +63,46 @@
 //
 // *****************************************************************************************
 
-
+/// Address type
 typedef int		t_address_type;
 
+/// Structure for a structured IPv4 address
 struct s_ipv4_address
 {
-  Byte			host		[ OSAPI_IPV4_ADDRESS_SIZE ];	// IP address
-  Byte			mask		[ OSAPI_IPV4_ADDRESS_SIZE ];	// Network mask
-  Byte			broadcast	[ OSAPI_IPV4_ADDRESS_SIZE ];	// Broadcast address type or
-  Byte			p2p		[ OSAPI_IPV4_ADDRESS_SIZE ];	// Point to Point address type
+  Byte			host		[ OSAPI_IPV4_ADDRESS_SIZE ];	///< IP address
+  Byte			mask		[ OSAPI_IPV4_ADDRESS_SIZE ];	///< Network mask
+  Byte			broadcast	[ OSAPI_IPV4_ADDRESS_SIZE ];	///< Broadcast address type or
+  Byte			p2p		[ OSAPI_IPV4_ADDRESS_SIZE ];	///< Point to Point address type
 };
 
+/// Structure to support either raw (bunch of bytes) or structured IPv4 addresses
 union u_ipv4_address
 {
-  struct s_ipv4_address	field;						// Select individual fields
-  Byte			raw		[ OSAPI_IPV6_ADDRESS_SIZE ];	// Array of the same number of bytes as IPV6 address
+  struct s_ipv4_address	field;						///< Select individual fields
+  Byte			raw		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< Array of the same number of bytes as IPV6 address
 };
 
+/// Union of IPv4/v6 addresses
 union u_ip_address
 {
-  union u_ipv4_address	ipv4;
-  Byte			ipv6		[ OSAPI_IPV6_ADDRESS_SIZE ];
+  union u_ipv4_address	ipv4;						///< An union of all possible IPv4 addresses
+  Byte			ipv6		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< An array of bytes to support an IPv6 address
 };
 
+/// Type for an IP address
 typedef union u_ip_address	t_ip_address;
 
+/// Structure to support IP information
 struct s_ip
 {
-  char			interface_name	[ OSAPI_INTERFACE_MAX_NAME_SIZE ];
-  t_protocol		protocol;	// V4/V6
-  t_ip_address		address;	// IP address
-  t_address_type	type_target;	// BroadCast / PtP
+  char			interface_name	[ OSAPI_INTERFACE_MAX_NAME_SIZE ];	///< Interface name
+  t_protocol		protocol;						///< V4/V6 IP protocol
+  t_ip_address		address;						///< IP address
+  t_address_type	type_target;						///< BroadCast / PtP target address
   //t_mac_address	mac;
 };
 
+/// IP type that provides IP information
 typedef struct s_ip	t_ip;
 
 

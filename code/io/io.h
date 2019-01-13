@@ -39,6 +39,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup IO
+/// @brief The Input/Output module
 ///@{
 ///
 /// *****************************************************************************************
@@ -53,13 +54,13 @@ extern "C" {
 
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
-t_status	io_module_supported		( void 			);
+t_status io_module_supported( void );
 
 // Directory facilities
 /// @brief Change the current process working directory
-/// @param in New working directory name
+/// @param [in] dirname - New working directory name
 /// @return Operation status
-t_status	io_directory_change		( t_char * dirname	);
+t_status io_directory_change( t_char * dirname );
 
 /*
 t_status	io_directory_create		( t_char *		);

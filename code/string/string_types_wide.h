@@ -27,24 +27,42 @@ extern "C" {
 // System headers
 #include <stdint.h>
 
+
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STRING
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: Type declarations
 //
 // *****************************************************************************************
 
+/// The OSAPI C String structure for wide characters
 struct osapi_wide_string
 {
-  uint64_t	tsize;			// Total size of the allocated string memory
-  uint64_t	csize;			// Current used size
-  wchar_t    *	ps_location;		// Pointer to String location
+  uint64_t	tsize;			///< Total size of the allocated string memory
+  uint64_t	csize;			///< Current used size
+  wchar_t    *	ps_location;		///< Pointer to String location
 };
 
-
+/// The OSAPI C String type for wide characters
 typedef struct osapi_wide_string	t_wString;
 
+/// Define a null OSAPI wide string
 #define OSAPI_WIDE_STRING_NULL_POINTER	(( t_wString *) 0)
+
+/// Define a null pointer for an array of wide characters
 #define OSAPI_WIDE_CHAR_NULL_POINTER	(( wchar_t   *) 0)
+
+
+///@}
+///@}
 
 // End of header with C++ declaration
 #ifdef __cplusplus

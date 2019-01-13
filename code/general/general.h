@@ -37,6 +37,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup GENERAL
+/// @brief The OSAPI library base module
 ///@{
 ///
 /// *****************************************************************************************
@@ -51,30 +52,30 @@ extern "C" {
 
 /// @brief Get the version number of the Library
 /// @return Version number
-unsigned long	osapi_get_version			( void		);
+unsigned long osapi_get_version( void );
 
 /// @brief Get the library stability type: Stable vs Unstable
 /// @return enum that describes the stability type
-int		osapi_get_version_stability		( void		);
+int osapi_get_version_stability( void );
 
 /// @brief Get the version string of the Library
 /// @return C String library version
-const char *	osapi_get_version_string		( void		);
+const char * osapi_get_version_string( void );
 
 /// @brief Get the string describing the library stability type: Stable vs Unstable
 /// @return C String library stability type
-const char *	osapi_get_version_stability_string	( void 		);
+const char * osapi_get_version_stability_string( void );
 
 /// @brief Get the OSAPI Protocol name
-/// @param in Protocol ID
+/// @param [in] id - The protocol ID
 /// @return C String for the given Protocol ID
-const char * 	osapi_get_protocol_string		( t_protocol id );
+const char * osapi_get_protocol_string( t_protocol id );
 
 // Module related
 /// @brief Get the module string
-/// @param in module ID
+/// @param [in] module - The module ID
 /// @return C String for the given module ID
-const char *	osapi_getModule				( t_module	);
+const char * osapi_getModule( t_module module );
 
 #pragma GCC visibility pop			// End of public interface
 

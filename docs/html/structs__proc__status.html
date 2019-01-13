@@ -67,36 +67,48 @@ $(document).ready(function(){initNavTree('structs__proc__status.html','');});
 <div class="title">s_proc_status Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Process status structure.  
+ <a href="structs__proc__status.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for s_proc_status:</div>
 <div class="dyncontent">
 <div class="center"><img src="structs__proc__status__coll__graph.png" border="0" usemap="#s__proc__status_coll__map" alt="Collaboration graph"/></div>
 <map name="s__proc__status_coll__map" id="s__proc__status_coll__map">
-<area shape="rect" id="node2" href="structs__proc__status_1_1details.html" title="details" alt="" coords="27,5,87,32"/>
+<area shape="rect" id="node2" href="structs__proc__status_1_1details.html" title="Process status structure that contains detail information. " alt="" coords="27,5,87,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html">details</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process status structure that contains detail information.  <a href="structs__proc__status_1_1details.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:a36f7b6be7108281af77939ceaec42fd6"><td class="memItemLeft" align="right" valign="top"><a id="a36f7b6be7108281af77939ceaec42fd6"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>running</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status.html#a36f7b6be7108281af77939ceaec42fd6">running</a></td></tr>
+<tr class="memdesc:a36f7b6be7108281af77939ceaec42fd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminated or still running? <br /></td></tr>
 <tr class="separator:a36f7b6be7108281af77939ceaec42fd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23a0742ddb120a88b03c4eaa61daab72"><td class="memItemLeft" align="right" valign="top"><a id="a23a0742ddb120a88b03c4eaa61daab72"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>alive</b></td></tr>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status.html#a23a0742ddb120a88b03c4eaa61daab72">alive</a></td></tr>
+<tr class="memdesc:a23a0742ddb120a88b03c4eaa61daab72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A process may not be running but still alive (if suspended/SIGSTOP) <br /></td></tr>
 <tr class="separator:a23a0742ddb120a88b03c4eaa61daab72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7a648329da74d161c1ca57af2d654ee"><td class="memItemLeft" align="right" valign="top"><a id="ae7a648329da74d161c1ca57af2d654ee"></a>
-struct <a class="el" href="structs__proc__status_1_1details.html">s_proc_status::details</a>&#160;</td><td class="memItemRight" valign="bottom"><b>exit</b></td></tr>
+struct <a class="el" href="structs__proc__status_1_1details.html">s_proc_status::details</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status.html#ae7a648329da74d161c1ca57af2d654ee">exit</a></td></tr>
+<tr class="memdesc:ae7a648329da74d161c1ca57af2d654ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">The exit information from a terminated process. <br /></td></tr>
 <tr class="separator:ae7a648329da74d161c1ca57af2d654ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16ff309f75c10bec2bf10ab9cf62496f"><td class="memItemLeft" align="right" valign="top"><a id="a16ff309f75c10bec2bf10ab9cf62496f"></a>
-t_signal&#160;</td><td class="memItemRight" valign="bottom"><b>signumber</b></td></tr>
+t_signal&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status.html#a16ff309f75c10bec2bf10ab9cf62496f">signumber</a></td></tr>
+<tr class="memdesc:a16ff309f75c10bec2bf10ab9cf62496f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Signal that caused the termination/stop/continuation. <br /></td></tr>
 <tr class="separator:a16ff309f75c10bec2bf10ab9cf62496f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Process status structure. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>code/proc/posix/<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a></li>
 </ul>
 </div><!-- contents -->

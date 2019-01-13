@@ -1,3 +1,5 @@
 <map id="error_code_isValid" name="error_code_isValid">
-<area shape="rect" id="node2" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="183,5,295,32"/>
+<area shape="rect" id="node2" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="183,31,295,57"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594" title="Set the status type with the current status information using an error string. " alt="" coords="343,5,460,32"/>
+<area shape="rect" id="node4" href="$group___s_t_a_t_u_s.html#gab6c274376809017fe6f9447626287710" title="Get the error message that corresponds to the provided status information. " alt="" coords="343,56,459,83"/>
 </map>

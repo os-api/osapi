@@ -33,68 +33,85 @@
 //
 // *****************************************************************************************
 
+/// The PID type for a POSIX implementation
 typedef pid_t		t_pid;
+/// The signal type for a POSIX implementation
 typedef int		t_signal;
+/// The process function in a POSIX implementation
 typedef Byte 		(*t_procfunc)(void);
 
+/// The proc structure for a process in a POSIX compliant system
 struct  s_proc
 {
   // Base process properties
-  t_pid		pid;		// Process ID given by the kernel
-  t_uid		uid;		// Runtime User  ID
-  t_gid		gid;		// Runtime Group ID
-  char	*	name;		// Process name
-  size_t	nargs;		// Number of command line arguments
-  char	**	args;		// Array of command line arguments
-  size_t	nenv;		// Number of elements in the environment
-  char	**	env;		// Environment array
+  t_pid		pid;		///< Process ID given by the kernel
+  t_uid		uid;		///< Runtime User  ID
+  t_gid		gid;		///< Runtime Group ID
+  char	*	name;		///< Process name
+  size_t	nargs;		///< Number of command line arguments
+  char	**	args;		///< Array of command line arguments
+  size_t	nenv;		///< Number of elements in the environment
+  char	**	env;		///< Environment array
 
   // Process options
 
   // Process action - Function to be executed upon process creation
-  t_procfunc	func;		// Pointer to function to customize process settings (called between fork and exec)
+  t_procfunc	func;		///< Pointer to function to customize process settings (called between fork and exec)
 };
 
+/// Process type
 typedef struct s_proc		t_proc;
 
+/// Library type
 typedef void *			t_library;
 
+/// Signal action type
 typedef struct sigaction	t_sig_action;
 
+/// Signal function type
 typedef void 			(* t_sig_func)( int );
 
-// Process status
-
+/// Process status structure
 struct s_proc_status
 {
-  bool		running;	// Terminated or still running?
-  bool		alive;		// A process may not be running but still alive (if suspended/SIGSTOP)
+  bool		running;	///< Terminated or still running?
+  bool		alive;		///< A process may not be running but still alive (if suspended/SIGSTOP)
+
+  /// Process status structure that contains detail information
   struct details
   {
-   unsigned int code:8;		// Returned status of the dead process
-   unsigned int normal:1;	// Normal exit? if so them there is a status available..
-   unsigned int signal:1;	// Exit due to signal ?
-   unsigned int core:1;		// Core dump generated ?
-   unsigned int stopped:1;	// Process in stopped state
-   unsigned int cont:1;		// Process was resumed by a CONT signal
-  } exit;
+   unsigned int code:8;		///< Returned status of the dead process
+   unsigned int normal:1;	///< Normal exit? if so them there is a status available..
+   unsigned int signal:1;	///< Exit due to signal ?
+   unsigned int core:1;		///< Core dump generated ?
+   unsigned int stopped:1;	///< Process in stopped state
+   unsigned int cont:1;		///< Process was resumed by a CONT signal
+  } exit; ///< The exit information from a terminated process
 
-  t_signal	signumber;	// Signal that caused the termination/stop/continuation
+  t_signal	signumber;	///< Signal that caused the termination/stop/continuation
   // Any other
 };
 
-
+/// The process status type
 typedef struct s_proc_status	t_proc_status;
 
 // Macros for client applications to check the status of the process
+
+/// Test if a process is alived based on the process type x
 #define proc_alive( x )		(x.alive)
+/// Test if a process is running based on the process type x
 #define proc_running( x )	(x.running)
 
+/// Test if a process exited normally based on the process type x
 #define proc_exitNormal( x )	(x.exit.normal  ? 1: 0 )
+/// Test if a process exited due to a signal based on the process type x
 #define proc_exitSignal( x )	(x.exit.signal  ? 1: 0 )
+/// Test if a process core dumped based on the process type x
 #define proc_core( x )		(x.exit.core    ? 1: 0 )
 
+/// Get signal that caused process termination based on the process type x
 #define proc_getSignal( x )	(x.exit.signal  ? x.signumber: 0 )
+/// Get process exit code based on the process type x
 #define proc_getStatus( x )	(x.exit.code)
 
 

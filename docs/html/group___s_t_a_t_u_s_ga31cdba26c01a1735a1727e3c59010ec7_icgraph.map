@@ -1,0 +1,18 @@
+<map id="status_set" name="status_set">
+<area shape="rect" id="node2" href="$group___s_e_c.html#ga37da3ba800cf6b35b6d244fb7837fbf4" title="Convert a user Id to a C String. " alt="" coords="159,5,300,32"/>
+<area shape="rect" id="node3" href="$group___s_e_c.html#ga41cf0f83f743364e03738d1f0c93effa" title="Compare two user IDs. " alt="" coords="163,56,295,83"/>
+<area shape="rect" id="node4" href="$group___s_e_c.html#ga556af4f39f63edf47abd42f10065185f" title="Copy a user ID. " alt="" coords="174,107,285,133"/>
+<area shape="rect" id="node5" href="$group___s_e_c.html#ga63a7208184ffed8619948d6d697417f0" title="Get current user ID. " alt="" coords="174,157,285,184"/>
+<area shape="rect" id="node6" href="$group___s_e_c.html#ga3a5e36d459162e8102d6e62cf65f5685" title="Set current user ID. " alt="" coords="174,208,285,235"/>
+<area shape="rect" id="node7" href="$group___s_e_c.html#ga737ebb4ccc21c73549d7080b6dd07366" title="Obtain the user ID from the user Name. " alt="" coords="141,259,317,285"/>
+<area shape="rect" id="node8" href="$group___s_e_c.html#gacb212a075c839bfbcf38c9775b060169" title="Obtain the user Name from the user ID. " alt="" coords="140,309,319,336"/>
+<area shape="rect" id="node9" href="$group___s_e_c.html#ga22589469b8a5057e08bfa8c32438e469" title="Get the user groups. " alt="" coords="158,360,301,387"/>
+<area shape="rect" id="node10" href="$group___s_e_c.html#ga4f0d115f7890fdd58f04c1f4f5fd43a5" title="Convert a string into a Group ID. " alt="" coords="156,411,303,437"/>
+<area shape="rect" id="node11" href="$group___s_e_c.html#gab1ef6c8927ef5f6253cf388b08d56735" title="Convert a Group Id to a C String. " alt="" coords="155,461,303,488"/>
+<area shape="rect" id="node12" href="$group___s_e_c.html#ga5a2e136eca0f888687cc3d9658730840" title="Compare two group IDs. " alt="" coords="160,512,299,539"/>
+<area shape="rect" id="node13" href="$group___s_e_c.html#ga73949358d2972ea076a4d9848865e32f" title="Copy a group ID. " alt="" coords="171,563,288,589"/>
+<area shape="rect" id="node14" href="$group___s_e_c.html#ga12d18da2d8601ae80c9ce16567f34a48" title="Get current group ID. " alt="" coords="170,613,289,640"/>
+<area shape="rect" id="node15" href="$group___s_e_c.html#gae7697b5be44e98294f345e1b3b63437b" title="Set current group ID. " alt="" coords="170,664,289,691"/>
+<area shape="rect" id="node16" href="$group___s_e_c.html#gae07bc85be95545749333626b9cd3fecc" title="Obtain the group ID from the group Name. " alt="" coords="138,715,321,741"/>
+<area shape="rect" id="node17" href="$group___s_e_c.html#ga6b97d964bbbea41bc518bf1b14a24487" title="Obtain the group Name from the group ID. " alt="" coords="136,765,323,792"/>
+</map>

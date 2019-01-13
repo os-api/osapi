@@ -61,11 +61,17 @@ $(document).ready(function(){initNavTree('group___o_s.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">OS<div class="ingroups"><a class="el" href="group___o_s_a_p_i.html">OSAPI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The Operating System interface module.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for OS:</div>
 <div class="dyncontent">
@@ -76,40 +82,54 @@ Collaboration diagram for OS:</div>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__os_info.html">s_osInfo</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OS information structure.  <a href="structs__os_info.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gae2699d50d3e5399fad1cebc435d7b903"><td class="memItemLeft" align="right" valign="top"><a id="gae2699d50d3e5399fad1cebc435d7b903"></a>
+typedef struct <a class="el" href="structs__os_info.html">s_osInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a></td></tr>
+<tr class="memdesc:gae2699d50d3e5399fad1cebc435d7b903"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OS information type. <br /></td></tr>
+<tr class="separator:gae2699d50d3e5399fad1cebc435d7b903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga4ab526c19304713bd7922f0281f44373"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga4ab526c19304713bd7922f0281f44373">os_module_supported</a> (void)</td></tr>
+<tr class="memitem:ga4ab526c19304713bd7922f0281f44373"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga4ab526c19304713bd7922f0281f44373">os_module_supported</a> (void)</td></tr>
 <tr class="memdesc:ga4ab526c19304713bd7922f0281f44373"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares if the module is supported on the current implementation.  <a href="#ga4ab526c19304713bd7922f0281f44373">More...</a><br /></td></tr>
 <tr class="separator:ga4ab526c19304713bd7922f0281f44373"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9b2a58d250827cad7de25debd5059b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga9b2a58d250827cad7de25debd5059b1e">os_info_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info)</td></tr>
+<tr class="memitem:ga9b2a58d250827cad7de25debd5059b1e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga9b2a58d250827cad7de25debd5059b1e">os_info_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info)</td></tr>
 <tr class="memdesc:ga9b2a58d250827cad7de25debd5059b1e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Operating System information.  <a href="#ga9b2a58d250827cad7de25debd5059b1e">More...</a><br /></td></tr>
 <tr class="separator:ga9b2a58d250827cad7de25debd5059b1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga79218a0a6b7ac573ff0f5d18ea30724d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga79218a0a6b7ac573ff0f5d18ea30724d">os_name_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *p_osInfo, char **name)</td></tr>
-<tr class="memdesc:ga79218a0a6b7ac573ff0f5d18ea30724d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS name.  <a href="#ga79218a0a6b7ac573ff0f5d18ea30724d">More...</a><br /></td></tr>
-<tr class="separator:ga79218a0a6b7ac573ff0f5d18ea30724d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac40e685049caf1c674b436b37d0f2476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gac40e685049caf1c674b436b37d0f2476">os_version_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **version)</td></tr>
+<tr class="memitem:ga2a0c2de3ab72acdc01addcb207221517"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga2a0c2de3ab72acdc01addcb207221517">os_name_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **name)</td></tr>
+<tr class="memdesc:ga2a0c2de3ab72acdc01addcb207221517"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS name.  <a href="#ga2a0c2de3ab72acdc01addcb207221517">More...</a><br /></td></tr>
+<tr class="separator:ga2a0c2de3ab72acdc01addcb207221517"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac40e685049caf1c674b436b37d0f2476"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gac40e685049caf1c674b436b37d0f2476">os_version_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **version)</td></tr>
 <tr class="memdesc:gac40e685049caf1c674b436b37d0f2476"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS version.  <a href="#gac40e685049caf1c674b436b37d0f2476">More...</a><br /></td></tr>
 <tr class="separator:gac40e685049caf1c674b436b37d0f2476"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab7d4cbaca1572e4bd39e6ef3a2b38fb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gab7d4cbaca1572e4bd39e6ef3a2b38fb4">os_release_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **release)</td></tr>
+<tr class="memitem:gab7d4cbaca1572e4bd39e6ef3a2b38fb4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gab7d4cbaca1572e4bd39e6ef3a2b38fb4">os_release_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **release)</td></tr>
 <tr class="memdesc:gab7d4cbaca1572e4bd39e6ef3a2b38fb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS release.  <a href="#gab7d4cbaca1572e4bd39e6ef3a2b38fb4">More...</a><br /></td></tr>
 <tr class="separator:gab7d4cbaca1572e4bd39e6ef3a2b38fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37c267653cecb32b8525daf6bca9e3d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga37c267653cecb32b8525daf6bca9e3d6">os_node_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **nodename)</td></tr>
+<tr class="memitem:ga37c267653cecb32b8525daf6bca9e3d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga37c267653cecb32b8525daf6bca9e3d6">os_node_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **nodename)</td></tr>
 <tr class="memdesc:ga37c267653cecb32b8525daf6bca9e3d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS Node name.  <a href="#ga37c267653cecb32b8525daf6bca9e3d6">More...</a><br /></td></tr>
 <tr class="separator:ga37c267653cecb32b8525daf6bca9e3d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga12b467392238daba52803385039eab91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga12b467392238daba52803385039eab91">os_machine_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **machine)</td></tr>
+<tr class="memitem:ga12b467392238daba52803385039eab91"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga12b467392238daba52803385039eab91">os_machine_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **machine)</td></tr>
 <tr class="memdesc:ga12b467392238daba52803385039eab91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the machine name.  <a href="#ga12b467392238daba52803385039eab91">More...</a><br /></td></tr>
 <tr class="separator:ga12b467392238daba52803385039eab91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad17c82bae802f930f9b1e971bf72df63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gad17c82bae802f930f9b1e971bf72df63">os_domain_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **domainname)</td></tr>
+<tr class="memitem:gad17c82bae802f930f9b1e971bf72df63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#gad17c82bae802f930f9b1e971bf72df63">os_domain_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **domainname)</td></tr>
 <tr class="memdesc:gad17c82bae802f930f9b1e971bf72df63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the machine domain name.  <a href="#gad17c82bae802f930f9b1e971bf72df63">More...</a><br /></td></tr>
 <tr class="separator:gad17c82bae802f930f9b1e971bf72df63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga38a941e383e6ffab56b4b68393b944e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga38a941e383e6ffab56b4b68393b944e1">os_provider_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **provider)</td></tr>
+<tr class="memitem:ga38a941e383e6ffab56b4b68393b944e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga38a941e383e6ffab56b4b68393b944e1">os_provider_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **provider)</td></tr>
 <tr class="memdesc:ga38a941e383e6ffab56b4b68393b944e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the OS provider name (Vendor)  <a href="#ga38a941e383e6ffab56b4b68393b944e1">More...</a><br /></td></tr>
 <tr class="separator:ga38a941e383e6ffab56b4b68393b944e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0986b7d843ae021b48da1e0332f7df5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga0986b7d843ae021b48da1e0332f7df5e">os_providerRelease_get</a> (<a class="el" href="structs__os_info.html">t_osInfo</a> *info, char **providerRelease)</td></tr>
+<tr class="memitem:ga0986b7d843ae021b48da1e0332f7df5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___o_s.html#ga0986b7d843ae021b48da1e0332f7df5e">os_providerRelease_get</a> (<a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *info, char **providerRelease)</td></tr>
 <tr class="memdesc:ga0986b7d843ae021b48da1e0332f7df5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Vendor Release.  <a href="#ga0986b7d843ae021b48da1e0332f7df5e">More...</a><br /></td></tr>
 <tr class="separator:ga0986b7d843ae021b48da1e0332f7df5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>The Operating System interface module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="gad17c82bae802f930f9b1e971bf72df63"></a>
@@ -119,9 +139,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_domain_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_domain_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -141,12 +161,20 @@ Functions</h2></td></tr>
 <p>Get the machine domain name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>domainname - Machine domain name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">domainname</td><td>- Machine domain name </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_gad17c82bae802f930f9b1e971bf72df63_cgraph.png" border="0" usemap="#group___o_s_gad17c82bae802f930f9b1e971bf72df63_cgraph" alt=""/></div>
+<map name="group___o_s_gad17c82bae802f930f9b1e971bf72df63_cgraph" id="group___o_s_gad17c82bae802f930f9b1e971bf72df63_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="164,5,259,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -157,9 +185,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_info_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_info_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em></td><td>)</td>
           <td></td>
         </tr>
@@ -169,7 +197,7 @@ Functions</h2></td></tr>
 <p>Get the Operating System information. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Information </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Information </td></tr>
   </table>
   </dd>
 </dl>
@@ -184,9 +212,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_machine_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_machine_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -206,12 +234,20 @@ Functions</h2></td></tr>
 <p>Get the machine name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>machine - Machine name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">machine</td><td>- Machine name </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_ga12b467392238daba52803385039eab91_cgraph.png" border="0" usemap="#group___o_s_ga12b467392238daba52803385039eab91_cgraph" alt=""/></div>
+<map name="group___o_s_ga12b467392238daba52803385039eab91_cgraph" id="group___o_s_ga12b467392238daba52803385039eab91_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="171,5,265,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -222,7 +258,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_module_supported </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_module_supported </td>
           <td>(</td>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -236,17 +272,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga79218a0a6b7ac573ff0f5d18ea30724d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga79218a0a6b7ac573ff0f5d18ea30724d">&#9670;&nbsp;</a></span>os_name_get()</h2>
+<a id="ga2a0c2de3ab72acdc01addcb207221517"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a0c2de3ab72acdc01addcb207221517">&#9670;&nbsp;</a></span>os_name_get()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_name_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_name_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
-          <td class="paramname"><em>p_osInfo</em>, </td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -265,12 +301,20 @@ Functions</h2></td></tr>
 <p>Get the OS name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>name - OS name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>- OS name </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_ga2a0c2de3ab72acdc01addcb207221517_cgraph.png" border="0" usemap="#group___o_s_ga2a0c2de3ab72acdc01addcb207221517_cgraph" alt=""/></div>
+<map name="group___o_s_ga2a0c2de3ab72acdc01addcb207221517_cgraph" id="group___o_s_ga2a0c2de3ab72acdc01addcb207221517_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="153,5,248,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -281,9 +325,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_node_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_node_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -303,12 +347,20 @@ Functions</h2></td></tr>
 <p>Get the OS Node name. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>nodename - OS node name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">nodename</td><td>- OS node name </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_ga37c267653cecb32b8525daf6bca9e3d6_cgraph.png" border="0" usemap="#group___o_s_ga37c267653cecb32b8525daf6bca9e3d6_cgraph" alt=""/></div>
+<map name="group___o_s_ga37c267653cecb32b8525daf6bca9e3d6_cgraph" id="group___o_s_ga37c267653cecb32b8525daf6bca9e3d6_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="149,5,244,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -319,9 +371,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_provider_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_provider_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -341,12 +393,20 @@ Functions</h2></td></tr>
 <p>Get the OS provider name (Vendor) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>provider - Vendor name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">provider</td><td>- Vendor name </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_ga38a941e383e6ffab56b4b68393b944e1_cgraph.png" border="0" usemap="#group___o_s_ga38a941e383e6ffab56b4b68393b944e1_cgraph" alt=""/></div>
+<map name="group___o_s_ga38a941e383e6ffab56b4b68393b944e1_cgraph" id="group___o_s_ga38a941e383e6ffab56b4b68393b944e1_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="168,5,263,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -357,9 +417,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_providerRelease_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_providerRelease_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -379,12 +439,20 @@ Functions</h2></td></tr>
 <p>Get the Vendor Release. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>providerRelease - Vendor release </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">providerRelease</td><td>- Vendor release </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_ga0986b7d843ae021b48da1e0332f7df5e_cgraph.png" border="0" usemap="#group___o_s_ga0986b7d843ae021b48da1e0332f7df5e_cgraph" alt=""/></div>
+<map name="group___o_s_ga0986b7d843ae021b48da1e0332f7df5e_cgraph" id="group___o_s_ga0986b7d843ae021b48da1e0332f7df5e_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="216,5,311,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -395,9 +463,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_release_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_release_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -417,12 +485,20 @@ Functions</h2></td></tr>
 <p>Get the OS release. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>release - OS release </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">release</td><td>- OS release </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_gab7d4cbaca1572e4bd39e6ef3a2b38fb4_cgraph.png" border="0" usemap="#group___o_s_gab7d4cbaca1572e4bd39e6ef3a2b38fb4_cgraph" alt=""/></div>
+<map name="group___o_s_gab7d4cbaca1572e4bd39e6ef3a2b38fb4_cgraph" id="group___o_s_gab7d4cbaca1572e4bd39e6ef3a2b38fb4_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="164,5,259,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -433,9 +509,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structs__status.html">t_status</a> os_version_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> os_version_get </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structs__os_info.html">t_osInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="group___o_s.html#gae2699d50d3e5399fad1cebc435d7b903">t_osInfo</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -455,12 +531,20 @@ Functions</h2></td></tr>
 <p>Get the OS version. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>info - OS Info </td></tr>
-    <tr><td class="paramname">out</td><td>version - OS version </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- OS Info </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">version</td><td>- OS version </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___o_s_gac40e685049caf1c674b436b37d0f2476_cgraph.png" border="0" usemap="#group___o_s_gac40e685049caf1c674b436b37d0f2476_cgraph" alt=""/></div>
+<map name="group___o_s_gac40e685049caf1c674b436b37d0f2476_cgraph" id="group___o_s_gac40e685049caf1c674b436b37d0f2476_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="164,5,259,32"/>
+</map>
+</div>
 
 </div>
 </div>

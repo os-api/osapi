@@ -38,6 +38,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup ERROR
+/// @brief The error management module
 ///@{
 ///
 /// *****************************************************************************************
@@ -49,16 +50,16 @@ extern "C" {
 // *****************************************************************************************
 
 /// @brief Get the error string for an OSAPI module and error number
-/// @param in module number
-/// @param in error code
+/// @param [in] module - The module number
+/// @param [in] code - The error code
 /// @return Formated error string
-const char * 	error_string_get	( t_module module, t_error code	);
+const char * error_string_get( t_module module, t_error code );
 
 /// @brief Verify if a given error number is valid for the provided OSAPI module
-/// @param in module number
-/// @param in error code
+/// @param [in] module - The module number
+/// @param [in] code - The error code
 /// @return True or False
-bool 		error_code_isValid	( t_module module, t_error code	);
+bool error_code_isValid( t_module module, t_error code );
 
 // *****************************************************************************************
 //

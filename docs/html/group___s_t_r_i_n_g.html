@@ -61,11 +61,17 @@ $(document).ready(function(){initNavTree('group___s_t_r_i_n_g.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">STRING<div class="ingroups"><a class="el" href="group___o_s_a_p_i.html">OSAPI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The String module.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for STRING:</div>
 <div class="dyncontent">
@@ -76,89 +82,716 @@ Collaboration diagram for STRING:</div>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__basic__string.html">osapi_basic_string</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OSAPI C String structure.  <a href="structosapi__basic__string.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__wide__string.html">osapi_wide_string</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OSAPI C String structure for wide characters.  <a href="structosapi__wide__string.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:ga2bd14dd1a612d5e8ffed84f3a54712c7"><td class="memItemLeft" align="right" valign="top"><a id="ga2bd14dd1a612d5e8ffed84f3a54712c7"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga2bd14dd1a612d5e8ffed84f3a54712c7">OSAPI_STRING_NULL_POINTER</a>&#160;&#160;&#160;(( <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a>  *) 0)</td></tr>
+<tr class="memdesc:ga2bd14dd1a612d5e8ffed84f3a54712c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a null OSAPI string. <br /></td></tr>
+<tr class="separator:ga2bd14dd1a612d5e8ffed84f3a54712c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga90c0579efa8e0c6a2a230d18efb69231"><td class="memItemLeft" align="right" valign="top"><a id="ga90c0579efa8e0c6a2a230d18efb69231"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga90c0579efa8e0c6a2a230d18efb69231">OSAPI_WIDE_STRING_NULL_POINTER</a>&#160;&#160;&#160;(( <a class="el" href="group___s_t_r_i_n_g.html#gad77f61fe08efe71ec2be5cd9f5074598">t_wString</a> *) 0)</td></tr>
+<tr class="memdesc:ga90c0579efa8e0c6a2a230d18efb69231"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a null OSAPI wide string. <br /></td></tr>
+<tr class="separator:ga90c0579efa8e0c6a2a230d18efb69231"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae44d86109156fda75e3064eead67c6d2"><td class="memItemLeft" align="right" valign="top"><a id="gae44d86109156fda75e3064eead67c6d2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gae44d86109156fda75e3064eead67c6d2">OSAPI_WIDE_CHAR_NULL_POINTER</a>&#160;&#160;&#160;(( wchar_t   *) 0)</td></tr>
+<tr class="memdesc:gae44d86109156fda75e3064eead67c6d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define a null pointer for an array of wide characters. <br /></td></tr>
+<tr class="separator:gae44d86109156fda75e3064eead67c6d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:gabcf6d3a1a377093dffd78bc2da1ded9c"><td class="memItemLeft" align="right" valign="top"><a id="gabcf6d3a1a377093dffd78bc2da1ded9c"></a>
+typedef struct <a class="el" href="structosapi__basic__string.html">osapi_basic_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a></td></tr>
+<tr class="memdesc:gabcf6d3a1a377093dffd78bc2da1ded9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OSAPI C String type. <br /></td></tr>
+<tr class="separator:gabcf6d3a1a377093dffd78bc2da1ded9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad77f61fe08efe71ec2be5cd9f5074598"><td class="memItemLeft" align="right" valign="top"><a id="gad77f61fe08efe71ec2be5cd9f5074598"></a>
+typedef struct <a class="el" href="structosapi__wide__string.html">osapi_wide_string</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gad77f61fe08efe71ec2be5cd9f5074598">t_wString</a></td></tr>
+<tr class="memdesc:gad77f61fe08efe71ec2be5cd9f5074598"><td class="mdescLeft">&#160;</td><td class="mdescRight">The OSAPI C String type for wide characters. <br /></td></tr>
+<tr class="separator:gad77f61fe08efe71ec2be5cd9f5074598"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:gab73cd43666a01d1d992929308d5e8b65"><td class="memItemLeft" align="right" valign="top"><a id="gab73cd43666a01d1d992929308d5e8b65"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_module_supported</b> (void)</td></tr>
+<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gab73cd43666a01d1d992929308d5e8b65">string_module_supported</a> (void)</td></tr>
+<tr class="memdesc:gab73cd43666a01d1d992929308d5e8b65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the string module supported in the platform return Operation status. <br /></td></tr>
 <tr class="separator:gab73cd43666a01d1d992929308d5e8b65"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae5a46162894da5c69112486546e60d80"><td class="memItemLeft" align="right" valign="top"><a id="gae5a46162894da5c69112486546e60d80"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_new</b> (t_size, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:gae5a46162894da5c69112486546e60d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad9ff76917b5884b0366ebfd81b82fec9"><td class="memItemLeft" align="right" valign="top"><a id="gad9ff76917b5884b0366ebfd81b82fec9"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_create</b> (const char *, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:gad9ff76917b5884b0366ebfd81b82fec9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4dac89e6b37b08ebd5005149a6fef90f"><td class="memItemLeft" align="right" valign="top"><a id="ga4dac89e6b37b08ebd5005149a6fef90f"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_delete</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:ga4dac89e6b37b08ebd5005149a6fef90f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae1f08a51479144345f0965863fcfe0ff"><td class="memItemLeft" align="right" valign="top"><a id="gae1f08a51479144345f0965863fcfe0ff"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_put</b> (const char *, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:gae1f08a51479144345f0965863fcfe0ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad28c8c93e40e969d1f4b87f2d71c5e70"><td class="memItemLeft" align="right" valign="top"><a id="gad28c8c93e40e969d1f4b87f2d71c5e70"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_copy</b> (const char *, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:gad28c8c93e40e969d1f4b87f2d71c5e70"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1ed1d583a24fb1bb5a033b24604398ea"><td class="memItemLeft" align="right" valign="top"><a id="ga1ed1d583a24fb1bb5a033b24604398ea"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_size</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, t_size *)</td></tr>
-<tr class="separator:ga1ed1d583a24fb1bb5a033b24604398ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga56c2ca9105172c102908743e8a7a74df"><td class="memItemLeft" align="right" valign="top"><a id="ga56c2ca9105172c102908743e8a7a74df"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_clone</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:ga56c2ca9105172c102908743e8a7a74df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga93efbc57e7c97d2bfb702f9ea4012d78"><td class="memItemLeft" align="right" valign="top"><a id="ga93efbc57e7c97d2bfb702f9ea4012d78"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_print</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:ga93efbc57e7c97d2bfb702f9ea4012d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga96eea35f46d206c784c2e3cbde3864b4"><td class="memItemLeft" align="right" valign="top"><a id="ga96eea35f46d206c784c2e3cbde3864b4"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_get</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, t_size, char *)</td></tr>
-<tr class="separator:ga96eea35f46d206c784c2e3cbde3864b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf8c2068d8b9c57e2e6348ef3ab153f44"><td class="memItemLeft" align="right" valign="top"><a id="gaf8c2068d8b9c57e2e6348ef3ab153f44"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_equal</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *, bool *)</td></tr>
-<tr class="separator:gaf8c2068d8b9c57e2e6348ef3ab153f44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac48d0614c0e3f1987f848187e394c0d2"><td class="memItemLeft" align="right" valign="top"><a id="gac48d0614c0e3f1987f848187e394c0d2"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_compare</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *, Byte *)</td></tr>
-<tr class="separator:gac48d0614c0e3f1987f848187e394c0d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab699027743a6fbe20538c4267ab1c808"><td class="memItemLeft" align="right" valign="top"><a id="gab699027743a6fbe20538c4267ab1c808"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_compareIcase</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *, Byte *)</td></tr>
-<tr class="separator:gab699027743a6fbe20538c4267ab1c808"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3c89d069cb7176843f7e53113f49d3b1"><td class="memItemLeft" align="right" valign="top"><a id="ga3c89d069cb7176843f7e53113f49d3b1"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_basic_concat</b> (<a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *, <a class="el" href="structosapi__basic__string.html">t_string</a> *)</td></tr>
-<tr class="separator:ga3c89d069cb7176843f7e53113f49d3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gade67dc1cf74a05a12e1873d50982ec13"><td class="memItemLeft" align="right" valign="top"><a id="gade67dc1cf74a05a12e1873d50982ec13"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_new</b> (t_size size, <a class="el" href="structosapi__wide__string.html">t_wString</a> *p_string)</td></tr>
-<tr class="separator:gade67dc1cf74a05a12e1873d50982ec13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga07729ef06ef725514b9ef96f2badfcb5"><td class="memItemLeft" align="right" valign="top"><a id="ga07729ef06ef725514b9ef96f2badfcb5"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_create</b> (const wchar_t *p_initial_string, <a class="el" href="structosapi__wide__string.html">t_wString</a> *p_string)</td></tr>
-<tr class="separator:ga07729ef06ef725514b9ef96f2badfcb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab78185d12cf3725b7c832f1af1f03d93"><td class="memItemLeft" align="right" valign="top"><a id="gab78185d12cf3725b7c832f1af1f03d93"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_delete</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *p_string)</td></tr>
-<tr class="separator:gab78185d12cf3725b7c832f1af1f03d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9e5810b43ff9e538cec7e4569072462a"><td class="memItemLeft" align="right" valign="top"><a id="ga9e5810b43ff9e538cec7e4569072462a"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_put</b> (const wchar_t *message, <a class="el" href="structosapi__wide__string.html">t_wString</a> *p_string)</td></tr>
-<tr class="separator:ga9e5810b43ff9e538cec7e4569072462a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3b1f966f0c7f76b5ac5c032163029edb"><td class="memItemLeft" align="right" valign="top"><a id="ga3b1f966f0c7f76b5ac5c032163029edb"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_copy</b> (const wchar_t *, <a class="el" href="structosapi__wide__string.html">t_wString</a> *)</td></tr>
-<tr class="separator:ga3b1f966f0c7f76b5ac5c032163029edb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3c8b575f460582269cef7923825827a1"><td class="memItemLeft" align="right" valign="top"><a id="ga3c8b575f460582269cef7923825827a1"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_size</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *, t_size *)</td></tr>
-<tr class="separator:ga3c8b575f460582269cef7923825827a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa4ae78e7f1d0dfbd5b03497140ef2128"><td class="memItemLeft" align="right" valign="top"><a id="gaa4ae78e7f1d0dfbd5b03497140ef2128"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_clone</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *ps_old, <a class="el" href="structosapi__wide__string.html">t_wString</a> *ps_new)</td></tr>
-<tr class="separator:gaa4ae78e7f1d0dfbd5b03497140ef2128"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0e5ed08acbbaa392116a1ef78a78eaae"><td class="memItemLeft" align="right" valign="top"><a id="ga0e5ed08acbbaa392116a1ef78a78eaae"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_print</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *)</td></tr>
-<tr class="separator:ga0e5ed08acbbaa392116a1ef78a78eaae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaac6fbbe8266996ffda7f79e129ac168"><td class="memItemLeft" align="right" valign="top"><a id="gaaac6fbbe8266996ffda7f79e129ac168"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_get</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *, t_size, wchar_t *)</td></tr>
-<tr class="separator:gaaac6fbbe8266996ffda7f79e129ac168"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8c0a4cdafeda9819c631d0ec23cc2a51"><td class="memItemLeft" align="right" valign="top"><a id="ga8c0a4cdafeda9819c631d0ec23cc2a51"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_equal</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *, <a class="el" href="structosapi__wide__string.html">t_wString</a> *, bool *)</td></tr>
-<tr class="separator:ga8c0a4cdafeda9819c631d0ec23cc2a51"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga749cfde2536d2ab4abf58b861f01bd43"><td class="memItemLeft" align="right" valign="top"><a id="ga749cfde2536d2ab4abf58b861f01bd43"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_compare</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *, <a class="el" href="structosapi__wide__string.html">t_wString</a> *, Byte *)</td></tr>
-<tr class="separator:ga749cfde2536d2ab4abf58b861f01bd43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7bb87dd99dfea0fb89ef26250ebf0e8e"><td class="memItemLeft" align="right" valign="top"><a id="ga7bb87dd99dfea0fb89ef26250ebf0e8e"></a>
-<a class="el" href="structs__status.html">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><b>string_wide_concat</b> (<a class="el" href="structosapi__wide__string.html">t_wString</a> *, <a class="el" href="structosapi__wide__string.html">t_wString</a> *, <a class="el" href="structosapi__wide__string.html">t_wString</a> *)</td></tr>
-<tr class="separator:ga7bb87dd99dfea0fb89ef26250ebf0e8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a7bc9bd9b81fd26ebe89cae16589e95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga9a7bc9bd9b81fd26ebe89cae16589e95">string_basic_new</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:ga9a7bc9bd9b81fd26ebe89cae16589e95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new OSAPI string.  <a href="#ga9a7bc9bd9b81fd26ebe89cae16589e95">More...</a><br /></td></tr>
+<tr class="separator:ga9a7bc9bd9b81fd26ebe89cae16589e95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8efcc29facb1b40a63ef724e5500aa5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e">string_basic_create</a> (const char *cstring, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:ga8efcc29facb1b40a63ef724e5500aa5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new OSAPI string based on a C string.  <a href="#ga8efcc29facb1b40a63ef724e5500aa5e">More...</a><br /></td></tr>
+<tr class="separator:ga8efcc29facb1b40a63ef724e5500aa5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91f06c9e6cd81a11363a22d97c3452cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf">string_basic_delete</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:ga91f06c9e6cd81a11363a22d97c3452cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete an OSAPI string.  <a href="#ga91f06c9e6cd81a11363a22d97c3452cf">More...</a><br /></td></tr>
+<tr class="separator:ga91f06c9e6cd81a11363a22d97c3452cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55bd2cd0ad4a193e7b9d90a19c46bf45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga55bd2cd0ad4a193e7b9d90a19c46bf45">string_basic_put</a> (const char *cstring, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:ga55bd2cd0ad4a193e7b9d90a19c46bf45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the OSAPI string with the contents of C string.  <a href="#ga55bd2cd0ad4a193e7b9d90a19c46bf45">More...</a><br /></td></tr>
+<tr class="separator:ga55bd2cd0ad4a193e7b9d90a19c46bf45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fbc59515f2848273aadcda96586c2a6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga2fbc59515f2848273aadcda96586c2a6">string_basic_copy</a> (const char *cstring, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:ga2fbc59515f2848273aadcda96586c2a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a C string into an OSAPI string.  <a href="#ga2fbc59515f2848273aadcda96586c2a6">More...</a><br /></td></tr>
+<tr class="separator:ga2fbc59515f2848273aadcda96586c2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacbef250b772f98515daef58116e393d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gaacbef250b772f98515daef58116e393d">string_basic_size</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:gaacbef250b772f98515daef58116e393d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the OSAPI string.  <a href="#gaacbef250b772f98515daef58116e393d">More...</a><br /></td></tr>
+<tr class="separator:gaacbef250b772f98515daef58116e393d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8eb47c57afcc5db0a4334ff021d8e9f6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6">string_basic_clone</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string1, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string2)</td></tr>
+<tr class="memdesc:ga8eb47c57afcc5db0a4334ff021d8e9f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone an OSAPI string.  <a href="#ga8eb47c57afcc5db0a4334ff021d8e9f6">More...</a><br /></td></tr>
+<tr class="separator:ga8eb47c57afcc5db0a4334ff021d8e9f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf844eb39e7ded0cbbe2fdbc43cfd5036"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gaf844eb39e7ded0cbbe2fdbc43cfd5036">string_basic_print</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string)</td></tr>
+<tr class="memdesc:gaf844eb39e7ded0cbbe2fdbc43cfd5036"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print to standard output the contents of the OSAPI string.  <a href="#gaf844eb39e7ded0cbbe2fdbc43cfd5036">More...</a><br /></td></tr>
+<tr class="separator:gaf844eb39e7ded0cbbe2fdbc43cfd5036"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8fd58e02f1cd7bec442ba43bdd4db781"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga8fd58e02f1cd7bec442ba43bdd4db781">string_basic_get</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, char *cstring)</td></tr>
+<tr class="memdesc:ga8fd58e02f1cd7bec442ba43bdd4db781"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a C string from an OSAPI string.  <a href="#ga8fd58e02f1cd7bec442ba43bdd4db781">More...</a><br /></td></tr>
+<tr class="separator:ga8fd58e02f1cd7bec442ba43bdd4db781"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad649031167226d673288f6ab7a84b167"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gad649031167226d673288f6ab7a84b167">string_basic_equal</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string1, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string2, bool *result)</td></tr>
+<tr class="memdesc:gad649031167226d673288f6ab7a84b167"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if two OSAPI strings are the same.  <a href="#gad649031167226d673288f6ab7a84b167">More...</a><br /></td></tr>
+<tr class="separator:gad649031167226d673288f6ab7a84b167"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd5a2cb693881312fb617fd5faa71253"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gafd5a2cb693881312fb617fd5faa71253">string_basic_compare</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string1, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string2, <a class="el" href="group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0">Byte</a> *result)</td></tr>
+<tr class="memdesc:gafd5a2cb693881312fb617fd5faa71253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Case compare two OSAPI strings.  <a href="#gafd5a2cb693881312fb617fd5faa71253">More...</a><br /></td></tr>
+<tr class="separator:gafd5a2cb693881312fb617fd5faa71253"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa425b9a1e324dd979f9e4182a8436a6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#gaa425b9a1e324dd979f9e4182a8436a6e">string_basic_compareIcase</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string1, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string2, <a class="el" href="group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0">Byte</a> *result)</td></tr>
+<tr class="memdesc:gaa425b9a1e324dd979f9e4182a8436a6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Case insensitive comparison of two OSAPI strings.  <a href="#gaa425b9a1e324dd979f9e4182a8436a6e">More...</a><br /></td></tr>
+<tr class="separator:gaa425b9a1e324dd979f9e4182a8436a6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1233dc159a86808ab2f6c3efd2532089"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_r_i_n_g.html#ga1233dc159a86808ab2f6c3efd2532089">string_basic_concat</a> (<a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string1, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string2, <a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *string3)</td></tr>
+<tr class="memdesc:ga1233dc159a86808ab2f6c3efd2532089"><td class="mdescLeft">&#160;</td><td class="mdescRight">Concatenation of two OSAPI strings.  <a href="#ga1233dc159a86808ab2f6c3efd2532089">More...</a><br /></td></tr>
+<tr class="separator:ga1233dc159a86808ab2f6c3efd2532089"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>The String module. </p>
 <hr/>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ga8eb47c57afcc5db0a4334ff021d8e9f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8eb47c57afcc5db0a4334ff021d8e9f6">&#9670;&nbsp;</a></span>string_basic_clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_clone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clone an OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string1</td><td>- Source string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string2</td><td>- Resulting string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga8eb47c57afcc5db0a4334ff021d8e9f6_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga8eb47c57afcc5db0a4334ff021d8e9f6_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga8eb47c57afcc5db0a4334ff021d8e9f6_cgraph" id="group___s_t_r_i_n_g_ga8eb47c57afcc5db0a4334ff021d8e9f6_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="549,31,644,57"/>
+<area shape="rect" id="node3" href="group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string. " alt="" coords="184,31,319,57"/>
+<area shape="rect" id="node4" href="group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string. " alt="" coords="367,81,501,108"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gafd5a2cb693881312fb617fd5faa71253"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd5a2cb693881312fb617fd5faa71253">&#9670;&nbsp;</a></span>string_basic_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_compare </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0">Byte</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Case compare two OSAPI strings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string1</td><td>- First string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string2</td><td>- Second string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>- True if the strings are identical. False otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_gafd5a2cb693881312fb617fd5faa71253_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_gafd5a2cb693881312fb617fd5faa71253_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_gafd5a2cb693881312fb617fd5faa71253_cgraph" id="group___s_t_r_i_n_g_gafd5a2cb693881312fb617fd5faa71253_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="203,5,297,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaa425b9a1e324dd979f9e4182a8436a6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa425b9a1e324dd979f9e4182a8436a6e">&#9670;&nbsp;</a></span>string_basic_compareIcase()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_compareIcase </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0">Byte</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Case insensitive comparison of two OSAPI strings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string1</td><td>- First string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string2</td><td>- Second string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>- True if the strings are identical. False otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_gaa425b9a1e324dd979f9e4182a8436a6e_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_gaa425b9a1e324dd979f9e4182a8436a6e_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_gaa425b9a1e324dd979f9e4182a8436a6e_cgraph" id="group___s_t_r_i_n_g_gaa425b9a1e324dd979f9e4182a8436a6e_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="235,5,329,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga1233dc159a86808ab2f6c3efd2532089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1233dc159a86808ab2f6c3efd2532089">&#9670;&nbsp;</a></span>string_basic_concat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_concat </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string3</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Concatenation of two OSAPI strings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string1</td><td>- First string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string2</td><td>- Second string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string3</td><td>- Concatenated string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga1233dc159a86808ab2f6c3efd2532089_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga1233dc159a86808ab2f6c3efd2532089_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga1233dc159a86808ab2f6c3efd2532089_cgraph" id="group___s_t_r_i_n_g_ga1233dc159a86808ab2f6c3efd2532089_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="375,5,469,32"/>
+<area shape="rect" id="node3" href="group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string. " alt="" coords="192,31,327,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga2fbc59515f2848273aadcda96586c2a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fbc59515f2848273aadcda96586c2a6">&#9670;&nbsp;</a></span>string_basic_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_copy </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cstring</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy from a C string into an OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cstring</td><td>- The source C string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string</td><td>- The resulting OSAPI string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga8efcc29facb1b40a63ef724e5500aa5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8efcc29facb1b40a63ef724e5500aa5e">&#9670;&nbsp;</a></span>string_basic_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cstring</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new OSAPI string based on a C string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cstring</td><td>- The C string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string</td><td>- The resulting OSAPI string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_cgraph" id="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="371,5,465,32"/>
+<area shape="rect" id="node3" href="group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string. " alt="" coords="188,31,323,57"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_icgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_icgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_icgraph" id="group___s_t_r_i_n_g_ga8efcc29facb1b40a63ef724e5500aa5e_icgraph">
+<area shape="rect" id="node2" href="group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string. " alt="" coords="188,5,319,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga91f06c9e6cd81a11363a22d97c3452cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91f06c9e6cd81a11363a22d97c3452cf">&#9670;&nbsp;</a></span>string_basic_delete()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_delete </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Delete an OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>- The string to delete </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_cgraph" id="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="188,5,283,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_icgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_icgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_icgraph" id="group___s_t_r_i_n_g_ga91f06c9e6cd81a11363a22d97c3452cf_icgraph">
+<area shape="rect" id="node2" href="group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string. " alt="" coords="190,5,325,32"/>
+<area shape="rect" id="node4" href="group___s_t_r_i_n_g.html#ga1233dc159a86808ab2f6c3efd2532089" title="Concatenation of two OSAPI strings. " alt="" coords="188,56,327,83"/>
+<area shape="rect" id="node3" href="group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string. " alt="" coords="375,5,505,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gad649031167226d673288f6ab7a84b167"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad649031167226d673288f6ab7a84b167">&#9670;&nbsp;</a></span>string_basic_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_equal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if two OSAPI strings are the same. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string1</td><td>- First string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">string2</td><td>- Second string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>- True if the strings are equal. False otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_gad649031167226d673288f6ab7a84b167_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_gad649031167226d673288f6ab7a84b167_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_gad649031167226d673288f6ab7a84b167_cgraph" id="group___s_t_r_i_n_g_gad649031167226d673288f6ab7a84b167_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="184,5,279,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga8fd58e02f1cd7bec442ba43bdd4db781"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fd58e02f1cd7bec442ba43bdd4db781">&#9670;&nbsp;</a></span>string_basic_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>cstring</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get a C string from an OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>- OSAPI string </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- Size of the C string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">cstring</td><td>- Resulting C string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga8fd58e02f1cd7bec442ba43bdd4db781_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga8fd58e02f1cd7bec442ba43bdd4db781_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga8fd58e02f1cd7bec442ba43bdd4db781_cgraph" id="group___s_t_r_i_n_g_ga8fd58e02f1cd7bec442ba43bdd4db781_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="171,5,265,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga9a7bc9bd9b81fd26ebe89cae16589e95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a7bc9bd9b81fd26ebe89cae16589e95">&#9670;&nbsp;</a></span>string_basic_new()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_new </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- The memory allocate to the new string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string</td><td>- Address of the new string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga9a7bc9bd9b81fd26ebe89cae16589e95_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga9a7bc9bd9b81fd26ebe89cae16589e95_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga9a7bc9bd9b81fd26ebe89cae16589e95_cgraph" id="group___s_t_r_i_n_g_ga9a7bc9bd9b81fd26ebe89cae16589e95_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="176,5,271,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaf844eb39e7ded0cbbe2fdbc43cfd5036"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf844eb39e7ded0cbbe2fdbc43cfd5036">&#9670;&nbsp;</a></span>string_basic_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Print to standard output the contents of the OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>- OSAPI string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_gaf844eb39e7ded0cbbe2fdbc43cfd5036_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_gaf844eb39e7ded0cbbe2fdbc43cfd5036_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_gaf844eb39e7ded0cbbe2fdbc43cfd5036_cgraph" id="group___s_t_r_i_n_g_gaf844eb39e7ded0cbbe2fdbc43cfd5036_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="177,5,272,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga55bd2cd0ad4a193e7b9d90a19c46bf45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55bd2cd0ad4a193e7b9d90a19c46bf45">&#9670;&nbsp;</a></span>string_basic_put()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_put </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cstring</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the OSAPI string with the contents of C string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cstring</td><td>- The source C string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">string</td><td>- The resulting OSAPI string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_ga55bd2cd0ad4a193e7b9d90a19c46bf45_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_ga55bd2cd0ad4a193e7b9d90a19c46bf45_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_ga55bd2cd0ad4a193e7b9d90a19c46bf45_cgraph" id="group___s_t_r_i_n_g_ga55bd2cd0ad4a193e7b9d90a19c46bf45_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="171,5,265,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gaacbef250b772f98515daef58116e393d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaacbef250b772f98515daef58116e393d">&#9670;&nbsp;</a></span>string_basic_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> string_basic_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_r_i_n_g.html#gabcf6d3a1a377093dffd78bc2da1ded9c">t_string</a> *&#160;</td>
+          <td class="paramname"><em>string</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the size of the OSAPI string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">string</td><td>- The OSAPI string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>- The size of the OSAPI string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_r_i_n_g_gaacbef250b772f98515daef58116e393d_cgraph.png" border="0" usemap="#group___s_t_r_i_n_g_gaacbef250b772f98515daef58116e393d_cgraph" alt=""/></div>
+<map name="group___s_t_r_i_n_g_gaacbef250b772f98515daef58116e393d_cgraph" id="group___s_t_r_i_n_g_gaacbef250b772f98515daef58116e393d_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="176,5,271,32"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

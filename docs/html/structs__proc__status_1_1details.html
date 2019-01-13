@@ -66,29 +66,42 @@ $(document).ready(function(){initNavTree('structs__proc__status_1_1details.html'
 <div class="title">s_proc_status::details Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Process status structure that contains detail information.  
+ <a href="structs__proc__status_1_1details.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:af4be217d83e530d187f8024a46bdf7ae"><td class="memItemLeft" align="right" valign="top"><a id="af4be217d83e530d187f8024a46bdf7ae"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>code</b>:8</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#af4be217d83e530d187f8024a46bdf7ae">code</a>:8</td></tr>
+<tr class="memdesc:af4be217d83e530d187f8024a46bdf7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned status of the dead process. <br /></td></tr>
 <tr class="separator:af4be217d83e530d187f8024a46bdf7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b364904dcb7c5d729eb79a10bb0dd44"><td class="memItemLeft" align="right" valign="top"><a id="a7b364904dcb7c5d729eb79a10bb0dd44"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>normal</b>:1</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#a7b364904dcb7c5d729eb79a10bb0dd44">normal</a>:1</td></tr>
+<tr class="memdesc:a7b364904dcb7c5d729eb79a10bb0dd44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Normal exit? if so them there is a status available.. <br /></td></tr>
 <tr class="separator:a7b364904dcb7c5d729eb79a10bb0dd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a871cf9f1468e2d9f424f88c1ad1ff649"><td class="memItemLeft" align="right" valign="top"><a id="a871cf9f1468e2d9f424f88c1ad1ff649"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>signal</b>:1</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#a871cf9f1468e2d9f424f88c1ad1ff649">signal</a>:1</td></tr>
+<tr class="memdesc:a871cf9f1468e2d9f424f88c1ad1ff649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exit due to signal ? <br /></td></tr>
 <tr class="separator:a871cf9f1468e2d9f424f88c1ad1ff649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c1cfa9f576e7699e50e493ad84ce434"><td class="memItemLeft" align="right" valign="top"><a id="a9c1cfa9f576e7699e50e493ad84ce434"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>core</b>:1</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#a9c1cfa9f576e7699e50e493ad84ce434">core</a>:1</td></tr>
+<tr class="memdesc:a9c1cfa9f576e7699e50e493ad84ce434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Core dump generated ? <br /></td></tr>
 <tr class="separator:a9c1cfa9f576e7699e50e493ad84ce434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5361f3d1465d9410c1bad41cfdfe8db3"><td class="memItemLeft" align="right" valign="top"><a id="a5361f3d1465d9410c1bad41cfdfe8db3"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>stopped</b>:1</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#a5361f3d1465d9410c1bad41cfdfe8db3">stopped</a>:1</td></tr>
+<tr class="memdesc:a5361f3d1465d9410c1bad41cfdfe8db3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process in stopped state. <br /></td></tr>
 <tr class="separator:a5361f3d1465d9410c1bad41cfdfe8db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7dacf28e9dac44aaa2c15e75ff635bf"><td class="memItemLeft" align="right" valign="top"><a id="ac7dacf28e9dac44aaa2c15e75ff635bf"></a>
-unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>cont</b>:1</td></tr>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__status_1_1details.html#ac7dacf28e9dac44aaa2c15e75ff635bf">cont</a>:1</td></tr>
+<tr class="memdesc:ac7dacf28e9dac44aaa2c15e75ff635bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process was resumed by a CONT signal. <br /></td></tr>
 <tr class="separator:ac7dacf28e9dac44aaa2c15e75ff635bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Process status structure that contains detail information. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>code/proc/posix/<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a></li>
 </ul>
 </div><!-- contents -->

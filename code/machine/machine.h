@@ -35,6 +35,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup MACHINE
+/// @brief The machine management module
 ///@{
 ///
 /// *****************************************************************************************
@@ -51,33 +52,33 @@ extern "C" {
 
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
-t_status	machine_module_supported	( void					);
+t_status machine_module_supported( void	);
 
 // Host name related calls
 
 /// @brief Obtain the machine hostname
-/// @param in Size of C-String
-/// @param out Hostname
+/// @param [in] maxlen - The size of C-String
+/// @param [out] hostname - The name of the machine
 /// @return Operation status
-t_status	machine_host_getName		( t_size maxlen, t_char * hostname	);
+t_status machine_host_getName( t_size maxlen, t_char * hostname	);
 
 /// @brief Set the machine hostname
-/// @param in New hostname
+/// @param [in] hostname - New hostname
 /// @return Operation status
-t_status	machine_host_setName		( t_char * hostname			);
+t_status machine_host_setName( t_char * hostname );
 
 // Domain name related calls
 
 /// @brief Get the machine domain name
-/// @param in Size of C-String
-/// @param in Domain name
+/// @param [in] maxlen - The size of C-String
+/// @param [out] domainname - The name of the machine domain
 /// @return Operation status
-t_status	machine_domain_getName		( t_size maxlen, t_char * hostname	);
+t_status machine_domain_getName( t_size maxlen, t_char * domainname );
 
 /// @brief Set the machine domain name
-/// @param in New domain name
+/// @param [in] domainname - New domain name
 /// @return Operation status
-t_status	machine_domain_setName		( t_char * hostname			);
+t_status machine_domain_setName( t_char * domainname );
 
 // HW related
 /*
@@ -94,17 +95,17 @@ t_status	machine_disks_getTotal
 // IP related
 
 /// @brief Obtain the number of IPs for the given protocol
-/// @param in IP protocol (IPv4/6 or all)
-/// @param out Number of machine IPs
+/// @param [in] selector - The IP protocol (IPv4/6 or all)
+/// @param [out] number - Number of machine IPs matching the selector
 /// @return Operation status
-t_status	machine_ip_getNumber		( t_protocol selector, t_size * number			);
+t_status machine_ip_getNumber( t_protocol selector, t_size * number );
 
 /// @brief Retrieves a list containing the machine IPs
-/// @param in IP protocol (IPv4/6 or all)
-/// @param in Size of the IP List
-/// @param out IP list
+/// @param [in] selector - The IP protocol (IPv4/6 or all)
+/// @param [in] number - The maximum size of the IP List
+/// @param [out] list - The machine IPs
 /// @return Operation status
-t_status	machine_ip_getList		( t_protocol selector, t_size number, t_ip * list	);
+t_status machine_ip_getList( t_protocol selector, t_size number, t_ip * list );
 
 
 

@@ -1,5 +1,30 @@
 var group___p_r_o_c =
 [
+    [ "s_proc_id", "structs__proc__id.html", [
+      [ "name", "structs__proc__id.html#ad9c747aeade1f77b30a4393a4be2a1be", null ],
+      [ "pgrp", "structs__proc__id.html#a89bc50b5502d5ff64c4d74f890a126b3", null ],
+      [ "pid", "structs__proc__id.html#ad0677a1f0dfe2d6a3e054058e42540d0", null ],
+      [ "ppid", "structs__proc__id.html#a8e31342cff764cfc2ca6e95d842fea71", null ],
+      [ "session", "structs__proc__id.html#a27e836bd51171696aa2cbca39c9f2ce5", null ],
+      [ "tpgid", "structs__proc__id.html#a5e88596aab389563d1e4ed263d493cd2", null ]
+    ] ],
+    [ "s_proc_resources", "structs__proc__resources.html", [
+      [ "num_threads", "structs__proc__resources.html#ab8ddf452eb3401ae9ba346ecb4e84919", null ],
+      [ "ram", "structs__proc__resources.html#a365cd0ac3c92eccc26059bda7268d431", null ],
+      [ "stime", "structs__proc__resources.html#ae75762ec3adab1cffe2b380a52312094", null ],
+      [ "utime", "structs__proc__resources.html#a2807ec20ca4f4eb91c06842ede23ae5a", null ],
+      [ "vsize", "structs__proc__resources.html#aedfe578a4cfb31bad3ee52126cea8929", null ]
+    ] ],
+    [ "s_proc_info", "structs__proc__info.html", [
+      [ "args", "structs__proc__info.html#aa24f72e6a4d6a997528142211b375496", null ],
+      [ "id", "structs__proc__info.html#aa20c74a888413f1e5eb934215d452112", null ],
+      [ "resources", "structs__proc__info.html#ad56cadc2b4b8f0b4b29efb7d58272182", null ],
+      [ "starttime", "structs__proc__info.html#a2a6c54dcdbeb16bb2e1676a4abf4a4d8", null ],
+      [ "state", "structs__proc__info.html#afc09df66e4e1131bad27f84d29bd8726", null ]
+    ] ],
+    [ "t_proc_id", "group___p_r_o_c.html#gacf27d03398422c4f9e9438de14ac61b2", null ],
+    [ "t_proc_info", "group___p_r_o_c.html#ga92277722dee15f73e8de63b1f4f9aaa0", null ],
+    [ "t_proc_resources", "group___p_r_o_c.html#ga7bf409ee3dca12d3da4acfb6b2ff2770", null ],
     [ "proc_data_setCmdLine", "group___p_r_o_c.html#ga19270c4ef1cdded8d5d991921be5dc19", null ],
     [ "proc_data_setEnvironment", "group___p_r_o_c.html#gad81668bfdeac438927d3154e2666a092", null ],
     [ "proc_data_setGroup", "group___p_r_o_c.html#ga0baff383f9476d35a85ba2fb2f5a7da9", null ],
@@ -18,7 +43,7 @@ var group___p_r_o_c =
     [ "proc_instance_getChildStatus", "group___p_r_o_c.html#ga54da94d4dc39c7157eff983240afe5a2", null ],
     [ "proc_instance_getNumberOfDescendents", "group___p_r_o_c.html#gaf2ff6406fe1091889d2e54325d3f2fdf", null ],
     [ "proc_instance_getStatus", "group___p_r_o_c.html#gab19fcb557ca9a9cf8cd74e3f683c12a7", null ],
-    [ "proc_instance_isRunning", "group___p_r_o_c.html#ga160600d5a17f344876bf28f09ac7b157", null ],
+    [ "proc_instance_isRunning", "group___p_r_o_c.html#ga97903214e87dc1a22c64e35e6fa66aac", null ],
     [ "proc_instance_suspendExecution", "group___p_r_o_c.html#gafa078c64b33f1c4d7798fb69386662a1", null ],
     [ "proc_instance_terminate", "group___p_r_o_c.html#ga27cf67e6f59c7ddca6833e0e30fcc115", null ],
     [ "proc_library_load", "group___p_r_o_c.html#ga87fd88644614d224ef9b98bf8ef5e49f", null ],
@@ -39,7 +64,7 @@ var group___p_r_o_c =
     [ "proc_signal_setHandlerByName", "group___p_r_o_c.html#ga346a334c7e93d9eb48c865f0fd25cfaa", null ],
     [ "proc_signal_supported", "group___p_r_o_c.html#ga712c42828e2df3e1c7402a760b024fbb", null ],
     [ "proc_usage_getCPU", "group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc", null ],
-    [ "proc_usage_getRealMemory", "group___p_r_o_c.html#ga1d5868b50b883fa4b57279834c7f5e91", null ],
+    [ "proc_usage_getRealMemory", "group___p_r_o_c.html#ga4e33257245a1a4eac61e1744284c06d3", null ],
     [ "proc_usage_getThreads", "group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62", null ],
     [ "proc_usage_getVirtualMemory", "group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7", null ]
 ];

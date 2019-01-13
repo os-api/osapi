@@ -66,38 +66,54 @@ $(document).ready(function(){initNavTree('structs__proc.html','');});
 <div class="title">s_proc Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The proc structure for a process in a POSIX compliant system.  
+ <a href="structs__proc.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:ad0677a1f0dfe2d6a3e054058e42540d0"><td class="memItemLeft" align="right" valign="top"><a id="ad0677a1f0dfe2d6a3e054058e42540d0"></a>
-t_pid&#160;</td><td class="memItemRight" valign="bottom"><b>pid</b></td></tr>
+t_pid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#ad0677a1f0dfe2d6a3e054058e42540d0">pid</a></td></tr>
+<tr class="memdesc:ad0677a1f0dfe2d6a3e054058e42540d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process ID given by the kernel. <br /></td></tr>
 <tr class="separator:ad0677a1f0dfe2d6a3e054058e42540d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6ad44d9a0ad0ba7653d70ea47f5fe38"><td class="memItemLeft" align="right" valign="top"><a id="ac6ad44d9a0ad0ba7653d70ea47f5fe38"></a>
-t_uid&#160;</td><td class="memItemRight" valign="bottom"><b>uid</b></td></tr>
+t_uid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#ac6ad44d9a0ad0ba7653d70ea47f5fe38">uid</a></td></tr>
+<tr class="memdesc:ac6ad44d9a0ad0ba7653d70ea47f5fe38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime User ID. <br /></td></tr>
 <tr class="separator:ac6ad44d9a0ad0ba7653d70ea47f5fe38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ba3e68718ade11c57de3edc244664ff"><td class="memItemLeft" align="right" valign="top"><a id="a3ba3e68718ade11c57de3edc244664ff"></a>
-t_gid&#160;</td><td class="memItemRight" valign="bottom"><b>gid</b></td></tr>
+t_gid&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#a3ba3e68718ade11c57de3edc244664ff">gid</a></td></tr>
+<tr class="memdesc:a3ba3e68718ade11c57de3edc244664ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runtime Group ID. <br /></td></tr>
 <tr class="separator:a3ba3e68718ade11c57de3edc244664ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ac083a645d964373f022d03df4849c8"><td class="memItemLeft" align="right" valign="top"><a id="a5ac083a645d964373f022d03df4849c8"></a>
-char *&#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
+char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#a5ac083a645d964373f022d03df4849c8">name</a></td></tr>
+<tr class="memdesc:a5ac083a645d964373f022d03df4849c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Process name. <br /></td></tr>
 <tr class="separator:a5ac083a645d964373f022d03df4849c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85ff95a15eb9f663ae1b10b912de587f"><td class="memItemLeft" align="right" valign="top"><a id="a85ff95a15eb9f663ae1b10b912de587f"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nargs</b></td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#a85ff95a15eb9f663ae1b10b912de587f">nargs</a></td></tr>
+<tr class="memdesc:a85ff95a15eb9f663ae1b10b912de587f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of command line arguments. <br /></td></tr>
 <tr class="separator:a85ff95a15eb9f663ae1b10b912de587f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24f72e6a4d6a997528142211b375496"><td class="memItemLeft" align="right" valign="top"><a id="aa24f72e6a4d6a997528142211b375496"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
+char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#aa24f72e6a4d6a997528142211b375496">args</a></td></tr>
+<tr class="memdesc:aa24f72e6a4d6a997528142211b375496"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of command line arguments. <br /></td></tr>
 <tr class="separator:aa24f72e6a4d6a997528142211b375496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2470bebb396655780a9651535d5672ef"><td class="memItemLeft" align="right" valign="top"><a id="a2470bebb396655780a9651535d5672ef"></a>
-size_t&#160;</td><td class="memItemRight" valign="bottom"><b>nenv</b></td></tr>
+size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#a2470bebb396655780a9651535d5672ef">nenv</a></td></tr>
+<tr class="memdesc:a2470bebb396655780a9651535d5672ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of elements in the environment. <br /></td></tr>
 <tr class="separator:a2470bebb396655780a9651535d5672ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a45c1547b79d23d508a01a427c3171ca4"><td class="memItemLeft" align="right" valign="top"><a id="a45c1547b79d23d508a01a427c3171ca4"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>env</b></td></tr>
+char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#a45c1547b79d23d508a01a427c3171ca4">env</a></td></tr>
+<tr class="memdesc:a45c1547b79d23d508a01a427c3171ca4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Environment array. <br /></td></tr>
 <tr class="separator:a45c1547b79d23d508a01a427c3171ca4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa348a7e8c8f50becd20741942ddf5ff6"><td class="memItemLeft" align="right" valign="top"><a id="aa348a7e8c8f50becd20741942ddf5ff6"></a>
-t_procfunc&#160;</td><td class="memItemRight" valign="bottom"><b>func</b></td></tr>
+t_procfunc&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc.html#aa348a7e8c8f50becd20741942ddf5ff6">func</a></td></tr>
+<tr class="memdesc:aa348a7e8c8f50becd20741942ddf5ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to function to customize process settings (called between fork and exec) <br /></td></tr>
 <tr class="separator:aa348a7e8c8f50becd20741942ddf5ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The proc structure for a process in a POSIX compliant system. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>code/proc/posix/<a class="el" href="proc__posix__types_8h_source.html">proc_posix_types.h</a></li>
 </ul>
 </div><!-- contents -->

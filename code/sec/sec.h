@@ -37,6 +37,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup SEC
+/// @brief The Security module
 ///@{
 ///
 /// *****************************************************************************************
@@ -50,8 +51,9 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-// Functions bellow
-t_status sec_module_supported		( void											);
+/// @brief Is the Security module supported in the platform
+/// return Operation status
+t_status sec_module_supported( void );
 
 #pragma GCC visibility pop			// End of public interface
 

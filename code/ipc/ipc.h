@@ -35,6 +35,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup IPC
+/// @brief The Inter-Process communication module
 ///@{
 ///
 /// *****************************************************************************************
@@ -49,43 +50,43 @@ extern "C" {
 
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
-t_status	ipc_module_supported	( void								);
+t_status ipc_module_supported( void );
 
 // Functions dealing with semaphores
 /// @brief Create an IPC semaphore
-/// @param in Semaphore key
-/// @param in Semaphore value
-/// @param in Semaphore options
-/// @param out Semaphore ID
+/// @param [in] key - Semaphore key
+/// @param [in] sem_value - Semaphore value
+/// @param [in] sem_options - Semaphore options
+/// @param [out] semid - Semaphore ID
 /// @return Operation status
-t_status	ipc_semaphore_create	( key_t key, int sem_value, int sem_options, int * semid	);
+t_status ipc_semaphore_create( key_t key, int sem_value, int sem_options, int * semid );
 
-/// @brief Destroys the semaphore identified by <semid>
-/// @param in Semaphore ID
+/// @brief Destroys the semaphore identified by "semid"
+/// @param [in] semid - Semaphore ID
 /// @return Operation status
-t_status	ipc_semaphore_destroy	( int semid							);
+t_status ipc_semaphore_destroy( int semid );
 
-/// @brief Returns the semaphore ID for the provided sempahore key
-/// @param in Semaphore key
-/// @param out Semaphore ID
+/// @brief Returns the semaphore ID for the provided semaphore key
+/// @param [in] key - Semaphore key
+/// @param [out] semid - Semaphore ID
 /// @return Operation status
-t_status	ipc_semaphore_open	( key_t key, int * p_semid 					);
+t_status ipc_semaphore_open( key_t key, int * semid );
 
 /// @brief Locks a given semaphore
-/// @param in Semaphore ID
+/// @param [in] semid - Semaphore ID
 /// @return Operation status
-t_status	ipc_semaphore_lock	( int semid 							);
+t_status ipc_semaphore_lock( int semid );
 
 /// @brief Unlocks a given semaphore
-/// @param in Semaphore ID
+/// @param [in] semid - Semaphore ID
 /// @return Operation status
-t_status	ipc_semaphore_unlock	( int semid 							);
+t_status ipc_semaphore_unlock( int semid );
 
 /// @brief Obtains the semaphore value that corresponds to the given ID
-/// @param in Semaphore ID
-/// @param out Semaphore value
+/// @param [in] semid - Semaphore ID
+/// @param [out] value - Semaphore value
 /// @return Operation status
-t_status	ipc_semaphore_getValue	( int semid, int * p_value					);
+t_status ipc_semaphore_getValue( int semid, int * value );
 
 
 #pragma GCC visibility pop			// End of public interface

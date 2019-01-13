@@ -39,6 +39,15 @@
 #include "error/private/error_priv_util.h"
 
 
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup ERROR
+///@{
+///
+/// *****************************************************************************************
+
 
 // *****************************************************************************************
 //
@@ -48,17 +57,18 @@
 
 // Generic error definitions
 
+/// Auxiliary structure for a successful status
 static const char * error_none [] =
 {
   "Success",
   NULL
 };
 
-
+/// Auxiliary structure that helps in the definition of the maximum error code in each module
 struct s_osapi_errors
 {
-  t_error 		topValue;
-  const char ** 	name;
+  t_error 		topValue;	///< The maximum error value in a module
+  const char ** 	name;		///< The error string that corresponds to the maximum error value
 };
 
 static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
@@ -75,5 +85,9 @@ static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
 	    { e_net_max,	net_errors	},
 };
 
+
+
+///@}
+///@}
 
 #endif /* OSAPI_ERROR_PRIV_H_ */

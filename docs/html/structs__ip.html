@@ -66,33 +66,44 @@ $(document).ready(function(){initNavTree('structs__ip.html','');});
 <div class="title">s_ip Struct Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Structure to support IP information.  
+ <a href="structs__ip.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="common__types__ip_8h_source.html">common_types_ip.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for s_ip:</div>
 <div class="dyncontent">
 <div class="center"><img src="structs__ip__coll__graph.png" border="0" usemap="#s__ip_coll__map" alt="Collaboration graph"/></div>
 <map name="s__ip_coll__map" id="s__ip_coll__map">
-<area shape="rect" id="node2" href="unionu__ip__address.html" title="u_ip_address" alt="" coords="13,184,111,211"/>
-<area shape="rect" id="node3" href="unionu__ipv4__address.html" title="u_ipv4_address" alt="" coords="5,95,119,121"/>
-<area shape="rect" id="node4" href="structs__ipv4__address.html" title="s_ipv4_address" alt="" coords="5,5,119,32"/>
+<area shape="rect" id="node2" href="unionu__ip__address.html" title="Union of IPv4/v6 addresses. " alt="" coords="13,184,111,211"/>
+<area shape="rect" id="node3" href="unionu__ipv4__address.html" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses. " alt="" coords="5,95,119,121"/>
+<area shape="rect" id="node4" href="structs__ipv4__address.html" title="Structure for a structured IPv4 address. " alt="" coords="5,5,119,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aa936a8536476f83116ea32d702db8bea"><td class="memItemLeft" align="right" valign="top"><a id="aa936a8536476f83116ea32d702db8bea"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>interface_name</b> [OSAPI_INTERFACE_MAX_NAME_SIZE]</td></tr>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__ip.html#aa936a8536476f83116ea32d702db8bea">interface_name</a> [OSAPI_INTERFACE_MAX_NAME_SIZE]</td></tr>
+<tr class="memdesc:aa936a8536476f83116ea32d702db8bea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface name. <br /></td></tr>
 <tr class="separator:aa936a8536476f83116ea32d702db8bea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b234cf1e5b2037e717de1220c0abea"><td class="memItemLeft" align="right" valign="top"><a id="a18b234cf1e5b2037e717de1220c0abea"></a>
-t_protocol&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b></td></tr>
+<a class="el" href="group___g_e_n_e_r_a_l.html#gadefc37638d0cbab5b1f053e2e6e09f91">t_protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__ip.html#a18b234cf1e5b2037e717de1220c0abea">protocol</a></td></tr>
+<tr class="memdesc:a18b234cf1e5b2037e717de1220c0abea"><td class="mdescLeft">&#160;</td><td class="mdescRight">V4/V6 IP protocol. <br /></td></tr>
 <tr class="separator:a18b234cf1e5b2037e717de1220c0abea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a606387563ff4b6159deae9be9c36114e"><td class="memItemLeft" align="right" valign="top"><a id="a606387563ff4b6159deae9be9c36114e"></a>
-<a class="el" href="unionu__ip__address.html">t_ip_address</a>&#160;</td><td class="memItemRight" valign="bottom"><b>address</b></td></tr>
+<a class="el" href="unionu__ip__address.html">t_ip_address</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__ip.html#a606387563ff4b6159deae9be9c36114e">address</a></td></tr>
+<tr class="memdesc:a606387563ff4b6159deae9be9c36114e"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP address. <br /></td></tr>
 <tr class="separator:a606387563ff4b6159deae9be9c36114e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf1691c5b6bde8fef0d9e0c913080791"><td class="memItemLeft" align="right" valign="top"><a id="acf1691c5b6bde8fef0d9e0c913080791"></a>
-t_address_type&#160;</td><td class="memItemRight" valign="bottom"><b>type_target</b></td></tr>
+t_address_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__ip.html#acf1691c5b6bde8fef0d9e0c913080791">type_target</a></td></tr>
+<tr class="memdesc:acf1691c5b6bde8fef0d9e0c913080791"><td class="mdescLeft">&#160;</td><td class="mdescRight">BroadCast / PtP target address. <br /></td></tr>
 <tr class="separator:acf1691c5b6bde8fef0d9e0c913080791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Structure to support IP information. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>code/common/types/<a class="el" href="common__types__ip_8h_source.html">common_types_ip.h</a></li>
 </ul>
 </div><!-- contents -->

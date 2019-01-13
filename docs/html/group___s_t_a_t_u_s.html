@@ -61,11 +61,16 @@ $(document).ready(function(){initNavTree('group___s_t_a_t_u_s.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">STATUS<div class="ingroups"><a class="el" href="group___o_s_a_p_i.html">OSAPI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The OSAPI status module.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for STATUS:</div>
 <div class="dyncontent">
@@ -76,35 +81,459 @@ Collaboration diagram for STATUS:</div>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__status.html">s_status</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of opaque status type.  <a href="structs__status.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:ga288cc77c09bd4204fc6c5f3e7d09e247"><td class="memItemLeft" align="right" valign="top"><a id="ga288cc77c09bd4204fc6c5f3e7d09e247"></a>
+typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247">t_status_type</a></td></tr>
+<tr class="memdesc:ga288cc77c09bd4204fc6c5f3e7d09e247"><td class="mdescLeft">&#160;</td><td class="mdescRight">Library identifier type (OSAPI, libc, etc.) <br /></td></tr>
+<tr class="separator:ga288cc77c09bd4204fc6c5f3e7d09e247"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga835f63807d42ad30134dcd2118b12f57"><td class="memItemLeft" align="right" valign="top"><a id="ga835f63807d42ad30134dcd2118b12f57"></a>
+typedef const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga835f63807d42ad30134dcd2118b12f57">t_status_string</a></td></tr>
+<tr class="memdesc:ga835f63807d42ad30134dcd2118b12f57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Error string type. <br /></td></tr>
+<tr class="separator:ga835f63807d42ad30134dcd2118b12f57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga53e23a5af8aeda0ea01a65fac7eee6e8"><td class="memItemLeft" align="right" valign="top"><a id="ga53e23a5af8aeda0ea01a65fac7eee6e8"></a>
+typedef const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8">t_status_funcname</a></td></tr>
+<tr class="memdesc:ga53e23a5af8aeda0ea01a65fac7eee6e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function name type. <br /></td></tr>
+<tr class="separator:ga53e23a5af8aeda0ea01a65fac7eee6e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga672305f4bed0424144c022647762b65d"><td class="memItemLeft" align="right" valign="top"><a id="ga672305f4bed0424144c022647762b65d"></a>
+typedef struct <a class="el" href="structs__status.html">s_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a></td></tr>
+<tr class="memdesc:ga672305f4bed0424144c022647762b65d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The status type. <br /></td></tr>
+<tr class="separator:ga672305f4bed0424144c022647762b65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:gaa52bd9165572474e56ec8f7264f97777"><td class="memItemLeft" align="right" valign="top"><a id="gaa52bd9165572474e56ec8f7264f97777"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>status_reset</b> (<a class="el" href="structs__status.html">t_status</a> *)</td></tr>
-<tr class="separator:gaa52bd9165572474e56ec8f7264f97777"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa6d9399272b524da4a12e569582b1926"><td class="memItemLeft" align="right" valign="top"><a id="gaa6d9399272b524da4a12e569582b1926"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>status_set</b> (t_module, t_status_type, t_status_funcname, t_error, <a class="el" href="structs__status.html">t_status</a> *)</td></tr>
-<tr class="separator:gaa6d9399272b524da4a12e569582b1926"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga204d393da75a58e969c3a4f7aa8d8a11"><td class="memItemLeft" align="right" valign="top"><a id="ga204d393da75a58e969c3a4f7aa8d8a11"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>status_setString</b> (t_module, t_status_type, t_status_funcname, t_status_string, <a class="el" href="structs__status.html">t_status</a> *)</td></tr>
-<tr class="separator:ga204d393da75a58e969c3a4f7aa8d8a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaff61887edebf0f8ce9324d738f3add54"><td class="memItemLeft" align="right" valign="top"><a id="gaff61887edebf0f8ce9324d738f3add54"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>status_message_print</b> (<a class="el" href="structs__status.html">t_status</a>)</td></tr>
-<tr class="separator:gaff61887edebf0f8ce9324d738f3add54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6d8a7c6a44749aba0ec56f5da5470063"><td class="memItemLeft" align="right" valign="top"><a id="ga6d8a7c6a44749aba0ec56f5da5470063"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>status_message_get</b> (<a class="el" href="structs__status.html">t_status</a>, t_size, t_char *)</td></tr>
-<tr class="separator:ga6d8a7c6a44749aba0ec56f5da5470063"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga003aa006991dab1eb03779e34d475c2e"><td class="memItemLeft" align="right" valign="top"><a id="ga003aa006991dab1eb03779e34d475c2e"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>status_module_get</b> (<a class="el" href="structs__status.html">t_status</a>)</td></tr>
-<tr class="separator:ga003aa006991dab1eb03779e34d475c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga44404a3b40c3a20063c75880e37328ca"><td class="memItemLeft" align="right" valign="top"><a id="ga44404a3b40c3a20063c75880e37328ca"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>status_function_get</b> (<a class="el" href="structs__status.html">t_status</a>)</td></tr>
-<tr class="separator:ga44404a3b40c3a20063c75880e37328ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a87ff5ec44b36f7d75aa1490ceae5fa"><td class="memItemLeft" align="right" valign="top"><a id="ga3a87ff5ec44b36f7d75aa1490ceae5fa"></a>
-const char *&#160;</td><td class="memItemRight" valign="bottom"><b>status_error_get</b> (<a class="el" href="structs__status.html">t_status</a>)</td></tr>
-<tr class="separator:ga3a87ff5ec44b36f7d75aa1490ceae5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc5842d4f429b285ca633b21ddfbbcbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc">status_reset</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *status)</td></tr>
+<tr class="memdesc:gacc5842d4f429b285ca633b21ddfbbcbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the status type.  <a href="#gacc5842d4f429b285ca633b21ddfbbcbc">More...</a><br /></td></tr>
+<tr class="separator:gacc5842d4f429b285ca633b21ddfbbcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31cdba26c01a1735a1727e3c59010ec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga31cdba26c01a1735a1727e3c59010ec7">status_set</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a> module, <a class="el" href="group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247">t_status_type</a> type, <a class="el" href="group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8">t_status_funcname</a> funcname, t_error error, <a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *status)</td></tr>
+<tr class="memdesc:ga31cdba26c01a1735a1727e3c59010ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the status type with the current status information using an error code.  <a href="#ga31cdba26c01a1735a1727e3c59010ec7">More...</a><br /></td></tr>
+<tr class="separator:ga31cdba26c01a1735a1727e3c59010ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5f28f37a47f217b6c0f211961373594"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594">status_setString</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a> module, <a class="el" href="group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247">t_status_type</a> type, <a class="el" href="group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8">t_status_funcname</a> funcname, <a class="el" href="group___s_t_a_t_u_s.html#ga835f63807d42ad30134dcd2118b12f57">t_status_string</a> errorString, <a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *status)</td></tr>
+<tr class="memdesc:gae5f28f37a47f217b6c0f211961373594"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the status type with the current status information using an error string.  <a href="#gae5f28f37a47f217b6c0f211961373594">More...</a><br /></td></tr>
+<tr class="separator:gae5f28f37a47f217b6c0f211961373594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga188dfc0f7572f604958201a1117b6d2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga188dfc0f7572f604958201a1117b6d2d">status_message_print</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status)</td></tr>
+<tr class="memdesc:ga188dfc0f7572f604958201a1117b6d2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a message with the status information to Standard output.  <a href="#ga188dfc0f7572f604958201a1117b6d2d">More...</a><br /></td></tr>
+<tr class="separator:ga188dfc0f7572f604958201a1117b6d2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3f003add726bf3bca72ef59ef688b70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gad3f003add726bf3bca72ef59ef688b70">status_message_get</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *message)</td></tr>
+<tr class="memdesc:gad3f003add726bf3bca72ef59ef688b70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the status information into a message string.  <a href="#gad3f003add726bf3bca72ef59ef688b70">More...</a><br /></td></tr>
+<tr class="separator:gad3f003add726bf3bca72ef59ef688b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae986d7e1130de5edc7ec4e5ba5d8fefe"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gae986d7e1130de5edc7ec4e5ba5d8fefe">status_module_get</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status)</td></tr>
+<tr class="memdesc:gae986d7e1130de5edc7ec4e5ba5d8fefe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the module name that corresponds to the provided status information.  <a href="#gae986d7e1130de5edc7ec4e5ba5d8fefe">More...</a><br /></td></tr>
+<tr class="separator:gae986d7e1130de5edc7ec4e5ba5d8fefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc869841e3c3e9bb119e79662b2f3ddd"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gafc869841e3c3e9bb119e79662b2f3ddd">status_function_get</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status)</td></tr>
+<tr class="memdesc:gafc869841e3c3e9bb119e79662b2f3ddd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the function name that corresponds to the provided status information.  <a href="#gafc869841e3c3e9bb119e79662b2f3ddd">More...</a><br /></td></tr>
+<tr class="separator:gafc869841e3c3e9bb119e79662b2f3ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab6c274376809017fe6f9447626287710"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gab6c274376809017fe6f9447626287710">status_error_get</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status)</td></tr>
+<tr class="memdesc:gab6c274376809017fe6f9447626287710"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error message that corresponds to the provided status information.  <a href="#gab6c274376809017fe6f9447626287710">More...</a><br /></td></tr>
+<tr class="separator:gab6c274376809017fe6f9447626287710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>The OSAPI status module. </p>
 <hr/>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="gab6c274376809017fe6f9447626287710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab6c274376809017fe6f9447626287710">&#9670;&nbsp;</a></span>status_error_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* status_error_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the error message that corresponds to the provided status information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>- Status information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Error string </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_gab6c274376809017fe6f9447626287710_cgraph.png" border="0" usemap="#group___s_t_a_t_u_s_gab6c274376809017fe6f9447626287710_cgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_gab6c274376809017fe6f9447626287710_cgraph" id="group___s_t_a_t_u_s_gab6c274376809017fe6f9447626287710_cgraph">
+<area shape="rect" id="node2" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="169,5,281,32"/>
+<area shape="rect" id="node3" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="329,5,459,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gafc869841e3c3e9bb119e79662b2f3ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc869841e3c3e9bb119e79662b2f3ddd">&#9670;&nbsp;</a></span>status_function_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* status_function_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the function name that corresponds to the provided status information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>- Status information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Function name </dd></dl>
+
+</div>
+</div>
+<a id="gad3f003add726bf3bca72ef59ef688b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3f003add726bf3bca72ef59ef688b70">&#9670;&nbsp;</a></span>status_message_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_message_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>message</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the status information into a message string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>- Status information </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- Size of the message string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">message</td><td>- String with the status information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga188dfc0f7572f604958201a1117b6d2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga188dfc0f7572f604958201a1117b6d2d">&#9670;&nbsp;</a></span>status_message_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_message_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Write a message with the status information to Standard output. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>- Status information </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae986d7e1130de5edc7ec4e5ba5d8fefe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae986d7e1130de5edc7ec4e5ba5d8fefe">&#9670;&nbsp;</a></span>status_module_get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* status_module_get </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the module name that corresponds to the provided status information. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>- Status information </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Module name </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_gae986d7e1130de5edc7ec4e5ba5d8fefe_cgraph.png" border="0" usemap="#group___s_t_a_t_u_s_gae986d7e1130de5edc7ec4e5ba5d8fefe_cgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_gae986d7e1130de5edc7ec4e5ba5d8fefe_cgraph" id="group___s_t_a_t_u_s_gae986d7e1130de5edc7ec4e5ba5d8fefe_cgraph">
+<area shape="rect" id="node2" href="group___g_e_n_e_r_a_l.html#ga1e32383c6dc4c79f31a366c46aa8dc5e" title="Get the module string. " alt="" coords="185,5,305,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gacc5842d4f429b285ca633b21ddfbbcbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gacc5842d4f429b285ca633b21ddfbbcbc">&#9670;&nbsp;</a></span>status_reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_reset </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset the status type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>- status type </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_gacc5842d4f429b285ca633b21ddfbbcbc_icgraph.png" border="0" usemap="#group___s_t_a_t_u_s_gacc5842d4f429b285ca633b21ddfbbcbc_icgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_gacc5842d4f429b285ca633b21ddfbbcbc_icgraph" id="group___s_t_a_t_u_s_gacc5842d4f429b285ca633b21ddfbbcbc_icgraph">
+<area shape="rect" id="node2" href="group___i_o.html#gaa0b4bdfd3ddd16d92456efcdd3fef4db" title="Change the current process working directory. " alt="" coords="172,5,311,32"/>
+<area shape="rect" id="node3" href="group___n_e_t.html#ga6d3769d2d37f0d1ea8af7d2f824b844b" title="Verify if the IP is Version 4. " alt="" coords="196,56,287,83"/>
+<area shape="rect" id="node4" href="group___n_e_t.html#ga6a4d90b442e07102d7d68ddd976be287" title="Verify if the IP is Version 6. " alt="" coords="196,107,287,133"/>
+<area shape="rect" id="node5" href="group___n_e_t.html#gaaf7b0258c7f4839fc63a844028640c69" title="Verify if the IP is of type broadcast. " alt="" coords="175,157,308,184"/>
+<area shape="rect" id="node6" href="group___n_e_t.html#ga132cfc4e8782e603e72b4419779dccff" title="Verify if the IP is of type Point to Point. " alt="" coords="192,208,291,235"/>
+<area shape="rect" id="node7" href="group___o_s.html#ga2a0c2de3ab72acdc01addcb207221517" title="Get the OS name. " alt="" coords="191,259,291,285"/>
+<area shape="rect" id="node8" href="group___o_s.html#gac40e685049caf1c674b436b37d0f2476" title="Get the OS version. " alt="" coords="186,309,297,336"/>
+<area shape="rect" id="node9" href="group___o_s.html#gab7d4cbaca1572e4bd39e6ef3a2b38fb4" title="Get the OS release. " alt="" coords="186,360,297,387"/>
+<area shape="rect" id="node10" href="group___o_s.html#ga37c267653cecb32b8525daf6bca9e3d6" title="Get the OS Node name. " alt="" coords="193,411,289,437"/>
+<area shape="rect" id="node11" href="group___o_s.html#ga12b467392238daba52803385039eab91" title="Get the machine name. " alt="" coords="183,461,300,488"/>
+<area shape="rect" id="node12" href="group___o_s.html#gad17c82bae802f930f9b1e971bf72df63" title="Get the machine domain name. " alt="" coords="186,512,297,539"/>
+<area shape="rect" id="node13" href="group___o_s.html#ga38a941e383e6ffab56b4b68393b944e1" title="Get the OS provider name (Vendor) " alt="" coords="184,563,299,589"/>
+<area shape="rect" id="node14" href="group___o_s.html#ga0986b7d843ae021b48da1e0332f7df5e" title="Get the Vendor Release. " alt="" coords="160,613,323,640"/>
+<area shape="rect" id="node15" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b" title="Allocate memory in the process heap. " alt="" coords="165,664,318,691"/>
+<area shape="rect" id="node16" href="group___p_r_o_c.html#ga1dc9234262321bada770a1c44876110c" title="Deallocate a previously allocated heap memory block. " alt="" coords="158,715,325,741"/>
+<area shape="rect" id="node17" href="group___p_r_o_c.html#gac4a656676ce292a2a455a0aafcf732b4" title="Clear contents of memory block. " alt="" coords="173,765,309,792"/>
+<area shape="rect" id="node18" href="group___p_r_o_c.html#ga19270c4ef1cdded8d5d991921be5dc19" title="Fills a process data structure with the execution command line. " alt="" coords="163,816,319,843"/>
+<area shape="rect" id="node19" href="group___p_r_o_c.html#gad81668bfdeac438927d3154e2666a092" title="Fills a process data structure with the new process environment. " alt="" coords="153,867,330,893"/>
+<area shape="rect" id="node20" href="group___s_e_c.html#ga37da3ba800cf6b35b6d244fb7837fbf4" title="Convert a user Id to a C String. " alt="" coords="171,917,312,944"/>
+<area shape="rect" id="node21" href="group___s_e_c.html#ga41cf0f83f743364e03738d1f0c93effa" title="Compare two user IDs. " alt="" coords="175,968,307,995"/>
+<area shape="rect" id="node22" href="group___s_e_c.html#ga556af4f39f63edf47abd42f10065185f" title="Copy a user ID. " alt="" coords="186,1019,297,1045"/>
+<area shape="rect" id="node23" href="group___s_e_c.html#ga63a7208184ffed8619948d6d697417f0" title="Get current user ID. " alt="" coords="186,1069,297,1096"/>
+<area shape="rect" id="node24" href="group___s_e_c.html#ga3a5e36d459162e8102d6e62cf65f5685" title="Set current user ID. " alt="" coords="186,1120,297,1147"/>
+<area shape="rect" id="node25" href="group___s_e_c.html#ga737ebb4ccc21c73549d7080b6dd07366" title="Obtain the user ID from the user Name. " alt="" coords="153,1171,329,1197"/>
+<area shape="rect" id="node26" href="group___s_e_c.html#gacb212a075c839bfbcf38c9775b060169" title="Obtain the user Name from the user ID. " alt="" coords="152,1221,331,1248"/>
+<area shape="rect" id="node27" href="group___s_e_c.html#ga22589469b8a5057e08bfa8c32438e469" title="Get the user groups. " alt="" coords="170,1272,313,1299"/>
+<area shape="rect" id="node28" href="group___s_e_c.html#ga4f0d115f7890fdd58f04c1f4f5fd43a5" title="Convert a string into a Group ID. " alt="" coords="168,1323,315,1349"/>
+<area shape="rect" id="node29" href="group___s_e_c.html#gab1ef6c8927ef5f6253cf388b08d56735" title="Convert a Group Id to a C String. " alt="" coords="167,1373,315,1400"/>
+<area shape="rect" id="node30" href="group___s_e_c.html#ga5a2e136eca0f888687cc3d9658730840" title="Compare two group IDs. " alt="" coords="172,1424,311,1451"/>
+<area shape="rect" id="node31" href="group___s_e_c.html#ga73949358d2972ea076a4d9848865e32f" title="Copy a group ID. " alt="" coords="183,1475,300,1501"/>
+<area shape="rect" id="node32" href="group___s_e_c.html#ga12d18da2d8601ae80c9ce16567f34a48" title="Get current group ID. " alt="" coords="182,1525,301,1552"/>
+<area shape="rect" id="node33" href="group___s_e_c.html#gae7697b5be44e98294f345e1b3b63437b" title="Set current group ID. " alt="" coords="182,1576,301,1603"/>
+<area shape="rect" id="node34" href="group___s_e_c.html#gae07bc85be95545749333626b9cd3fecc" title="Obtain the group ID from the group Name. " alt="" coords="150,1627,333,1653"/>
+<area shape="rect" id="node35" href="group___s_e_c.html#ga6b97d964bbbea41bc518bf1b14a24487" title="Obtain the group Name from the group ID. " alt="" coords="148,1677,335,1704"/>
+<area shape="rect" id="node36" href="group___s_t_r_i_n_g.html#ga9a7bc9bd9b81fd26ebe89cae16589e95" title="Create a new OSAPI string. " alt="" coords="180,1728,303,1755"/>
+<area shape="rect" id="node37" href="group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string. " alt="" coords="174,1829,309,1856"/>
+<area shape="rect" id="node38" href="group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string. " alt="" coords="385,1829,519,1856"/>
+<area shape="rect" id="node39" href="group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string. " alt="" coords="569,1880,700,1907"/>
+<area shape="rect" id="node40" href="group___s_t_r_i_n_g.html#ga1233dc159a86808ab2f6c3efd2532089" title="Concatenation of two OSAPI strings. " alt="" coords="383,1880,521,1907"/>
+<area shape="rect" id="node41" href="group___s_t_r_i_n_g.html#ga55bd2cd0ad4a193e7b9d90a19c46bf45" title="Set the OSAPI string with the contents of C string. " alt="" coords="183,1981,300,2008"/>
+<area shape="rect" id="node42" href="group___s_t_r_i_n_g.html#gaacbef250b772f98515daef58116e393d" title="Get the size of the OSAPI string. " alt="" coords="180,2032,303,2059"/>
+<area shape="rect" id="node43" href="group___s_t_r_i_n_g.html#gaf844eb39e7ded0cbbe2fdbc43cfd5036" title="Print to standard output the contents of the OSAPI string. " alt="" coords="179,2083,303,2109"/>
+<area shape="rect" id="node44" href="group___s_t_r_i_n_g.html#ga8fd58e02f1cd7bec442ba43bdd4db781" title="Get a C string from an OSAPI string. " alt="" coords="183,2133,300,2160"/>
+<area shape="rect" id="node45" href="group___s_t_r_i_n_g.html#gafd5a2cb693881312fb617fd5faa71253" title="Case compare two OSAPI strings. " alt="" coords="167,2184,316,2211"/>
+<area shape="rect" id="node46" href="group___s_t_r_i_n_g.html#gad649031167226d673288f6ab7a84b167" title="Check if two OSAPI strings are the same. " alt="" coords="176,2235,307,2261"/>
+<area shape="rect" id="node47" href="group___s_t_r_i_n_g.html#gaa425b9a1e324dd979f9e4182a8436a6e" title="Case insensitive comparison of two OSAPI strings. " alt="" coords="151,2285,332,2312"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga31cdba26c01a1735a1727e3c59010ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31cdba26c01a1735a1727e3c59010ec7">&#9670;&nbsp;</a></span>status_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a>&#160;</td>
+          <td class="paramname"><em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247">t_status_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8">t_status_funcname</a>&#160;</td>
+          <td class="paramname"><em>funcname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_error&#160;</td>
+          <td class="paramname"><em>error</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the status type with the current status information using an error code. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">module</td><td>- Set the status module </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>- Library information (OSAPI, libc, dl, etc) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">funcname</td><td>- Name of the function for which status is being provided </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">error</td><td>- Error reported </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>- status type </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_ga31cdba26c01a1735a1727e3c59010ec7_icgraph.png" border="0" usemap="#group___s_t_a_t_u_s_ga31cdba26c01a1735a1727e3c59010ec7_icgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_ga31cdba26c01a1735a1727e3c59010ec7_icgraph" id="group___s_t_a_t_u_s_ga31cdba26c01a1735a1727e3c59010ec7_icgraph">
+<area shape="rect" id="node2" href="group___s_e_c.html#ga37da3ba800cf6b35b6d244fb7837fbf4" title="Convert a user Id to a C String. " alt="" coords="159,5,300,32"/>
+<area shape="rect" id="node3" href="group___s_e_c.html#ga41cf0f83f743364e03738d1f0c93effa" title="Compare two user IDs. " alt="" coords="163,56,295,83"/>
+<area shape="rect" id="node4" href="group___s_e_c.html#ga556af4f39f63edf47abd42f10065185f" title="Copy a user ID. " alt="" coords="174,107,285,133"/>
+<area shape="rect" id="node5" href="group___s_e_c.html#ga63a7208184ffed8619948d6d697417f0" title="Get current user ID. " alt="" coords="174,157,285,184"/>
+<area shape="rect" id="node6" href="group___s_e_c.html#ga3a5e36d459162e8102d6e62cf65f5685" title="Set current user ID. " alt="" coords="174,208,285,235"/>
+<area shape="rect" id="node7" href="group___s_e_c.html#ga737ebb4ccc21c73549d7080b6dd07366" title="Obtain the user ID from the user Name. " alt="" coords="141,259,317,285"/>
+<area shape="rect" id="node8" href="group___s_e_c.html#gacb212a075c839bfbcf38c9775b060169" title="Obtain the user Name from the user ID. " alt="" coords="140,309,319,336"/>
+<area shape="rect" id="node9" href="group___s_e_c.html#ga22589469b8a5057e08bfa8c32438e469" title="Get the user groups. " alt="" coords="158,360,301,387"/>
+<area shape="rect" id="node10" href="group___s_e_c.html#ga4f0d115f7890fdd58f04c1f4f5fd43a5" title="Convert a string into a Group ID. " alt="" coords="156,411,303,437"/>
+<area shape="rect" id="node11" href="group___s_e_c.html#gab1ef6c8927ef5f6253cf388b08d56735" title="Convert a Group Id to a C String. " alt="" coords="155,461,303,488"/>
+<area shape="rect" id="node12" href="group___s_e_c.html#ga5a2e136eca0f888687cc3d9658730840" title="Compare two group IDs. " alt="" coords="160,512,299,539"/>
+<area shape="rect" id="node13" href="group___s_e_c.html#ga73949358d2972ea076a4d9848865e32f" title="Copy a group ID. " alt="" coords="171,563,288,589"/>
+<area shape="rect" id="node14" href="group___s_e_c.html#ga12d18da2d8601ae80c9ce16567f34a48" title="Get current group ID. " alt="" coords="170,613,289,640"/>
+<area shape="rect" id="node15" href="group___s_e_c.html#gae7697b5be44e98294f345e1b3b63437b" title="Set current group ID. " alt="" coords="170,664,289,691"/>
+<area shape="rect" id="node16" href="group___s_e_c.html#gae07bc85be95545749333626b9cd3fecc" title="Obtain the group ID from the group Name. " alt="" coords="138,715,321,741"/>
+<area shape="rect" id="node17" href="group___s_e_c.html#ga6b97d964bbbea41bc518bf1b14a24487" title="Obtain the group Name from the group ID. " alt="" coords="136,765,323,792"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gae5f28f37a47f217b6c0f211961373594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5f28f37a47f217b6c0f211961373594">&#9670;&nbsp;</a></span>status_setString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void status_setString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a>&#160;</td>
+          <td class="paramname"><em>module</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247">t_status_type</a>&#160;</td>
+          <td class="paramname"><em>type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8">t_status_funcname</a>&#160;</td>
+          <td class="paramname"><em>funcname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga835f63807d42ad30134dcd2118b12f57">t_status_string</a>&#160;</td>
+          <td class="paramname"><em>errorString</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> *&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the status type with the current status information using an error string. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">module</td><td>- Set the status module </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>- Library information (OSAPI, libc, dl, etc) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">funcname</td><td>- Name of the function for which status is being provided </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errorString</td><td>- String with the error information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">status</td><td>- status type </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_gae5f28f37a47f217b6c0f211961373594_cgraph.png" border="0" usemap="#group___s_t_a_t_u_s_gae5f28f37a47f217b6c0f211961373594_cgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_gae5f28f37a47f217b6c0f211961373594_cgraph" id="group___s_t_a_t_u_s_gae5f28f37a47f217b6c0f211961373594_cgraph">
+<area shape="rect" id="node2" href="group___g_e_n_e_r_a_l.html#ga1e32383c6dc4c79f31a366c46aa8dc5e" title="Get the module string. " alt="" coords="194,5,314,32"/>
+<area shape="rect" id="node3" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="198,56,310,83"/>
+<area shape="rect" id="node5" href="group___g_e_n_e_r_a_l.html#gae9de6aba3a8c516a1e387efbf7ad93e8" title="Get the version string of the Library. " alt="" coords="171,107,337,133"/>
+<area shape="rect" id="node4" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="385,56,515,83"/>
+</map>
+</div>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

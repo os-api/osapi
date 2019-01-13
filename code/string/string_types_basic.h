@@ -27,23 +27,37 @@ extern "C" {
 // System headers
 #include <stdint.h>
 
+
+/// *****************************************************************************************
+///
+///@addtogroup OSAPI
+///@{
+///@addtogroup STRING
+///@{
+///
+/// *****************************************************************************************
+
 // *****************************************************************************************
 //
 // Section: Type declarations
 //
 // *****************************************************************************************
 
+/// The OSAPI C String structure
 struct osapi_basic_string
 {
-  uint64_t	tsize;			// Total size of the allocated string memory
-  uint64_t	csize;			// Current used size
-  char	    *	ps_location;		// Pointer to String location
+  uint64_t	tsize;			///< Total size of the allocated string memory
+  uint64_t	csize;			///< Current used size
+  char	    *	ps_location;		///< Pointer to String location
 };
 
+/// The OSAPI C String type
 typedef struct osapi_basic_string	t_string;
-
+/// Define a null OSAPI string
 #define OSAPI_STRING_NULL_POINTER	(( t_string  *) 0)
 
+///@}
+///@}
 
 // End of header with C++ declaration
 #ifdef __cplusplus

@@ -15,6 +15,8 @@
 extern "C" {
 #endif
 
+// Skip documentation of this module for now...
+#ifndef DOXYGEN_SHOULD_SKIP_THIS
 
 // *****************************************************************************************
 //
@@ -81,6 +83,8 @@ t_status string_wide_concat			( t_wString *, t_wString *, t_wString *				);
 ///@}
 ///@}
 
+
+#endif /* DOXYGEN_SHOULD_SKIP_THIS */
 
 // End of header with C++ declaration
 #ifdef __cplusplus

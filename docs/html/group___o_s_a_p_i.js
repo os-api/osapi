@@ -10,8 +10,8 @@ var group___o_s_a_p_i =
     [ "NET", "group___n_e_t.html", "group___n_e_t" ],
     [ "OS", "group___o_s.html", "group___o_s" ],
     [ "PROC", "group___p_r_o_c.html", "group___p_r_o_c" ],
-    [ "SEC", "group___s_e_c.html", null ],
-    [ "STATUS", "group___s_t_a_t_u_s.html", null ],
-    [ "STRING", "group___s_t_r_i_n_g.html", null ],
-    [ "UTIL", "group___u_t_i_l.html", null ]
+    [ "SEC", "group___s_e_c.html", "group___s_e_c" ],
+    [ "STATUS", "group___s_t_a_t_u_s.html", "group___s_t_a_t_u_s" ],
+    [ "STRING", "group___s_t_r_i_n_g.html", "group___s_t_r_i_n_g" ],
+    [ "UTIL", "group___u_t_i_l.html", "group___u_t_i_l" ]
 ];

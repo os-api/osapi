@@ -63,38 +63,50 @@ $(document).ready(function(){initNavTree('structs__proc__info.html','');});
   <div class="summary">
 <a href="#pub-attribs">Data Fields</a>  </div>
   <div class="headertitle">
-<div class="title">s_proc_info Struct Reference</div>  </div>
+<div class="title">s_proc_info Struct Reference<div class="ingroups"><a class="el" href="group___o_s_a_p_i.html">OSAPI</a> &raquo; <a class="el" href="group___p_r_o_c.html">PROC</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The process information structure.  
+ <a href="structs__proc__info.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="proc__types_8h_source.html">proc_types.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for s_proc_info:</div>
 <div class="dyncontent">
 <div class="center"><img src="structs__proc__info__coll__graph.png" border="0" usemap="#s__proc__info_coll__map" alt="Collaboration graph"/></div>
 <map name="s__proc__info_coll__map" id="s__proc__info_coll__map">
-<area shape="rect" id="node2" href="structs__proc__resources.html" title="s_proc_resources" alt="" coords="5,5,131,32"/>
-<area shape="rect" id="node3" href="structs__proc__id.html" title="s_proc_id" alt="" coords="155,5,234,32"/>
+<area shape="rect" id="node2" href="structs__proc__resources.html" title="The process resources structure. " alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node3" href="structs__proc__id.html" title="The process identity structure. " alt="" coords="155,5,234,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
 <tr class="memitem:aa20c74a888413f1e5eb934215d452112"><td class="memItemLeft" align="right" valign="top"><a id="aa20c74a888413f1e5eb934215d452112"></a>
-<a class="el" href="structs__proc__id.html">t_proc_id</a>&#160;</td><td class="memItemRight" valign="bottom"><b>id</b></td></tr>
+<a class="el" href="group___p_r_o_c.html#gacf27d03398422c4f9e9438de14ac61b2">t_proc_id</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__info.html#aa20c74a888413f1e5eb934215d452112">id</a></td></tr>
+<tr class="memdesc:aa20c74a888413f1e5eb934215d452112"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Process ID. <br /></td></tr>
 <tr class="separator:aa20c74a888413f1e5eb934215d452112"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afc09df66e4e1131bad27f84d29bd8726"><td class="memItemLeft" align="right" valign="top"><a id="afc09df66e4e1131bad27f84d29bd8726"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>state</b></td></tr>
+char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__info.html#afc09df66e4e1131bad27f84d29bd8726">state</a></td></tr>
+<tr class="memdesc:afc09df66e4e1131bad27f84d29bd8726"><td class="mdescLeft">&#160;</td><td class="mdescRight">State: System dependent. <br /></td></tr>
 <tr class="separator:afc09df66e4e1131bad27f84d29bd8726"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24f72e6a4d6a997528142211b375496"><td class="memItemLeft" align="right" valign="top"><a id="aa24f72e6a4d6a997528142211b375496"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
+char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__info.html#aa24f72e6a4d6a997528142211b375496">args</a></td></tr>
+<tr class="memdesc:aa24f72e6a4d6a997528142211b375496"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process command line arguments. <br /></td></tr>
 <tr class="separator:aa24f72e6a4d6a997528142211b375496"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad56cadc2b4b8f0b4b29efb7d58272182"><td class="memItemLeft" align="right" valign="top"><a id="ad56cadc2b4b8f0b4b29efb7d58272182"></a>
-<a class="el" href="structs__proc__resources.html">t_proc_resources</a>&#160;</td><td class="memItemRight" valign="bottom"><b>resources</b></td></tr>
+<a class="el" href="group___p_r_o_c.html#ga7bf409ee3dca12d3da4acfb6b2ff2770">t_proc_resources</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__info.html#ad56cadc2b4b8f0b4b29efb7d58272182">resources</a></td></tr>
+<tr class="memdesc:ad56cadc2b4b8f0b4b29efb7d58272182"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process resources. <br /></td></tr>
 <tr class="separator:ad56cadc2b4b8f0b4b29efb7d58272182"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a6c54dcdbeb16bb2e1676a4abf4a4d8"><td class="memItemLeft" align="right" valign="top"><a id="a2a6c54dcdbeb16bb2e1676a4abf4a4d8"></a>
-time_t&#160;</td><td class="memItemRight" valign="bottom"><b>starttime</b></td></tr>
+time_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__proc__info.html#a2a6c54dcdbeb16bb2e1676a4abf4a4d8">starttime</a></td></tr>
+<tr class="memdesc:a2a6c54dcdbeb16bb2e1676a4abf4a4d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The process start time. <br /></td></tr>
 <tr class="separator:a2a6c54dcdbeb16bb2e1676a4abf4a4d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this struct was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The process information structure. </p>
+</div><hr/>The documentation for this struct was generated from the following file:<ul>
 <li>code/proc/<a class="el" href="proc__types_8h_source.html">proc_types.h</a></li>
 </ul>
 </div><!-- contents -->

@@ -61,11 +61,15 @@ $(document).ready(function(){initNavTree('group___e_r_r_o_r.html','');});
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ERROR<div class="ingroups"><a class="el" href="group___o_s_a_p_i.html">OSAPI</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The error management module.  
+<a href="#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for ERROR:</div>
 <div class="dyncontent">
@@ -76,16 +80,23 @@ Collaboration diagram for ERROR:</div>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__osapi__errors.html">s_osapi_errors</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary structure that helps in the definition of the maximum error code in each module.  <a href="structs__osapi__errors.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga1b150fc2170642d0dd9437a92777712c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c">error_string_get</a> (t_module module, t_error code)</td></tr>
+<tr class="memitem:ga1b150fc2170642d0dd9437a92777712c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c">error_string_get</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a> module, t_error code)</td></tr>
 <tr class="memdesc:ga1b150fc2170642d0dd9437a92777712c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error string for an OSAPI module and error number.  <a href="#ga1b150fc2170642d0dd9437a92777712c">More...</a><br /></td></tr>
 <tr class="separator:ga1b150fc2170642d0dd9437a92777712c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga49780b96a5e0dda916e5e1b78b2f8104"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104">error_code_isValid</a> (t_module module, t_error code)</td></tr>
+<tr class="memitem:ga49780b96a5e0dda916e5e1b78b2f8104"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104">error_code_isValid</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a> module, t_error code)</td></tr>
 <tr class="memdesc:ga49780b96a5e0dda916e5e1b78b2f8104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify if a given error number is valid for the provided OSAPI module.  <a href="#ga49780b96a5e0dda916e5e1b78b2f8104">More...</a><br /></td></tr>
 <tr class="separator:ga49780b96a5e0dda916e5e1b78b2f8104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<p>The error management module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga49780b96a5e0dda916e5e1b78b2f8104"></a>
@@ -97,7 +108,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool error_code_isValid </td>
           <td>(</td>
-          <td class="paramtype">t_module&#160;</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a>&#160;</td>
           <td class="paramname"><em>module</em>, </td>
         </tr>
         <tr>
@@ -117,8 +128,8 @@ Functions</h2></td></tr>
 <p>Verify if a given error number is valid for the provided OSAPI module. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>module number </td></tr>
-    <tr><td class="paramname">in</td><td>error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">module</td><td>- The module number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>- The error code </td></tr>
   </table>
   </dd>
 </dl>
@@ -128,7 +139,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group___e_r_r_o_r_ga49780b96a5e0dda916e5e1b78b2f8104_icgraph.png" border="0" usemap="#group___e_r_r_o_r_ga49780b96a5e0dda916e5e1b78b2f8104_icgraph" alt=""/></div>
 <map name="group___e_r_r_o_r_ga49780b96a5e0dda916e5e1b78b2f8104_icgraph" id="group___e_r_r_o_r_ga49780b96a5e0dda916e5e1b78b2f8104_icgraph">
-<area shape="rect" id="node2" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="183,5,295,32"/>
+<area shape="rect" id="node2" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="183,31,295,57"/>
+<area shape="rect" id="node3" href="group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594" title="Set the status type with the current status information using an error string. " alt="" coords="343,5,460,32"/>
+<area shape="rect" id="node4" href="group___s_t_a_t_u_s.html#gab6c274376809017fe6f9447626287710" title="Get the error message that corresponds to the provided status information. " alt="" coords="343,56,459,83"/>
 </map>
 </div>
 
@@ -143,7 +156,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname">const char* error_string_get </td>
           <td>(</td>
-          <td class="paramtype">t_module&#160;</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a">t_module</a>&#160;</td>
           <td class="paramname"><em>module</em>, </td>
         </tr>
         <tr>
@@ -163,8 +176,8 @@ Here is the caller graph for this function:</div>
 <p>Get the error string for an OSAPI module and error number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">in</td><td>module number </td></tr>
-    <tr><td class="paramname">in</td><td>error code </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">module</td><td>- The module number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">code</td><td>- The error code </td></tr>
   </table>
   </dd>
 </dl>
@@ -175,6 +188,15 @@ Here is the call graph for this function:</div>
 <div class="center"><img src="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_cgraph.png" border="0" usemap="#group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_cgraph" alt=""/></div>
 <map name="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_cgraph" id="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_cgraph">
 <area shape="rect" id="node2" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="165,5,295,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_icgraph.png" border="0" usemap="#group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_icgraph" alt=""/></div>
+<map name="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_icgraph" id="group___e_r_r_o_r_ga1b150fc2170642d0dd9437a92777712c_icgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594" title="Set the status type with the current status information using an error string. " alt="" coords="165,5,283,32"/>
+<area shape="rect" id="node3" href="group___s_t_a_t_u_s.html#gab6c274376809017fe6f9447626287710" title="Get the error message that corresponds to the provided status information. " alt="" coords="166,56,282,83"/>
 </map>
 </div>
 

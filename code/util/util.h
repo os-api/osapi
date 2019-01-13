@@ -40,6 +40,7 @@ extern "C" {
 /** @addtogroup OSAPI
 * @{
 * @addtogroup UTIL
+* @brief The library utility module
 * @{
 */
 
@@ -53,7 +54,9 @@ extern "C" {
 
 
 // Functions bellow
-t_status util_module_supported			( void					);
+/// @brief Is module UTIL supported in the platform ?
+/// @return The operation result status (SUCCESS/FAILURE)
+t_status util_module_supported( void );
 
 
 #pragma GCC visibility pop			// End of public interface

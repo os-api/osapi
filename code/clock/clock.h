@@ -39,6 +39,7 @@ extern "C"
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup CLOCK
+/// @brief The clock module
 ///@{
 ///
 /// *****************************************************************************************
@@ -60,25 +61,26 @@ t_status clock_module_supported( void );
 
 // - Time in seconds
 /// @brief Set the system clock with the supplied time data
-/// @param in newTime
+/// @param [in] newTime - The new time
 /// @return Operation status
-t_status clock_time_set ( t_time newTime );
+t_status clock_time_set( t_time newTime );
 
 /// @brief Get the current time in seconds from the epoch
-/// @param in,out curtime
+/// @param [out] curtime - Current time
 /// @return Operation status
 
 t_status clock_time_get( t_time * curtime );
 
 /// @brief Return the current time in seconds from the epoch in human readable format
-/// @param in current time
-/// @param out Formated time string
+/// @param [in] ctime - The current time
+/// @param [out] tmString - Formated time string
 /// @return Operation status
 t_status clock_time_print( t_time ctime, const char * tmString );
 
 /// @brief Return the difference between two times, in seconds
-/// @param in t1,t2
-/// @param out diff
+/// @param [in] t1 - First time
+/// @param [in] t2 - Second time
+/// @param [out] diff - Time difference
 /// @return Operation status
 t_status clock_time_diff 	(t_time t1, t_time t2, t_time * diff );
 
@@ -91,17 +93,17 @@ t_status clock_hrTime_diff( t_hrTime, t_hrTime, t_hrTime * );
 
 // - Clock based - Full time/date/time zone capabilities
 /// @brief Get the current local time (considering the timezone)
-/// @param in,out clk
+/// @param [out] clk - The current time
 /// @return Operation status
 t_status clock_localTime_get( t_clock * clk );
 
 /// @brief Set the current timezone
-/// @param in,out clk
+/// @param [in] clk - New time
 /// @return Operation status
 t_status clock_timeZone_set( t_clock * clk );
 
 /// @brief Get the current timezone
-/// @param in,out clk
+/// @param [out] clk - Get the current timezone
 /// @return Operation status
 t_status clock_timeZone_get( t_clock * clk );
 

@@ -35,6 +35,7 @@ extern "C" {
 ///@addtogroup OSAPI
 ///@{
 ///@addtogroup NET
+/// @brief The networking module
 ///@{
 ///
 /// *****************************************************************************************
@@ -50,60 +51,60 @@ extern "C" {
 
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
-t_status net_module_supported		( void						);
+t_status net_module_supported( void );
 
 // IP related facility
 
 /// @brief Obtain the required size to store a C-String for the given IP protocol
-/// @param in IP protocol (IPv4/6)
-/// @param out Required size
+/// @param [in] prot - IP protocol (IPv4/6)
+/// @param [out] size - Required size
 /// @return Operation status
-t_status net_ip_getStringSize		( t_protocol prot, t_size * p_size		);
+t_status net_ip_getStringSize( t_protocol prot, t_size * size );
 
 /// @brief Get the source IP
-/// @param in IP type
-/// @param in size of the C-String
-/// @param out Source IP
+/// @param [in] ip - The IP to verify
+/// @param [in] size - The size of the C-String
+/// @param [out] string - The source IP
 /// @return Operation status
-t_status net_ip_getHost			( t_ip * p_ip, t_size size, char * p_string	);
+t_status net_ip_getHost( t_ip * ip, t_size size, char * string );
 
 /// @brief Get the mask associated with the IP
-/// @param in IP
-/// @param in size of the C-String
-/// @param out IP mask
+/// @param [in] ip - The IP to verify
+/// @param [in] size - The size of the C-String
+/// @param [out] string - The IP mask
 /// @return Operation status
-t_status net_ip_getMask			( t_ip * p_ip, t_size size, char * p_string	);
+t_status net_ip_getMask( t_ip * ip, t_size size, char * string );
 
 /// @brief Obtain the C-String for the target protocol: Broadcast, Point to Point,
-/// @param in IP type
-/// @param in Size of the C-String
-/// @param out IP string
+/// @param [in] ip - The IP to verify
+/// @param [in] size - The size of the C-String
+/// @param [out] string - The IP string
 /// @return Operation status
-t_status net_ip_getTarget		( t_ip * p_ip, t_size size, char * p_string	);	// Broadcast or P2P
+t_status net_ip_getTarget( t_ip * ip, t_size size, char * string );	// Broadcast or P2P
 
 /// @brief Verify if the IP is Version 4
-/// @param in IP type
-/// @param out True/False
+/// @param [in] ip - The IP to verify
+/// @param [out] result - True/False
 /// @return Operation status
-t_status net_ip_isV4			( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isV4( t_ip * ip, bool * result );
 
 /// @brief Verify if the IP is Version 6
-/// @param in IP type
-/// @param out True/False
+/// @param [in] ip - The IP to verify
+/// @param [out] result - True/False
 /// @return Operation status
-t_status net_ip_isV6			( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isV6( t_ip * ip, bool * result );
 
 /// @brief Verify if the IP is of type broadcast
-/// @param in IP type
-/// @param out True/False
+/// @param [in] ip - The IP to verify
+/// @param [out] result - True/False
 /// @return Operation status
-t_status net_ip_isBroadcast		( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isBroadcast( t_ip * ip, bool * result );
 
 /// @brief Verify if the IP is of type Point to Point
-/// @param in IP type
-/// @param out True/False
+/// @param [in] ip - The IP to verify
+/// @param [out] result - True/False
 /// @return Operation status
-t_status net_ip_isP2P			( t_ip * p_ip, bool * p_result			);
+t_status net_ip_isP2P( t_ip * ip, bool * result	);
 
 // Port related facility
 
