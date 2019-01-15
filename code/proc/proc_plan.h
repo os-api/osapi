@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide Proc(ess) module API
+// Purpose:	API to build a process plan
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_PROC_H_
-#define OSAPI_PROC_H_
+#ifndef OSAPI_PROC_PLAN_H_
+#define OSAPI_PROC_PLAN_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -26,12 +26,12 @@ extern "C" {
 #include "general/general.h"
 #include "status/status_types.h"
 
+// Common includes
+#include "common/types/common_types.h"
+
 // Own declarations
-#include "proc/proc_plan.h"
-#include "proc/proc_signal.h"
-#include "proc/proc_resource.h"
-#include "proc/proc_library.h"
-#include "proc/proc_instance.h"
+#include "proc/proc_types.h"
+#include "proc/proc_platform.h"
 
 
 /// *****************************************************************************************
@@ -53,9 +53,34 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-/// @brief Is PROC module supported in the platform
-/// @return True if supported. False, otherwise (using status macros)
-t_status	proc_module_supported		( void 				);
+// ++ Operations
+// + Building process data
+/// @brief Change the current process User ID
+/// @param [in] uid - New User ID
+/// @param [out] proc - process type
+/// @return Operation status
+t_status proc_data_setUser( t_uid uid, t_proc * proc );
+
+/// @brief Change the current process Group ID
+/// @param [in] gid - New Group ID
+/// @param [out] proc - process type
+/// @return Operation status
+t_status proc_data_setGroup( t_gid gid, t_proc * proc );
+
+/// @brief Fills a process data structure with the execution command line
+/// @param [in] size - Number of elements of the C-String array
+/// @param [in] array - The command line array
+/// @param [out] proc - The process type
+/// @return Operation status
+t_status proc_data_setCmdLine( t_size size, char * array[], t_proc * proc );
+
+/// @brief Fills a process data structure with the new process environment
+/// @param [in] size - Number of elements of the C-String array
+/// @param [in] array - The environment array
+/// @param [out] proc - The process type
+/// @return Operation status
+t_status proc_data_setEnvironment( t_size size, char * array[], t_proc * proc );
+
 
 #pragma GCC visibility pop			// End of public interface
 
@@ -68,4 +93,4 @@ t_status	proc_module_supported		( void 				);
 }
 #endif
 
-#endif /* OSAPI_PROC_H_ */
+#endif /* OSAPI_PROC_PLAN_H_ */
