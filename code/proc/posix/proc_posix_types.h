@@ -29,7 +29,7 @@
 
 // *****************************************************************************************
 //
-// Section: Module Type declaration
+// Section: Module Type declarations
 //
 // *****************************************************************************************
 
@@ -94,6 +94,27 @@ struct s_proc_status
 
 /// The process status type
 typedef struct s_proc_status	t_proc_status;
+
+
+// *****************************************************************************************
+//
+// Section: Enumerators
+//
+// *****************************************************************************************
+
+enum osapi_proc_target
+{
+  e_proc_target_none = 0,
+  e_proc_target_parent,
+  e_proc_target_pgroup,
+  e_proc_target_session
+};
+
+// *****************************************************************************************
+//
+// Section: Macros
+//
+// *****************************************************************************************
 
 // Macros for client applications to check the status of the process
 

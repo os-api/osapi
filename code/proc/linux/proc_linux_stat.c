@@ -42,8 +42,8 @@
 //
 // *****************************************************************************************
 
-const char * OSAPI_FS_PROC_NAME			= "/proc";
-const char * OSAPI_FS_PROC_STAT_FILENAME	= "stat";
+extern const char * OSAPI_FS_PROC_NAME;
+const char * OSAPI_FS_PROC_STAT_FILENAME		= "stat";
 
 static const t_size OSAPI_FS_PROC_SIZE			= 100;
 static const t_size OSAPI_FS_PROC_STAT_ENTRY_SIZE	= PATH_MAX + 1000;

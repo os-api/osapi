@@ -29,6 +29,9 @@
 #include <sys/wait.h>
 #include <string.h>
 #include <limits.h>
+#include <dirent.h>
+
+
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -46,6 +49,7 @@
 //
 // *****************************************************************************************
 
+const char * OSAPI_FS_PROC_NAME			= "/proc";
 
 
 // *****************************************************************************************
@@ -126,6 +130,108 @@ t_status proc_status_get( t_pid target_pid, t_pid * found_pid, t_proc_status * p
 }
 
 
+t_status get_id_members( int target, t_pid target_id, t_size nmembers, t_size * p_nFoundMembers, t_pid (* p_members)[] )
+{
+ t_status		st;
+ t_proc_info		pinfo;
+ t_pid			pid, match_id;
+ t_size			current 	= 0;
+ struct dirent *	p_dir_entry	= NULL;
+ DIR * 			p_dir		= NULL;
+
+ status_reset( & st );
+
+ p_dir = opendir( OSAPI_FS_PROC_NAME );
+
+ while( ( p_dir_entry = readdir( p_dir ) ) )
+      {
+        if( ( strcmp( p_dir_entry->d_name, "."  ) == 0) ||
+            ( strcmp( p_dir_entry->d_name, ".." ) == 0)  )
+	      continue;
+
+	    pid = (t_pid) atoi( p_dir_entry->d_name );
+
+	    if( pid >= 0 )	// Check if process is valid
+	      {
+		st = parse_linux_proc_stat_file( pid, & pinfo );
+
+		if( status_success( st ) && current < nmembers )
+		  {
+		    match_id = -1;
+		    switch( target )
+			  {
+			    case e_proc_target_parent:	match_id = pinfo.id.ppid; 	break;
+			    case e_proc_target_pgroup:	match_id = pinfo.id.pgrp; 	break;
+			    case e_proc_target_session:	match_id = pinfo.id.session; 	break;
+
+			    default: break;	// Do Nothing
+			  }
+
+		    if( match_id == target_id )	(*p_members)[ current++ ] = pid;
+		  }
+	      }
+          }
+
+ closedir( p_dir );
+ *p_nFoundMembers = current;
+
+ return st;
+}
+
+
+t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
+{
+ t_status st;
+ t_proc_info		pinfo;
+ t_pid			pid, match_id;
+ t_size			current 	= 0;
+ struct dirent *	p_dir_entry	= NULL;
+ DIR * 			p_dir		= NULL;
+
+ status_reset( & st );
+
+ if( p_number == (t_size *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     p_dir = opendir( OSAPI_FS_PROC_NAME );
+
+     while( ( p_dir_entry = readdir( p_dir ) ) )
+          {
+	    if( ( strcmp( p_dir_entry->d_name, "."  ) == 0) ||
+		( strcmp( p_dir_entry->d_name, ".." ) == 0)  )
+	        continue;
+
+	    pid = (t_pid) atoi( p_dir_entry->d_name );
+
+	    if( pid >= 0 )	// Check if process is valid
+	      {
+		st = parse_linux_proc_stat_file( pid, & pinfo );
+
+		if( status_success( st ) )
+		  {
+		    match_id = -1;
+		    switch( target )
+			  {
+			    case e_proc_target_parent:	match_id = pinfo.id.ppid; 	break;
+			    case e_proc_target_pgroup:	match_id = pinfo.id.pgrp; 	break;
+			    case e_proc_target_session:	match_id = pinfo.id.session; 	break;
+
+			    default: break;	// Do Nothing
+			  }
+
+		    if( match_id == target_id ) 	current++;
+		  }
+	      }
+          }
+
+     closedir( p_dir );
+   }
+
+ *p_number = current;
+
+ return st;
+}
 
 
 #endif	// End of OS Linux

@@ -5,15 +5,18 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../code/proc/linux/proc_linux.c \
-../code/proc/linux/proc_linux_priv.c 
+../code/proc/linux/proc_linux_priv.c \
+../code/proc/linux/proc_linux_stat.c 
 
 OBJS += \
 ./code/proc/linux/proc_linux.o \
-./code/proc/linux/proc_linux_priv.o 
+./code/proc/linux/proc_linux_priv.o \
+./code/proc/linux/proc_linux_stat.o 
 
 C_DEPS += \
 ./code/proc/linux/proc_linux.d \
-./code/proc/linux/proc_linux_priv.d 
+./code/proc/linux/proc_linux_priv.d \
+./code/proc/linux/proc_linux_stat.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

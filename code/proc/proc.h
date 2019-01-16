@@ -31,6 +31,7 @@ extern "C" {
 #include "proc/proc_signal.h"
 #include "proc/proc_resource.h"
 #include "proc/proc_library.h"
+#include "proc/proc_identity.h"
 #include "proc/proc_instance.h"
 
 

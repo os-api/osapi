@@ -88,9 +88,22 @@ t_status proc_instance_getChildStatus( t_pid * pid, t_proc_status * status );
 t_status proc_instance_getStatus( t_pid pid, t_proc_status * status );
 
 /// @brief Obtain the number of children processes
+/// @param [in] pid - Get descendants of this process
 /// @param [out] number - Number of children processes
 /// @return Operation status
-t_status proc_instance_getNumberOfDescendents( t_size * number );
+t_status proc_instance_getNumberOfDescendents( t_pid pid, t_size * number );
+
+/// @brief Obtain the number of process group members
+/// @param [in] pgid - The process group id
+/// @param [out] number - Number of process group members
+/// @return Operation status
+t_status proc_instance_getNumberOfGroupMembers( t_pid pgid, t_size * number );
+
+/// @brief Obtain the number of process session members
+/// @param [in] sid - The session id
+/// @param [out] number - Number of process group members
+/// @return Operation status
+t_status proc_instance_getNumberOfSessionMembers( t_pid sid, t_size * number );
 
 /// @brief Terminate the current process. It always succeeds.
 /// @param [in] code - Exit status code
