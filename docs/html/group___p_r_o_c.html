@@ -113,6 +113,33 @@ Functions</h2></td></tr>
 <tr class="memitem:gaff083748285b5d82bba6ece8dd1dde30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaff083748285b5d82bba6ece8dd1dde30">proc_module_supported</a> (void)</td></tr>
 <tr class="memdesc:gaff083748285b5d82bba6ece8dd1dde30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is PROC module supported in the platform.  <a href="#gaff083748285b5d82bba6ece8dd1dde30">More...</a><br /></td></tr>
 <tr class="separator:gaff083748285b5d82bba6ece8dd1dde30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc07f910a20dc520f1471b79ad3345e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3">proc_id_get</a> (t_pid *pid)</td></tr>
+<tr class="memdesc:gafc07f910a20dc520f1471b79ad3345e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process ID.  <a href="#gafc07f910a20dc520f1471b79ad3345e3">More...</a><br /></td></tr>
+<tr class="separator:gafc07f910a20dc520f1471b79ad3345e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaa091b8750060eb12db53fe9329f2c6c9">proc_id_getParent</a> (t_pid *ppid)</td></tr>
+<tr class="memdesc:gaa091b8750060eb12db53fe9329f2c6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent process ID.  <a href="#gaa091b8750060eb12db53fe9329f2c6c9">More...</a><br /></td></tr>
+<tr class="separator:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1cae9b19b89857e02debbd9d064731c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1cae9b19b89857e02debbd9d064731c7">proc_id_getDescendents</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> tsize, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *csize, t_pid(*array)[])</td></tr>
+<tr class="memdesc:ga1cae9b19b89857e02debbd9d064731c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of process IDs of children processes.  <a href="#ga1cae9b19b89857e02debbd9d064731c7">More...</a><br /></td></tr>
+<tr class="separator:ga1cae9b19b89857e02debbd9d064731c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad5bfc95a356a7c5b2db8c45a80f03d41">proc_id_getUser</a> (t_pid pid, t_uid *uid)</td></tr>
+<tr class="memdesc:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the User ID of the given process.  <a href="#gad5bfc95a356a7c5b2db8c45a80f03d41">More...</a><br /></td></tr>
+<tr class="separator:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gadac5762d74bdbe77b7e9badeece3b1b7">proc_id_getGroup</a> (t_pid pid, t_gid *gid)</td></tr>
+<tr class="memdesc:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Group ID of the current process.  <a href="#gadac5762d74bdbe77b7e9badeece3b1b7">More...</a><br /></td></tr>
+<tr class="separator:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga05bdbe6f5656dc5bd6949583d9db27b4">proc_id_getSession</a> (t_pid pid, t_pid *sid)</td></tr>
+<tr class="memdesc:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Session Identifier.  <a href="#ga05bdbe6f5656dc5bd6949583d9db27b4">More...</a><br /></td></tr>
+<tr class="separator:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf476c72813669007d753d68d316dac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gabf476c72813669007d753d68d316dac3">proc_id_setSession</a> (void)</td></tr>
+<tr class="memdesc:gabf476c72813669007d753d68d316dac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Session. A new session is created with the current PID as being the Session ID.  <a href="#gabf476c72813669007d753d68d316dac3">More...</a><br /></td></tr>
+<tr class="separator:gabf476c72813669007d753d68d316dac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaeee0ed0754efaba39d0c05955f29d980"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaeee0ed0754efaba39d0c05955f29d980">proc_id_getGroupMembers</a> (t_pid pgid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> initialMembers, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *currentMembers, t_pid(*idList)[])</td></tr>
+<tr class="memdesc:gaeee0ed0754efaba39d0c05955f29d980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the List of IDs of Process Group members.  <a href="#gaeee0ed0754efaba39d0c05955f29d980">More...</a><br /></td></tr>
+<tr class="separator:gaeee0ed0754efaba39d0c05955f29d980"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5b71d15de67d74ef9b098b0453f1bad4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga5b71d15de67d74ef9b098b0453f1bad4">proc_id_getSessionMembers</a> (t_pid sid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> initialMembers, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *currentMembers, t_pid(*idList)[])</td></tr>
+<tr class="memdesc:ga5b71d15de67d74ef9b098b0453f1bad4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the List of IDs of Process Session members.  <a href="#ga5b71d15de67d74ef9b098b0453f1bad4">More...</a><br /></td></tr>
+<tr class="separator:ga5b71d15de67d74ef9b098b0453f1bad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga240bd0f4702a7f2a6c0f5dcfa33d456c">proc_instance_create</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
 <tr class="memdesc:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new process instance.  <a href="#ga240bd0f4702a7f2a6c0f5dcfa33d456c">More...</a><br /></td></tr>
 <tr class="separator:ga240bd0f4702a7f2a6c0f5dcfa33d456c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,15 +158,30 @@ Functions</h2></td></tr>
 <tr class="memitem:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab19fcb557ca9a9cf8cd74e3f683c12a7">proc_instance_getStatus</a> (t_pid pid, <a class="el" href="structs__proc__status.html">t_proc_status</a> *status)</td></tr>
 <tr class="memdesc:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a status of a process.  <a href="#gab19fcb557ca9a9cf8cd74e3f683c12a7">More...</a><br /></td></tr>
 <tr class="separator:gab19fcb557ca9a9cf8cd74e3f683c12a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf2ff6406fe1091889d2e54325d3f2fdf">proc_instance_getNumberOfDescendents</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
-<tr class="memdesc:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of children processes.  <a href="#gaf2ff6406fe1091889d2e54325d3f2fdf">More...</a><br /></td></tr>
-<tr class="separator:gaf2ff6406fe1091889d2e54325d3f2fdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga51e6062a21d8795cde9b71b4935202b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga51e6062a21d8795cde9b71b4935202b0">proc_instance_getNumberOfDescendents</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
+<tr class="memdesc:ga51e6062a21d8795cde9b71b4935202b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of children processes.  <a href="#ga51e6062a21d8795cde9b71b4935202b0">More...</a><br /></td></tr>
+<tr class="separator:ga51e6062a21d8795cde9b71b4935202b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2fb6430bc211de41459816fbbd4bfc35"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2fb6430bc211de41459816fbbd4bfc35">proc_instance_getNumberOfGroupMembers</a> (t_pid pgid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
+<tr class="memdesc:ga2fb6430bc211de41459816fbbd4bfc35"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of process group members.  <a href="#ga2fb6430bc211de41459816fbbd4bfc35">More...</a><br /></td></tr>
+<tr class="separator:ga2fb6430bc211de41459816fbbd4bfc35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7b714bd9369cf003209b95917e4e56bd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga7b714bd9369cf003209b95917e4e56bd">proc_instance_getNumberOfSessionMembers</a> (t_pid sid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
+<tr class="memdesc:ga7b714bd9369cf003209b95917e4e56bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the number of process session members.  <a href="#ga7b714bd9369cf003209b95917e4e56bd">More...</a><br /></td></tr>
+<tr class="separator:ga7b714bd9369cf003209b95917e4e56bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___g_e_n_e_r_a_l.html#gab7a2b242313c264e39bf81ea851fada2">OSAPI_NORETURN</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga27cf67e6f59c7ddca6833e0e30fcc115">proc_instance_terminate</a> (int code)</td></tr>
 <tr class="memdesc:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate the current process. It always succeeds.  <a href="#ga27cf67e6f59c7ddca6833e0e30fcc115">More...</a><br /></td></tr>
 <tr class="separator:ga27cf67e6f59c7ddca6833e0e30fcc115"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa078c64b33f1c4d7798fb69386662a1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafa078c64b33f1c4d7798fb69386662a1">proc_instance_suspendExecution</a> (void)</td></tr>
 <tr class="memdesc:gafa078c64b33f1c4d7798fb69386662a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suspend the execution of the current thread until an event occurs such as a signal in UNIX.  <a href="#gafa078c64b33f1c4d7798fb69386662a1">More...</a><br /></td></tr>
 <tr class="separator:gafa078c64b33f1c4d7798fb69386662a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaccfece10ffb25e27bf250cc0aebd428b">proc_library_supported</a> (void)</td></tr>
+<tr class="memdesc:gaccfece10ffb25e27bf250cc0aebd428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the load/unload of libraries supported in the platform?  <a href="#gaccfece10ffb25e27bf250cc0aebd428b">More...</a><br /></td></tr>
+<tr class="separator:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga87fd88644614d224ef9b98bf8ef5e49f">proc_library_load</a> (char *path, char *options[], t_library *lib)</td></tr>
+<tr class="memdesc:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a library into the current process.  <a href="#ga87fd88644614d224ef9b98bf8ef5e49f">More...</a><br /></td></tr>
+<tr class="separator:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf6622299218d5c8712a68a9f0e7533e8">proc_library_unload</a> (t_library lib)</td></tr>
+<tr class="memdesc:gaf6622299218d5c8712a68a9f0e7533e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a library from the current process.  <a href="#gaf6622299218d5c8712a68a9f0e7533e8">More...</a><br /></td></tr>
+<tr class="separator:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga933a3894c184cc965d55d5e35d043c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga933a3894c184cc965d55d5e35d043c24">proc_data_setUser</a> (t_uid uid, <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
 <tr class="memdesc:ga933a3894c184cc965d55d5e35d043c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current process User ID.  <a href="#ga933a3894c184cc965d55d5e35d043c24">More...</a><br /></td></tr>
 <tr class="separator:ga933a3894c184cc965d55d5e35d043c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -152,27 +194,30 @@ Functions</h2></td></tr>
 <tr class="memitem:gad81668bfdeac438927d3154e2666a092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad81668bfdeac438927d3154e2666a092">proc_data_setEnvironment</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, char *array[], <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
 <tr class="memdesc:gad81668bfdeac438927d3154e2666a092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a process data structure with the new process environment.  <a href="#gad81668bfdeac438927d3154e2666a092">More...</a><br /></td></tr>
 <tr class="separator:gad81668bfdeac438927d3154e2666a092"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafc07f910a20dc520f1471b79ad3345e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3">proc_id_get</a> (t_pid *pid)</td></tr>
-<tr class="memdesc:gafc07f910a20dc520f1471b79ad3345e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process ID.  <a href="#gafc07f910a20dc520f1471b79ad3345e3">More...</a><br /></td></tr>
-<tr class="separator:gafc07f910a20dc520f1471b79ad3345e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaa091b8750060eb12db53fe9329f2c6c9">proc_id_getParent</a> (t_pid *ppid)</td></tr>
-<tr class="memdesc:gaa091b8750060eb12db53fe9329f2c6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent process ID.  <a href="#gaa091b8750060eb12db53fe9329f2c6c9">More...</a><br /></td></tr>
-<tr class="separator:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga686441f7888c85eb31235a47eef24b04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga686441f7888c85eb31235a47eef24b04">proc_id_getDescendents</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> tsize, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *csize, t_pid(*array)[])</td></tr>
-<tr class="memdesc:ga686441f7888c85eb31235a47eef24b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of process IDs of children processes.  <a href="#ga686441f7888c85eb31235a47eef24b04">More...</a><br /></td></tr>
-<tr class="separator:ga686441f7888c85eb31235a47eef24b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad5bfc95a356a7c5b2db8c45a80f03d41">proc_id_getUser</a> (t_pid pid, t_uid *uid)</td></tr>
-<tr class="memdesc:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the User ID of the given process.  <a href="#gad5bfc95a356a7c5b2db8c45a80f03d41">More...</a><br /></td></tr>
-<tr class="separator:gad5bfc95a356a7c5b2db8c45a80f03d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gadac5762d74bdbe77b7e9badeece3b1b7">proc_id_getGroup</a> (t_pid pid, t_gid *gid)</td></tr>
-<tr class="memdesc:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Group ID of the current process.  <a href="#gadac5762d74bdbe77b7e9badeece3b1b7">More...</a><br /></td></tr>
-<tr class="separator:gadac5762d74bdbe77b7e9badeece3b1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga05bdbe6f5656dc5bd6949583d9db27b4">proc_id_getSession</a> (t_pid pid, t_pid *sid)</td></tr>
-<tr class="memdesc:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Session Identifier.  <a href="#ga05bdbe6f5656dc5bd6949583d9db27b4">More...</a><br /></td></tr>
-<tr class="separator:ga05bdbe6f5656dc5bd6949583d9db27b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabf476c72813669007d753d68d316dac3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gabf476c72813669007d753d68d316dac3">proc_id_setSession</a> (void)</td></tr>
-<tr class="memdesc:gabf476c72813669007d753d68d316dac3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new Session. A new session is created with the current PID as being the Session ID.  <a href="#gabf476c72813669007d753d68d316dac3">More...</a><br /></td></tr>
-<tr class="separator:gabf476c72813669007d753d68d316dac3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga785e9b08db64c427e53e7b5088f7927b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void **location)</td></tr>
+<tr class="memdesc:ga785e9b08db64c427e53e7b5088f7927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga785e9b08db64c427e53e7b5088f7927b">More...</a><br /></td></tr>
+<tr class="separator:ga785e9b08db64c427e53e7b5088f7927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1dc9234262321bada770a1c44876110c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1dc9234262321bada770a1c44876110c">proc_memory_deallocate</a> (void *location)</td></tr>
+<tr class="memdesc:ga1dc9234262321bada770a1c44876110c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#ga1dc9234262321bada770a1c44876110c">More...</a><br /></td></tr>
+<tr class="separator:ga1dc9234262321bada770a1c44876110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4a656676ce292a2a455a0aafcf732b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac4a656676ce292a2a455a0aafcf732b4">proc_memory_clear</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void *location)</td></tr>
+<tr class="memdesc:gac4a656676ce292a2a455a0aafcf732b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear contents of memory block.  <a href="#gac4a656676ce292a2a455a0aafcf732b4">More...</a><br /></td></tr>
+<tr class="separator:gac4a656676ce292a2a455a0aafcf732b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga86fe2663b56cd27b21974815be7fba9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d">proc_info_get</a> (t_pid pid, <a class="el" href="group___p_r_o_c.html#ga92277722dee15f73e8de63b1f4f9aaa0">t_proc_info</a> *procInfo)</td></tr>
+<tr class="memdesc:ga86fe2663b56cd27b21974815be7fba9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain raw process information This is the function call that allows clients to make a single call and obtain all raw process data.  <a href="#ga86fe2663b56cd27b21974815be7fba9d">More...</a><br /></td></tr>
+<tr class="separator:ga86fe2663b56cd27b21974815be7fba9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7">proc_usage_getVirtualMemory</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process virtual memory.  <a href="#ga010fc4f853e10d00b7eadfbbbedfc9d7">More...</a><br /></td></tr>
+<tr class="separator:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e33257245a1a4eac61e1744284c06d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga4e33257245a1a4eac61e1744284c06d3">proc_usage_getRealMemory</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga4e33257245a1a4eac61e1744284c06d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process real memory, i.e. ram usage.  <a href="#ga4e33257245a1a4eac61e1744284c06d3">More...</a><br /></td></tr>
+<tr class="separator:ga4e33257245a1a4eac61e1744284c06d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc">proc_usage_getCPU</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga1a29780a5de557c9e64abcea163a3fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the process CPU consumption (summary of user and system)  <a href="#ga1a29780a5de557c9e64abcea163a3fbc">More...</a><br /></td></tr>
+<tr class="separator:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62">proc_usage_getThreads</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
+<tr class="memdesc:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of process kernel threads / LWPs.  <a href="#gaaa4306b8ae7885ce918aa03b7a779a62">More...</a><br /></td></tr>
+<tr class="separator:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga712c42828e2df3e1c7402a760b024fbb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga712c42828e2df3e1c7402a760b024fbb">proc_signal_supported</a> (int *supportLevel)</td></tr>
 <tr class="memdesc:ga712c42828e2df3e1c7402a760b024fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Are signals supported by the OSAPI library?  <a href="#ga712c42828e2df3e1c7402a760b024fbb">More...</a><br /></td></tr>
 <tr class="separator:ga712c42828e2df3e1c7402a760b024fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,39 +248,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga56abcfdb6f28d052b71c283f6d0a4c1f">proc_signal_getNumber</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *sigName, t_signal *sigNumber)</td></tr>
 <tr class="memdesc:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the name of a signal The function maps a signal number to a signal name.  <a href="#ga56abcfdb6f28d052b71c283f6d0a4c1f">More...</a><br /></td></tr>
 <tr class="separator:ga56abcfdb6f28d052b71c283f6d0a4c1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga785e9b08db64c427e53e7b5088f7927b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void **location)</td></tr>
-<tr class="memdesc:ga785e9b08db64c427e53e7b5088f7927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga785e9b08db64c427e53e7b5088f7927b">More...</a><br /></td></tr>
-<tr class="separator:ga785e9b08db64c427e53e7b5088f7927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1dc9234262321bada770a1c44876110c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1dc9234262321bada770a1c44876110c">proc_memory_deallocate</a> (void *location)</td></tr>
-<tr class="memdesc:ga1dc9234262321bada770a1c44876110c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#ga1dc9234262321bada770a1c44876110c">More...</a><br /></td></tr>
-<tr class="separator:ga1dc9234262321bada770a1c44876110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4a656676ce292a2a455a0aafcf732b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac4a656676ce292a2a455a0aafcf732b4">proc_memory_clear</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void *location)</td></tr>
-<tr class="memdesc:gac4a656676ce292a2a455a0aafcf732b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear contents of memory block.  <a href="#gac4a656676ce292a2a455a0aafcf732b4">More...</a><br /></td></tr>
-<tr class="separator:gac4a656676ce292a2a455a0aafcf732b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga86fe2663b56cd27b21974815be7fba9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d">proc_info_get</a> (t_pid pid, <a class="el" href="group___p_r_o_c.html#ga92277722dee15f73e8de63b1f4f9aaa0">t_proc_info</a> *procInfo)</td></tr>
-<tr class="memdesc:ga86fe2663b56cd27b21974815be7fba9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain raw process information This is the function call that allows clients to make a single call and obtain all raw process data.  <a href="#ga86fe2663b56cd27b21974815be7fba9d">More...</a><br /></td></tr>
-<tr class="separator:ga86fe2663b56cd27b21974815be7fba9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga010fc4f853e10d00b7eadfbbbedfc9d7">proc_usage_getVirtualMemory</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process virtual memory.  <a href="#ga010fc4f853e10d00b7eadfbbbedfc9d7">More...</a><br /></td></tr>
-<tr class="separator:ga010fc4f853e10d00b7eadfbbbedfc9d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4e33257245a1a4eac61e1744284c06d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga4e33257245a1a4eac61e1744284c06d3">proc_usage_getRealMemory</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:ga4e33257245a1a4eac61e1744284c06d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the size of the process real memory, i.e. ram usage.  <a href="#ga4e33257245a1a4eac61e1744284c06d3">More...</a><br /></td></tr>
-<tr class="separator:ga4e33257245a1a4eac61e1744284c06d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1a29780a5de557c9e64abcea163a3fbc">proc_usage_getCPU</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:ga1a29780a5de557c9e64abcea163a3fbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the process CPU consumption (summary of user and system)  <a href="#ga1a29780a5de557c9e64abcea163a3fbc">More...</a><br /></td></tr>
-<tr class="separator:ga1a29780a5de557c9e64abcea163a3fbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaaa4306b8ae7885ce918aa03b7a779a62">proc_usage_getThreads</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
-<tr class="memdesc:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of process kernel threads / LWPs.  <a href="#gaaa4306b8ae7885ce918aa03b7a779a62">More...</a><br /></td></tr>
-<tr class="separator:gaaa4306b8ae7885ce918aa03b7a779a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaccfece10ffb25e27bf250cc0aebd428b">proc_library_supported</a> (void)</td></tr>
-<tr class="memdesc:gaccfece10ffb25e27bf250cc0aebd428b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the load/unload of libraries supported in the platform?  <a href="#gaccfece10ffb25e27bf250cc0aebd428b">More...</a><br /></td></tr>
-<tr class="separator:gaccfece10ffb25e27bf250cc0aebd428b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga87fd88644614d224ef9b98bf8ef5e49f">proc_library_load</a> (char *path, char *options[], t_library *lib)</td></tr>
-<tr class="memdesc:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a library into the current process.  <a href="#ga87fd88644614d224ef9b98bf8ef5e49f">More...</a><br /></td></tr>
-<tr class="separator:ga87fd88644614d224ef9b98bf8ef5e49f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf6622299218d5c8712a68a9f0e7533e8">proc_library_unload</a> (t_library lib)</td></tr>
-<tr class="memdesc:gaf6622299218d5c8712a68a9f0e7533e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a library from the current process.  <a href="#gaf6622299218d5c8712a68a9f0e7533e8">More...</a><br /></td></tr>
-<tr class="separator:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The process management module. </p>
@@ -450,8 +462,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ga686441f7888c85eb31235a47eef24b04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga686441f7888c85eb31235a47eef24b04">&#9670;&nbsp;</a></span>proc_id_getDescendents()</h2>
+<a id="ga1cae9b19b89857e02debbd9d064731c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1cae9b19b89857e02debbd9d064731c7">&#9670;&nbsp;</a></span>proc_id_getDescendents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -459,6 +471,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_id_getDescendents </td>
           <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
           <td class="paramname"><em>tsize</em>, </td>
         </tr>
@@ -485,6 +503,7 @@ Here is the call graph for this function:</div>
 <p>Get list of process IDs of children processes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>- The process ID for which children are obtained </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">tsize</td><td>- The size of the array </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">csize</td><td>- The number of found children processes </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">array</td><td>- List of process IDs of children </td></tr>
@@ -526,6 +545,58 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>- Target Process ID </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">gid</td><td>- User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaeee0ed0754efaba39d0c05955f29d980"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaeee0ed0754efaba39d0c05955f29d980">&#9670;&nbsp;</a></span>proc_id_getGroupMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_id_getGroupMembers </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pgid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>initialMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>currentMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_pid(*)&#160;</td>
+          <td class="paramname"><em>idList</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the List of IDs of Process Group members. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pgid</td><td>- The target Process Group ID for which to retrieve the member IDs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialMembers</td><td>- Number of found members of group / Size of the array </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">currentMembers</td><td>- Number of members discovered during the execution of the operations / Current array size </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">idList</td><td>- List with process IDs of group members </td></tr>
   </table>
   </dd>
 </dl>
@@ -591,6 +662,58 @@ Here is the call graph for this function:</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>- Target Process ID </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">sid</td><td>- Session ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga5b71d15de67d74ef9b098b0453f1bad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5b71d15de67d74ef9b098b0453f1bad4">&#9670;&nbsp;</a></span>proc_id_getSessionMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_id_getSessionMembers </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>sid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>initialMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>currentMembers</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_pid(*)&#160;</td>
+          <td class="paramname"><em>idList</em>[]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the List of IDs of Process Session members. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sid</td><td>- The target Process Session ID for which to retrieve the member IDs </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialMembers</td><td>- Number of found members of group / Size of the array </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">currentMembers</td><td>- Number of members discovered during the execution of the operations / Current array size </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">idList</td><td>- List with process IDs of session members </td></tr>
   </table>
   </dd>
 </dl>
@@ -836,8 +959,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="gaf2ff6406fe1091889d2e54325d3f2fdf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf2ff6406fe1091889d2e54325d3f2fdf">&#9670;&nbsp;</a></span>proc_instance_getNumberOfDescendents()</h2>
+<a id="ga51e6062a21d8795cde9b71b4935202b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga51e6062a21d8795cde9b71b4935202b0">&#9670;&nbsp;</a></span>proc_instance_getNumberOfDescendents()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -845,9 +968,19 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_instance_getNumberOfDescendents </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
-          <td class="paramname"><em>number</em></td><td>)</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -855,7 +988,84 @@ Here is the caller graph for this function:</div>
 <p>Obtain the number of children processes. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>- Get descendants of this process </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">number</td><td>- Number of children processes </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga2fb6430bc211de41459816fbbd4bfc35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2fb6430bc211de41459816fbbd4bfc35">&#9670;&nbsp;</a></span>proc_instance_getNumberOfGroupMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_instance_getNumberOfGroupMembers </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pgid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the number of process group members. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pgid</td><td>- The process group id </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">number</td><td>- Number of process group members </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga7b714bd9369cf003209b95917e4e56bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7b714bd9369cf003209b95917e4e56bd">&#9670;&nbsp;</a></span>proc_instance_getNumberOfSessionMembers()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_instance_getNumberOfSessionMembers </td>
+          <td>(</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>sid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the number of process session members. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">sid</td><td>- The session id </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">number</td><td>- Number of process group members </td></tr>
   </table>
   </dd>
 </dl>

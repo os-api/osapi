@@ -95,7 +95,7 @@ t_status proc_id_getSession( t_pid pid, t_pid * sid );
 t_status proc_id_setSession( void );
 
 /// @brief Get the List of IDs of Process Group members.
-/// @param [in] tgid - The target Process Group ID for which to retrieve the member IDs
+/// @param [in] pgid - The target Process Group ID for which to retrieve the member IDs
 /// @param [in] initialMembers - Number of found members of group / Size of the array
 /// @param [out] currentMembers - Number of members discovered during the execution of the operations / Current array size
 /// @param [out] idList - List with process IDs of group members
