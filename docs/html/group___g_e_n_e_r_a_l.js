@@ -7,7 +7,6 @@ var group___g_e_n_e_r_a_l =
     [ "osapi_bit_off", "group___g_e_n_e_r_a_l.html#gab34cc1f9383c0486b939bdb68ad2366b", null ],
     [ "osapi_bit_on", "group___g_e_n_e_r_a_l.html#ga04ab576722684cecbb667c72ea23d454", null ],
     [ "OSAPI_EMPTY_STRING", "group___g_e_n_e_r_a_l.html#ga40de89d8291d4d6973c8b96d2206e04e", null ],
-    [ "OSAPI_NORETURN", "group___g_e_n_e_r_a_l.html#gab7a2b242313c264e39bf81ea851fada2", null ],
     [ "OSAPI_NULL_CHAR_POINTER", "group___g_e_n_e_r_a_l.html#gab2d0bd66cbb2dbb7c03aa904daa04742", null ],
     [ "OSAPI_OPTIONS_END", "group___g_e_n_e_r_a_l.html#gad5dd41b59292b93cc5d9208e4da35551", null ],
     [ "OSAPI_SPACE_STRING", "group___g_e_n_e_r_a_l.html#ga0d156cb0f9553130a1f77e8a9848bd0a", null ],

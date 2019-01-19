@@ -10,19 +10,25 @@
 #ifndef OSAPI_GENERAL_BASELINE_H_
 #define OSAPI_GENERAL_BASELINE_H_
 
-// Language baseline: C or C++
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
 
-#ifndef __cplusplus
+// Import own headers
+#include "general/general_language.h"
+#include "general/general_compiler.h"
 
-#if __STDC_VERSION__ < 201112L
- #error "Wrong C standard version"
-#endif
+// OSAPI Baseline definition
+#include "general/general_baseline_language.h"
+#include "general/general_baseline_compiler.h"
 
-#endif	// C or C++ baseline
 
 // Platform baseline
 #if defined(OS_LINUX)
  #include "general/general_baseline_unix.h"
+ #include "general/general_baseline_linux.h"
 #endif
 
 

@@ -26,32 +26,18 @@
 // Include platform available standards
 #include <unistd.h>
 
+#include "general/general_language.h"
+
 // *****************************************************************************************
 //
 // Section: Platform Baseline definition
 //
 // *****************************************************************************************
 
+// Define XOPEN && POSIX baselines/constraints
+osapi_static_assert( _XOPEN_VERSION == 700,	"Wrong XOPEN version" );
+osapi_static_assert( _POSIX_VERSION == 200809L,	"Wrong POSIX version" );
 
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
- extern "C" {
-
-   // Define XOPEN && POSIX baselines/constraints
-   static_assert( _XOPEN_VERSION == 700,	"Wrong XOPEN version" );
-   static_assert( _POSIX_VERSION == 200809L,	"Wrong POSIX version" );
-
-#else	// C Language
-
-   // Define XOPEN && POSIX baselines/constraints
-   _Static_assert( _XOPEN_VERSION == 700,	"Wrong XOPEN version" );
-   _Static_assert( _POSIX_VERSION == 200809L,	"Wrong POSIX version" );
-#endif
-
-// End of header with C++ declaration
-#ifdef __cplusplus
-  }
-#endif
 
 // If compilation reaches this far, them define own POSIX symbol
 #define OSAPI_POSIX

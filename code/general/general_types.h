@@ -75,13 +75,6 @@ struct s_optional_pair
 /// The definition of a generic pair type
 typedef struct s_optional_pair	t_option;
 
-/// Work around C/C++ attribute mismatches
-#if __cplusplus
-  #define OSAPI_NORETURN	[[noreturn]]
-#else
-  #define OSAPI_NORETURN	_Noreturn
-#endif
-
 // *****************************************************************************************
 //
 // Section: Macro definitions
