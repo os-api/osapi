@@ -27,6 +27,8 @@
 //
 // *****************************************************************************************
 
+#ifndef OSAPI_BASELINE_COMPILER_DISABLE
+
 osapi_static_assert( OSAPI_COMPILER != OSAPI_COMPILER_UNKNOWN, 	"Baseline error: Unknown compiler" );
 
 // GNU version 6.5 (at least), supports C11
@@ -36,7 +38,8 @@ osapi_static_assert( OSAPI_COMPILER != OSAPI_COMPILER_UNKNOWN, 	"Baseline error:
 #elif  OSAPI_COMPILER == OSAPI_COMPILER_CLANG
 
   // What is the baseline for CLANG?
-
 #endif
+
+#endif	// If compiler baseline is not disabled
 
 #endif /* GENERAL_BASELINE_COMPILER_H_ */

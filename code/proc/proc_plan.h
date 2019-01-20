@@ -68,7 +68,7 @@ t_status proc_data_setUser( t_uid uid, t_proc * proc );
 t_status proc_data_setGroup( t_gid gid, t_proc * proc );
 
 /// @brief Fills a process data structure with the execution command line
-/// @param [in] size - Number of elements of the C-String array
+/// @param [in] size - Number of elements of the (C-String) array
 /// @param [in] array - The command line array
 /// @param [out] proc - The process type
 /// @return Operation status

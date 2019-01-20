@@ -17,6 +17,8 @@ var group___g_e_n_e_r_a_l =
     [ "t_protocol", "group___g_e_n_e_r_a_l.html#gadefc37638d0cbab5b1f053e2e6e09f91", null ],
     [ "t_size", "group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537", null ],
     [ "osapi_get_protocol_string", "group___g_e_n_e_r_a_l.html#ga692a8b2ffa426620a403a61d8b7b6bc9", null ],
+    [ "osapi_get_release", "group___g_e_n_e_r_a_l.html#ga4934b24f1e91629d50ffd7a36bf464f4", null ],
+    [ "osapi_get_release_string", "group___g_e_n_e_r_a_l.html#ga0be71a42532004758787a11f4ffa7d42", null ],
     [ "osapi_get_version", "group___g_e_n_e_r_a_l.html#ga2761dba31f6734840548ee636e7da45c", null ],
     [ "osapi_get_version_stability", "group___g_e_n_e_r_a_l.html#ga63599e848f3e8bbfb13b9665d6ea64a0", null ],
     [ "osapi_get_version_stability_string", "group___g_e_n_e_r_a_l.html#ga404214b93093fbf687c0942f0662f3b9", null ],

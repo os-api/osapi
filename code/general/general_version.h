@@ -18,7 +18,15 @@
 //
 // *****************************************************************************************
 
-// Include own version definitions
+// Include own release definition
+#define osapi_release_X(a, b, c) a b,
+enum release_X {
+	  #include "general/mappings/table_release.h"
+};
+#undef osapi_release_X
+
+
+// Include own version definition
 #define osapi_version_X(a, b, c) a b,
 enum version_X {
 	  #include "general/mappings/table_version.h"

@@ -50,6 +50,10 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
+/// @brief Get the release number of the Library
+/// @return Release number
+unsigned long osapi_get_release( void );
+
 /// @brief Get the version number of the Library
 /// @return Version number
 unsigned long osapi_get_version( void );
@@ -57,6 +61,10 @@ unsigned long osapi_get_version( void );
 /// @brief Get the library stability type: Stable vs Unstable
 /// @return enum that describes the stability type
 int osapi_get_version_stability( void );
+
+/// @brief Get the release string of the Library
+/// @return C String library release information
+const char * osapi_get_release_string( void );
 
 /// @brief Get the version string of the Library
 /// @return C String library version

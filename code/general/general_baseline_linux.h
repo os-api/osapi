@@ -29,6 +29,8 @@
 //
 // *****************************************************************************************
 
+#ifndef OSAPI_BASELINE_LINUX_DISABLE
+
 // Define OS Baseline
 #ifdef 	LINUX_VERSION_CODE
 // Need to better fine tune the version according to the required APIs
@@ -37,16 +39,24 @@
   #error "Baseline: Linux Kernel information not available"
 #endif
 
+#endif	// If linux baseline is not disabled
+
+
+#ifndef OSAPI_BASELINE_LIBC_DISABLE
 
 // Define C Library baseline
 #ifdef __GLIBC__
+
 // Need to better fine tune the version according to the required APIs:
 // Support for C11 Threads only appears in version 2.28
 
   osapi_static_assert( __GLIBC__       >= 2,	"Baseline error: GNU Lib C major version bellow baseline" );
-  osapi_static_assert( __GLIBC_MINOR__>= 19,	"Baseline error: GNU Lib C minor version bellow baseline" );
+  osapi_static_assert( __GLIBC_MINOR__ >= 19,	"Baseline error: GNU Lib C minor version bellow baseline" );
+
 #else
   #error "Baseline: GNU C Library not available"
 #endif
+
+#endif	// If standard C library baseline is not disabled
 
 #endif /* OSAPI_GENERAL_BASELINE_LINUX_H_ */

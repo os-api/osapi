@@ -3,8 +3,8 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide enum to string mappings for OSAPI versioning
+// Purpose:	Provide enum to string mappings for OSAPI Release numbering
 //
 // *****************************************************************************************
 
-osapi_version_X( e_osapi_version, = 14 , "14" )
+osapi_release_X( e_osapi_release, = 0 , "0" )

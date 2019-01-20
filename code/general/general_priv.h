@@ -11,6 +11,17 @@
 #define OSAPI_GENERAL_PRIV_H_
 
 
+// Release string
+#define osapi_release_X(a, b, c) c,
+
+static const char * osapi_release[] =
+{
+  #include "general/mappings/table_release.h"
+};
+
+#undef osapi_release_X
+
+
 // Version string
 #define osapi_version_X(a, b, c) c,
 

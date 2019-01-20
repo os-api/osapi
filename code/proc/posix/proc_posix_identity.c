@@ -20,6 +20,7 @@
 #ifdef OSAPI_POSIX
 
 // System includes
+#include <stdio.h>
 #include <sys/types.h>
 #include <string.h>
 #include <stdlib.h>
@@ -182,6 +183,71 @@ t_status proc_id_getUser( t_pid search_pid, t_gid * p_user_id )
        }
      */
    }
+
+ return st;
+}
+
+
+t_status proc_id_toString( t_pid pid, t_size size, t_char * p_string )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( pid <= 0 || size <= 0 || p_string == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     int n = snprintf( p_string, size, "%d", pid );
+     if( n < 0 )	// Conversion error
+         status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+     else 	// Value was truncated ?
+	 if( n >= size ) status_eset( OSAPI_MODULE_PROC, __func__, e_proc_conversion, &st );
+   }
+
+ return st;
+}
+
+
+t_status proc_id_fromString( t_char * p_string, t_pid * p_pid )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_string == NULL || p_pid == (t_pid *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+     *p_pid = (t_pid) atol( p_string );
+
+ return st;
+}
+
+
+t_status proc_id_copy( t_pid source, t_pid * p_target )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( source <= 0 || p_target == (t_pid *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+     *p_target = source;
+
+ return st;
+}
+
+t_status proc_id_clear( t_pid * p_pid )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_pid == (t_pid *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+     *p_pid = 0;
 
  return st;
 }

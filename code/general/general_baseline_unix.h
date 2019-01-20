@@ -34,10 +34,14 @@
 //
 // *****************************************************************************************
 
+#ifndef OSAPI_BASELINE_UNIX_DISABLE
+
 // Define XOPEN && POSIX baselines/constraints
 osapi_static_assert( _XOPEN_VERSION == 700,	"Wrong XOPEN version" );
 osapi_static_assert( _POSIX_VERSION == 200809L,	"Wrong POSIX version" );
 
+
+#endif	// If UNIX baseline is not disabled
 
 // If compilation reaches this far, them define own POSIX symbol
 #define OSAPI_POSIX

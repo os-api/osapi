@@ -208,5 +208,4 @@ t_status proc_instance_getChildStatus( t_pid * p_pid, t_proc_status * p_status )
 }
 
 
-
 #endif	// End of POSIX compilation

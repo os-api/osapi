@@ -26,6 +26,10 @@
 //
 // *****************************************************************************************
 
+unsigned long osapi_get_release( void )
+{
+  return (unsigned long) e_osapi_release;
+}
 
 unsigned long osapi_get_version( void )
 {
@@ -35,6 +39,12 @@ unsigned long osapi_get_version( void )
 int osapi_get_version_stability( void )
 {
   return OSAPI_VERSION_QUALITY;
+}
+
+
+const char * osapi_get_release_string( void )
+{
+  return osapi_release[ 0 ];	// There is only one member in the array
 }
 
 

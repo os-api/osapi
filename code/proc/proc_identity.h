@@ -110,6 +110,31 @@ t_status proc_id_getGroupMembers( t_pid pgid, t_size initialMembers, t_size * cu
 /// @return Operation status
 t_status proc_id_getSessionMembers( t_pid sid, t_size initialMembers, t_size * currentMembers, t_pid (* idList)[] );
 
+/// @brief Convert a process ID to a C-String format.
+/// @param [in] pid - The process ID to convert to string
+/// @param [in] size - Size of the output string
+/// @param [out] string - Process ID in C-String format
+/// @return Operation status
+t_status proc_id_toString( t_pid pid, t_size size, t_char * string );
+
+/// @brief Convert a C-String into a process ID.
+/// @param [in] string - The C-String to be converted into a process ID
+/// @param [out] pid - The process ID obtained from the C-String
+/// @return Operation status
+t_status proc_id_fromString( t_char * string, t_pid * pid );
+
+/// @brief Copy a source process ID to a target variable.
+/// @param [in] source - The process ID to copy
+/// @param [out] target - The copied process ID
+/// @return Operation status
+t_status proc_id_copy( t_pid source, t_pid * target );
+
+/// @brief Reset ID to a default (and possible non usable) value
+/// @param [in,out] pid - The process ID variable to reset
+/// @return Operation status
+t_status proc_id_clear( t_pid * pid );
+
+
 #pragma GCC visibility pop			// End of public interface
 
 
