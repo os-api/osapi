@@ -31,7 +31,6 @@ extern "C" {
 
 // Own declarations
 #include "proc/proc_types.h"
-#include "proc/proc_platform.h"
 
 
 /// *****************************************************************************************

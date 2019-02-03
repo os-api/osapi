@@ -28,12 +28,12 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include <error/modules/error_proc.h>
 #include "status/status.h"
 #include "common/common.h"
 
 // Own declarations
 #include "proc/proc.h"
+#include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
 
 
@@ -70,19 +70,27 @@ t_status proc_id_get( t_pid * p_pid )
 }
 
 
-t_status proc_id_getParent( t_pid * p_pid )
+t_status proc_id_getParent( t_pid pid, t_pid * p_pid )
 {
  t_status st;
 
  status_reset( & st );
 
- if( p_pid == (t_pid) 0 )
+ if( pid < 2 || p_pid == (t_pid) 0 )
      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
  else
    {
-     *p_pid = (t_pid) getppid();
-     if( *p_pid == -1 )
-         status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+     // If the target process is the current process, use a shortcut to get the parent PID
+     if( pid == getpid() )
+       {
+	 *p_pid = (t_pid) getppid();
+	 if( *p_pid == -1 )
+	     status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+       }
+     else
+       {	// Parent PID requested for another process
+	 posix_get_parent_pid( pid, p_pid );
+       }
    }
 
  return st;
@@ -202,7 +210,7 @@ t_status proc_id_toString( t_pid pid, t_size size, t_char * p_string )
      if( n < 0 )	// Conversion error
          status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
      else 	// Value was truncated ?
-	 if( n >= size ) status_eset( OSAPI_MODULE_PROC, __func__, e_proc_conversion, &st );
+	 if( n >= size ) status_iset( OSAPI_MODULE_PROC, __func__, e_proc_conversion, &st );
    }
 
  return st;
@@ -218,7 +226,13 @@ t_status proc_id_fromString( t_char * p_string, t_pid * p_pid )
  if( p_string == NULL || p_pid == (t_pid *) 0 )
      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
  else
+   {
+     errno = 0;    // To distinguish success/failure after call
      *p_pid = (t_pid) atol( p_string );
+     if( errno != 0 )	status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+     else
+       if( *p_pid < 0 )	status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+   }
 
  return st;
 }

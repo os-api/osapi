@@ -31,7 +31,7 @@
 #include "common/common.h"
 
 // Own declarations
-#include "proc/proc.h"
+#include "proc/proc_instance.h"
 #include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
 #include "proc/linux/proc_linux_priv.h"

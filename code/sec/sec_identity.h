@@ -55,6 +55,11 @@ extern "C" {
 
 // Group ID functions
 
+/// @brief Checks if the group ID exists in the system
+/// @param [out] gid - group ID
+/// @return Operation status
+t_status sec_group_exists( t_gid gid );
+
 /// @brief Convert a string into a Group ID
 /// @param [in] string - C string
 /// @param [out] gid - group ID
@@ -115,6 +120,11 @@ t_status sec_group_getMaxSize( t_size * size );
 t_status sec_group_getMaxNumber( t_size * max );
 
 // User ID functions
+/// @brief Checks if the user ID exists in the system
+/// @param [out] uid - User ID
+/// @return Operation status
+t_status sec_user_exists( t_uid uid );
+
 /// @brief Convert a string into a user ID
 /// @param [in] string - C string
 /// @param [out] uid - user ID

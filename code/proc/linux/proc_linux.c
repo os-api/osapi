@@ -130,6 +130,54 @@ t_status proc_info_get( t_pid pid, t_proc_info * p_pinfo )
 }
 
 
+// Get the Parent ID for any target process
+// This function must be implemented in every POSIX compliant system
+t_status posix_get_parent_pid( t_pid childPid, t_pid * p_parentPid )
+{
+  t_status		st;
+  t_proc_info		pinfo;
+  t_pid			pid;
+  struct dirent *	p_dir_entry	= NULL;
+  DIR * 		p_dir		= NULL;
+
+  status_reset( & st );
+
+  if( childPid < 2 || p_parentPid == (t_pid *) 0 )
+    {
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      return st;
+    }
+
+  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_idNotFound, &st );
+
+  p_dir = opendir( OSAPI_FS_PROC_NAME );
+
+  while( ( p_dir_entry = readdir( p_dir ) ) )
+       {
+         if( ( strcmp( p_dir_entry->d_name, "."  ) == 0) ||
+             ( strcmp( p_dir_entry->d_name, ".." ) == 0)  )
+ 	      continue;
+
+ 	    pid = (t_pid) atoi( p_dir_entry->d_name );
+
+ 	    if( pid == childPid )	// Check if it's the target process
+ 	      {
+ 		st = parse_linux_proc_stat_file( pid, & pinfo );
+
+ 		if( status_success( st ) )
+ 		  {
+ 		    *p_parentPid = pinfo.id.ppid;
+ 		    status_reset( & st );
+ 		    break;
+ 		  }
+ 	      }
+       }
+
+  closedir( p_dir );
+
+  return st;
+}
+
 
 
 #endif	// End of OS Linux

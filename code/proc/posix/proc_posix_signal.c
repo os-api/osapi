@@ -32,7 +32,7 @@
 #include "common/common.h"
 
 // Own declarations
-#include "proc/proc.h"
+#include "proc/proc_signal.h"
 #include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
 #include "proc/posix/proc_signal_defs.h"

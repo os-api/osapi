@@ -54,6 +54,14 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 // ++ Operations
+
+// + Clear process data
+/// @brief Reset process plan information to default system specific values
+/// @param [in,out] proc - process type
+/// @return Operation status
+t_status proc_data_clear( t_proc * proc );
+
+
 // + Building process data
 /// @brief Change the current process User ID
 /// @param [in] uid - New User ID
@@ -80,6 +88,24 @@ t_status proc_data_setCmdLine( t_size size, char * array[], t_proc * proc );
 /// @param [out] proc - The process type
 /// @return Operation status
 t_status proc_data_setEnvironment( t_size size, char * array[], t_proc * proc );
+
+/// @brief Retrieve the process ID from the process type
+/// @param [in] proc - Process type
+/// @param [out] pid - process ID
+/// @return Operation status
+t_status proc_data_getPID( t_proc * proc, t_pid * pid );
+
+/// @brief Retrieve the User ID from the process type
+/// @param [in] proc - Process type
+/// @param [out] uid - User ID
+/// @return Operation status
+t_status proc_data_getUID( t_proc * proc, t_uid * uid );
+
+/// @brief Retrieve the User ID from the process type
+/// @param [in] proc - Process type
+/// @param [out] gid - User ID
+/// @return Operation status
+t_status proc_data_getGID( t_proc * proc, t_gid * gid );
 
 
 #pragma GCC visibility pop			// End of public interface

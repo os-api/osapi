@@ -31,7 +31,6 @@ extern "C" {
 
 // Own declarations
 #include "proc/proc_types.h"
-#include "proc/proc_platform.h"
 
 
 /// *****************************************************************************************
@@ -59,9 +58,10 @@ extern "C" {
 t_status proc_id_get( t_pid * pid );
 
 /// @brief Get the parent process ID
+/// @param [in] pid - The process ID for which the parent ID process is required
 /// @param [out] ppid - The parent process ID
 /// @return Operation status
-t_status proc_id_getParent( t_pid * ppid );
+t_status proc_id_getParent( t_pid pid, t_pid * ppid );
 
 /// @brief Get list of process IDs of children processes
 /// @param [in] pid - The process ID for which children are obtained

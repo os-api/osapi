@@ -31,7 +31,6 @@ extern "C" {
 
 // Own declarations
 #include "proc/proc_types.h"
-#include "proc/proc_platform.h"
 
 
 /// *****************************************************************************************
@@ -55,7 +54,7 @@ extern "C" {
 
 // ++ Life cycle
 /// @brief Create a new process instance
-/// @param [in] proc - process type
+/// @param [in,out] proc - process type
 /// @return Operation status
 t_status proc_instance_create( t_proc * proc );
 

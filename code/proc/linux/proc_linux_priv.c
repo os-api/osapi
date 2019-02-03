@@ -32,7 +32,6 @@
 #include <dirent.h>
 
 
-
 // Generic OSAPI includes
 #include "general/general.h"
 #include "common/common.h"
@@ -40,7 +39,6 @@
 // Include own headers
 #include "error/modules/error_proc.h"
 #include "proc/linux/proc_linux_priv.h"
-//#include "proc/posix/proc_posix_priv.h"
 
 
 // *****************************************************************************************
@@ -232,6 +230,9 @@ t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
 
  return st;
 }
+
+
+
 
 
 #endif	// End of OS Linux

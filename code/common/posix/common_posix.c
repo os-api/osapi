@@ -15,6 +15,7 @@
 // *****************************************************************************************
 
 // Force baseline before system headers
+#include <common/posix/common_posix.h>
 #include "general/general_baseline.h"
 
 // System includes
@@ -36,7 +37,7 @@
 
 // Own declarations
 #include "common/common.h"
-#include "common/posix/common_priv_posix.h"
+#include "common/posix/common_posix.h"
 
 // Compile only if is a POSIX implementation
 #ifdef OSAPI_POSIX
@@ -88,7 +89,12 @@ t_status stringTo_uid( const char * p_string, t_uid * p_uid	)
   if( p_uid == (t_uid *) 0 || p_string == (char *) 0 )
       status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
+    {
+      errno = 0;
       *p_uid = (t_uid) atoll( p_string );
+      if( errno != 0 )
+	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+    }
 
   return st;
 }
@@ -291,7 +297,12 @@ t_status stringTo_gid( const char * p_string, t_gid * p_gid )
   if( p_gid == (t_gid *) 0 || p_string == (char *) 0 )
       status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
   else
+    {
+      errno = 0;
       *p_gid = (t_gid) atoll( p_string );
+      if( errno != 0 )
+	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+    }
 
   return st;
 }
@@ -374,9 +385,9 @@ t_status set_groupID( t_uid id )
 
 t_status get_groupname_from_id( t_gid gid, size_t max_name, char * p_groupname )
 {
-  t_status 			st;
-  int				rc;
-  char *			buf;
+  t_status 		st;
+  int			rc;
+  char *		buf;
   struct group		grp;
   struct group *	result;
 
@@ -403,9 +414,9 @@ t_status get_groupname_from_id( t_gid gid, size_t max_name, char * p_groupname )
 
 t_status get_groupID_from_name( char * groupname, t_gid * p_gid )
 {
-  t_status 			st;
-  int				rc;
-  char *			buf;
+  t_status 		st;
+  int			rc;
+  char *		buf;
   struct group		grp;
   struct group *	result;
 

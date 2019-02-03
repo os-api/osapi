@@ -27,9 +27,7 @@
 #include "general/general.h"
 
 // Import OS specific definitions
-#ifdef	OS_LINUX
- #include "proc/linux/proc_linux_types.h"
-#endif
+#include "proc/proc_platform.h"
 
 
 /// *****************************************************************************************

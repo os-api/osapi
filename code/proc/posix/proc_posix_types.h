@@ -25,6 +25,7 @@
 #include "common/types/common_types.h"
 
 // Own module types
+#include "proc/posix/proc_posix_defs.h"
 #include "proc/proc_signal_types.h"
 
 // *****************************************************************************************
@@ -44,8 +45,11 @@ typedef Byte 		(*t_procfunc)(void);
 struct  s_proc
 {
   // Base process properties
+  bool		has_pid;	///< PID information available
   t_pid		pid;		///< Process ID given by the kernel
+  bool		has_uid;	///< User ID information available
   t_uid		uid;		///< Runtime User  ID
+  bool		has_gid;	///< Group ID information available
   t_gid		gid;		///< Runtime Group ID
   char	*	name;		///< Process name
   size_t	nargs;		///< Number of command line arguments

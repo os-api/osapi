@@ -27,11 +27,11 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include <error/modules/error_proc.h>
 #include "status/status.h"
 
 // Own declarations
-#include "proc/proc.h"
+#include "proc/proc_library.h"
+#include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
 
 
