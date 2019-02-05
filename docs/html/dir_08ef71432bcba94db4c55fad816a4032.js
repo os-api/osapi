@@ -10,6 +10,7 @@ var dir_08ef71432bcba94db4c55fad816a4032 =
     [ "general_compiler.h", "general__compiler_8h_source.html", null ],
     [ "general_defs.h", "general__defs_8h_source.html", null ],
     [ "general_language.h", "general__language_8h_source.html", null ],
+    [ "general_library.h", "general__library_8h_source.html", null ],
     [ "general_modules.h", "general__modules_8h_source.html", null ],
     [ "general_priv.h", "general__priv_8h_source.html", null ],
     [ "general_protocol.h", "general__protocol_8h_source.html", null ],

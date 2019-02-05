@@ -116,9 +116,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gafc07f910a20dc520f1471b79ad3345e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3">proc_id_get</a> (t_pid *pid)</td></tr>
 <tr class="memdesc:gafc07f910a20dc520f1471b79ad3345e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process ID.  <a href="#gafc07f910a20dc520f1471b79ad3345e3">More...</a><br /></td></tr>
 <tr class="separator:gafc07f910a20dc520f1471b79ad3345e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaa091b8750060eb12db53fe9329f2c6c9">proc_id_getParent</a> (t_pid *ppid)</td></tr>
-<tr class="memdesc:gaa091b8750060eb12db53fe9329f2c6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent process ID.  <a href="#gaa091b8750060eb12db53fe9329f2c6c9">More...</a><br /></td></tr>
-<tr class="separator:gaa091b8750060eb12db53fe9329f2c6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac25277bc9f30193ad4cd2923532e7d63"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac25277bc9f30193ad4cd2923532e7d63">proc_id_getParent</a> (t_pid pid, t_pid *ppid)</td></tr>
+<tr class="memdesc:gac25277bc9f30193ad4cd2923532e7d63"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the parent process ID.  <a href="#gac25277bc9f30193ad4cd2923532e7d63">More...</a><br /></td></tr>
+<tr class="separator:gac25277bc9f30193ad4cd2923532e7d63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1cae9b19b89857e02debbd9d064731c7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1cae9b19b89857e02debbd9d064731c7">proc_id_getDescendents</a> (t_pid pid, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> tsize, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *csize, t_pid(*array)[])</td></tr>
 <tr class="memdesc:ga1cae9b19b89857e02debbd9d064731c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get list of process IDs of children processes.  <a href="#ga1cae9b19b89857e02debbd9d064731c7">More...</a><br /></td></tr>
 <tr class="separator:ga1cae9b19b89857e02debbd9d064731c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +194,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf6622299218d5c8712a68a9f0e7533e8">proc_library_unload</a> (t_library lib)</td></tr>
 <tr class="memdesc:gaf6622299218d5c8712a68a9f0e7533e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unload a library from the current process.  <a href="#gaf6622299218d5c8712a68a9f0e7533e8">More...</a><br /></td></tr>
 <tr class="separator:gaf6622299218d5c8712a68a9f0e7533e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga31c7cbe891a994d2396409e185e0f7f3">proc_data_clear</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
+<tr class="memdesc:ga31c7cbe891a994d2396409e185e0f7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset process plan information to default system specific values.  <a href="#ga31c7cbe891a994d2396409e185e0f7f3">More...</a><br /></td></tr>
+<tr class="separator:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga933a3894c184cc965d55d5e35d043c24"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga933a3894c184cc965d55d5e35d043c24">proc_data_setUser</a> (t_uid uid, <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
 <tr class="memdesc:ga933a3894c184cc965d55d5e35d043c24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the current process User ID.  <a href="#ga933a3894c184cc965d55d5e35d043c24">More...</a><br /></td></tr>
 <tr class="separator:ga933a3894c184cc965d55d5e35d043c24"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +209,15 @@ Functions</h2></td></tr>
 <tr class="memitem:gad81668bfdeac438927d3154e2666a092"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad81668bfdeac438927d3154e2666a092">proc_data_setEnvironment</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, char *array[], <a class="el" href="structs__proc.html">t_proc</a> *proc)</td></tr>
 <tr class="memdesc:gad81668bfdeac438927d3154e2666a092"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fills a process data structure with the new process environment.  <a href="#gad81668bfdeac438927d3154e2666a092">More...</a><br /></td></tr>
 <tr class="separator:gad81668bfdeac438927d3154e2666a092"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2acdafcca05f1ad3aec1804bcd192822"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2acdafcca05f1ad3aec1804bcd192822">proc_data_getPID</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc, t_pid *pid)</td></tr>
+<tr class="memdesc:ga2acdafcca05f1ad3aec1804bcd192822"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the process ID from the process type.  <a href="#ga2acdafcca05f1ad3aec1804bcd192822">More...</a><br /></td></tr>
+<tr class="separator:ga2acdafcca05f1ad3aec1804bcd192822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga07ce170fff115cf50572fe57aabf4f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga07ce170fff115cf50572fe57aabf4f94">proc_data_getUID</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc, t_uid *uid)</td></tr>
+<tr class="memdesc:ga07ce170fff115cf50572fe57aabf4f94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the User ID from the process type.  <a href="#ga07ce170fff115cf50572fe57aabf4f94">More...</a><br /></td></tr>
+<tr class="separator:ga07ce170fff115cf50572fe57aabf4f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25d180423c9b9bb5f12e421fdf08007b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga25d180423c9b9bb5f12e421fdf08007b">proc_data_getGID</a> (<a class="el" href="structs__proc.html">t_proc</a> *proc, t_gid *gid)</td></tr>
+<tr class="memdesc:ga25d180423c9b9bb5f12e421fdf08007b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the User ID from the process type.  <a href="#ga25d180423c9b9bb5f12e421fdf08007b">More...</a><br /></td></tr>
+<tr class="separator:ga25d180423c9b9bb5f12e421fdf08007b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga785e9b08db64c427e53e7b5088f7927b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void **location)</td></tr>
 <tr class="memdesc:ga785e9b08db64c427e53e7b5088f7927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga785e9b08db64c427e53e7b5088f7927b">More...</a><br /></td></tr>
 <tr class="separator:ga785e9b08db64c427e53e7b5088f7927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -265,6 +277,147 @@ Functions</h2></td></tr>
 <p>The process management module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga31c7cbe891a994d2396409e185e0f7f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31c7cbe891a994d2396409e185e0f7f3">&#9670;&nbsp;</a></span>proc_data_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_data_clear </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reset process plan information to default system specific values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">proc</td><td>- process type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga25d180423c9b9bb5f12e421fdf08007b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25d180423c9b9bb5f12e421fdf08007b">&#9670;&nbsp;</a></span>proc_data_getGID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_data_getGID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_gid *&#160;</td>
+          <td class="paramname"><em>gid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the User ID from the process type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">proc</td><td>- Process type </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">gid</td><td>- User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga2acdafcca05f1ad3aec1804bcd192822"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2acdafcca05f1ad3aec1804bcd192822">&#9670;&nbsp;</a></span>proc_data_getPID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_data_getPID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>pid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the process ID from the process type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">proc</td><td>- Process type </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">pid</td><td>- process ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga07ce170fff115cf50572fe57aabf4f94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga07ce170fff115cf50572fe57aabf4f94">&#9670;&nbsp;</a></span>proc_data_getUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_data_getUID </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structs__proc.html">t_proc</a> *&#160;</td>
+          <td class="paramname"><em>proc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_uid *&#160;</td>
+          <td class="paramname"><em>uid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the User ID from the process type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">proc</td><td>- Process type </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uid</td><td>- User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
 <a id="ga19270c4ef1cdded8d5d991921be5dc19"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga19270c4ef1cdded8d5d991921be5dc19">&#9670;&nbsp;</a></span>proc_data_setCmdLine()</h2>
 
@@ -719,8 +872,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="gaa091b8750060eb12db53fe9329f2c6c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa091b8750060eb12db53fe9329f2c6c9">&#9670;&nbsp;</a></span>proc_id_getParent()</h2>
+<a id="gac25277bc9f30193ad4cd2923532e7d63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac25277bc9f30193ad4cd2923532e7d63">&#9670;&nbsp;</a></span>proc_id_getParent()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -728,9 +881,19 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_id_getParent </td>
           <td>(</td>
-          <td class="paramtype">t_pid *&#160;</td>
-          <td class="paramname"><em>ppid</em></td><td>)</td>
+          <td class="paramtype">t_pid&#160;</td>
+          <td class="paramname"><em>pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">t_pid *&#160;</td>
+          <td class="paramname"><em>ppid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -738,6 +901,7 @@ Here is the call graph for this function:</div>
 <p>Get the parent process ID. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pid</td><td>- The process ID for which the parent ID process is required </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">ppid</td><td>- The parent process ID </td></tr>
   </table>
   </dd>
@@ -1035,7 +1199,7 @@ Here is the caller graph for this function:</div>
 <p>Create a new process instance. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">proc</td><td>- process type </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">proc</td><td>- process type </td></tr>
   </table>
   </dd>
 </dl>

@@ -2,6 +2,7 @@ var group___s_e_c =
 [
     [ "sec_group_compare", "group___s_e_c.html#ga5a2e136eca0f888687cc3d9658730840", null ],
     [ "sec_group_copy", "group___s_e_c.html#ga73949358d2972ea076a4d9848865e32f", null ],
+    [ "sec_group_exists", "group___s_e_c.html#ga568419b6897c4e0fc4e3018b561f0ee8", null ],
     [ "sec_group_getId", "group___s_e_c.html#ga12d18da2d8601ae80c9ce16567f34a48", null ],
     [ "sec_group_getIdFromName", "group___s_e_c.html#gae07bc85be95545749333626b9cd3fecc", null ],
     [ "sec_group_getMaxNumber", "group___s_e_c.html#gaea6898fefbb337c73f042984134eaadc", null ],
@@ -13,6 +14,7 @@ var group___s_e_c =
     [ "sec_module_supported", "group___s_e_c.html#ga24fec0e54c9756be8b637611366dbfc4", null ],
     [ "sec_user_compare", "group___s_e_c.html#ga41cf0f83f743364e03738d1f0c93effa", null ],
     [ "sec_user_copy", "group___s_e_c.html#ga556af4f39f63edf47abd42f10065185f", null ],
+    [ "sec_user_exists", "group___s_e_c.html#ga8d86eb94936559b396db29ebf4b7f1b3", null ],
     [ "sec_user_getGroups", "group___s_e_c.html#ga22589469b8a5057e08bfa8c32438e469", null ],
     [ "sec_user_getId", "group___s_e_c.html#ga63a7208184ffed8619948d6d697417f0", null ],
     [ "sec_user_getIdFromName", "group___s_e_c.html#ga737ebb4ccc21c73549d7080b6dd07366", null ],

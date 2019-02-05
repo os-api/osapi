@@ -24,7 +24,6 @@ extern "C" {
 // *****************************************************************************************
 
 // Own headers
-
 #include "general/general_baseline.h"
 #include "general/general_version.h"
 #include "general/general_types.h"
@@ -78,6 +77,10 @@ const char * osapi_get_version_stability_string( void );
 /// @param [in] id - The protocol ID
 /// @return C String for the given Protocol ID
 const char * osapi_get_protocol_string( t_protocol id );
+
+/// @brief Compare library runtime baseline against requirements
+/// @return True if baseline meets requirements or False otherwise
+int osapi_verify_baseline( void );
 
 // Module related
 /// @brief Get the module string

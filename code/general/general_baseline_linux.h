@@ -18,10 +18,16 @@
 //
 // *****************************************************************************************
 
-// Include platform available standards
-#include <linux/version.h>
+// Include First the most generic UNIX information
+#include "general/general_baseline_unix.h"
 
+// Include platform available version information
+#include <linux/version.h>
+#include <gnu/libc-version.h>
+
+// Include module headers
 #include "general/general_language.h"
+#include "general/general_library.h"
 
 // *****************************************************************************************
 //
@@ -44,18 +50,13 @@
 
 #ifndef OSAPI_BASELINE_LIBC_DISABLE
 
-// Define C Library baseline
-#ifdef __GLIBC__
+  osapi_static_assert( OSAPI_LIBRARY_MAJOR_VERSION >= OSAPI_BASELINE_TARGET_MAJOR_VERSION_LIBC,	"Baseline error: C library major version bellow baseline" );
+  osapi_static_assert( OSAPI_LIBRARY_MINOR_VERSION >= OSAPI_BASELINE_TARGET_MINOR_VERSION_LIBC,	"Baseline error: C library minor version bellow baseline" );
 
-// Need to better fine tune the version according to the required APIs:
-// Support for C11 Threads only appears in version 2.28
-
-  osapi_static_assert( __GLIBC__       >= 2,	"Baseline error: GNU Lib C major version bellow baseline" );
-  osapi_static_assert( __GLIBC_MINOR__ >= 19,	"Baseline error: GNU Lib C minor version bellow baseline" );
-
-#else
-  #error "Baseline: GNU C Library not available"
-#endif
+#else	// Baseline is off, so LibC version is irrelevant
+  // Set a very high number so as to succeed in runtime version comparison
+  #define OSAPI_LIBC_MAJOR_VERSION	9999
+  #define OSAPI_LIBC_MINOR_VERSION	9999
 
 #endif	// If standard C library baseline is not disabled
 
