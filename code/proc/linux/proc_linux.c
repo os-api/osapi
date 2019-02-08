@@ -71,12 +71,26 @@ const t_option lib_options[] = {
 
 t_status proc_library_load( char * pathname, char * options[], t_library * p_library )
 {
-  int	opt = 0;
+ int	opt = 0;
 
-  opt = common_options_get( lib_options, options );
+ opt = common_options_get( lib_options, options );
 
-  return posix_library_load( pathname, opt, p_library );
+ return posix_library_load( pathname, opt, p_library );
 }
+
+
+
+t_status proc_library_getNumberOfLoaded( t_size * maxlibs )
+{
+ return getNumberOfLoadedLibraries( maxlibs );
+}
+
+
+t_status proc_library_getAllLoaded( t_size maxlibs, t_libinfo (*info)[] )
+{
+  return getListOfLoadedLibraries( maxlibs, info );
+}
+
 
 t_status proc_instance_getNumberOfDescendents( t_pid pid, t_size * p_number )
 {
@@ -174,6 +188,73 @@ t_status posix_get_parent_pid( t_pid childPid, t_pid * p_parentPid )
        }
 
   closedir( p_dir );
+
+  return st;
+}
+
+t_status proc_instance_getState( t_pid pid, int * p_state )
+{
+  t_status		st;
+  t_proc_info		pinfo;
+
+  status_reset( & st );
+
+  if( pid < 1 || p_state == (int *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+    {
+      st = parse_linux_proc_stat_file( pid, &pinfo );
+      if( status_success( st ) )
+	{
+	  // Map Linux process state to generic state
+	  switch( (int) pinfo.state )
+	  {
+	    case 'D':	// uninterruptible sleep (usually IO)
+	    case 'S':	// interruptible sleep (waiting for an event to complete)
+	    case 'I':	// Idle kernel thread
+	    case 'W':	// paging (not valid since the 2.6.xx kernel)
+
+			*p_state = osapi_e_proc_state_waiting; break;
+
+	    case 'X':	// dead (should never be seen)
+	    case 'Z':	// defunct ("zombie") process, terminated but not reaped by its parent
+
+			*p_state = osapi_e_proc_state_terminated; break;
+
+	    case 'T':	// stopped by job control signal
+	    case 't':	// stopped by debugger during the tracing
+
+			*p_state = osapi_e_proc_state_stopped; break;
+
+	    case 'R':	// running or runnable (on run queue)
+
+			*p_state = osapi_e_proc_state_running; break;
+
+	    default:	*p_state = osapi_e_proc_state_inexistent; break;
+	  }
+	}
+    }
+
+  return st;
+}
+
+t_status proc_instance_getStatus( t_pid pid, int * p_status )
+{
+  t_status		st;
+  t_proc_info		pinfo;
+
+  status_reset( & st );
+
+  if( pid < 1 || p_status == (int *) 0 )
+      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+  else
+    {
+      st = parse_linux_proc_stat_file( pid, &pinfo );
+      if( status_success( st ) )
+	{
+	  // Map Linux process status to generic status
+	}
+    }
 
   return st;
 }

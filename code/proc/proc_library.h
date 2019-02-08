@@ -68,6 +68,17 @@ t_status proc_library_load( char * path, char * options[], t_library * lib );
 /// @return Operation status
 t_status proc_library_unload( t_library lib );
 
+/// @brief Get the number of shared libraries loaded in the process
+/// @param [out] maxlibs - Number of currently loaded libraries
+/// @return Operation status
+t_status proc_library_getNumberOfLoaded( t_size * maxlibs );
+
+/// @brief Get a list of name and version information for each process loaded/shared library
+/// @param [in] maxlibs - Maximum size of the return arrays, i.e. name and version
+/// @param [out] info - Array with name and version of loaded libraries
+/// @return Operation status
+t_status proc_library_getAllLoaded( t_size maxlibs, t_libinfo (*info)[] );
+
 
 #pragma GCC visibility pop			// End of public interface
 

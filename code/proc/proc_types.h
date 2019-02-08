@@ -13,6 +13,29 @@
 
 // *****************************************************************************************
 //
+// Section: Constants & macros
+//
+// *****************************************************************************************
+
+// Maximum internal size of the name of a loaded library
+#define OSAPI_PROC_LIBRARY_MAX_NAME	20
+
+/// @brief The s_libinfo structure is a wrapper structure for the proc_library_getAllLoaded call to contain the library name and version information
+struct s_libinfo
+{
+  char			name[ OSAPI_PROC_LIBRARY_MAX_NAME + 1 ];	///< Library Name
+  unsigned int		version;					///< Library version
+};
+
+typedef struct s_libinfo	t_libinfo;
+
+// Wrapper macros to retrieve a library info above given a pointer X and index Y
+#define proc_getLibraryName( x, y )	((*x)[y].name)
+#define proc_getLibraryVersion( x, y )	((*x)[y].version)
+
+
+// *****************************************************************************************
+//
 // Section: Import headers
 //
 // *****************************************************************************************
@@ -28,6 +51,9 @@
 
 // Import OS specific definitions
 #include "proc/proc_platform.h"
+#include "proc/proc_state.h"
+
+
 
 
 /// *****************************************************************************************

@@ -19,6 +19,7 @@ code/common/linux \
 code/common/posix \
 code/error \
 code/general \
+code/general/library \
 code/io \
 code/io/posix \
 code/ipc/posix \

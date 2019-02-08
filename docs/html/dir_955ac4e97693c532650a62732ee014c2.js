@@ -12,5 +12,6 @@ var dir_955ac4e97693c532650a62732ee014c2 =
     [ "proc_resource.h", "proc__resource_8h_source.html", null ],
     [ "proc_signal.h", "proc__signal_8h_source.html", null ],
     [ "proc_signal_types.h", "proc__signal__types_8h_source.html", null ],
+    [ "proc_state.h", "proc__state_8h_source.html", null ],
     [ "proc_types.h", "proc__types_8h_source.html", null ]
 ];

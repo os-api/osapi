@@ -27,6 +27,21 @@
 #include "proc/posix/proc_posix_types.h"
 
 
+// *****************************************************************************************
+//
+// Section: Linux specific types
+//
+// *****************************************************************************************
+
+
+struct s_dldata
+{
+  t_size 		maxlibs;
+  t_size 		curlibs;
+  t_libinfo		(*info)[];
+};
+
+typedef struct s_dldata		t_dldata;
 
 
 #endif	// End of OS Linux

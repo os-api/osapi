@@ -184,7 +184,7 @@ t_status proc_instance_isRunning( t_pid search_pid )
 }
 
 
-
+/*
 t_status proc_instance_getStatus( t_pid target_pid, t_proc_status * p_status )
 {
  t_status	st;
@@ -199,7 +199,7 @@ t_status proc_instance_getStatus( t_pid target_pid, t_proc_status * p_status )
 
  return st;
 }
-
+*/
 
 t_status proc_instance_getChildStatus( t_pid * p_pid, t_proc_status * p_status )
 {

@@ -31,6 +31,8 @@
 // Own declarations
 #include "proc/proc_types.h"
 
+
+
 // *****************************************************************************************
 //
 // Section: Module Process Linux private declarations
@@ -44,7 +46,8 @@ t_status 	choose_linux_proc_stat_decoder	( FILE *, t_proc_info *				);
 bool		has_linux_proc_stat_file_spaces	( char *					);
 t_status	count_proc_members		( int, t_pid, t_size *				);
 t_status	get_id_members			( int, t_pid, t_size, t_size *, t_pid (*)[]	);
-
+t_status	getNumberOfLoadedLibraries	( t_size * p_maxlibs				);
+t_status	getListOfLoadedLibraries	( t_size maxlibs, t_libinfo (*info)[]		);
 
 #endif // OS Linux
 

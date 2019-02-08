@@ -4,6 +4,7 @@ var annotated_dup =
     [ "osapi_wide_string", "structosapi__wide__string.html", "structosapi__wide__string" ],
     [ "s_ip", "structs__ip.html", "structs__ip" ],
     [ "s_ipv4_address", "structs__ipv4__address.html", "structs__ipv4__address" ],
+    [ "s_libinfo", "structs__libinfo.html", "structs__libinfo" ],
     [ "s_lport", "structs__lport.html", null ],
     [ "s_optional_pair", "structs__optional__pair.html", "structs__optional__pair" ],
     [ "s_osapi_errors", "structs__osapi__errors.html", "structs__osapi__errors" ],
