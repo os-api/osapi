@@ -34,9 +34,8 @@
 #include "proc/proc_instance.h"
 #include "error/modules/error_proc.h"
 #include "proc/posix/proc_posix.h"
-#include "proc/linux/proc_linux_priv.h"
 #include "proc/posix/proc_posix_priv.h"
-
+#include "proc/linux/proc_linux.h"
 
 
 // *****************************************************************************************
@@ -63,6 +62,10 @@ t_status proc_instance_create( t_proc * p_process )
       status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
       return st;
     }
+
+ // Set either the parent or child pid so that clients now which is which
+ p_process->has_pid = true;
+ p_process->pid = pid;
 
  if( pid == 0)      /* Child process */
    {
@@ -184,22 +187,24 @@ t_status proc_instance_isRunning( t_pid search_pid )
 }
 
 
-/*
+
 t_status proc_instance_getStatus( t_pid target_pid, t_proc_status * p_status )
 {
  t_status	st;
  t_pid		pid;
 
+ status_reset( & st );
+
  // Wait for a specific process
  st = proc_status_get( target_pid, &pid, p_status );
 
  // Extra check
- if( status_success( st ) && target_pid != pid )
+ if( status_success( st ) && target_pid != pid ) // This shouldn't occur
      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_wait, &st );
 
  return st;
 }
-*/
+
 
 t_status proc_instance_getChildStatus( t_pid * p_pid, t_proc_status * p_status )
 {

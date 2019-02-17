@@ -19,6 +19,10 @@
 //
 // *****************************************************************************************
 
+// Include standard C headers
+#include <stdbool.h>
+
+// Include OSAPI headers
 #include "error/error_types.h"
 
 
@@ -36,11 +40,11 @@
 // Helper definitions for a correct way to check for success/failure of operations
 /// @brief Returns true if the operation that returned x was successful
 /// @returns True if success, False otherwise
-#define status_success( x )	( x.code == 0 && x.type == e_library_osapi	)
+#define status_success( x )	( x.code == 0 )
 
 /// @brief Returns true if the operation that returned x failed
 /// @returns True if failed, False otherwise
-#define status_failure( x )	( x.code != 0 || x.type != e_library_osapi	)
+#define status_failure( x )	( x.code != 0 )
 
 /// @brief Match a given error
 /// @returns True if the error code in s is equal to the error e
@@ -53,6 +57,9 @@
 /// @brief Check if the status result of the operation is true
 /// @returns True if status x failed. False otherwise
 #define status_false( x )	( status_success( x ) ? 1 : 0 )
+
+/// @brief Get the operation status result: success==true/failure==false
+#define status_result( x )	( x.code == 0 ? true : false )
 
 /// @brief Find if a module or facility is supported
 /// @returns True if the error code is equal to UNSUPPORTED. False otherwise

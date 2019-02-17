@@ -18,7 +18,8 @@
 
 /* Import Own OS specific definitions */
 #ifdef	OS_LINUX
-	#include "proc/linux/proc_linux_types.h"
+  #include "proc/linux/proc_linux_types.h"
+  #include <proc/posix/proc_posix_status.h>
 #endif
 
 

@@ -24,5 +24,6 @@ error_proc_X( e_proc_wait, ,				"Process PID mismatch"				)
 error_proc_X( e_proc_notFound, ,			"Signal not found"				)
 error_proc_X( e_proc_conversion, ,			"Conversion error"				)
 error_proc_X( e_proc_idNotFound, ,			"Process ID not found"				)
+error_proc_X( e_proc_nullptr, ,				"Null pointer found"				)
 
 error_proc_X( e_proc_max, ,				OSAPI_ERROR_STRING_UNKNOWN			)

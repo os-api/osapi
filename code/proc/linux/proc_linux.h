@@ -30,7 +30,8 @@ extern "C" {
 #include "general/general_baseline.h"
 
 // System includes
-#include <dlfcn.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 // Import own headers
 #include "proc/linux/proc_linux_types.h"
@@ -41,6 +42,7 @@ extern "C" {
 //
 // *****************************************************************************************
 
+t_status proc_status_get	( t_pid, t_pid *, t_proc_status *	);
 
 
 #endif	// OS_LINUX

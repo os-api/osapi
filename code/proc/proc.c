@@ -143,4 +143,69 @@ t_status proc_data_setEnvironment( t_size sizeArgList, char * argList[], t_proc 
 
 
 
+t_status proc_data_getCmdLine( t_proc * p_proc, t_size * p_nargs, char *** p_cmdLine )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_proc == ((t_proc * ) 0) || p_nargs == (t_size *) 0 || (void *) p_cmdLine == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( (void *) p_proc->args == NULL )
+	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_nullptr, &st );
+     else
+       {
+	 *p_nargs	= p_proc->nargs;
+	 *p_cmdLine	= p_proc->args;
+       }
+   }
+
+ return st;
+}
+
+
+t_status proc_data_getEnvironment( t_proc * p_proc, t_size * p_nargs, char *** p_environ )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_proc == ((t_proc * ) 0) || p_nargs == (t_size *) 0 || (void *) p_environ == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( (void *) p_proc->env == NULL )
+	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_nullptr, &st );
+     else
+       {
+	 *p_nargs	= p_proc->nenv;
+	 *p_environ	= p_proc->env;
+       }
+   }
+
+ return st;
+}
+
+
+
+t_status proc_data_getName( t_proc * p_proc, char ** p_name )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( (void **) p_name == NULL || (void *) p_proc == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     if( (void *) p_proc->name == NULL )
+	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_nullptr, &st );
+     else
+	 *p_name = p_proc->name;
+   }
+
+ return st;
+}
 

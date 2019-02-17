@@ -16,6 +16,10 @@
 //
 // *****************************************************************************************
 
+#include "general/general_baseline.h"
+
+#ifdef OSAPI_POSIX
+
 // Include standard headers
 #include <signal.h>
 #include <stdbool.h>
@@ -26,6 +30,7 @@
 
 // Own module types
 #include "proc/posix/proc_posix_defs.h"
+//#include "proc/posix/proc_posix_status.h"
 #include "proc/proc_signal_types.h"
 
 // *****************************************************************************************
@@ -75,24 +80,13 @@ typedef struct sigaction	t_sig_action;
 /// Signal function type
 typedef void 			(* t_sig_func)( int );
 
+
 /// Process status structure
 struct s_proc_status
 {
-  bool		running;	///< Terminated or still running?
-  bool		alive;		///< A process may not be running but still alive (if suspended/SIGSTOP)
-
-  /// Process status structure that contains detail information
-  struct details
-  {
-   unsigned int code:8;		///< Returned status of the dead process
-   unsigned int normal:1;	///< Normal exit? if so them there is a status available..
-   unsigned int signal:1;	///< Exit due to signal ?
-   unsigned int core:1;		///< Core dump generated ?
-   unsigned int stopped:1;	///< Process in stopped state
-   unsigned int cont:1;		///< Process was resumed by a CONT signal
-  } exit; ///< The exit information from a terminated process
-
-  t_signal	signumber;	///< Signal that caused the termination/stop/continuation
+  int			info;		///< Information about the existence of a status (meta-information)
+  int			exit_code;	///< The returned exit code from the process when there is a normal exit
+  t_signal		signumber;	///< Signal that caused the termination/stop/continuation
   // Any other
 };
 
@@ -116,29 +110,35 @@ enum osapi_proc_target
 
 // *****************************************************************************************
 //
-// Section: Macros
+// Section: Macros for client applications to check the status of the process
 //
 // *****************************************************************************************
 
-// Macros for client applications to check the status of the process
-
-/// Test if a process is alived based on the process type x
-#define proc_alive( x )		(x.alive)
-/// Test if a process is running based on the process type x
-#define proc_running( x )	(x.running)
-
 /// Test if a process exited normally based on the process type x
-#define proc_exitNormal( x )	(x.exit.normal  ? 1: 0 )
+#define proc_exitNormal( x )	( x.info == osapi_e_proc_status_available )
 /// Test if a process exited due to a signal based on the process type x
-#define proc_exitSignal( x )	(x.exit.signal  ? 1: 0 )
+#define proc_exitSignal( x )	( x.info == osapi_e_proc_status_signal )
 /// Test if a process core dumped based on the process type x
-#define proc_core( x )		(x.exit.core    ? 1: 0 )
+#define proc_core( x )		( x.info == osapi_e_proc_status_core )
+
+/// Get the status meta information
+#define proc_getStatusInfo( x )		( x.info )
 
 /// Get signal that caused process termination based on the process type x
-#define proc_getSignal( x )	(x.exit.signal  ? x.signumber: 0 )
+#define proc_getStatusSignal( x )	( x.signumber )
+
 /// Get process exit code based on the process type x
-#define proc_getStatus( x )	(x.exit.code)
+#define proc_getStatusCode( x )		( x.exit_code )
 
+/// Allow client applications to understand if the process is a parent
+#define proc_isParent( x )		( x.has_pid && x.pid != 0)
 
+/// Allow client applications to understand if the process is a child
+#define proc_isChild( x )		( x.has_pid && x.pid == 0 )
+
+/// If created process is father, get the child PID
+#define proc_getChildPID( x )		( x.has_pid ? x.pid : -1 )
+
+#endif	// OSAPI_POSIX
 
 #endif /* OSAPI_PROC_POSIX_TYPES_H_ */

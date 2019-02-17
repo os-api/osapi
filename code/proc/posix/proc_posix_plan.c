@@ -29,7 +29,6 @@
 #include "error/modules/error_proc.h"
 
 
-
 // *****************************************************************************************
 //
 // Section: Definition of Module process planning functions
@@ -85,7 +84,7 @@ t_status proc_data_getPID( t_proc * p_proc, t_pid * p_pid )
 
 
 
-t_status proc_data_getUID( t_proc * p_proc, t_uid * p_uid )
+t_status proc_data_getUser( t_proc * p_proc, t_uid * p_uid )
 {
  t_status	st;
 
@@ -105,7 +104,7 @@ t_status proc_data_getUID( t_proc * p_proc, t_uid * p_uid )
 }
 
 
-t_status proc_data_getGID( t_proc * p_proc, t_gid * p_gid )
+t_status proc_data_getGroup( t_proc * p_proc, t_gid * p_gid )
 {
  t_status	st;
 
@@ -123,5 +122,9 @@ t_status proc_data_getGID( t_proc * p_proc, t_gid * p_gid )
 
  return st;
 }
+
+
+
+
 
 #endif	// End of POSIX implementation

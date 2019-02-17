@@ -80,23 +80,17 @@ t_status proc_instance_isRunning( t_pid pid );
 /// @return Operation status
 t_status proc_instance_getState( t_pid pid, int * state );
 
-// @brief Obtain the status of a terminated process
-// @param [in] pid - Process ID to check
-// @param [out] status - The corresponding process state
-// @return Operation status
-// t_status proc_instance_getStatus( t_pid pid, int * status );
-
 /// @brief Obtain status of a child process
 /// @param [in] pid - Process ID
 /// @param [out] status - Status of child process
 /// @return Operation status
 t_status proc_instance_getChildStatus( t_pid * pid, t_proc_status * status );
 
-// @brief Obtain a status of a process
-// @param [in] pid - Process ID
-// @param [out] status - Status of child process
-// @return Operation status
-// t_status proc_instance_getStatus( t_pid pid, t_proc_status * status );
+/// @brief Obtain a status of a process
+/// @param [in] pid - Process ID
+/// @param [out] status - Status of child process
+/// @return Operation status
+t_status proc_instance_getStatus( t_pid pid, t_proc_status * status );
 
 /// @brief Obtain the number of children processes
 /// @param [in] pid - Get descendants of this process

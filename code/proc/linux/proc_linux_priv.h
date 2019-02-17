@@ -39,7 +39,6 @@
 //
 // *****************************************************************************************
 
-t_status 	proc_status_get			( t_pid, t_pid *, t_proc_status * 		);
 t_status 	parse_linux_proc_stat_line	( char *, t_proc_info * 			);
 t_status 	parse_linux_proc_stat_file	( t_pid,  t_proc_info *				);
 t_status 	choose_linux_proc_stat_decoder	( FILE *, t_proc_info *				);

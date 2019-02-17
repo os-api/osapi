@@ -238,26 +238,70 @@ t_status proc_instance_getState( t_pid pid, int * p_state )
   return st;
 }
 
-t_status proc_instance_getStatus( t_pid pid, int * p_status )
+
+
+t_status proc_status_get( t_pid target_pid, t_pid * found_pid, t_proc_status * p_status )
 {
-  t_status		st;
-  t_proc_info		pinfo;
+ t_status	st;
+ int		process_status = 0;
 
-  status_reset( & st );
+ status_reset( & st );
 
-  if( pid < 1 || p_status == (int *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
-  else
-    {
-      st = parse_linux_proc_stat_file( pid, &pinfo );
-      if( status_success( st ) )
+ if( found_pid == (t_pid *) 0 || p_status == (t_proc_status *) 0 )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     *found_pid = waitpid( target_pid, &process_status, WNOHANG | WUNTRACED | WCONTINUED );
+     if( *found_pid == -1 )
 	{
-	  // Map Linux process status to generic status
+	  status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
+	  return st;		// Return immediately
 	}
-    }
 
-  return st;
+     memset( p_status, '\0', sizeof( t_proc_status ) );
+
+     // First, check if the process is still running
+     if( *found_pid == 0 )
+	  p_status->info = osapi_e_proc_status_unavailable;
+     else
+	{
+	  // Translate POSIX/UNIX status to OSAPI
+	  if( WIFEXITED( process_status ) )
+	    {
+	      p_status->info	= osapi_e_proc_status_available;
+	      p_status->exit_code = (int) WEXITSTATUS( process_status );
+	    }
+	  else
+	    { // No exit information available, check if there was a change in the runtime information
+	      if( WIFSTOPPED( process_status ) )
+		{
+		  p_status->info	= osapi_e_proc_status_stopped;
+		  p_status->signumber	= WSTOPSIG( process_status );
+		}
+
+	     if( WIFCONTINUED( process_status ) )
+	       {
+		 p_status->info		= osapi_e_proc_status_continued;
+		 p_status->signumber	= SIGCONT;
+	       }
+
+	      // If process was terminated by a signal, get the responsible signal number
+	      if( WIFSIGNALED( process_status ) )
+		{
+		  p_status->info	= osapi_e_proc_status_signal;
+		  p_status->signumber	= WTERMSIG( process_status );
+#ifdef WCOREDUMP
+		  if( WCOREDUMP( process_status ) )
+		      p_status->info = osapi_e_proc_status_core;
+#endif
+		}
+	    }
+	}
+   }
+
+ return st;
 }
+
 
 
 
