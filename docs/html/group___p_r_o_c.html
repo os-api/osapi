@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.1</span>
+   &#160;<span id="projectnumber">0.18</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -203,6 +203,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gac44287d01531ade0731240c46f8dd4d5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac44287d01531ade0731240c46f8dd4d5">proc_library_getAllLoaded</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> maxlibs, <a class="el" href="structs__libinfo.html">t_libinfo</a>(*info)[])</td></tr>
 <tr class="memdesc:gac44287d01531ade0731240c46f8dd4d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a list of name and version information for each process loaded/shared library.  <a href="#gac44287d01531ade0731240c46f8dd4d5">More...</a><br /></td></tr>
 <tr class="separator:gac44287d01531ade0731240c46f8dd4d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga101fe68ed915fb98ec3ac670e9ef403b">proc_library_getRelease</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *name, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> max, char *release)</td></tr>
+<tr class="memdesc:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Release information of the named library.  <a href="#ga101fe68ed915fb98ec3ac670e9ef403b">More...</a><br /></td></tr>
+<tr class="separator:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga31c7cbe891a994d2396409e185e0f7f3">proc_data_clear</a> (t_proc *proc)</td></tr>
 <tr class="memdesc:ga31c7cbe891a994d2396409e185e0f7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset process plan information to default system specific values.  <a href="#ga31c7cbe891a994d2396409e185e0f7f3">More...</a><br /></td></tr>
 <tr class="separator:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1824,6 +1827,51 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">maxlibs</td><td>- Number of currently loaded libraries </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga101fe68ed915fb98ec3ac670e9ef403b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga101fe68ed915fb98ec3ac670e9ef403b">&#9670;&nbsp;</a></span>proc_library_getRelease()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_library_getRelease </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>release</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the Release information of the named library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>- Name of library to search </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>- Max. size of the output string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">release</td><td>- The release version for the named library </td></tr>
   </table>
   </dd>
 </dl>

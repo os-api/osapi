@@ -47,6 +47,7 @@ t_status	count_proc_members		( int, t_pid, t_size *				);
 t_status	get_id_members			( int, t_pid, t_size, t_size *, t_pid (*)[]	);
 t_status	getNumberOfLoadedLibraries	( t_size * p_maxlibs				);
 t_status	getListOfLoadedLibraries	( t_size maxlibs, t_libinfo (*info)[]		);
+t_status	getLibraryRelease		( const t_char *, t_size, char *		);
 
 #endif // OS Linux
 

@@ -53,6 +53,25 @@
 
 const char * OSAPI_FS_PROC_NAME			= "/proc";
 
+struct library_release_data
+{
+  const t_char	*	libname;
+  t_size		size;
+  char *		release;
+};
+
+// *****************************************************************************************
+//
+// Section: Internal Function declarations
+//
+// *****************************************************************************************
+
+
+static int linux_callback_count_libraries	( struct dl_phdr_info * info, size_t size, void * data );
+static int linux_callback_get_libraries		( struct dl_phdr_info * info, size_t size, void * data );
+static int linux_callback_get_library		( struct dl_phdr_info * info, size_t size, void * data );
+
+
 
 // *****************************************************************************************
 //
@@ -164,9 +183,6 @@ t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
  return st;
 }
 
-static int linux_callback_count_libraries( struct dl_phdr_info * info, size_t size, void * data );
-static int linux_callback_get_libraries( struct dl_phdr_info * info, size_t size, void * data );
-
 
 static int linux_callback_count_libraries( struct dl_phdr_info * info, size_t size, void * data )
 {
@@ -205,19 +221,68 @@ static int linux_callback_get_libraries( struct dl_phdr_info * info, size_t size
 	 strncpy( (*p_dldata->info)[ p_dldata->curlibs ].name, str, OSAPI_PROC_LIBRARY_MAX_NAME );
 
 	 // Find the version information
-	 ptr = rindex( str, '.' );
+	 ptr = strstr( str, ".so." );
+	 if( ptr != NULL )
+	     ptr += 4;
+	 else
+	   {	// Check if library is in format: libname.[0-9]*
+	     ptr = rindex( str, '.' );
+	     if( ptr != NULL )  ptr++;
+	   }
 
-	 errno = 0;
-	 (*p_dldata->info)[ p_dldata->curlibs ].version = (unsigned int) atoi( ptr+1 );
-	 if( errno != 0 )
-	     (*p_dldata->info)[ p_dldata->curlibs ].version = 0;
+	 if( ptr == NULL )
+	   (*p_dldata->info)[ p_dldata->curlibs ].version = 0;
+	 else
+	   {
+	     errno = 0;
+	     (*p_dldata->info)[ p_dldata->curlibs ].version = (unsigned int) atoi( ptr );
+	     if( errno != 0 )
+		 (*p_dldata->info)[ p_dldata->curlibs ].version = 0;
 
-	 p_dldata->curlibs++;
+	     p_dldata->curlibs++;
+	   }
        }
    }
 
  return 0;
 }
+
+
+static int linux_callback_get_library( struct dl_phdr_info * info, size_t size, void * data )
+{
+ struct library_release_data *	p_data;
+ char 				str[ PATH_MAX + 1 ];
+ char * 			libname			= NULL;
+ char 		*		ptr 			= NULL;
+
+ if( data == NULL ) return e_proc_params;
+
+ p_data = (struct library_release_data *) data;
+
+ if( strlen( info->dlpi_name ) > 0 && strcasecmp( info->dlpi_name, p_data->libname ) == 0 )
+   {
+     strncpy( str, info->dlpi_name, PATH_MAX );
+
+     // Get the Library name
+     libname = basename( str );
+     strncpy( str, libname, PATH_MAX );
+
+     ptr = strstr( str, ".so." );
+     if( ptr != NULL )
+       {
+	 errno = 0;
+	 if( strncpy( p_data->release, ptr+4, p_data->size ) != NULL )
+	     return -1;		// Found and all ok
+	 else
+	     // Found but there was an error retrieving the Release information (both e_proc_params and errno are positive error codes)
+	     return errno;
+       }
+   }
+
+ return 0;	// Proceed to the next
+}
+
+
 
 t_status getNumberOfLoadedLibraries( t_size * p_maxlibs	)
 {
@@ -260,6 +325,36 @@ t_status getListOfLoadedLibraries( t_size maxlibs, t_libinfo (*p_info)[] )
 
  return st;
 }
+
+
+
+
+t_status getLibraryRelease( const t_char * p_name, t_size max, char * p_release )
+{
+ t_status st;
+
+ status_reset( &st );
+
+ if( (void *) p_name == NULL || max < 1 || (void *) p_release == NULL )
+     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+ else
+   {
+     struct library_release_data data;
+
+     // Copy the input into a wrapper structure for the syscall dl_iterate_phdr
+     data.libname 	= p_name;
+     data.size		= max;
+     data.release	= p_release;
+
+     int rc = dl_iterate_phdr( linux_callback_get_library, (void *) &data );
+
+     if( rc > 0 )	// An error occurred
+	 status_iset( OSAPI_MODULE_PROC, __func__, rc, &st );
+   }
+
+ return st;
+}
+
 
 
 #endif	// End of OS Linux

@@ -91,6 +91,11 @@ t_status proc_library_getAllLoaded( t_size maxlibs, t_libinfo (*info)[] )
   return getListOfLoadedLibraries( maxlibs, info );
 }
 
+t_status proc_library_getRelease( const t_char * p_name, t_size max, char * p_release )
+{
+ return getLibraryRelease( p_name, max, p_release );
+}
+
 
 t_status proc_instance_getNumberOfDescendents( t_pid pid, t_size * p_number )
 {
@@ -301,6 +306,7 @@ t_status proc_status_get( t_pid target_pid, t_pid * found_pid, t_proc_status * p
 
  return st;
 }
+
 
 
 

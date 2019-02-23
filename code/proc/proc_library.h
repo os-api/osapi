@@ -80,6 +80,14 @@ t_status proc_library_getNumberOfLoaded( t_size * maxlibs );
 t_status proc_library_getAllLoaded( t_size maxlibs, t_libinfo (*info)[] );
 
 
+/// @brief Get the Release information of the named library
+/// @param [in] name 		- Name of library to search
+/// @param [in] max		- Max. size of the output string
+/// @param [out] release	- The release version for the named library
+/// @return Operation status
+t_status proc_library_getRelease( const t_char * name, t_size max, char * release );
+
+
 #pragma GCC visibility pop			// End of public interface
 
 

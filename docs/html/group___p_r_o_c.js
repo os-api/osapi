@@ -65,6 +65,7 @@ var group___p_r_o_c =
     [ "proc_instance_terminate", "group___p_r_o_c.html#ga27cf67e6f59c7ddca6833e0e30fcc115", null ],
     [ "proc_library_getAllLoaded", "group___p_r_o_c.html#gac44287d01531ade0731240c46f8dd4d5", null ],
     [ "proc_library_getNumberOfLoaded", "group___p_r_o_c.html#gadecfa9d243049424ca6b13b2d00ef381", null ],
+    [ "proc_library_getRelease", "group___p_r_o_c.html#ga101fe68ed915fb98ec3ac670e9ef403b", null ],
     [ "proc_library_load", "group___p_r_o_c.html#ga87fd88644614d224ef9b98bf8ef5e49f", null ],
     [ "proc_library_supported", "group___p_r_o_c.html#gaccfece10ffb25e27bf250cc0aebd428b", null ],
     [ "proc_library_unload", "group___p_r_o_c.html#gaf6622299218d5c8712a68a9f0e7533e8", null ],
