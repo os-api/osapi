@@ -18,6 +18,8 @@
 
 // Include standard headers
 #include <strings.h>
+#include <ctype.h>
+#include <string.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -55,3 +57,28 @@ int common_options_get( const t_option * moduleOptions, char * providedOptions[]
 
  return opt;
 }
+
+
+// All elements of a C-string are digits?
+bool common_string_isDigit( const char * str )
+{
+ bool rv = true;
+
+ if( str == NULL )
+     rv = false;
+ else
+   {
+     for( int i=0; i < strlen( str ); i++ )
+        {
+          if( ! isdigit( (int) str[ i ] ) )
+            {
+              rv = false;
+              break;
+            }
+        }
+   }
+
+ return rv;
+}
+
+

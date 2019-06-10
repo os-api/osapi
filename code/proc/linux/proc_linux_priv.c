@@ -99,6 +99,10 @@ t_status get_id_members( int target, t_pid target_id, t_size nmembers, t_size * 
             ( strcmp( p_dir_entry->d_name, ".." ) == 0)  )
 	      continue;
 
+            // Make sure that the directory entry is not composed of initial numbers, e.g. 12something
+            if( ! common_string_isDigit( p_dir_entry->d_name ) )
+        	continue;
+
 	    pid = (t_pid) atoi( p_dir_entry->d_name );
 
 	    if( pid >= 0 )	// Check if process is valid
@@ -151,6 +155,10 @@ t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
 	    if( ( strcmp( p_dir_entry->d_name, "."  ) == 0) ||
 		( strcmp( p_dir_entry->d_name, ".." ) == 0)  )
 	        continue;
+
+            // Make sure that the directory entry is not composed of initial numbers, e.g. 12something
+            if( ! common_string_isDigit( p_dir_entry->d_name ) )
+        	continue;
 
 	    pid = (t_pid) atoi( p_dir_entry->d_name );
 

@@ -187,8 +187,9 @@ t_status posix_get_parent_pid( t_pid childPid, t_pid * p_parentPid )
  		  {
  		    *p_parentPid = pinfo.id.ppid;
  		    status_reset( & st );
- 		    break;
  		  }
+
+ 		break;	// If the target process was found, no need to continue
  	      }
        }
 

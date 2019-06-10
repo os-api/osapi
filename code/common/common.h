@@ -69,6 +69,11 @@ t_status	uid_copy			( t_uid source, t_uid * p_target							);
 // Utility functions
 int		common_options_get		( const t_option * moduleOptions, char * providedOptions[]				);
 
+/// @brief Is the string composed of only digits (0-9)?
+/// @param [in] str - The string to verify
+/// @return True or False
+bool		common_string_isDigit		( const char * str									);
+
 #pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
