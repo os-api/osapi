@@ -20,6 +20,7 @@ code/common \
 code/common/linux \
 code/common/posix \
 code/error \
+code/fs/posix \
 code/general \
 code/general/library \
 code/io \

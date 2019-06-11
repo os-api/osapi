@@ -21,8 +21,6 @@
 //
 // *****************************************************************************************
 
-#include <com/com.h>
-#include <com/com_ipc.h>
 #include "general/general.h"
 #include "status/status.h"
 
@@ -37,7 +35,8 @@
 #include "proc/proc.h"
 #include "util/util.h"
 #include "io/io.h"
-
+#include "com/com.h"
+#include "fs/fs.h"
 
 ///@}
 

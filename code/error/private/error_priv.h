@@ -38,6 +38,7 @@
 #include "error/private/error_priv_util.h"
 #include "error/private/error_priv_com.h"
 
+
 /// *****************************************************************************************
 ///
 ///@addtogroup OSAPI
