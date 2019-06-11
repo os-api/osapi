@@ -1,10 +1,9 @@
 var group___i_p_c =
 [
-    [ "ipc_module_supported", "group___i_p_c.html#ga6936cdb5c70e59fa7fd13634465b441b", null ],
-    [ "ipc_semaphore_create", "group___i_p_c.html#ga3e86d95f70672229e80af8c62870925b", null ],
-    [ "ipc_semaphore_destroy", "group___i_p_c.html#ga0d15f5a388005154c0905d1f3200a094", null ],
-    [ "ipc_semaphore_getValue", "group___i_p_c.html#ga2b0b51464dc330f9583c8f55b3f23c86", null ],
-    [ "ipc_semaphore_lock", "group___i_p_c.html#ga0a9e6d41c507d360ea8e113975e6624d", null ],
-    [ "ipc_semaphore_open", "group___i_p_c.html#gaaae811cba37a41316227ce897bdd6243", null ],
-    [ "ipc_semaphore_unlock", "group___i_p_c.html#gaa59f890bef49062017ac506045c73b8a", null ]
+    [ "com_semaphore_create", "group___i_p_c.html#gaf357d2124345b443d27e28eaca769138", null ],
+    [ "com_semaphore_destroy", "group___i_p_c.html#gaae4351286ce0ed417c5531f56cdcf53f", null ],
+    [ "com_semaphore_getValue", "group___i_p_c.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1", null ],
+    [ "com_semaphore_lock", "group___i_p_c.html#gafeeede53af9d6a37b1c8f8d4a6d579a2", null ],
+    [ "com_semaphore_open", "group___i_p_c.html#gacd9c20cbccd43c9394dde918d9766bd0", null ],
+    [ "com_semaphore_unlock", "group___i_p_c.html#ga467a528ef56f90806497db699ab592d2", null ]
 ];

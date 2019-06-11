@@ -20,13 +20,10 @@ RM := rm -rf
 -include code/os/posix/subdir.mk
 -include code/os/linux/subdir.mk
 -include code/os/subdir.mk
--include code/net/posix/subdir.mk
--include code/net/subdir.mk
 -include code/machine/posix/subdir.mk
 -include code/machine/linux/subdir.mk
 -include code/machine/subdir.mk
 -include code/log/posix/subdir.mk
--include code/ipc/posix/subdir.mk
 -include code/io/posix/subdir.mk
 -include code/io/subdir.mk
 -include code/general/library/subdir.mk
@@ -35,6 +32,8 @@ RM := rm -rf
 -include code/common/posix/subdir.mk
 -include code/common/linux/subdir.mk
 -include code/common/subdir.mk
+-include code/com/posix/subdir.mk
+-include code/com/subdir.mk
 -include code/clock/posix/subdir.mk
 -include subdir.mk
 -include objects.mk

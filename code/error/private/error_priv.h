@@ -29,15 +29,14 @@
 #include "error/error_types.h"
 #include "error/private/error_priv_clock.h"
 #include "error/private/error_priv_io.h"
-#include "error/private/error_priv_ipc.h"
+#include "error/private/error_priv_fs.h"
 #include "error/private/error_priv_machine.h"
-#include "error/private/error_priv_net.h"
 #include "error/private/error_priv_os.h"
 #include "error/private/error_priv_proc.h"
 #include "error/private/error_priv_sec.h"
 #include "error/private/error_priv_string.h"
 #include "error/private/error_priv_util.h"
-
+#include "error/private/error_priv_com.h"
 
 /// *****************************************************************************************
 ///
@@ -81,8 +80,8 @@ static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
 	    { e_sec_max,	sec_errors	},
 	    { e_io_max,		io_errors	},
 	    { e_util_max,	util_errors	},
-	    { e_ipc_max,	ipc_errors	},
-	    { e_net_max,	net_errors	},
+	    { e_fs_max,		fs_errors	},
+	    { e_com_max,	com_errors	},
 };
 
 
