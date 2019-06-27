@@ -29,7 +29,7 @@
 #include "status/status_types.h"
 
 // Own declarations
-#include "common/types/common_types.h"
+#include "common/common_types.h"
 
 
 // *****************************************************************************************
@@ -64,6 +64,21 @@ t_status	stringTo_uid			( const char * p_string, t_gid * p_uid							);
 t_status	uidTo_string			( t_uid uid, t_size strSize, char * p_string						);
 t_status	uid_compare			( t_uid uid1, t_uid uid2, bool * p_result						);
 t_status	uid_copy			( t_uid source, t_uid * p_target							);
+
+// Buffer related
+t_status	common_buffer_allocate		( size_t bufsize, t_buffer * p_buffer							);
+t_status	common_buffer_reAllocate	( t_size bufsize, t_buffer * p_buffer 							);
+t_status	common_buffer_deallocate	( t_buffer * p_buffer									);
+
+t_status	common_buffer_getCapacity	( const t_buffer * p_buffer, t_size * p_size 						);
+t_status	common_buffer_getData		( const t_buffer * p_buffer, void **  p_data 						);
+t_status	common_buffer_getSize		( const t_buffer * p_buffer, t_size *  size 						);
+t_status	common_buffer_setSize		( t_size   size, t_buffer * p_buffer	 						);
+
+// Copy between memory areas
+t_status	common_buffer_copy		( const t_buffer * p_source,                    t_buffer * p_target			);
+t_status	common_buffer_copyFrom		( const t_buffer * p_source,                    void     * p_target			);
+t_status	common_buffer_copyTo		( const void     * p_source, t_size sourceSize, t_buffer * p_target			);
 
 
 // Utility functions

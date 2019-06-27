@@ -24,9 +24,11 @@
 
 // OSAPI module error information
 #include "general/general_types.h"
+#include "general/general_modules.h"
 
 // Error information
 #include "error/error_types.h"
+#include "error/private/error_priv_common.h"
 #include "error/private/error_priv_clock.h"
 #include "error/private/error_priv_io.h"
 #include "error/private/error_priv_fs.h"
@@ -72,17 +74,18 @@ struct s_osapi_errors
 };
 
 static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
-	    { 1,		error_none 	},
-	    { e_string_max, 	string_errors  	},
-	    { e_os_max, 	os_errors	},
-	    { e_machine_max, 	machine_errors 	},
-	    { e_proc_max, 	proc_errors	},
-	    { e_clock_max,	clock_errors	},
-	    { e_sec_max,	sec_errors	},
-	    { e_io_max,		io_errors	},
-	    { e_util_max,	util_errors	},
-	    { e_fs_max,		fs_errors	},
-	    { e_com_max,	com_errors	},
+	    { 1,			error_none 	},
+	    { osapi_common_e_max, 	common_errors  	},
+	    { e_string_max, 		string_errors  	},
+	    { e_os_max, 		os_errors	},
+	    { e_machine_max, 		machine_errors 	},
+	    { e_proc_max, 		proc_errors	},
+	    { e_clock_max,		clock_errors	},
+	    { e_sec_max,		sec_errors	},
+	    { e_io_max,			io_errors	},
+	    { e_util_max,		util_errors	},
+	    { osapi_fs_e_max,		fs_errors	},
+	    { e_com_max,		com_errors	},
 };
 
 

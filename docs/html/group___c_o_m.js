@@ -1,5 +1,12 @@
 var group___c_o_m =
 [
+    [ "com_connection_accept", "group___c_o_m.html#ga112ff2e0593f09e8e25f835322b2a5b1", null ],
+    [ "com_connection_close", "group___c_o_m.html#gab612bf9aeabd0c6f6647279e9326bd51", null ],
+    [ "com_connection_establish", "group___c_o_m.html#gadb11636ffaa8358c10d0ad9c723b5689", null ],
+    [ "com_endpoint_create", "group___c_o_m.html#gafb5615d6bc3b279951c6a5e0dcc3abd2", null ],
+    [ "com_endpoint_destroy", "group___c_o_m.html#ga90fd6afa4de6afbe67aa433b669756b2", null ],
+    [ "com_ip_create", "group___c_o_m.html#ga1add148aca58067622632123c092e5ea", null ],
+    [ "com_ip_destroy", "group___c_o_m.html#gad2f017a08ca3c5e6ba21f2cc4e2ed8f0", null ],
     [ "com_ip_getHost", "group___c_o_m.html#gad91039ccdf2371ec01158046e7e3516a", null ],
     [ "com_ip_getMask", "group___c_o_m.html#ga3a5c98213573792281aadc5bb37d7b5e", null ],
     [ "com_ip_getStringSize", "group___c_o_m.html#ga9892b114bc4ada127e51ae795b93ce12", null ],
@@ -15,5 +22,7 @@ var group___c_o_m =
     [ "com_semaphore_lock", "group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2", null ],
     [ "com_semaphore_open", "group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0", null ],
     [ "com_semaphore_supported", "group___c_o_m.html#gaba7dbc438706f0a194ad902cb1dfbdbb", null ],
-    [ "com_semaphore_unlock", "group___c_o_m.html#ga467a528ef56f90806497db699ab592d2", null ]
+    [ "com_semaphore_unlock", "group___c_o_m.html#ga467a528ef56f90806497db699ab592d2", null ],
+    [ "com_tcp_create", "group___c_o_m.html#ga79dd2a3461c75dc3e88c7a884e88d3fb", null ],
+    [ "com_tcp_destroy", "group___c_o_m.html#gacbe543ce70d78fb6f89d31a4ac6e59f6", null ]
 ];

@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	IPC platform OS selection file
+// Purpose:	COM platform OS selection file
 //
 // *****************************************************************************************
 
@@ -23,4 +23,4 @@
 #endif
 
 
-#endif /* OSAPI_IPC_PLATFORM_H_ */
+#endif /* OSAPI_COM_PLATFORM_H_ */

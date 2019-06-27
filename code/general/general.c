@@ -71,7 +71,7 @@ const char * osapi_get_protocol_string( t_protocol id )
 const char * osapi_getModule( t_module module )
 {
   if( general_is_valid_module( module ) )
-      return module_name[ module ];
+      return osapi_module_name[ module ];
   else
       return OSAPI_EMPTY_STRING;
 }

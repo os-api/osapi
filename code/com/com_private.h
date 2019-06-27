@@ -29,7 +29,7 @@ extern "C" {
 #include "status/status_types.h"
 
 // Common includes
-#include "common/types/common_types.h"
+#include <common/common_types.h>
 
 // Own declarations
 

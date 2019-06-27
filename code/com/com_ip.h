@@ -104,6 +104,18 @@ t_status com_ip_isBroadcast( t_ip * ip, bool * result );
 t_status com_ip_isP2P( t_ip * ip, bool * result	);
 
 
+/// @brief Create a TCP type based on IP and logical Port
+/// @param [in] ipString - A source or target IP in string format
+/// @param [out] ip - The decoded (from string) IP
+/// @return Operation status
+t_status com_ip_create( char * ipString, t_ip * ip );
+
+/// @brief Destroy the resources associated with a IP type
+/// @param [in] ip - IP type address
+/// @return Operation status
+t_status com_ip_destroy( t_ip * ip );
+
+
 #pragma GCC visibility pop			// End of public interface
 
 ///@}

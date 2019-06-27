@@ -18,12 +18,12 @@
 // *****************************************************************************************
 
 
-#define module_X(a, b, c) a b,
-enum module_id
+#define osapi_module_X(a, b, c) a b,
+enum osapi_module_id
 {
   #include "general/mappings/table_modules.h"
 };
 
-#undef module_X
+#undef osapi_module_X
 
 #endif /* OSAPI_GENERAL_MODULES_H_ */

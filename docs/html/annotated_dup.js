@@ -1,7 +1,18 @@
 var annotated_dup =
 [
     [ "osapi_basic_string", "structosapi__basic__string.html", "structosapi__basic__string" ],
+    [ "osapi_s_buffer", "structosapi__s__buffer.html", "structosapi__s__buffer" ],
+    [ "osapi_s_dir", "structosapi__s__dir.html", "structosapi__s__dir" ],
+    [ "osapi_s_fs_directoryInfo", "structosapi__s__fs__directory_info.html", "structosapi__s__fs__directory_info" ],
+    [ "osapi_s_fs_elementInfo", "structosapi__s__fs__element_info.html", "structosapi__s__fs__element_info" ],
+    [ "osapi_s_fs_file", "structosapi__s__fs__file.html", "structosapi__s__fs__file" ],
+    [ "osapi_s_fs_fileInfo", "structosapi__s__fs__file_info.html", "structosapi__s__fs__file_info" ],
     [ "osapi_wide_string", "structosapi__wide__string.html", "structosapi__wide__string" ],
+    [ "s_conn_side_mp", "structs__conn__side__mp.html", "structs__conn__side__mp" ],
+    [ "s_conn_side_p2p", "structs__conn__side__p2p.html", "structs__conn__side__p2p" ],
+    [ "s_connection", "structs__connection.html", "structs__connection" ],
+    [ "s_connection_endpoint", "structs__connection__endpoint.html", "structs__connection__endpoint" ],
+    [ "s_connection_side", "structs__connection__side.html", "structs__connection__side" ],
     [ "s_ip", "structs__ip.html", "structs__ip" ],
     [ "s_ipv4_address", "structs__ipv4__address.html", "structs__ipv4__address" ],
     [ "s_libinfo", "structs__libinfo.html", "structs__libinfo" ],
@@ -13,6 +24,7 @@ var annotated_dup =
     [ "s_proc_info", "structs__proc__info.html", "structs__proc__info" ],
     [ "s_proc_resources", "structs__proc__resources.html", "structs__proc__resources" ],
     [ "s_status", "structs__status.html", "structs__status" ],
+    [ "s_tcp", "structs__tcp.html", "structs__tcp" ],
     [ "u_ip_address", "unionu__ip__address.html", "unionu__ip__address" ],
     [ "u_ipv4_address", "unionu__ipv4__address.html", "unionu__ipv4__address" ]
 ];

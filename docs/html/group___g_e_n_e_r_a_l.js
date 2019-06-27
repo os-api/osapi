@@ -13,6 +13,7 @@ var group___g_e_n_e_r_a_l =
     [ "Byte", "group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0", null ],
     [ "t_char", "group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a", null ],
     [ "t_module", "group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a", null ],
+    [ "t_offset", "group___g_e_n_e_r_a_l.html#gadebf00953694fdb343c01ab637e84c0c", null ],
     [ "t_option", "group___g_e_n_e_r_a_l.html#ga5769d630a83d252b6f77faa95087789e", null ],
     [ "t_protocol", "group___g_e_n_e_r_a_l.html#gadefc37638d0cbab5b1f053e2e6e09f91", null ],
     [ "t_size", "group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537", null ],

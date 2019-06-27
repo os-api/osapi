@@ -3,15 +3,15 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common Linux OS declarations
+// Purpose:	Common POSIX declarations
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_COMMON_TYPES_LINUX_H_
-#define OSAPI_COMMON_TYPES_LINUX_H_
+#ifndef OSAPI_COMMON_TYPE_POSIX_H_
+#define OSAPI_COMMON_TYPE_POSIX_H_
 
-// Only relevant is OS is Linux
-#ifdef OS_LINUX
+// Compile only if is a POSIX implementation
+#ifdef OSAPI_POSIX
 
 // *****************************************************************************************
 //
@@ -19,12 +19,8 @@
 //
 // *****************************************************************************************
 
-// Include first the more general POSIX header
-#include "common/posix/common_types_posix.h"
-
-// Import Linux specific system headers
-#define	__USE_MISC	1	// To select the inclusion of required symbols on the next header
-#include <net/if.h>
+// Import system headers
+#include <sys/types.h>
 
 
 // *****************************************************************************************
@@ -33,16 +29,24 @@
 //
 // *****************************************************************************************
 
-#define OSAPI_INTERFACE_MAX_NAME_SIZE		(IF_NAMESIZE + 1)
 
 
 // *****************************************************************************************
 //
-// Section: Type definitions
+// Section: Type declarations
 //
 // *****************************************************************************************
 
+// Define POSIX opaque types that are cross functional modules
+typedef uid_t	t_uid;		// User  ID
+typedef gid_t	t_gid;		// Group ID
+typedef time_t 	t_time;		// Time information
 
-#endif	// OS Linux
+// Define the required C-String space to represent uid_t/gid_t
+#define OSAPI_STRING_SIZE_UID	11
+#define OSAPI_STRING_SIZE_GID	11
 
-#endif /* OSAPI_COMMON_TYPES_LINUX_H_ */
+
+#endif	// Posix only
+
+#endif /* OSAPI_COMMON_TYPE_POSIX_H_ */

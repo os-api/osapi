@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common type declarations
+// Purpose:	Common Error type declarations
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_COMMON_TYPES_H_
-#define OSAPI_COMMON_TYPES_H_
+#ifndef OSAPI_ERROR_COMMON_H_
+#define OSAPI_ERROR_COMMON_H_
 
 // *****************************************************************************************
 //
@@ -16,13 +16,14 @@
 //
 // *****************************************************************************************
 
-// Platform types first
-#include "common/types/common_types_platform.h"
+// Include General error definitions
+#include "error/error_types.h"
 
-// Generic types after
-#include "common/types/common_types_fs.h"
-#include "common/types/common_types_if.h"
-#include "common/types/common_types_ip.h"
-#include "common/types/common_types_lport.h"
+// Include own error definitions
+#define error_common_X(a, b, c) a b,
+enum common_X {
+	  #include "error/mappings/table_common.h"
+};
+#undef error_common_X
 
-#endif /* COMMON_TYPES_H_ */
+#endif /* OSAPI_ERROR_COMMON_H_ */

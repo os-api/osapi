@@ -51,6 +51,9 @@
 /// Definition of OSAPI size type
 typedef uint64_t			t_size;
 
+/// Definition of OSAPI size type
+typedef int64_t				t_offset;
+
 /// Definition of a Byte type
 typedef uint8_t				Byte;
 

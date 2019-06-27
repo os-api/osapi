@@ -26,7 +26,7 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "common/types/common_types.h"
+#include <common/common_types.h>
 
 // Own module types
 #include "proc/posix/proc_posix_defs.h"

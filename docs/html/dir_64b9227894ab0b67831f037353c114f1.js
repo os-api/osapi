@@ -2,6 +2,7 @@ var dir_64b9227894ab0b67831f037353c114f1 =
 [
     [ "error_clock.h", "error__clock_8h_source.html", null ],
     [ "error_com.h", "error__com_8h_source.html", null ],
+    [ "error_common.h", "error__common_8h_source.html", null ],
     [ "error_fs.h", "error__fs_8h_source.html", null ],
     [ "error_io.h", "error__io_8h_source.html", null ],
     [ "error_log.h", "error__log_8h_source.html", null ],

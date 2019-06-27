@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common module platform OS selection file for types
+// Purpose:	Type declarations for FS elements
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_COMON_TYPES_PLATFORM_H_
-#define OSAPI_COMON_TYPES_PLATFORM_H_
+#ifndef OSAPI_FS_TYPE_ELEMENT_H_
+#define OSAPI_FS_TYPE_ELEMENT_H_
 
 // *****************************************************************************************
 //
@@ -16,9 +16,15 @@
 //
 // *****************************************************************************************
 
-// Import OS specific definitions
-#ifdef	OS_LINUX
-	#include "common/linux/common_types_linux.h"
-#endif
+// Standard C headers
 
-#endif /* OSAPI_COMON_TYPES_PLATFORM_H_ */
+
+// General OSAPI headers
+#include <common/common_types.h>
+#include "fs/fs_platform.h"
+#include "fs/type/fs_type_elementInfo.h"
+#include "fs/type/fs_type_file.h"
+#include "fs/type/fs_type_directory.h"
+
+
+#endif /* OSAPI_FS_TYPE_FILE_H_ */

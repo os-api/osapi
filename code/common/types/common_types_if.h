@@ -24,7 +24,7 @@
 #include "general/general_protocol.h"
 
 // Own headers
-#include "common/types/common_types_platform.h"
+#include "common/common_platform.h"
 
 
 // *****************************************************************************************

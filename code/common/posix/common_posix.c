@@ -32,7 +32,7 @@
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include "error/error_types.h"
+#include "error/modules/error_common.h"
 #include "status/status.h"
 
 // Own declarations
@@ -73,9 +73,9 @@ size_t get_size_grp_entry( void )
 void set_common_status( int code, const char * funcname, t_status * p_status )
 {
  if( code == 0 )
-     status_iset( OSAPI_MODULE_NONE, funcname, OSAPI_ERROR_UNKNOWN, p_status );			// Empty result
+     status_iset( OSAPI_MODULE_COMMON, funcname, osapi_common_e_unknown, p_status );			// Empty result
  else
-     status_iset( OSAPI_MODULE_NONE, funcname, code, p_status );				// Some error
+     status_iset( OSAPI_MODULE_COMMON, funcname, code, p_status );				// Some error
 }
 
 // User functions
@@ -87,13 +87,13 @@ t_status stringTo_uid( const char * p_string, t_uid * p_uid	)
   status_reset( &st );
 
   if( p_uid == (t_uid *) 0 || p_string == (char *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
     {
       errno = 0;
       *p_uid = (t_uid) atoll( p_string );
       if( errno != 0 )
-	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
     }
 
   return st;
@@ -107,7 +107,7 @@ t_status uidTo_string( t_uid uid, t_size strSize, char * p_string )
   status_reset( &st );
 
   if( strSize <= 0 || p_string == (char *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       snprintf( p_string, strSize, "%u", uid );
 
@@ -121,7 +121,7 @@ t_status uid_compare( t_uid uid1, t_uid uid2, bool * p_result )
   status_reset( &st );
 
   if( p_result == (bool) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_result = (uid1 == uid2) ? true: false;
 
@@ -136,7 +136,7 @@ t_status uid_copy( t_uid source, t_uid * p_target )
   status_reset( &st );
 
   if( p_target == (t_uid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_target = source;
 
@@ -151,7 +151,7 @@ t_status get_userID( t_uid * p_id )
   status_reset( &st );
   
   if( p_id == (t_uid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_id = getuid();   
 
@@ -168,7 +168,7 @@ t_status set_userID( t_uid id )
   rc = setuid( id );
   
   if( rc != 0 )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
 
   return st;
 }
@@ -187,7 +187,7 @@ t_status get_primaryGroupID( t_uid uid, t_gid * primaryGroupID )
   buf = malloc( bufsize );
 
   if( buf == NULL )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
   else
     {
       rc = getpwuid_r( uid, &pwd, buf, bufsize, &result);
@@ -217,7 +217,7 @@ t_status get_username_from_id( t_uid uid, size_t max_name, char * p_name )
   buf = malloc( bufsize );
   
   if( buf == NULL )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
   else
     {
       rc = getpwuid_r( uid, &pwd, buf, bufsize, &result);
@@ -246,7 +246,7 @@ t_status get_userID_from_name( char * username, t_uid * p_uid )
   buf = malloc( bufsize );
     
   if( buf == NULL )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
   else
     {
       rc = getpwnam_r( username, &pwd, buf, bufsize, &result );
@@ -270,13 +270,13 @@ t_status get_max_length_username( t_size * p_size )
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
     {
       errno = 0;
       size = sysconf( _POSIX_LOGIN_NAME_MAX );
       if( size == -1 && errno != 0 )			// Got error
-	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
       else
           *p_size = (t_size) size;
     }
@@ -295,13 +295,13 @@ t_status stringTo_gid( const char * p_string, t_gid * p_gid )
   status_reset( &st );
 
   if( p_gid == (t_gid *) 0 || p_string == (char *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
     {
       errno = 0;
       *p_gid = (t_gid) atoll( p_string );
       if( errno != 0 )
-	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
     }
 
   return st;
@@ -315,7 +315,7 @@ t_status gidTo_string( t_gid gid, t_size strSize, char * p_string )
   status_reset( &st );
 
   if( strSize <= 0 || p_string == (char *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       snprintf( p_string, strSize, "%u", gid );
 
@@ -330,7 +330,7 @@ t_status gid_compare( t_gid gid1, t_gid gid2, bool * p_result )
   status_reset( &st );
 
   if( p_result == (bool) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_result = (gid1 == gid2) ? true: false;
 
@@ -345,7 +345,7 @@ t_status gid_copy( t_gid source, t_gid * p_target )
   status_reset( &st );
 
   if( p_target == (t_gid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_target = source;
 
@@ -361,7 +361,7 @@ t_status get_groupID( t_gid * p_gid )
   status_reset( &st );
   
   if( p_gid == (t_gid *) 0 )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
       *p_gid = getgid();   
 
@@ -378,7 +378,7 @@ t_status set_groupID( t_uid id )
   rc = setuid( id );
   
   if( rc != 0 )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
 
   return st;
 }
@@ -397,7 +397,7 @@ t_status get_groupname_from_id( t_gid gid, size_t max_name, char * p_groupname )
   buf = malloc( bufsize );
  
   if( buf == NULL )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
   else
     {
       rc = getgrgid_r( gid, &grp, buf, bufsize, &result );
@@ -426,7 +426,7 @@ t_status get_groupID_from_name( char * groupname, t_gid * p_gid )
   buf = malloc( bufsize );
      
   if( buf == NULL )
-      status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+      status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
   else
     {
       rc = getgrnam_r( groupname, &grp, buf, bufsize, &result );
@@ -449,13 +449,13 @@ t_status get_max_number_groups( t_size * p_size	)
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_NONE, __func__, OSAPI_ERROR_INVPARAM, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
   else
     {
       errno = 0;
       size = sysconf( _SC_NGROUPS_MAX + 1 );
       if( size == -1 && errno != 0 )			// Got error
-	  status_eset( OSAPI_MODULE_NONE, __func__, errno, &st );
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
       else
           *p_size = (t_size) size;
     }

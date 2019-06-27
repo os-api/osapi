@@ -27,7 +27,9 @@ extern "C" {
 #include "status/status_types.h"
 
 // Own declarations
-
+#include "fs/fs_elementInfo.h"
+#include "fs/fs_element.h"
+#include "fs/fs_file.h"
 
 /// *****************************************************************************************
 ///
@@ -51,10 +53,6 @@ extern "C" {
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status fs_module_supported	( void );
-
-/// @brief Does such element exists in the path
-/// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_exists	( const char * path );
 
 #pragma GCC visibility pop			// End of public interface
 

@@ -29,6 +29,7 @@ extern "C" {
 // Own declarations
 #include "com/com_ip.h"
 #include "com/com_ipc.h"
+// #include "com/com_connection.h"	// Under work !
 
 /// *****************************************************************************************
 ///

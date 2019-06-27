@@ -56,13 +56,13 @@ static const char * osapi_protocol[] =
 
 
 // Module strings
-#define module_X(a, b, c) [a]=c,
+#define osapi_module_X(a, b, c) [a]=c,
 
-static const char * module_name[] = {
+static const char * osapi_module_name[] = {
   #include "general/mappings/table_modules.h"
 };
 
-#undef module_X
+#undef osapi_module_X
 
 
 

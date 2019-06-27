@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Linux status declarations
+// Purpose:	POSIX status declarations
 //
 // *****************************************************************************************
 

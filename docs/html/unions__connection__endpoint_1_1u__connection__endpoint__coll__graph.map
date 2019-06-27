@@ -1,0 +1,8 @@
+<map id="s_connection_endpoint::u_connection_endpoint" name="s_connection_endpoint::u_connection_endpoint">
+<area shape="rect" id="node2" href="$structs__ip.html" title="Structure to support IP information. " alt="" coords="98,273,145,300"/>
+<area shape="rect" id="node6" href="$structs__tcp.html" title="s_tcp" alt="" coords="25,363,79,389"/>
+<area shape="rect" id="node3" href="$unionu__ip__address.html" title="Union of IPv4/v6 addresses. " alt="" coords="72,184,171,211"/>
+<area shape="rect" id="node4" href="$unionu__ipv4__address.html" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses. " alt="" coords="65,95,178,121"/>
+<area shape="rect" id="node5" href="$structs__ipv4__address.html" title="Structure for a structured IPv4 address. " alt="" coords="65,5,178,32"/>
+<area shape="rect" id="node7" href="$structs__lport.html" title="s_lport" alt="" coords="5,273,67,300"/>
+</map>

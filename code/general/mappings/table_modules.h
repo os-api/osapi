@@ -8,19 +8,20 @@
 // *****************************************************************************************
 
 
-module_X( OSAPI_MODULE_NONE, = 0	,	"No module"	)
+osapi_module_X( OSAPI_MODULE_NONE, = 0	,	"No module"	)
 
-module_X( OSAPI_MODULE_STRING, 		,	"STRING" 	)
-module_X( OSAPI_MODULE_OS, 		,	"OS"		)
-module_X( OSAPI_MODULE_MACHINE, 	,	"MACHINE" 	)
-module_X( OSAPI_MODULE_PROC, 		,	"PROC"		)
-module_X( OSAPI_MODULE_CLOCK,  		,	"CLOCK"		)
-module_X( OSAPI_MODULE_SEC, 		,	"SECURITY"	)
-module_X( OSAPI_MODULE_UTIL, 		,	"UTIL"		)
-module_X( OSAPI_MODULE_IO, 		,	"IO"		)
-module_X( OSAPI_MODULE_LOG, 		,	"LOG"		)
-module_X( OSAPI_MODULE_FS, 		,	"FILESYSTEM"	)
-module_X( OSAPI_MODULE_COM, 		,	"COMMUNICATION"	)
+osapi_module_X( OSAPI_MODULE_COMMON, 	,	"COMMON" 	)
+osapi_module_X( OSAPI_MODULE_STRING, 	,	"STRING" 	)
+osapi_module_X( OSAPI_MODULE_OS, 	,	"OS"		)
+osapi_module_X( OSAPI_MODULE_MACHINE, 	,	"MACHINE" 	)
+osapi_module_X( OSAPI_MODULE_PROC, 	,	"PROC"		)
+osapi_module_X( OSAPI_MODULE_CLOCK,  	,	"CLOCK"		)
+osapi_module_X( OSAPI_MODULE_SEC, 	,	"SECURITY"	)
+osapi_module_X( OSAPI_MODULE_UTIL, 	,	"UTIL"		)
+osapi_module_X( OSAPI_MODULE_IO, 	,	"IO"		)
+osapi_module_X( OSAPI_MODULE_LOG, 	,	"LOG"		)
+osapi_module_X( OSAPI_MODULE_FS, 	,	"FILESYSTEM"	)
+osapi_module_X( OSAPI_MODULE_COM, 	,	"COMMUNICATION"	)
 
-module_X( OSAPI_MODULE_MAX, 		,	"No module"	)
+osapi_module_X( OSAPI_MODULE_MAX, 	,	"No module"	)
 

@@ -25,17 +25,26 @@
 //
 // *****************************************************************************************
 
+// Include standard C types
 #include <unistd.h>
 #include <time.h>
 #include <errno.h>
 
+// Import OSAPI types
+#include <common/common_types.h>
+
+// *****************************************************************************************
+//
+// Section: Type definition
+//
+// *****************************************************************************************
+
 typedef struct timespec t_hrTime;
-typedef time_t t_time;
 
 struct s_clock
 {
   struct timespec time;
-  ;
+
   struct tm interval;
 };
 
