@@ -43,12 +43,14 @@
 //
 // *****************************************************************************************
 
-t_status	get_element_info	( const t_char * pathname, struct stat * p_stat			);
-t_status	decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info	);
-t_fs_eType	get_element_type	( mode_t mode							);
-void		set_file_open_mode	( bool create, int openMode, int location, char * mode		);
-t_status	get_element_time	( const t_fs_elementInfo * info, int selector, t_time * time	);
-t_status	open_file		( const t_char * pathname, const char * mode, t_file * file	);
+t_status	posix_get_element_info		( const t_char * pathname, struct stat * p_stat			);
+t_status	posix_decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info	);
+t_fs_eType	posix_get_element_type		( mode_t mode							);
+void		posix_set_file_open_mode	( bool create, int openMode, int location, char * mode		);
+t_status	posix_get_element_time		( const t_fs_elementInfo * info, int selector, t_time * time	);
+t_status	posix_open_file			( const t_char * pathname, const char * mode, t_file * file	);
+t_status	posix_get_directory_info	( const t_char * p_path, t_fs_directoryInfo * p_dir		);
+t_status	posix_get_link_info		( const t_char * p_path, t_fs_linkInfo * p_info			);
 
 #endif // Only in POSIX mode
 

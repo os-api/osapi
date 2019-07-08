@@ -19,6 +19,9 @@
 // Import OSAPI headers
 #include "general/general_types.h"
 
+// Include own headers
+#include "common/types/common_types_memory.h"
+
 // *****************************************************************************************
 //
 // Section: Type definitions
@@ -30,10 +33,8 @@
 /// memory supported by a "buffer" type can provided more robust code.
 struct osapi_s_buffer
 {
-  t_size	capacity;		///< The buffer allocated capacity
-  Byte		canary;			///< A MAGIC constant to indicate if the data pointer is really pointing to previously allocated memory
   t_size	size;			///< Current capacity usage, i.e. how many bytes are you using of the allocated capacity
-  void	  *	data;			///< Allocated HEAP memory location
+  t_memory	mem;			///< Allocated memory
 };
 
 typedef struct osapi_s_buffer		t_buffer;

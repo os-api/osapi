@@ -46,6 +46,11 @@ typedef time_t 	t_time;		// Time information
 #define OSAPI_STRING_SIZE_UID	11
 #define OSAPI_STRING_SIZE_GID	11
 
+// Define the maximum path name of the platform (in this case, POSIX)
+#define OSAPI_PATH_MAX		PATH_MAX
+
+
+
 
 #endif	// Posix only
 

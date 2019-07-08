@@ -13,15 +13,6 @@
 
 // *****************************************************************************************
 //
-// Section: Macros and constants
-//
-// *****************************************************************************************
-
-#define OSAPI_COMMON_CANARY	115
-
-
-// *****************************************************************************************
-//
 // Section: Import headers
 //
 // *****************************************************************************************
@@ -32,6 +23,7 @@
 
 // Generic types after
 #include "common/types/common_types_buffer.h"
+#include "common/types/common_types_list.h"
 #include "common/types/common_types_fs.h"
 #include "common/types/common_types_if.h"
 #include "common/types/common_types_ip.h"

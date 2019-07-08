@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.18</span>
+   &#160;<span id="projectnumber">0.24</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -68,25 +68,25 @@ $(document).ready(function(){initNavTree('structosapi__s__buffer.html','');});
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="common__types__buffer_8h_source.html">common_types_buffer.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for osapi_s_buffer:</div>
+<div class="dyncontent">
+<div class="center"><img src="structosapi__s__buffer__coll__graph.png" border="0" usemap="#osapi__s__buffer_coll__map" alt="Collaboration graph"/></div>
+<map name="osapi__s__buffer_coll__map" id="osapi__s__buffer_coll__map">
+<area shape="rect" id="node2" href="structosapi__s__memory.html" title="osapi_s_memory" alt="" coords="5,5,127,32"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:aa16fab164fef5ecb995a17e11c63bb04"><td class="memItemLeft" align="right" valign="top"><a id="aa16fab164fef5ecb995a17e11c63bb04"></a>
-<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__s__buffer.html#aa16fab164fef5ecb995a17e11c63bb04">capacity</a></td></tr>
-<tr class="memdesc:aa16fab164fef5ecb995a17e11c63bb04"><td class="mdescLeft">&#160;</td><td class="mdescRight">The buffer allocated capacity. <br /></td></tr>
-<tr class="separator:aa16fab164fef5ecb995a17e11c63bb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cacd2574102ea0ff9d279fae59d32c0"><td class="memItemLeft" align="right" valign="top"><a id="a2cacd2574102ea0ff9d279fae59d32c0"></a>
-<a class="el" href="group___g_e_n_e_r_a_l.html#ga7ae8f3766c8853286755f4ec0903c6f0">Byte</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__s__buffer.html#a2cacd2574102ea0ff9d279fae59d32c0">canary</a></td></tr>
-<tr class="memdesc:a2cacd2574102ea0ff9d279fae59d32c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">A MAGIC constant to indicate if the data pointer is really pointing to previously allocated memory. <br /></td></tr>
-<tr class="separator:a2cacd2574102ea0ff9d279fae59d32c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e5fd6a6dd1475139ab1dfcfa8798eb6"><td class="memItemLeft" align="right" valign="top"><a id="a7e5fd6a6dd1475139ab1dfcfa8798eb6"></a>
 <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__s__buffer.html#a7e5fd6a6dd1475139ab1dfcfa8798eb6">size</a></td></tr>
 <tr class="memdesc:a7e5fd6a6dd1475139ab1dfcfa8798eb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current capacity usage, i.e. how many bytes are you using of the allocated capacity. <br /></td></tr>
 <tr class="separator:a7e5fd6a6dd1475139ab1dfcfa8798eb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a735984d41155bc1032e09bece8f8d66d"><td class="memItemLeft" align="right" valign="top"><a id="a735984d41155bc1032e09bece8f8d66d"></a>
-void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__s__buffer.html#a735984d41155bc1032e09bece8f8d66d">data</a></td></tr>
-<tr class="memdesc:a735984d41155bc1032e09bece8f8d66d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated HEAP memory location. <br /></td></tr>
-<tr class="separator:a735984d41155bc1032e09bece8f8d66d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d12e8ae79cb17f26ed69eb36343abb2"><td class="memItemLeft" align="right" valign="top"><a id="a3d12e8ae79cb17f26ed69eb36343abb2"></a>
+<a class="el" href="structosapi__s__memory.html">t_memory</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__s__buffer.html#a3d12e8ae79cb17f26ed69eb36343abb2">mem</a></td></tr>
+<tr class="memdesc:a3d12e8ae79cb17f26ed69eb36343abb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocated memory. <br /></td></tr>
+<tr class="separator:a3d12e8ae79cb17f26ed69eb36343abb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure supporting a self describing memory/buffer The reasoning is that naked memory handling is more error prone and encapsulation of memory supported by a "buffer" type can provided more robust code. </p>

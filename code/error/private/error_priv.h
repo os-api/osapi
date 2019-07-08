@@ -60,21 +60,21 @@
 // Generic error definitions
 
 /// Auxiliary structure for a successful status
-static const char * error_none [] =
+static const char * osapi_error_none [] =
 {
   "Success",
   NULL
 };
 
 /// Auxiliary structure that helps in the definition of the maximum error code in each module
-struct s_osapi_errors
+struct osapi_s_errors
 {
   t_error 		topValue;	///< The maximum error value in a module
   const char ** 	name;		///< The error string that corresponds to the maximum error value
 };
 
-static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
-	    { 1,			error_none 	},
+static const struct osapi_s_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
+	    { 1,			osapi_error_none 	},
 	    { osapi_common_e_max, 	common_errors  	},
 	    { e_string_max, 		string_errors  	},
 	    { e_os_max, 		os_errors	},
@@ -84,7 +84,7 @@ static const struct s_osapi_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
 	    { e_sec_max,		sec_errors	},
 	    { e_io_max,			io_errors	},
 	    { e_util_max,		util_errors	},
-	    { osapi_fs_e_max,		fs_errors	},
+	    { osapi_fs_error_max,	osapi_fs_errors		},
 	    { e_com_max,		com_errors	},
 };
 

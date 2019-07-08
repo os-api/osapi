@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	TCP type declarations
+// Purpose:	Element info type declarations
 //
 // *****************************************************************************************
 
@@ -20,8 +20,11 @@
 
 
 // General OSAPI headers
-#include <common/common_types.h>
+#include "common/common_types.h"
+
+// Import own headers
 #include "fs/fs_platform.h"
+#include "fs/type/fs_type_element_type.h"
 
 // *****************************************************************************************
 //
@@ -30,7 +33,7 @@
 // *****************************************************************************************
 
 /// Structure containing the file system element generic information
-struct osapi_s_fs_elementInfo
+struct osapi_fs_element_info
 {
   t_char	*	name;		///< The path name
   t_fs_eType		type;		///< Element type: File, directory, etc.
@@ -40,10 +43,10 @@ struct osapi_s_fs_elementInfo
   t_time		ctime;		///< Creation time
   t_time		atime;		///< Access time
   t_time		mtime;		///< Modification time
-  // t_fs_ePerm	perm;
+  t_fs_perm		perm;		///< Permission set
 };
 
 
-typedef struct osapi_s_fs_elementInfo t_fs_elementInfo;
+typedef struct osapi_fs_element_info 	t_fs_elementInfo;
 
 #endif /* OSAPI_FS_TYPE_ELEMENTINFO_H_ */

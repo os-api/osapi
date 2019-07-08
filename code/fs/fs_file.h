@@ -57,6 +57,12 @@ extern "C" {
 /// @return SUCCESS if file opened. An error condition otherwise.
 t_status fs_file_open		( const t_char * path, bool create, int mode, int location, t_file * file );
 
+/// @brief Obtain a file descriptor
+/// @param [in] path    - File name
+/// @param [out] file	- File descriptor
+/// @return SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name).
+t_status fs_file_getInfo	( const char * path, t_file * file );
+
 // Helper functions
 /// @brief Open a file for Reading
 /// Location at the beginning and no file creation.
@@ -82,8 +88,9 @@ t_status fs_file_openReadWrite	( const t_char * path, t_file * file );
 /// @brief Create a new file
 /// File is created but not opened
 /// @param [in] path     - File name
+/// @param [in] mode     - File creation options
 /// @return SUCCESS if created. An error condition otherwise (e.g. file already exists).
-t_status fs_file_create		( const char * path );
+t_status fs_file_create		( const char * path, const char * mode );
 
 
 /// @brief Position the file stream according
@@ -98,14 +105,18 @@ t_status fs_file_setPosition	( const t_file * file, int initial, t_offset offset
 /// @brief Close a file
 /// @param [in] file - File descriptor
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_file_close	( t_file * file );
+t_status fs_file_close		( t_file * file );
 
-
-/// @brief Read a file content into a given buffer
+/// @brief Get the last file IO operation status
 /// @param [in] file   - File descriptor
 /// @return Last file operation status
 t_status fs_file_getError	( const t_file * file );
 
+/// @brief Check if the file indicator is at the end of the file
+/// @param [in]  file   - File descriptor
+/// @param [out] eof	- Is the indicator positioned at the end of file?
+/// @return Operation status
+t_status fs_file_isEOF		( const t_file * file, bool * eof );
 
 /// @brief Read a file content into a given buffer
 /// @param [in] file    - File descriptor
@@ -119,6 +130,12 @@ t_status fs_file_read		( const t_file * file, t_buffer * buffer, bool * eof );
 /// @param [in] buffer - Buffer to write to file
 /// @return SUCCESS if written. An error condition otherwise.
 t_status fs_file_write		( const t_file * file, t_buffer * buffer );
+
+/// @brief Obtain an element descriptor from a file descriptor
+/// @param [in] file	- File descriptor
+/// @param [out] elem	- Element descriptor
+/// @return Operation status.
+t_status fs_file_getElement	( t_file * file, t_element * elem );
 
 #pragma GCC visibility pop			// End of public interface
 

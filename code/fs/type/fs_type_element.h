@@ -20,11 +20,20 @@
 
 
 // General OSAPI headers
-#include <common/common_types.h>
+#include "common/common_types.h"
+
+// Import own elements
 #include "fs/fs_platform.h"
+#include "fs/type/fs_type_ostate.h"
 #include "fs/type/fs_type_elementInfo.h"
-#include "fs/type/fs_type_file.h"
-#include "fs/type/fs_type_directory.h"
+
+// *****************************************************************************************
+//
+// Section: Declarations
+//
+// *****************************************************************************************
+
+typedef	t_fs_elementInfo	t_element;
 
 
-#endif /* OSAPI_FS_TYPE_FILE_H_ */
+#endif /* OSAPI_FS_TYPE_ELEMENT_H_ */

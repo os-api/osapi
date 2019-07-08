@@ -1,0 +1,5 @@
+<map id="osapi_fs_s_dir" name="osapi_fs_s_dir">
+<area shape="rect" id="node2" href="$structosapi__fs__s__directory__info.html" title="Structure describing a directory descriptor type. " alt="" coords="5,109,176,136"/>
+<area shape="rect" id="node3" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="200,109,352,136"/>
+<area shape="rect" id="node4" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="207,5,345,47"/>
+</map>

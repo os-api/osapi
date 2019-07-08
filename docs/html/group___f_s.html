@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.18</span>
+   &#160;<span id="projectnumber">0.24</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -84,68 +84,410 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6c10ab477626bd407ef5447ab65e1c69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga6c10ab477626bd407ef5447ab65e1c69">fs_module_supported</a> (void)</td></tr>
 <tr class="memdesc:ga6c10ab477626bd407ef5447ab65e1c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares if the module is supported on the current implementation.  <a href="#ga6c10ab477626bd407ef5447ab65e1c69">More...</a><br /></td></tr>
 <tr class="separator:ga6c10ab477626bd407ef5447ab65e1c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga639e9fb33cdcc9a5778a61f92bc3f402"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga639e9fb33cdcc9a5778a61f92bc3f402">fs_dir_open</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir)</td></tr>
+<tr class="memdesc:ga639e9fb33cdcc9a5778a61f92bc3f402"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a directory.  <a href="#ga639e9fb33cdcc9a5778a61f92bc3f402">More...</a><br /></td></tr>
+<tr class="separator:ga639e9fb33cdcc9a5778a61f92bc3f402"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac9cc3d5ea4640131c5d9e81f8e8f6a06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gac9cc3d5ea4640131c5d9e81f8e8f6a06">fs_dir_close</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir)</td></tr>
+<tr class="memdesc:gac9cc3d5ea4640131c5d9e81f8e8f6a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a directory.  <a href="#gac9cc3d5ea4640131c5d9e81f8e8f6a06">More...</a><br /></td></tr>
+<tr class="separator:gac9cc3d5ea4640131c5d9e81f8e8f6a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5129861d694398c40af7b307d37a36d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae5129861d694398c40af7b307d37a36d">fs_directory_create</a> (const char *path, const char *mode)</td></tr>
+<tr class="memdesc:gae5129861d694398c40af7b307d37a36d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory.  <a href="#gae5129861d694398c40af7b307d37a36d">More...</a><br /></td></tr>
+<tr class="separator:gae5129861d694398c40af7b307d37a36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaebee1f618484006feb23c0d08b01a221"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaebee1f618484006feb23c0d08b01a221">fs_directory_getInfo</a> (const char *path, <a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir)</td></tr>
+<tr class="memdesc:gaebee1f618484006feb23c0d08b01a221"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove a directory by file descriptor.  <a href="#gaebee1f618484006feb23c0d08b01a221">More...</a><br /></td></tr>
+<tr class="separator:gaebee1f618484006feb23c0d08b01a221"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae00e530d55f28dec19cc4159ee4c76b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae00e530d55f28dec19cc4159ee4c76b4">fs_directory_getElement</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir, <a class="el" href="structosapi__fs__element__info.html">t_element</a> *elem)</td></tr>
+<tr class="memdesc:gae00e530d55f28dec19cc4159ee4c76b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an element descriptor from a directory descriptor.  <a href="#gae00e530d55f28dec19cc4159ee4c76b4">More...</a><br /></td></tr>
+<tr class="separator:gae00e530d55f28dec19cc4159ee4c76b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f259fe284673f240bc7ad04e74adccb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2f259fe284673f240bc7ad04e74adccb">fs_directory_getNumberElements</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *number)</td></tr>
+<tr class="memdesc:ga2f259fe284673f240bc7ad04e74adccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of directory elements.  <a href="#ga2f259fe284673f240bc7ad04e74adccb">More...</a><br /></td></tr>
+<tr class="separator:ga2f259fe284673f240bc7ad04e74adccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9850dfa963da8b8a32e77c8e0c592a77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga9850dfa963da8b8a32e77c8e0c592a77">fs_directory_getElementList</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> number, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *listSize, t_dir_entry *dirList)</td></tr>
+<tr class="memdesc:ga9850dfa963da8b8a32e77c8e0c592a77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of directory elements.  <a href="#ga9850dfa963da8b8a32e77c8e0c592a77">More...</a><br /></td></tr>
+<tr class="separator:ga9850dfa963da8b8a32e77c8e0c592a77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6589f6f50942c049daba5d9369967010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga6589f6f50942c049daba5d9369967010">fs_element_remove</a> (const char *path)</td></tr>
+<tr class="memdesc:ga6589f6f50942c049daba5d9369967010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate a an element from the file system.  <a href="#ga6589f6f50942c049daba5d9369967010">More...</a><br /></td></tr>
+<tr class="separator:ga6589f6f50942c049daba5d9369967010"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga58f566c677b843d1b9391ee416fde853"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga58f566c677b843d1b9391ee416fde853">fs_element_exists</a> (const char *path)</td></tr>
 <tr class="memdesc:ga58f566c677b843d1b9391ee416fde853"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does such element exists in the path.  <a href="#ga58f566c677b843d1b9391ee416fde853">More...</a><br /></td></tr>
 <tr class="separator:ga58f566c677b843d1b9391ee416fde853"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5251df869d6b72f402d9907713494860"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga5251df869d6b72f402d9907713494860">fs_element_getInfo</a> (const char *path, <a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info)</td></tr>
-<tr class="memdesc:ga5251df869d6b72f402d9907713494860"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does such element exists in the path.  <a href="#ga5251df869d6b72f402d9907713494860">More...</a><br /></td></tr>
-<tr class="separator:ga5251df869d6b72f402d9907713494860"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7653eebfabb576dac404b12f8625195d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga7653eebfabb576dac404b12f8625195d">fs_elementInfo_getType</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, int *type)</td></tr>
-<tr class="memdesc:ga7653eebfabb576dac404b12f8625195d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of element.  <a href="#ga7653eebfabb576dac404b12f8625195d">More...</a><br /></td></tr>
-<tr class="separator:ga7653eebfabb576dac404b12f8625195d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab07f181576008ab686b3bf0a6341ca99"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gab07f181576008ab686b3bf0a6341ca99">fs_elementInfo_getUID</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, t_uid *uid)</td></tr>
-<tr class="memdesc:gab07f181576008ab686b3bf0a6341ca99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element ownership: User identifier.  <a href="#gab07f181576008ab686b3bf0a6341ca99">More...</a><br /></td></tr>
-<tr class="separator:gab07f181576008ab686b3bf0a6341ca99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga909d08239f2697c2d63ac69ceb103c7f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga909d08239f2697c2d63ac69ceb103c7f">fs_elementInfo_getGID</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, t_gid *gid)</td></tr>
-<tr class="memdesc:ga909d08239f2697c2d63ac69ceb103c7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element ownership: Group identifier.  <a href="#ga909d08239f2697c2d63ac69ceb103c7f">More...</a><br /></td></tr>
-<tr class="separator:ga909d08239f2697c2d63ac69ceb103c7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga83e6ce1e8e3216fe7fb270dfc8ff98e2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga83e6ce1e8e3216fe7fb270dfc8ff98e2">fs_elementInfo_getAtime</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, t_time *atime)</td></tr>
-<tr class="memdesc:ga83e6ce1e8e3216fe7fb270dfc8ff98e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element access time.  <a href="#ga83e6ce1e8e3216fe7fb270dfc8ff98e2">More...</a><br /></td></tr>
-<tr class="separator:ga83e6ce1e8e3216fe7fb270dfc8ff98e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga974b32abb2d3f9d24cb048b832f37b3e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga974b32abb2d3f9d24cb048b832f37b3e">fs_elementInfo_getCtime</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, t_time *ctime)</td></tr>
-<tr class="memdesc:ga974b32abb2d3f9d24cb048b832f37b3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element creation time.  <a href="#ga974b32abb2d3f9d24cb048b832f37b3e">More...</a><br /></td></tr>
-<tr class="separator:ga974b32abb2d3f9d24cb048b832f37b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga676c6dcc5d19e476d6f592cafdbe70bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga676c6dcc5d19e476d6f592cafdbe70bb">fs_elementInfo_getMtime</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, t_time *mtime)</td></tr>
-<tr class="memdesc:ga676c6dcc5d19e476d6f592cafdbe70bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element modification time.  <a href="#ga676c6dcc5d19e476d6f592cafdbe70bb">More...</a><br /></td></tr>
-<tr class="separator:ga676c6dcc5d19e476d6f592cafdbe70bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga53620f03baf81af81bface1e250ce993"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga53620f03baf81af81bface1e250ce993">fs_elementInfo_getSize</a> (<a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *info, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:ga53620f03baf81af81bface1e250ce993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of element in the file system.  <a href="#ga53620f03baf81af81bface1e250ce993">More...</a><br /></td></tr>
-<tr class="separator:ga53620f03baf81af81bface1e250ce993"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga717f05c4cc2e88579a5ba3ef3e7968d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga717f05c4cc2e88579a5ba3ef3e7968d6">fs_file_open</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, bool create, int mode, int location, <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
+<tr class="memitem:ga77f6ba234f4509775145de94a3b2a6e5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga77f6ba234f4509775145de94a3b2a6e5">fs_element_setUID</a> (const char *path, t_uid uid)</td></tr>
+<tr class="memdesc:ga77f6ba234f4509775145de94a3b2a6e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the user owning the element.  <a href="#ga77f6ba234f4509775145de94a3b2a6e5">More...</a><br /></td></tr>
+<tr class="separator:ga77f6ba234f4509775145de94a3b2a6e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga10c436a60f5bdf9ebcab111b52de7b37"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga10c436a60f5bdf9ebcab111b52de7b37">fs_element_setGID</a> (const char *path, t_gid gid)</td></tr>
+<tr class="memdesc:ga10c436a60f5bdf9ebcab111b52de7b37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the group owning the element.  <a href="#ga10c436a60f5bdf9ebcab111b52de7b37">More...</a><br /></td></tr>
+<tr class="separator:ga10c436a60f5bdf9ebcab111b52de7b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaff22c82dcdd28ccbd796b06ec6c2d307"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaff22c82dcdd28ccbd796b06ec6c2d307">fs_element_setPermissions</a> (const char *path, <a class="el" href="structosapi__fs__s__element__permissions.html">t_fs_perm</a> *perm)</td></tr>
+<tr class="memdesc:gaff22c82dcdd28ccbd796b06ec6c2d307"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the permissions of the the element.  <a href="#gaff22c82dcdd28ccbd796b06ec6c2d307">More...</a><br /></td></tr>
+<tr class="separator:gaff22c82dcdd28ccbd796b06ec6c2d307"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga981019f50ab749040885eaa9ca580f3a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga981019f50ab749040885eaa9ca580f3a">fs_element_getInfo</a> (const char *path, <a class="el" href="structosapi__fs__element__info.html">t_element</a> *info)</td></tr>
+<tr class="memdesc:ga981019f50ab749040885eaa9ca580f3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the generic information about a file system element.  <a href="#ga981019f50ab749040885eaa9ca580f3a">More...</a><br /></td></tr>
+<tr class="separator:ga981019f50ab749040885eaa9ca580f3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa87cd6edf4e3971aa66a89086c671e45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaa87cd6edf4e3971aa66a89086c671e45">fs_element_getType</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, int *type)</td></tr>
+<tr class="memdesc:gaa87cd6edf4e3971aa66a89086c671e45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get type of element.  <a href="#gaa87cd6edf4e3971aa66a89086c671e45">More...</a><br /></td></tr>
+<tr class="separator:gaa87cd6edf4e3971aa66a89086c671e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9d9dbf932a9700a86e51e5b499726fa9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga9d9dbf932a9700a86e51e5b499726fa9">fs_element_getName</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, char **name)</td></tr>
+<tr class="memdesc:ga9d9dbf932a9700a86e51e5b499726fa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the user ID owning the element.  <a href="#ga9d9dbf932a9700a86e51e5b499726fa9">More...</a><br /></td></tr>
+<tr class="separator:ga9d9dbf932a9700a86e51e5b499726fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga288283f9466046044c55943a9efbcbfc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga288283f9466046044c55943a9efbcbfc">fs_element_getUID</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, t_uid *uid)</td></tr>
+<tr class="memdesc:ga288283f9466046044c55943a9efbcbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the user ID owning the element.  <a href="#ga288283f9466046044c55943a9efbcbfc">More...</a><br /></td></tr>
+<tr class="separator:ga288283f9466046044c55943a9efbcbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga701a1b631f1ed9bb8fa0ce274a494a28"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga701a1b631f1ed9bb8fa0ce274a494a28">fs_element_getGID</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, t_gid *gid)</td></tr>
+<tr class="memdesc:ga701a1b631f1ed9bb8fa0ce274a494a28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the group ID owning the element.  <a href="#ga701a1b631f1ed9bb8fa0ce274a494a28">More...</a><br /></td></tr>
+<tr class="separator:ga701a1b631f1ed9bb8fa0ce274a494a28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab71726ed8bb238305b4f9e4333467075"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gab71726ed8bb238305b4f9e4333467075">fs_element_getAtime</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, t_time *atime)</td></tr>
+<tr class="memdesc:gab71726ed8bb238305b4f9e4333467075"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element access time.  <a href="#gab71726ed8bb238305b4f9e4333467075">More...</a><br /></td></tr>
+<tr class="separator:gab71726ed8bb238305b4f9e4333467075"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b89d9c699d44af120b45f9cb536bf19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga8b89d9c699d44af120b45f9cb536bf19">fs_element_getCtime</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, t_time *ctime)</td></tr>
+<tr class="memdesc:ga8b89d9c699d44af120b45f9cb536bf19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element creation time.  <a href="#ga8b89d9c699d44af120b45f9cb536bf19">More...</a><br /></td></tr>
+<tr class="separator:ga8b89d9c699d44af120b45f9cb536bf19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4cfd39772e522cdff9c97d33f82b2cba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4cfd39772e522cdff9c97d33f82b2cba">fs_element_getMtime</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, t_time *mtime)</td></tr>
+<tr class="memdesc:ga4cfd39772e522cdff9c97d33f82b2cba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get element modification time.  <a href="#ga4cfd39772e522cdff9c97d33f82b2cba">More...</a><br /></td></tr>
+<tr class="separator:ga4cfd39772e522cdff9c97d33f82b2cba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ab4cc9d3c5228ad6712716a42543cf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga8ab4cc9d3c5228ad6712716a42543cf7">fs_element_getSize</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga8ab4cc9d3c5228ad6712716a42543cf7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get size of element in the file system.  <a href="#ga8ab4cc9d3c5228ad6712716a42543cf7">More...</a><br /></td></tr>
+<tr class="separator:ga8ab4cc9d3c5228ad6712716a42543cf7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2357a9bfa33fccabb7f7b85734baeb8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae2357a9bfa33fccabb7f7b85734baeb8">fs_element_getPermissions</a> (<a class="el" href="structosapi__fs__element__info.html">t_element</a> *info, <a class="el" href="structosapi__fs__s__element__permissions.html">t_fs_perm</a> *perm)</td></tr>
+<tr class="memdesc:gae2357a9bfa33fccabb7f7b85734baeb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain the permissions of the element.  <a href="#gae2357a9bfa33fccabb7f7b85734baeb8">More...</a><br /></td></tr>
+<tr class="separator:gae2357a9bfa33fccabb7f7b85734baeb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga717f05c4cc2e88579a5ba3ef3e7968d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga717f05c4cc2e88579a5ba3ef3e7968d6">fs_file_open</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, bool create, int mode, int location, <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
 <tr class="memdesc:ga717f05c4cc2e88579a5ba3ef3e7968d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file with fine grain control.  <a href="#ga717f05c4cc2e88579a5ba3ef3e7968d6">More...</a><br /></td></tr>
 <tr class="separator:ga717f05c4cc2e88579a5ba3ef3e7968d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaed245c103f1c18c006e44078840bd7d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaed245c103f1c18c006e44078840bd7d9">fs_file_openRead</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
+<tr class="memitem:ga43e7c26d832a90dc33125d83a8abb758"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga43e7c26d832a90dc33125d83a8abb758">fs_file_getInfo</a> (const char *path, <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
+<tr class="memdesc:ga43e7c26d832a90dc33125d83a8abb758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a file descriptor.  <a href="#ga43e7c26d832a90dc33125d83a8abb758">More...</a><br /></td></tr>
+<tr class="separator:ga43e7c26d832a90dc33125d83a8abb758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed245c103f1c18c006e44078840bd7d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaed245c103f1c18c006e44078840bd7d9">fs_file_openRead</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
 <tr class="memdesc:gaed245c103f1c18c006e44078840bd7d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file for Reading Location at the beginning and no file creation.  <a href="#gaed245c103f1c18c006e44078840bd7d9">More...</a><br /></td></tr>
 <tr class="separator:gaed245c103f1c18c006e44078840bd7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2f668b43f764d78b612b26591e96a2dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2f668b43f764d78b612b26591e96a2dd">fs_file_openWrite</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
+<tr class="memitem:ga2f668b43f764d78b612b26591e96a2dd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2f668b43f764d78b612b26591e96a2dd">fs_file_openWrite</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
 <tr class="memdesc:ga2f668b43f764d78b612b26591e96a2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file for Writing Location at the end and file created if doesn't exist.  <a href="#ga2f668b43f764d78b612b26591e96a2dd">More...</a><br /></td></tr>
 <tr class="separator:ga2f668b43f764d78b612b26591e96a2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga497f30b53439ffc2b732ffa729141c16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga497f30b53439ffc2b732ffa729141c16">fs_file_openReadWrite</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
+<tr class="memitem:ga497f30b53439ffc2b732ffa729141c16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga497f30b53439ffc2b732ffa729141c16">fs_file_openReadWrite</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
 <tr class="memdesc:ga497f30b53439ffc2b732ffa729141c16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a file for Reading and Writing Location at the beginning for reading and at the end for writing. File is created if it doesn't exist.  <a href="#ga497f30b53439ffc2b732ffa729141c16">More...</a><br /></td></tr>
 <tr class="separator:ga497f30b53439ffc2b732ffa729141c16"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga37d8d717d204a7e5cb6a62348514fc52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga37d8d717d204a7e5cb6a62348514fc52">fs_file_create</a> (const char *path)</td></tr>
-<tr class="memdesc:ga37d8d717d204a7e5cb6a62348514fc52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new file File is created but not opened.  <a href="#ga37d8d717d204a7e5cb6a62348514fc52">More...</a><br /></td></tr>
-<tr class="separator:ga37d8d717d204a7e5cb6a62348514fc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga71e29b2e232e5fe06dff24b75a68c3b1">fs_file_setPosition</a> (const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file, int initial, <a class="el" href="group___g_e_n_e_r_a_l.html#gadebf00953694fdb343c01ab637e84c0c">t_offset</a> offset)</td></tr>
+<tr class="memitem:ga856b36842abc099dbd8b0fbf8cb3aad9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga856b36842abc099dbd8b0fbf8cb3aad9">fs_file_create</a> (const char *path, const char *mode)</td></tr>
+<tr class="memdesc:ga856b36842abc099dbd8b0fbf8cb3aad9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new file File is created but not opened.  <a href="#ga856b36842abc099dbd8b0fbf8cb3aad9">More...</a><br /></td></tr>
+<tr class="separator:ga856b36842abc099dbd8b0fbf8cb3aad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga71e29b2e232e5fe06dff24b75a68c3b1">fs_file_setPosition</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, int initial, <a class="el" href="group___g_e_n_e_r_a_l.html#gadebf00953694fdb343c01ab637e84c0c">t_offset</a> offset)</td></tr>
 <tr class="memdesc:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the file stream according The file position is provided by the start location (begin, end of file) and the displacement offset.  <a href="#ga71e29b2e232e5fe06dff24b75a68c3b1">More...</a><br /></td></tr>
 <tr class="separator:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4e85e7d4286e2c989268c779b3ca34c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4e85e7d4286e2c989268c779b3ca34c1">fs_file_close</a> (<a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
+<tr class="memitem:ga4e85e7d4286e2c989268c779b3ca34c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4e85e7d4286e2c989268c779b3ca34c1">fs_file_close</a> (<a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
 <tr class="memdesc:ga4e85e7d4286e2c989268c779b3ca34c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a file.  <a href="#ga4e85e7d4286e2c989268c779b3ca34c1">More...</a><br /></td></tr>
 <tr class="separator:ga4e85e7d4286e2c989268c779b3ca34c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga23d63fe1481b477906cdfe20c17fd64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga23d63fe1481b477906cdfe20c17fd64b">fs_file_getError</a> (const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file)</td></tr>
-<tr class="memdesc:ga23d63fe1481b477906cdfe20c17fd64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file content into a given buffer.  <a href="#ga23d63fe1481b477906cdfe20c17fd64b">More...</a><br /></td></tr>
+<tr class="memitem:ga23d63fe1481b477906cdfe20c17fd64b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga23d63fe1481b477906cdfe20c17fd64b">fs_file_getError</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file)</td></tr>
+<tr class="memdesc:ga23d63fe1481b477906cdfe20c17fd64b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the last file IO operation status.  <a href="#ga23d63fe1481b477906cdfe20c17fd64b">More...</a><br /></td></tr>
 <tr class="separator:ga23d63fe1481b477906cdfe20c17fd64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4a8e06d8406f822c9556fff4e3f3a492"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4a8e06d8406f822c9556fff4e3f3a492">fs_file_read</a> (const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, bool *eof)</td></tr>
+<tr class="memitem:ga88243c697e397cb6ed7a3f2f4f932996"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga88243c697e397cb6ed7a3f2f4f932996">fs_file_isEOF</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, bool *eof)</td></tr>
+<tr class="memdesc:ga88243c697e397cb6ed7a3f2f4f932996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the file indicator is at the end of the file.  <a href="#ga88243c697e397cb6ed7a3f2f4f932996">More...</a><br /></td></tr>
+<tr class="separator:ga88243c697e397cb6ed7a3f2f4f932996"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a8e06d8406f822c9556fff4e3f3a492"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4a8e06d8406f822c9556fff4e3f3a492">fs_file_read</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, bool *eof)</td></tr>
 <tr class="memdesc:ga4a8e06d8406f822c9556fff4e3f3a492"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file content into a given buffer.  <a href="#ga4a8e06d8406f822c9556fff4e3f3a492">More...</a><br /></td></tr>
 <tr class="separator:ga4a8e06d8406f822c9556fff4e3f3a492"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacd4b8ece47d9d98df382a056e97af451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gacd4b8ece47d9d98df382a056e97af451">fs_file_write</a> (const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *file, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
+<tr class="memitem:gacd4b8ece47d9d98df382a056e97af451"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gacd4b8ece47d9d98df382a056e97af451">fs_file_write</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
 <tr class="memdesc:gacd4b8ece47d9d98df382a056e97af451"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a file content into a given buffer.  <a href="#gacd4b8ece47d9d98df382a056e97af451">More...</a><br /></td></tr>
 <tr class="separator:gacd4b8ece47d9d98df382a056e97af451"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a1d0ee356abd5e5aa5cf752883da41d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2a1d0ee356abd5e5aa5cf752883da41d">fs_file_getElement</a> (<a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, <a class="el" href="structosapi__fs__element__info.html">t_element</a> *elem)</td></tr>
+<tr class="memdesc:ga2a1d0ee356abd5e5aa5cf752883da41d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an element descriptor from a file descriptor.  <a href="#ga2a1d0ee356abd5e5aa5cf752883da41d">More...</a><br /></td></tr>
+<tr class="separator:ga2a1d0ee356abd5e5aa5cf752883da41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa4842c0a9308f413ebce57c166b87477"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaa4842c0a9308f413ebce57c166b87477">fs_link_open</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__link.html">t_link</a> *link)</td></tr>
+<tr class="memdesc:gaa4842c0a9308f413ebce57c166b87477"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open a link.  <a href="#gaa4842c0a9308f413ebce57c166b87477">More...</a><br /></td></tr>
+<tr class="separator:gaa4842c0a9308f413ebce57c166b87477"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae1b9f7c2937b383a7d057607b8bae97c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae1b9f7c2937b383a7d057607b8bae97c">fs_link_close</a> (<a class="el" href="structosapi__fs__s__link.html">t_link</a> *link)</td></tr>
+<tr class="memdesc:gae1b9f7c2937b383a7d057607b8bae97c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close a link.  <a href="#gae1b9f7c2937b383a7d057607b8bae97c">More...</a><br /></td></tr>
+<tr class="separator:gae1b9f7c2937b383a7d057607b8bae97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf356f53514301a59a6842879623d771f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gaf356f53514301a59a6842879623d771f">fs_link_createSoft</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target)</td></tr>
+<tr class="memdesc:gaf356f53514301a59a6842879623d771f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new soft link.  <a href="#gaf356f53514301a59a6842879623d771f">More...</a><br /></td></tr>
+<tr class="separator:gaf356f53514301a59a6842879623d771f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga22460edd727342992dff73a3d931110f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga22460edd727342992dff73a3d931110f">fs_link_createHard</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target)</td></tr>
+<tr class="memdesc:ga22460edd727342992dff73a3d931110f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new hard link.  <a href="#ga22460edd727342992dff73a3d931110f">More...</a><br /></td></tr>
+<tr class="separator:ga22460edd727342992dff73a3d931110f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga72c58531076a863bb868303108171bc1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga72c58531076a863bb868303108171bc1">fs_link_getInfo</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, <a class="el" href="structosapi__fs__s__link.html">t_link</a> *link)</td></tr>
+<tr class="memdesc:ga72c58531076a863bb868303108171bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a link descriptor from a path name.  <a href="#ga72c58531076a863bb868303108171bc1">More...</a><br /></td></tr>
+<tr class="separator:ga72c58531076a863bb868303108171bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga55d004d7825dcb3e58a50c584307ee36"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga55d004d7825dcb3e58a50c584307ee36">fs_link_getElement</a> (<a class="el" href="structosapi__fs__s__link.html">t_link</a> *link, <a class="el" href="structosapi__fs__element__info.html">t_element</a> *elem)</td></tr>
+<tr class="memdesc:ga55d004d7825dcb3e58a50c584307ee36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain an element descriptor from a link descriptor.  <a href="#ga55d004d7825dcb3e58a50c584307ee36">More...</a><br /></td></tr>
+<tr class="separator:ga55d004d7825dcb3e58a50c584307ee36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The file system module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="gac9cc3d5ea4640131c5d9e81f8e8f6a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9cc3d5ea4640131c5d9e81f8e8f6a06">&#9670;&nbsp;</a></span>fs_dir_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_dir_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if directory descriptor closed. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga639e9fb33cdcc9a5778a61f92bc3f402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga639e9fb33cdcc9a5778a61f92bc3f402">&#9670;&nbsp;</a></span>fs_dir_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_dir_open </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Directory name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dir</td><td>- New directory descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if directory descriptor opened. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gae5129861d694398c40af7b307d37a36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae5129861d694398c40af7b307d37a36d">&#9670;&nbsp;</a></span>fs_directory_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_create </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new directory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Directory name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>- Directory creation options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name). </dd></dl>
+
+</div>
+</div>
+<a id="gae00e530d55f28dec19cc4159ee4c76b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae00e530d55f28dec19cc4159ee4c76b4">&#9670;&nbsp;</a></span>fs_directory_getElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_getElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>elem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain an element descriptor from a directory descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">elem</td><td>- Element descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="ga9850dfa963da8b8a32e77c8e0c592a77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9850dfa963da8b8a32e77c8e0c592a77">&#9670;&nbsp;</a></span>fs_directory_getElementList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_getElementList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>listSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_dir_entry *&#160;</td>
+          <td class="paramname"><em>dirList</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of directory elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">number</td><td>- Number of directory entries for which space was allocated </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">listSize</td><td>- Number of directory entries retrieved </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dirList</td><td>- The retrieved directory list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="gaebee1f618484006feb23c0d08b01a221"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaebee1f618484006feb23c0d08b01a221">&#9670;&nbsp;</a></span>fs_directory_getInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_getInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove a directory by file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if directory removed. An error condition otherwise. Obtain a directory descriptor </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Directory name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name). </dd></dl>
+
+</div>
+</div>
+<a id="ga2f259fe284673f240bc7ad04e74adccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f259fe284673f240bc7ad04e74adccb">&#9670;&nbsp;</a></span>fs_directory_getNumberElements()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_getNumberElements </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *&#160;</td>
+          <td class="paramname"><em>dir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>number</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the number of directory elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">dir</td><td>- Directory descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">number</td><td>- Number of directory elements </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
 <a id="ga58f566c677b843d1b9391ee416fde853"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga58f566c677b843d1b9391ee416fde853">&#9670;&nbsp;</a></span>fs_element_exists()</h2>
 
@@ -167,54 +509,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga5251df869d6b72f402d9907713494860"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5251df869d6b72f402d9907713494860">&#9670;&nbsp;</a></span>fs_element_getInfo()</h2>
+<a id="gab71726ed8bb238305b4f9e4333467075"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab71726ed8bb238305b4f9e4333467075">&#9670;&nbsp;</a></span>fs_element_getAtime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getInfo </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getAtime </td>
           <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
-          <td class="paramname"><em>info</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Does such element exists in the path. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Path name to the file system element </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>SUCCESS if it exists. An error condition otherwise. </dd></dl>
-
-</div>
-</div>
-<a id="ga83e6ce1e8e3216fe7fb270dfc8ff98e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83e6ce1e8e3216fe7fb270dfc8ff98e2">&#9670;&nbsp;</a></span>fs_elementInfo_getAtime()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getAtime </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -243,16 +547,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga974b32abb2d3f9d24cb048b832f37b3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga974b32abb2d3f9d24cb048b832f37b3e">&#9670;&nbsp;</a></span>fs_elementInfo_getCtime()</h2>
+<a id="ga8b89d9c699d44af120b45f9cb536bf19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b89d9c699d44af120b45f9cb536bf19">&#9670;&nbsp;</a></span>fs_element_getCtime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getCtime </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getCtime </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -281,16 +585,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga909d08239f2697c2d63ac69ceb103c7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga909d08239f2697c2d63ac69ceb103c7f">&#9670;&nbsp;</a></span>fs_elementInfo_getGID()</h2>
+<a id="ga701a1b631f1ed9bb8fa0ce274a494a28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga701a1b631f1ed9bb8fa0ce274a494a28">&#9670;&nbsp;</a></span>fs_element_getGID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getGID </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getGID </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -307,11 +611,57 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get element ownership: Group identifier. </p>
+<p>Obtain the group ID owning the element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- File system element information </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">gid</td><td>- Group ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">gid</td><td>- Current User ID of filesystem element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga701a1b631f1ed9bb8fa0ce274a494a28_cgraph.png" border="0" usemap="#group___f_s_ga701a1b631f1ed9bb8fa0ce274a494a28_cgraph" alt=""/></div>
+<map name="group___f_s_ga701a1b631f1ed9bb8fa0ce274a494a28_cgraph" id="group___f_s_ga701a1b631f1ed9bb8fa0ce274a494a28_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="188,5,283,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga981019f50ab749040885eaa9ca580f3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga981019f50ab749040885eaa9ca580f3a">&#9670;&nbsp;</a></span>fs_element_getInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the generic information about a file system element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Path name to the file system element </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
   </table>
   </dd>
 </dl>
@@ -319,16 +669,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga676c6dcc5d19e476d6f592cafdbe70bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga676c6dcc5d19e476d6f592cafdbe70bb">&#9670;&nbsp;</a></span>fs_elementInfo_getMtime()</h2>
+<a id="ga4cfd39772e522cdff9c97d33f82b2cba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4cfd39772e522cdff9c97d33f82b2cba">&#9670;&nbsp;</a></span>fs_element_getMtime()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getMtime </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getMtime </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -357,16 +707,100 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga53620f03baf81af81bface1e250ce993"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga53620f03baf81af81bface1e250ce993">&#9670;&nbsp;</a></span>fs_elementInfo_getSize()</h2>
+<a id="ga9d9dbf932a9700a86e51e5b499726fa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d9dbf932a9700a86e51e5b499726fa9">&#9670;&nbsp;</a></span>fs_element_getName()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getSize </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getName </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the user ID owning the element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">name</td><td>- The element name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga9d9dbf932a9700a86e51e5b499726fa9_cgraph.png" border="0" usemap="#group___f_s_ga9d9dbf932a9700a86e51e5b499726fa9_cgraph" alt=""/></div>
+<map name="group___f_s_ga9d9dbf932a9700a86e51e5b499726fa9_cgraph" id="group___f_s_ga9d9dbf932a9700a86e51e5b499726fa9_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="200,5,295,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gae2357a9bfa33fccabb7f7b85734baeb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2357a9bfa33fccabb7f7b85734baeb8">&#9670;&nbsp;</a></span>fs_element_getPermissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getPermissions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__element__permissions.html">t_fs_perm</a> *&#160;</td>
+          <td class="paramname"><em>perm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain the permissions of the element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">perm</td><td>- Current permissions of element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="ga8ab4cc9d3c5228ad6712716a42543cf7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8ab4cc9d3c5228ad6712716a42543cf7">&#9670;&nbsp;</a></span>fs_element_getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -392,19 +826,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if it exists. An error condition otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga8ab4cc9d3c5228ad6712716a42543cf7_cgraph.png" border="0" usemap="#group___f_s_ga8ab4cc9d3c5228ad6712716a42543cf7_cgraph" alt=""/></div>
+<map name="group___f_s_ga8ab4cc9d3c5228ad6712716a42543cf7_cgraph" id="group___f_s_ga8ab4cc9d3c5228ad6712716a42543cf7_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="191,5,285,32"/>
+</map>
+</div>
 
 </div>
 </div>
-<a id="ga7653eebfabb576dac404b12f8625195d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7653eebfabb576dac404b12f8625195d">&#9670;&nbsp;</a></span>fs_elementInfo_getType()</h2>
+<a id="gaa87cd6edf4e3971aa66a89086c671e45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa87cd6edf4e3971aa66a89086c671e45">&#9670;&nbsp;</a></span>fs_element_getType()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getType </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getType </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -433,16 +875,16 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gab07f181576008ab686b3bf0a6341ca99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab07f181576008ab686b3bf0a6341ca99">&#9670;&nbsp;</a></span>fs_elementInfo_getUID()</h2>
+<a id="ga288283f9466046044c55943a9efbcbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga288283f9466046044c55943a9efbcbfc">&#9670;&nbsp;</a></span>fs_element_getUID()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_elementInfo_getUID </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_getUID </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__element_info.html">t_fs_elementInfo</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
           <td class="paramname"><em>info</em>, </td>
         </tr>
         <tr>
@@ -459,15 +901,172 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get element ownership: User identifier. </p>
+<p>Obtain the user ID owning the element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- File system element information </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">uid</td><td>- User ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">info</td><td>- Structure containing the file system element information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">uid</td><td>- Current User ID of file system element </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>SUCCESS if it exists. An error condition otherwise. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga288283f9466046044c55943a9efbcbfc_cgraph.png" border="0" usemap="#group___f_s_ga288283f9466046044c55943a9efbcbfc_cgraph" alt=""/></div>
+<map name="group___f_s_ga288283f9466046044c55943a9efbcbfc_cgraph" id="group___f_s_ga288283f9466046044c55943a9efbcbfc_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="188,5,283,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga6589f6f50942c049daba5d9369967010"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6589f6f50942c049daba5d9369967010">&#9670;&nbsp;</a></span>fs_element_remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_remove </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Eliminate a an element from the file system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- File name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if removed. An error condition otherwise. </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga6589f6f50942c049daba5d9369967010_cgraph.png" border="0" usemap="#group___f_s_ga6589f6f50942c049daba5d9369967010_cgraph" alt=""/></div>
+<map name="group___f_s_ga6589f6f50942c049daba5d9369967010_cgraph" id="group___f_s_ga6589f6f50942c049daba5d9369967010_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="189,5,284,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga10c436a60f5bdf9ebcab111b52de7b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10c436a60f5bdf9ebcab111b52de7b37">&#9670;&nbsp;</a></span>fs_element_setGID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_setGID </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_gid&#160;</td>
+          <td class="paramname"><em>gid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the group owning the element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Pathname to element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">gid</td><td>- New Group ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="gaff22c82dcdd28ccbd796b06ec6c2d307"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaff22c82dcdd28ccbd796b06ec6c2d307">&#9670;&nbsp;</a></span>fs_element_setPermissions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_setPermissions </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__element__permissions.html">t_fs_perm</a> *&#160;</td>
+          <td class="paramname"><em>perm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the permissions of the the element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Pathname to element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">perm</td><td>- New set of element permissions </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="ga77f6ba234f4509775145de94a3b2a6e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77f6ba234f4509775145de94a3b2a6e5">&#9670;&nbsp;</a></span>fs_element_setUID()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_setUID </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_uid&#160;</td>
+          <td class="paramname"><em>uid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Change the user owning the element. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Pathname to element </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">uid</td><td>- New User ID </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
 
 </div>
 </div>
@@ -480,7 +1079,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
@@ -498,8 +1097,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga37d8d717d204a7e5cb6a62348514fc52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga37d8d717d204a7e5cb6a62348514fc52">&#9670;&nbsp;</a></span>fs_file_create()</h2>
+<a id="ga856b36842abc099dbd8b0fbf8cb3aad9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga856b36842abc099dbd8b0fbf8cb3aad9">&#9670;&nbsp;</a></span>fs_file_create()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -508,8 +1107,18 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_create </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em></td><td>)</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -518,10 +1127,49 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- File name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>- File creation options </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise (e.g. file already exists). </dd></dl>
+
+</div>
+</div>
+<a id="ga2a1d0ee356abd5e5aa5cf752883da41d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a1d0ee356abd5e5aa5cf752883da41d">&#9670;&nbsp;</a></span>fs_file_getElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_getElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>elem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain an element descriptor from a file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>- File descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">elem</td><td>- Element descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
 
 </div>
 </div>
@@ -534,14 +1182,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_getError </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Read a file content into a given buffer. </p>
+<p>Get the last file IO operation status. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>- File descriptor </td></tr>
@@ -549,6 +1197,82 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Last file operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga43e7c26d832a90dc33125d83a8abb758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga43e7c26d832a90dc33125d83a8abb758">&#9670;&nbsp;</a></span>fs_file_getInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_getInfo </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain a file descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- File name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">file</td><td>- File descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name). </dd></dl>
+
+</div>
+</div>
+<a id="ga88243c697e397cb6ed7a3f2f4f932996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88243c697e397cb6ed7a3f2f4f932996">&#9670;&nbsp;</a></span>fs_file_isEOF()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_isEOF </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>eof</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if the file indicator is at the end of the file. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>- File descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">eof</td><td>- Is the indicator positioned at the end of file? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
 
 </div>
 </div>
@@ -585,7 +1309,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>&#160;</td>
         </tr>
         <tr>
@@ -626,7 +1350,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>&#160;</td>
         </tr>
         <tr>
@@ -664,7 +1388,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>&#160;</td>
         </tr>
         <tr>
@@ -702,7 +1426,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>&#160;</td>
         </tr>
         <tr>
@@ -734,7 +1458,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_read </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -779,7 +1503,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_setPosition </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -824,7 +1548,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_write </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structosapi__s__fs__file.html">t_file</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *&#160;</td>
           <td class="paramname"><em>file</em>, </td>
         </tr>
         <tr>
@@ -850,6 +1574,223 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if written. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gae1b9f7c2937b383a7d057607b8bae97c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1b9f7c2937b383a7d057607b8bae97c">&#9670;&nbsp;</a></span>fs_link_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__link.html">t_link</a> *&#160;</td>
+          <td class="paramname"><em>link</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Close a link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">link</td><td>- Link descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if descriptor closed. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga22460edd727342992dff73a3d931110f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga22460edd727342992dff73a3d931110f">&#9670;&nbsp;</a></span>fs_link_createHard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_createHard </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new hard link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- New link name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Link target </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gaf356f53514301a59a6842879623d771f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf356f53514301a59a6842879623d771f">&#9670;&nbsp;</a></span>fs_link_createSoft()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_createSoft </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new soft link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- New link name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Link target </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if created. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga55d004d7825dcb3e58a50c584307ee36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55d004d7825dcb3e58a50c584307ee36">&#9670;&nbsp;</a></span>fs_link_getElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_getElement </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__link.html">t_link</a> *&#160;</td>
+          <td class="paramname"><em>link</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__element__info.html">t_element</a> *&#160;</td>
+          <td class="paramname"><em>elem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain an element descriptor from a link descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">link</td><td>- Link descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">elem</td><td>- Element descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status. </dd></dl>
+
+</div>
+</div>
+<a id="ga72c58531076a863bb868303108171bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga72c58531076a863bb868303108171bc1">&#9670;&nbsp;</a></span>fs_link_getInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_getInfo </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__link.html">t_link</a> *&#160;</td>
+          <td class="paramname"><em>link</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtain a link descriptor from a path name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Link name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">link</td><td>- Link descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if information about the link was obtained. Failure otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gaa4842c0a9308f413ebce57c166b87477"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4842c0a9308f413ebce57c166b87477">&#9670;&nbsp;</a></span>fs_link_open()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_open </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__fs__s__link.html">t_link</a> *&#160;</td>
+          <td class="paramname"><em>link</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Open a link. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>- Link name </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">link</td><td>- New link descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if link opened. An error condition otherwise. </dd></dl>
 
 </div>
 </div>

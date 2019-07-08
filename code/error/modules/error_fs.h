@@ -21,10 +21,10 @@
 
 // Include own error definitions
 
-#define error_fs_X(a, b, c) a b,
-enum fs_X {
+#define osapi_fs_error_X(a, b, c) a b,
+enum osapi_fs_e_error_X {
 	  #include "error/mappings/table_fs.h"
 };
-#undef error_fs_X
+#undef osapi_fs_error_X
 
 #endif /* OSAPI_ERROR_FS_H_ */

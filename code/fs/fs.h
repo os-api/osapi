@@ -27,9 +27,12 @@ extern "C" {
 #include "status/status_types.h"
 
 // Own declarations
-#include "fs/fs_elementInfo.h"
+#include "fs/fs_types.h"
+
+// Import own API headers
 #include "fs/fs_element.h"
 #include "fs/fs_file.h"
+// #include "fs/fs_dir.h"
 
 /// *****************************************************************************************
 ///

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.18</span>
+   &#160;<span id="projectnumber">0.24</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -113,6 +113,36 @@ Functions</h2></td></tr>
 <tr class="memitem:gaff083748285b5d82bba6ece8dd1dde30"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaff083748285b5d82bba6ece8dd1dde30">proc_module_supported</a> (void)</td></tr>
 <tr class="memdesc:gaff083748285b5d82bba6ece8dd1dde30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is PROC module supported in the platform.  <a href="#gaff083748285b5d82bba6ece8dd1dde30">More...</a><br /></td></tr>
 <tr class="separator:gaff083748285b5d82bba6ece8dd1dde30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d071b603ba85c4614cc685e55686984"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga3d071b603ba85c4614cc685e55686984">proc_buffer_allocate</a> (size_t bufsize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
+<tr class="memdesc:ga3d071b603ba85c4614cc685e55686984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the HEAP using a buffer.  <a href="#ga3d071b603ba85c4614cc685e55686984">More...</a><br /></td></tr>
+<tr class="separator:ga3d071b603ba85c4614cc685e55686984"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2c3444aae39ab94c9d4858dc3096dc66">proc_buffer_reAllocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> bufsize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
+<tr class="memdesc:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize buffer memory.  <a href="#ga2c3444aae39ab94c9d4858dc3096dc66">More...</a><br /></td></tr>
+<tr class="separator:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4afc1f6b8738d3116cbbedda225124ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga4afc1f6b8738d3116cbbedda225124ca">proc_buffer_deallocate</a> (<a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
+<tr class="memdesc:ga4afc1f6b8738d3116cbbedda225124ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate buffer memory.  <a href="#ga4afc1f6b8738d3116cbbedda225124ca">More...</a><br /></td></tr>
+<tr class="separator:ga4afc1f6b8738d3116cbbedda225124ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf73e85cfcc116053e7722d0e721b6ae5">proc_buffer_getCapacity</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer capacity.  <a href="#gaf73e85cfcc116053e7722d0e721b6ae5">More...</a><br /></td></tr>
+<tr class="separator:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad435d667e564c227cc267ba2e11ac126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad435d667e564c227cc267ba2e11ac126">proc_buffer_getData</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, void **data)</td></tr>
+<tr class="memdesc:gad435d667e564c227cc267ba2e11ac126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer (naked) memory address.  <a href="#gad435d667e564c227cc267ba2e11ac126">More...</a><br /></td></tr>
+<tr class="separator:gad435d667e564c227cc267ba2e11ac126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2ba1898f58e44f8ad4120d89b1d0fd2c">proc_buffer_getSize</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current buffer memory usage.  <a href="#ga2ba1898f58e44f8ad4120d89b1d0fd2c">More...</a><br /></td></tr>
+<tr class="separator:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga399fb6a0a4da084fa10904a8ca8dffb5">proc_buffer_setSize</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
+<tr class="memdesc:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current buffer memory usage.  <a href="#ga399fb6a0a4da084fa10904a8ca8dffb5">More...</a><br /></td></tr>
+<tr class="separator:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad7aee117225cce8b5c24c96021f726f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad7aee117225cce8b5c24c96021f726f8">proc_buffer_copy</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *source, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *target)</td></tr>
+<tr class="memdesc:gad7aee117225cce8b5c24c96021f726f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy two buffer memories Buffers cannot overlap in any way (this generates an error)  <a href="#gad7aee117225cce8b5c24c96021f726f8">More...</a><br /></td></tr>
+<tr class="separator:gad7aee117225cce8b5c24c96021f726f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga09df428c001bac88c0743a50b33fac53"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga09df428c001bac88c0743a50b33fac53">proc_buffer_copyFrom</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> targetSize, void *target)</td></tr>
+<tr class="memdesc:ga09df428c001bac88c0743a50b33fac53"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a buffer to a naked/raw memory location.  <a href="#ga09df428c001bac88c0743a50b33fac53">More...</a><br /></td></tr>
+<tr class="separator:ga09df428c001bac88c0743a50b33fac53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab44ba159a92c45a604f130a2336d9e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab44ba159a92c45a604f130a2336d9e10">proc_buffer_copyTo</a> (const void *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceSize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *target)</td></tr>
+<tr class="memdesc:gab44ba159a92c45a604f130a2336d9e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a naked/raw memory into a buffer memory.  <a href="#gab44ba159a92c45a604f130a2336d9e10">More...</a><br /></td></tr>
+<tr class="separator:gab44ba159a92c45a604f130a2336d9e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafc07f910a20dc520f1471b79ad3345e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3">proc_id_get</a> (t_pid *pid)</td></tr>
 <tr class="memdesc:gafc07f910a20dc520f1471b79ad3345e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process ID.  <a href="#gafc07f910a20dc520f1471b79ad3345e3">More...</a><br /></td></tr>
 <tr class="separator:gafc07f910a20dc520f1471b79ad3345e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -206,6 +236,66 @@ Functions</h2></td></tr>
 <tr class="memitem:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga101fe68ed915fb98ec3ac670e9ef403b">proc_library_getRelease</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *name, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> max, char *release)</td></tr>
 <tr class="memdesc:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Release information of the named library.  <a href="#ga101fe68ed915fb98ec3ac670e9ef403b">More...</a><br /></td></tr>
 <tr class="separator:ga101fe68ed915fb98ec3ac670e9ef403b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadf242f57feba6e315a89b32be559135f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gadf242f57feba6e315a89b32be559135f">proc_list_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> nItems, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> itemSize, <a class="el" href="structosapi__s__list.html">t_list</a> *list)</td></tr>
+<tr class="memdesc:gadf242f57feba6e315a89b32be559135f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the HEAP for a list of items The "list" is implemented as an array of bytes.  <a href="#gadf242f57feba6e315a89b32be559135f">More...</a><br /></td></tr>
+<tr class="separator:gadf242f57feba6e315a89b32be559135f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga800a80c202cac1eb70219fdb82204c42"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga800a80c202cac1eb70219fdb82204c42">proc_list_reAllocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> nItems, <a class="el" href="structosapi__s__list.html">t_list</a> *list)</td></tr>
+<tr class="memdesc:ga800a80c202cac1eb70219fdb82204c42"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize a list of items.  <a href="#ga800a80c202cac1eb70219fdb82204c42">More...</a><br /></td></tr>
+<tr class="separator:ga800a80c202cac1eb70219fdb82204c42"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61b8244917415bb3b761303f68126475"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga61b8244917415bb3b761303f68126475">proc_list_deallocate</a> (<a class="el" href="structosapi__s__list.html">t_list</a> *list)</td></tr>
+<tr class="memdesc:ga61b8244917415bb3b761303f68126475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate list.  <a href="#ga61b8244917415bb3b761303f68126475">More...</a><br /></td></tr>
+<tr class="separator:ga61b8244917415bb3b761303f68126475"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga48ebc55f22395b4798dfc2ce6ab98da8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga48ebc55f22395b4798dfc2ce6ab98da8">proc_list_getCapacity</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *list, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga48ebc55f22395b4798dfc2ce6ab98da8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list capacity in terms of allocated items.  <a href="#ga48ebc55f22395b4798dfc2ce6ab98da8">More...</a><br /></td></tr>
+<tr class="separator:ga48ebc55f22395b4798dfc2ce6ab98da8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32d6e1e89d9e5d464e5fdb845c961f67"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga32d6e1e89d9e5d464e5fdb845c961f67">proc_list_getRequiredCapacity</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *list, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga32d6e1e89d9e5d464e5fdb845c961f67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the required list capacity in terms of allocated items The required capacity is needed in case a list is not big enough to hold all elements.  <a href="#ga32d6e1e89d9e5d464e5fdb845c961f67">More...</a><br /></td></tr>
+<tr class="separator:ga32d6e1e89d9e5d464e5fdb845c961f67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab508a7033980a00a10dd2168db17fd5b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab508a7033980a00a10dd2168db17fd5b">proc_list_getData</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *list, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> item, void **data)</td></tr>
+<tr class="memdesc:gab508a7033980a00a10dd2168db17fd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the memory address of a given data item (of a list)  <a href="#gab508a7033980a00a10dd2168db17fd5b">More...</a><br /></td></tr>
+<tr class="separator:gab508a7033980a00a10dd2168db17fd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga465e00ae6954227f51882dc3e9a7bd29"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga465e00ae6954227f51882dc3e9a7bd29">proc_list_getSize</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *list, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga465e00ae6954227f51882dc3e9a7bd29"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current list usage in terms of number of items.  <a href="#ga465e00ae6954227f51882dc3e9a7bd29">More...</a><br /></td></tr>
+<tr class="separator:ga465e00ae6954227f51882dc3e9a7bd29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaec917d3da0585f275411aceaf2ca3bd4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaec917d3da0585f275411aceaf2ca3bd4">proc_list_setSize</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__list.html">t_list</a> *list)</td></tr>
+<tr class="memdesc:gaec917d3da0585f275411aceaf2ca3bd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current list usage.  <a href="#gaec917d3da0585f275411aceaf2ca3bd4">More...</a><br /></td></tr>
+<tr class="separator:gaec917d3da0585f275411aceaf2ca3bd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga041b761208328a147dbce1a43acd68b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga041b761208328a147dbce1a43acd68b7">proc_list_setRequiredCapacity</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__list.html">t_list</a> *list)</td></tr>
+<tr class="memdesc:ga041b761208328a147dbce1a43acd68b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current list required capacity The required capacity is needed in case a list is not big enough to hold all elements.  <a href="#ga041b761208328a147dbce1a43acd68b7">More...</a><br /></td></tr>
+<tr class="separator:ga041b761208328a147dbce1a43acd68b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad19f43959edfb92c1f42a0651d637359"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad19f43959edfb92c1f42a0651d637359">proc_list_copy</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *source, <a class="el" href="structosapi__s__list.html">t_list</a> *target)</td></tr>
+<tr class="memdesc:gad19f43959edfb92c1f42a0651d637359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy two list memories List cannot overlap in any way (this generates an error)  <a href="#gad19f43959edfb92c1f42a0651d637359">More...</a><br /></td></tr>
+<tr class="separator:gad19f43959edfb92c1f42a0651d637359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5c02ed86cc8b3b771eabd1e38ff949de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga5c02ed86cc8b3b771eabd1e38ff949de">proc_list_copyFrom</a> (const <a class="el" href="structosapi__s__list.html">t_list</a> *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceItem, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> targetSize, void *target)</td></tr>
+<tr class="memdesc:ga5c02ed86cc8b3b771eabd1e38ff949de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a list item to a naked/raw memory location.  <a href="#ga5c02ed86cc8b3b771eabd1e38ff949de">More...</a><br /></td></tr>
+<tr class="separator:ga5c02ed86cc8b3b771eabd1e38ff949de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafbfec2901ee397bb91b98efa6a46369b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafbfec2901ee397bb91b98efa6a46369b">proc_list_copyTo</a> (const void *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceSize, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> targetItem, <a class="el" href="structosapi__s__list.html">t_list</a> *target)</td></tr>
+<tr class="memdesc:gafbfec2901ee397bb91b98efa6a46369b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a naked/raw memory into a list item.  <a href="#gafbfec2901ee397bb91b98efa6a46369b">More...</a><br /></td></tr>
+<tr class="separator:gafbfec2901ee397bb91b98efa6a46369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f889f4502bccb882f2919d29d700f64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2f889f4502bccb882f2919d29d700f64">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__memory.html">t_memory</a> *mem)</td></tr>
+<tr class="memdesc:ga2f889f4502bccb882f2919d29d700f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga2f889f4502bccb882f2919d29d700f64">More...</a><br /></td></tr>
+<tr class="separator:ga2f889f4502bccb882f2919d29d700f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8688a622d9b93ec1b38d6d3fd58fc3b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga8688a622d9b93ec1b38d6d3fd58fc3b6">proc_memory_reAllocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> newSize, <a class="el" href="structosapi__s__memory.html">t_memory</a> *mem)</td></tr>
+<tr class="memdesc:ga8688a622d9b93ec1b38d6d3fd58fc3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the previously allocated memory in the process heap.  <a href="#ga8688a622d9b93ec1b38d6d3fd58fc3b6">More...</a><br /></td></tr>
+<tr class="separator:ga8688a622d9b93ec1b38d6d3fd58fc3b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91d14d47402dc99e2adb2ac94eca0285"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga91d14d47402dc99e2adb2ac94eca0285">proc_memory_deallocate</a> (<a class="el" href="structosapi__s__memory.html">t_memory</a> *location)</td></tr>
+<tr class="memdesc:ga91d14d47402dc99e2adb2ac94eca0285"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#ga91d14d47402dc99e2adb2ac94eca0285">More...</a><br /></td></tr>
+<tr class="separator:ga91d14d47402dc99e2adb2ac94eca0285"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a23ba15db8ad5eba40085b360494110"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga7a23ba15db8ad5eba40085b360494110">proc_memory_getCapacity</a> (const <a class="el" href="structosapi__s__memory.html">t_memory</a> *mem, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
+<tr class="memdesc:ga7a23ba15db8ad5eba40085b360494110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the total allocated memory size, in bytes.  <a href="#ga7a23ba15db8ad5eba40085b360494110">More...</a><br /></td></tr>
+<tr class="separator:ga7a23ba15db8ad5eba40085b360494110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga113203c0e6c8c159102df3690b7e5ef1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga113203c0e6c8c159102df3690b7e5ef1">proc_memory_getData</a> (const <a class="el" href="structosapi__s__memory.html">t_memory</a> *mem, void **data)</td></tr>
+<tr class="memdesc:ga113203c0e6c8c159102df3690b7e5ef1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the raw memory address for the given memory descriptor.  <a href="#ga113203c0e6c8c159102df3690b7e5ef1">More...</a><br /></td></tr>
+<tr class="separator:ga113203c0e6c8c159102df3690b7e5ef1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad9b69369b4e514050dffaae7eeba34c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad9b69369b4e514050dffaae7eeba34c2">proc_memory_copy</a> (const <a class="el" href="structosapi__s__memory.html">t_memory</a> *source, <a class="el" href="structosapi__s__memory.html">t_memory</a> *target)</td></tr>
+<tr class="memdesc:gad9b69369b4e514050dffaae7eeba34c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy between two memories using memory descriptors.  <a href="#gad9b69369b4e514050dffaae7eeba34c2">More...</a><br /></td></tr>
+<tr class="separator:gad9b69369b4e514050dffaae7eeba34c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab3e1358904d1e623ac6a16b8e9f7f5ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab3e1358904d1e623ac6a16b8e9f7f5ac">proc_memory_copyFrom</a> (const <a class="el" href="structosapi__s__memory.html">t_memory</a> *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> targetSize, void *target)</td></tr>
+<tr class="memdesc:gab3e1358904d1e623ac6a16b8e9f7f5ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a memory descriptor into a raw memory.  <a href="#gab3e1358904d1e623ac6a16b8e9f7f5ac">More...</a><br /></td></tr>
+<tr class="separator:gab3e1358904d1e623ac6a16b8e9f7f5ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga88b3d6f266432057794e45e0d843a12f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga88b3d6f266432057794e45e0d843a12f">proc_memory_copyTo</a> (const void *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceSize, <a class="el" href="structosapi__s__memory.html">t_memory</a> *target)</td></tr>
+<tr class="memdesc:ga88b3d6f266432057794e45e0d843a12f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a raw source memory into a memory descriptor.  <a href="#ga88b3d6f266432057794e45e0d843a12f">More...</a><br /></td></tr>
+<tr class="separator:ga88b3d6f266432057794e45e0d843a12f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga31c7cbe891a994d2396409e185e0f7f3">proc_data_clear</a> (t_proc *proc)</td></tr>
 <tr class="memdesc:ga31c7cbe891a994d2396409e185e0f7f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset process plan information to default system specific values.  <a href="#ga31c7cbe891a994d2396409e185e0f7f3">More...</a><br /></td></tr>
 <tr class="separator:ga31c7cbe891a994d2396409e185e0f7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,45 +332,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ga93d7e19947cc740bb29ca2a421dad851"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga93d7e19947cc740bb29ca2a421dad851">proc_data_getGroup</a> (t_proc *proc, t_gid *gid)</td></tr>
 <tr class="memdesc:ga93d7e19947cc740bb29ca2a421dad851"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the User ID from the process type.  <a href="#ga93d7e19947cc740bb29ca2a421dad851">More...</a><br /></td></tr>
 <tr class="separator:ga93d7e19947cc740bb29ca2a421dad851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga785e9b08db64c427e53e7b5088f7927b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga785e9b08db64c427e53e7b5088f7927b">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void **location)</td></tr>
-<tr class="memdesc:ga785e9b08db64c427e53e7b5088f7927b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga785e9b08db64c427e53e7b5088f7927b">More...</a><br /></td></tr>
-<tr class="separator:ga785e9b08db64c427e53e7b5088f7927b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1dc9234262321bada770a1c44876110c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga1dc9234262321bada770a1c44876110c">proc_memory_deallocate</a> (void *location)</td></tr>
-<tr class="memdesc:ga1dc9234262321bada770a1c44876110c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#ga1dc9234262321bada770a1c44876110c">More...</a><br /></td></tr>
-<tr class="separator:ga1dc9234262321bada770a1c44876110c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac4a656676ce292a2a455a0aafcf732b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gac4a656676ce292a2a455a0aafcf732b4">proc_memory_clear</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void *location)</td></tr>
-<tr class="memdesc:gac4a656676ce292a2a455a0aafcf732b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear contents of memory block.  <a href="#gac4a656676ce292a2a455a0aafcf732b4">More...</a><br /></td></tr>
-<tr class="separator:gac4a656676ce292a2a455a0aafcf732b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3d071b603ba85c4614cc685e55686984"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga3d071b603ba85c4614cc685e55686984">proc_buffer_allocate</a> (size_t bufsize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
-<tr class="memdesc:ga3d071b603ba85c4614cc685e55686984"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the HEAP using a buffer.  <a href="#ga3d071b603ba85c4614cc685e55686984">More...</a><br /></td></tr>
-<tr class="separator:ga3d071b603ba85c4614cc685e55686984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2c3444aae39ab94c9d4858dc3096dc66">proc_buffer_reAllocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> bufsize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
-<tr class="memdesc:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize buffer memory.  <a href="#ga2c3444aae39ab94c9d4858dc3096dc66">More...</a><br /></td></tr>
-<tr class="separator:ga2c3444aae39ab94c9d4858dc3096dc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4afc1f6b8738d3116cbbedda225124ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga4afc1f6b8738d3116cbbedda225124ca">proc_buffer_deallocate</a> (<a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
-<tr class="memdesc:ga4afc1f6b8738d3116cbbedda225124ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate buffer memory.  <a href="#ga4afc1f6b8738d3116cbbedda225124ca">More...</a><br /></td></tr>
-<tr class="separator:ga4afc1f6b8738d3116cbbedda225124ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf73e85cfcc116053e7722d0e721b6ae5">proc_buffer_getCapacity</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer capacity.  <a href="#gaf73e85cfcc116053e7722d0e721b6ae5">More...</a><br /></td></tr>
-<tr class="separator:gaf73e85cfcc116053e7722d0e721b6ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad435d667e564c227cc267ba2e11ac126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad435d667e564c227cc267ba2e11ac126">proc_buffer_getData</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, void **data)</td></tr>
-<tr class="memdesc:gad435d667e564c227cc267ba2e11ac126"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the buffer (naked) memory address.  <a href="#gad435d667e564c227cc267ba2e11ac126">More...</a><br /></td></tr>
-<tr class="separator:gad435d667e564c227cc267ba2e11ac126"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2ba1898f58e44f8ad4120d89b1d0fd2c">proc_buffer_getSize</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *size)</td></tr>
-<tr class="memdesc:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current buffer memory usage.  <a href="#ga2ba1898f58e44f8ad4120d89b1d0fd2c">More...</a><br /></td></tr>
-<tr class="separator:ga2ba1898f58e44f8ad4120d89b1d0fd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga399fb6a0a4da084fa10904a8ca8dffb5">proc_buffer_setSize</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *buffer)</td></tr>
-<tr class="memdesc:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current buffer memory usage.  <a href="#ga399fb6a0a4da084fa10904a8ca8dffb5">More...</a><br /></td></tr>
-<tr class="separator:ga399fb6a0a4da084fa10904a8ca8dffb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7aee117225cce8b5c24c96021f726f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gad7aee117225cce8b5c24c96021f726f8">proc_buffer_copy</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *source, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *target)</td></tr>
-<tr class="memdesc:gad7aee117225cce8b5c24c96021f726f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy two buffer memories Buffers cannot overlap in any way (this generates an error)  <a href="#gad7aee117225cce8b5c24c96021f726f8">More...</a><br /></td></tr>
-<tr class="separator:gad7aee117225cce8b5c24c96021f726f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafd6988cd8578bb3cc5290112a93a26ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafd6988cd8578bb3cc5290112a93a26ff">proc_buffer_copyFrom</a> (const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *source, void *target)</td></tr>
-<tr class="memdesc:gafd6988cd8578bb3cc5290112a93a26ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a buffer to a naked/raw memory location.  <a href="#gafd6988cd8578bb3cc5290112a93a26ff">More...</a><br /></td></tr>
-<tr class="separator:gafd6988cd8578bb3cc5290112a93a26ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab44ba159a92c45a604f130a2336d9e10"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab44ba159a92c45a604f130a2336d9e10">proc_buffer_copyTo</a> (const void *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceSize, <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *target)</td></tr>
-<tr class="memdesc:gab44ba159a92c45a604f130a2336d9e10"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a naked/raw memory into a buffer memory.  <a href="#gab44ba159a92c45a604f130a2336d9e10">More...</a><br /></td></tr>
-<tr class="separator:gab44ba159a92c45a604f130a2336d9e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga86fe2663b56cd27b21974815be7fba9d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga86fe2663b56cd27b21974815be7fba9d">proc_info_get</a> (t_pid pid, <a class="el" href="group___p_r_o_c.html#ga92277722dee15f73e8de63b1f4f9aaa0">t_proc_info</a> *procInfo)</td></tr>
 <tr class="memdesc:ga86fe2663b56cd27b21974815be7fba9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain raw process information This is the function call that allows clients to make a single call and obtain all raw process data.  <a href="#ga86fe2663b56cd27b21974815be7fba9d">More...</a><br /></td></tr>
 <tr class="separator:ga86fe2663b56cd27b21974815be7fba9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -407,8 +458,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gafd6988cd8578bb3cc5290112a93a26ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafd6988cd8578bb3cc5290112a93a26ff">&#9670;&nbsp;</a></span>proc_buffer_copyFrom()</h2>
+<a id="ga09df428c001bac88c0743a50b33fac53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga09df428c001bac88c0743a50b33fac53">&#9670;&nbsp;</a></span>proc_buffer_copyFrom()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -418,6 +469,12 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structosapi__s__buffer.html">t_buffer</a> *&#160;</td>
           <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>targetSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -437,6 +494,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Address of the source buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetSize</td><td>- Size of destination memory buffer </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Raw destination memory address </td></tr>
   </table>
   </dd>
@@ -2378,8 +2436,495 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga785e9b08db64c427e53e7b5088f7927b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga785e9b08db64c427e53e7b5088f7927b">&#9670;&nbsp;</a></span>proc_memory_allocate()</h2>
+<a id="gadf242f57feba6e315a89b32be559135f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadf242f57feba6e315a89b32be559135f">&#9670;&nbsp;</a></span>proc_list_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>nItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>itemSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate memory in the HEAP for a list of items The "list" is implemented as an array of bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nItems</td><td>- Number of items for the memory allocation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">itemSize</td><td>- Size, in bytes, of each item </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gad19f43959edfb92c1f42a0651d637359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad19f43959edfb92c1f42a0651d637359">&#9670;&nbsp;</a></span>proc_list_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy two list memories List cannot overlap in any way (this generates an error) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Address of the source list </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Address of the target/destination list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga5c02ed86cc8b3b771eabd1e38ff949de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c02ed86cc8b3b771eabd1e38ff949de">&#9670;&nbsp;</a></span>proc_list_copyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_copyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>sourceItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>targetSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy from a list item to a naked/raw memory location. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Address of the source buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceItem</td><td>- Item number to copy </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetSize</td><td>- Size of destination memory buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Raw destination memory address </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gafbfec2901ee397bb91b98efa6a46369b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafbfec2901ee397bb91b98efa6a46369b">&#9670;&nbsp;</a></span>proc_list_copyTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_copyTo </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>sourceSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>targetItem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy from a naked/raw memory into a list item. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Raw source memory address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceSize</td><td>- Size of the source memory content </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetItem</td><td>- Item number to copy into </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga61b8244917415bb3b761303f68126475"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga61b8244917415bb3b761303f68126475">&#9670;&nbsp;</a></span>proc_list_deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_deallocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deallocate list. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga48ebc55f22395b4798dfc2ce6ab98da8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48ebc55f22395b4798dfc2ce6ab98da8">&#9670;&nbsp;</a></span>proc_list_getCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_getCapacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the list capacity in terms of allocated items. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>- List capacity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gab508a7033980a00a10dd2168db17fd5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab508a7033980a00a10dd2168db17fd5b">&#9670;&nbsp;</a></span>proc_list_getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_getData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>item</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the memory address of a given data item (of a list) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">item</td><td>- Item number for which the address is needed </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>- Address of the managed naked/raw HEAP memory </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga32d6e1e89d9e5d464e5fdb845c961f67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32d6e1e89d9e5d464e5fdb845c961f67">&#9670;&nbsp;</a></span>proc_list_getRequiredCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_getRequiredCapacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the required list capacity in terms of allocated items The required capacity is needed in case a list is not big enough to hold all elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>- List required capacity </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga465e00ae6954227f51882dc3e9a7bd29"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga465e00ae6954227f51882dc3e9a7bd29">&#9670;&nbsp;</a></span>proc_list_getSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_getSize </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current list usage in terms of number of items. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>- List usage size </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga800a80c202cac1eb70219fdb82204c42"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga800a80c202cac1eb70219fdb82204c42">&#9670;&nbsp;</a></span>proc_list_reAllocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_reAllocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>nItems</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize a list of items. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">nItems</td><td>- New number of items </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga041b761208328a147dbce1a43acd68b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga041b761208328a147dbce1a43acd68b7">&#9670;&nbsp;</a></span>proc_list_setRequiredCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_setRequiredCapacity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the current list required capacity The required capacity is needed in case a list is not big enough to hold all elements. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- New list required capacity </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaec917d3da0585f275411aceaf2ca3bd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec917d3da0585f275411aceaf2ca3bd4">&#9670;&nbsp;</a></span>proc_list_setSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_list_setSize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__list.html">t_list</a> *&#160;</td>
+          <td class="paramname"><em>list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the current list usage. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- New list usage size </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">list</td><td>- List descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga2f889f4502bccb882f2919d29d700f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f889f4502bccb882f2919d29d700f64">&#9670;&nbsp;</a></span>proc_memory_allocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2393,8 +2938,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void **&#160;</td>
-          <td class="paramname"><em>location</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2407,40 +2952,32 @@ Here is the caller graph for this function:</div>
 <p>Allocate memory in the process heap. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- Required memory size </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">location</td><td>- Address of the new memory block </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- Required memory size in bytes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mem</td><td>- Memory descriptor </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___p_r_o_c_ga785e9b08db64c427e53e7b5088f7927b_cgraph.png" border="0" usemap="#group___p_r_o_c_ga785e9b08db64c427e53e7b5088f7927b_cgraph" alt=""/></div>
-<map name="group___p_r_o_c_ga785e9b08db64c427e53e7b5088f7927b_cgraph" id="group___p_r_o_c_ga785e9b08db64c427e53e7b5088f7927b_cgraph">
-<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="207,5,301,32"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="gac4a656676ce292a2a455a0aafcf732b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac4a656676ce292a2a455a0aafcf732b4">&#9670;&nbsp;</a></span>proc_memory_clear()</h2>
+<a id="gad9b69369b4e514050dffaae7eeba34c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad9b69369b4e514050dffaae7eeba34c2">&#9670;&nbsp;</a></span>proc_memory_copy()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_clear </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_copy </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>location</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2450,28 +2987,110 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Clear contents of memory block. </p>
+<p>Copy between two memories using memory descriptors. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- How many bytes have to be cleared </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">location</td><td>- Starting address of memory to clear </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Memory to be copied </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Destination of the copy </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___p_r_o_c_gac4a656676ce292a2a455a0aafcf732b4_cgraph.png" border="0" usemap="#group___p_r_o_c_gac4a656676ce292a2a455a0aafcf732b4_cgraph" alt=""/></div>
-<map name="group___p_r_o_c_gac4a656676ce292a2a455a0aafcf732b4_cgraph" id="group___p_r_o_c_gac4a656676ce292a2a455a0aafcf732b4_cgraph">
-<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="189,5,284,32"/>
-</map>
-</div>
 
 </div>
 </div>
-<a id="ga1dc9234262321bada770a1c44876110c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1dc9234262321bada770a1c44876110c">&#9670;&nbsp;</a></span>proc_memory_deallocate()</h2>
+<a id="gab3e1358904d1e623ac6a16b8e9f7f5ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3e1358904d1e623ac6a16b8e9f7f5ac">&#9670;&nbsp;</a></span>proc_memory_copyFrom()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_copyFrom </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>targetSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy from a memory descriptor into a raw memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Memory to be copied </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">targetSize</td><td>- Size of the allocated memory destination </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Destination of the copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga88b3d6f266432057794e45e0d843a12f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga88b3d6f266432057794e45e0d843a12f">&#9670;&nbsp;</a></span>proc_memory_copyTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_copyTo </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>sourceSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy from a raw source memory into a memory descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Raw memory to be copied </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sourceSize</td><td>- Size of the allocated source memory </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Destination of the copy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga91d14d47402dc99e2adb2ac94eca0285"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91d14d47402dc99e2adb2ac94eca0285">&#9670;&nbsp;</a></span>proc_memory_deallocate()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2479,7 +3098,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_deallocate </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
           <td class="paramname"><em>location</em></td><td>)</td>
           <td></td>
         </tr>
@@ -2494,14 +3113,120 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___p_r_o_c_ga1dc9234262321bada770a1c44876110c_cgraph.png" border="0" usemap="#group___p_r_o_c_ga1dc9234262321bada770a1c44876110c_cgraph" alt=""/></div>
-<map name="group___p_r_o_c_ga1dc9234262321bada770a1c44876110c_cgraph" id="group___p_r_o_c_ga1dc9234262321bada770a1c44876110c_cgraph">
-<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="220,5,315,32"/>
-</map>
+
 </div>
+</div>
+<a id="ga7a23ba15db8ad5eba40085b360494110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a23ba15db8ad5eba40085b360494110">&#9670;&nbsp;</a></span>proc_memory_getCapacity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_getCapacity </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> *&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the total allocated memory size, in bytes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mem</td><td>- Memory descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">size</td><td>- Currently allocated memory size in bytes for the provided descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga113203c0e6c8c159102df3690b7e5ef1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga113203c0e6c8c159102df3690b7e5ef1">&#9670;&nbsp;</a></span>proc_memory_getData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_getData </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void **&#160;</td>
+          <td class="paramname"><em>data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the raw memory address for the given memory descriptor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mem</td><td>- Memory descriptor </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">data</td><td>- Raw memory address (data contents) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga8688a622d9b93ec1b38d6d3fd58fc3b6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8688a622d9b93ec1b38d6d3fd58fc3b6">&#9670;&nbsp;</a></span>proc_memory_reAllocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_memory_reAllocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>newSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__memory.html">t_memory</a> *&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize the previously allocated memory in the process heap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newSize</td><td>- New memory size in bytes </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mem</td><td>- Memory descriptor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
 
 </div>
 </div>

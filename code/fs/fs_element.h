@@ -48,15 +48,95 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 
+/// @brief Eliminate a an element from the file system
+/// @param [in] path     - File name
+/// @return SUCCESS if removed. An error condition otherwise.
+t_status fs_element_remove	( const char * path );
+
 /// @brief Does such element exists in the path
 /// @return SUCCESS if it exists. An error condition otherwise.
 t_status fs_element_exists	( const char * path );
 
-/// @brief Does such element exists in the path
+/// @brief Change the user owning the element
+/// @param [in] path	- Pathname to element
+/// @param [in] uid	- New User ID
+/// @return Operation status.
+t_status fs_element_setUID 	( const char * path, t_uid uid );
+
+/// @brief Change the group owning the element
+/// @param [in] path	- Pathname to element
+/// @param [in] gid	- New Group ID
+/// @return Operation status.
+t_status fs_element_setGID 	( const char * path, t_gid gid );
+
+/// @brief Change the permissions of the the element
+/// @param [in] path	- Pathname to element
+/// @param [in] perm	- New set of element permissions
+/// @return Operation status.
+t_status fs_element_setPermissions ( const char * path, t_fs_perm * perm );
+
+/// @brief Obtain the generic information about a file system element
 /// @param [in] path - Path name to the file system element
 /// @param [out] info - Structure containing the file system element information
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getInfo	( const char * path, t_fs_elementInfo * info );
+t_status fs_element_getInfo	( const char * path, t_element * info );
+
+/// @brief Get type of element
+/// @param [in] info - File system element information
+/// @param [out] type - Type of element
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getType	( t_element * info, int * type 		);
+
+/// @brief Obtain the user ID owning the element
+/// @param [in] info - Structure containing the file system element information
+/// @param [out] name - The element name
+/// @return Operation status.
+t_status fs_element_getName 	( t_element * info, char ** name );
+
+/// @brief Obtain the user ID owning the element
+/// @param [in] info - Structure containing the file system element information
+/// @param [out] uid  - Current User ID of file system element
+/// @return Operation status.
+t_status fs_element_getUID 	( t_element * info, t_uid * uid );
+
+/// @brief Obtain the group ID owning the element
+/// @param [in] info - Structure containing the file system element information
+/// @param [out] gid  - Current User ID of filesystem element
+/// @return Operation status.
+t_status fs_element_getGID 	( t_element * info, t_gid * gid );
+
+
+/// @brief Get element access time
+/// @param [in] info - File system element information
+/// @param [out] atime - Last element access time
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getAtime	( t_element * info, t_time * atime 	);
+
+/// @brief Get element creation time
+/// @param [in] info - File system element information
+/// @param [out] ctime - Element creation time
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getCtime	( t_element * info, t_time * ctime 	);
+
+/// @brief Get element modification time
+/// @param [in] info - File system element information
+/// @param [out] mtime - Last element modification time
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getMtime	( t_element * info, t_time * mtime 	);
+
+/// @brief Get size of element in the file system
+/// @param [in] info - File system element information
+/// @param [out] size - Size of element
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getSize		( t_element * info, t_size * size	);
+
+/// @brief Obtain the permissions of the element
+/// @param [in]  info - Structure containing the file system element information
+/// @param [out] perm - Current permissions of element
+/// @return Operation status.
+t_status fs_element_getPermissions ( t_element * info, t_fs_perm * perm );
+
+
 
 #pragma GCC visibility pop			// End of public interface
 

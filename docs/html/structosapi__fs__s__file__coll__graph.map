@@ -1,0 +1,5 @@
+<map id="osapi_fs_s_file" name="osapi_fs_s_file">
+<area shape="rect" id="node2" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="5,109,157,136"/>
+<area shape="rect" id="node3" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="12,5,151,47"/>
+<area shape="rect" id="node4" href="$structosapi__fs__s__file__info.html" title="Structure containing the C/POSIX file pointer/handler information. " alt="" coords="182,109,319,136"/>
+</map>

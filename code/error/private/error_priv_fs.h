@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_fs_X(a, b, c) [a]=c,
+#define osapi_fs_error_X(a, b, c) [a]=c,
 
-static const char * fs_errors[] =
+static const char * osapi_fs_errors[] =
 {
   #include "error/mappings/table_fs.h"
 };
 
-#undef error_fs_X
+#undef osapi_fs_error_X
 
 #endif /* OSAPI_ERROR_PRIV_FS_H_ */

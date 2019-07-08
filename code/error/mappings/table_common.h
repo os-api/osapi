@@ -17,5 +17,7 @@ error_common_X( osapi_common_e_canary, ,			"Memory unallocated/corrupted"				)
 error_common_X( osapi_common_e_alloc, ,				"Memory already allocated (potential memory leak)"	)
 error_common_X( osapi_common_e_dealloc, ,			"Memory not allocated"					)
 error_common_X( osapi_common_e_memoverlap, ,			"Memory overlap"					)
+error_common_X( osapi_common_e_notEnoughMemory, ,		"Insufficient memory"					)
+error_common_X( osapi_common_e_notEnoughCapacity, ,		"Insufficient capacity"					)
 
 error_common_X( osapi_common_e_max, ,				OSAPI_ERROR_STRING_UNKNOWN				)

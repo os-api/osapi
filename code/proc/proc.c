@@ -38,57 +38,47 @@
 //
 // *****************************************************************************************
 
-t_status proc_memory_allocate( t_size size, void ** p_memory )
+t_status proc_memory_allocate( t_size size, t_memory * p_memory )
 {
- t_status	st;
-
- status_reset( & st );
-
- if( size <= (t_size) 0 || p_memory == (void **) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
- else
-   {
-     *p_memory = malloc( (size_t) size );
-     if( *p_memory == NULL )
-         status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
-   }
-
- return st;
+ return common_memory_allocate( size, p_memory );
 }
 
-t_status proc_memory_deallocate( void * p_memory )
+t_status proc_memory_reAllocate( t_size size, t_memory * p_memory )
 {
- t_status	st;
+  return common_memory_reAllocate( size, p_memory );
+}
 
- status_reset( & st );
+t_status proc_memory_deallocate( t_memory * p_memory )
+{
+ return common_memory_deallocate( p_memory );
+}
 
- if( p_memory == NULL )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
- else
-     free( p_memory );
+t_status proc_memory_getCapacity( const t_memory * p_memory, t_size * p_size )
+{
+  return common_memory_getCapacity( p_memory, p_size );
+}
 
- return st;
+t_status proc_memory_getData( const t_memory * p_memory, void ** p_data )
+{
+  return common_memory_getData( p_memory, p_data );
+}
+
+t_status proc_memory_copy( const t_memory * p_source, t_memory * p_target )
+{
+ return common_memory_copy( p_source, p_target );
+}
+
+t_status proc_memory_copyFrom( const t_memory * p_source, t_size targetSize, void * p_target )
+{
+ return common_memory_copyFrom( p_source, targetSize, p_target );
+}
+
+t_status proc_memory_copyTo( const void * p_source, t_size sourceSize, t_memory * p_target )
+{
+ return common_memory_copyTo( p_source, sourceSize, p_target );
 }
 
 
-t_status proc_memory_clear( t_size size, void * p_memory )
-{
- t_status	st;
- void	*	p_m;
-
- status_reset( & st );
-
- if( size <= (t_size) 0 || p_memory == (void **) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
- else
-   {
-     p_m = memset( p_memory, (int) '\0', (size_t) size );
-     if( p_m != p_memory )		// Shouldn't happen according to the specification
-         status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
-   }
-
- return st;
-}
 
 // Buffer related
 
@@ -127,17 +117,14 @@ t_status proc_buffer_setSize( t_size size, t_buffer * p_buffer )
   return common_buffer_setSize( size, p_buffer );
 }
 
-
-
-
 t_status proc_buffer_copy( const t_buffer * p_source, t_buffer * p_target )
 {
  return common_buffer_copy( p_source, p_target );
 }
 
-t_status proc_buffer_copyFrom( const t_buffer * p_source, void * p_target )
+t_status proc_buffer_copyFrom( const t_buffer * p_source, t_size targetSize, void * p_target )
 {
- return common_buffer_copyFrom( p_source, p_target );
+ return common_buffer_copyFrom( p_source, targetSize, p_target );
 }
 
 t_status proc_buffer_copyTo( const void * p_source, t_size sourceSize, t_buffer * p_target )
@@ -145,6 +132,68 @@ t_status proc_buffer_copyTo( const void * p_source, t_size sourceSize, t_buffer 
  return common_buffer_copyTo( p_source, sourceSize, p_target );
 }
 
+
+// List related
+
+t_status proc_list_allocate( t_size nItems, t_size itemSize, t_list * list )
+{
+  return common_list_allocate( nItems, itemSize, list );
+}
+
+t_status proc_list_reAllocate( t_size nItems, t_list * list )
+{
+  return common_list_reAllocate( nItems, list );
+}
+
+t_status proc_list_deallocate( t_list * list )
+{
+  return common_list_deallocate( list );
+}
+
+t_status proc_list_getCapacity( const t_list * list, t_size * size )
+{
+  return common_list_getCapacity( list, size );
+}
+
+t_status proc_list_getRequiredCapacity( const t_list * list, t_size * size )
+{
+  return common_list_getRequiredCapacity( list, size );
+}
+
+t_status proc_list_getData( const t_list * list, t_size item, void **  data )
+{
+  return common_list_getData( list, item, data );
+}
+
+t_status proc_list_getSize( const t_list * list, t_size * size )
+{
+  return common_list_getSize( list, size );
+}
+
+t_status proc_list_setSize( t_size size, t_list * list )
+{
+  return common_list_setSize( size, list );
+}
+
+t_status proc_list_setRequiredCapacity( t_size size, t_list * list )
+{
+  return common_list_setRequiredCapacity( size, list );
+}
+
+t_status proc_list_copy( const t_list * source, t_list * target )
+{
+ return common_list_copy( source, target );
+}
+
+t_status proc_list_copyFrom( const t_list * p_source, t_size sourceItem, t_size targetSize, void * p_target )
+{
+ return common_list_copyFrom( p_source, sourceItem, targetSize, p_target );
+}
+
+t_status proc_list_copyTo( const void * p_source, t_size sourceSize, t_size targetItem, t_list * p_target )
+{
+ return common_list_copyTo( p_source, sourceSize, targetItem, p_target );
+}
 
 
 
