@@ -19,7 +19,7 @@
 // Only relevant is OS is Linux
 #ifdef OS_LINUX
 
-#include <log/posix/log_posix.h>
+#include "log/posix/log_posix.h"
 
 #endif	// End of OS Linux
 

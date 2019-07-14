@@ -73,7 +73,7 @@ t_status proc_library_load( char * pathname, char * options[], t_library * p_lib
 {
  int	opt = 0;
 
- opt = common_options_get( lib_options, options );
+ opt = (int) common_options_get( lib_options, options );
 
  return posix_library_load( pathname, opt, p_library );
 }

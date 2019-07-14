@@ -31,7 +31,7 @@
 // Own declarations
 #include "common/common_defs.h"
 #include "common/common_memory.h"
-
+#include "common/common_helper.h"
 
 // *****************************************************************************************
 //

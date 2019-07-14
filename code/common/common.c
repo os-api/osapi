@@ -17,6 +17,7 @@
 #include "general/general_baseline.h"
 
 // Include standard headers
+
 #include <strings.h>
 #include <ctype.h>
 #include <string.h>
@@ -39,9 +40,9 @@
 //
 // *****************************************************************************************
 
-int common_options_get( const t_option * moduleOptions, char * providedOptions[] )
+int64_t common_options_get( const t_option * moduleOptions, char * providedOptions[] )
 {
- int	opt = 0;
+ int64_t	opt = (int64_t) 0;
 
  if( moduleOptions != NULL && providedOptions != NULL )
      for( int i=0; providedOptions[ i ] != OSAPI_NULL_CHAR_POINTER; i++  )
@@ -52,7 +53,7 @@ int common_options_get( const t_option * moduleOptions, char * providedOptions[]
 	       if( strcasecmp( providedOptions[ i ], moduleOptions[ j ].name ) == 0 )
 		 {
 		   // Match found: Add option to the list (int/opt)
-		   opt |= moduleOptions[ j ].value;
+		   opt |= (int64_t) moduleOptions[ j ].value;
 		   break;
 		 }
 	      }

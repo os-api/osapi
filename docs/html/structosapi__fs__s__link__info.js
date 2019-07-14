@@ -1,5 +1,5 @@
 var structosapi__fs__s__link__info =
 [
-    [ "handle", "structosapi__fs__s__link__info.html#a5a54375a9c0e86dd67a90385655dd05b", null ],
-    [ "p_target", "structosapi__fs__s__link__info.html#a5253ad4cd2569363e6fc1466c975c9eb", null ]
+    [ "state", "structosapi__fs__s__link__info.html#a170e85fa233c9dd24294e8ff8a2819ea", null ],
+    [ "target", "structosapi__fs__s__link__info.html#a8d6115f7418350f0b8dfe013cfcbd1d8", null ]
 ];

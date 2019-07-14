@@ -18,13 +18,10 @@
 
 // Standard C headers
 
-
 // General OSAPI headers
-#include "common/common_types.h"
 
 // Import own elements
 #include "fs/fs_platform.h"
-#include "fs/type/fs_type_ostate.h"
 #include "fs/type/fs_type_elementInfo.h"
 
 // *****************************************************************************************

@@ -14,14 +14,6 @@
 //
 // *****************************************************************************************
 
-// Force baseline before system headers
-#include "general/general_baseline.h"
-
-// System includes
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
 // Generic OSAPI includes
 #include "general/general.h"
 #include "general/general_protocol.h"
@@ -30,13 +22,30 @@
 
 // Own declarations
 #include "fs/fs_element.h"
-
+#include "fs/fs_helper.h"
 
 // *****************************************************************************************
 //
 // Section: Function definition
 //
 // *****************************************************************************************
+
+t_status fs_element_close( t_element * p_element )
+{
+  t_status		st;
+
+  status_reset( & st );
+
+  if( p_element == NULL )
+      status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );
+  else
+    {
+      p_element->fullpath[ 0 ] = '\0';		// clear element path name
+      p_element->state = osapi_fs_ostate_closed;
+    }
+
+  return st;
+}
 
 
 t_status fs_element_remove( const char * p_path )
@@ -82,7 +91,7 @@ t_status fs_element_getName( t_element * p_info, char ** p_name )
   if( p_info == NULL || p_name == NULL )
       status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );
   else
-      *p_name = p_info->name;
+      *p_name = &p_info->fullpath[ 0 ];
 
   return st;
 }

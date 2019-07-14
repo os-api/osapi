@@ -7,6 +7,7 @@ var dir_3d950ed1f63e41c7a90cfda56c059d6e =
     [ "common_buffer.h", "common__buffer_8h_source.html", null ],
     [ "common_defs.h", "common__defs_8h_source.html", null ],
     [ "common_group.h", "common__group_8h_source.html", null ],
+    [ "common_helper.h", "common__helper_8h_source.html", null ],
     [ "common_list.h", "common__list_8h_source.html", null ],
     [ "common_memory.h", "common__memory_8h_source.html", null ],
     [ "common_platform.h", "common__platform_8h_source.html", null ],

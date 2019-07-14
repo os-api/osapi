@@ -62,20 +62,21 @@ t_status fs_link_close			( t_link * link );
 /// @brief Create a new soft link
 /// @param [in] source  - New link name
 /// @param [in] target	- Link target
+/// @param [out] link 	- New link descriptor
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createSoft		( const t_char * source, const t_char * target );
+t_status fs_link_createSoft		( const t_char * source, const t_char * target, t_link * link );
 
 /// @brief Create a new hard link
 /// @param [in] source  - New link name
 /// @param [in] target	- Link target
+/// @param [out] link 	- New link descriptor
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createHard		( const t_char * source, const t_char * target );
+t_status fs_link_createHard		( const t_char * source, const t_char * target, t_link * link );
 
 /// @brief Obtain a link descriptor from a path name
-/// @param [in] path    - Link name
 /// @param [out] link	- Link descriptor
 /// @return SUCCESS if information about the link was obtained. Failure otherwise.
-t_status fs_link_getInfo		( const t_char * path, t_link * link );
+t_status fs_link_updateInfo		( t_link * link );
 
 /// @brief Obtain an element descriptor from a link descriptor
 /// @param [in] link	- Link descriptor

@@ -60,8 +60,8 @@ t_status log_system_open( const char * source, const char * target, const char *
   targets[1] = NULL;
 
   log->ident    = source;
-  log->facility = common_options_get( log_facility, (char **) targets );
-  log->option   = common_options_get( log_options,  (char **) options );
+  log->facility = (int) common_options_get( log_facility, (char **) targets );
+  log->option   = (int) common_options_get( log_options,  (char **) options );
 
   openlog( log->ident, log->option, log->facility );
 

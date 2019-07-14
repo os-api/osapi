@@ -19,8 +19,8 @@
 /* Import OS specific definitions */
 
 #ifdef OS_LINUX
-	#include "fs/posix/fs_posix_types.h"
-	//#include "fs/linux/fs_linux_types.h"
+      #include "fs/linux/fs_linux_types.h"
+      #include "fs/posix/type/fs_posix_types.h"
 #endif
 
 

@@ -19,12 +19,9 @@
 // Standard C headers
 
 // General OSAPI headers
-#include "common/common_types.h"
 
 // Import own headers
 #include "fs/fs_platform.h"
-#include "fs/type/fs_type_elementInfo.h"
-
 
 // *****************************************************************************************
 //
@@ -36,9 +33,8 @@
 /// Structure that holds all file system element information
 struct osapi_fs_s_link
 {
-  t_fs_ostate			state;	///< Current directory state
-  t_fs_elementInfo		info;	///< General element information
-  t_fs_linkInfo			data;	///< Link element specific information
+  t_fs_elementInfo		element;	///< General element information
+  t_fs_linkInfo			link;		///< Link element specific information
 };
 
 typedef struct osapi_fs_s_link			t_link;

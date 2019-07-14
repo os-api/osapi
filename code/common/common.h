@@ -23,6 +23,7 @@
 
 // Include standard headers
 #include <stdbool.h>
+#include <stdint.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -46,7 +47,7 @@
 #pragma GCC visibility push(default)		// Start of internal interface
 
 // Utility functions
-int		common_options_get		( const t_option * moduleOptions, char * providedOptions[]				);
+int64_t		common_options_get		( const t_option * moduleOptions, char * providedOptions[]				);
 
 /// @brief Is the string composed of only digits (0-9)?
 /// @param [in] str - The string to verify

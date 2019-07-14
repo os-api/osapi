@@ -19,8 +19,13 @@
 //
 // *****************************************************************************************
 
+// Force baseline before system headers
+#include "general/general_baseline.h"
+
+
 // Import system headers
 #include <sys/types.h>
+#include <limits.h>
 
 
 // *****************************************************************************************

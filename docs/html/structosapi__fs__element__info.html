@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.24</span>
+   &#160;<span id="projectnumber">0.25</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -82,10 +82,10 @@ Collaboration diagram for osapi_fs_element_info:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Data Fields</h2></td></tr>
-<tr class="memitem:a61fc26fa9cb5b618bc32685f86db7977"><td class="memItemLeft" align="right" valign="top"><a id="a61fc26fa9cb5b618bc32685f86db7977"></a>
-<a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__fs__element__info.html#a61fc26fa9cb5b618bc32685f86db7977">name</a></td></tr>
-<tr class="memdesc:a61fc26fa9cb5b618bc32685f86db7977"><td class="mdescLeft">&#160;</td><td class="mdescRight">The path name. <br /></td></tr>
-<tr class="separator:a61fc26fa9cb5b618bc32685f86db7977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a170e85fa233c9dd24294e8ff8a2819ea"><td class="memItemLeft" align="right" valign="top"><a id="a170e85fa233c9dd24294e8ff8a2819ea"></a>
+t_fs_ostate&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__fs__element__info.html#a170e85fa233c9dd24294e8ff8a2819ea">state</a></td></tr>
+<tr class="memdesc:a170e85fa233c9dd24294e8ff8a2819ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element state (closed/open) <br /></td></tr>
+<tr class="separator:a170e85fa233c9dd24294e8ff8a2819ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:add763dca1a2ce9970774c5562871c81d"><td class="memItemLeft" align="right" valign="top"><a id="add763dca1a2ce9970774c5562871c81d"></a>
 t_fs_eType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__fs__element__info.html#add763dca1a2ce9970774c5562871c81d">type</a></td></tr>
 <tr class="memdesc:add763dca1a2ce9970774c5562871c81d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Element type: File, directory, etc. <br /></td></tr>
@@ -118,6 +118,10 @@ t_time&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="st
 <a class="el" href="structosapi__fs__s__element__permissions.html">t_fs_perm</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__fs__element__info.html#ac9571adfd8d1bfe1b19f0bfbdc628a18">perm</a></td></tr>
 <tr class="memdesc:ac9571adfd8d1bfe1b19f0bfbdc628a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permission set. <br /></td></tr>
 <tr class="separator:ac9571adfd8d1bfe1b19f0bfbdc628a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d3e14b31faafddb3aea7fe72e2eaba"><td class="memItemLeft" align="right" valign="top"><a id="ad7d3e14b31faafddb3aea7fe72e2eaba"></a>
+<a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structosapi__fs__element__info.html#ad7d3e14b31faafddb3aea7fe72e2eaba">fullpath</a> [OSAPI_PATH_MAX]</td></tr>
+<tr class="memdesc:ad7d3e14b31faafddb3aea7fe72e2eaba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The full and real path name to the element. <br /></td></tr>
+<tr class="separator:ad7d3e14b31faafddb3aea7fe72e2eaba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Structure containing the file system element generic information. </p>

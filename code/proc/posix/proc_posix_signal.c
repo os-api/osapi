@@ -185,7 +185,7 @@ t_status proc_signal_getNumber( t_char * p_name, t_signal * p_signal_number )
       signal_name[1] = NULL;
 
       // Find a matching signal number
-      *p_signal_number = common_options_get( osapi_signal, (char **) signal_name );
+      *p_signal_number = (int) common_options_get( osapi_signal, (char **) signal_name );
 
       // Send signal
       if( *p_signal_number < 1 )
@@ -214,7 +214,7 @@ t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
      signal_name[1] = NULL;
 
      // Find a matching signal number
-     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+     signal_number = (int) common_options_get( osapi_signal, (char **) signal_name );
 
      // Send signal
      if( signal_number < 1 )
@@ -244,7 +244,7 @@ t_status proc_signal_setHandlerByName( t_char * sigName, t_sig_func signal_handl
      signal_name[1] = NULL;
 
      // Find a matching signal number
-     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+     signal_number = (int) common_options_get( osapi_signal, (char **) signal_name );
 
      // Install handler
      if( signal_number > 0 )
@@ -271,7 +271,7 @@ t_status proc_signal_resetHandlerByName( t_char * sigName )
      signal_name[1] = NULL;
 
      // Find a matching signal number
-     signal_number = common_options_get( osapi_signal, (char **) signal_name );
+     signal_number = (int) common_options_get( osapi_signal, (char **) signal_name );
 
      // Reset signal to default
      if( signal_number > 0 )

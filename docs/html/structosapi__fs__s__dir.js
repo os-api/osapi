@@ -1,6 +1,5 @@
 var structosapi__fs__s__dir =
 [
-    [ "data", "structosapi__fs__s__dir.html#a4272f6ac0ebe8bcf1cbbb730f59397e5", null ],
-    [ "info", "structosapi__fs__s__dir.html#af38b68c482c7906f09551554317e1e7f", null ],
-    [ "state", "structosapi__fs__s__dir.html#a170e85fa233c9dd24294e8ff8a2819ea", null ]
+    [ "dir", "structosapi__fs__s__dir.html#a6a7f0099a94d04abd45e8d6dc2200128", null ],
+    [ "element", "structosapi__fs__s__dir.html#ac833aaeb95726bc51fffb010b51af090", null ]
 ];

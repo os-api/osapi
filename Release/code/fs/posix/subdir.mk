@@ -4,13 +4,28 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../code/fs/posix/fs_posix.c 
+../code/fs/posix/fs_posix.c \
+../code/fs/posix/fs_posix_dir.c \
+../code/fs/posix/fs_posix_element.c \
+../code/fs/posix/fs_posix_file.c \
+../code/fs/posix/fs_posix_link.c \
+../code/fs/posix/fs_posix_priv.c 
 
 OBJS += \
-./code/fs/posix/fs_posix.o 
+./code/fs/posix/fs_posix.o \
+./code/fs/posix/fs_posix_dir.o \
+./code/fs/posix/fs_posix_element.o \
+./code/fs/posix/fs_posix_file.o \
+./code/fs/posix/fs_posix_link.o \
+./code/fs/posix/fs_posix_priv.o 
 
 C_DEPS += \
-./code/fs/posix/fs_posix.d 
+./code/fs/posix/fs_posix.d \
+./code/fs/posix/fs_posix_dir.d \
+./code/fs/posix/fs_posix_element.d \
+./code/fs/posix/fs_posix_file.d \
+./code/fs/posix/fs_posix_link.d \
+./code/fs/posix/fs_posix_priv.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
