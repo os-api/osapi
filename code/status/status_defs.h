@@ -88,6 +88,7 @@ enum osapi_library_id
 /// @brief Short notation to set a status type with a default value of success
 #define RETURN_STATUS_SUCCESS	{ t_status st; status_reset( &st ); return st; }
 
+
 // Support macros for setting internal/external status errors
 
 /// @brief Set status type with OSAPI library information

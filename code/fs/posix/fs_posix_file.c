@@ -40,7 +40,7 @@
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Public Function definition
 //
 // *****************************************************************************************
 
@@ -262,6 +262,103 @@ t_status fs_file_write( const t_file * p_file, t_buffer * p_buffer )
 
   return st;
 }
+
+
+
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
+
+
+t_status posix_open_file( const t_char * p_path, int64_t openMode, int64_t creationMode, t_file * p_file )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_path == NULL || p_file == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( isFileOpen( p_file ) )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_aopen, &st ); return st; }
+
+  p_file->file.state = osapi_fs_ostate_closed;
+
+  p_file->file.descriptor = open( p_path, (int) openMode, (int) creationMode );
+  if( p_file->file.descriptor < 0 )
+    { status_eset( OSAPI_MODULE_FS, __func__, errno, &st ); return st; }
+
+  st = posix_get_file_info( p_file );
+  if( status_success( st ) )
+      p_file->file.state = osapi_fs_ostate_opened;
+
+  return st;
+}
+
+t_status posix_open_filestream( const t_char * p_path, const char * p_options, t_file * p_file )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_path == NULL || p_options == NULL || p_file == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( strlen( p_path ) == 0 || strlen( p_options ) == 0 )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( isFileOpen( p_file ) )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_aopen, &st ); return st; }
+
+  p_file->file.state = osapi_fs_ostate_closed;
+
+  st = posix_element_open( p_path, &p_file->element );	// Open Element
+
+  if( status_failure( st ) ) return st;
+
+  p_file->file.handle = fopen( p_path, p_options );
+
+  if( p_file->file.handle == NULL )
+    { status_eset( OSAPI_MODULE_FS, __func__, errno, &st ); return st; }
+
+  int fd = fileno( p_file->file.handle );
+  if( fd == -1 )
+    { status_eset( OSAPI_MODULE_FS, __func__, errno, &st ); return st; }
+
+  p_file->file.descriptor = fd;
+
+  st = posix_get_file_info( p_file );
+  if( status_success( st ) )
+      p_file->file.state = osapi_fs_ostate_opened;
+  else
+    {
+      fclose( p_file->file.handle );		// Attempt to close file, ignore result
+      p_file->file.descriptor	= -1;
+      p_file->file.handle	= NULL;
+    }
+
+  return st;
+}
+
+t_status posix_get_file_info( t_file * p_file )
+{
+  t_status		st;
+
+  status_reset( &st );
+
+  if( p_file == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  // Any directory specific information
+  if( isTypeNotFile( p_file ) )
+      status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_notFile, &st );
+  // else...
+
+  return st;
+}
+
 
 
 #endif // POSIX only implementation

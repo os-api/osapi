@@ -2,7 +2,7 @@ var group___f_s =
 [
     [ "fs_dir_close", "group___f_s.html#gac9cc3d5ea4640131c5d9e81f8e8f6a06", null ],
     [ "fs_dir_open", "group___f_s.html#ga639e9fb33cdcc9a5778a61f92bc3f402", null ],
-    [ "fs_directory_create", "group___f_s.html#gaf8d803cf70a5327f78c00eb015799fbd", null ],
+    [ "fs_directory_create", "group___f_s.html#ga986cf6aa6b7818f6e761e5e48f55eeeb", null ],
     [ "fs_directory_getElement", "group___f_s.html#gae00e530d55f28dec19cc4159ee4c76b4", null ],
     [ "fs_directory_getElementList", "group___f_s.html#gaa97b681ef7ca9a7f4597f12ece79c112", null ],
     [ "fs_directory_getNumberElements", "group___f_s.html#ga2f259fe284673f240bc7ad04e74adccb", null ],
@@ -39,9 +39,10 @@ var group___f_s =
     [ "fs_file_updateInfo", "group___f_s.html#ga849eff95c0867b800190944a4c818bfe", null ],
     [ "fs_file_write", "group___f_s.html#gacd4b8ece47d9d98df382a056e97af451", null ],
     [ "fs_link_close", "group___f_s.html#gae1b9f7c2937b383a7d057607b8bae97c", null ],
-    [ "fs_link_createHard", "group___f_s.html#ga186072c11415c3fac3748ec04333963a", null ],
-    [ "fs_link_createSoft", "group___f_s.html#ga80af054b1d4a93594d50b15979f393d4", null ],
+    [ "fs_link_createHard", "group___f_s.html#ga22460edd727342992dff73a3d931110f", null ],
+    [ "fs_link_createSoft", "group___f_s.html#gaf356f53514301a59a6842879623d771f", null ],
     [ "fs_link_getElement", "group___f_s.html#ga55d004d7825dcb3e58a50c584307ee36", null ],
+    [ "fs_link_getTarget", "group___f_s.html#ga69ab1c2c6f6d12a30f2c49014f3d2a2f", null ],
     [ "fs_link_open", "group___f_s.html#gaa4842c0a9308f413ebce57c166b87477", null ],
     [ "fs_link_updateInfo", "group___f_s.html#ga7f01960f99811cc54d9ca1b0e330a7fe", null ],
     [ "fs_module_supported", "group___f_s.html#ga6c10ab477626bd407ef5447ab65e1c69", null ]

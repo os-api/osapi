@@ -62,16 +62,14 @@ t_status fs_link_close			( t_link * link );
 /// @brief Create a new soft link
 /// @param [in] source  - New link name
 /// @param [in] target	- Link target
-/// @param [out] link 	- New link descriptor
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createSoft		( const t_char * source, const t_char * target, t_link * link );
+t_status fs_link_createSoft		( const t_char * source, const t_char * target );
 
 /// @brief Create a new hard link
 /// @param [in] source  - New link name
 /// @param [in] target	- Link target
-/// @param [out] link 	- New link descriptor
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createHard		( const t_char * source, const t_char * target, t_link * link );
+t_status fs_link_createHard		( const t_char * source, const t_char * target );
 
 /// @brief Obtain a link descriptor from a path name
 /// @param [out] link	- Link descriptor
@@ -83,6 +81,15 @@ t_status fs_link_updateInfo		( t_link * link );
 /// @param [out] elem	- Element descriptor
 /// @return Operation status.
 t_status fs_link_getElement		( t_link * link, t_element * elem );
+
+/// @brief Obtain the target of the link
+/// The function will return the address of the string that contains the target name.
+/// This address will not be valid after a call to fs_link_close.
+/// @param [in] link	- Link descriptor
+/// @param [out] target	- Address of the link target
+/// @return SUCCESS if target name was obtained. Failure otherwise.
+t_status fs_link_getTarget	( t_link * link, char ** target );
+
 
 
 #pragma GCC visibility pop			// End of public interface

@@ -42,7 +42,7 @@
 // *****************************************************************************************
 
 
-t_status common_buffer_allocate( size_t bufsize, t_buffer * p_buffer )
+t_status common_buffer_allocate( t_size bufsize, t_buffer * p_buffer )
 {
   t_status	st;
 
@@ -100,7 +100,7 @@ t_status common_buffer_getCapacity( const t_buffer * p_buffer, t_size * p_size )
   status_reset( & st );
 
   if( p_buffer == NULL || p_size == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
       st = common_memory_getCapacity( &(p_buffer->mem), p_size );
 
@@ -114,7 +114,7 @@ t_status common_buffer_getData( const t_buffer * p_buffer, void ** p_data )
   status_reset( & st );
 
   if( p_buffer == NULL || p_data == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
       st = common_memory_getData( &(p_buffer->mem), p_data );
 
@@ -128,11 +128,11 @@ t_status common_buffer_getSize( const t_buffer * p_buffer, t_size * p_size )
   status_reset( & st );
 
   if( p_buffer == NULL || p_size == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_buffer_not_allocated( p_buffer ) )
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  *p_size = p_buffer->size;
     }
@@ -147,11 +147,11 @@ t_status common_buffer_setSize( t_size size, t_buffer * p_buffer )
   status_reset( & st );
 
   if( p_buffer == NULL || size == 0 )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_buffer_not_allocated( p_buffer ) )
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  p_buffer->size = size;
     }
@@ -170,7 +170,7 @@ t_status common_buffer_copy( const t_buffer * p_source, t_buffer * p_target )
 
   if( p_source == NULL || p_target == NULL )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
       return st;
     }
 
@@ -190,7 +190,7 @@ t_status common_buffer_copyFrom( const t_buffer * p_source, t_size targetSize, v
   status_reset( & st );
 
   if( p_source == NULL || p_target == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
       st = common_memory_copyFrom( &(p_source->mem), targetSize, p_target );
 
@@ -204,7 +204,7 @@ t_status common_buffer_copyTo( const void * p_source, t_size sourceSize, t_buffe
   status_reset( & st );
 
   if( p_source == NULL || p_target == NULL || sourceSize == (t_size) 0 )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       st = common_memory_copyTo( p_source, sourceSize, &(p_target->mem) );

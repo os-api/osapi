@@ -20,10 +20,10 @@
 #include "error/error_types.h"
 
 // Include own error definitions
-#define error_common_X(a, b, c) a b,
-enum common_X {
+#define osapi_common_error_X(a, b, c) a b,
+enum osapi_common_e_error_X {
 	  #include "error/mappings/table_common.h"
 };
-#undef error_common_X
+#undef osapi_common_error_X
 
 #endif /* OSAPI_ERROR_COMMON_H_ */

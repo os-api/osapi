@@ -40,7 +40,7 @@
 #pragma GCC visibility push(default)		// Start of internal interface
 
 // Buffer related
-t_status	common_buffer_allocate		( size_t bufsize, t_buffer * p_buffer							);
+t_status	common_buffer_allocate		( t_size bufsize, t_buffer * p_buffer							);
 t_status	common_buffer_reAllocate	( t_size bufsize, t_buffer * p_buffer 							);
 t_status	common_buffer_deallocate	( t_buffer * p_buffer									);
 

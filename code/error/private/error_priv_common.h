@@ -26,13 +26,13 @@
 // *****************************************************************************************
 
 
-#define error_common_X(a, b, c) [a]=c,
+#define osapi_common_error_X(a, b, c) [a]=c,
 
-static const char * common_errors[] =
+static const char * osapi_common_errors[] =
 {
   #include "error/mappings/table_common.h"
 };
 
-#undef error_common_X
+#undef osapi_common_error_X
 
 #endif /* OSAPI_ERROR_PRIV_COMMON_H_ */

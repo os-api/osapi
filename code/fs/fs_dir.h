@@ -62,9 +62,8 @@ t_status fs_dir_close( t_dir * dir );
 /// @brief Create a new directory
 /// @param [in] path    - Directory name
 /// @param [in] mode	- Directory creation options
-/// @param [out] dir 	- New directory descriptor
 /// @return SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name).
-t_status fs_directory_create		( const t_char * path, const char ** mode, t_dir * dir );
+t_status fs_directory_create		( const t_char * path, const char ** mode );
 
 /// @brief Obtain a directory descriptor
 /// @param [out] dir	- Directory descriptor

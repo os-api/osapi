@@ -33,7 +33,7 @@ extern "C" {
 #include "fs/fs_element.h"
 #include "fs/fs_file.h"
 //#include "fs/fs_dir.h"
-//#include "fs/fs_link.h"
+#include "fs/fs_link.h"
 
 /// *****************************************************************************************
 ///

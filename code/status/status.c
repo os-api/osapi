@@ -88,18 +88,18 @@ void status_setString( t_module module, t_status_type type, t_status_funcname fn
 
 void status_message_iPrint( t_status status )
 {
-  printf("Module %s, function %s with status: %s.\n",
-	 osapi_getModule( status.module ),
-	 status.funcname,
-	 error_string_get( status.module, status.code ) );
+  printf( "Module %s, function %s with status: %s.\n",
+	  osapi_getModule( status.module ),
+	  status.funcname,
+	  error_string_get( status.module, status.code ) );
 }
 
 void status_message_sPrint( t_status status )
 {
-  printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
-	 osapi_getModule( status.module ),
-	 status.funcname,
-	 status.string );
+  printf( "V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
+	  osapi_getModule( status.module ),
+	  status.funcname,
+	  status.string );
 }
 
 void status_message_iGet( t_status status, t_size size, t_char * p_message )

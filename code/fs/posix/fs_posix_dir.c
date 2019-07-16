@@ -43,7 +43,7 @@
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Public Function definition
 //
 // *****************************************************************************************
 
@@ -271,6 +271,33 @@ t_status fs_dir_close( t_dir * p_dir )
 
   return st;
 }
+
+
+
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
+
+
+t_status posix_get_directory_info( t_dir * p_dir )
+{
+  t_status		st;
+
+  status_reset( & st );
+
+  if( p_dir == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  // Any directory specific information
+  if( isTypeNotDir( p_dir ) )
+      status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_notDirectory, &st );
+  // else...
+
+  return st;
+}
+
 
 
 

@@ -39,7 +39,12 @@
 
 t_status clock_module_supported( void )
 {
-  RETURN_STATUS_SUCCESS;		// Posix supports clocks
+  t_status st;
+
+  // RETURN_STATUS_SUCCESS;		// Posix supports clocks
+  status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_support, &st);
+
+  return st;
 }
 
 t_status clock_time_set (t_time tm)
@@ -58,7 +63,7 @@ t_status clock_time_get( t_time * p_tm )
   status_reset (&st);
 
   if( p_tm == (t_time *) 0 )
-       status_iset( OSAPI_MODULE_CLOCK, __func__, e_clock_params, &st);
+       status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_params, &st);
   else if( time (p_tm) == -1 )
        status_eset( OSAPI_MODULE_CLOCK, __func__, errno, &st);
 

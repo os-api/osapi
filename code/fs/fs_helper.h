@@ -29,6 +29,11 @@
 #define isDirClose(x)		(x->dir.state     == osapi_fs_ostate_closed)
 #define isLinkClose(x)		(x->link.state    == osapi_fs_ostate_closed)
 
+#define isElementTypeFile(x)	(x->type == osapi_fs_type_file)
+#define isElementTypeDir(x)	(x->type == osapi_fs_type_directory)
+#define isElementTypeLink(x)	(x->type == osapi_fs_type_softLink || x->type == osapi_fs_type_hardLink)
+
+
 #define isTypeFile(x)		(x->element.type == osapi_fs_type_file)
 #define isTypeDir(x)		(x->element.type == osapi_fs_type_directory)
 #define isTypeLink(x)		(x->element.type == osapi_fs_type_softLink || x->element.type == osapi_fs_type_hardLink)
@@ -45,6 +50,11 @@
 #define isDirNotClose(x)	(x->dir.state     != osapi_fs_ostate_closed)
 #define isLinkNotClose(x)	(x->link.state    != osapi_fs_ostate_closed)
 
+#define isElementTypeNotFile(x)	(x->type != osapi_fs_type_file)
+#define isElementTypeNotDir(x)	(x->type != osapi_fs_type_directory)
+#define isElementTypeNotLink(x)	(x->type != osapi_fs_type_softLink && x->type != osapi_fs_type_hardLink)
+
+
 #define isTypeNotFile(x)	(x->element.type != osapi_fs_type_file)
 #define isTypeNotDir(x)		(x->element.type != osapi_fs_type_directory)
 #define isTypeNotLink(x)	(x->element.type != osapi_fs_type_softLink && x->element.type != osapi_fs_type_hardLink)
@@ -58,5 +68,8 @@
 #define isDirNull(x)		(x->dir.handle  == NULL)
 #define isDirNotNull(x)		(x->dir.handle  != NULL)
 
+// Link specific macros
+#define isLinkAvailable(x)	(x->link.target  != NULL)
+#define isLinkNotAvailable(x)	(x->link.target  == NULL)
 
 #endif 		// OSAPI_FS_HELPER_H_

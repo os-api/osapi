@@ -7,17 +7,17 @@
 //
 // *****************************************************************************************
 
-error_common_X( osapi_common_e_none,    = OSAPI_ERROR_BASE,	OSAPI_ERROR_STRING_NONE					)
+osapi_common_error_X( osapi_common_error_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE					)
 
-error_common_X( osapi_common_e_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC				)
-error_common_X( osapi_common_e_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT				)
-error_common_X( osapi_common_e_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM				)
-error_common_X( osapi_common_e_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN				)
-error_common_X( osapi_common_e_canary, ,			"Memory unallocated/corrupted"				)
-error_common_X( osapi_common_e_alloc, ,				"Memory already allocated (potential memory leak)"	)
-error_common_X( osapi_common_e_dealloc, ,			"Memory not allocated"					)
-error_common_X( osapi_common_e_memoverlap, ,			"Memory overlap"					)
-error_common_X( osapi_common_e_notEnoughMemory, ,		"Insufficient memory"					)
-error_common_X( osapi_common_e_notEnoughCapacity, ,		"Insufficient capacity"					)
+osapi_common_error_X( osapi_common_error_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC				)
+osapi_common_error_X( osapi_common_error_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT				)
+osapi_common_error_X( osapi_common_error_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM				)
+osapi_common_error_X( osapi_common_error_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN				)
+osapi_common_error_X( osapi_common_error_canary, ,				"Memory unallocated/corrupted"				)
+osapi_common_error_X( osapi_common_error_alloc, ,				"Memory already allocated (potential memory leak)"	)
+osapi_common_error_X( osapi_common_error_dealloc, ,				"Memory not allocated"					)
+osapi_common_error_X( osapi_common_error_memoverlap, ,				"Memory overlap"					)
+osapi_common_error_X( osapi_common_error_notEnoughMemory, ,			"Insufficient memory"					)
+osapi_common_error_X( osapi_common_error_notEnoughCapacity, ,			"Insufficient capacity"					)
 
-error_common_X( osapi_common_e_max, ,				OSAPI_ERROR_STRING_UNKNOWN				)
+osapi_common_error_X( osapi_common_error_max, ,					OSAPI_ERROR_STRING_UNKNOWN				)

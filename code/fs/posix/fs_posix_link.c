@@ -42,7 +42,7 @@
 
 // *****************************************************************************************
 //
-// Section: Function definition
+// Section: Public Function definition
 //
 // *****************************************************************************************
 
@@ -115,55 +115,66 @@ t_status fs_link_updateInfo( t_link * p_link )
 
 
 
-t_status fs_link_createSoft( const t_char * p_source, const t_char * p_target, t_link * p_link )
+t_status fs_link_createSoft( const t_char * p_source, const t_char * p_target )
 {
   t_status	st;
 
   status_reset( & st );
 
-  if( p_source == NULL || p_target == NULL || p_link == NULL )
+  if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
   if( symlink( p_target, p_source ) == -1 )
       status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
-  else
-      st = fs_link_open( p_source, p_link );
 
   return st;
 }
 
 
-t_status fs_link_createHard( const t_char * p_source, const t_char * p_target, t_link * p_link )
+t_status fs_link_createHard( const t_char * p_source, const t_char * p_target )
 {
   t_status	st;
 
   status_reset( & st );
 
-  if( p_source == NULL || p_target == NULL || p_link == NULL )
+  if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
   if( link( p_target, p_source ) == -1 )
       status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
-  else
-      st = fs_link_open( p_source, p_link );
 
   return st;
 }
 
 
-t_status fs_link_close( t_link * p_link )
+
+
+
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
+
+
+t_status posix_get_link_info( t_link * p_link )
 {
-  t_status	st;
+  t_status		st;
 
   status_reset( & st );
 
   if( p_link == NULL )
-      status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  // Any link specific information
+  if( isTypeNotLink( p_link ) )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_notLink, &st ); return st; }
+
+  ssize_t sz = readlink( p_link->element.fullpath, p_link->link.target, PATH_MAX -1 );
+  if( sz == -1 )
+      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
   else
-    {
-      p_link->link.state = osapi_fs_ostate_closed;
-      st = fs_element_close( &p_link->element );
-    }
+      p_link->link.target[ sz ] = '\0';	// Ensure it's always null terminated
 
   return st;
 }

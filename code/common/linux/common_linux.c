@@ -50,7 +50,7 @@ t_status get_max_length_groupname( t_size * p_size )
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
       *p_size = 32;		// Apparently this is the maximum size of a group name.. requires confirmation
 
@@ -64,7 +64,7 @@ t_status get_user_group_list( t_uid uid, size_t groupListMaxSize, size_t * p_gro
   status_reset( &st );
 
   if( p_groupList == ((t_gid *) 0) || groupListMaxSize <= 0 || p_groupListCurSize == (size_t *) 0 )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       // First get primary GID matching uid

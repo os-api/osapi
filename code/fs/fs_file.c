@@ -21,6 +21,7 @@
 #include "status/status.h"
 
 // Own declarations
+#include "fs/fs_element.h"
 #include "fs/fs_file.h"
 #include "fs/fs_helper.h"
 

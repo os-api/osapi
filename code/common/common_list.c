@@ -49,7 +49,7 @@ t_status common_list_allocate( t_size nItems, t_size itemSize, t_list * p_list )
   status_reset( & st );
 
   if( nItems == 0 || itemSize == 0 || p_list == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       t_size bufsize = nItems * itemSize;
@@ -75,13 +75,13 @@ t_status common_list_reAllocate( t_size nItems, t_list * p_list )
 
   if( nItems == 0 || p_list == NULL )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
       return st;
     }
 
   if( is_list_not_allocated( p_list ) )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       return st;
     }
 
@@ -109,7 +109,7 @@ t_status common_list_deallocate( t_list * p_list )
   status_reset( & st );
 
   if( p_list == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       // Clear fields of structure
@@ -133,11 +133,11 @@ t_status common_list_getCapacity( const t_list * p_list, t_size * p_size )
   status_reset( & st );
 
   if( p_list == NULL || p_size == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  *p_size = p_list->capacity;
     }
@@ -153,11 +153,11 @@ t_status common_list_getRequiredCapacity( const t_list * p_list, t_size * p_size
   status_reset( & st );
 
   if( p_list == NULL || p_size ==NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  *p_size = p_list->requiredCapacity;
     }
@@ -173,11 +173,11 @@ t_status common_list_getData( const t_list * p_list, t_size item, void **  p_dat
   status_reset( & st );
 
   if( p_list == NULL || p_data == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	{
 	  // Get a pointer to the raw memory for item number "item"
@@ -196,11 +196,11 @@ t_status common_list_getSize( const t_list * p_list, t_size * p_size )
   status_reset( & st );
 
   if( p_list == NULL || p_size == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  *p_size = p_list->nitems;
     }
@@ -215,11 +215,11 @@ t_status common_list_setSize( t_size size, t_list * p_list )
   status_reset( & st );
 
   if( p_list == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( p_list->mem.canary != OSAPI_COMMON_CANARY )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	p_list->nitems = size;
     }
@@ -235,11 +235,11 @@ t_status common_list_setRequiredCapacity( t_size size, t_list * p_list )
   status_reset( & st );
 
   if( p_list == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
   else
     {
       if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       else
 	  p_list->requiredCapacity = size;
     }
@@ -257,19 +257,19 @@ t_status common_list_copy( const t_list * p_source, t_list * p_target )
 
   if( p_source == NULL || p_target == NULL )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
       return st;
     }
 
   if( is_list_not_allocated( p_source ) )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       return st;
     }
 
   if( is_list_data_equal( p_source, p_target ) )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_memoverlap, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_memoverlap, &st );
       return st;
     }
 
@@ -304,19 +304,19 @@ t_status common_list_copyFrom( const t_list * p_source, t_size sourceItem, t_siz
 
   if( p_source == NULL || p_target == NULL || sourceItem == 0 || targetSize == 0 )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
       return st;
     }
 
   if( is_list_not_allocated( p_source ) )	// Not allocated
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       return st;
     }
 
   if( targetSize != p_source->itemSize )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_notEnoughMemory, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_notEnoughMemory, &st );
       return st;
     }
 
@@ -343,25 +343,25 @@ t_status common_list_copyTo( const void * p_source, t_size sourceSize, t_size ta
 
   if( p_source == NULL || p_target == NULL || targetItem == (t_size) 0 )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_params, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
       return st;
     }
 
   if( is_list_not_allocated( p_target ) )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_canary, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
       return st;
     }
 
   if( sourceSize != p_target->itemSize )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_notEnoughMemory, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_notEnoughMemory, &st );
       return st;
     }
 
   if( p_target->capacity < targetItem )
     {
-      status_iset( OSAPI_MODULE_COMMON, __func__, osapi_common_e_notEnoughCapacity, &st );
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_notEnoughCapacity, &st );
       return st;
     }
 

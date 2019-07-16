@@ -22,6 +22,7 @@
 
 // Import own headers
 #include "fs/fs_platform.h"
+#include "fs/type/fs_type_element.h"
 
 // *****************************************************************************************
 //

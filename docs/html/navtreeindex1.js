@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"group___g_e_n_e_r_a_l.html#ga0e1b1b8fdd0a3d50b9ec6dd3de627b0a":[0,0,4,9],
 "group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537":[0,0,4,13],
 "group___g_e_n_e_r_a_l.html#ga1e32383c6dc4c79f31a366c46aa8dc5e":[0,0,4,21],
 "group___g_e_n_e_r_a_l.html#ga2761dba31f6734840548ee636e7da45c":[0,0,4,17],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "proc__posix__defs_8h_source.html":[2,0,0,10,2,1],
 "proc__posix__priv_8h_source.html":[2,0,0,10,2,2],
 "proc__posix__signal__macros_8h_source.html":[2,0,0,10,2,3],
-"proc__posix__status_8h_source.html":[2,0,0,10,2,4],
-"proc__posix__types_8h_source.html":[2,0,0,10,2,5]
+"proc__posix__status_8h_source.html":[2,0,0,10,2,4]
 };

@@ -36,12 +36,12 @@ bool error_code_isValid( t_module module, t_error code )
 
   // Verify, for each module, the validity of the error code
   if( code >= OSAPI_ERROR_BASE && code < osapi_error_strings[ module ].topValue )
+      valid = true;
+  else
     {
       fprintf( stderr, "Code (%d) under Max Code (%d) of module: %d\n", code, osapi_error_strings[ module ].topValue, module );
       fflush( stderr );
-      valid = true;
     }
-     // valid = true;
 
   return valid;
 }
