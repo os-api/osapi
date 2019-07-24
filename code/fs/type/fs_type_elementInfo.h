@@ -36,6 +36,7 @@ struct osapi_fs_element_info
 {
   t_fs_ostate		state;				///< Element state (closed/open)
   t_fs_eType		type;				///< Element type: File, directory, etc.
+  t_fs_eid		id;				///< Element identifier
   t_uid			uid;				///< User ID
   t_gid			gid;				///< Group ID
   uint64_t		size;				///< Element size

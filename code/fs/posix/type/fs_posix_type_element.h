@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	FS type declarations
+// Purpose:	POSIX FS type declarations for a file system element
 //
 // *****************************************************************************************
 

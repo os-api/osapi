@@ -71,6 +71,15 @@ t_status fs_link_createSoft		( const t_char * source, const t_char * target );
 /// @return SUCCESS if created. An error condition otherwise.
 t_status fs_link_createHard		( const t_char * source, const t_char * target );
 
+/*
+/// @brief Copy a link element
+/// If there is a destination, link creation fails
+/// @param [in] source     - Copy from
+/// @param [in] target     - Copy into
+/// @return SUCCESS if copied. An error condition otherwise.
+t_status fs_link_copy	( const t_char * source, const t_char * target );
+*/
+
 /// @brief Obtain a link descriptor from a path name
 /// @param [out] link	- Link descriptor
 /// @return SUCCESS if information about the link was obtained. Failure otherwise.
@@ -90,6 +99,12 @@ t_status fs_link_getElement		( t_link * link, t_element * elem );
 /// @return SUCCESS if target name was obtained. Failure otherwise.
 t_status fs_link_getTarget	( t_link * link, char ** target );
 
+
+/// @brief Obtain the name of the link
+/// @param [in]  link	- Link descriptor
+/// @param [out] name	- Name of link
+/// @return SUCCESS if target name was obtained. Failure otherwise.
+t_status fs_link_getName	( t_link * link, char ** name );
 
 
 #pragma GCC visibility pop			// End of public interface

@@ -29,6 +29,7 @@ extern "C" {
 // Own declarations
 #include "proc/proc_memory.h"
 #include "proc/proc_buffer.h"
+#include "proc/proc_list.h"
 #include "proc/proc_plan.h"
 #include "proc/proc_signal.h"
 #include "proc/proc_resource.h"

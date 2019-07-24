@@ -52,18 +52,26 @@ extern "C" {
 /// @param [in] path    - Directory name
 /// @param [out] dir 	- New directory descriptor
 /// @return SUCCESS if directory descriptor opened. An error condition otherwise.
-t_status fs_dir_open			( const t_char * path, t_dir * dir );
+t_status fs_directory_open			( const t_char * path, t_dir * dir );
 
 /// @brief Close a directory
 /// @param [in] dir 	- Directory descriptor
 /// @return SUCCESS if directory descriptor closed. An error condition otherwise.
-t_status fs_dir_close( t_dir * dir );
+t_status fs_directory_close( t_dir * dir );
 
 /// @brief Create a new directory
 /// @param [in] path    - Directory name
 /// @param [in] mode	- Directory creation options
 /// @return SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name).
 t_status fs_directory_create		( const t_char * path, const char ** mode );
+
+/*
+/// @brief Copy an entire directory onto another
+/// @param [in] source  - Source directory name
+/// @param [in] target	- Destination directory name
+/// @return SUCCESS if copied. An error condition otherwise.
+t_status fs_directory_copy		( const t_char * source, const t_char * target );
+*/
 
 /// @brief Obtain a directory descriptor
 /// @param [out] dir	- Directory descriptor
@@ -82,11 +90,12 @@ t_status fs_directory_getElement	( t_dir * dir, t_element * elem );
 /// @return Operation status.
 t_status fs_directory_getNumberElements ( t_dir * dir, t_size * number );
 
-/// @brief Get the number of directory elements
-/// @param [in]  dir	- Directory descriptor
-/// @param [out] list	- The retrieved directory list
+/// @brief Get the list of directory elements
+/// @param [in]  dir		- Directory descriptor
+/// @param [out] dirList	- The retrieved directory list
 /// @return Operation status.
-t_status fs_directory_getElementList 	( t_dir * dir, t_list * list );
+t_status fs_directory_getElementList 	( t_dir * dir, t_list * dirList );
+
 
 
 #pragma GCC visibility pop			// End of public interface

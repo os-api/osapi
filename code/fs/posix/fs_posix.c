@@ -33,7 +33,7 @@
 
 // Own declarations
 #include "fs/fs.h"
-#include "fs/posix/fs_posix.h"
+#include "fs/fs_sysheaders.h"
 #include "fs/fs_helper.h"
 
 

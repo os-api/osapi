@@ -21,7 +21,7 @@
 #include "common/common.h"
 
 // Own declarations
-#include "fs/posix/fs_posix.h"
+#include "fs/fs_sysheaders.h"
 #include "fs/posix/fs_posix_priv.h"
 #include "fs/fs_helper.h"
 

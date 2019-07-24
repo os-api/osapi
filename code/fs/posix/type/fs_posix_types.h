@@ -17,6 +17,8 @@
 // *****************************************************************************************
 
 // Import POSIX module types
+#include "fs/posix/type/fs_posix_type_id.h"
+#include "fs/posix/type/fs_posix_type_element_id.h"
 #include "fs/posix/type/fs_posix_type_element.h"
 #include "fs/posix/type/fs_posix_type_file.h"
 #include "fs/posix/type/fs_posix_type_dir.h"

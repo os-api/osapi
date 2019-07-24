@@ -34,7 +34,8 @@
 // Own declarations
 #include "fs/fs_element.h"
 #include "fs/fs_file.h"
-#include "fs/posix/fs_posix.h"
+#include "fs/fs_dir.h"
+#include "fs/fs_sysheaders.h"
 #include "fs/fs_helper.h"
 
 
@@ -53,28 +54,8 @@
 
 t_status fs_file_open( const t_char * p_path, const char ** p_mode, t_file * p_file )
 {
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_path == NULL || p_mode == NULL || p_file == NULL )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  if( strlen( p_path ) == 0 )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  st = posix_element_open( p_path, &p_file->element );	// Open Element
-
-  if( status_failure( st ) ) return st;
-
-  int64_t openOptions = posix_get_fs_open_options( p_mode );
-  int64_t modeOptions = posix_get_fs_mode_options( p_mode );
-
-  st = posix_open_file( p_path, openOptions, modeOptions,  p_file );
-
-  return st;
+  return posix_file_open( p_path, p_mode, p_file );
 }
-
 
 
 t_status fs_file_openRead( const t_char * p_path, t_file * p_file )
@@ -150,6 +131,64 @@ t_status fs_file_create( const char * p_path, const char ** p_mode )
 
 t_status fs_file_close( t_file * p_file )
 {
+  return fs_file_close( p_file );
+}
+
+
+t_status fs_file_read( const t_file * p_file, t_buffer * p_buffer, bool * p_eof )
+{
+  return fs_file_read( p_file, p_buffer, p_eof );
+}
+
+
+
+t_status fs_file_write( const t_file * p_file, t_buffer * p_buffer )
+{
+  return posix_file_write( p_file, p_buffer );
+}
+
+
+/*
+t_status fs_file_copy( const t_char * p_source, const t_char * p_target )
+{
+  return posix_file_copy( p_source, p_target );
+}
+*/
+
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
+
+
+t_status posix_file_open( const t_char * p_path, const char ** p_mode, t_file * p_file )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_path == NULL || p_mode == NULL || p_file == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( strlen( p_path ) == 0 )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  st = posix_element_open( p_path, &p_file->element );	// Open Element
+
+  if( status_failure( st ) ) return st;
+
+  int64_t openOptions = posix_get_fs_open_options( p_mode );
+  int64_t modeOptions = posix_get_fs_mode_options( p_mode );
+
+  st = posix_open_file( p_path, openOptions, modeOptions,  p_file );
+
+  return st;
+}
+
+
+t_status posix_file_close( t_file * p_file )
+{
   t_status	st;
   int		rc;
 
@@ -181,7 +220,7 @@ t_status fs_file_close( t_file * p_file )
 }
 
 
-t_status fs_file_read( const t_file * p_file, t_buffer * p_buffer, bool * p_eof )
+t_status posix_file_read( const t_file * p_file, t_buffer * p_buffer, bool * p_eof )
 {
   t_status	st;
 
@@ -222,8 +261,7 @@ t_status fs_file_read( const t_file * p_file, t_buffer * p_buffer, bool * p_eof 
 }
 
 
-
-t_status fs_file_write( const t_file * p_file, t_buffer * p_buffer )
+t_status posix_file_write( const t_file * p_file, t_buffer * p_buffer )
 {
   t_status	st;
 
@@ -262,14 +300,6 @@ t_status fs_file_write( const t_file * p_file, t_buffer * p_buffer )
 
   return st;
 }
-
-
-
-// *****************************************************************************************
-//
-// Section: Private Function definition
-//
-// *****************************************************************************************
 
 
 t_status posix_open_file( const t_char * p_path, int64_t openMode, int64_t creationMode, t_file * p_file )
@@ -359,6 +389,44 @@ t_status posix_get_file_info( t_file * p_file )
   return st;
 }
 
+/*
+t_status posix_file_copy( const t_char * p_source, const t_char * p_target )
+{
+  t_status		st;
+  t_file		file;
+  t_dir			dir;
+  const char 	*	fileOptions[] = { "O_RDONLY", NULL };
+
+  status_reset( &st );
+
+  if( p_source == NULL || p_target == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  st = posix_file_open( p_source, fileOptions, &file );
+  if( status_success( st) )
+    {
+      st = fs_directory_open( p_target, &dir );
+      if( status_success( st) )
+	{
+	  // Get file size
+
+	  // Attempt to allocate memory for the file size if size <= OSAPI_FS_FILE_BUFFER_MAXSIZE
+	  // Otherwise, allocate only OSAPI_FS_FILE_BUFFER_MAXSIZE
+
+	  // In a cycle, read and write using the copy block size
+
+
+	  st = fs_directory_close( &dir );
+	}
+
+      st = posix_file_close( &file );
+    }
+
+
+  return st;
+}
+
+*/
 
 
 #endif // POSIX only implementation

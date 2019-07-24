@@ -95,6 +95,7 @@
 // x is the t_list and y is the item number
 #define get_list_item(x,y)		( &( ( (Byte *) x->mem.data)[ ( (y - 1) * (x->itemSize) ) ] ) )
 #define get_list_capacity(x)		(x->capacity)
+#define get_list_size(x)		(x->nitems)
 #define get_list_used_capacity(x)	( x->nitems * x->itemSize )
 #define get_list_address(x)		(x->mem.data)
 

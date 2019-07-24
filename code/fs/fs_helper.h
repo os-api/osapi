@@ -65,8 +65,8 @@
 
 
 // Directory specific macros
-#define isDirNull(x)		(x->dir.handle  == NULL)
-#define isDirNotNull(x)		(x->dir.handle  != NULL)
+#define isDirAvailable(x)	(x->dir.handle  != NULL)
+#define isDirNotAvailable(x)	(x->dir.handle  == NULL)
 
 // Link specific macros
 #define isLinkAvailable(x)	(x->link.target  != NULL)

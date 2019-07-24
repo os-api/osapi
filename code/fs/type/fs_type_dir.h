@@ -18,7 +18,7 @@
 
 // Import own headers
 #include "fs/fs_platform.h"
-#include "fs/type/fs_type_element.h"
+#include "fs/type/fs_type_element_type.h"
 
 // *****************************************************************************************
 //
@@ -27,7 +27,7 @@
 // *****************************************************************************************
 
 
-/// Structure that holds all file system element information
+/// Structure that holds a directory system element information
 struct osapi_fs_s_dir
 {
   t_element			element;	///< General element information
@@ -35,7 +35,6 @@ struct osapi_fs_s_dir
 };
 
 typedef struct osapi_fs_s_dir			t_dir;
-
 
 
 

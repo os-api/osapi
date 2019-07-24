@@ -89,6 +89,14 @@ t_status fs_file_openReadWrite	( const t_char * path, t_file * file );
 /// @return SUCCESS if created. An error condition otherwise (e.g. file already exists).
 t_status fs_file_create		( const char * path, const char ** mode );
 
+/*
+/// @brief Copy a file element
+/// If the destination already exists, it will overwrite it
+/// @param [in] source     - Copy from
+/// @param [in] target     - Copy into
+/// @return SUCCESS if copied. An error condition otherwise.
+t_status fs_file_copy		( const t_char * source, const t_char * target );
+*/
 
 /// @brief Position the file stream according
 /// The file position is provided by the start location (begin, end of file)

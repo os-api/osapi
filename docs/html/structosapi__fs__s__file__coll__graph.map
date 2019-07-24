@@ -1,5 +1,7 @@
 <map id="osapi_fs_s_file" name="osapi_fs_s_file">
-<area shape="rect" id="node2" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="5,109,157,136"/>
-<area shape="rect" id="node3" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="12,5,151,47"/>
-<area shape="rect" id="node4" href="$structosapi__fs__s__file__info.html" title="Structure containing the C/POSIX file pointer/handler information. " alt="" coords="182,109,319,136"/>
+<area shape="rect" id="node2" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="31,199,183,225"/>
+<area shape="rect" id="node3" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="5,95,144,136"/>
+<area shape="rect" id="node4" href="$structosapi__fs__s__element__id.html" title="Structure that defines a an element ID. " alt="" coords="168,102,323,129"/>
+<area shape="rect" id="node5" href="$structosapi__fs__s__id.html" title="Structure that holds a directory system element information. " alt="" coords="194,5,297,32"/>
+<area shape="rect" id="node6" href="$structosapi__fs__s__file__info.html" title="Structure containing the C/POSIX file pointer/handler information. " alt="" coords="207,199,345,225"/>
 </map>

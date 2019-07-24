@@ -44,7 +44,24 @@
 //
 // *****************************************************************************************
 
+// Final implementation functions for fs_XXX_YYY
+
 t_status	posix_element_open		( const t_char * p_path, t_element * p_element				);
+
+t_status	posix_file_open			( const t_char * p_path, const char ** p_mode, t_file * p_file		);
+t_status	posix_file_read			( const t_file * p_file, t_buffer * p_buffer, bool * p_eof		);
+t_status	posix_file_write		( const t_file * p_file, t_buffer * p_buffer				);
+//t_status	posix_file_copy			( const t_char * p_source, const t_char * p_target			);
+t_status	posix_file_close		( t_file * p_file							);
+
+t_status	posix_directory_open		( const t_char * p_path, t_dir * p_dir					);
+//t_status	posix_directory_copy		( const t_char * p_source, const t_char * p_target			);
+
+t_status	posix_link_open			( const t_char * p_path, t_link * p_link				);
+//t_status	posix_link_copy			( const t_char * p_source, const t_char * p_target			);
+t_status	posix_link_createSoft		( const t_char * p_source, const t_char * p_target			);
+
+// POSIX specific functions
 t_status	posix_get_element_info		( t_element * p_element							);
 t_status	posix_decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info		);
 t_fs_eType	posix_get_element_type		( mode_t mode								);
@@ -56,6 +73,7 @@ t_status	posix_open_filestream		( const t_char * pathname, const char * options,
 t_status 	posix_get_file_info		( t_file * p_file							);
 t_status	posix_get_directory_info	( t_dir * p_dir								);
 t_status	posix_get_link_info		( t_link * p_info							);
+t_fs_eType	posix_get_type_dir_entry	( t_dir_entry * entry							);
 
 #endif // Only in POSIX mode
 

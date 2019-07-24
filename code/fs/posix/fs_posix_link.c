@@ -25,6 +25,7 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <dirent.h>
+#include <libgen.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -35,8 +36,9 @@
 // Own declarations
 #include "fs/fs_types.h"
 #include "fs/fs_element.h"
+#include "fs/fs_dir.h"
 #include "fs/fs_link.h"
-#include "fs/posix/fs_posix.h"
+#include "fs/fs_sysheaders.h"
 #include "fs/fs_helper.h"
 
 
@@ -52,6 +54,70 @@
 
 
 t_status fs_link_open( const t_char * p_path, t_link * p_link )
+{
+  return posix_link_open( p_path, p_link );
+}
+
+
+t_status fs_link_updateInfo( t_link * p_link )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_link == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( isLinkNotOpen( p_link ) )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_dopen, &st ); return st;  }
+
+  st = fs_element_updateInfo( &p_link->element );			// First update general element information
+
+  if( status_success( st ) )
+      st = posix_get_link_info( p_link );				// Next, get link specific information
+
+  return st;
+}
+
+
+
+t_status fs_link_createSoft( const t_char * p_source, const t_char * p_target )
+{
+  return posix_link_createSoft( p_source, p_target );
+}
+
+
+t_status fs_link_createHard( const t_char * p_source, const t_char * p_target )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_source == NULL || p_target == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( link( p_target, p_source ) == -1 )
+      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+
+  return st;
+}
+
+
+/*
+t_status fs_link_copy( const t_char * p_source, const t_char * p_target )
+{
+  return posix_link_copy( p_source, p_target );
+}
+*/
+
+
+// *****************************************************************************************
+//
+// Section: Private Function definition
+//
+// *****************************************************************************************
+
+t_status posix_link_open( const t_char * p_path, t_link * p_link )
 {
   t_status	st;
 
@@ -93,70 +159,6 @@ t_status fs_link_open( const t_char * p_path, t_link * p_link )
 }
 
 
-t_status fs_link_updateInfo( t_link * p_link )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_link == NULL )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  if( isLinkNotOpen( p_link ) )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_dopen, &st ); return st;  }
-
-  st = fs_element_updateInfo( &p_link->element );			// First update general element information
-
-  if( status_success( st ) )
-      st = posix_get_link_info( p_link );				// Next, get link specific information
-
-  return st;
-}
-
-
-
-t_status fs_link_createSoft( const t_char * p_source, const t_char * p_target )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_source == NULL || p_target == NULL )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  if( symlink( p_target, p_source ) == -1 )
-      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
-
-  return st;
-}
-
-
-t_status fs_link_createHard( const t_char * p_source, const t_char * p_target )
-{
-  t_status	st;
-
-  status_reset( & st );
-
-  if( p_source == NULL || p_target == NULL )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  if( link( p_target, p_source ) == -1 )
-      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
-
-  return st;
-}
-
-
-
-
-
-// *****************************************************************************************
-//
-// Section: Private Function definition
-//
-// *****************************************************************************************
-
-
 t_status posix_get_link_info( t_link * p_link )
 {
   t_status		st;
@@ -180,5 +182,73 @@ t_status posix_get_link_info( t_link * p_link )
 }
 
 
+t_status posix_link_createSoft( const t_char * p_source, const t_char * p_target )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  if( p_source == NULL || p_target == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( symlink( p_target, p_source ) == -1 )
+      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+
+  return st;
+}
+
+/*
+t_status posix_link_copy( const t_char * p_source, const t_char * p_target )
+{
+  t_status	st;
+  t_dir		dir;
+  t_link	link;
+  char		str1[ OSAPI_PATH_MAX ];
+  char		str2[ OSAPI_PATH_MAX ];
+
+  status_reset( & st );
+
+  if( p_source == NULL || p_target == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  st = posix_link_open( p_source, &link );
+  if( status_success( st) )
+    {
+      // Make sure that target is a directory
+      st = fs_directory_open( p_target, &dir );
+      if( status_success( st) )
+	{
+	  // Get the link target and type
+	  char * p_link_destination, * p_link_name;
+
+	  if( status_success( fs_link_getTarget( &link, &p_link_destination ) ) &&
+	      status_success( fs_link_getName  ( &link, &p_link_name ) ) )
+	    {
+	      strncpy( str1, p_source, OSAPI_PATH_MAX );		// Copy source pathname first
+	      char * ptr = basename( str1 );				// Get the element name
+
+	      t_size sz = strlen( ptr );
+	      strncpy( str2, p_target, OSAPI_PATH_MAX - sz - 2 );
+
+	      if( strcmp( str2, p_target ) != 0 )	// Sanity check
+		  status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_strcpy, &st );
+	      else
+		{
+		  strcat(  str2, "/" );
+		  strncat( str2, ptr, sz );
+
+		  st = fs_link_createSoft( str2, p_link_destination );
+		}
+	    }
+
+	  fs_directory_close( &dir );
+	}
+
+      fs_link_close( &link );
+    }
+
+  return st;
+}
+*/
 
 #endif // POSIX only implementation

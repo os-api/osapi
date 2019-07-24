@@ -43,8 +43,8 @@ osapi_static_assert( _POSIX_VERSION == 200809L,	"Wrong POSIX version" );
 
 #endif	// If UNIX baseline is not disabled
 
-// If compilation reaches this far, them define own POSIX symbol
+// If compilation reaches this far, them define own POSIX & UNIX symbol
 #define OSAPI_POSIX
-
+#define OSAPI_UNIX
 
 #endif /* OSAPI_GENERAL_BASELINE_UNIX_H_ */
