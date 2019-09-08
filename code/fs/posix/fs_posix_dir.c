@@ -30,6 +30,7 @@
 #include "general/general.h"
 #include "error/modules/error_fs.h"
 #include "status/status.h"
+#include "status/trace_macros.h"
 #include "common/common.h"
 #include "common/common_helper.h"
 
@@ -65,6 +66,8 @@ t_status fs_directory_updateInfo( t_dir * p_dir )
 
   status_reset( & st );
 
+  TRACE_ENTER
+
   if( p_dir == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
@@ -77,7 +80,9 @@ t_status fs_directory_updateInfo( t_dir * p_dir )
   st = fs_element_updateInfo( &( p_dir->element ) );		// First update general element information
   if( status_failure( st ) ) return st;
 
-  st = posix_get_directory_info( p_dir );		// Next, update directory specific information
+  st = posix_directory_getInfo( p_dir );		// Next, update directory specific information
+
+  TRACE_EXIT
 
   return st;
 }
@@ -90,11 +95,15 @@ t_status fs_directory_create( const t_char * p_path, const char ** mode )
 
   status_reset( & st );
 
+  TRACE_ENTER
+
   if( p_path == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
   if( mkdir( p_path, S_IRWXU | S_IRGRP | S_IXGRP | S_IROTH | S_IXOTH ) == -1 )
       status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+
+  TRACE_EXIT
 
   return st;
 }
@@ -105,6 +114,8 @@ t_status fs_directory_getNumberElements( t_dir * p_dir, t_size * p_number )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_dir == NULL || p_number == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -124,6 +135,8 @@ t_status fs_directory_getNumberElements( t_dir * p_dir, t_size * p_number )
 
      } while( p_entry != NULL );
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -134,6 +147,8 @@ t_status fs_directory_getElementList( t_dir * p_dir, t_list * p_list )
   t_size	cap	= 0;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_dir == NULL || p_list == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -173,6 +188,8 @@ t_status fs_directory_getElementList( t_dir * p_dir, t_list * p_list )
   set_list_requiredCapacity( p_list, count );
   set_list_size( p_list, count );
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -181,6 +198,8 @@ t_status fs_directory_close( t_dir * p_dir )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_dir == NULL )
       status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );
@@ -196,16 +215,18 @@ t_status fs_directory_close( t_dir * p_dir )
 	}
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
 
-/*
-t_status fs_directory_copy( const t_char * p_source, const t_char * p_target )
+
+t_status fs_directory_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
-  return posix_directory_copy( p_source, p_target );
+  return posix_directory_copy( p_source, p_target, overwrite );
 }
-*/
+
 
 t_status fs_direntry_getName ( const t_dir_entry * p_entry, t_size nameSize, t_char * p_name )
 {
@@ -213,6 +234,8 @@ t_status fs_direntry_getName ( const t_dir_entry * p_entry, t_size nameSize, t_c
   t_size		size = 0;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_entry == NULL || p_name == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -225,6 +248,8 @@ t_status fs_direntry_getName ( const t_dir_entry * p_entry, t_size nameSize, t_c
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
   strncpy( p_name, p_entry->d_name, size );
+
+  TRACE_EXIT
 
   return st;
 }
@@ -243,6 +268,8 @@ t_status posix_directory_open( const t_char * p_path, t_dir * p_dir )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_path == NULL || p_dir == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -268,7 +295,7 @@ t_status posix_directory_open( const t_char * p_path, t_dir * p_dir )
   if( isDirNotAvailable( p_dir ) )
     { status_eset( OSAPI_MODULE_FS, __func__, errno, &st ); return st; }
 
-  st = posix_get_directory_info( p_dir );		// Get directory specific information
+  st = posix_directory_getInfo( p_dir );		// Get directory specific information
 
   if( status_success( st ) )
       p_dir->dir.state = osapi_fs_ostate_opened;
@@ -278,15 +305,19 @@ t_status posix_directory_open( const t_char * p_path, t_dir * p_dir )
       fs_directory_close( p_dir );
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
 
-t_status posix_get_directory_info( t_dir * p_dir )
+t_status posix_directory_getInfo( t_dir * p_dir )
 {
   t_status		st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_dir == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -296,11 +327,13 @@ t_status posix_get_directory_info( t_dir * p_dir )
       status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_notDirectory, &st );
   // else...
 
+  TRACE_EXIT
+
   return st;
 }
 
 /*
-t_status posix_directory_copy( const t_char * p_source, const t_char * p_target )
+t_status posix_directory_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
   t_status	st;
   t_dir		sDir, tDir;
@@ -309,6 +342,8 @@ t_status posix_directory_copy( const t_char * p_source, const t_char * p_target 
   bool		equal		= false;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -344,13 +379,15 @@ t_status posix_directory_copy( const t_char * p_source, const t_char * p_target 
 	 {
 	   st = common_list_getData( &list, (t_size) i, (void **) &ptr );
 	   if( status_success( st ) )
-	       st = fs_element_copy( ptr->fullpath, p_target );
+	       st = fs_element_copy( ptr->fullpath, p_target, true );
 
 	   if( status_failure( st ) ) break;
 	 }
     }
 
   common_list_deallocate( &list );
+
+  TRACE_EXIT
 
   return st;
 }

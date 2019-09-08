@@ -84,7 +84,7 @@ t_status posix_library_load( const char * pathname, int options, t_library * p_l
 	  st = proc_library_getError( OSAPI_STATUS_STRING_SIZE, errorString );
 
 	  if( status_success( st ) )	// Success in getting external error information
-              status_setString( OSAPI_MODULE_PROC, e_library_loader, __func__, errorString, &st );
+              status_setString( OSAPI_MODULE_PROC, osapi_status_library_loader, __func__, errorString, &st );
 	}
     }
 
@@ -109,7 +109,7 @@ t_status proc_library_unload( t_library library )
 	  st = proc_library_getError( OSAPI_STATUS_STRING_SIZE, errorString );
 
 	  if( status_success( st ) )	// Success in getting external error information
-              status_setString( OSAPI_MODULE_PROC, e_library_loader, __func__, errorString, &st );
+              status_setString( OSAPI_MODULE_PROC, osapi_status_library_loader, __func__, errorString, &st );
 	}
     }
 

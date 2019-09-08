@@ -37,6 +37,7 @@ struct osapi_fs_s_file_info
   bool			isBuffered;		///< Which open was used? Buffered or not?
   int			descriptor;		///< File descriptor (raw)
   FILE	*		handle;			///< File descriptor (stream oriented)
+  t_size		block_size;		///< File block size for buffered operations
 };
 
 typedef struct osapi_fs_s_file_info		t_fs_fileInfo;

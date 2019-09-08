@@ -1,0 +1,6 @@
+<map id="status_setString" name="status_setString">
+<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#ga1e32383c6dc4c79f31a366c46aa8dc5e" title="Get the module string. " alt="" coords="194,5,314,32"/>
+<area shape="rect" id="node3" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="198,56,310,83"/>
+<area shape="rect" id="node5" href="$group___g_e_n_e_r_a_l.html#gae9de6aba3a8c516a1e387efbf7ad93e8" title="Get the version string of the Library. " alt="" coords="171,107,337,133"/>
+<area shape="rect" id="node4" href="$group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="385,56,515,83"/>
+</map>

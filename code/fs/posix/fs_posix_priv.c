@@ -38,13 +38,13 @@
 
 
 
-int64_t posix_get_fs_open_options( const char ** p_options )
+int64_t posix_fs_getOpenOptions( const char ** p_options )
 {
   return common_options_get( osapi_fs_open_options,  (char **) p_options );
 }
 
 
-int64_t posix_get_fs_mode_options( const char ** p_options )
+int64_t posix_fs_getModeOptions( const char ** p_options )
 {
   return common_options_get( osapi_fs_mode_options,  (char **) p_options );
 }

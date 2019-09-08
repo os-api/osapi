@@ -30,8 +30,8 @@ struct s_libinfo
 typedef struct s_libinfo	t_libinfo;
 
 // Wrapper macros to retrieve a library info above given a pointer X and index Y
-#define proc_getLibraryName( x, y )	((*x)[y].name)
-#define proc_getLibraryVersion( x, y )	((*x)[y].version)
+#define proc_getLibraryName( x )	((x).name)
+#define proc_getLibraryVersion( x )	((x).version)
 
 
 // *****************************************************************************************

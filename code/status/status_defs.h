@@ -73,16 +73,13 @@
 // *****************************************************************************************
 
 /// The enum that defines the library ID used by the t_status type
-enum osapi_library_id
+enum osapi_status_e_library_id
 {
-  /// OSAPI Library
-  e_library_osapi 		= 0,//!< e_library_osapi
+  osapi_status_library_osapi 		= 0,	//!< Internal OSAPI library
 
   // System Libraries get negative codes
-  /// LibC Library
-  e_library_c			= -1,    //!< e_library_c
-  /// Loader library
-  e_library_loader		= -2,//!< e_library_loader
+  osapi_status_library_c		= -1,   //!< LibC Library
+  osapi_status_library_loader		= -2,	//!< Loader library
 };
 
 /// @brief Short notation to set a status type with a default value of success
@@ -92,10 +89,10 @@ enum osapi_library_id
 // Support macros for setting internal/external status errors
 
 /// @brief Set status type with OSAPI library information
-#define status_iset(m,f,e,r) 		status_set( m, e_library_osapi, f, e, r )
+#define status_iset(m,f,e,r) 		status_set( m, osapi_status_library_osapi, f, e, r )
 
 /// @brief Set status type with C library information
-#define status_eset(m,f,e,r) 		status_set( m, e_library_c,     f, e, r )
+#define status_eset(m,f,e,r) 		status_set( m, osapi_status_library_c,     f, e, r )
 
 
 #endif /* OSAPI_STATUS_DEFS_H_ */

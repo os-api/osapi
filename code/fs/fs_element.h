@@ -69,14 +69,26 @@ t_status fs_element_close	( t_element * element );
 /// @return SUCCESS if removed. An error condition otherwise.
 t_status fs_element_remove	( const char * path );
 
-/*
-/// @brief Copy an element
-/// If the destination already exists, it will overwrite it
+// @brief Special element copy operation
+// It enables full control of the copy operation by allowing to specify:
+// overwrite - Should the target element be overwritten
+// bsize - Copy block size in bytes
+// perm - destination element permissions
+// ownership - The destination file ownership (UID and GID)
+// @param [in] source     - Copy from
+// @param [in] target     - Copy into
+// @param [in] options	   - Copy control options
+// @return SUCCESS if copied. An error condition otherwise.
+//t_status fs_element_scopy	( const t_char * source, const t_char * target, const char ** options );
+
+/// @brief Extended element copy operation
+/// If the destination already exists, it will be overwritten if the respective parameter is set to true.
 /// @param [in] source     - Copy from
 /// @param [in] target     - Copy into
+/// @param [in] overwrite  - Overwrite target?
 /// @return SUCCESS if copied. An error condition otherwise.
-t_status fs_element_copy	( const t_char * source, const t_char * target );
-*/
+t_status fs_element_copy	( const t_char * source, const t_char * target, bool overwrite );
+
 /// @brief Move an element
 /// If the destination already exists, it will overwrite it
 /// @param [in] source     - Move from
@@ -92,8 +104,10 @@ t_status fs_element_move	( const t_char * source, const t_char * target );
 t_status fs_element_same	( const t_char * path1, const t_char * path2, bool * result );
 
 /// @brief Does such element exists in the path
-/// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_exists	( const char * path );
+/// @param [in]   path    - Path name of element
+/// @param [out]  exists  - Result of element search
+/// @return Operation status.
+t_status fs_element_exists	( const char * path, bool * exists );
 
 /// @brief Change the user owning the element
 /// @param [in] path	- Pathname to element
@@ -153,21 +167,27 @@ t_status fs_element_getGID 	( t_element * element, t_gid * gid );
 
 /// @brief Get element access time
 /// @param [in] element - File system element information
-/// @param [out] atime - Last element access time
+/// @param [out] atime  - Last element access time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getAtime	( t_element * element, t_time * atime 	);
+t_status fs_element_getAccessTime		( t_element * element, t_time * atime 	);
 
-/// @brief Get element creation time
-/// @param [in] info - File system element information
+/// @brief Get element creation/birth time
+/// @param [in] info   - File system element information
+/// @param [out] btime - Element creation time
+/// @return SUCCESS if it exists. An error condition otherwise.
+t_status fs_element_getCreationTime		( t_element * info, t_time * btime 	);
+
+/// @brief Get element change time
+/// @param [in] info   - File system element information
 /// @param [out] ctime - Element creation time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getCtime	( t_element * info, t_time * ctime 	);
+t_status fs_element_getChangetime		( t_element * info, t_time * ctime 	);
 
 /// @brief Get element modification time
-/// @param [in] element - File system element information
+/// @param [in] info   - File system element information
 /// @param [out] mtime - Last element modification time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getMtime	( t_element * element, t_time * mtime 	);
+t_status fs_element_getModificationTime		( t_element * info, t_time * mtime 	);
 
 /// @brief Get size of element in the file system
 /// @param [in] element - File system element information

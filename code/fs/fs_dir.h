@@ -65,13 +65,13 @@ t_status fs_directory_close( t_dir * dir );
 /// @return SUCCESS if created. An error condition otherwise (e.g. An element already exists with that name).
 t_status fs_directory_create		( const t_char * path, const char ** mode );
 
-/*
-/// @brief Copy an entire directory onto another
-/// @param [in] source  - Source directory name
-/// @param [in] target	- Destination directory name
-/// @return SUCCESS if copied. An error condition otherwise.
-t_status fs_directory_copy		( const t_char * source, const t_char * target );
-*/
+
+// @brief Copy an entire directory onto another
+// @param [in] source  - Source directory name
+// @param [in] target	- Destination directory name
+// @return SUCCESS if copied. An error condition otherwise.
+//t_status fs_directory_copy		( const t_char * source, const t_char * target, bool overwrite );
+
 
 /// @brief Obtain a directory descriptor
 /// @param [out] dir	- Directory descriptor

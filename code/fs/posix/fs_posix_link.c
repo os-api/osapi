@@ -103,12 +103,12 @@ t_status fs_link_createHard( const t_char * p_source, const t_char * p_target )
 }
 
 
-/*
-t_status fs_link_copy( const t_char * p_source, const t_char * p_target )
+
+t_status fs_link_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
-  return posix_link_copy( p_source, p_target );
+  return posix_link_copy( p_source, p_target, overwrite );
 }
-*/
+
 
 
 // *****************************************************************************************
@@ -197,8 +197,8 @@ t_status posix_link_createSoft( const t_char * p_source, const t_char * p_target
   return st;
 }
 
-/*
-t_status posix_link_copy( const t_char * p_source, const t_char * p_target )
+
+t_status posix_link_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
   t_status	st;
   t_dir		dir;
@@ -249,6 +249,6 @@ t_status posix_link_copy( const t_char * p_source, const t_char * p_target )
 
   return st;
 }
-*/
+
 
 #endif // POSIX only implementation

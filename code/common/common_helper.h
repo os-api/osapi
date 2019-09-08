@@ -69,6 +69,7 @@
 #define is_buffer_not_null(x)		(x->mem.data != NULL)
 
 // Get buffer information
+#define get_buffer_size(x)		(x->size)
 #define get_buffer_capacity(x)		(x->mem.capacity)
 #define get_buffer_address(x)		(x->mem.data)
 

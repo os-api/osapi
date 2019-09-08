@@ -1,0 +1,4 @@
+<map id="status_message_get" name="status_message_get">
+<area shape="rect" id="node2" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="196,5,308,32"/>
+<area shape="rect" id="node3" href="$group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="356,5,485,32"/>
+</map>

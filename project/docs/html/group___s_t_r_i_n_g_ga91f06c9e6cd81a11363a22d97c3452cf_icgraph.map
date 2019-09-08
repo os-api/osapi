@@ -1,0 +1,5 @@
+<map id="string_basic_delete" name="string_basic_delete">
+<area shape="rect" id="node2" href="$group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string. " alt="" coords="190,5,325,32"/>
+<area shape="rect" id="node4" href="$group___s_t_r_i_n_g.html#ga1233dc159a86808ab2f6c3efd2532089" title="Concatenation of two OSAPI strings. " alt="" coords="188,56,327,83"/>
+<area shape="rect" id="node3" href="$group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string. " alt="" coords="375,5,505,32"/>
+</map>

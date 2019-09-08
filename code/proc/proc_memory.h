@@ -53,7 +53,26 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-// + Memory management
+// + Raw Memory management
+
+/// @brief Allocate memory in the process heap
+/// @param [in] size - Required memory size in bytes
+/// @param [out] mem - Memory pointer
+/// @return Operation status
+t_status proc_rawMemory_allocate	( t_size size,    void * mem					);
+
+/// @brief Resize the previously allocated memory in the process heap
+/// @param [in]     newSize	- New memory size in bytes
+/// @param [in,out] mem		- Memory pointer
+/// @return Operation status
+t_status proc_rawMemory_reAllocate	( t_size newSize, void * mem 					);
+
+/// @brief Deallocate a previously allocated heap memory block
+/// @param [in] mem - Address of the memory to deallocate
+/// @return Operation status
+t_status proc_rawMemory_deallocate	( void * mem							);
+
+// + Safer Memory management
 
 /// @brief Allocate memory in the process heap
 /// @param [in] size - Required memory size in bytes

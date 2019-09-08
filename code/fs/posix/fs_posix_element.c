@@ -30,6 +30,7 @@
 #include "general/general_protocol.h"
 #include "error/modules/error_fs.h"
 #include "status/status.h"
+#include "status/trace_macros.h"
 
 // Own declarations
 #include "fs/fs_id.h"
@@ -50,41 +51,73 @@
 #ifdef OSAPI_POSIX
 
 
-t_status fs_element_exists( const t_char * p_path )
+t_status fs_element_exists( const t_char * p_path, bool * p_result )
+{
+ t_status		st;
+ struct stat		buffer;
+
+  status_reset( & st );
+
+  TRACE_ENTER
+
+  if( p_path == NULL || p_result == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  errno = 0;
+  if( lstat( p_path, &buffer ) != -1 )
+      *p_result = true;
+  else
+    {
+      if( errno == ENOENT )	*p_result = false;
+      else	  		status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+    }
+
+  TRACE_EXIT
+
+ return st;
+}
+
+t_status fs_element_getTypeByName( const t_char * p_path, t_fs_eType * p_type )
 {
   t_status		st;
+  char			errstr[ OSAPI_STATUS_STRING_SIZE + 1 ];
   struct stat		buffer;
 
   status_reset( & st );
 
-  if( lstat( p_path, &buffer ) == -1 )
+  TRACE_ENTER
+
+  if( p_path == NULL || p_type == NULL )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  if( strlen( p_path ) == 0 )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  *p_type = osapi_fs_type_unknown;
+  if( lstat( p_path, &buffer ) != -1 )
+      *p_type = posix_element_getType( buffer.st_mode );
+  else
+    {
+      strerror_r( errno, errstr, OSAPI_STATUS_STRING_SIZE );
+      TRACE( "lstat function returned error: %s", errstr )
+
       status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+    }
+
+  TRACE_EXIT
 
   return st;
 }
 
-t_status fs_element_getTypeByName( const t_char * p_path, t_fs_eType * type )
-{
-  t_status		st;
-  struct stat		buffer;
 
-  status_reset( & st );
-
-  if( lstat( p_path, &buffer ) == -1 )
-      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
-
-  *type = posix_get_element_type( buffer.st_mode );
-
-  return st;
-}
-
-/*
-t_status fs_element_copy( const t_char * p_source, const t_char * p_target )
+t_status fs_element_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
   t_status		st;
   t_fs_eType		sType;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -97,22 +130,26 @@ t_status fs_element_copy( const t_char * p_source, const t_char * p_target )
 
   switch( sType )
         {
-	  case osapi_fs_type_file:	st = posix_file_copy		( p_source, p_target );	break;
-	  case osapi_fs_type_directory:	st = posix_directory_copy	( p_source, p_target );	break;
+	  case osapi_fs_type_file:	st = posix_file_copy		( p_source, p_target, overwrite );	break;
+	  case osapi_fs_type_directory:	st = posix_directory_copy	( p_source, p_target, overwrite );	break;
 	  case osapi_fs_type_softLink:
-	  case osapi_fs_type_hardLink:	st = posix_link_copy		( p_source, p_target );	break;
+	  case osapi_fs_type_hardLink:	st = posix_link_copy		( p_source, p_target, overwrite );	break;
 	  default:			status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_elcopy, &st );
         }
 
+  TRACE_EXIT
+
   return st;
 }
-*/
+
 
 t_status fs_element_move( const t_char * p_source, const t_char * p_target )
 {
   t_status		st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -124,6 +161,8 @@ t_status fs_element_move( const t_char * p_source, const t_char * p_target )
   if( rename( p_source, p_target ) == -1 )
       status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -133,6 +172,8 @@ t_status fs_element_same( const t_char * p_path1, const t_char * p_path2, bool *
   t_fs_eid		id1, id2;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   // Get ID of first element
   st = fs_elementID_get( p_path1, &id1 );
@@ -145,8 +186,9 @@ t_status fs_element_same( const t_char * p_path1, const t_char * p_path2, bool *
   // Check if IDs are equal
   st = fs_elementID_equal( &id1, &id2, p_result );
 
-  return st;
+  TRACE_EXIT
 
+  return st;
 }
 
 
@@ -157,11 +199,19 @@ t_status fs_element_open( const t_char * p_path, t_element * p_element )
 }
 
 
+t_status fs_element_setPermissions( const char * p_path, t_fs_perm * p_perm )
+{
+  return posix_element_setPermissions( p_path, p_perm );
+}
+
+
 t_status fs_element_updateInfo( t_element * p_element )
 {
   t_status		st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_element == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
@@ -169,7 +219,9 @@ t_status fs_element_updateInfo( t_element * p_element )
   if( p_element->state != osapi_fs_ostate_opened )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_elopen, &st ); return st; }
 
-  st = posix_get_element_info( p_element );
+  st = posix_element_getInfo( p_element );
+
+  TRACE_EXIT
 
   return st;
 }
@@ -181,6 +233,8 @@ t_status fs_element_getID( t_element * p_element, t_fs_eid * p_id )
 
   status_reset( & st );
 
+  TRACE_ENTER
+
   if( p_element == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
@@ -191,26 +245,38 @@ t_status fs_element_getID( t_element * p_element, t_fs_eid * p_id )
   p_id->fsid.minor = p_element->id.fsid.minor;
   p_id->eid = p_element->id.eid;
 
+  TRACE_EXIT
+
   return st;
 }
 
 
-
-t_status fs_element_getAtime( t_element * p_element, t_time * p_time )
+t_status fs_element_getCreationTime( t_element * p_element, t_time * p_time )
 {
- return posix_get_element_time( p_element, osapi_fs_time_access, p_time );
+  return posix_element_getTime( p_element, osapi_fs_time_create, p_time );
 }
 
-t_status fs_element_getCtime( t_element * p_element, t_time * p_time )
+
+t_status fs_element_getAcessTime( t_element * p_element, t_time * p_time )
 {
-  return posix_get_element_time( p_element, osapi_fs_time_create, p_time );
+ return posix_element_getTime( p_element, osapi_fs_time_access, p_time );
 }
 
-t_status fs_element_getMtime( t_element * p_element, t_time * p_time )
+t_status fs_element_getChangeTime( t_element * p_element, t_time * p_time )
 {
-  return posix_get_element_time( p_element, osapi_fs_time_modify, p_time );
+  return posix_element_getTime( p_element, osapi_fs_time_change, p_time );
 }
 
+t_status fs_element_getModificationTime( t_element * p_element, t_time * p_time )
+{
+  return posix_element_getTime( p_element, osapi_fs_time_modify, p_time );
+}
+
+
+t_status fs_element_getPermissions( t_element * p_element, t_fs_perm * p_perm )
+{
+  return posix_element_getPermissions( p_element, p_perm );
+}
 
 
 
@@ -222,20 +288,26 @@ t_status fs_element_getMtime( t_element * p_element, t_time * p_time )
 
 
 
-t_fs_eType posix_get_element_type( mode_t m )
+t_fs_eType posix_element_getType( mode_t m )
 {
-  switch( m & S_IFMT)
-	{
-	  case S_IFREG: return osapi_fs_type_file;
-	  case S_IFDIR: return osapi_fs_type_directory;
-	  case S_IFLNK:	return osapi_fs_type_softLink;
-	  case S_IFCHR: return osapi_fs_type_charDevice;
-	  case S_IFBLK: return osapi_fs_type_blockDevice;
-	  case S_IFIFO: return osapi_fs_type_fifo;
-	  case S_IFSOCK:return osapi_fs_type_socket;
-	}
+ t_fs_eType	tp = osapi_fs_type_unknown;
 
-  return osapi_fs_type_unknown;
+ TRACE_ENTER
+
+ switch( m & S_IFMT)
+       {
+	  case S_IFREG: tp = osapi_fs_type_file;	break;
+	  case S_IFDIR: tp = osapi_fs_type_directory;	break;
+	  case S_IFLNK:	tp = osapi_fs_type_softLink;	break;
+	  case S_IFCHR: tp = osapi_fs_type_charDevice;	break;
+	  case S_IFBLK: tp = osapi_fs_type_blockDevice;	break;
+	  case S_IFIFO: tp = osapi_fs_type_fifo;	break;
+	  case S_IFSOCK:tp = osapi_fs_type_socket;	break;
+       }
+
+  TRACE( "Leaving with %d", tp )
+
+  return tp;
 }
 
 
@@ -246,6 +318,8 @@ t_status posix_element_open( const t_char * p_path, t_element * p_element )
 
   status_reset( & st );
 
+  TRACE_ENTER
+
   if( p_path == NULL || p_element == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
@@ -253,7 +327,7 @@ t_status posix_element_open( const t_char * p_path, t_element * p_element )
 
   strcpy( p_element->fullpath, p_path );
 
-  st = posix_get_element_info( p_element );
+  st = posix_element_getInfo( p_element );
 
   if( status_success( st ) )
       p_element->state = osapi_fs_ostate_opened;
@@ -265,82 +339,142 @@ t_status posix_element_open( const t_char * p_path, t_element * p_element )
 	  strcpy( p_element->fullpath, p_path );			// Make sure that there is always a path even if relative
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
 
-t_status posix_get_element_info( t_element * p_element )
+t_status posix_element_getInfo( t_element * p_element )
 {
   t_status		st;
   struct stat		buffer;
 
   status_reset( & st );
 
+  TRACE_ENTER
+
   if( p_element == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );return st; }
 
   if( lstat( p_element->fullpath, &buffer ) == -1 )
-    { status_eset( OSAPI_MODULE_FS, __func__, errno, &st ); return st; }
+      status_eset( OSAPI_MODULE_FS, __func__, errno, &st );
+  else
+      st = posix_decode_element_info( &buffer, p_element );
 
-  st = posix_decode_element_info( &buffer, p_element );
+  TRACE_EXIT
 
   return st;
 }
 
 
-t_status posix_decode_element_info( const struct stat * p_stat, t_fs_elementInfo * p_info )
+t_status posix_decode_element_info( const struct stat * p_stat, t_element * p_info )
 {
   t_status		st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_stat == NULL || p_info == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
   // Transform a POSIX structure onto a generic one
-  p_info->type	= posix_get_element_type( p_stat->st_mode );
+  p_info->type	= posix_element_getType( p_stat->st_mode );
   p_info->uid	= p_stat->st_uid;				// Only possible since it's also at POSIX level, otherwise uid_copy
   p_info->gid	= p_stat->st_gid;				// Only possible since it's also at POSIX level, otherwise gid_copy
   p_info->nlink	= (uint64_t) p_stat->st_nlink;
   p_info->id.fsid.major = unix_get_dev_major( p_stat->st_dev );
   p_info->id.fsid.minor = unix_get_dev_minor( p_stat->st_dev );
-  if( p_stat->st_size < (uint64_t) 0 )
-      p_info->size = (uint64_t) 0;
-  else
-      p_info->size = (uint64_t) p_stat->st_size;	// Size in file system
 
+  // File size
+  if( p_stat->st_size < (uint64_t) 0 )	p_info->size = (uint64_t) 0;
+  else					p_info->size = (uint64_t) p_stat->st_size;
+
+  // Block size
+  if( p_stat->st_blksize < (uint64_t) 0 )	p_info->block_size = (uint32_t) 0;
+  else						p_info->block_size = (uint32_t) p_stat->st_blksize;
 
   // The time can be in several formats.. need to convert to the same one
   //p_info->ctime	= p_stat->;
+
+  p_info->perm.mode = p_stat->st_mode & ( S_ISUID | S_ISGID | S_ISVTX | S_IRWXU | S_IRWXG | S_IRWXO );
+
+  TRACE_EXIT
 
   return st;
 }
 
 
 
-t_status posix_get_element_time( const t_element * p_element, int selector, t_time * p_time )
+t_status posix_element_getTime( const t_element * p_element, int selector, t_time * p_time )
 {
-  t_status		st;
+ t_status		st;
 
-  status_reset( & st );
+ status_reset( & st );
 
-  if( p_element == NULL || p_time == NULL )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+ TRACE_ENTER
 
-  if( p_element->state != osapi_fs_ostate_opened )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_elopen, &st ); return st; }
+ if( p_element == NULL || p_time == NULL )
+   { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
-  switch( selector )
-        {
-	  case osapi_fs_time_create:	*p_time = p_element->ctime; break;
+ if( p_element->state != osapi_fs_ostate_opened )
+   { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_elopen, &st ); return st; }
+
+ switch( selector )
+       {
+	  case osapi_fs_time_create:	*p_time = p_element->btime; break;
+	  case osapi_fs_time_change:	*p_time = p_element->ctime; break;
 	  case osapi_fs_time_modify:	*p_time = p_element->mtime; break;
 	  case osapi_fs_time_access:	*p_time = p_element->atime; break;
-        }
+       }
+
+ TRACE_EXIT
 
  return st;
 }
 
 
+t_status posix_element_setPermissions( const char * p_path, t_fs_perm * p_perm )
+{
+ t_status		st;
+
+ status_reset( & st );
+
+ TRACE_ENTER
+
+ if( p_path == NULL || p_perm == NULL )
+   { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+
+// TODO
+
+
+ TRACE_EXIT
+
+ return st;
+}
+
+
+t_status posix_element_getPermissions( t_element * p_element, t_fs_perm * p_perm )
+{
+ t_status		st;
+
+ status_reset( & st );
+
+ TRACE_ENTER
+
+ if( p_element == NULL || p_perm == NULL )
+   { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+ p_perm->mode = p_element->perm.mode;
+
+ TRACE( "Element Permissions: %d, %d", (int) p_perm->mode, (int) ((p_element->perm.mode) & 7777) )
+
+ TRACE_EXIT
+
+ return st;
+}
 
 
 

@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.27</span>
+   &#160;<span id="projectnumber">0.28</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -93,6 +93,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga986cf6aa6b7818f6e761e5e48f55eeeb">fs_directory_create</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, const char **mode)</td></tr>
 <tr class="memdesc:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory.  <a href="#ga986cf6aa6b7818f6e761e5e48f55eeeb">More...</a><br /></td></tr>
 <tr class="separator:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga880159e9ae6440e0c4425abd5f5e8dd7">fs_directory_copy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target, bool overwrite)</td></tr>
+<tr class="memdesc:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an entire directory onto another.  <a href="#ga880159e9ae6440e0c4425abd5f5e8dd7">More...</a><br /></td></tr>
+<tr class="separator:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae39c2690014b7bff55c66e023ea9b4c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae39c2690014b7bff55c66e023ea9b4c4">fs_directory_updateInfo</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir)</td></tr>
 <tr class="memdesc:gae39c2690014b7bff55c66e023ea9b4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a directory descriptor.  <a href="#gae39c2690014b7bff55c66e023ea9b4c4">More...</a><br /></td></tr>
 <tr class="separator:gae39c2690014b7bff55c66e023ea9b4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -129,6 +132,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga6589f6f50942c049daba5d9369967010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga6589f6f50942c049daba5d9369967010">fs_element_remove</a> (const char *path)</td></tr>
 <tr class="memdesc:ga6589f6f50942c049daba5d9369967010"><td class="mdescLeft">&#160;</td><td class="mdescRight">Eliminate a an element from the file system.  <a href="#ga6589f6f50942c049daba5d9369967010">More...</a><br /></td></tr>
 <tr class="separator:ga6589f6f50942c049daba5d9369967010"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga62cea747516bebd2a9c54bd21fe27bcd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga62cea747516bebd2a9c54bd21fe27bcd">fs_element_scopy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target)</td></tr>
+<tr class="memdesc:ga62cea747516bebd2a9c54bd21fe27bcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Special element copy operation It enables full control of the copy operation by allowing to specify: overwrite - Should the target element be overwritten bsize - Copy block size in bytes perm - destination element permissions ownership - The destination file ownership (UID and GID)  <a href="#ga62cea747516bebd2a9c54bd21fe27bcd">More...</a><br /></td></tr>
+<tr class="separator:ga62cea747516bebd2a9c54bd21fe27bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2cd7f1b1475e572cea437450674a7b8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d">fs_element_copy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target, bool overwrite)</td></tr>
+<tr class="memdesc:ga2cd7f1b1475e572cea437450674a7b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extended element copy operation If the destination already exists, it will be overwritten if the respective parameter is set to true.  <a href="#ga2cd7f1b1475e572cea437450674a7b8d">More...</a><br /></td></tr>
+<tr class="separator:ga2cd7f1b1475e572cea437450674a7b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56658c1f8e4557871d25e7ce3af07413"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga56658c1f8e4557871d25e7ce3af07413">fs_element_move</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target)</td></tr>
 <tr class="memdesc:ga56658c1f8e4557871d25e7ce3af07413"><td class="mdescLeft">&#160;</td><td class="mdescRight">Move an element If the destination already exists, it will overwrite it.  <a href="#ga56658c1f8e4557871d25e7ce3af07413">More...</a><br /></td></tr>
 <tr class="separator:ga56658c1f8e4557871d25e7ce3af07413"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +216,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga4c9c43efa8bc0e9e5132a32631c89917"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga4c9c43efa8bc0e9e5132a32631c89917">fs_file_create</a> (const char *path, const char **mode)</td></tr>
 <tr class="memdesc:ga4c9c43efa8bc0e9e5132a32631c89917"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new file File is created but not opened.  <a href="#ga4c9c43efa8bc0e9e5132a32631c89917">More...</a><br /></td></tr>
 <tr class="separator:ga4c9c43efa8bc0e9e5132a32631c89917"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd7dbc7d41c41771edff7d47b7ba714f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gadd7dbc7d41c41771edff7d47b7ba714f">fs_file_copy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target, bool overwrite)</td></tr>
+<tr class="memdesc:gadd7dbc7d41c41771edff7d47b7ba714f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a file element If the destination already exists, it will overwrite it.  <a href="#gadd7dbc7d41c41771edff7d47b7ba714f">More...</a><br /></td></tr>
+<tr class="separator:gadd7dbc7d41c41771edff7d47b7ba714f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga71e29b2e232e5fe06dff24b75a68c3b1">fs_file_setPosition</a> (const <a class="el" href="structosapi__fs__s__file.html">t_file</a> *file, int initial, <a class="el" href="group___g_e_n_e_r_a_l.html#gadebf00953694fdb343c01ab637e84c0c">t_offset</a> offset)</td></tr>
 <tr class="memdesc:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Position the file stream according The file position is provided by the start location (begin, end of file) and the displacement offset.  <a href="#ga71e29b2e232e5fe06dff24b75a68c3b1">More...</a><br /></td></tr>
 <tr class="separator:ga71e29b2e232e5fe06dff24b75a68c3b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,6 +267,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga22460edd727342992dff73a3d931110f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga22460edd727342992dff73a3d931110f">fs_link_createHard</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target)</td></tr>
 <tr class="memdesc:ga22460edd727342992dff73a3d931110f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new hard link.  <a href="#ga22460edd727342992dff73a3d931110f">More...</a><br /></td></tr>
 <tr class="separator:ga22460edd727342992dff73a3d931110f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2249dbde9c7e8cee8aaaf11a4f6236e6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga2249dbde9c7e8cee8aaaf11a4f6236e6">fs_link_copy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target, bool overwrite)</td></tr>
+<tr class="memdesc:ga2249dbde9c7e8cee8aaaf11a4f6236e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy a link element If there is a destination, link creation fails.  <a href="#ga2249dbde9c7e8cee8aaaf11a4f6236e6">More...</a><br /></td></tr>
+<tr class="separator:ga2249dbde9c7e8cee8aaaf11a4f6236e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f01960f99811cc54d9ca1b0e330a7fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga7f01960f99811cc54d9ca1b0e330a7fe">fs_link_updateInfo</a> (<a class="el" href="structosapi__fs__s__link.html">t_link</a> *link)</td></tr>
 <tr class="memdesc:ga7f01960f99811cc54d9ca1b0e330a7fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a link descriptor from a path name.  <a href="#ga7f01960f99811cc54d9ca1b0e330a7fe">More...</a><br /></td></tr>
 <tr class="separator:ga7f01960f99811cc54d9ca1b0e330a7fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -296,6 +311,50 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if directory descriptor closed. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga880159e9ae6440e0c4425abd5f5e8dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga880159e9ae6440e0c4425abd5f5e8dd7">&#9670;&nbsp;</a></span>fs_directory_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy an entire directory onto another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Source directory name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Destination directory name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
 
 </div>
 </div>
@@ -738,6 +797,51 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="group___f_s.html#gae1b9f7c2937b383a7d057607b8bae97c" title="Close a link. " alt="" coords="177,5,276,32"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ga2cd7f1b1475e572cea437450674a7b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2cd7f1b1475e572cea437450674a7b8d">&#9670;&nbsp;</a></span>fs_element_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extended element copy operation If the destination already exists, it will be overwritten if the respective parameter is set to true. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Copy into </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">overwrite</td><td>- Overwrite target? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
 
 </div>
 </div>
@@ -1368,6 +1472,45 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
+<a id="ga62cea747516bebd2a9c54bd21fe27bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga62cea747516bebd2a9c54bd21fe27bcd">&#9670;&nbsp;</a></span>fs_element_scopy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_element_scopy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Special element copy operation It enables full control of the copy operation by allowing to specify: overwrite - Should the target element be overwritten bsize - Copy block size in bytes perm - destination element permissions ownership - The destination file ownership (UID and GID) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Copy into </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">options</td><td>- Copy control options </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="ga10c436a60f5bdf9ebcab111b52de7b37"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga10c436a60f5bdf9ebcab111b52de7b37">&#9670;&nbsp;</a></span>fs_element_setGID()</h2>
 
@@ -1654,6 +1797,50 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if it exists. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="gadd7dbc7d41c41771edff7d47b7ba714f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd7dbc7d41c41771edff7d47b7ba714f">&#9670;&nbsp;</a></span>fs_file_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_file_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy a file element If the destination already exists, it will overwrite it. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Copy into </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
 
 </div>
 </div>
@@ -2365,6 +2552,50 @@ Here is the call graph for this function:</div>
 <area shape="rect" id="node3" href="group___f_s.html#ga08b0a39d1f5d0305bdcf9448e94c37ea" title="Close a file system element descriptor. " alt="" coords="152,31,276,57"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="ga2249dbde9c7e8cee8aaaf11a4f6236e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2249dbde9c7e8cee8aaaf11a4f6236e6">&#9670;&nbsp;</a></span>fs_link_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_link_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy a link element If there is a destination, link creation fails. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Copy into </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
 
 </div>
 </div>

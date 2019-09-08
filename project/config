@@ -1,0 +1,34 @@
+# ****************************************************************************************
+# Author: Joao Costa
+# Purpose: To configure the environment for the OSAPI project
+#	   This file can be used in different code development steps such as:
+#	   1) After Releases
+#	   2) Perform release
+#	   3) Building
+#	   Etc.
+#
+# Usage: To use the file, simply import it into the current script environment, e.g.:
+#	 . $OSAPI_DIR/project/config
+#
+# ****************************************************************************************
+
+# The base project directory
+WORKDIR=$OSAPI_DIR
+
+# The base source directory code
+CODE_DIR=$WORKDIR/code
+
+# The directory where the GIT settings are stored
+GIT_DIR=$REPOSITORY_DIR/osapi
+
+# The base directory for project documentation
+DOC_DIR=$OSAPI_DIR/project/docs
+
+# The base directory for project production
+BUILD_DIR=$WORKDIR
+
+# Directory that contains the project templates
+TEMPLATE_DIR=$WORKDIR/project/templates
+
+# The directory to where the templates will be copied after token replacement
+TEMPLATE_DESTINATION_DIR=$CODE_DIR/general/mappings

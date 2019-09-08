@@ -71,14 +71,15 @@ t_status fs_link_createSoft		( const t_char * source, const t_char * target );
 /// @return SUCCESS if created. An error condition otherwise.
 t_status fs_link_createHard		( const t_char * source, const t_char * target );
 
-/*
+
 /// @brief Copy a link element
 /// If there is a destination, link creation fails
 /// @param [in] source     - Copy from
 /// @param [in] target     - Copy into
+/// @param [in] overwrite  - If file exists, overwrite it ?
 /// @return SUCCESS if copied. An error condition otherwise.
-t_status fs_link_copy	( const t_char * source, const t_char * target );
-*/
+t_status fs_link_copy	( const t_char * source, const t_char * target, bool overwrite );
+
 
 /// @brief Obtain a link descriptor from a path name
 /// @param [out] link	- Link descriptor

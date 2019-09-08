@@ -29,7 +29,6 @@ extern "C" {
 // Own declarations
 #include "status/status_types.h"
 
-
 /// *****************************************************************************************
 ///
 ///@addtogroup OSAPI
@@ -76,7 +75,7 @@ void status_message_print( t_status status );
 /// @param [in] status - Status information
 /// @param [in] size - Size of the message string
 /// @param [out] message - String with the status information
-void status_message_get( t_status status, t_size size, t_char * message	);
+void status_message_retrieve( t_status status, t_size size, t_char * message );
 
 // Get component strings of a t_status type
 /// @brief Get the module name that corresponds to the provided status information
@@ -93,7 +92,7 @@ const char * status_function_get( t_status status );
 /// @brief Get the error message that corresponds to the provided status information
 /// @param [in] status - Status information
 /// @return Error string
-const char * status_error_get( t_status status );
+const char * status_message_get( t_status status );
 
 
 #pragma GCC visibility pop			// End of public interface

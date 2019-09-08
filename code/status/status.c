@@ -19,6 +19,8 @@
 // System headers
 #include <stdio.h>
 #include <string.h>
+#include <stdarg.h>
+#include <inttypes.h>
 
 // // Generic OSAPI includes
 #include "general/general.h"
@@ -60,7 +62,7 @@ void		status_message_sGet		( t_status, t_size, t_char * 	);
 void status_reset( t_status * p_status )
 {
   p_status->module	=	OSAPI_MODULE_NONE;
-  p_status->type 	= 	e_library_osapi;
+  p_status->type 	= 	osapi_status_library_osapi;
   p_status->code 	= 	0;
   p_status->funcname	=	OSAPI_EMPTY_STRING;
 }
@@ -131,30 +133,23 @@ void status_message_print( t_status status )
 
   switch( status.type )
 	{
-	  case	e_library_osapi: 	status_message_iPrint( status );
-				        break;
-	  case	e_library_c:	 	status_message_cPrint( status );
-					break;
-	  case	e_library_loader:	status_message_sPrint( status );
-					break;
-	  default:		 	break;		// Do nothing
+	  case	osapi_status_library_osapi: 	status_message_iPrint( status );	break;
+	  case	osapi_status_library_c:	 	status_message_cPrint( status );	break;
+	  case	osapi_status_library_loader:	status_message_sPrint( status );	break;
+	  default:		 							break;		// Do nothing
 	}
 }
 
-void status_message_get( t_status status, t_size size, t_char * p_message )
+void status_message_retrieve( t_status status, t_size size, t_char * p_message )
 {
   // Search the library type that produce the status information
 
   switch( status.type )
 	{
-	  case	e_library_osapi: 	status_message_iGet( status, size, p_message );
-					break;
-	  case	e_library_c:	 	status_message_cGet( status, size, p_message );
-					break;
-	  case	e_library_loader:	status_message_sGet( status, size, p_message );
-					break;
-
-	  default:		 	break;		// Do nothing
+	  case	osapi_status_library_osapi: 	status_message_iGet( status, size, p_message );	break;
+	  case	osapi_status_library_c:	 	status_message_cGet( status, size, p_message );	break;
+	  case	osapi_status_library_loader:	status_message_sGet( status, size, p_message );	break;
+	  default:		 								break;		// Do nothing
 	}
 }
 
@@ -171,21 +166,34 @@ const char * status_function_get( t_status status )
       return status.funcname;
 }
 
-const char * status_error_get( t_status status )
+const char * status_message_get( t_status status )
 {
   // Search the library type that produce the status information
 
   switch( status.type )
 	{
-	  case	e_library_osapi: 	return error_string_get( status.module, status.code );
-	  case	e_library_c:	 	return status_error_getSystem( status.code );
-	  case	e_library_loader:	return osapi_status_string;
-	  default:		 	return OSAPI_EMPTY_STRING;
+	  case	osapi_status_library_osapi: 	return error_string_get( status.module, status.code );
+	  case	osapi_status_library_c:	 	return status_error_getSystem( status.code );
+	  case	osapi_status_library_loader:	return osapi_status_string;
+	  default:		 		return OSAPI_EMPTY_STRING;
 	}
 
 }
 
 
+void osapi_status_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... )
+{
+  va_list args;
 
+  fprintf( stderr, "%s%s%" PRIu64, func, sep, line );
+
+  va_start(args, fmt );
+  vfprintf( stderr, fmt, args );
+  va_end(args);
+
+  fprintf( stderr, "\n" );
+
+  fflush( stderr );
+}
 
 

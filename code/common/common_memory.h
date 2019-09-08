@@ -39,6 +39,12 @@
 
 #pragma GCC visibility push(default)		// Start of internal interface
 
+
+// Raw memory allocation related
+t_status	common_rawMemory_allocate	( t_size size,    void ** p_mem						);
+t_status	common_rawMemory_reAllocate	( t_size newSize, void ** p_mem						);
+t_status	common_rawMemory_deallocate	( void * p_mem								);
+
 // Memory allocation related
 t_status	common_memory_allocate		( size_t size,    t_memory * p_mem					);
 t_status	common_memory_reAllocate	( t_size newSize, t_memory * p_mem 					);

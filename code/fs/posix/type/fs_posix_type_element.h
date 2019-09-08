@@ -33,12 +33,10 @@ enum osapi_fs_e_time_element
 {
   osapi_fs_time_unknown	= 0,	///< Undefined time type
   osapi_fs_time_create	= 1,	///< Creation time type
-  osapi_fs_time_modify	= 2,	///< Modification time type
-  osapi_fs_time_access	= 3	///< Access time type
+  osapi_fs_time_change	= 2,	///< Creation time type
+  osapi_fs_time_modify	= 3,	///< Modification time type
+  osapi_fs_time_access	= 4	///< Access time type
 };
-
-// Include own types
-typedef mode_t	t_fs_ePerm;
 
 /// Structure that defines a file system permissions
 struct osapi_fs_s_element_permissions

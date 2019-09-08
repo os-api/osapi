@@ -26,7 +26,7 @@
 #include "general/general.h"
 #include "error/modules/error_common.h"
 #include "status/status.h"
-
+#include "status/trace_macros.h"
 
 // Own declarations
 #include "common/common_defs.h"
@@ -40,11 +40,80 @@
 // *****************************************************************************************
 
 
-t_status common_memory_allocate( size_t size, t_memory * p_mem )
+t_status common_rawMemory_allocate( t_size size, void ** p_mem )
 {
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
+
+  if( size == 0 || p_mem == NULL )
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
+  else
+    {
+      errno = 0;
+      *p_mem = calloc( 1, size );
+
+      if( *p_mem == NULL )
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
+    }
+
+  TRACE_EXIT
+
+  return st;
+}
+
+t_status common_rawMemory_reAllocate( t_size size, void ** p_mem )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  TRACE_ENTER
+
+  if( size == 0 || p_mem == NULL )
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
+  else
+    {
+      errno = 0;
+      *p_mem = realloc( *p_mem, size );
+
+      if( *p_mem == NULL )
+	  status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
+    }
+
+  TRACE_EXIT
+
+  return st;
+}
+
+t_status common_rawMemory_deallocate( void * p_mem )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  TRACE_ENTER
+
+  if( p_mem == NULL )
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
+  else
+      free( p_mem );
+
+  TRACE_EXIT
+
+  return st;
+}
+
+
+t_status common_memory_allocate( t_size size, t_memory * p_mem )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  TRACE_ENTER
 
   if( size == 0 || p_mem == NULL )
       status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
@@ -67,6 +136,8 @@ t_status common_memory_allocate( size_t size, t_memory * p_mem )
 	}
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -75,6 +146,8 @@ t_status common_memory_reAllocate( t_size size, t_memory * p_mem )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( size == 0 || p_mem == NULL )
       status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
@@ -102,6 +175,8 @@ t_status common_memory_reAllocate( t_size size, t_memory * p_mem )
 	}
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -110,6 +185,8 @@ t_status common_memory_deallocate( t_memory * p_mem )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_mem == NULL )
       status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
@@ -129,6 +206,8 @@ t_status common_memory_deallocate( t_memory * p_mem )
 	}
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -137,6 +216,8 @@ t_status common_memory_getCapacity( const t_memory * p_mem, t_size * p_size )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_mem == NULL || p_size == NULL )
       status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
@@ -148,6 +229,8 @@ t_status common_memory_getCapacity( const t_memory * p_mem, t_size * p_size )
 	  *p_size = p_mem->capacity;
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -156,6 +239,8 @@ t_status common_memory_getData( const t_memory * p_mem, void ** p_data )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_mem == NULL || p_data == NULL )
       status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
@@ -167,6 +252,8 @@ t_status common_memory_getData( const t_memory * p_mem, void ** p_data )
 	  *p_data = p_mem->data;
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -177,6 +264,8 @@ t_status common_memory_copy( const t_memory * p_source, t_memory * p_target )
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL )
     {
@@ -212,6 +301,8 @@ t_status common_memory_copy( const t_memory * p_source, t_memory * p_target )
 	  p_target->capacity = p_source->capacity;
     }
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -221,6 +312,8 @@ t_status common_memory_copyFrom( const t_memory * p_source, t_size targetSize, v
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL || targetSize == (t_size) 0 )
     {
@@ -245,6 +338,8 @@ t_status common_memory_copyFrom( const t_memory * p_source, t_size targetSize, v
   if( ptr != p_target || errno != 0 )
       status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
 
+  TRACE_EXIT
+
   return st;
 }
 
@@ -254,6 +349,8 @@ t_status common_memory_copyTo( const void * p_source, t_size sourceSize, t_memor
   t_status	st;
 
   status_reset( & st );
+
+  TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL || sourceSize == (t_size) 0 )
     {
@@ -274,6 +371,8 @@ t_status common_memory_copyTo( const void * p_source, t_size sourceSize, t_memor
 
   if( ptr != p_target->data || errno != 0 )
       status_eset( OSAPI_MODULE_COMMON, __func__, errno, &st );
+
+  TRACE_EXIT
 
   return st;
 }

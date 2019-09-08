@@ -44,36 +44,47 @@
 //
 // *****************************************************************************************
 
-// Final implementation functions for fs_XXX_YYY
-
 t_status	posix_element_open		( const t_char * p_path, t_element * p_element				);
+t_status	posix_element_getInfo		( t_element * p_element							);
+t_status	posix_decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info		);
+t_status	posix_element_getTime		( const t_fs_elementInfo * info, int selector, t_time * time		);
+t_status	posix_element_setPermissions	( const char * p_path, t_fs_perm * p_perm				);
+t_status	posix_element_getPermissions	( t_element * p_element, t_fs_perm * p_perm				);
+t_fs_eType	posix_element_getType		( mode_t mode								);
 
-t_status	posix_file_open			( const t_char * p_path, const char ** p_mode, t_file * p_file		);
+t_status	posix_file_open			( const t_char * path, int64_t open, int64_t mode, t_file * file	);
 t_status	posix_file_read			( const t_file * p_file, t_buffer * p_buffer, bool * p_eof		);
-t_status	posix_file_write		( const t_file * p_file, t_buffer * p_buffer				);
-//t_status	posix_file_copy			( const t_char * p_source, const t_char * p_target			);
+t_status	posix_file_write		( const t_file * p_file, const t_buffer * p_buffer			);
+t_status	posix_file_copy			( const t_char * p_source, const t_char * p_target, bool overwrite	);
 t_status	posix_file_close		( t_file * p_file							);
+t_status	posix_file_copy2file		( t_file * p_source, const t_char * p_target, bool overwrite		);
+t_status	posix_file_copy2dir		( t_file * p_source, const t_char * p_target, bool overwrite		);
+t_status	posix_file_openStream		( const t_char * pathname, const char * options, t_file * file		);
+t_status 	posix_file_getInfo		( t_file * p_file							);
 
 t_status	posix_directory_open		( const t_char * p_path, t_dir * p_dir					);
-//t_status	posix_directory_copy		( const t_char * p_source, const t_char * p_target			);
+t_status	posix_directory_copy		( const t_char * p_source, const t_char * p_target, bool overwrite	);
+t_status	posix_directory_getInfo		( t_dir * p_dir								);
+t_fs_eType	posix_get_type_dir_entry	( t_dir_entry * entry							);
 
 t_status	posix_link_open			( const t_char * p_path, t_link * p_link				);
-//t_status	posix_link_copy			( const t_char * p_source, const t_char * p_target			);
+t_status	posix_link_copy			( const t_char * p_source, const t_char * p_target, bool overwrite	);
 t_status	posix_link_createSoft		( const t_char * p_source, const t_char * p_target			);
+t_status	posix_get_link_info		( t_link * p_info							);
 
 // POSIX specific functions
-t_status	posix_get_element_info		( t_element * p_element							);
-t_status	posix_decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info		);
-t_fs_eType	posix_get_element_type		( mode_t mode								);
-int64_t		posix_get_fs_open_options	( const char ** p_options						);
-int64_t		posix_get_fs_mode_options	( const char ** p_options						);
-t_status	posix_get_element_time		( const t_fs_elementInfo * info, int selector, t_time * time		);
-t_status	posix_open_file			( const t_char * pathname, int64_t open, int64_t mode, t_file * file	);
-t_status	posix_open_filestream		( const t_char * pathname, const char * options, t_file * file		);
-t_status 	posix_get_file_info		( t_file * p_file							);
-t_status	posix_get_directory_info	( t_dir * p_dir								);
-t_status	posix_get_link_info		( t_link * p_info							);
-t_fs_eType	posix_get_type_dir_entry	( t_dir_entry * entry							);
+int64_t		posix_fs_getOpenOptions		( const char ** p_options						);
+int64_t		posix_fs_getModeOptions		( const char ** p_options						);
+
+
+
+// *****************************************************************************************
+//
+// Section: Macros
+//
+// *****************************************************************************************
+
+#define		posix_getElementPermMode(x)	( x->element.perm.mode )
 
 #endif // Only in POSIX mode
 

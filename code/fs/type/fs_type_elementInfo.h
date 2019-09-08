@@ -40,7 +40,10 @@ struct osapi_fs_element_info
   t_uid			uid;				///< User ID
   t_gid			gid;				///< Group ID
   uint64_t		size;				///< Element size
-  t_time		ctime;				///< Creation time
+  uint32_t		block_size;			///< IO preferred block size
+   // Next field requires a Linux implementation using statx and not stat structure
+  t_time		btime;				///< Creation (birth) time
+  t_time		ctime;				///< Change time
   t_time		atime;				///< Access time
   t_time		mtime;				///< Modification time
   uint64_t		nlink;				///< Number of hard links to element

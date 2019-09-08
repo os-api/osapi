@@ -89,14 +89,15 @@ t_status fs_file_openReadWrite	( const t_char * path, t_file * file );
 /// @return SUCCESS if created. An error condition otherwise (e.g. file already exists).
 t_status fs_file_create		( const char * path, const char ** mode );
 
-/*
+
 /// @brief Copy a file element
 /// If the destination already exists, it will overwrite it
 /// @param [in] source     - Copy from
 /// @param [in] target     - Copy into
+/// @param [in] overwrite  - If file exists, overwrite it ?
 /// @return SUCCESS if copied. An error condition otherwise.
-t_status fs_file_copy		( const t_char * source, const t_char * target );
-*/
+t_status fs_file_copy		( const t_char * source, const t_char * target, bool overwrite );
+
 
 /// @brief Position the file stream according
 /// The file position is provided by the start location (begin, end of file)
@@ -126,6 +127,13 @@ t_status fs_file_setPositionEnd	( const t_file * file );
 /// @param [in] distance	- Set current file position at a distance from the file beginning
 /// @return SUCCESS if file positioned at distance. An error condition otherwise.
 t_status fs_file_setPositionAt	( const t_file * file, t_offset distance );
+
+/// @brief Change the block size for file operations
+/// Helper function for fs_file_setPosition
+/// @param [in] file    - File descriptor
+/// @param [in] size	- New file block size
+/// @return Operation status.
+t_status fs_file_setBlockSize	( t_file * file, t_size size );
 
 
 /// @brief Close a file

@@ -60,8 +60,10 @@
 #define isTypeNotLink(x)	(x->element.type != osapi_fs_type_softLink && x->element.type != osapi_fs_type_hardLink)
 
 // File specific macros
-#define isFileAvailable(x)	(x->file.handle  >= 0)
-#define isFileNotAvailable(x)	(x->file.handle  < 0)
+#define isFileAvailable(x)	(x->file.handle != NULL )
+#define isFileNotAvailable(x)	(x->file.handle == NULL )
+#define isFDAvailable(x)	(x->file.descriptor >= 0 )
+#define isFDNotAvailable(x)	(x->file.descriptor < 0)
 
 
 // Directory specific macros

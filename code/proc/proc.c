@@ -38,6 +38,21 @@
 //
 // *****************************************************************************************
 
+t_status proc_rawMemory_allocate( t_size size, void * p_memory )
+{
+ return common_rawMemory_allocate( size, p_memory );
+}
+
+t_status proc_rawMemory_reAllocate( t_size size, void * p_memory )
+{
+  return common_rawMemory_reAllocate( size, p_memory );
+}
+
+t_status proc_rawMemory_deallocate( void * p_memory )
+{
+ return common_rawMemory_deallocate( p_memory );
+}
+
 t_status proc_memory_allocate( t_size size, t_memory * p_memory )
 {
  return common_memory_allocate( size, p_memory );

@@ -26,8 +26,15 @@
 
 
 // Platform baseline
-#if defined(OS_LINUX)
+#if defined(OS_LINUX) || defined(__linux__) || defined(LINUX)
+
+ #define OS_LINUX 1
  #include "general/general_baseline_linux.h"
+
+#elif defined(OS_WINDOWS) || defined(_WIN32) || defined(_WIN64)
+
+ #define OS_WINDOWS 1
+
 #endif
 
 

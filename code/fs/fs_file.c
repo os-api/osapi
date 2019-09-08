@@ -49,3 +49,17 @@ t_status fs_file_setPositionAt( const t_file * p_file, t_offset offset )
   return fs_file_setPosition( p_file, osapi_fs_file_position_set, offset );
 }
 
+
+t_status fs_file_setBlockSize	( t_file * p_file, t_size size )
+{
+  t_status		st;
+
+  status_reset( &st );
+
+  if( p_file == NULL || size == 0 )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+  p_file->file.block_size = size;
+
+  return st;
+}
