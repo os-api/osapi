@@ -1,6 +1,7 @@
 var group___f_s =
 [
     [ "fs_directory_close", "group___f_s.html#ga2541fc91037120f7dcda810dd03ec93c", null ],
+    [ "fs_directory_copy", "group___f_s.html#ga880159e9ae6440e0c4425abd5f5e8dd7", null ],
     [ "fs_directory_create", "group___f_s.html#ga986cf6aa6b7818f6e761e5e48f55eeeb", null ],
     [ "fs_directory_getElement", "group___f_s.html#gae00e530d55f28dec19cc4159ee4c76b4", null ],
     [ "fs_directory_getElementList", "group___f_s.html#ga63634f64d94548520b52ace59f13b622", null ],

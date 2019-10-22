@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"group___s_t_a_t_u_s.html#ga835f63807d42ad30134dcd2118b12f57":[0,0,11,3],
+"group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc":[0,0,11,12],
 "group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e":[0,0,11,6],
 "group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594":[0,0,11,14],
 "group___s_t_a_t_u_s.html#gae986d7e1130de5edc7ec4e5ba5d8fefe":[0,0,11,11],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "structs__proc__info.html#a2a6c54dcdbeb16bb2e1676a4abf4a4d8":[0,0,9,2,3],
 "structs__proc__info.html#aa20c74a888413f1e5eb934215d452112":[0,0,9,2,1],
 "structs__proc__info.html#aa24f72e6a4d6a997528142211b375496":[0,0,9,2,0],
-"structs__proc__info.html#ad56cadc2b4b8f0b4b29efb7d58272182":[0,0,9,2,2],
-"structs__proc__info.html#afc09df66e4e1131bad27f84d29bd8726":[0,0,9,2,4],
-"structs__proc__resources.html":[0,0,9,1]
+"structs__proc__info.html#ad56cadc2b4b8f0b4b29efb7d58272182":[0,0,9,2,2]
 };

@@ -1,5 +1,7 @@
 var NAVTREEINDEX3 =
 {
+"structs__proc__info.html#afc09df66e4e1131bad27f84d29bd8726":[0,0,9,2,4],
+"structs__proc__resources.html":[0,0,9,1],
 "structs__proc__resources.html#a2807ec20ca4f4eb91c06842ede23ae5a":[0,0,9,1,3],
 "structs__proc__resources.html#a365cd0ac3c92eccc26059bda7268d431":[0,0,9,1,1],
 "structs__proc__resources.html#ab8ddf452eb3401ae9ba346ecb4e84919":[0,0,9,1,0],

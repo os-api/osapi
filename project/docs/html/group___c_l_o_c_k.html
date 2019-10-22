@@ -96,9 +96,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga145a5341866fca762b68b54592b7118f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga145a5341866fca762b68b54592b7118f">clock_instance_getTime</a> (<a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *clk, <a class="el" href="structosapi__s__time.html">t_time</a> *stdTime)</td></tr>
 <tr class="memdesc:ga145a5341866fca762b68b54592b7118f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current standard time from a clock.  <a href="#ga145a5341866fca762b68b54592b7118f">More...</a><br /></td></tr>
 <tr class="separator:ga145a5341866fca762b68b54592b7118f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga696c3f074a7cda43db5dccc1a9e07c8f">clock_time_make</a> (int64_t seconds, uint64_t fraction, <a class="el" href="structosapi__s__time.html">t_time</a> *tm)</td></tr>
-<tr class="memdesc:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time structure with the supplied data.  <a href="#ga696c3f074a7cda43db5dccc1a9e07c8f">More...</a><br /></td></tr>
-<tr class="separator:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaed7dd5a49725c7304fbf37c64e15dee6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaed7dd5a49725c7304fbf37c64e15dee6">clock_time_make</a> (int64_t seconds, uint64_t fraction, t_time_precision precision, <a class="el" href="structosapi__s__time.html">t_time</a> *tm)</td></tr>
+<tr class="memdesc:gaed7dd5a49725c7304fbf37c64e15dee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time structure with the supplied data.  <a href="#gaed7dd5a49725c7304fbf37c64e15dee6">More...</a><br /></td></tr>
+<tr class="separator:gaed7dd5a49725c7304fbf37c64e15dee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaa67a7468dd3e849f04e3bc6abb7817db">clock_time_get</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *curtime)</td></tr>
 <tr class="memdesc:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current time in seconds from the epoch.  <a href="#gaa67a7468dd3e849f04e3bc6abb7817db">More...</a><br /></td></tr>
 <tr class="separator:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -123,6 +123,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga74ce6e07c213f1e706072729d8d39361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga74ce6e07c213f1e706072729d8d39361">clock_offset_make</a> (int64_t seconds, uint64_t fraction, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *offset)</td></tr>
 <tr class="memdesc:ga74ce6e07c213f1e706072729d8d39361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a time offset from components.  <a href="#ga74ce6e07c213f1e706072729d8d39361">More...</a><br /></td></tr>
 <tr class="separator:ga74ce6e07c213f1e706072729d8d39361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf8ff7bdca3a9a1680a329d225df167f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaf8ff7bdca3a9a1680a329d225df167f8">clock_offset_copy</a> (const <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *source, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *target)</td></tr>
+<tr class="memdesc:gaf8ff7bdca3a9a1680a329d225df167f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a copy between two time offset types.  <a href="#gaf8ff7bdca3a9a1680a329d225df167f8">More...</a><br /></td></tr>
+<tr class="separator:gaf8ff7bdca3a9a1680a329d225df167f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga0116d43d17fd3fc4c97ecb76c9247570">clock_offset_apply</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *base, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *offset, <a class="el" href="structosapi__s__time.html">t_time</a> *result)</td></tr>
 <tr class="memdesc:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorporate a time offset into a new time.  <a href="#ga0116d43d17fd3fc4c97ecb76c9247570">More...</a><br /></td></tr>
 <tr class="separator:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,6 +182,15 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_gafc97ae110b56702092a04fbb871f534c_cgraph.png" border="0" usemap="#group___c_l_o_c_k_gafc97ae110b56702092a04fbb871f534c_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_gafc97ae110b56702092a04fbb871f534c_cgraph" id="group___c_l_o_c_k_gafc97ae110b56702092a04fbb871f534c_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="417,5,512,32"/>
+<area shape="rect" id="node3" href="group___c_l_o_c_k.html#gaf8ff7bdca3a9a1680a329d225df167f8" title="Perform a copy between two time offset types. " alt="" coords="241,31,369,57"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -394,6 +406,60 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a id="gaf8ff7bdca3a9a1680a329d225df167f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf8ff7bdca3a9a1680a329d225df167f8">&#9670;&nbsp;</a></span>clock_offset_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_offset_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a copy between two time offset types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Copy to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_cgraph.png" border="0" usemap="#group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_cgraph" id="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="181,5,276,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_icgraph.png" border="0" usemap="#group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_icgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_icgraph" id="group___c_l_o_c_k_gaf8ff7bdca3a9a1680a329d225df167f8_icgraph">
+<area shape="rect" id="node2" href="group___c_l_o_c_k.html#gafc97ae110b56702092a04fbb871f534c" title="Create a new clock instance based on a given time offset from the standard time. " alt="" coords="181,5,369,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="ga74ce6e07c213f1e706072729d8d39361"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga74ce6e07c213f1e706072729d8d39361">&#9670;&nbsp;</a></span>clock_offset_make()</h2>
 
@@ -436,6 +502,14 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Precision time enum </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_ga74ce6e07c213f1e706072729d8d39361_cgraph.png" border="0" usemap="#group___c_l_o_c_k_ga74ce6e07c213f1e706072729d8d39361_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_ga74ce6e07c213f1e706072729d8d39361_cgraph" id="group___c_l_o_c_k_ga74ce6e07c213f1e706072729d8d39361_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="185,5,280,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -659,8 +733,8 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a id="ga696c3f074a7cda43db5dccc1a9e07c8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga696c3f074a7cda43db5dccc1a9e07c8f">&#9670;&nbsp;</a></span>clock_time_make()</h2>
+<a id="gaed7dd5a49725c7304fbf37c64e15dee6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaed7dd5a49725c7304fbf37c64e15dee6">&#9670;&nbsp;</a></span>clock_time_make()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -676,6 +750,12 @@ Here is the caller graph for this function:</div>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>fraction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">t_time_precision&#160;</td>
+          <td class="paramname"><em>precision</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -696,11 +776,20 @@ Here is the caller graph for this function:</div>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">seconds</td><td>- The number of seconds since the machine/OS epoch </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fraction</td><td>- The fraction of a second </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">precision</td><td>- The precision of this time (seconds, milli, nano, etc.) </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">tm</td><td>- The new time representation </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_gaed7dd5a49725c7304fbf37c64e15dee6_cgraph.png" border="0" usemap="#group___c_l_o_c_k_gaed7dd5a49725c7304fbf37c64e15dee6_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_gaed7dd5a49725c7304fbf37c64e15dee6_cgraph" id="group___c_l_o_c_k_gaed7dd5a49725c7304fbf37c64e15dee6_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="177,5,272,32"/>
+</map>
+</div>
 
 </div>
 </div>

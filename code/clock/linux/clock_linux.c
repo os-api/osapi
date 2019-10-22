@@ -82,7 +82,14 @@ t_status clock_time_get( t_time * p_time )
 }
 
 
+t_status clock_instance_createTimezone( t_time * p_time, const char * timezone, t_clock * p_clock )
+{
+ t_status st;
 
+ status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_support, &st);
+
+ return st;
+}
 
 
 #endif	// If POSIX is defined

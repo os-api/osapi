@@ -58,11 +58,12 @@ extern "C"
 
 // - Time in seconds
 /// @brief Set the time structure with the supplied data
-/// @param [in] seconds  - The number of seconds since the machine/OS epoch
-/// @param [in] fraction - The fraction of a second
-/// @param [out] tm 	 - The new time representation
+/// @param [in] seconds   - The number of seconds since the machine/OS epoch
+/// @param [in] fraction  - The fraction of a second
+/// @param [in] precision - The precision of this time (seconds, milli, nano, etc.)
+/// @param [out] tm 	  - The new time representation
 /// @return Operation status
-t_status clock_time_make( int64_t seconds, uint64_t fraction, t_time * tm );
+t_status clock_time_make( int64_t seconds, uint64_t fraction, t_time_precision precision, t_time * tm );
 
 /// @brief Get the current time in seconds from the epoch
 /// @param [out] curtime - Current time
@@ -112,6 +113,12 @@ t_status clock_time_equal( const t_time * t1, const t_time * t2, bool * result )
 /// @param [out] offset		- The result time offset type
 /// @return Precision time enum
 t_status clock_offset_make	( int64_t seconds, uint64_t fraction, t_time_offset * offset );
+
+/// @brief Perform a copy between two time offset types
+/// @param [in]  source - Copy from
+/// @param [out] target - Copy to
+/// @return Operation status
+t_status clock_offset_copy( const t_time_offset * source, t_time_offset * target	);
 
 /// @brief Incorporate a time offset into a new time
 /// @param [in]  base   - The source time

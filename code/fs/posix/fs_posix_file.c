@@ -94,6 +94,25 @@ t_status fs_file_open( const t_char * p_path, const char ** p_mode, t_file * p_f
  return st;
 }
 
+t_status fs_file_updateInfo( t_file * p_file )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ TRACE_ENTER
+
+ if( p_file == NULL )
+   { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
+
+ st = fs_element_updateInfo( &(p_file->element) );
+ if( status_success( st ) )
+     st = posix_file_getInfo( p_file );
+
+TRACE_EXIT
+
+return st;
+}
 
 t_status fs_file_openRead( const t_char * p_path, t_file * p_file )
 {

@@ -96,6 +96,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga986cf6aa6b7818f6e761e5e48f55eeeb">fs_directory_create</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *path, const char **mode)</td></tr>
 <tr class="memdesc:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new directory.  <a href="#ga986cf6aa6b7818f6e761e5e48f55eeeb">More...</a><br /></td></tr>
 <tr class="separator:ga986cf6aa6b7818f6e761e5e48f55eeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#ga880159e9ae6440e0c4425abd5f5e8dd7">fs_directory_copy</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *source, const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *target, bool overwrite)</td></tr>
+<tr class="memdesc:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy an entire directory onto another.  <a href="#ga880159e9ae6440e0c4425abd5f5e8dd7">More...</a><br /></td></tr>
+<tr class="separator:ga880159e9ae6440e0c4425abd5f5e8dd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae39c2690014b7bff55c66e023ea9b4c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___f_s.html#gae39c2690014b7bff55c66e023ea9b4c4">fs_directory_updateInfo</a> (<a class="el" href="structosapi__fs__s__dir.html">t_dir</a> *dir)</td></tr>
 <tr class="memdesc:gae39c2690014b7bff55c66e023ea9b4c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtain a directory descriptor.  <a href="#gae39c2690014b7bff55c66e023ea9b4c4">More...</a><br /></td></tr>
 <tr class="separator:gae39c2690014b7bff55c66e023ea9b4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -350,6 +353,59 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>SUCCESS if directory descriptor closed. An error condition otherwise. </dd></dl>
+
+</div>
+</div>
+<a id="ga880159e9ae6440e0c4425abd5f5e8dd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga880159e9ae6440e0c4425abd5f5e8dd7">&#9670;&nbsp;</a></span>fs_directory_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> fs_directory_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>overwrite</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Copy an entire directory onto another. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Source directory name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>- Destination directory name </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">overwrite</td><td>- If destination exists, overwrite it? </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS if copied. An error condition otherwise. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___f_s_ga880159e9ae6440e0c4425abd5f5e8dd7_icgraph.png" border="0" usemap="#group___f_s_ga880159e9ae6440e0c4425abd5f5e8dd7_icgraph" alt=""/></div>
+<map name="group___f_s_ga880159e9ae6440e0c4425abd5f5e8dd7_icgraph" id="group___f_s_ga880159e9ae6440e0c4425abd5f5e8dd7_icgraph">
+<area shape="rect" id="node2" href="group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d" title="Extended element copy operation If the destination already exists, it will be overwritten if the resp..." alt="" coords="179,5,300,32"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -842,10 +898,11 @@ Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="group___f_s_ga2cd7f1b1475e572cea437450674a7b8d_cgraph.png" border="0" usemap="#group___f_s_ga2cd7f1b1475e572cea437450674a7b8d_cgraph" alt=""/></div>
 <map name="group___f_s_ga2cd7f1b1475e572cea437450674a7b8d_cgraph" id="group___f_s_ga2cd7f1b1475e572cea437450674a7b8d_cgraph">
-<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="363,5,457,32"/>
-<area shape="rect" id="node3" href="group___f_s.html#ga32ea3dd20a916e149d252411c6859266" title="Get type of element through a path name. " alt="" coords="175,31,315,57"/>
-<area shape="rect" id="node4" href="group___f_s.html#gadd7dbc7d41c41771edff7d47b7ba714f" title="Copy a file element If the destination already exists, it will overwrite it. " alt="" coords="199,81,291,108"/>
-<area shape="rect" id="node5" href="group___f_s.html#ga2249dbde9c7e8cee8aaaf11a4f6236e6" title="Copy a link element If there is a destination, link creation fails. " alt="" coords="197,132,292,159"/>
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="363,7,457,33"/>
+<area shape="rect" id="node3" href="group___f_s.html#ga32ea3dd20a916e149d252411c6859266" title="Get type of element through a path name. " alt="" coords="175,32,315,59"/>
+<area shape="rect" id="node4" href="group___f_s.html#gadd7dbc7d41c41771edff7d47b7ba714f" title="Copy a file element If the destination already exists, it will overwrite it. " alt="" coords="199,83,291,109"/>
+<area shape="rect" id="node5" href="group___f_s.html#ga880159e9ae6440e0c4425abd5f5e8dd7" title="Copy an entire directory onto another. " alt="" coords="182,133,307,160"/>
+<area shape="rect" id="node6" href="group___f_s.html#ga2249dbde9c7e8cee8aaaf11a4f6236e6" title="Copy a link element If there is a destination, link creation fails. " alt="" coords="197,184,292,211"/>
 </map>
 </div>
 

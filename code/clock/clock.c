@@ -36,6 +36,36 @@
 //
 // *****************************************************************************************
 
+t_status clock_time_make( int64_t seconds, uint64_t fraction, t_time_precision prec, t_time * p_tm )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_tm == NULL )
+   { status_iset( OSAPI_MODULE_CLOCK, __func__,osapi_clock_error_params, &st ); return st; }
+
+ p_tm->seconds   = seconds;
+ p_tm->fraction  = fraction;
+ p_tm->precision = prec;
+
+ return st;
+}
+
+t_status clock_offset_make( int64_t seconds, uint64_t fraction, t_time_offset * p_offset )
+{
+ t_status	st;
+
+ status_reset( & st );
+
+ if( p_offset == NULL )
+   { status_iset( OSAPI_MODULE_CLOCK, __func__,osapi_clock_error_params, &st ); return st; }
+
+ p_offset->seconds  = seconds;
+ p_offset->fraction = fraction;
+
+ return st;
+}
 
 t_status clock_time_copy( const t_time * source, t_time * target )
 {
@@ -137,3 +167,41 @@ t_status clock_instance_getLocalTime( t_clock * p_clock, t_time * p_ltime )
 
  return st;
 }
+
+
+t_status clock_offset_copy( const t_time_offset * p_source, t_time_offset * p_target )
+{
+ t_status st;
+
+ status_reset( &st );
+
+ if( p_source == NULL || p_target == NULL )
+   { status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_params, &st ); return st; }
+
+ p_target->seconds  = p_source->seconds;
+ p_target->fraction = p_source->fraction;
+
+ return st;
+}
+
+// Construct an instance of a clock based on two types: a time value and an time offset
+t_status clock_instance_createOffset( t_time * p_time, t_time_offset * p_offset, t_clock * p_clock )
+{
+ t_status st;
+
+ status_reset( &st );
+
+ if( p_time == NULL || p_offset == NULL || p_clock == NULL )
+   { status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_params, &st ); return st; }
+
+ // Don't care about status since we are already testing the pointers in this function
+ common_time_copy ( p_time,   &(p_clock->value)  );
+ clock_offset_copy( p_offset, &(p_clock->offset) );
+
+ p_clock->local = false;
+ if( p_offset->seconds == (int64_t) 0 && p_offset->fraction == (uint64_t) 0 )
+     p_clock->local = true;
+
+ return st;
+}
+
