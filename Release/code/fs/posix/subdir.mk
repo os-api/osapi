@@ -7,6 +7,7 @@ C_SRCS += \
 ../code/fs/posix/fs_posix.c \
 ../code/fs/posix/fs_posix_dir.c \
 ../code/fs/posix/fs_posix_element.c \
+../code/fs/posix/fs_posix_elementInfo.c \
 ../code/fs/posix/fs_posix_element_id.c \
 ../code/fs/posix/fs_posix_file.c \
 ../code/fs/posix/fs_posix_id.c \
@@ -17,6 +18,7 @@ OBJS += \
 ./code/fs/posix/fs_posix.o \
 ./code/fs/posix/fs_posix_dir.o \
 ./code/fs/posix/fs_posix_element.o \
+./code/fs/posix/fs_posix_elementInfo.o \
 ./code/fs/posix/fs_posix_element_id.o \
 ./code/fs/posix/fs_posix_file.o \
 ./code/fs/posix/fs_posix_id.o \
@@ -27,6 +29,7 @@ C_DEPS += \
 ./code/fs/posix/fs_posix.d \
 ./code/fs/posix/fs_posix_dir.d \
 ./code/fs/posix/fs_posix_element.d \
+./code/fs/posix/fs_posix_elementInfo.d \
 ./code/fs/posix/fs_posix_element_id.d \
 ./code/fs/posix/fs_posix_file.d \
 ./code/fs/posix/fs_posix_id.d \

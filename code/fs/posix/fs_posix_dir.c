@@ -343,6 +343,10 @@ t_status posix_directory_copy( const t_char * p_source, const t_char * p_target,
 
   status_reset( & st );
 
+  // Unsupported until be able to test it
+  status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_support, &st );
+  return st;
+
   TRACE_ENTER
 
   if( p_source == NULL || p_target == NULL )
