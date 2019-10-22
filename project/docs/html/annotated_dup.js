@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "osapi_basic_string", "structosapi__basic__string.html", "structosapi__basic__string" ],
+    [ "osapi_clock_s_clock", "structosapi__clock__s__clock.html", "structosapi__clock__s__clock" ],
     [ "osapi_fs_element_info", "structosapi__fs__element__info.html", "structosapi__fs__element__info" ],
     [ "osapi_fs_s_dir", "structosapi__fs__s__dir.html", "structosapi__fs__s__dir" ],
     [ "osapi_fs_s_directory_info", "structosapi__fs__s__directory__info.html", "structosapi__fs__s__directory__info" ],
@@ -15,6 +16,8 @@ var annotated_dup =
     [ "osapi_s_errors", "structosapi__s__errors.html", "structosapi__s__errors" ],
     [ "osapi_s_list", "structosapi__s__list.html", "structosapi__s__list" ],
     [ "osapi_s_memory", "structosapi__s__memory.html", "structosapi__s__memory" ],
+    [ "osapi_s_time", "structosapi__s__time.html", "structosapi__s__time" ],
+    [ "osapi_s_time_offset", "structosapi__s__time__offset.html", "structosapi__s__time__offset" ],
     [ "osapi_wide_string", "structosapi__wide__string.html", "structosapi__wide__string" ],
     [ "s_conn_side_mp", "structs__conn__side__mp.html", "structs__conn__side__mp" ],
     [ "s_conn_side_p2p", "structs__conn__side__p2p.html", "structs__conn__side__p2p" ],

@@ -31,6 +31,7 @@ extern "C" {
 
 // Import own API headers
 #include "fs/fs_element.h"
+#include "fs/fs_elementInfo.h"
 #include "fs/fs_file.h"
 #include "fs/fs_direntry.h"
 #include "fs/fs_dir.h"
@@ -58,6 +59,13 @@ extern "C" {
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status fs_module_supported	( void );
+
+/// @brief Get an absolute path from a given path name
+/// @param [in]  source  	- Input path
+/// @param [in]  tsize		- Size of the target buffer
+/// @param [out] target		- Output path
+/// @return SUCCESS or FAILURE
+t_status fs_path_getAbsolute( const t_char * source, t_size tsize, t_char * target );
 
 #pragma GCC visibility pop			// End of public interface
 

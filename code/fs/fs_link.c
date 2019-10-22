@@ -51,7 +51,7 @@ t_status fs_link_close( t_link * p_link )
 }
 
 
-t_status fs_link_getTarget( t_link * p_link, t_char ** p_target )
+t_status fs_link_getTarget( const t_link * p_link, const t_char ** p_target )
 {
   t_status	st;
 
@@ -72,7 +72,7 @@ t_status fs_link_getTarget( t_link * p_link, t_char ** p_target )
 }
 
 
-t_status fs_link_getName( t_link * p_link, t_char ** p_name )
+t_status fs_link_getName( const t_link * p_link, const t_char ** p_name )
 {
   t_status	st;
 

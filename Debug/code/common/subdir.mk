@@ -7,19 +7,22 @@ C_SRCS += \
 ../code/common/common.c \
 ../code/common/common_buffer.c \
 ../code/common/common_list.c \
-../code/common/common_memory.c 
+../code/common/common_memory.c \
+../code/common/common_time.c 
 
 OBJS += \
 ./code/common/common.o \
 ./code/common/common_buffer.o \
 ./code/common/common_list.o \
-./code/common/common_memory.o 
+./code/common/common_memory.o \
+./code/common/common_time.o 
 
 C_DEPS += \
 ./code/common/common.d \
 ./code/common/common_buffer.d \
 ./code/common/common_list.d \
-./code/common/common_memory.d 
+./code/common/common_memory.d \
+./code/common/common_time.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Common definitions
+// Purpose:	Common helper macros
 //
 // *****************************************************************************************
 
@@ -104,6 +104,19 @@
 #define set_list_capacity(x,y)		(x->capacity = y)
 #define set_list_requiredCapacity(x,y)	(x->requiredCapacity = y)
 #define set_list_size(x,y)		(x->nitems = y )
+
+
+// *****************************************************************************************
+//
+// Section: Macros for time
+//
+// *****************************************************************************************
+
+#define get_time_precision( x )		(x->precision)
+#define get_time_seconds( x )		(x->seconds)
+#define get_time_fraction( x )		(x->fraction)
+
+
 
 
 #endif /* OSAPI_COMMON_HELPER_H_ */

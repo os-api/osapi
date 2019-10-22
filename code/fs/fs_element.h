@@ -47,27 +47,21 @@ extern "C" {
 
 #pragma GCC visibility push(default)		// Start of public interface
 
-/// @brief Get type of element through a path name
-/// @param [in]  path - File system element path to element
-/// @param [out] type - Type of element
-/// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getTypeByName	( const t_char * path, t_fs_eType * type );
-
 /// @brief Open a file system element descriptor
 /// @param [in]  path 		- Path name to the file system element
 /// @param [out] element 	- File element descriptor
 /// @return Operation status
-t_status fs_element_open	( const char * path, t_element * element );
+t_status fs_element_open		( const char * path, t_element * element );
 
 /// @brief Close a file system element descriptor
 /// @param [out] element - File element descriptor
 /// @return Operation status
-t_status fs_element_close	( t_element * element );
+t_status fs_element_close		( t_element * element );
 
 /// @brief Eliminate a an element from the file system
 /// @param [in] path     - Path name to element
 /// @return SUCCESS if removed. An error condition otherwise.
-t_status fs_element_remove	( const char * path );
+t_status fs_element_remove		( const char * path );
 
 // @brief Special element copy operation
 // It enables full control of the copy operation by allowing to specify:
@@ -132,74 +126,74 @@ t_status fs_element_setPermissions ( const char * path, t_fs_perm * perm );
 /// @return SUCCESS if it exists. An error condition otherwise.
 t_status fs_element_updateInfo	( t_element * element );
 
-/// @brief Get type of element
-/// @param [in] element - File system element information
+/// @brief Get type of element through a path name
+/// @param [in]  path - Pathname from which to retrieve the information
 /// @param [out] type - Type of element
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getType	( t_element * element, int * type		);
+t_status fs_element_getType	( const t_char * path, t_fs_eType * type );
 
 /// @brief Obtain the full pathname to element
 /// The returned name pointer is only valid as long as info is available
-/// @param [in] element - Structure containing the file system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] name - The element name
 /// @return Operation status.
-t_status fs_element_getName 	( t_element * element, char ** name );
+t_status fs_element_getName 	( const char * path, char ** name );
 
 /// @brief Obtain the element unique identifier on the file system
-/// @param [in] element - Structure containing the file system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] id  	- Current ID of the file system element
 /// @return Operation status.
-t_status fs_element_getID 	( t_element * element, t_fs_eid * id );
+t_status fs_element_getID 	( const char * path, t_fs_eid * id );
 
 
 /// @brief Obtain the user ID owning the element
-/// @param [in] element - Structure containing the file system element information
+/// @param [in] path - Pathname from which to retrieve the user ID
 /// @param [out] uid  - Current User ID of file system element
 /// @return Operation status.
-t_status fs_element_getUID 	( t_element * element, t_uid * uid );
+t_status fs_element_getUID 	( const char * path, t_uid * uid );
 
 /// @brief Obtain the group ID owning the element
-/// @param [in] element - Structure containing the file system element information
+/// @param [in] path - Pathname from which to retrieve the group ID
 /// @param [out] gid  - Current User ID of filesystem element
 /// @return Operation status.
-t_status fs_element_getGID 	( t_element * element, t_gid * gid );
+t_status fs_element_getGID 	( const char * path, t_gid * gid );
 
 
 /// @brief Get element access time
-/// @param [in] element - File system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] atime  - Last element access time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getAccessTime		( t_element * element, t_time * atime 	);
+t_status fs_element_getAccessTime	( const char * path, t_time * atime 	);
 
 /// @brief Get element creation/birth time
-/// @param [in] info   - File system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] btime - Element creation time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getCreationTime		( t_element * info, t_time * btime 	);
+t_status fs_element_getCreationTime	( const char * path, t_time * btime 	);
 
 /// @brief Get element change time
-/// @param [in] info   - File system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] ctime - Element creation time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getChangetime		( t_element * info, t_time * ctime 	);
+t_status fs_element_getChangetime	( const char * path, t_time * ctime 	);
 
 /// @brief Get element modification time
-/// @param [in] info   - File system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] mtime - Last element modification time
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getModificationTime		( t_element * info, t_time * mtime 	);
+t_status fs_element_getModificationTime	( const char * path, t_time * mtime 	);
 
 /// @brief Get size of element in the file system
-/// @param [in] element - File system element information
+/// @param [in] path - Pathname from which to retrieve the information
 /// @param [out] size - Size of element
 /// @return SUCCESS if it exists. An error condition otherwise.
-t_status fs_element_getSize	( t_element * element, t_size * size	);
+t_status fs_element_getSize	( const char * path, t_size * size	);
 
 /// @brief Obtain the permissions of the element
-/// @param [in]  element - Structure containing the file system element information
+/// @param [in]  path - Pathname from which to retrieve the information
 /// @param [out] perm - Current permissions of element
 /// @return Operation status.
-t_status fs_element_getPermissions ( t_element * element, t_fs_perm * perm );
+t_status fs_element_getPermissions ( const char * path, t_fs_perm * perm );
 
 
 

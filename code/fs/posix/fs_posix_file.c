@@ -33,10 +33,10 @@
 #include "common/common_helper.h"
 
 // Own declarations
-#include "fs/fs_sysheaders.h"
 #include "fs/fs_element.h"
 #include "fs/fs_file.h"
 #include "fs/fs_dir.h"
+#include "fs/posix/fs_posix.h"
 #include "fs/fs_helper.h"
 
 
@@ -69,8 +69,20 @@ t_status fs_file_open( const t_char * p_path, const char ** p_mode, t_file * p_f
    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
  st = fs_element_exists( p_path, &file_exists );
- if( status_success( st ) && file_exists )
+ if( status_failure( st ) ) return st;
+
+ if( file_exists )
      st = posix_element_open( p_path, &p_file->element );	// Open Element
+ else
+   {
+     // Was creation mode requested?
+     if( ! posix_fs_findInMode( p_mode, "O_CREAT" ) )
+       {
+	 TRACE_MSG( "Error: File doesn't exist and creation mode was not requested" );
+	 status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_notCreateMode, &st );
+	 return st;
+       }
+   }
 
  int64_t openOptions = posix_fs_getOpenOptions( p_mode );
  int64_t modeOptions = posix_fs_getModeOptions( p_mode );
@@ -217,9 +229,11 @@ t_status posix_file_open( const t_char * p_path, int64_t openMode, int64_t creat
 
   p_file->file.isBuffered = false;
 
-  // In case the file didn't exist before
-  st = posix_element_open( p_path, &p_file->element );
-  if( status_failure( st ) ) return st;
+  if( ! isElementOpen( p_file ) )	// In case the file didn't exist before
+    {
+      st = posix_element_open( p_path, &p_file->element );
+      if( status_failure( st ) ) return st;
+    }
 
   st = posix_file_getInfo( p_file );
   if( status_success( st ) )
@@ -466,7 +480,7 @@ t_status posix_file_copy( const t_char * p_source, const t_char * p_target, bool
   if( p_source == NULL || p_target == NULL )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
-  st = fs_element_getTypeByName	( p_target, &dtype );
+  st = fs_element_getType( p_target, &dtype );
 
   // If getting the type of the copy target results in error, this is fine as long as the error is that there is no target
   if( status_failure( st ) && ! status_error( st, ENOENT ) )
@@ -499,7 +513,7 @@ t_status posix_file_copy( const t_char * p_source, const t_char * p_target, bool
         }
     }
 
-  TRACE_MSG( "Opening destination file" )
+  TRACE_MSG( "Opening source file" )
 
   st = posix_file_open( p_source, (int64_t) O_RDONLY, (int64_t) 0, &sFile );
   if( status_failure( st ) ) return st;
@@ -514,7 +528,7 @@ t_status posix_file_copy( const t_char * p_source, const t_char * p_target, bool
 					status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_fexists, &st );
 	}
 
-  st = posix_file_close( &sFile );
+  posix_file_close( &sFile );
 
   TRACE_EXIT
 
@@ -539,10 +553,19 @@ t_status posix_file_copy2file( t_file * p_sFile, const t_char * p_target, bool o
   if( isFileClose( p_sFile ) )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_fopen, &st ); return st; }
 
-  int64_t mode = (int64_t) posix_getElementPermMode( p_sFile );
+  int64_t mode  = (int64_t) posix_getElementPermMode( p_sFile );
+  int64_t flags = (int64_t) O_WRONLY | O_CREAT;
+
+  if( overwrite )	flags |= O_TRUNC;
+  else			flags |= O_EXCL;
+
   // Open target file
-  st = posix_file_open( p_target, (int64_t) O_WRONLY | O_CREAT, (int64_t) mode , &tFile );
-  if( status_failure( st ) ) return st;
+  st = posix_file_open( p_target, flags, (int64_t) mode , &tFile );
+  if( status_failure( st ) )
+    {
+      TRACE_EXIT
+      return st;
+    }
 
   // Allocate memory for copy bytes
   TRACE( "Allocating memory for copy buffer:%ld", p_sFile->file.block_size )
@@ -610,9 +633,9 @@ t_status posix_file_copy2dir( t_file * p_sFile, const t_char * p_target, bool ov
       strcat ( path, "/" );
       strncat( path, ptr, filename_len );
 
-      posix_file_copy2file( p_sFile, path, overwrite );
+      st = posix_file_copy2file( p_sFile, path, overwrite );
 
-      st = fs_directory_close( &dir );
+      fs_directory_close( &dir );
     }
 
   TRACE_EXIT

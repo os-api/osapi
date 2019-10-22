@@ -55,21 +55,23 @@ extern "C" {
 t_status fs_link_open			( const t_char * path, t_link * link );
 
 /// @brief Close a link
-/// @param [in] link 	- Link descriptor
+/// @param [in] p_link 	- Link descriptor (pointer)
 /// @return SUCCESS if descriptor closed. An error condition otherwise.
-t_status fs_link_close			( t_link * link );
+t_status fs_link_close			( t_link * p_link );
 
 /// @brief Create a new soft link
-/// @param [in] source  - New link name
-/// @param [in] target	- Link target
+/// @param [in] source  	- New link name
+/// @param [in] target		- Link target
+/// @param [in] overwrite	- If link exists, overwrite it (if true)
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createSoft		( const t_char * source, const t_char * target );
+t_status fs_link_createSoft		( const t_char * source, const t_char * target, bool overwrite );
 
 /// @brief Create a new hard link
-/// @param [in] source  - New link name
-/// @param [in] target	- Link target
+/// @param [in] source  	- New link name
+/// @param [in] target		- Link target
+/// @param [in] overwrite	- If link exists, overwrite it (if true)
 /// @return SUCCESS if created. An error condition otherwise.
-t_status fs_link_createHard		( const t_char * source, const t_char * target );
+t_status fs_link_createHard		( const t_char * source, const t_char * target, bool overwrite );
 
 
 /// @brief Copy a link element
@@ -90,7 +92,7 @@ t_status fs_link_updateInfo		( t_link * link );
 /// @param [in] link	- Link descriptor
 /// @param [out] elem	- Element descriptor
 /// @return Operation status.
-t_status fs_link_getElement		( t_link * link, t_element * elem );
+t_status fs_link_getElement		( const t_link * link, t_element * elem );
 
 /// @brief Obtain the target of the link
 /// The function will return the address of the string that contains the target name.
@@ -98,14 +100,14 @@ t_status fs_link_getElement		( t_link * link, t_element * elem );
 /// @param [in] link	- Link descriptor
 /// @param [out] target	- Address of the link target
 /// @return SUCCESS if target name was obtained. Failure otherwise.
-t_status fs_link_getTarget	( t_link * link, char ** target );
+t_status fs_link_getTarget	( const t_link * link, const t_char ** target );
 
 
 /// @brief Obtain the name of the link
 /// @param [in]  link	- Link descriptor
 /// @param [out] name	- Name of link
 /// @return SUCCESS if target name was obtained. Failure otherwise.
-t_status fs_link_getName	( t_link * link, char ** name );
+t_status fs_link_getName	( const t_link * link, const t_char ** name );
 
 
 #pragma GCC visibility pop			// End of public interface

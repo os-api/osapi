@@ -31,6 +31,7 @@
 
 // Import own declarations
 #include "common/common_types.h"
+#include "common/common_time.h"
 #include "common/common_group.h"
 #include "common/common_user.h"
 #include "common/common_memory.h"
@@ -48,6 +49,12 @@
 
 // Utility functions
 int64_t		common_options_get		( const t_option * moduleOptions, char * providedOptions[]				);
+
+/// @brief Does the search string exists in the array of C-Strings ?
+/// @param [in] arrayString  - The array to check
+/// @param [in] searchString - The string to search
+/// @return True or False
+bool		common_arrayString_find		( const char ** arrayString, const char * searchString					);
 
 /// @brief Is the string composed of only digits (0-9)?
 /// @param [in] str - The string to verify

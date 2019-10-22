@@ -20,5 +20,6 @@ var group___o_s =
     [ "os_provider_get", "group___o_s.html#ga38a941e383e6ffab56b4b68393b944e1", null ],
     [ "os_providerRelease_get", "group___o_s.html#ga0986b7d843ae021b48da1e0332f7df5e", null ],
     [ "os_release_get", "group___o_s.html#gab7d4cbaca1572e4bd39e6ef3a2b38fb4", null ],
+    [ "os_time_getBoot", "group___o_s.html#ga6cd3be104e3b3a7d7ad4dee1c5a32a8b", null ],
     [ "os_version_get", "group___o_s.html#gac40e685049caf1c674b436b37d0f2476", null ]
 ];

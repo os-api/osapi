@@ -38,6 +38,8 @@ RM := rm -rf
 -include code/com/posix/subdir.mk
 -include code/com/subdir.mk
 -include code/clock/posix/subdir.mk
+-include code/clock/linux/subdir.mk
+-include code/clock/subdir.mk
 -include subdir.mk
 -include objects.mk
 

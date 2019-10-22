@@ -54,8 +54,15 @@ extern "C" {
 /// @param [in] sep  - Separator between function and line number
 /// @param [in] line - Line number
 /// @param [in] fmt  - printf format for the remaining arguments
-void osapi_status_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... );
+void osapi_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... );
 
+
+/// @brief OSAPI C Trace function
+/// The functions sends the output to standard error
+/// @param [in] func 	- Name of function
+/// @param [in] line 	- Line number
+/// @param [in] st  	- An operation status
+void osapi_status_trace( const char * func, uint64_t line, t_status st );
 
 ///@}
 ///@}

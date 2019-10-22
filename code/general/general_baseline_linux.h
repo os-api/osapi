@@ -23,11 +23,11 @@
 
 // Include platform available version information
 #include <linux/version.h>
-#include <gnu/libc-version.h>
+#include <gnu/libc-version.h>		// Needs to be here in the Linux baseline
 
 // Include module headers
 #include "general/general_language.h"
-#include "general/general_library.h"
+#include "general/general_library.h"	// This is a generic import for all platforms
 
 // *****************************************************************************************
 //

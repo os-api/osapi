@@ -45,7 +45,6 @@
 // Define POSIX opaque types that are cross functional modules
 typedef uid_t	t_uid;		// User  ID
 typedef gid_t	t_gid;		// Group ID
-typedef time_t 	t_time;		// Time information
 
 // Define the required C-String space to represent uid_t/gid_t
 #define OSAPI_STRING_SIZE_UID	11

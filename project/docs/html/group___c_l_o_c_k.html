@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.28</span>
+   &#160;<span id="projectnumber">0.29</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -84,52 +84,227 @@ Functions</h2></td></tr>
 <tr class="memitem:ga3108f8a52eb9e74a18f6beb956539087"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga3108f8a52eb9e74a18f6beb956539087">clock_module_supported</a> (void)</td></tr>
 <tr class="memdesc:ga3108f8a52eb9e74a18f6beb956539087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Declares if the module is supported on the current implementation.  <a href="#ga3108f8a52eb9e74a18f6beb956539087">More...</a><br /></td></tr>
 <tr class="separator:ga3108f8a52eb9e74a18f6beb956539087"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga68677723c523e804ea883f50e34c08d9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga68677723c523e804ea883f50e34c08d9">clock_time_set</a> (t_time newTime)</td></tr>
-<tr class="memdesc:ga68677723c523e804ea883f50e34c08d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the system clock with the supplied time data.  <a href="#ga68677723c523e804ea883f50e34c08d9">More...</a><br /></td></tr>
-<tr class="separator:ga68677723c523e804ea883f50e34c08d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaa67a7468dd3e849f04e3bc6abb7817db">clock_time_get</a> (t_time *curtime)</td></tr>
+<tr class="memitem:ga1b46f4499f83d6504fe7b1c48e714102"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga1b46f4499f83d6504fe7b1c48e714102">clock_instance_createTimezone</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *value, const char *timezone, <a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *clk)</td></tr>
+<tr class="memdesc:ga1b46f4499f83d6504fe7b1c48e714102"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new clock instance based on a given timezone and time value.  <a href="#ga1b46f4499f83d6504fe7b1c48e714102">More...</a><br /></td></tr>
+<tr class="separator:ga1b46f4499f83d6504fe7b1c48e714102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc97ae110b56702092a04fbb871f534c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gafc97ae110b56702092a04fbb871f534c">clock_instance_createOffset</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *value, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *offset, <a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *clk)</td></tr>
+<tr class="memdesc:gafc97ae110b56702092a04fbb871f534c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a new clock instance based on a given time offset from the standard time.  <a href="#gafc97ae110b56702092a04fbb871f534c">More...</a><br /></td></tr>
+<tr class="separator:gafc97ae110b56702092a04fbb871f534c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaedd5917db46b102b09b7f203ebc01469"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaedd5917db46b102b09b7f203ebc01469">clock_instance_getLocalTime</a> (<a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *clk, <a class="el" href="structosapi__s__time.html">t_time</a> *localTime)</td></tr>
+<tr class="memdesc:gaedd5917db46b102b09b7f203ebc01469"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current local time from a clock.  <a href="#gaedd5917db46b102b09b7f203ebc01469">More...</a><br /></td></tr>
+<tr class="separator:gaedd5917db46b102b09b7f203ebc01469"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga145a5341866fca762b68b54592b7118f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga145a5341866fca762b68b54592b7118f">clock_instance_getTime</a> (<a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *clk, <a class="el" href="structosapi__s__time.html">t_time</a> *stdTime)</td></tr>
+<tr class="memdesc:ga145a5341866fca762b68b54592b7118f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current standard time from a clock.  <a href="#ga145a5341866fca762b68b54592b7118f">More...</a><br /></td></tr>
+<tr class="separator:ga145a5341866fca762b68b54592b7118f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga696c3f074a7cda43db5dccc1a9e07c8f">clock_time_make</a> (int64_t seconds, uint64_t fraction, <a class="el" href="structosapi__s__time.html">t_time</a> *tm)</td></tr>
+<tr class="memdesc:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the time structure with the supplied data.  <a href="#ga696c3f074a7cda43db5dccc1a9e07c8f">More...</a><br /></td></tr>
+<tr class="separator:ga696c3f074a7cda43db5dccc1a9e07c8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaa67a7468dd3e849f04e3bc6abb7817db">clock_time_get</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *curtime)</td></tr>
 <tr class="memdesc:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current time in seconds from the epoch.  <a href="#gaa67a7468dd3e849f04e3bc6abb7817db">More...</a><br /></td></tr>
 <tr class="separator:gaa67a7468dd3e849f04e3bc6abb7817db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga09b5f5db52ef99e192c94038a3661aba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga09b5f5db52ef99e192c94038a3661aba">clock_time_print</a> (t_time ctime, const char *tmString)</td></tr>
-<tr class="memdesc:ga09b5f5db52ef99e192c94038a3661aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the current time in seconds from the epoch in human readable format.  <a href="#ga09b5f5db52ef99e192c94038a3661aba">More...</a><br /></td></tr>
-<tr class="separator:ga09b5f5db52ef99e192c94038a3661aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga0ab3ca27ce37d4f44f81fe3186ef24b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga0ab3ca27ce37d4f44f81fe3186ef24b2">clock_time_diff</a> (t_time t1, t_time t2, t_time *diff)</td></tr>
+<tr class="memitem:gaf9a5a0f1ff4b5d1277aa4c811f9886ac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaf9a5a0f1ff4b5d1277aa4c811f9886ac">clock_time_getPrecise</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *curtime)</td></tr>
+<tr class="memdesc:gaf9a5a0f1ff4b5d1277aa4c811f9886ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current time in the highest available resolution since the machine/OS epoch.  <a href="#gaf9a5a0f1ff4b5d1277aa4c811f9886ac">More...</a><br /></td></tr>
+<tr class="separator:gaf9a5a0f1ff4b5d1277aa4c811f9886ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga27d450fb1a1897e3fef76267aee39624"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga27d450fb1a1897e3fef76267aee39624">clock_time_getResolution</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *tm, int *resolution)</td></tr>
+<tr class="memdesc:ga27d450fb1a1897e3fef76267aee39624"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract the resolution from a time type.  <a href="#ga27d450fb1a1897e3fef76267aee39624">More...</a><br /></td></tr>
+<tr class="separator:ga27d450fb1a1897e3fef76267aee39624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga68d33f5eaf6b82f88a0e4b56ce7b8ca5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga68d33f5eaf6b82f88a0e4b56ce7b8ca5">clock_time_print</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *ctime, const char *tmString)</td></tr>
+<tr class="memdesc:ga68d33f5eaf6b82f88a0e4b56ce7b8ca5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the current time in seconds from the epoch in human readable format.  <a href="#ga68d33f5eaf6b82f88a0e4b56ce7b8ca5">More...</a><br /></td></tr>
+<tr class="separator:ga68d33f5eaf6b82f88a0e4b56ce7b8ca5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ab3ca27ce37d4f44f81fe3186ef24b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga0ab3ca27ce37d4f44f81fe3186ef24b2">clock_time_diff</a> (<a class="el" href="structosapi__s__time.html">t_time</a> t1, <a class="el" href="structosapi__s__time.html">t_time</a> t2, <a class="el" href="structosapi__s__time.html">t_time</a> *diff)</td></tr>
 <tr class="memdesc:ga0ab3ca27ce37d4f44f81fe3186ef24b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the difference between two times, in seconds.  <a href="#ga0ab3ca27ce37d4f44f81fe3186ef24b2">More...</a><br /></td></tr>
 <tr class="separator:ga0ab3ca27ce37d4f44f81fe3186ef24b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab33cf2eb71ec4ab215bace636f5a5dbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gab33cf2eb71ec4ab215bace636f5a5dbc">clock_localTime_get</a> (t_clock *clk)</td></tr>
-<tr class="memdesc:gab33cf2eb71ec4ab215bace636f5a5dbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current local time (considering the timezone)  <a href="#gab33cf2eb71ec4ab215bace636f5a5dbc">More...</a><br /></td></tr>
-<tr class="separator:gab33cf2eb71ec4ab215bace636f5a5dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4cd0aae89cf723043c48b33a85f5fa69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga4cd0aae89cf723043c48b33a85f5fa69">clock_timeZone_set</a> (t_clock *clk)</td></tr>
-<tr class="memdesc:ga4cd0aae89cf723043c48b33a85f5fa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current timezone.  <a href="#ga4cd0aae89cf723043c48b33a85f5fa69">More...</a><br /></td></tr>
-<tr class="separator:ga4cd0aae89cf723043c48b33a85f5fa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7e78c49b141f42e7815919bfbe27fcc3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga7e78c49b141f42e7815919bfbe27fcc3">clock_timeZone_get</a> (t_clock *clk)</td></tr>
-<tr class="memdesc:ga7e78c49b141f42e7815919bfbe27fcc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current timezone.  <a href="#ga7e78c49b141f42e7815919bfbe27fcc3">More...</a><br /></td></tr>
-<tr class="separator:ga7e78c49b141f42e7815919bfbe27fcc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c9edb19db4cd2983a9de9d9a687bf76"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga4c9edb19db4cd2983a9de9d9a687bf76">clock_time_copy</a> (const <a class="el" href="structosapi__s__time.html">t_time</a> *source, <a class="el" href="structosapi__s__time.html">t_time</a> *target)</td></tr>
+<tr class="memdesc:ga4c9edb19db4cd2983a9de9d9a687bf76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a copy between two time types.  <a href="#ga4c9edb19db4cd2983a9de9d9a687bf76">More...</a><br /></td></tr>
+<tr class="separator:ga4c9edb19db4cd2983a9de9d9a687bf76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8354eeb0cb8dbcb47b9a61e6bf7779e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga8354eeb0cb8dbcb47b9a61e6bf7779e1">clock_time_equal</a> (const <a class="el" href="structosapi__s__time.html">t_time</a> *t1, const <a class="el" href="structosapi__s__time.html">t_time</a> *t2, bool *result)</td></tr>
+<tr class="memdesc:ga8354eeb0cb8dbcb47b9a61e6bf7779e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a comparison between two time types.  <a href="#ga8354eeb0cb8dbcb47b9a61e6bf7779e1">More...</a><br /></td></tr>
+<tr class="separator:ga8354eeb0cb8dbcb47b9a61e6bf7779e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga74ce6e07c213f1e706072729d8d39361"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga74ce6e07c213f1e706072729d8d39361">clock_offset_make</a> (int64_t seconds, uint64_t fraction, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *offset)</td></tr>
+<tr class="memdesc:ga74ce6e07c213f1e706072729d8d39361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a time offset from components.  <a href="#ga74ce6e07c213f1e706072729d8d39361">More...</a><br /></td></tr>
+<tr class="separator:ga74ce6e07c213f1e706072729d8d39361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga0116d43d17fd3fc4c97ecb76c9247570">clock_offset_apply</a> (<a class="el" href="structosapi__s__time.html">t_time</a> *base, <a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *offset, <a class="el" href="structosapi__s__time.html">t_time</a> *result)</td></tr>
+<tr class="memdesc:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="mdescLeft">&#160;</td><td class="mdescRight">Incorporate a time offset into a new time.  <a href="#ga0116d43d17fd3fc4c97ecb76c9247570">More...</a><br /></td></tr>
+<tr class="separator:ga0116d43d17fd3fc4c97ecb76c9247570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa2a30437e96874d78333edf805f5c23b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#gaa2a30437e96874d78333edf805f5c23b">clock_timezone_set</a> (const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *tz)</td></tr>
+<tr class="memdesc:gaa2a30437e96874d78333edf805f5c23b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current process timezone.  <a href="#gaa2a30437e96874d78333edf805f5c23b">More...</a><br /></td></tr>
+<tr class="separator:gaa2a30437e96874d78333edf805f5c23b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga73c896ff120fafe35c2650e4b922c1c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_l_o_c_k.html#ga73c896ff120fafe35c2650e4b922c1c8">clock_timezone_get</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *tz)</td></tr>
+<tr class="memdesc:ga73c896ff120fafe35c2650e4b922c1c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current process timezone.  <a href="#ga73c896ff120fafe35c2650e4b922c1c8">More...</a><br /></td></tr>
+<tr class="separator:ga73c896ff120fafe35c2650e4b922c1c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The clock module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="gab33cf2eb71ec4ab215bace636f5a5dbc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab33cf2eb71ec4ab215bace636f5a5dbc">&#9670;&nbsp;</a></span>clock_localTime_get()</h2>
+<a id="gafc97ae110b56702092a04fbb871f534c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc97ae110b56702092a04fbb871f534c">&#9670;&nbsp;</a></span>clock_instance_createOffset()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_localTime_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_instance_createOffset </td>
           <td>(</td>
-          <td class="paramtype">t_clock *&#160;</td>
-          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the current local time (considering the timezone) </p>
+<p>Create a new clock instance based on a given time offset from the standard time. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">clk</td><td>- The current time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- The time value (standard format) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>- The offset value </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">clk</td><td>- The new clock instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga1b46f4499f83d6504fe7b1c48e714102"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1b46f4499f83d6504fe7b1c48e714102">&#9670;&nbsp;</a></span>clock_instance_createTimezone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_instance_createTimezone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>timezone</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Create a new clock instance based on a given timezone and time value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>- The time value (standard format) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timezone</td><td>- The timezone information (e.g. CDT) </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">clk</td><td>- The new clock instance </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaedd5917db46b102b09b7f203ebc01469"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaedd5917db46b102b09b7f203ebc01469">&#9670;&nbsp;</a></span>clock_instance_getLocalTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_instance_getLocalTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>localTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current local time from a clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>- The current clock </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">localTime</td><td>- The extracted local time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_gaedd5917db46b102b09b7f203ebc01469_cgraph.png" border="0" usemap="#group___c_l_o_c_k_gaedd5917db46b102b09b7f203ebc01469_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_gaedd5917db46b102b09b7f203ebc01469_cgraph" id="group___c_l_o_c_k_gaedd5917db46b102b09b7f203ebc01469_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="427,5,521,32"/>
+<area shape="rect" id="node3" href="group___c_l_o_c_k.html#ga0116d43d17fd3fc4c97ecb76c9247570" title="Incorporate a time offset into a new time. " alt="" coords="248,31,379,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga145a5341866fca762b68b54592b7118f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga145a5341866fca762b68b54592b7118f">&#9670;&nbsp;</a></span>clock_instance_getTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_instance_getTime </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__clock__s__clock.html">t_clock</a> *&#160;</td>
+          <td class="paramname"><em>clk</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>stdTime</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current standard time from a clock. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>- The current clock </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">stdTime</td><td>- The extracted local time </td></tr>
   </table>
   </dd>
 </dl>
@@ -158,6 +333,150 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga0116d43d17fd3fc4c97ecb76c9247570"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0116d43d17fd3fc4c97ecb76c9247570">&#9670;&nbsp;</a></span>clock_offset_apply()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_offset_apply </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>base</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Incorporate a time offset into a new time. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">base</td><td>- The source time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>- The time offset </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>- The result time after applying an offset to a base time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision time enum </dd></dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_cgraph.png" border="0" usemap="#group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_cgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_cgraph" id="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="184,5,279,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_icgraph.png" border="0" usemap="#group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_icgraph" alt=""/></div>
+<map name="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_icgraph" id="group___c_l_o_c_k_ga0116d43d17fd3fc4c97ecb76c9247570_icgraph">
+<area shape="rect" id="node2" href="group___c_l_o_c_k.html#gaedd5917db46b102b09b7f203ebc01469" title="Get the current local time from a clock. " alt="" coords="184,5,379,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ga74ce6e07c213f1e706072729d8d39361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga74ce6e07c213f1e706072729d8d39361">&#9670;&nbsp;</a></span>clock_offset_make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_offset_make </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>fraction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time__offset.html">t_time_offset</a> *&#160;</td>
+          <td class="paramname"><em>offset</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate a time offset from components. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">seconds</td><td>- Time in seconds from a certain origin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fraction</td><td>- The fraction of a second </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">offset</td><td>- The result time offset type </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Precision time enum </dd></dl>
+
+</div>
+</div>
+<a id="ga4c9edb19db4cd2983a9de9d9a687bf76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c9edb19db4cd2983a9de9d9a687bf76">&#9670;&nbsp;</a></span>clock_time_copy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_copy </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a copy between two time types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">source</td><td>- Copy from </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target</td><td>- Copy to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
 <a id="ga0ab3ca27ce37d4f44f81fe3186ef24b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga0ab3ca27ce37d4f44f81fe3186ef24b2">&#9670;&nbsp;</a></span>clock_time_diff()</h2>
 
@@ -167,19 +486,19 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_diff </td>
           <td>(</td>
-          <td class="paramtype">t_time&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a>&#160;</td>
           <td class="paramname"><em>t1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">t_time&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a>&#160;</td>
           <td class="paramname"><em>t2</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">t_time *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
           <td class="paramname"><em>diff</em>&#160;</td>
         </tr>
         <tr>
@@ -203,6 +522,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga8354eeb0cb8dbcb47b9a61e6bf7779e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8354eeb0cb8dbcb47b9a61e6bf7779e1">&#9670;&nbsp;</a></span>clock_time_equal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_equal </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>t1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>t2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool *&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Perform a comparison between two time types. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">t1</td><td>- The first time to compare </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">t2</td><td>- Second time to compare </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">result</td><td>- True if times are the same. False otherwise </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
 <a id="gaa67a7468dd3e849f04e3bc6abb7817db"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gaa67a7468dd3e849f04e3bc6abb7817db">&#9670;&nbsp;</a></span>clock_time_get()</h2>
 
@@ -212,7 +576,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_get </td>
           <td>(</td>
-          <td class="paramtype">t_time *&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
           <td class="paramname"><em>curtime</em></td><td>)</td>
           <td></td>
         </tr>
@@ -230,8 +594,118 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga09b5f5db52ef99e192c94038a3661aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga09b5f5db52ef99e192c94038a3661aba">&#9670;&nbsp;</a></span>clock_time_print()</h2>
+<a id="gaf9a5a0f1ff4b5d1277aa4c811f9886ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf9a5a0f1ff4b5d1277aa4c811f9886ac">&#9670;&nbsp;</a></span>clock_time_getPrecise()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_getPrecise </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>curtime</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current time in the highest available resolution since the machine/OS epoch. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">curtime</td><td>- Current highest precision time </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga27d450fb1a1897e3fef76267aee39624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27d450fb1a1897e3fef76267aee39624">&#9670;&nbsp;</a></span>clock_time_getResolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_getResolution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>tm</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>resolution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Extract the resolution from a time type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tm</td><td>- Time information </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">resolution</td><td>- Time precision </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga696c3f074a7cda43db5dccc1a9e07c8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga696c3f074a7cda43db5dccc1a9e07c8f">&#9670;&nbsp;</a></span>clock_time_make()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_make </td>
+          <td>(</td>
+          <td class="paramtype">int64_t&#160;</td>
+          <td class="paramname"><em>seconds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>fraction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
+          <td class="paramname"><em>tm</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the time structure with the supplied data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">seconds</td><td>- The number of seconds since the machine/OS epoch </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fraction</td><td>- The fraction of a second </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tm</td><td>- The new time representation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga68d33f5eaf6b82f88a0e4b56ce7b8ca5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68d33f5eaf6b82f88a0e4b56ce7b8ca5">&#9670;&nbsp;</a></span>clock_time_print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -239,7 +713,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_print </td>
           <td>(</td>
-          <td class="paramtype">t_time&#160;</td>
+          <td class="paramtype"><a class="el" href="structosapi__s__time.html">t_time</a> *&#160;</td>
           <td class="paramname"><em>ctime</em>, </td>
         </tr>
         <tr>
@@ -256,7 +730,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Return the current time in seconds from the epoch in human readable format. </p>
+<p>Print the current time in seconds from the epoch in human readable format. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ctime</td><td>- The current time </td></tr>
@@ -268,26 +742,37 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga68677723c523e804ea883f50e34c08d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68677723c523e804ea883f50e34c08d9">&#9670;&nbsp;</a></span>clock_time_set()</h2>
+<a id="ga73c896ff120fafe35c2650e4b922c1c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73c896ff120fafe35c2650e4b922c1c8">&#9670;&nbsp;</a></span>clock_timezone_get()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_time_set </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_timezone_get </td>
           <td>(</td>
-          <td class="paramtype">t_time&#160;</td>
-          <td class="paramname"><em>newTime</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>tz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the system clock with the supplied time data. </p>
+<p>Get the current process timezone. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">newTime</td><td>- The new time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- The size of the "tz" string </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">tz</td><td>- The buffer where to copy the time zone information </td></tr>
   </table>
   </dd>
 </dl>
@@ -295,53 +780,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ga7e78c49b141f42e7815919bfbe27fcc3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7e78c49b141f42e7815919bfbe27fcc3">&#9670;&nbsp;</a></span>clock_timeZone_get()</h2>
+<a id="gaa2a30437e96874d78333edf805f5c23b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa2a30437e96874d78333edf805f5c23b">&#9670;&nbsp;</a></span>clock_timezone_set()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_timeZone_get </td>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_timezone_set </td>
           <td>(</td>
-          <td class="paramtype">t_clock *&#160;</td>
-          <td class="paramname"><em>clk</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="group___g_e_n_e_r_a_l.html#gaf0556422eb1ef9c94bb5d119f336756a">t_char</a> *&#160;</td>
+          <td class="paramname"><em>tz</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the current timezone. </p>
+<p>Set the current process timezone. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">clk</td><td>- Get the current timezone </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-
-</div>
-</div>
-<a id="ga4cd0aae89cf723043c48b33a85f5fa69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4cd0aae89cf723043c48b33a85f5fa69">&#9670;&nbsp;</a></span>clock_timeZone_set()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> clock_timeZone_set </td>
-          <td>(</td>
-          <td class="paramtype">t_clock *&#160;</td>
-          <td class="paramname"><em>clk</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the current timezone. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">clk</td><td>- New time </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tz</td><td>- New time zone </td></tr>
   </table>
   </dd>
 </dl>

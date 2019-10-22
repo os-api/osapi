@@ -31,24 +31,14 @@
 #include <errno.h>
 
 // Import OSAPI types
-#include <common/common_types.h>
+#include "common/common_types.h"
 
 // *****************************************************************************************
 //
-// Section: Type definition
+// Section: Function declaration
 //
 // *****************************************************************************************
 
-typedef struct timespec t_hrTime;
-
-struct s_clock
-{
-  struct timespec time;
-
-  struct tm interval;
-};
-
-typedef struct s_clock t_clock;
 
 
 #endif	// If POSIX is defined

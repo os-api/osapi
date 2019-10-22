@@ -26,6 +26,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <time.h>
 
 // Declare Linux/BSD specific function to avoid symbols definitions
 int getdomainname( char *, size_t );
@@ -117,5 +118,25 @@ t_status os_info_get( t_osInfo * p_osInfo )
   return st;
 }
 
+
+t_status os_time_getBoot( t_time * p_tm )
+{
+ t_status	 st;
+ struct timespec ts;
+
+ status_reset( & st );
+
+ if( p_tm == (t_time *) 0 )
+   { status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st ); return st; }
+
+ if( clock_gettime( CLOCK_BOOTTIME, &ts ) == -1 )
+   { status_eset( OSAPI_MODULE_CLOCK, __func__, errno, &st ); return st; }
+
+ p_tm->seconds   = (int64_t)  ts.tv_sec;
+ p_tm->fraction  = (uint64_t) ts.tv_nsec;
+ p_tm->precision = osapi_time_nano;
+
+ return st;
+}
 
 #endif	// End of OS Linux implementation

@@ -181,7 +181,7 @@ const char * status_message_get( t_status status )
 }
 
 
-void osapi_status_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... )
+void osapi_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... )
 {
   va_list args;
 
@@ -196,4 +196,10 @@ void osapi_status_trace( const char * func, const char * sep, uint64_t line, con
   fflush( stderr );
 }
 
-
+void osapi_status_trace( const char * func, uint64_t line, t_status st )
+{
+  if( st.code == 0 )
+      osapi_trace( func, " (", line, "%s", ") - Leaving" );
+  else
+      osapi_trace( func, " (", line, ") - Leaving with: %s", status_message_get( st ) );
+}

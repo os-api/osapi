@@ -48,8 +48,8 @@ t_status	posix_element_open		( const t_char * p_path, t_element * p_element				)
 t_status	posix_element_getInfo		( t_element * p_element							);
 t_status	posix_decode_element_info	( const struct stat *  p_stat, t_fs_elementInfo * p_info		);
 t_status	posix_element_getTime		( const t_fs_elementInfo * info, int selector, t_time * time		);
-t_status	posix_element_setPermissions	( const char * p_path, t_fs_perm * p_perm				);
-t_status	posix_element_getPermissions	( t_element * p_element, t_fs_perm * p_perm				);
+t_status	posix_element_setPermissions	( const t_char * p_path, t_fs_perm * p_perm				);
+t_status	posix_element_getPermissions	( const t_char * p_path, t_fs_perm * p_perm				);
 t_fs_eType	posix_element_getType		( mode_t mode								);
 
 t_status	posix_file_open			( const t_char * path, int64_t open, int64_t mode, t_file * file	);
@@ -69,14 +69,18 @@ t_fs_eType	posix_get_type_dir_entry	( t_dir_entry * entry							);
 
 t_status	posix_link_open			( const t_char * p_path, t_link * p_link				);
 t_status	posix_link_copy			( const t_char * p_source, const t_char * p_target, bool overwrite	);
-t_status	posix_link_createSoft		( const t_char * p_source, const t_char * p_target			);
-t_status	posix_get_link_info		( t_link * p_info							);
+t_status	posix_link_createSoft		( const t_char * p_source, const t_char * p_target, bool overwrite	);
+t_status	posix_link_getInfo		( t_link * p_info							);
+t_status	posix_link_copy2directory	( const t_link * p_source, const t_char * p_target, bool overwrite	);
+t_status	posix_link_copy2link		( const t_link * p_source, const t_char * p_target, bool overwrite	);
 
 // POSIX specific functions
 int64_t		posix_fs_getOpenOptions		( const char ** p_options						);
 int64_t		posix_fs_getModeOptions		( const char ** p_options						);
+bool		posix_fs_findInMode		( const char ** p_mode, const char * p_searchString			);
 
-
+// Element Information retrieval
+t_status	posix_elementInfo_getTime	( const t_element * element, int selector, t_time * time		);
 
 // *****************************************************************************************
 //

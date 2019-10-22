@@ -21,7 +21,6 @@
 #include "common/common.h"
 
 // Own declarations
-#include "fs/fs_sysheaders.h"
 #include "fs/posix/fs_posix_priv.h"
 #include "fs/fs_helper.h"
 
@@ -50,8 +49,10 @@ int64_t posix_fs_getModeOptions( const char ** p_options )
 }
 
 
-
-
+bool posix_fs_findInMode( const char ** p_mode, const char * p_searchString )
+{
+  return common_arrayString_find( p_mode,  p_searchString );
+}
 
 
 

@@ -23,6 +23,7 @@
 #include "fs/fs_platform.h"
 
 // 2.2 Include platform independent types
+#include "fs/type/fs_type_element_attributes.h"
 #include "fs/type/fs_type_element.h"
 #include "fs/type/fs_type_file.h"
 #include "fs/type/fs_type_dir.h"

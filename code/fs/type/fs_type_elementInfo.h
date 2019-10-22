@@ -23,6 +23,7 @@
 
 // Import own headers
 #include "fs/fs_platform.h"
+#include "fs/type/fs_type_element_attributes.h"
 #include "fs/type/fs_type_element_type.h"
 
 // *****************************************************************************************
@@ -48,6 +49,8 @@ struct osapi_fs_element_info
   t_time		mtime;				///< Modification time
   uint64_t		nlink;				///< Number of hard links to element
   t_fs_perm		perm;				///< Permission set
+  bool			compressed;			///< Element compressed ?
+  bool			encrypted;			///< Element encrypted ?
   t_char		fullpath [ OSAPI_PATH_MAX ];	///< The full and real path name to the element
 };
 

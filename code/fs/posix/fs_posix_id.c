@@ -30,7 +30,8 @@
 #include "common/common.h"
 
 // Own declarations
-#include "fs/fs_sysheaders.h"
+#include "fs/sys/fs_unix.h"
+#include "fs/posix/fs_posix.h"
 #include "fs/fs_helper.h"
 
 // *****************************************************************************************

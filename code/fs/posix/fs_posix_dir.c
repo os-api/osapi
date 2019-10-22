@@ -39,7 +39,7 @@
 #include "fs/fs_element.h"
 #include "fs/fs_dir.h"
 #include "fs/fs_direntry.h"
-#include "fs/fs_sysheaders.h"
+#include "fs/posix/fs_posix.h"
 #include "fs/fs_helper.h"
 
 
@@ -332,7 +332,7 @@ t_status posix_directory_getInfo( t_dir * p_dir )
   return st;
 }
 
-/*
+
 t_status posix_directory_copy( const t_char * p_source, const t_char * p_target, bool overwrite )
 {
   t_status	st;
@@ -391,6 +391,6 @@ t_status posix_directory_copy( const t_char * p_source, const t_char * p_target,
 
   return st;
 }
-*/
+
 
 #endif // POSIX only implementation

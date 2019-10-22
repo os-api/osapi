@@ -29,11 +29,11 @@
 
 #ifdef OSAPI_TRACER
  #define TRACE_IF(x)		x;
- #define TRACE_ENTER		osapi_status_trace	( __FUNCTION__, " (", __LINE__, ") - %s", "Entering"		);
- #define TRACE_EXIT		osapi_status_trace	( __FUNCTION__, " (", __LINE__, ") - %s", "Leaving"		);
- #define TRACE_POINT		osapi_status_trace	( __FUNCTION__, " (", __LINE__, ") - %s", "Passing through"	);
- #define TRACE_MSG(x)		osapi_status_trace	( __FUNCTION__, " (", __LINE__, ") - %s", x			);
- #define TRACE(x, ...)		osapi_status_trace	( __FUNCTION__, " (", __LINE__, ") - " x, __VA_ARGS__		);
+ #define TRACE_ENTER		osapi_trace		( __FUNCTION__, " (", __LINE__, ") - %s", "Entering"		);
+ #define TRACE_POINT		osapi_trace		( __FUNCTION__, " (", __LINE__, ") - %s", "Passing through"	);
+ #define TRACE_MSG(x)		osapi_trace		( __FUNCTION__, " (", __LINE__, ") - %s", x			);
+ #define TRACE(x, ...)		osapi_trace		( __FUNCTION__, " (", __LINE__, ") - " x, __VA_ARGS__		);
+ #define TRACE_EXIT	       	osapi_status_trace	( __FUNCTION__,       __LINE__, st				);
 #else
  #define TRACE_IF(x)
  #define TRACE_ENTER

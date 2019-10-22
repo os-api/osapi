@@ -63,6 +63,24 @@ int64_t common_options_get( const t_option * moduleOptions, char * providedOptio
 }
 
 
+bool common_arrayString_find( const char ** p_arrayString, const char * p_searchString )
+{
+ bool	found = false;
+
+  if( p_searchString != NULL )
+      for( int i=0; p_arrayString[ i ] != OSAPI_NULL_CHAR_POINTER; i++ )
+         {
+	  if( strcasecmp( p_arrayString[ i ], p_searchString ) == 0 )
+	    {
+	      found = true;
+	      break;
+	    }
+         }
+
+  return found;
+}
+
+
 // All elements of a C-string are digits?
 bool common_string_isDigit( const char * str )
 {

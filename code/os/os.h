@@ -25,6 +25,7 @@ extern "C" {
 // Generic OSAPI includes
 #include "general/general.h"
 #include "status/status_types.h"
+#include "common/types/common_type_time.h"
 
 // Own declarations
 #include "os/os_types.h"
@@ -107,6 +108,10 @@ t_status os_provider_get( t_osInfo * info, char ** provider );
 /// @return Operation status
 t_status os_providerRelease_get( t_osInfo * info, char ** providerRelease );
 
+/// @brief Get the OS boot time
+/// @param [out] tm - OS boot time
+/// @return Operation status
+t_status os_time_getBoot( t_time * tm );
 
 #pragma GCC visibility pop			// End of public interface
 

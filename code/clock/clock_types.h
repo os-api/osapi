@@ -10,4 +10,17 @@
 #ifndef OSAPI_CLOCK_TYPES_H_
 #define OSAPI_CLOCK_TYPES_H_
 
+
+// *****************************************************************************************
+//
+// Section: Import headers
+//
+// *****************************************************************************************
+
+// System headers
+
+// Import Project headers
+#include "common/types/common_type_time.h"
+#include "clock/type/clock_type_clock.h"
+
 #endif /* OSAPI_CLOCK_TYPES_H_ */
