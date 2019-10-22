@@ -5,5 +5,7 @@ var dir_949a34977f408544262fabd05133be9a =
     [ "status.h", "status_8h_source.html", null ],
     [ "status_defs.h", "status__defs_8h.html", "status__defs_8h" ],
     [ "status_platform.h", "status__platform_8h_source.html", null ],
-    [ "status_types.h", "status__types_8h_source.html", null ]
+    [ "status_types.h", "status__types_8h_source.html", null ],
+    [ "trace.h", "trace_8h_source.html", null ],
+    [ "trace_macros.h", "trace__macros_8h_source.html", null ]
 ];

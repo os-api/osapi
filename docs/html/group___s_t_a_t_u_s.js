@@ -11,6 +11,8 @@ var group___s_t_a_t_u_s =
     [ "t_status_funcname", "group___s_t_a_t_u_s.html#ga53e23a5af8aeda0ea01a65fac7eee6e8", null ],
     [ "t_status_string", "group___s_t_a_t_u_s.html#ga835f63807d42ad30134dcd2118b12f57", null ],
     [ "t_status_type", "group___s_t_a_t_u_s.html#ga288cc77c09bd4204fc6c5f3e7d09e247", null ],
+    [ "osapi_status_trace", "group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291", null ],
+    [ "osapi_trace", "group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e", null ],
     [ "status_function_get", "group___s_t_a_t_u_s.html#gafc869841e3c3e9bb119e79662b2f3ddd", null ],
     [ "status_message_get", "group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4", null ],
     [ "status_message_print", "group___s_t_a_t_u_s.html#ga188dfc0f7572f604958201a1117b6d2d", null ],

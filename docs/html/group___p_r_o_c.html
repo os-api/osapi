@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.28</span>
+   &#160;<span id="projectnumber">0.29</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -272,6 +272,15 @@ Functions</h2></td></tr>
 <tr class="memitem:gafbfec2901ee397bb91b98efa6a46369b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gafbfec2901ee397bb91b98efa6a46369b">proc_list_copyTo</a> (const void *source, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> sourceSize, <a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> targetItem, <a class="el" href="structosapi__s__list.html">t_list</a> *target)</td></tr>
 <tr class="memdesc:gafbfec2901ee397bb91b98efa6a46369b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy from a naked/raw memory into a list item.  <a href="#gafbfec2901ee397bb91b98efa6a46369b">More...</a><br /></td></tr>
 <tr class="separator:gafbfec2901ee397bb91b98efa6a46369b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab2a7e168dc521d7ce37bfd2988cd5e15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gab2a7e168dc521d7ce37bfd2988cd5e15">proc_rawMemory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, void *mem)</td></tr>
+<tr class="memdesc:gab2a7e168dc521d7ce37bfd2988cd5e15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#gab2a7e168dc521d7ce37bfd2988cd5e15">More...</a><br /></td></tr>
+<tr class="separator:gab2a7e168dc521d7ce37bfd2988cd5e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7634b5db0335737acc0e0ec2f65c69eb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga7634b5db0335737acc0e0ec2f65c69eb">proc_rawMemory_reAllocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> newSize, void *mem)</td></tr>
+<tr class="memdesc:ga7634b5db0335737acc0e0ec2f65c69eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Resize the previously allocated memory in the process heap.  <a href="#ga7634b5db0335737acc0e0ec2f65c69eb">More...</a><br /></td></tr>
+<tr class="separator:ga7634b5db0335737acc0e0ec2f65c69eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf0d793db8b39dd4f48a5aef2de10884e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#gaf0d793db8b39dd4f48a5aef2de10884e">proc_rawMemory_deallocate</a> (void *mem)</td></tr>
+<tr class="memdesc:gaf0d793db8b39dd4f48a5aef2de10884e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deallocate a previously allocated heap memory block.  <a href="#gaf0d793db8b39dd4f48a5aef2de10884e">More...</a><br /></td></tr>
+<tr class="separator:gaf0d793db8b39dd4f48a5aef2de10884e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga2f889f4502bccb882f2919d29d700f64"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___p_r_o_c.html#ga2f889f4502bccb882f2919d29d700f64">proc_memory_allocate</a> (<a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a> size, <a class="el" href="structosapi__s__memory.html">t_memory</a> *mem)</td></tr>
 <tr class="memdesc:ga2f889f4502bccb882f2919d29d700f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allocate memory in the process heap.  <a href="#ga2f889f4502bccb882f2919d29d700f64">More...</a><br /></td></tr>
 <tr class="separator:ga2f889f4502bccb882f2919d29d700f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3248,6 +3257,109 @@ Here is the caller graph for this function:</div>
 
 <p>Is PROC module supported in the platform. </p>
 <dl class="section return"><dt>Returns</dt><dd>True if supported. False, otherwise (using status macros) </dd></dl>
+
+</div>
+</div>
+<a id="gab2a7e168dc521d7ce37bfd2988cd5e15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab2a7e168dc521d7ce37bfd2988cd5e15">&#9670;&nbsp;</a></span>proc_rawMemory_allocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_rawMemory_allocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Allocate memory in the process heap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>- Required memory size in bytes </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">mem</td><td>- Memory pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="gaf0d793db8b39dd4f48a5aef2de10884e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf0d793db8b39dd4f48a5aef2de10884e">&#9670;&nbsp;</a></span>proc_rawMemory_deallocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_rawMemory_deallocate </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mem</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deallocate a previously allocated heap memory block. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">mem</td><td>- Address of the memory to deallocate </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
+
+</div>
+</div>
+<a id="ga7634b5db0335737acc0e0ec2f65c69eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7634b5db0335737acc0e0ec2f65c69eb">&#9670;&nbsp;</a></span>proc_rawMemory_reAllocate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> proc_rawMemory_reAllocate </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group___g_e_n_e_r_a_l.html#ga0f1ca6cf8aeb58e0b0ae3a12b5034537">t_size</a>&#160;</td>
+          <td class="paramname"><em>newSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Resize the previously allocated memory in the process heap. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">newSize</td><td>- New memory size in bytes </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">mem</td><td>- Memory pointer </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
 
 </div>
 </div>

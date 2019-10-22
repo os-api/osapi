@@ -1,4 +1,0 @@
-<map id="osapi_getModule" name="osapi_getModule">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gae5f28f37a47f217b6c0f211961373594" title="Set the status type with the current status information using an error string. " alt="" coords="181,5,298,32"/>
-<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#gae986d7e1130de5edc7ec4e5ba5d8fefe" title="Get the module name that corresponds to the provided status information. " alt="" coords="173,56,305,83"/>
-</map>

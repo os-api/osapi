@@ -26,7 +26,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">OSAPI
-   &#160;<span id="projectnumber">0.28</span>
+   &#160;<span id="projectnumber">0.29</span>
    </div>
    <div id="projectbrief">Open System API</div>
   </td>
@@ -132,11 +132,137 @@ Functions</h2></td></tr>
 <tr class="memitem:ga085ee1b36a421b1d4ccf1c299104b3a4"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4">status_message_get</a> (<a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> status)</td></tr>
 <tr class="memdesc:ga085ee1b36a421b1d4ccf1c299104b3a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the error message that corresponds to the provided status information.  <a href="#ga085ee1b36a421b1d4ccf1c299104b3a4">More...</a><br /></td></tr>
 <tr class="separator:ga085ee1b36a421b1d4ccf1c299104b3a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae385d0106de39caf72e99777f89b588e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e">osapi_trace</a> (const char *func, const char *sep, uint64_t line, const char *fmt,...)</td></tr>
+<tr class="memdesc:gae385d0106de39caf72e99777f89b588e"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSAPI C Trace function The functions sends the output to standard error.  <a href="#gae385d0106de39caf72e99777f89b588e">More...</a><br /></td></tr>
+<tr class="separator:gae385d0106de39caf72e99777f89b588e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga739a8be8c90a5a27a5f92387c958f291"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291">osapi_status_trace</a> (const char *func, uint64_t line, <a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a> st)</td></tr>
+<tr class="memdesc:ga739a8be8c90a5a27a5f92387c958f291"><td class="mdescLeft">&#160;</td><td class="mdescRight">OSAPI C Trace function The functions sends the output to standard error.  <a href="#ga739a8be8c90a5a27a5f92387c958f291">More...</a><br /></td></tr>
+<tr class="separator:ga739a8be8c90a5a27a5f92387c958f291"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>The OSAPI status module. </p>
 <hr/>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ga739a8be8c90a5a27a5f92387c958f291"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga739a8be8c90a5a27a5f92387c958f291">&#9670;&nbsp;</a></span>osapi_status_trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi_status_trace </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group___s_t_a_t_u_s.html#ga672305f4bed0424144c022647762b65d">t_status</a>&#160;</td>
+          <td class="paramname"><em>st</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OSAPI C Trace function The functions sends the output to standard error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>- Name of function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>- Line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">st</td><td>- An operation status </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_ga739a8be8c90a5a27a5f92387c958f291_cgraph.png" border="0" usemap="#group___s_t_a_t_u_s_ga739a8be8c90a5a27a5f92387c958f291_cgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_ga739a8be8c90a5a27a5f92387c958f291_cgraph" id="group___s_t_a_t_u_s_ga739a8be8c90a5a27a5f92387c958f291_cgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e" title="OSAPI C Trace function The functions sends the output to standard error. " alt="" coords="212,5,301,32"/>
+<area shape="rect" id="node3" href="group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4" title="Get the error message that corresponds to the provided status information. " alt="" coords="185,56,328,83"/>
+<area shape="rect" id="node4" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="376,56,488,83"/>
+<area shape="rect" id="node5" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="536,56,665,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="gae385d0106de39caf72e99777f89b588e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae385d0106de39caf72e99777f89b588e">&#9670;&nbsp;</a></span>osapi_trace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void osapi_trace </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>sep</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>fmt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>OSAPI C Trace function The functions sends the output to standard error. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">func</td><td>- Name of function </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sep</td><td>- Separator between function and line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">line</td><td>- Line number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>- printf format for the remaining arguments </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_gae385d0106de39caf72e99777f89b588e_icgraph.png" border="0" usemap="#group___s_t_a_t_u_s_gae385d0106de39caf72e99777f89b588e_icgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_gae385d0106de39caf72e99777f89b588e_icgraph" id="group___s_t_a_t_u_s_gae385d0106de39caf72e99777f89b588e_icgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291" title="OSAPI C Trace function The functions sends the output to standard error. " alt="" coords="143,5,275,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="gafc869841e3c3e9bb119e79662b2f3ddd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gafc869841e3c3e9bb119e79662b2f3ddd">&#9670;&nbsp;</a></span>status_function_get()</h2>
 
@@ -195,6 +321,14 @@ Here is the call graph for this function:</div>
 <map name="group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_cgraph" id="group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_cgraph">
 <area shape="rect" id="node2" href="group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="196,5,308,32"/>
 <area shape="rect" id="node3" href="group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="356,5,485,32"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_icgraph.png" border="0" usemap="#group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_icgraph" alt=""/></div>
+<map name="group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_icgraph" id="group___s_t_a_t_u_s_ga085ee1b36a421b1d4ccf1c299104b3a4_icgraph">
+<area shape="rect" id="node2" href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291" title="OSAPI C Trace function The functions sends the output to standard error. " alt="" coords="196,5,328,32"/>
 </map>
 </div>
 

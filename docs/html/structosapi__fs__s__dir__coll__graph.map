@@ -1,7 +1,8 @@
 <map id="osapi_fs_s_dir" name="osapi_fs_s_dir">
-<area shape="rect" id="node2" href="$structosapi__fs__s__directory__info.html" title="Structure describing a directory descriptor type. " alt="" coords="5,199,176,225"/>
-<area shape="rect" id="node3" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="200,199,352,225"/>
-<area shape="rect" id="node4" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="148,95,287,136"/>
-<area shape="rect" id="node5" href="$structosapi__fs__s__element__id.html" title="Structure that defines a an element ID. " alt="" coords="311,102,465,129"/>
-<area shape="rect" id="node6" href="$structosapi__fs__s__id.html" title="Structure that holds a directory system element information. " alt="" coords="337,5,439,32"/>
+<area shape="rect" id="node2" href="$structosapi__fs__s__directory__info.html" title="Structure describing a directory descriptor type. " alt="" coords="5,243,176,269"/>
+<area shape="rect" id="node3" href="$structosapi__fs__element__info.html" title="Structure containing the file system element generic information. " alt="" coords="200,243,352,269"/>
+<area shape="rect" id="node4" href="$structosapi__s__time.html" title="Structure supporting a time date. " alt="" coords="84,102,183,129"/>
+<area shape="rect" id="node5" href="$structosapi__fs__s__element__permissions.html" title="Structure that defines a file system permissions. " alt="" coords="207,95,345,136"/>
+<area shape="rect" id="node6" href="$structosapi__fs__s__element__id.html" title="Structure that defines a an element ID. " alt="" coords="369,102,524,129"/>
+<area shape="rect" id="node7" href="$structosapi__fs__s__id.html" title="Structure that holds a directory system element information. " alt="" coords="395,5,498,32"/>
 </map>

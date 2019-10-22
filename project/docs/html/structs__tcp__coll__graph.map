@@ -1,7 +1,0 @@
-<map id="s_tcp" name="s_tcp">
-<area shape="rect" id="node2" href="$structs__ip.html" title="Structure to support IP information. " alt="" coords="39,273,85,300"/>
-<area shape="rect" id="node3" href="$unionu__ip__address.html" title="Union of IPv4/v6 addresses. " alt="" coords="13,184,111,211"/>
-<area shape="rect" id="node4" href="$unionu__ipv4__address.html" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses. " alt="" coords="5,95,119,121"/>
-<area shape="rect" id="node5" href="$structs__ipv4__address.html" title="Structure for a structured IPv4 address. " alt="" coords="5,5,119,32"/>
-<area shape="rect" id="node6" href="$structs__lport.html" title="s_lport" alt="" coords="110,273,171,300"/>
-</map>
