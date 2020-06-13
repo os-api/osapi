@@ -25,12 +25,12 @@
 //
 // *****************************************************************************************
 
-#define error_proc_X(a, b, c) [a]=c,
+#define osapi_error_proc_X(a, b, c) [a]=c,
 
-static const char * proc_errors[] = {
+static const char * osapi_proc_errors[] = {
   #include "error/mappings/table_proc.h"
 };
 
-#undef error_proc_X
+#undef osapi_error_proc_X
 
 #endif /* OSAPI_ERROR_PRIV_PROC_H_ */

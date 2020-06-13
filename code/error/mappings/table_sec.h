@@ -7,14 +7,14 @@
 //
 // *****************************************************************************************
 
-error_sec_X( e_sec_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE		)
+osapi_error_sec_X( osapi_sec_error_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE		)
 
-error_sec_X( e_sec_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC	)
-error_sec_X( e_sec_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT	)
-error_sec_X( e_sec_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM	)
-error_sec_X( e_sec_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN	)
-error_sec_X( e_sec_memory, ,				"Unable to allocate memory"	)
-error_sec_X( e_sec_userid, ,				"User ID not found"		)
-error_sec_X( e_sec_groupid, ,				"Group ID not found"		)
+osapi_error_sec_X( osapi_sec_error_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC	)
+osapi_error_sec_X( osapi_sec_error_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT	)
+osapi_error_sec_X( osapi_sec_error_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM	)
+osapi_error_sec_X( osapi_sec_error_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN	)
+osapi_error_sec_X( osapi_sec_error_memory, ,				"Unable to allocate memory"	)
+osapi_error_sec_X( osapi_sec_error_userid, ,				"User ID not found"		)
+osapi_error_sec_X( osapi_sec_error_groupid, ,				"Group ID not found"		)
 
-error_sec_X( e_sec_max, ,				OSAPI_ERROR_STRING_UNKNOWN	)
+osapi_error_sec_X( osapi_sec_error_max, ,				OSAPI_ERROR_STRING_UNKNOWN	)

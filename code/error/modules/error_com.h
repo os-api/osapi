@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_com_X(a, b, c) a b,
-enum com_X {
+#define osapi_error_com_X(a, b, c) a b,
+enum osapi_error_com_E {
 	  #include <error/mappings/table_com.h>
 };
-#undef error_com_X
+#undef osapi_error_com_X
 
 
 #endif /* OSAPI_ERROR_COM_H_ */

@@ -147,7 +147,7 @@ t_status parse_linux_proc_stat_line( char * line, t_proc_info * p_proc_info )
 
  // 22. The time the process started after system boot.
  token = strtok_r( NULL, OSAPI_SPACE_STRING, &rest );
- p_proc_info->starttime = (time_t) atol( token );
+ p_proc_info->starttime = (uint64_t) atol( token );
 
  // 23. Virtual memory size in bytes
  token = strtok_r( NULL, OSAPI_SPACE_STRING, &rest );
@@ -226,7 +226,7 @@ t_status proc_info_last_processing( t_proc_info * p_pinfo )
     {
       p_pinfo->resources.utime = p_pinfo->resources.utime / (t_size) sz;
       p_pinfo->resources.stime = p_pinfo->resources.stime / (t_size) sz;
-      p_pinfo->starttime = p_pinfo->starttime / sz;
+      p_pinfo->starttime = (uint64_t) ( p_pinfo->starttime / ((uint64_t) sz) );
     }
 
   return st;
@@ -250,7 +250,7 @@ t_status choose_linux_proc_stat_decoder( FILE * fp, t_proc_info * p_pinfo )
   status_reset( & st );
 
   if( fp == (FILE *) 0 || p_pinfo == (t_proc_info *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       if( fgets( line, (int) OSAPI_FS_PROC_STAT_ENTRY_SIZE, fp ) == NULL )

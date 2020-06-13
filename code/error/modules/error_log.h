@@ -21,10 +21,10 @@
 
 // Include own error definitions
 
-#define osapi_log_error_X(a, b, c) a b,
-enum osapi_log_e_error_X {
+#define osapi_error_log_X(a, b, c) a b,
+enum osapi_error_log_E {
 	  #include "error/mappings/table_log.h"
 };
-#undef osapi_log_error_X
+#undef osapi_error_log_X
 
 #endif /* OSAPI_ERROR_LOG_H_ */

@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_com_X(a, b, c) [a]=c,
+#define osapi_error_com_X(a, b, c) [a]=c,
 
-static const char * com_errors[] =
+static const char * osapi_com_errors[] =
 {
   #include "error/mappings/table_com.h"
 };
 
-#undef error_com_X
+#undef osapi_error_com_X
 
 #endif /* OSAPI_ERROR_PRIV_COM_H_ */

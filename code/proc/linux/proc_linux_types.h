@@ -25,7 +25,7 @@
 
 // Import own headers
 #include "proc/posix/proc_posix_types.h"
-
+#include "proc/type/proc_type_library.h"
 
 // *****************************************************************************************
 //

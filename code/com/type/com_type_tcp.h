@@ -20,8 +20,8 @@
 
 
 // General OSAPI headers
-#include <common/common_types.h>
 #include "general/general_protocol.h"
+#include "common/common_types.h"
 
 // Include own headers
 
@@ -32,13 +32,17 @@
 //
 // *****************************************************************************************
 
-
-struct s_tcp
+/// Define a generic TCP connection type
+struct osapi_tcp_S
 {
- t_ip		ip;
- t_lport	port;
+ t_ip		ip;		///< The IP information part
+ t_lport	port;		///< The Port information part
 };
 
-typedef struct s_tcp t_tcp;
+/// The TCP connection type
+typedef struct osapi_tcp_S	t_tcp;
+
+
+
 
 #endif /* OSAPI_COM_TYPE_TCP_H_ */

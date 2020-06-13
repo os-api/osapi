@@ -17,15 +17,18 @@
 #include "general/general_baseline.h"
 
 // System headers <here>
+#include <string.h>
 
 // Generic OSAPI includes
 
 #include "general/general.h"
+#include "error/modules/error_machine.h"
 #include "status/status.h"
 
 // Own declarations
 #include "machine/machine.h"
-#include "error/modules/error_machine.h"
+
+
 
 // *****************************************************************************************
 //
@@ -33,7 +36,6 @@
 //
 // *****************************************************************************************
 
-t_status machine_module_supported( void )
-{
-  RETURN_STATUS_SUCCESS;	// Posix supports HW related functions
-}
+
+
+

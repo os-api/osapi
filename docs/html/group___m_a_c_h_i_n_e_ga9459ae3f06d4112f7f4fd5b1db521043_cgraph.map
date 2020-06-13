@@ -1,0 +1,5 @@
+<map id="machine_cpu_getSummary" name="machine_cpu_getSummary">
+<area shape="rect" id="node1" title="Obtain summary information about machine CPUs." alt="" coords="5,31,204,57"/>
+<area shape="rect" id="node2" href="$group___m_a_c_h_i_n_e.html#gaca4faaba1e8f050aa3980c652648e86f" title="Retrieve the endianess of a CPU architecture." alt="" coords="252,5,432,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="480,31,583,57"/>
+</map>

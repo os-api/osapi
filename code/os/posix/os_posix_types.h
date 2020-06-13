@@ -23,6 +23,14 @@
 
 // *****************************************************************************************
 //
+// Section: Constants/Macros
+//
+// *****************************************************************************************
+
+
+
+// *****************************************************************************************
+//
 // Section: Type definitions
 //
 // *****************************************************************************************
@@ -33,7 +41,7 @@
 
 
 /// The OS information structure
-struct s_osInfo
+struct osapi_os_info_S
 {
   char		kernel		[ OSAPI_OS_MAX_KERNEL_NAME	];	///< The Kernel name
   char		node		[ OSAPI_OS_MAX_NODE_NAME	];	///< The machine node name
@@ -47,7 +55,7 @@ struct s_osInfo
 
 
 /// The OS information type
-typedef struct s_osInfo		t_osInfo;
+typedef struct osapi_os_info_S		t_osInfo;
 
 
 

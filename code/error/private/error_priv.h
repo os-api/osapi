@@ -67,27 +67,27 @@ static const char * osapi_error_none [] =
 };
 
 /// Auxiliary structure that helps in the definition of the maximum error code in each module
-struct osapi_s_errors
+struct osapi_error_S
 {
   t_error 		topValue;	///< The maximum error value in a module
   const char ** 	name;		///< The error string that corresponds to the maximum error value
 };
 
 // The following structure must match exactly the modules defined in general/mappings/table_modules.h
-static const struct osapi_s_errors osapi_error_strings[ OSAPI_MODULE_MAX ] = {
+static const struct osapi_error_S osapi_error_strings[ OSAPI_MODULE_MAX ] = {
 	    { 1,			osapi_error_none 	},
 	    { osapi_common_error_max, 	osapi_common_errors  	},
-	    { e_string_max, 		string_errors  	},
-	    { e_os_max, 		os_errors	},
-	    { e_machine_max, 		machine_errors 	},
-	    { e_proc_max, 		proc_errors	},
+	    { osapi_string_error_max,	osapi_string_errors  	},
+	    { osapi_os_error_max,	osapi_os_errors		},
+	    { osapi_machine_error_max, 	osapi_machine_errors 	},
+	    { osapi_proc_error_max, 	osapi_proc_errors	},
 	    { osapi_clock_error_max,	osapi_clock_errors	},
-	    { e_sec_max,		sec_errors	},
-	    { e_io_max,			io_errors	},
+	    { osapi_sec_error_max,	osapi_sec_errors	},
+	    { osapi_io_error_max,	osapi_io_errors		},
 	    { osapi_log_error_max,	osapi_log_errors	},
 	    { osapi_fs_error_max,	osapi_fs_errors		},
-	    { e_com_max,		com_errors	},
-	    { e_util_max,		util_errors	},
+	    { osapi_com_error_max,	osapi_com_errors	},
+	    { osapi_util_error_max,	osapi_util_errors	},
 };
 
 

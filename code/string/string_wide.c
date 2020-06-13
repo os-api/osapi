@@ -46,7 +46,7 @@ t_status string_wide_new( t_size size, t_wString * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER || size == 0 )
-      status_iset( OSAPI_MODULE_STRING,__func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING,__func__, osapi_string_error_params, &st );
   else
     {
       errno = 0;
@@ -72,14 +72,14 @@ t_status string_wide_delete( t_wString * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       p_string->tsize = 0;
       p_string->csize = 0;
 
       if( p_string->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
       else
 	  free( (void *) p_string->ps_location );
     }
@@ -95,7 +95,7 @@ t_status string_wide_create( const wchar_t * p_initial_string, t_wString * p_str
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER || p_initial_string == OSAPI_WIDE_CHAR_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       len = (t_size) wcslen( p_initial_string );
@@ -114,7 +114,7 @@ t_status string_wide_create( const wchar_t * p_initial_string, t_wString * p_str
 	    {
 	      // Unable to copy string, release memory
 	      string_wide_delete( p_string );
-	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_create, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_create, &st );
 	    }
 	}
     }
@@ -129,12 +129,12 @@ t_status string_wide_clone( t_wString * ps_old, t_wString * ps_new )
   status_reset( & st );
 
   if( ps_old == OSAPI_WIDE_STRING_NULL_POINTER || ps_new == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       // Make sure that new string is not already bounded to some heap address
       if( ps_new->ps_location != OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_exists, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_exists, &st );
       else
 	  st = string_wide_create( ps_old->ps_location, ps_new );
     }
@@ -150,20 +150,20 @@ t_status string_wide_put( const wchar_t * message, t_wString * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       if( p_string->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
       else
 	{
 	  if( p_string->csize > 0 )
-	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_exists, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_exists, &st );
 	  else
 	    {
 	      len = (t_size) wcslen( message );
 	      if( p_string->tsize < len )
-		  status_iset( OSAPI_MODULE_STRING, __func__, e_string_noSpace, &st );
+		  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_noSpace, &st );
 	      else
 		{
 		  errno = 0;
@@ -185,11 +185,11 @@ t_status string_wide_set( const wchar_t * message, t_wString * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       if( p_string->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
       else
 	{
 	  len = (t_size) wcslen( message );
@@ -213,7 +213,7 @@ t_status string_wide_size( t_wString * p_string, t_size * p_size )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
       *p_size = p_string->csize;
 
@@ -227,7 +227,7 @@ t_status string_wide_print( t_wString * p_string )
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
       wprintf(L"%.*s\n", (int) p_string->csize, p_string->ps_location );
 
@@ -241,7 +241,7 @@ t_status string_wide_get( t_wString * p_string, t_size maxSize, wchar_t * messag
   status_reset( & st );
 
   if( p_string == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       errno = 0;
@@ -259,11 +259,11 @@ t_status string_wide_concat( t_wString * ps_str1, t_wString * ps_str2, t_wString
   status_reset( & st );
 
   if( ps_final == OSAPI_WIDE_STRING_NULL_POINTER || ps_str1 == OSAPI_WIDE_STRING_NULL_POINTER || ps_str2 == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       if( ps_final->ps_location == ps_str1->ps_location || ps_final->ps_location == ps_str2->ps_location )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_sameString, &st );		// One of the string is the same as the destination string
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_sameString, &st );		// One of the string is the same as the destination string
       else
 	{
 	  string_wide_delete( ps_final );		  // Make sure to release memory of current string
@@ -272,7 +272,7 @@ t_status string_wide_concat( t_wString * ps_str1, t_wString * ps_str2, t_wString
 	  ps_final->ps_location = calloc( 1, ps_str1->csize + ps_str2->csize + 1 );
 
 	  if( ps_final->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	      status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
 	  else
 	    {
 	      ps_final->tsize = ps_str1->csize + ps_str2->csize;
@@ -302,11 +302,11 @@ t_status string_wide_compare( t_wString * ps_str1, t_wString * ps_str2, Byte * p
   status_reset( & st );
 
   if( ps_str1 == OSAPI_WIDE_STRING_NULL_POINTER || ps_str2 == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       if( ps_str1->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER || ps_str1->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
       else
 	  *p_result = (Byte) wcscmp( ps_str1->ps_location, ps_str2->ps_location );
     }
@@ -322,7 +322,7 @@ t_status string_wide_equal( t_wString * ps_str1, t_wString * ps_str2, bool * p_r
   *p_result = 0;	// Assume FALSE
 
   if( ps_str1 == OSAPI_WIDE_STRING_NULL_POINTER || ps_str2 == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       // Strings must have equal size in the first place
@@ -347,11 +347,11 @@ t_status string_wide_compareIcase( t_wString * ps_str1, t_wString * ps_str2, Byt
   status_reset( & st );
 
   if( ps_str1 == OSAPI_WIDE_STRING_NULL_POINTER || ps_str2 == OSAPI_WIDE_STRING_NULL_POINTER )
-      status_iset( OSAPI_MODULE_STRING, __func__, e_string_params, &st );
+      status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_params, &st );
   else
     {
       if( ps_str1->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER || ps_str1->ps_location == OSAPI_WIDE_CHAR_NULL_POINTER )
-	  status_iset( OSAPI_MODULE_STRING, __func__, e_string_nullPointer, &st );
+	  status_iset( OSAPI_MODULE_STRING, __func__, osapi_string_error_nullPointer, &st );
       else
 	  *p_result = (Byte) strcasecmp( ps_str1->ps_location, ps_str2->ps_location );
     }

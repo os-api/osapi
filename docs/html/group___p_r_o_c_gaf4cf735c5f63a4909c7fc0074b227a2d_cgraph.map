@@ -1,0 +1,4 @@
+<map id="proc_info_getCPUConsumption" name="proc_info_getCPUConsumption">
+<area shape="rect" id="node1" title="Extract the process CPU consumption (summary of user and system) from the process information." alt="" coords="5,5,228,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="276,5,379,32"/>
+</map>

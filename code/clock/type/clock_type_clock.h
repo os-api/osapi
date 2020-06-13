@@ -33,24 +33,24 @@
 
 
 /// Structure supporting a time offset (from a standard time, for instance)
-struct osapi_s_time_offset
+struct osapi_time_offset_S
 {
       int64_t	seconds;    	///< Delta in seconds
       uint64_t	fraction;	///< Delta in fractions of a second (if delta is negative, the sign must be in the seconds)
 };
 
-typedef struct osapi_s_time_offset	t_time_offset;
+typedef struct osapi_time_offset_S	t_time_offset;
 
 
 /// Structure supporting a clock
-struct osapi_clock_s_clock
+struct osapi_clock_S
 {
       t_time			value;    	///< Time value
       int			local;		///< Is time value a local time, if so it must have a time offset from Standard time
       t_time_offset		offset;    	///< Difference to the Standard Time
 };
 
-typedef struct osapi_clock_s_clock	t_clock;
+typedef struct osapi_clock_S	t_clock;
 
 
 

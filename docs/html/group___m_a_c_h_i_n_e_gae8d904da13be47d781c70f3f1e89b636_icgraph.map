@@ -1,0 +1,6 @@
+<map id="internal_machine_asm_cpuid" name="internal_machine_asm_cpuid">
+<area shape="rect" id="node2" href="$group___m_a_c_h_i_n_e.html#gabc9c2d0ca2363057613757bca6779ee7" title="Execute a CPUID machine instruction Provides raw access to the underline CPUID instruction. " alt="" coords="247,5,363,32"/>
+<area shape="rect" id="node3" href="$group___m_a_c_h_i_n_e.html#gaba1528456559c37e97d63076db614658" title="Retrieve the CPU Vendor name. " alt="" coords="205,56,405,83"/>
+<area shape="rect" id="node4" href="$group___m_a_c_h_i_n_e.html#ga53bb7c348cc09e4bd205ab4ce74a7b82" title="Check if this CPU supports features. " alt="" coords="234,107,377,149"/>
+<area shape="rect" id="node5" href="$group___m_a_c_h_i_n_e.html#ga007464a92fb26f1e85ec1922435b7408" title="Retrieval all supported CPU features. " alt="" coords="234,173,377,214"/>
+</map>

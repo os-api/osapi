@@ -29,19 +29,22 @@
 //
 // *****************************************************************************************
 
-
-struct s_connection_endpoint
+/// Define a generic connection endpoint type
+struct osapi_connection_endpoint_S
 {
-  t_protocol	protocol;
+  t_protocol	protocol;		///< Connection protocol
 
-  union u_connection_endpoint
+  /// Superset of all supported protocol information for the endpoint (based on the protocol field)
+  union osapi_connection_endpoint_U
   {
-    t_ip	ep_ip;
-    t_tcp	ep_tcp;
-  } ep;
+    t_ip	ep_ip;			///< Connection IP information
+    t_tcp	ep_tcp;			///< Connection TCP information
+  } ep;					///< Connection Endpoint
 };
 
-typedef struct s_connection_endpoint t_endpoint;
+
+/// The generic endpoint type
+typedef struct osapi_connection_endpoint_S	t_endpoint;
 
 
 

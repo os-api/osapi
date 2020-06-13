@@ -50,7 +50,7 @@ t_status common_buffer_allocate( t_size bufsize, t_buffer * p_buffer )
 
   TRACE_ENTER
 
-  st = common_memory_allocate( bufsize, &(p_buffer->mem) );
+  st = common_memory_allocate( bufsize, 0, &(p_buffer->mem) );
 
   if( status_success( st ) )
       p_buffer->size = 0;

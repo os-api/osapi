@@ -34,7 +34,8 @@ extern "C"
 #include "clock/clock_instance.h"
 #include "clock/clock_timezone.h"
 #include "clock/clock_calendar.h"
-
+#include "clock/clock_chrono.h"
+#include "clock/clock_virtual.h"
 
 /// *****************************************************************************************
 ///

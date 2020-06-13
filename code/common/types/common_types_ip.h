@@ -32,13 +32,13 @@
 //
 // *****************************************************************************************
 
-#define osapi_is_ip_valid_selector( s )		( s==e_protocol_ip || s==e_protocol_ipv4 || e_protocol_ipv6 ? true : false 		)
-#define osapi_is_ip_valid_family( f )		( f==e_protocol_ipv4 || f==e_protocol_ipv6 ? true : false				)
-#define osapi_is_ipv4_selection( s, f )		( ( s==e_protocol_ip || s==e_protocol_ipv4 ) && f==e_protocol_ipv4  ? true : false	)
-#define osapi_is_ipv6_selection( s, f )		( ( s==e_protocol_ip || s==e_protocol_ipv6 ) && f==e_protocol_ipv6  ? true : false	)
+#define osapi_is_ip_valid_selector( s )		( s==osapi_protocol_ip || s==osapi_protocol_ipv4 || s==osapi_protocol_ipv6 ? true : false	)
+#define osapi_is_ip_valid_family( f )		( f==osapi_protocol_ipv4 || f==osapi_protocol_ipv6 ? true : false				)
+#define osapi_is_ipv4_selection( s, f )		( ( s==osapi_protocol_ip || s==osapi_protocol_ipv4 ) && f==osapi_protocol_ipv4  ? true : false	)
+#define osapi_is_ipv6_selection( s, f )		( ( s==osapi_protocol_ip || s==osapi_protocol_ipv6 ) && f==osapi_protocol_ipv6  ? true : false	)
 
-#define osapi_is_ipv4_family( f )		( f==e_protocol_ipv4  ? true : false )
-#define osapi_is_ipv6_family( f )		( f==e_protocol_ipv6  ? true : false )
+#define osapi_is_ipv4_family( f )		( f==osapi_protocol_ipv4  ? true : false )
+#define osapi_is_ipv6_family( f )		( f==osapi_protocol_ipv6  ? true : false )
 
 // Macros for checking additional IP information
 #define osapi_is_ip_address_broadcast( a )	( (a & IFF_BROADCAST)   ? true : false )
@@ -67,7 +67,7 @@
 typedef int		t_address_type;
 
 /// Structure for a structured IPv4 address
-struct s_ipv4_address
+struct osapi_common_ipv4_address_S
 {
   Byte			host		[ OSAPI_IPV4_ADDRESS_SIZE ];	///< IP address
   Byte			mask		[ OSAPI_IPV4_ADDRESS_SIZE ];	///< Network mask
@@ -76,24 +76,24 @@ struct s_ipv4_address
 };
 
 /// Structure to support either raw (bunch of bytes) or structured IPv4 addresses
-union u_ipv4_address
+union osapi_common_ipv4_address_U
 {
-  struct s_ipv4_address	field;						///< Select individual fields
-  Byte			raw		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< Array of the same number of bytes as IPV6 address
+  struct osapi_common_ipv4_address_S	field;						///< Select individual fields
+  Byte					raw		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< Array of the same number of bytes as IPV6 address
 };
 
 /// Union of IPv4/v6 addresses
-union u_ip_address
+union osapi_common_ip_address_U
 {
-  union u_ipv4_address	ipv4;						///< An union of all possible IPv4 addresses
-  Byte			ipv6		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< An array of bytes to support an IPv6 address
+  union osapi_common_ipv4_address_U	ipv4;						///< An union of all possible IPv4 addresses
+  Byte					ipv6		[ OSAPI_IPV6_ADDRESS_SIZE ];	///< An array of bytes to support an IPv6 address
 };
 
 /// Type for an IP address
-typedef union u_ip_address	t_ip_address;
+typedef union osapi_common_ip_address_U			t_ip_address;
 
 /// Structure to support IP information
-struct s_ip
+struct osapi_common_ip_S
 {
   char			interface_name	[ OSAPI_INTERFACE_MAX_NAME_SIZE ];	///< Interface name
   t_protocol		protocol;						///< V4/V6 IP protocol
@@ -103,7 +103,7 @@ struct s_ip
 };
 
 /// IP type that provides IP information
-typedef struct s_ip	t_ip;
+typedef struct osapi_common_ip_S			t_ip;
 
 
 

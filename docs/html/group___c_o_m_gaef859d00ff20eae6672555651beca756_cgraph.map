@@ -1,3 +1,4 @@
 <map id="com_ip_isBroadcast" name="com_ip_isBroadcast">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="193,5,288,32"/>
+<area shape="rect" id="node1" title="Verify if the IP is of type broadcast." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="205,5,308,32"/>
 </map>

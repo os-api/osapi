@@ -43,7 +43,7 @@ t_status io_directory_change( t_char * p_dirname )
   status_reset( & st );
 
   if( p_dirname == NULL )
-      status_iset( OSAPI_MODULE_IO, __func__, e_io_params, &st );
+      status_iset( OSAPI_MODULE_IO, __func__, osapi_io_error_params, &st );
   else
     {
       if( chdir( p_dirname ) == -1 )

@@ -1,3 +1,4 @@
 <map id="clock_offset_copy" name="clock_offset_copy">
-<area shape="rect" id="node2" href="$group___c_l_o_c_k.html#gafc97ae110b56702092a04fbb871f534c" title="Create a new clock instance based on a given time offset from the standard time. " alt="" coords="181,5,369,32"/>
+<area shape="rect" id="node1" title="Perform a copy between two time offset types." alt="" coords="259,5,397,32"/>
+<area shape="rect" id="node2" href="$group___c_l_o_c_k.html#gafc97ae110b56702092a04fbb871f534c" title="Create a new clock instance based on a given time offset from the standard time." alt="" coords="5,5,211,32"/>
 </map>

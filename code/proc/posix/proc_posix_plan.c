@@ -42,7 +42,7 @@ t_status proc_data_clear( t_proc * p_proc )
  status_reset( & st );
 
  if( p_proc == (t_proc *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Make sure that a process plan has default values / initial state
@@ -70,11 +70,11 @@ t_status proc_data_getPID( t_proc * p_proc, t_pid * p_pid )
  status_reset( & st );
 
  if( p_proc == ((t_proc * ) 0) || p_pid == (t_pid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( p_proc->pid < 2 || (! p_proc->has_pid) )
-	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+	 status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_pid, &st );
      else
 	 *p_pid = p_proc->pid;
    }
@@ -91,11 +91,11 @@ t_status proc_data_getUser( t_proc * p_proc, t_uid * p_uid )
  status_reset( & st );
 
  if( p_proc == ((t_proc * ) 0) || p_uid == (t_uid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( p_proc->uid < 0 || (! p_proc->has_uid) )
-	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+	 status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_pid, &st );
      else
 	 *p_uid = p_proc->uid;
    }
@@ -111,11 +111,11 @@ t_status proc_data_getGroup( t_proc * p_proc, t_gid * p_gid )
  status_reset( & st );
 
  if( p_proc == ((t_proc * ) 0) || p_gid == (t_gid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( p_proc->gid < 0 || (! p_proc->has_gid) )
-	 status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+	 status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_pid, &st );
      else
 	 *p_gid = p_proc->gid;
    }

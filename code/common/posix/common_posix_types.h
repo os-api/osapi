@@ -34,6 +34,16 @@
 //
 // *****************************************************************************************
 
+// Page size related
+#if defined( PAGESIZE )
+  #define OSAPI_COMMON_PAGESIZE		PAGESIZE
+#elif defined( _SC_PAGESIZE )
+  #define OSAPI_COMMON_PAGESIZE		_SC_PAGESIZE
+#elif defined( PAGE_SIZE )
+  #define OSAPI_COMMON_PAGESIZE		PAGE_SIZE
+#else
+  #error "LINUX PAGESIZE constant not defined"
+#endif
 
 
 // *****************************************************************************************

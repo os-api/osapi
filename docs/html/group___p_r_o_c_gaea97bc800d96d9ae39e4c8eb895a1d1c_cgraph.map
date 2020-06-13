@@ -1,3 +1,4 @@
 <map id="proc_data_getEnvironment" name="proc_data_getEnvironment">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="231,5,325,32"/>
+<area shape="rect" id="node1" title="Fills a process data structure with the new process environment." alt="" coords="5,5,203,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="251,5,353,32"/>
 </map>

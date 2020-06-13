@@ -1,0 +1,4 @@
+<map id="proc_time_getStart" name="proc_time_getStart">
+<area shape="rect" id="node1" title="Get the start time of a process." alt="" coords="159,5,305,32"/>
+<area shape="rect" id="node2" href="$group___p_r_o_c.html#gaaacb257a5dcfe8d036f135a6528a20d5" title="Get the current process Unique ID A Process Unique ID is a unique incarnation of a process instance,..." alt="" coords="5,5,111,32"/>
+</map>

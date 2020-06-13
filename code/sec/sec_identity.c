@@ -46,7 +46,7 @@ t_status sec_user_stringToId( char * p_string, t_gid * p_uid )
   status_reset( & st );
 
   if( p_uid == NULL || p_string == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = stringTo_uid( p_string, p_uid );
@@ -66,7 +66,7 @@ t_status sec_user_idToString( t_uid uid, t_size strSize, char * p_string )
   status_reset( & st );
 
   if( strSize <= 0 || p_string == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = uidTo_string( uid, strSize, p_string );
@@ -85,7 +85,7 @@ t_status sec_user_compare( t_uid uid1, t_uid uid2, bool * p_result )
   status_reset( & st );
 
   if( p_result == (bool) 0 )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = uid_compare( uid1, uid2, p_result );
@@ -105,7 +105,7 @@ t_status sec_user_copy( t_uid source, t_uid * p_target )
   status_reset( & st );
 
   if( p_target == (t_uid *) 0 )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = uid_copy( source, p_target );
@@ -125,7 +125,7 @@ t_status sec_user_getId( t_uid * p_uid )
   status_reset( & st );
 
   if( p_uid == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = get_userID( p_uid );
@@ -159,7 +159,7 @@ t_status sec_user_getIdFromName( char * username, t_uid * p_uid )
   status_reset( & st );
 
   if( p_uid == NULL || username == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = get_userID_from_name( username, p_uid );
@@ -178,7 +178,7 @@ t_status sec_user_getNameFromID( t_uid uid, t_size max_name, char * username )
   status_reset( & st );
 
   if( username == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       // size_t max_name = (size_t) sysconf( _POSIX_LOGIN_NAME_MAX );
@@ -206,7 +206,7 @@ t_status sec_user_getGroups( t_uid uid, size_t groupListMaxSize, size_t * p_grou
   status_reset( & st );
 
   if( p_groupList == NULL || p_groupListCurSize == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = get_user_group_list( uid, groupListMaxSize, p_groupListCurSize, p_groupList );
@@ -229,7 +229,7 @@ t_status sec_group_stringToId( char * p_string, t_gid * p_gid )
   status_reset( & st );
 
   if( p_gid == NULL || p_string == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = stringTo_gid( p_string, p_gid );
@@ -249,7 +249,7 @@ t_status sec_group_idToString( t_gid gid, t_size strSize, char * p_string )
   status_reset( & st );
 
   if( strSize <= 0 || p_string == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = gidTo_string( gid, strSize, p_string );
@@ -268,7 +268,7 @@ t_status sec_group_compare( t_gid gid1, t_gid gid2, bool * p_result )
   status_reset( & st );
 
   if( p_result == (bool) 0 )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = gid_compare( gid1, gid2, p_result );
@@ -287,7 +287,7 @@ t_status sec_group_copy( t_gid source, t_gid * p_target )
   status_reset( & st );
 
   if( p_target == (t_gid *) 0 )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = gid_copy( source, p_target );
@@ -307,7 +307,7 @@ t_status sec_group_getId( t_gid * p_gid )
   status_reset( & st );
 
   if( p_gid == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = get_groupID( p_gid );
@@ -342,7 +342,7 @@ t_status sec_group_getIdFromName( char * groupname, t_gid * p_gid )
   status_reset( & st );
 
   if( p_gid == NULL || groupname == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       t_status nst = get_groupID_from_name( groupname, p_gid );
@@ -361,7 +361,7 @@ t_status sec_group_getNameFromID( t_gid gid, t_size size, char * groupname )
   status_reset( & st );
 
   if( groupname == NULL )
-      status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+      status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
   else
     {
       // max size = 32;		// Not sure if this limit is defined somewhere

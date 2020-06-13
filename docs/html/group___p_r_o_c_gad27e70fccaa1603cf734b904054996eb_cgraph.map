@@ -1,0 +1,4 @@
+<map id="proc_time_getStart" name="proc_time_getStart">
+<area shape="rect" id="node1" title="Get the start time of a process." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$group___p_r_o_c.html#gacca8f62d5301eeda2e6d8a1c208ac921" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="200,5,311,32"/>
+</map>

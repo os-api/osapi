@@ -9,8 +9,12 @@ var dir_3d950ed1f63e41c7a90cfda56c059d6e =
     [ "common_group.h", "common__group_8h_source.html", null ],
     [ "common_helper.h", "common__helper_8h_source.html", null ],
     [ "common_list.h", "common__list_8h_source.html", null ],
+    [ "common_machine.h", "common__machine_8h_source.html", null ],
     [ "common_memory.h", "common__memory_8h_source.html", null ],
+    [ "common_number.h", "common__number_8h_source.html", null ],
+    [ "common_number_priv.h", "common__number__priv_8h_source.html", null ],
     [ "common_platform.h", "common__platform_8h_source.html", null ],
+    [ "common_priv.h", "common__priv_8h_source.html", null ],
     [ "common_time.h", "common__time_8h_source.html", null ],
     [ "common_types.h", "common__types_8h_source.html", null ],
     [ "common_user.h", "common__user_8h_source.html", null ]

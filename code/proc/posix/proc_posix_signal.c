@@ -59,9 +59,9 @@ t_status proc_signal_supported( int * p_level )
  status_reset( & st );
 
 #ifdef SIGRTMAX		// Or POSIX.1b
- *p_level = e_siglevel_realtime;
+ *p_level = osapi_signal_level_realtime;
 #else
- *p_level = e_siglevel_posix;
+ *p_level = osapi_signal_level_posix;
 #endif
 
  return st;	// Minimum is POSIX Standard (reliable) signals
@@ -75,7 +75,7 @@ t_status proc_signal_send( t_pid pid, t_signal sig )
  status_reset( & st );
 
  if( pid <= (t_pid) 0 || sig <= (t_signal) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( kill( pid, sig ) != 0 )
@@ -94,7 +94,7 @@ t_status proc_signal_setHandler( t_signal signo, t_sig_func dispatcher_function 
  status_reset( & st );
 
  if( dispatcher_function == NULL || signo <= 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Each signal can have a different handler,
@@ -106,7 +106,7 @@ t_status proc_signal_setHandler( t_signal signo, t_sig_func dispatcher_function 
 
      // Set the signal action
      if( sigaction( signo, &action, ( t_sig_action * ) 0 ) < 0 )
-         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_setsignal, &st );
+         status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_setsignal, &st );
    }
 
  return st;
@@ -120,7 +120,7 @@ t_status proc_signal_resetHandler( t_signal signo )
  status_reset( & st );
 
  if( signo <= 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      sigemptyset( &( action.sa_mask ) );
@@ -130,7 +130,7 @@ t_status proc_signal_resetHandler( t_signal signo )
 
      // Set the signal action
      if( sigaction( signo, &action, ( t_sig_action * ) 0 ) < 0 )
-         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_setsignal, &st );
+         status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_setsignal, &st );
    }
 
  return st;
@@ -161,7 +161,7 @@ t_status proc_signal_getName( t_signal signo, t_char ** p_signal_string )
   status_reset( & st );
 
   if( signo <= 0 || p_signal_string == (t_char **) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
       *p_signal_string = strsignal( signo );
 
@@ -177,7 +177,7 @@ t_status proc_signal_getNumber( t_char * p_name, t_signal * p_signal_number )
   status_reset( & st );
 
   if( p_name == NULL || p_signal_number == (t_signal *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       // Convert from a single pointer to an array of pointers for usage in common_options_get call
@@ -189,7 +189,7 @@ t_status proc_signal_getNumber( t_char * p_name, t_signal * p_signal_number )
 
       // Send signal
       if( *p_signal_number < 1 )
-	  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_notFound, &st );
+	  status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_notFound, &st );
 
     }
 
@@ -206,7 +206,7 @@ t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
  status_reset( & st );
 
  if( sigName == (t_char *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Convert from a single pointer to an array of pointers for usage in common_options_get call
@@ -218,7 +218,7 @@ t_status proc_signal_sendByName( t_pid pid, t_char * sigName )
 
      // Send signal
      if( signal_number < 1 )
-         status_iset( OSAPI_MODULE_PROC, __func__, e_proc_notFound, &st );
+         status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_notFound, &st );
      else
          st = proc_signal_send( pid, signal_number );
    }
@@ -236,7 +236,7 @@ t_status proc_signal_setHandlerByName( t_char * sigName, t_sig_func signal_handl
  status_reset( & st );
 
  if( sigName == ((t_char *) 0) || signal_handler == NULL )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Convert from a single pointer to an array of pointers for usage in common_options_get call
@@ -263,7 +263,7 @@ t_status proc_signal_resetHandlerByName( t_char * sigName )
  status_reset( & st );
 
  if( sigName == ((t_char *) 0) )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Convert from a single pointer to an array of pointers for usage in common_options_get call

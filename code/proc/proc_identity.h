@@ -134,6 +134,11 @@ t_status proc_id_copy( t_pid source, t_pid * target );
 /// @return Operation status
 t_status proc_id_clear( t_pid * pid );
 
+/// @brief Get the current process Unique ID
+/// A Process Unique ID is a unique incarnation of a process instance, i.e. no two processes will have the same UPID in the same node
+/// @param [out] upid - The process Unique ID
+/// @return Operation status
+t_status proc_uid_get( t_upid * upid );
 
 #pragma GCC visibility pop			// End of public interface
 

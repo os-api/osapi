@@ -1,0 +1,5 @@
+<map id="osapi_machine_cpu_S" name="osapi_machine_cpu_S">
+<area shape="rect" id="node1" title="A generic CPU type." alt="" coords="148,95,313,121"/>
+<area shape="rect" id="node2" href="$structosapi__machine__cpu__feature___s.html" title="Define a type for CPU features." alt="" coords="5,5,224,32"/>
+<area shape="rect" id="node3" href="$structosapi__machine__cpu__info___s.html" title="CPU ID information (For CPUs that support it)" alt="" coords="248,5,445,32"/>
+</map>

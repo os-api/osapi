@@ -320,7 +320,7 @@ t_status posix_link_copy2directory( const t_link * p_source, const t_char * p_ta
    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_strcpy, &st ); return st; }
 
  strcat ( dest, "/" );
- strncat( dest, srcName, sz );
+ strncat( dest, srcName, sz + 1 );
 
  TRACE( "Creating link (%s)", dest )
 
@@ -357,9 +357,9 @@ t_status posix_link_copy2link( const t_link * p_source, const t_char * p_target,
    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_pathsize, &st ); return st; }
 
  // Build destination pathname
- strncpy( dest, p_target, len );
+ strncpy( dest, p_target, OSAPI_PATH_MAX - 1 );
  strcat ( dest, "/" );
- strncat( dest, srcName, sz );
+ strncat( dest, srcName, sz + 1 );
  dest[ OSAPI_PATH_MAX ] = '\0';
 
  TRACE( "%s%s", "The destination link to be created is:", dest );

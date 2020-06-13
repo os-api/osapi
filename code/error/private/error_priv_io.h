@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_io_X(a, b, c) [a]=c,
+#define osapi_error_io_X(a, b, c) [a]=c,
 
-static const char * io_errors[] =
+static const char * osapi_io_errors[] =
 {
   #include "error/mappings/table_io.h"
 };
 
-#undef error_io_X
+#undef osapi_error_io_X
 
 #endif /* OSAPI_ERROR_PRIV_IO_H_ */

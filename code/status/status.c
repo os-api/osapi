@@ -19,8 +19,7 @@
 // System headers
 #include <stdio.h>
 #include <string.h>
-#include <stdarg.h>
-#include <inttypes.h>
+#include <threads.h>
 
 // // Generic OSAPI includes
 #include "general/general.h"
@@ -37,7 +36,7 @@
 //
 // *****************************************************************************************
 
-_Thread_local	static char	osapi_status_string[ OSAPI_STATUS_STRING_SIZE ];
+thread_local	static char	osapi_status_string[ OSAPI_STATUS_STRING_SIZE ];
 
 
 // *****************************************************************************************
@@ -91,7 +90,7 @@ void status_setString( t_module module, t_status_type type, t_status_funcname fn
 void status_message_iPrint( t_status status )
 {
   printf( "Module %s, function %s with status: %s.\n",
-	  osapi_getModule( status.module ),
+	  osapi_module_get( status.module ),
 	  status.funcname,
 	  error_string_get( status.module, status.code ) );
 }
@@ -99,7 +98,7 @@ void status_message_iPrint( t_status status )
 void status_message_sPrint( t_status status )
 {
   printf( "V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
-	  osapi_getModule( status.module ),
+	  osapi_module_get( status.module ),
 	  status.funcname,
 	  status.string );
 }
@@ -109,7 +108,7 @@ void status_message_iGet( t_status status, t_size size, t_char * p_message )
   if( p_message != OSAPI_NULL_CHAR_POINTER && size > 0 )
       snprintf( p_message, size, "V%s: Module %s, function %s with status: %s.",
 		osapi_get_version_string(),
-		osapi_getModule( status.module ),
+		osapi_module_get( status.module ),
 		status.funcname,
 		error_string_get( status.module, status.code )
 	      );
@@ -120,7 +119,7 @@ void status_message_sGet( t_status status, t_size size, t_char * p_message )
   if( p_message != OSAPI_NULL_CHAR_POINTER && size > 0 )
       snprintf( p_message, size, "V%s: Module %s, function %s with status: %s.",
 		osapi_get_version_string(),
-		osapi_getModule( status.module ),
+		osapi_module_get( status.module ),
 		status.funcname,
 		status.string
 	      );
@@ -155,7 +154,7 @@ void status_message_retrieve( t_status status, t_size size, t_char * p_message )
 
 const char * status_module_get( t_status status )
 {
-  return osapi_getModule( status.module );
+  return osapi_module_get( status.module );
 }
 
 const char * status_function_get( t_status status )
@@ -181,25 +180,15 @@ const char * status_message_get( t_status status )
 }
 
 
-void osapi_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... )
-{
-  va_list args;
-
-  fprintf( stderr, "%s%s%" PRIu64, func, sep, line );
-
-  va_start(args, fmt );
-  vfprintf( stderr, fmt, args );
-  va_end(args);
-
-  fprintf( stderr, "\n" );
-
-  fflush( stderr );
-}
-
 void osapi_status_trace( const char * func, uint64_t line, t_status st )
 {
-  if( st.code == 0 )
-      osapi_trace( func, " (", line, "%s", ") - Leaving" );
-  else
-      osapi_trace( func, " (", line, ") - Leaving with: %s", status_message_get( st ) );
+  if( st.code == 0 )      osapi_trace( func, " (", line, "%s", ") - Leaving" 				  );
+  else			  osapi_trace( func, " (", line, ") - Leaving with: %s", status_message_get( st ) );
 }
+
+
+bool status_success_is( t_status status )
+{
+  return status_success( status );
+}
+

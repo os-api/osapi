@@ -39,7 +39,6 @@
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of internal interface
 
 /// @brief Reset a time to the type default
 /// @param [out]  tm - Time to reset
@@ -77,6 +76,20 @@ t_status common_time_copySpec		( const struct timespec * source, t_time * target
 /// @return Operation status
 t_status common_time_equal		( const t_time * t1, const t_time * t2, bool * result	);
 
+/// @brief Add two times: : result = t1 + t2
+/// @param [in] t1 	- Time one
+/// @param [in] t2 	- Time two
+/// @param [out] result - Added time
+/// @return Operation status
+t_status common_time_add		( const t_time * t1, const t_time * t2, t_time * result	);
+
+/// @brief Subtract times: result = t1 - t2
+/// Both times must be in the same precision
+/// @param [in] t1 	- Time one
+/// @param [in] t2 	- Time two
+/// @param [out] result - Result of time subtraction
+/// @return Operation status
+t_status common_time_sub		( const t_time * t1, const t_time * t2, t_time * result	);
 
 /// @brief Obtain the precision from a fraction of a second
 /// @param [in] nano - The nano second resolution field
@@ -84,8 +97,6 @@ t_status common_time_equal		( const t_time * t1, const t_time * t2, bool * resul
 int common_time_getResolution		( uint32_t nano	);
 
 
-
-#pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

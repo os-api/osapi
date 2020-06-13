@@ -72,7 +72,7 @@ t_status posix_library_load( const char * pathname, int options, t_library * p_l
   status_reset( & st );
 
   if( pathname == NULL || p_library == NULL )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       handle = dlopen( pathname, options );
@@ -99,7 +99,7 @@ t_status proc_library_unload( t_library library )
   status_reset( & st );
 
   if( library == NULL )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       rc = dlclose( library );
@@ -124,12 +124,12 @@ t_status proc_library_getError( t_size size, char * p_error )
   status_reset( & st );
 
   if( size <= 0 || p_error == NULL )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       p_libErrorString = dlerror();
       if( p_libErrorString == NULL )	// No error available
-	  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_noerror, &st );
+	  status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_noerror, &st );
       else
 	{
 	  if( strncpy( p_error, p_libErrorString, size - 1 ) == NULL )

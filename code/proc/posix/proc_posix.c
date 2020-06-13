@@ -58,7 +58,7 @@ t_status proc_data_setUser( t_uid user, t_proc * p_proc )
  status_reset( & st );
 
  if( user < ((t_uid) 0) || p_proc == ((t_proc *) 0) )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
      p_proc->uid = user;
 
@@ -73,7 +73,7 @@ t_status proc_data_setGroup( t_gid group, t_proc * p_proc )
  status_reset( & st );
 
  if( group < ((t_uid) 0) || p_proc == ((t_proc *) 0) )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
      p_proc->gid = group;
 

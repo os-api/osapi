@@ -1,3 +1,4 @@
 <map id="fs_file_setPositionAt" name="fs_file_setPositionAt">
-<area shape="rect" id="node2" href="$group___f_s.html#ga71e29b2e232e5fe06dff24b75a68c3b1" title="Position the file stream according The file position is provided by the start location (begin..." alt="" coords="196,5,325,32"/>
+<area shape="rect" id="node1" title="Position the file pointer at the location from the beggining of the file Helper function for fs_file_..." alt="" coords="5,5,160,32"/>
+<area shape="rect" id="node2" href="$group___f_s.html#ga71e29b2e232e5fe06dff24b75a68c3b1" title="Position the file stream according The file position is provided by the start location (begin,..." alt="" coords="208,5,348,32"/>
 </map>

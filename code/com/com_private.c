@@ -48,7 +48,7 @@ t_status get_ip_string( t_protocol protocol, void * p_location, t_size strSize, 
   status_reset( & st );
 
   if( p_location == NULL || p_string == NULL || ! osapi_is_ip_valid_family( protocol) || strSize == 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       errno = 0;

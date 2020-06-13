@@ -1,0 +1,4 @@
+<map id="machine_cpuVendor_getID" name="machine_cpuVendor_getID">
+<area shape="rect" id="node1" title="Retrieve the CPU Vendor Identification from a Vendors name." alt="" coords="211,13,405,39"/>
+<area shape="rect" id="node2" href="$group___m_a_c_h_i_n_e.html#ga007464a92fb26f1e85ec1922435b7408" title="Retrieval all supported CPU features." alt="" coords="5,5,163,47"/>
+</map>

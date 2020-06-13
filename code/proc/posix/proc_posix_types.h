@@ -31,7 +31,7 @@
 // Own module types
 #include "proc/posix/proc_posix_defs.h"
 //#include "proc/posix/proc_posix_status.h"
-#include "proc/proc_signal_types.h"
+#include <proc/type/proc_type_signal.h>
 
 // *****************************************************************************************
 //
@@ -47,7 +47,7 @@ typedef int		t_signal;
 typedef Byte 		(*t_procfunc)(void);
 
 /// The proc structure for a process in a POSIX compliant system
-struct  s_proc
+struct  osapi_proc_S
 {
   // Base process properties
   bool		has_pid;	///< PID information available
@@ -69,7 +69,7 @@ struct  s_proc
 };
 
 /// Process type
-typedef struct s_proc		t_proc;
+typedef struct osapi_proc_S	t_proc;
 
 /// Library type
 typedef void *			t_library;
@@ -82,7 +82,7 @@ typedef void 			(* t_sig_func)( int );
 
 
 /// Process status structure
-struct s_proc_status
+struct osapi_proc_status_S
 {
   int			info;		///< Information about the existence of a status (meta-information)
   int			exit_code;	///< The returned exit code from the process when there is a normal exit
@@ -91,7 +91,7 @@ struct s_proc_status
 };
 
 /// The process status type
-typedef struct s_proc_status	t_proc_status;
+typedef struct osapi_proc_status_S	t_proc_status;
 
 
 // *****************************************************************************************
@@ -100,7 +100,7 @@ typedef struct s_proc_status	t_proc_status;
 //
 // *****************************************************************************************
 
-enum osapi_proc_target
+enum osapi_proc_target_E
 {
   e_proc_target_none = 0,
   e_proc_target_parent,

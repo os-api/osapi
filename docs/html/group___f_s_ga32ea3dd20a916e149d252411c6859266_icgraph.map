@@ -1,3 +1,4 @@
 <map id="fs_element_getType" name="fs_element_getType">
-<area shape="rect" id="node2" href="$group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d" title="Extended element copy operation If the destination already exists, it will be overwritten if the resp..." alt="" coords="193,5,315,32"/>
+<area shape="rect" id="node1" title="Get type of element through a path name." alt="" coords="187,5,340,32"/>
+<area shape="rect" id="node2" href="$group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d" title="Extended element copy operation If the destination already exists, it will be overwritten if the resp..." alt="" coords="5,5,139,32"/>
 </map>

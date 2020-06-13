@@ -95,6 +95,7 @@
 
 // x is the t_list and y is the item number
 #define get_list_item(x,y)		( &( ( (Byte *) x->mem.data)[ ( (y - 1) * (x->itemSize) ) ] ) )
+#define get_list_itemSize(x)		(x->itemSize)
 #define get_list_capacity(x)		(x->capacity)
 #define get_list_size(x)		(x->nitems)
 #define get_list_used_capacity(x)	( x->nitems * x->itemSize )
@@ -104,7 +105,7 @@
 #define set_list_capacity(x,y)		(x->capacity = y)
 #define set_list_requiredCapacity(x,y)	(x->requiredCapacity = y)
 #define set_list_size(x,y)		(x->nitems = y )
-
+#define inc_list_size(x)		(x->nitems++)
 
 // *****************************************************************************************
 //
@@ -116,7 +117,8 @@
 #define get_time_seconds( x )		(x->seconds)
 #define get_time_fraction( x )		(x->fraction)
 
-
+#define copy_time(s,t)			{t->seconds=s->seconds; t->fraction=s->fraction; t->precision=s->precision;}
+#define copy_timeNano(ss,sf,t)		{t->seconds=ss; t->fraction=sf; t->precision=osapi_time_nano;}
 
 
 #endif /* OSAPI_COMMON_HELPER_H_ */

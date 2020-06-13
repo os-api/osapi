@@ -7,5 +7,5 @@
 //
 // *****************************************************************************************
 
-osapi_quality_X( e_version_unstable,	= 0 ,	"Unstable"	)
-osapi_quality_X( e_version_stable, 	= 1 ,	"Stable"	)
+osapi_version_quality_X( osapi_version_unstable,	= 0 ,	"Unstable"	)
+osapi_version_quality_X( osapi_version_stable, 		= 1 ,	"Stable"	)

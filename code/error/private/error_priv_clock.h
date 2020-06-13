@@ -26,13 +26,13 @@
 // *****************************************************************************************
 
 
-#define osapi_clock_error_X(a, b, c) [a]=c,
+#define osapi_error_clock_X(a, b, c) [a]=c,
 
 static const char * osapi_clock_errors[] =
 {
   #include "error/mappings/table_clock.h"
 };
 
-#undef osapi_clock_error_X
+#undef osapi_error_clock_X
 
 #endif /* OSAPI_ERROR_PRIV_CLOCK_H_ */

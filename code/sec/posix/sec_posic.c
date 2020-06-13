@@ -53,19 +53,19 @@ t_status sec_group_exists( t_gid gid )
  status_reset( & st );
 
  if( gid < 0 )
-     status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+     status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
  else
    {
      size_t bufsize = get_size_grp_entry();
      buf = malloc( bufsize );
 
      if( buf == NULL )
-	 status_iset( OSAPI_MODULE_SEC, __func__, e_sec_memory, &st );
+	 status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_memory, &st );
      else
        {
 	 rc = getgrgid_r( gid, &grp, buf, bufsize, &result );
 	 if( rc != 0 || result == NULL )
-	     status_iset( OSAPI_MODULE_SEC, __func__, e_sec_groupid, &st );
+	     status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_groupid, &st );
 
 	 free( buf );
        }
@@ -88,19 +88,19 @@ t_status sec_user_exists( t_uid uid )
  status_reset( & st );
 
  if( uid < 0 )
-     status_iset( OSAPI_MODULE_SEC, __func__, e_sec_params, &st );
+     status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_params, &st );
  else
    {
      size_t bufsize = get_size_pwd_entry();
      buf = malloc( bufsize );
 
      if( buf == NULL )
-	 status_iset( OSAPI_MODULE_SEC, __func__, e_sec_memory, &st );
+	 status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_memory, &st );
      else
        {
 	 rc = getpwuid_r( uid, &pwd, buf, bufsize, &result);
 	 if( rc != 0 || result == NULL )
-	     status_iset( OSAPI_MODULE_SEC, __func__, e_sec_userid, &st );
+	     status_iset( OSAPI_MODULE_SEC, __func__, osapi_sec_error_userid, &st );
 
 	 free( buf );
        }

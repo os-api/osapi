@@ -79,6 +79,12 @@ t_status proc_list_deallocate( t_list * list );
 /// @return Operation status
 t_status proc_list_getCapacity( const t_list * list, t_size * size );
 
+/// @brief Check if the list can store N items
+/// @param [in] list	- List descriptor
+/// @param [in] size	- Required capacity from list
+/// @return Success if enough capacity, error status otherwise
+t_status proc_list_hasCapacity( const t_list * list, t_size size );
+
 /// @brief Get the required list capacity in terms of allocated items
 /// The required capacity is needed in case a list is not big enough to hold all elements
 /// @param [in] list	- List descriptor

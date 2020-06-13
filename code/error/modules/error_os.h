@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_os_X(a, b, c) a b,
-enum os_X {
+#define osapi_error_os_X(a, b, c) a b,
+enum osapi_error_os_E {
 	  #include "error/mappings/table_os.h"
 };
-#undef error_os_X
+#undef osapi_error_os_X
 
 
 #endif /* OSAPI_ERROR_OS_H_ */

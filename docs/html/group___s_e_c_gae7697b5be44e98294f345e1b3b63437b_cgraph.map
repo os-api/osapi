@@ -1,4 +1,5 @@
 <map id="sec_group_setId" name="sec_group_setId">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="172,5,267,32"/>
-<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga31cdba26c01a1735a1727e3c59010ec7" title="Set the status type with the current status information using an error code. " alt="" coords="178,56,261,83"/>
+<area shape="rect" id="node1" title="Set current group ID." alt="" coords="5,31,132,57"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="180,5,283,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga31cdba26c01a1735a1727e3c59010ec7" title="Set the status type with the current status information using an error code." alt="" coords="187,56,276,83"/>
 </map>

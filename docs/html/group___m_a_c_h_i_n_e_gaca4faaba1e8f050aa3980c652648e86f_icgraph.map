@@ -1,0 +1,4 @@
+<map id="machine_cpu_getEndian" name="machine_cpu_getEndian">
+<area shape="rect" id="node1" title="Retrieve the endianess of a CPU architecture." alt="" coords="252,5,432,32"/>
+<area shape="rect" id="node2" href="$group___m_a_c_h_i_n_e.html#ga9459ae3f06d4112f7f4fd5b1db521043" title="Obtain summary information about machine CPUs." alt="" coords="5,5,204,32"/>
+</map>

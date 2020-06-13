@@ -24,13 +24,13 @@
 
 
 /// Structure that holds a directory system element information
-struct osapi_fs_s_id
+struct osapi_fs_id_S
 {
   unsigned int		major;		///< File system device major number
   unsigned int		minor;		///< File system device minor number
 };
 
-typedef struct osapi_fs_s_id		t_fs_id;
+typedef struct osapi_fs_id_S		t_fs_id;
 
 
 

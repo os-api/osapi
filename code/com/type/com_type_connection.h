@@ -29,15 +29,19 @@
 //
 // *****************************************************************************************
 
-
-struct s_connection
+/// Define a generic connection (between endpoints)
+struct osapi_connection_S
 {
-  t_protocol		protocol;
-  int			topology;
-  t_connection_side	A;
-  t_connection_side	Z;
+  t_protocol		protocol;	///< Connection protocol
+  int			topology;	///< Connection topology (1 to 1, for example)
+  t_connection_side	A;		///< A - connection side
+  t_connection_side	Z;		///< Z - connection side
 };
 
-typedef struct s_connection t_connection;
+/// The connection type
+typedef struct osapi_connection_S	t_connection;
+
+
+
 
 #endif /* OSAPI_COM_TYPE_CONNECTION_H_ */

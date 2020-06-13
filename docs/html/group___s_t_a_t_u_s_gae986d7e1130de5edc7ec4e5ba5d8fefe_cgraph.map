@@ -1,3 +1,4 @@
 <map id="status_module_get" name="status_module_get">
-<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#ga1e32383c6dc4c79f31a366c46aa8dc5e" title="Get the module string. " alt="" coords="185,5,305,32"/>
+<area shape="rect" id="node1" title="Get the module name that corresponds to the provided status information." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#gaf3678f45b1079ac3a801e587c1153aad" title="Get the module string." alt="" coords="200,5,341,32"/>
 </map>

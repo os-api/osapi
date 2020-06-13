@@ -18,7 +18,7 @@
 // *****************************************************************************************
 
 /// @brief The enum lists the superset of all File systems possible attributes
-enum osapi_fs_e_attributes
+enum osapi_fs_attributes_E
 {
     osapi_fs_at_all		= 0	,  ///< Retrieve all available information
     osapi_fs_at_exists			,  ///< FS element exists
@@ -58,6 +58,6 @@ enum osapi_fs_e_attributes
     osapi_fs_at_max			,  ///< Max number of supported attributes in OSAPI
 };
 
-typedef enum osapi_fs_e_attributes	t_fs_attribute;
+typedef enum osapi_fs_attributes_E	t_fs_attribute;
 
 #endif /* OSAPI_FS_TYPE_ELEMENT_ATTRIBUTES_H_ */

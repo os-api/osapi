@@ -58,7 +58,7 @@ t_status com_semaphore_create( key_t key, int sem_value, int sem_options, int * 
   status_reset( &st );
 
    if( p_semid <= (int *) 0 )
-       status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+       status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
    else
      {
        /* Create Semaphore */
@@ -83,7 +83,7 @@ t_status com_semaphore_destroy( int semid )
   status_reset( &st );
 
   if( semid < 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       if( semctl( semid, 0, IPC_RMID ) < 0 )
@@ -101,7 +101,7 @@ t_status com_semaphore_open( key_t key, int * p_semid 	)
   status_reset( &st );
 
   if( p_semid <= (int *) 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       /* Open Semaphore */
@@ -121,7 +121,7 @@ t_status com_semaphore_lock( int semid )
   status_reset( &st );
 
   if( semid < 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     { /* Define operation to be performed on semaphore: */
 
@@ -147,7 +147,7 @@ t_status com_semaphore_unlock( int semid )
   status_reset( &st );
 
   if( semid < 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     { /* Define operation to be performed on semaphore: */
 
@@ -174,14 +174,14 @@ t_status com_semaphore_getValue( int semid, int * p_value )
   status_reset( &st );
 
   if( semid < 0 )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     { /* Get number of semaphores in the Set */
 
       arg.buf = &seminfo;
       semctl( semid, 0, IPC_STAT, arg );
       if( arg.buf->sem_nsems != 1 )
-          status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+          status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
       else
         {
           /* Obtain value inside the semaphore array */

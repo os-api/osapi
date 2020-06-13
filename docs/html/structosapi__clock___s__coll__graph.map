@@ -1,0 +1,5 @@
+<map id="osapi_clock_S" name="osapi_clock_S">
+<area shape="rect" id="node1" title="Structure supporting a clock." alt="" coords="81,95,194,121"/>
+<area shape="rect" id="node2" href="$structosapi__time___s.html" title="Structure supporting a time date." alt="" coords="5,5,115,32"/>
+<area shape="rect" id="node3" href="$structosapi__time__offset___s.html" title="Structure supporting a time offset (from a standard time, for instance)" alt="" coords="139,5,293,32"/>
+</map>

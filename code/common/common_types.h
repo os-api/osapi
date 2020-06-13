@@ -22,6 +22,7 @@
 #include "common/common_platform.h"
 
 // Generic types after
+#include "common/types/common_type_cpu.h"
 #include "common/types/common_type_time.h"
 #include "common/types/common_types_buffer.h"
 #include "common/types/common_types_list.h"

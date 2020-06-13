@@ -3,7 +3,7 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Clock module using a POSIX compliant implementation
+// Purpose:	Clock module implementation for time type
 //
 // *****************************************************************************************
 
@@ -24,6 +24,7 @@
 #include "general/general.h"
 #include "error/modules/error_clock.h"
 #include "status/status.h"
+#include "common/common_number.h"
 #include "common/common_time.h"
 
 // Own declarations
@@ -95,15 +96,17 @@ t_status clock_offset_apply( t_time * p_base, t_time_offset * p_offset, t_time *
  if( p_base == NULL || p_offset == NULL || p_result == NULL )
    { status_iset( OSAPI_MODULE_CLOCK, __func__,osapi_clock_error_params, &st ); return st; }
 
+ // Add seconds
+ st = common_number_add( p_base->seconds, p_offset->seconds, &p_result->seconds );
+ if( status_failure( st ) ) return st;
+
+ if( p_base->precision == osapi_time_second ) return st;	// Fraction computing is not required
+
  // Make sure that there is enough room for computing the time offset
  if( (p_base->fraction   & UINT64_C( 0x8000000000000000 )) == UINT64_C( 0x8000000000000000 ) ||
      (p_offset->fraction & UINT64_C( 0x8000000000000000 )) == UINT64_C( 0x8000000000000000 )
    )
    { status_iset( OSAPI_MODULE_CLOCK, __func__,osapi_clock_error_overflow, &st ); return st; }
-
- p_result->seconds = p_base->seconds + p_offset->seconds;
-
- if( p_base->precision == osapi_time_second ) return st;	// Fraction computing is not required
 
  // Propagate the sign to the fraction
  if( p_base->seconds < 0 )	frac1 = (int64_t) -p_base->fraction;
@@ -112,8 +115,9 @@ t_status clock_offset_apply( t_time * p_base, t_time_offset * p_offset, t_time *
  if( p_offset->seconds < 0 )	frac2 = (int64_t) -p_offset->fraction;
  else				frac2 = (int64_t) p_offset->fraction;
 
- // Make calculations for the base
- frac = frac1 + frac2;
+ // Make calculations for the fraction
+ st = common_number_add( frac1, frac2, &frac );
+ if( status_failure( st ) ) return st;
 
  // Set up base for fraction
  uint64_t top = 0;
@@ -131,11 +135,16 @@ t_status clock_offset_apply( t_time * p_base, t_time_offset * p_offset, t_time *
    case osapi_time_tnano:	top = UINT64_C( 10000000000 );		break;
    case osapi_time_hnano:	top = UINT64_C( 100000000000 );		break;
    case osapi_time_pico:	top = UINT64_C( 1000000000000 );	break;
+
+   default:
+	   status_iset( OSAPI_MODULE_CLOCK, __func__,osapi_clock_error_prec, &st );
+	   return st;
  }
 
- if( (uint64_t) llabs( frac ) >= top )
+ uint64_t fvalue = (uint64_t) llabs( frac );
+ if( fvalue >= top )
    {
-     p_result->fraction = (uint64_t) ((uint64_t) llabs( frac ) ) - top;
+     p_result->fraction = (uint64_t) (fvalue - top);
 
      if( frac >= 0 )	p_result->seconds++;
      else		p_result->seconds--;
@@ -204,4 +213,20 @@ t_status clock_instance_createOffset( t_time * p_time, t_time_offset * p_offset,
 
  return st;
 }
+
+
+t_status clock_instance_update( t_clock * p_clock )
+{
+ t_status st;
+
+ status_reset( &st );
+
+ if( p_clock == NULL )
+   { status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_params, &st ); return st; }
+
+ st = clock_time_get( &(p_clock->value) );
+
+ return st;
+}
+
 

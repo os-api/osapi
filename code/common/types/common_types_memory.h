@@ -28,14 +28,15 @@
 /// Structure supporting a self describing memory/buffer
 /// The reasoning is that naked memory handling is more error prone and encapsulation of
 /// memory supported by a "buffer" type can provided more robust code.
-struct osapi_s_memory
+struct osapi_common_memory_S
 {
   t_size	capacity;		///< The memory allocated capacity
   Byte		canary;			///< A MAGIC constant to indicate if the data pointer is really pointing to a previously allocated memory
+  Byte		type;			///< The type of memory that was initially requested. A value of 0 means that memory can grow (malloc).
   void	  *	data;			///< Allocated HEAP memory location
 };
 
-typedef struct osapi_s_memory		t_memory;
+typedef struct osapi_common_memory_S	t_memory;
 
 
 #endif /* OSAPI_COMMON_TYPES_MEMORY_H_ */

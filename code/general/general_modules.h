@@ -19,7 +19,7 @@
 
 
 #define osapi_module_X(a, b, c) a b,
-enum osapi_module_id
+enum osapi_module_E
 {
   #include "general/mappings/table_modules.h"
 };

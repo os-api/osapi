@@ -80,13 +80,30 @@ const char * osapi_get_protocol_string( t_protocol id );
 
 /// @brief Compare library runtime baseline against requirements
 /// @return True if baseline meets requirements or False otherwise
-int osapi_verify_baseline( void );
+bool osapi_verify_baseline( void );
 
 // Module related
 /// @brief Get the module string
 /// @param [in] module - The module ID
 /// @return C String for the given module ID
-const char * osapi_getModule( t_module module );
+const char * osapi_module_get( t_module module );
+
+// Detect Endianess
+/// @brief Check if current endianess is little
+/// @return True if little endian, False otherwise
+bool osapi_endian_isLittle( void );
+
+/// @brief Check if current endianess is big
+/// @return True if big endian, False otherwise
+bool osapi_endian_isBig( void );
+
+/// @brief Print a trace message to standard error
+/// @param [in] func - Function name
+/// @param [in] sep  - Separator string
+/// @param [in] line - Code line number
+/// @param [in] fmt  - Message format specifier
+void osapi_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... );
+
 
 #pragma GCC visibility pop			// End of public interface
 

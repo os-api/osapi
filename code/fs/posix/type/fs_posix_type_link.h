@@ -29,13 +29,13 @@
 // *****************************************************************************************
 
 /// Structure containing the C/POSIX file pointer/handler information
-struct osapi_fs_s_link_info
+struct osapi_fs_link_info_S
 {
   t_fs_ostate		state;				///< Current state
   t_char		target	[ OSAPI_PATH_MAX ];	///< Full path name of element to which the link points to
 };
 
-typedef struct osapi_fs_s_link_info		t_fs_linkInfo;
+typedef struct osapi_fs_link_info_S		t_fs_linkInfo;
 
 
 #endif /* OSAPI_FS_POSIX_TYPE_LINK_H_ */

@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_string_X(a, b, c) a b,
-enum string_X {
+#define osapi_error_string_X(a, b, c) a b,
+enum osapi_error_string_E {
 	  #include "error/mappings/table_string.h"
 };
-#undef error_string_X
+#undef osapi_error_string_X
 
 
 #endif /* OSAPI_ERROR_STRING_H_ */

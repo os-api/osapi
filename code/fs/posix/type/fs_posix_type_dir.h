@@ -30,13 +30,13 @@
 // *****************************************************************************************
 
 /// Structure describing a directory descriptor type
-struct osapi_fs_s_directory_info
+struct osapi_fs_directory_info_S
 {
   t_fs_ostate		state;			///< Current state
   DIR		*	handle;			///< POSIX directory descriptor
 };
 
-typedef struct osapi_fs_s_directory_info	t_fs_directoryInfo;
+typedef struct osapi_fs_directory_info_S	t_fs_directoryInfo;
 
 typedef struct dirent				t_dir_entry;
 

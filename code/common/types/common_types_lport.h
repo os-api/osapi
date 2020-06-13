@@ -42,12 +42,12 @@
 
 //typedef int		t_address_type;
 
-struct s_lport
+struct osapi_common_lport_S
 {
 
 };
 
-typedef struct s_lport	t_lport;
+typedef struct osapi_common_lport_S	t_lport;
 
 
 

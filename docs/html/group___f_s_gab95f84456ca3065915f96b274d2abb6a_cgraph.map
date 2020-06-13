@@ -1,3 +1,4 @@
 <map id="fs_elementInfo_getDirName" name="fs_elementInfo_getDirName">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="239,5,333,32"/>
+<area shape="rect" id="node1" title="Obtain the full pathname to element The returned name pointer is only valid as long as info is availa..." alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="260,5,363,32"/>
 </map>

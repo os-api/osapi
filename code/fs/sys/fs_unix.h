@@ -17,9 +17,7 @@
 // *****************************************************************************************
 
 // First include baseline
-#include "general/general_baseline_unix.h"
-
-// Standard C headers
+#include <general/baseline/general_baseline_unix.h>
 #include <stdint.h>
 #include <sys/types.h>
 #include <sys/stat.h>

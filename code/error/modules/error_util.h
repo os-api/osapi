@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_util_X(a, b, c) a b,
-enum util_X {
+#define osapi_error_util_X(a, b, c) a b,
+enum osapi_error_util_E {
 	  #include "error/mappings/table_util.h"
 };
-#undef error_util_X
+#undef osapi_error_util_X
 
 
 #endif /* OSAPI_ERROR_UTIL_H_ */

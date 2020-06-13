@@ -1,6 +1,7 @@
 <map id="osapi_status_trace" name="osapi_status_trace">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e" title="OSAPI C Trace function The functions sends the output to standard error. " alt="" coords="212,5,301,32"/>
-<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4" title="Get the error message that corresponds to the provided status information. " alt="" coords="185,56,328,83"/>
-<area shape="rect" id="node4" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number. " alt="" coords="376,56,488,83"/>
-<area shape="rect" id="node5" href="$group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module. " alt="" coords="536,56,665,83"/>
+<area shape="rect" id="node1" title="OSAPI C Trace function The functions sends the output to standard error." alt="" coords="5,31,149,57"/>
+<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#gae385d0106de39caf72e99777f89b588e" title="Print a trace message to standard error." alt="" coords="227,5,324,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4" title="Get the error message that corresponds to the provided status information." alt="" coords="197,56,353,83"/>
+<area shape="rect" id="node4" href="$group___e_r_r_o_r.html#ga1b150fc2170642d0dd9437a92777712c" title="Get the error string for an OSAPI module and error number." alt="" coords="401,56,527,83"/>
+<area shape="rect" id="node5" href="$group___e_r_r_o_r.html#ga49780b96a5e0dda916e5e1b78b2f8104" title="Verify if a given error number is valid for the provided OSAPI module." alt="" coords="575,56,716,83"/>
 </map>

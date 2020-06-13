@@ -54,38 +54,30 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 
-// + Process general information
-/// @brief Obtain raw process information
-/// This is the function call that allows clients to make a single call and obtain all raw process data
-/// @param [in] pid - Process ID
-/// @param [out] procInfo - Process information
-/// @return Operation status
-t_status proc_info_get( t_pid pid, t_proc_info * procInfo );
-
 // + Consumption monitoring
 /// @brief Get the size of the process virtual memory
 /// @param [in] pid - Process ID
 /// @param [out] size - Virtual memory size in bytes
 /// @return Operation status
-t_status proc_usage_getVirtualMemory( t_pid pid, t_size * size );
+t_status proc_resource_getVirtualMemory( t_pid pid, t_size * size );
 
 /// @brief Get the size of the process real memory, i.e. ram usage
 /// @param [in] pid - Process ID
 /// @param [out] size - Real memory size in bytes
 /// @return Operation status
-t_status proc_usage_getRealMemory( t_pid pid, t_size * size );
+t_status proc_resource_getRealMemory( t_pid pid, t_size * size );
 
 /// @brief Get the process CPU consumption (summary of user and system)
 /// @param [in] pid - Process ID
 /// @param [out] size - Percentage of consumed process CPU
 /// @return Operation status
-t_status proc_usage_getCPU( t_pid pid, t_size * size );
+t_status proc_resource_getCPU( t_pid pid, t_size * size );
 
 /// @brief Get the number of process kernel threads / LWPs
 /// @param [in] pid - Process ID
 /// @param [out] number - Number of process threads
 /// @return Operation status
-t_status proc_usage_getThreads( t_pid pid, t_size * number );
+t_status proc_resource_getThreads( t_pid pid, t_size * number );
 
 /*
 t_status	proc_usage_getIO

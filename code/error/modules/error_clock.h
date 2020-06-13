@@ -20,10 +20,10 @@
 #include "error/error_types.h"
 
 // Include own error definitions
-#define osapi_clock_error_X(a, b, c) a b,
-enum osapi_clock_e_error_X {
+#define osapi_error_clock_X(a, b, c) a b,
+enum osapi_error_clock_E {
 	  #include "error/mappings/table_clock.h"
 };
-#undef osapi_clock_error_X
+#undef osapi_error_clock_X
 
 #endif /* OSAPI_ERROR_CLOCK_H_ */

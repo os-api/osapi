@@ -30,19 +30,8 @@
 //
 // *****************************************************************************************
 
-/// Structure supporting a time date
-struct osapi_s_time
-{
-      int64_t	seconds;    	///< Seconds since the Epoch (UNIX time)
-      uint64_t	fraction;	///< Fraction of a second
-      int	precision;	///< Time resolution
-};
-
-typedef struct osapi_s_time	t_time;
-
-
 /// @brief The enum represents the possible precisions of a clock
-enum osapi_common_e_time_precision
+enum osapi_common_time_precision_E
 {
     osapi_time_unspecified	= 0, 	///< Unspecified precision
     osapi_time_second		,  	///< Precision to the second
@@ -69,9 +58,18 @@ enum osapi_common_e_time_precision
 
 };
 
-typedef enum osapi_common_e_time_precision	t_time_precision;
+typedef enum osapi_common_time_precision_E	t_time_precision;
 
 
+/// Structure supporting a time date
+struct osapi_time_S
+{
+      int64_t		seconds;    	///< Seconds since the Epoch (UNIX time)
+      uint64_t		fraction;	///< Fraction of a second
+      t_time_precision	precision;	///< Time resolution
+};
+
+typedef struct osapi_time_S	t_time;
 
 
 #endif /* OSAPI_COMMON_TYPE_TIME_H_ */

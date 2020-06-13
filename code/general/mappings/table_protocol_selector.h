@@ -8,6 +8,6 @@
 // *****************************************************************************************
 
 // Protocol generic selectors
-osapi__protocol_selector_X( e_protocol_ip, = -1,	"IP" )
+osapi_protocol_selector_X( osapi_protocol_ip, = -1,	"IP" )
 
 

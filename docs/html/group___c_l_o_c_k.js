@@ -1,9 +1,12 @@
 var group___c_l_o_c_k =
 [
+    [ "clock_chrono_start", "group___c_l_o_c_k.html#gac5d1e7b6ca6fbe5610a624ce7c28a676", null ],
+    [ "clock_chrono_stop", "group___c_l_o_c_k.html#ga53b8a0fea8161b3fa6e3ab0d0ce90f01", null ],
     [ "clock_instance_createOffset", "group___c_l_o_c_k.html#gafc97ae110b56702092a04fbb871f534c", null ],
     [ "clock_instance_createTimezone", "group___c_l_o_c_k.html#ga1b46f4499f83d6504fe7b1c48e714102", null ],
     [ "clock_instance_getLocalTime", "group___c_l_o_c_k.html#gaedd5917db46b102b09b7f203ebc01469", null ],
     [ "clock_instance_getTime", "group___c_l_o_c_k.html#ga145a5341866fca762b68b54592b7118f", null ],
+    [ "clock_instance_update", "group___c_l_o_c_k.html#ga60ad78c19d5d2d08c2d93a270b82076d", null ],
     [ "clock_module_supported", "group___c_l_o_c_k.html#ga3108f8a52eb9e74a18f6beb956539087", null ],
     [ "clock_offset_apply", "group___c_l_o_c_k.html#ga0116d43d17fd3fc4c97ecb76c9247570", null ],
     [ "clock_offset_copy", "group___c_l_o_c_k.html#gaf8ff7bdca3a9a1680a329d225df167f8", null ],
@@ -17,5 +20,7 @@ var group___c_l_o_c_k =
     [ "clock_time_make", "group___c_l_o_c_k.html#gaed7dd5a49725c7304fbf37c64e15dee6", null ],
     [ "clock_time_print", "group___c_l_o_c_k.html#ga68d33f5eaf6b82f88a0e4b56ce7b8ca5", null ],
     [ "clock_timezone_get", "group___c_l_o_c_k.html#ga73c896ff120fafe35c2650e4b922c1c8", null ],
-    [ "clock_timezone_set", "group___c_l_o_c_k.html#gaa2a30437e96874d78333edf805f5c23b", null ]
+    [ "clock_timezone_set", "group___c_l_o_c_k.html#gaa2a30437e96874d78333edf805f5c23b", null ],
+    [ "clock_vtime_get", "group___c_l_o_c_k.html#ga5dc5efbe4e427cb82d53a114a725fd40", null ],
+    [ "clock_vtime_getPrecise", "group___c_l_o_c_k.html#ga14fc21a7015af79a98004bfa2eaf742f", null ]
 ];

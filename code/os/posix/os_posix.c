@@ -46,7 +46,7 @@ t_status os_posix_info_get( t_osInfo * p_osInfo )
 
  errno = 0;
  if( p_osInfo == (t_osInfo *) 0 )
-     status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st );
+     status_iset( OSAPI_MODULE_OS, __func__, osapi_os_error_params, &st );
  else
    {
      if( uname( &info ) )

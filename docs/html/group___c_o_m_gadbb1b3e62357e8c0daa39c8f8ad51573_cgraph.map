@@ -1,3 +1,4 @@
 <map id="com_ip_isV6" name="com_ip_isV6">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="151,5,245,32"/>
+<area shape="rect" id="node1" title="Verify if the IP is Version 6." alt="" coords="5,5,109,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="157,5,260,32"/>
 </map>

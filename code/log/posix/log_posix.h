@@ -37,14 +37,14 @@
 // *****************************************************************************************
 
 
-struct s_log
+struct osapi_log_S
 {
  const char *			ident;
  int				option;
  int				facility;
 };
 
-typedef struct s_log		t_log;
+typedef struct osapi_log_S	t_log;
 typedef const char *		t_log_message;
 typedef int			t_log_level;
 

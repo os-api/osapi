@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_util_X(a, b, c) [a]=c,
+#define osapi_error_util_X(a, b, c) [a]=c,
 
-static const char * util_errors[] =
+static const char * osapi_util_errors[] =
 {
   #include "error/mappings/table_util.h"
 };
 
-#undef error_util_X
+#undef osapi_error_util_X
 
 #endif /* OSAPI_ERROR_PRIV_UTIL_H_ */

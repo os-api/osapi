@@ -28,7 +28,11 @@ extern "C" {
 
 // Own declarations
 #include "machine/machine_types.h"
-
+#include "machine/machine_ip.h"
+#include "machine/machine_host.h"
+#include "machine/machine_domain.h"
+#include "machine/machine_cpu.h"
+#include "machine/machine_virtual.h"
 
 /// *****************************************************************************************
 ///
@@ -53,62 +57,6 @@ extern "C" {
 /// @brief Declares if the module is supported on the current implementation
 /// @return SUCCESS or FAILURE
 t_status machine_module_supported( void	);
-
-// Host name related calls
-
-/// @brief Obtain the machine hostname
-/// @param [in] maxlen - The size of C-String
-/// @param [out] hostname - The name of the machine
-/// @return Operation status
-t_status machine_host_getName( t_size maxlen, t_char * hostname	);
-
-/// @brief Set the machine hostname
-/// @param [in] hostname - New hostname
-/// @return Operation status
-t_status machine_host_setName( t_char * hostname );
-
-// Domain name related calls
-
-/// @brief Get the machine domain name
-/// @param [in] maxlen - The size of C-String
-/// @param [out] domainname - The name of the machine domain
-/// @return Operation status
-t_status machine_domain_getName( t_size maxlen, t_char * domainname );
-
-/// @brief Set the machine domain name
-/// @param [in] domainname - New domain name
-/// @return Operation status
-t_status machine_domain_setName( t_char * domainname );
-
-// HW related
-/*
-// Get total available RAM
-t_status	machine_memory_getTotal
-// Get total physical CPUs / Sockets
-t_status	machine_cpu_getTotal
-// Get total Ethernet Ports
-t_status	machine_mports_getTotal		( t_size * mports );
-// Get total physical disks
-t_status	machine_disks_getTotal
-*/
-
-// IP related
-
-/// @brief Obtain the number of IPs for the given protocol
-/// @param [in] selector - The IP protocol (IPv4/6 or all)
-/// @param [out] number - Number of machine IPs matching the selector
-/// @return Operation status
-t_status machine_ip_getNumber( t_protocol selector, t_size * number );
-
-/// @brief Retrieves a list containing the machine IPs
-/// @param [in] selector - The IP protocol (IPv4/6 or all)
-/// @param [in] number - The maximum size of the IP List
-/// @param [out] list - The machine IPs
-/// @return Operation status
-t_status machine_ip_getList( t_protocol selector, t_size number, t_ip * list );
-
-
-
 
 
 #pragma GCC visibility pop			// End of public interface

@@ -1,0 +1,5 @@
+<map id="osapi_proc_info_S" name="osapi_proc_info_S">
+<area shape="rect" id="node1" title="The process information structure." alt="" coords="87,95,226,121"/>
+<area shape="rect" id="node2" href="$structosapi__proc__id___s.html" title="The process identity structure." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node3" href="$structosapi__proc__resources___s.html" title="The process resources structure." alt="" coords="156,5,333,32"/>
+</map>

@@ -38,7 +38,6 @@
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of internal interface
 
 // Functions for Groups
 t_status	get_groupID			( t_gid * p_gid		  								);
@@ -53,7 +52,6 @@ t_status	gid_compare			( t_gid gid1, t_gid gid2, bool * p_result						);
 t_status	gid_copy			( t_gid source, t_gid * p_target							);
 
 
-#pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

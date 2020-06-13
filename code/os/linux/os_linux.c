@@ -33,8 +33,9 @@ int getdomainname( char *, size_t );
 
 // Generic OSAPI includes
 #include "general/general.h"
-#include <error/modules/error_os.h>
+#include "error/modules/error_os.h"
 #include "status/status.h"
+#include "common/common.h"
 
 // Own declarations
 #include "os/os.h"
@@ -57,7 +58,7 @@ t_status os_info_provider_get( t_osInfo * p_osInfo )
   status_reset( & st );
 
   if( p_osInfo == (t_osInfo *) 0 )
-      status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st );
+      status_iset( OSAPI_MODULE_OS, __func__, osapi_os_error_params, &st );
   else
     {
       FILE * fp = fopen( OSAPI_OS_RELEASE_INFO_FILE, "r" );
@@ -99,7 +100,7 @@ t_status os_info_get( t_osInfo * p_osInfo )
   status_reset( & st );
 
   if( p_osInfo == (t_osInfo *) 0 )
-      status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st );
+      status_iset( OSAPI_MODULE_OS, __func__, osapi_os_error_params, &st );
   else
     {
       st = os_posix_info_get( p_osInfo );
@@ -127,7 +128,7 @@ t_status os_time_getBoot( t_time * p_tm )
  status_reset( & st );
 
  if( p_tm == (t_time *) 0 )
-   { status_iset( OSAPI_MODULE_OS, __func__, e_os_params, &st ); return st; }
+   { status_iset( OSAPI_MODULE_OS, __func__, osapi_os_error_params, &st ); return st; }
 
  if( clock_gettime( CLOCK_BOOTTIME, &ts ) == -1 )
    { status_eset( OSAPI_MODULE_CLOCK, __func__, errno, &st ); return st; }
@@ -138,5 +139,8 @@ t_status os_time_getBoot( t_time * p_tm )
 
  return st;
 }
+
+
+
 
 #endif	// End of OS Linux implementation

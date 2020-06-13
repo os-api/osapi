@@ -1,3 +1,4 @@
 <map id="clock_offset_make" name="clock_offset_make">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="185,5,280,32"/>
+<area shape="rect" id="node1" title="Generate a time offset from components." alt="" coords="5,5,148,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="196,5,299,32"/>
 </map>

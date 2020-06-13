@@ -37,17 +37,16 @@
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of internal interface
 
 
 // Raw memory allocation related
-t_status	common_rawMemory_allocate	( t_size size,    void ** p_mem						);
+t_status	common_rawMemory_allocate	( t_size size,    Byte type, void ** p_mem				);
 t_status	common_rawMemory_reAllocate	( t_size newSize, void ** p_mem						);
 t_status	common_rawMemory_deallocate	( void * p_mem								);
 
 // Memory allocation related
-t_status	common_memory_allocate		( size_t size,    t_memory * p_mem					);
-t_status	common_memory_reAllocate	( t_size newSize, t_memory * p_mem 					);
+t_status	common_memory_allocate		( size_t size,    Byte type, t_memory * p_mem				);
+t_status	common_memory_reAllocate	( t_size newSize, t_memory * p_mem					);
 t_status	common_memory_deallocate	( t_memory * p_mem							);
 
 // Get information
@@ -60,7 +59,6 @@ t_status	common_memory_copyFrom		( const t_memory * p_source, t_size targetSize,
 t_status	common_memory_copyTo		( const void     * p_source, t_size sourceSize, t_memory * p_target	);
 
 
-#pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

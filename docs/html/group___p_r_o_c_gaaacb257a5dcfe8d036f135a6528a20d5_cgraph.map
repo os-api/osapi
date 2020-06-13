@@ -1,0 +1,7 @@
+<map id="proc_uid_get" name="proc_uid_get">
+<area shape="rect" id="node1" title="Get the current process Unique ID A Process Unique ID is a unique incarnation of a process instance,..." alt="" coords="5,56,111,83"/>
+<area shape="rect" id="node2" href="$group___p_r_o_c.html#gafc07f910a20dc520f1471b79ad3345e3" title="Get the current process ID." alt="" coords="183,5,281,32"/>
+<area shape="rect" id="node3" href="$group___p_r_o_c.html#gad27e70fccaa1603cf734b904054996eb" title="Get the start time of a process." alt="" coords="159,56,305,83"/>
+<area shape="rect" id="node5" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="181,107,283,133"/>
+<area shape="rect" id="node4" href="$group___p_r_o_c.html#gacca8f62d5301eeda2e6d8a1c208ac921" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="353,56,464,83"/>
+</map>

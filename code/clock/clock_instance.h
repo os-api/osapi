@@ -81,6 +81,10 @@ t_status clock_instance_getLocalTime( t_clock * clk, t_time * localTime );
 /// @return Operation status
 t_status clock_instance_getTime( t_clock * clk, t_time * stdTime );
 
+/// @brief Refresh the clock time
+/// @param [out]  clk     - The updated clock
+/// @return Operation status
+t_status clock_instance_update( t_clock * clk );
 
 #pragma GCC visibility pop			// End of public interface
 

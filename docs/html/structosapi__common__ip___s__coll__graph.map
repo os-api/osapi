@@ -1,0 +1,6 @@
+<map id="osapi_common_ip_S" name="osapi_common_ip_S">
+<area shape="rect" id="node1" title="Structure to support IP information." alt="" coords="43,273,198,300"/>
+<area shape="rect" id="node2" href="$unionosapi__common__ip__address___u.html" title="Union of IPv4/v6 addresses." alt="" coords="13,184,228,211"/>
+<area shape="rect" id="node3" href="$unionosapi__common__ipv4__address___u.html" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses." alt="" coords="5,95,236,121"/>
+<area shape="rect" id="node4" href="$structosapi__common__ipv4__address___s.html" title="Structure for a structured IPv4 address." alt="" coords="6,5,235,32"/>
+</map>

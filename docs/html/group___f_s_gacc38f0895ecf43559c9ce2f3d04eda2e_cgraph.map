@@ -1,3 +1,4 @@
 <map id="fs_elementInfo_getUID" name="fs_elementInfo_getUID">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="211,5,305,32"/>
+<area shape="rect" id="node1" title="Obtain the user ID owning the element." alt="" coords="5,5,177,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="225,5,328,32"/>
 </map>

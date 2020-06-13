@@ -49,17 +49,17 @@ t_status com_ip_getStringSize( t_protocol prot, t_size * p_size )
   status_reset( & st );
 
   if( p_size == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
-      if( prot == e_protocol_ipv4 )
+      if( prot == osapi_protocol_ipv4 )
 	  *p_size = INET_ADDRSTRLEN;
-      else if( prot == e_protocol_ipv6 )
+      else if( prot == osapi_protocol_ipv6 )
 	  *p_size = INET6_ADDRSTRLEN;
       else
 	{
 	  *p_size = 0;
-	  status_iset( OSAPI_MODULE_COM, __func__, e_com_support, &st );
+	  status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_support, &st );
 	}
     }
 
@@ -75,12 +75,12 @@ t_status com_ip_getHost( t_ip * p_ip, t_size size, char * p_string )
   status_reset( & st );
 
   if( p_ip == NULL || p_string == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
-      if( p_ip->protocol == e_protocol_ipv4 )
+      if( p_ip->protocol == osapi_protocol_ipv4 )
 	  p_source = (void *) &(p_ip->address.ipv4.field.host);
-      else if( p_ip->protocol == e_protocol_ipv6 )
+      else if( p_ip->protocol == osapi_protocol_ipv6 )
 	  p_source = (void *) &(p_ip->address.ipv6);
 
       st = get_ip_string( p_ip->protocol, p_source, size, p_string );
@@ -98,13 +98,13 @@ t_status com_ip_getMask( t_ip * p_ip, t_size size, char * p_string )
   status_reset( & st );
 
   if( p_ip == NULL || p_string == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
-      if( p_ip->protocol == e_protocol_ipv4 )
+      if( p_ip->protocol == osapi_protocol_ipv4 )
 	  p_source = (void *) &(p_ip->address.ipv4.field.mask);
       else
-	  status_iset( OSAPI_MODULE_COM, __func__, e_com_invmask, &st );
+	  status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_invmask, &st );
 
       if( status_success( st ) )
 	  st = get_ip_string( p_ip->protocol, p_source, size, p_string );
@@ -122,10 +122,10 @@ t_status com_ip_getTarget( t_ip * p_ip, t_size size, char * p_string )
   status_reset( & st );
 
   if( p_ip == NULL || p_string == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
-      if( p_ip->protocol == e_protocol_ipv4 )
+      if( p_ip->protocol == osapi_protocol_ipv4 )
 	{
 	  if( p_ip->type_target == OSAPI_IP_TARGET_BROADCAST )
 	      p_source = (void *) &(p_ip->address.ipv4.field.broadcast);
@@ -134,7 +134,7 @@ t_status com_ip_getTarget( t_ip * p_ip, t_size size, char * p_string )
 	}
 
       if( p_source == 0 )
-	  status_iset( OSAPI_MODULE_COM, __func__, e_com_target, &st );
+	  status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_target, &st );
       else
 	  st = get_ip_string( p_ip->protocol, p_source, size, p_string );
     }

@@ -8,8 +8,9 @@
 //
 // ******************************************************************************************************
 
-#ifndef GENERAL_COMPILER_H_
-#define GENERAL_COMPILER_H_
+#ifndef OSAPI_GENERAL_COMPILER_H_
+#define OSAPI_GENERAL_COMPILER_H_
+
 
 // *****************************************************************************************
 //
@@ -20,8 +21,9 @@
 // List of compilers
 #define OSAPI_COMPILER_GNU		1
 #define OSAPI_COMPILER_CLANG		2
+#define OSAPI_COMPILER_ICC		3	// Intel C Compiler (icc on Linux / icl on Windows
+#define OSAPI_COMPILER_VSC		4	// Vistual Studio compiler
 #define OSAPI_COMPILER_UNKNOWN		0
-
 
 // *****************************************************************************************
 //
@@ -35,22 +37,21 @@
 // CLANG Compiler settings. CLANG must be before GCC since it exports the same gcc macros
 // *****************************************************************************************
 
-  #define OSAPI_COMPILER 			OSAPI_COMPILER_CLANG
-  #define OSAPI_COMPILER_VERSION_MAJOR		__clang_major__
-  #define OSAPI_COMPILER_VERSION_MINOR		__clang_minor__
-
+  #include "general/compiler/general_compiler_clang.h"
 
 // *****************************************************************************************
 // GNU Compiler settings
 // *****************************************************************************************
 #elif __GNUC__
-  #define OSAPI_COMPILER 			OSAPI_COMPILER_GNU
-  #define OSAPI_COMPILER_VERSION_MAJOR		__GNUC__
-  #define OSAPI_COMPILER_VERSION_MINOR		__GNUC_MINOR__
+
+  #include "general/compiler/general_compiler_gcc.h"
+
+#elif _MSC_VER
+  #include "general/compiler/general_compiler_msc.h"
 
 #else
   #define OSAPI_COMPILER		OSAPI_COMPILER_UNKNOWN
 #endif
 
 
-#endif /* GENERAL_COMPILER_H_ */
+#endif /* OSAPI_GENERAL_COMPILER_H_ */

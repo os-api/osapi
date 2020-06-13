@@ -8,8 +8,9 @@
 //
 // **************************************************************************************************
 
-#ifndef GENERAL_LANGUAGE_H_
-#define GENERAL_LANGUAGE_H_
+#ifndef OSAPI_GENERAL_LANGUAGE_H_
+#define OSAPI_GENERAL_LANGUAGE_H_
+
 
 // *****************************************************************************************
 //
@@ -35,11 +36,7 @@
 #define OSAPI_LANGUAGE			OSAPI_LANGUAGE_C_PLUS_PLUS
 #define OSAPI_LANGUAGE_VERSION		__cplusplus
 
-// Assertions
-#define osapi_static_assert		static_assert
-
-// Functions that don't return
-#define OSAPI_NORETURN	[[noreturn]]
+#include "general/language/general_language_cpp.h"
 
 #elif	defined (__STDC__)			// C code
 
@@ -50,13 +47,7 @@
 #define OSAPI_LANGUAGE			OSAPI_LANGUAGE_C
 #define OSAPI_LANGUAGE_VERSION		__STDC_VERSION__
 
-// Assertions
-#if __STDC_VERSION__ >= 201112L
-  #define osapi_static_assert		_Static_assert
-#endif
-
-// Functions that don't return
-#define OSAPI_NORETURN	_Noreturn
+#include "general/language/general_language_c.h"
 
 #else
 
@@ -68,4 +59,4 @@
 
 #endif	// Language definitions
 
-#endif /* GENERAL_LANGUAGE_H_ */
+#endif /* OSAPI_GENERAL_LANGUAGE_H_ */

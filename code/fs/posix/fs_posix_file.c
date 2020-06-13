@@ -195,7 +195,7 @@ t_status fs_file_create( const char * p_path, const char ** p_mode )
 
 t_status fs_file_close( t_file * p_file )
 {
-  return fs_file_close( p_file );
+  return posix_file_close( p_file );
 }
 
 
@@ -622,7 +622,7 @@ t_status posix_file_copy2dir( t_file * p_sFile, const t_char * p_target, bool ov
 {
   t_status		st;
   t_dir			dir;
-  char			path[ PATH_MAX ];
+  char			path[ PATH_MAX + 1 ];
 
   status_reset( &st );
 
@@ -648,9 +648,9 @@ t_status posix_file_copy2dir( t_file * p_sFile, const t_char * p_target, bool ov
       if( (size_t) (filename_len + strlen( p_target )) > (size_t) (PATH_MAX - 2) )
 	{ status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_pathsize, &st ); return st; }
 
-      strncpy( path, p_target, PATH_MAX - filename_len - 2 );
+      strncpy( path, p_target, PATH_MAX - filename_len - 1 );
       strcat ( path, "/" );
-      strncat( path, ptr, filename_len );
+      strncat( path, ptr, PATH_MAX - filename_len );
 
       st = posix_file_copy2file( p_sFile, path, overwrite );
 

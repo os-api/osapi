@@ -1,3 +1,4 @@
 <map id="fs_directory_copy" name="fs_directory_copy">
-<area shape="rect" id="node2" href="$group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d" title="Extended element copy operation If the destination already exists, it will be overwritten if the resp..." alt="" coords="179,5,300,32"/>
+<area shape="rect" id="node1" title="Copy an entire directory onto another." alt="" coords="187,5,324,32"/>
+<area shape="rect" id="node2" href="$group___f_s.html#ga2cd7f1b1475e572cea437450674a7b8d" title="Extended element copy operation If the destination already exists, it will be overwritten if the resp..." alt="" coords="5,5,139,32"/>
 </map>

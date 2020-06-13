@@ -34,7 +34,7 @@
 
 
 /// @brief The enum represents the possible clock calendars
-enum osapi_clock_e_calendar
+enum osapi_clock_calendar_E
 {
     osapi_calendar_unspecified	= -1, 	///< Unspecified calendar, no way to give meaning to time
     osapi_calendar_ce		= 0,  	///< Common Era calendar (consider the Gregorian Calendar as if it was already available in the origin and not only in the 16 century)
@@ -48,7 +48,7 @@ enum osapi_clock_e_calendar
 
 };
 
-typedef enum osapi_clock_e_calendar	t_calendar;
+typedef enum osapi_clock_calendar_E	t_calendar;
 
 
 

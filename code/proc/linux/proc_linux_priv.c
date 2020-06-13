@@ -34,7 +34,7 @@
 #include <limits.h>
 #include <dirent.h>
 #include <dlfcn.h>
-
+#include <libgen.h>
 
 // Generic OSAPI includes
 #include "general/general.h"
@@ -145,7 +145,7 @@ t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
  status_reset( & st );
 
  if( p_number == (t_size *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      p_dir = opendir( OSAPI_FS_PROC_NAME );
@@ -195,7 +195,7 @@ t_status count_proc_members( int target, t_pid target_id, t_size * p_number )
 static int linux_callback_count_libraries( struct dl_phdr_info * info, size_t size, void * data )
 {
  if( data == NULL )
-     return e_proc_params;
+     return osapi_proc_error_params;
 
  if( strlen( info->dlpi_name ) > 0 )
      (*(t_size *) data)++;
@@ -207,26 +207,27 @@ static int linux_callback_count_libraries( struct dl_phdr_info * info, size_t si
 static int linux_callback_get_libraries( struct dl_phdr_info * info, size_t size, void * data )
 {
  t_dldata *	p_dldata;
- char 		str[ PATH_MAX + 1 ];
+ char 		str[ PATH_MAX ];
  char * 	libname			= NULL;
  char * 	ptr 			= NULL;
 
- if( data == NULL )
-     return e_proc_params;
+ if( data == NULL )     return osapi_proc_error_params;
 
  p_dldata = (t_dldata *) data;
 
  if( strlen( info->dlpi_name ) > 0 && p_dldata->curlibs < p_dldata->maxlibs )
    {
-     strncpy( str, info->dlpi_name, PATH_MAX );
+     strncpy( str, info->dlpi_name, PATH_MAX - 1 );
 
      // Get the Library name
      libname = basename( str );
-     strncpy( str, libname, PATH_MAX );
+     strncpy( str, libname, PATH_MAX - 1 );
+     str[ PATH_MAX - 1 ] = '\0';
 
      if( strlen( str ) > 0 )
        {
-	 strncpy( (*p_dldata->info)[ p_dldata->curlibs ].name, str, OSAPI_PROC_LIBRARY_MAX_NAME );
+	 strncpy( (*p_dldata->info)[ p_dldata->curlibs ].name, str, OSAPI_PROC_LIBRARY_MAX_NAME - 1 );
+	 ((*p_dldata->info)[ p_dldata->curlibs ]).name[ OSAPI_PROC_LIBRARY_MAX_NAME ] = '\0';
 
 	 // Find the version information
 	 ptr = strstr( str, ".so." );
@@ -263,7 +264,7 @@ static int linux_callback_get_library( struct dl_phdr_info * info, size_t size, 
  char * 			libname			= NULL;
  char 		*		ptr 			= NULL;
 
- if( data == NULL ) return e_proc_params;
+ if( data == NULL ) return osapi_proc_error_params;
 
  p_data = (struct library_release_data *) data;
 
@@ -282,7 +283,7 @@ static int linux_callback_get_library( struct dl_phdr_info * info, size_t size, 
 	 if( strncpy( p_data->release, ptr+4, p_data->size ) != NULL )
 	     return -1;		// Found and all ok
 	 else
-	     // Found but there was an error retrieving the Release information (both e_proc_params and errno are positive error codes)
+	     // Found but there was an error retrieving the Release information (both osapi_proc_error_params and errno are positive error codes)
 	     return errno;
        }
    }
@@ -299,7 +300,7 @@ t_status getNumberOfLoadedLibraries( t_size * p_maxlibs	)
  status_reset( &st );
 
  if( p_maxlibs == (t_size *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      *p_maxlibs = 0;
@@ -319,7 +320,7 @@ t_status getListOfLoadedLibraries( t_size maxlibs, t_libinfo (*p_info)[] )
  status_reset( &st );
 
  if( (void *) p_info == NULL )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // Set up wrapper structure to pass/receive information from the callback function
@@ -344,7 +345,7 @@ t_status getLibraryRelease( const t_char * p_name, t_size max, char * p_release 
  status_reset( &st );
 
  if( (void *) p_name == NULL || max < 1 || (void *) p_release == NULL )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      struct library_release_data data;

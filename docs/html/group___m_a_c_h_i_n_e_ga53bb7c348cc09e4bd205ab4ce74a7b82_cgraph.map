@@ -1,0 +1,4 @@
+<map id="machine_cpuFeature_supports" name="machine_cpuFeature_supports">
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="225,5,319,32"/>
+<area shape="rect" id="node3" href="$group___m_a_c_h_i_n_e.html#gae8d904da13be47d781c70f3f1e89b636" title="Execute the CPUID instruction in Intel/AMD CPU architectures Provides raw access to the underline CPU..." alt="" coords="196,57,348,98"/>
+</map>

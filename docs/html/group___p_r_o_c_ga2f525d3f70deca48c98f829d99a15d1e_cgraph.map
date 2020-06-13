@@ -1,0 +1,4 @@
+<map id="proc_resource_getThreads" name="proc_resource_getThreads">
+<area shape="rect" id="node1" title="Get the number of process kernel threads / LWPs." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node2" href="$group___p_r_o_c.html#gacca8f62d5301eeda2e6d8a1c208ac921" title="Obtain raw process information This is the function call that allows clients to make a single call an..." alt="" coords="247,5,357,32"/>
+</map>

@@ -1,5 +1,6 @@
 <map id="code/status/status_defs.h" name="code/status/status_defs.h">
-<area shape="rect" id="node2" href="$status_8h_source.html" title="code/status/status.h" alt="" coords="75,95,216,121"/>
-<area shape="rect" id="node3" href="$machine__posix_8h_source.html" title="code/machine/posix\l/machine_posix.h" alt="" coords="5,169,144,211"/>
-<area shape="rect" id="node4" href="$osapi_8h_source.html" title="code/osapi.h" alt="" coords="168,177,264,203"/>
+<area shape="rect" id="node1" title="File providing definitions for the status module." alt="" coords="87,5,228,47"/>
+<area shape="rect" id="node2" href="$status_8h_source.html" title=" " alt="" coords="81,95,234,121"/>
+<area shape="rect" id="node3" href="$machine__posix_8h_source.html" title=" " alt="" coords="5,169,157,211"/>
+<area shape="rect" id="node4" href="$osapi_8h_source.html" title=" " alt="" coords="181,177,285,203"/>
 </map>

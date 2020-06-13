@@ -50,7 +50,7 @@ t_status fs_elementInfo_getType( const t_element * p_info, int * p_type )
   if( p_info == NULL || p_type == NULL )
       status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st );
   else
-      *p_type = p_info->type;
+      *p_type = (int) p_info->type;
 
   TRACE_EXIT
 
@@ -118,8 +118,11 @@ t_status fs_elementInfo_getDirName( const t_element * p_info, t_size size, char 
   const char * ptr = strrchr( p_info->fullpath, '/' );
   size_t len = strlen( p_info->fullpath ) - strlen( ptr );
 
-  strncpy( p_dir, p_info->fullpath, len );
-  p_dir[ size -1 ] = '\0';			// Ensure that it's null terminated
+  if( len >= size )
+    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_strcpy, &st ); return st; }
+
+  strncpy( p_dir, ptr + 1 , len );
+  p_dir[ len + 1 ] = '\0';			// Ensure that it's null terminated
 
   TRACE_EXIT
 

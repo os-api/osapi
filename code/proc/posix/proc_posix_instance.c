@@ -53,7 +53,7 @@ t_status proc_instance_create( t_proc * p_process )
 
   if( p_process == (t_proc *) 0 )
     {
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
       return st;
     }
 
@@ -77,7 +77,7 @@ t_status proc_instance_create( t_proc * p_process )
      if( status_success( st ) )       proc_app_launch( p_process );
 
      // If the application returned, an error occurred
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_exec, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_exec, &st );
    }
  else
    {
@@ -96,7 +96,7 @@ t_status proc_instance_destroy( t_pid pid, int forced )
   status_reset( & st );
 
   if( pid <= 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_pid, &st );
   else
     {
       if( forced == true ) rc = kill( pid, SIGKILL );
@@ -119,7 +119,7 @@ t_status proc_instance_clone( int * p_isChild )
   status_reset( & st );
 
   if( p_isChild == (int *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       if( (pid = fork() ) == -1 )
@@ -174,7 +174,7 @@ t_status proc_instance_isRunning( t_pid search_pid )
   status_reset( & st );
 
   if( search_pid <= (pid_t) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       // Signal 0 to check if a processing is running
@@ -200,7 +200,7 @@ t_status proc_instance_getStatus( t_pid target_pid, t_proc_status * p_status )
 
  // Extra check
  if( status_success( st ) && target_pid != pid ) // This shouldn't occur
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_wait, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_wait, &st );
 
  return st;
 }

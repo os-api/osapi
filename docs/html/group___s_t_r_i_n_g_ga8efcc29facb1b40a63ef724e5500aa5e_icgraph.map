@@ -1,3 +1,4 @@
 <map id="string_basic_create" name="string_basic_create">
-<area shape="rect" id="node2" href="$group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string. " alt="" coords="188,5,319,32"/>
+<area shape="rect" id="node1" title="Create a new OSAPI string based on a C string." alt="" coords="196,5,344,32"/>
+<area shape="rect" id="node2" href="$group___s_t_r_i_n_g.html#ga8eb47c57afcc5db0a4334ff021d8e9f6" title="Clone an OSAPI string." alt="" coords="5,5,148,32"/>
 </map>

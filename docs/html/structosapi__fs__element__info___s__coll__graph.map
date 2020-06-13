@@ -1,0 +1,7 @@
+<map id="osapi_fs_element_info_S" name="osapi_fs_element_info_S">
+<area shape="rect" id="node1" title="Structure containing the file system element generic information." alt="" coords="231,228,415,255"/>
+<area shape="rect" id="node2" href="$structosapi__fs__element__permissions___s.html" title="Structure that defines a file system permissions." alt="" coords="5,95,244,121"/>
+<area shape="rect" id="node3" href="$structosapi__time___s.html" title="Structure supporting a time date." alt="" coords="269,95,378,121"/>
+<area shape="rect" id="node4" href="$structosapi__fs__element__id___s.html" title="Structure that defines a an element ID." alt="" coords="402,95,573,121"/>
+<area shape="rect" id="node5" href="$structosapi__fs__id___s.html" title="Structure that holds a directory system element information." alt="" coords="432,5,543,32"/>
+</map>

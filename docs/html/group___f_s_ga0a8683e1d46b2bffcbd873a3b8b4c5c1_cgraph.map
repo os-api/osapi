@@ -1,3 +1,4 @@
 <map id="fs_file_setBlockSize" name="fs_file_setBlockSize">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="195,5,289,32"/>
+<area shape="rect" id="node1" title="Change the block size for file operations Helper function for fs_file_setPosition." alt="" coords="5,5,156,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="204,5,307,32"/>
 </map>

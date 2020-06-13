@@ -25,12 +25,12 @@
 //
 // *****************************************************************************************
 
-#define osapi_log_error_X(a, b, c) [a]=c,
+#define osapi_error_log_X(a, b, c) [a]=c,
 
 static const char * osapi_log_errors[] = {
   #include "error/mappings/table_log.h"
 };
 
-#undef osapi_log_error_X
+#undef osapi_error_log_X
 
 #endif /* OSAPI_ERROR_PRIV_LOG_H_ */

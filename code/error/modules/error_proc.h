@@ -21,10 +21,10 @@
 
 // Include own error definitions
 
-#define error_proc_X(a, b, c) a b,
-enum proc_X {
+#define osapi_error_proc_X(a, b, c) a b,
+enum osapi_error_proc_E {
 	  #include "error/mappings/table_proc.h"
 };
-#undef error_proc_X
+#undef osapi_error_proc_X
 
 #endif /* OSAPI_ERROR_PROC_H_ */

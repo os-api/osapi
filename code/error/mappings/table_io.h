@@ -7,9 +7,11 @@
 //
 // *****************************************************************************************
 
-error_io_X( e_io_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE		)
-error_io_X( e_io_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC	)
-error_io_X( e_io_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT	)
-error_io_X( e_io_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM	)
-error_io_X( e_io_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN	)
-error_io_X( e_io_max, ,					OSAPI_ERROR_STRING_UNKNOWN	)
+osapi_error_io_X( osapi_io_error_none,    = OSAPI_ERROR_BASE,		OSAPI_ERROR_STRING_NONE		)
+
+osapi_error_io_X( osapi_io_error_generic, = OSAPI_ERROR_GENERIC,	OSAPI_ERROR_STRING_GENERIC	)
+osapi_error_io_X( osapi_io_error_support, = OSAPI_ERROR_SUPPORT,	OSAPI_ERROR_STRING_SUPPORT	)
+osapi_error_io_X( osapi_io_error_params,  = OSAPI_ERROR_INVPARAM,	OSAPI_ERROR_STRING_INVPARAM	)
+osapi_error_io_X( osapi_io_error_unknown, = OSAPI_ERROR_UNKNOWN,	OSAPI_ERROR_STRING_UNKNOWN	)
+
+osapi_error_io_X( osapi_io_error_max, ,					OSAPI_ERROR_STRING_UNKNOWN	)

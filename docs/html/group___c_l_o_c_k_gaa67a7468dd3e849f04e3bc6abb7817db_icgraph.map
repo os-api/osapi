@@ -1,0 +1,4 @@
+<map id="clock_time_get" name="clock_time_get">
+<area shape="rect" id="node1" title="Get the current machine/real time in seconds from the system epoch." alt="" coords="224,5,345,32"/>
+<area shape="rect" id="node2" href="$group___c_l_o_c_k.html#ga60ad78c19d5d2d08c2d93a270b82076d" title="Refresh the clock time." alt="" coords="5,5,176,32"/>
+</map>

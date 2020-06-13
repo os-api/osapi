@@ -57,9 +57,10 @@ extern "C" {
 
 /// @brief Allocate memory in the process heap
 /// @param [in] size - Required memory size in bytes
+/// @param [in] type - How likely is the memory to be reallocated? Hint to the memory manager
 /// @param [out] mem - Memory pointer
 /// @return Operation status
-t_status proc_rawMemory_allocate	( t_size size,    void * mem					);
+t_status proc_rawMemory_allocate	( t_size size,    Byte type, void * mem				);
 
 /// @brief Resize the previously allocated memory in the process heap
 /// @param [in]     newSize	- New memory size in bytes
@@ -76,9 +77,10 @@ t_status proc_rawMemory_deallocate	( void * mem							);
 
 /// @brief Allocate memory in the process heap
 /// @param [in] size - Required memory size in bytes
+/// @param [in] type - How likely is the memory to be reallocated? Hint to the memory manager
 /// @param [out] mem - Memory descriptor
 /// @return Operation status
-t_status proc_memory_allocate		( t_size size,    t_memory * mem				);
+t_status proc_memory_allocate		( t_size size,    Byte type, t_memory * mem			);
 
 /// @brief Resize the previously allocated memory in the process heap
 /// @param [in]     newSize	- New memory size in bytes

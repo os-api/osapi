@@ -95,6 +95,13 @@ const char * status_function_get( t_status status );
 const char * status_message_get( t_status status );
 
 
+/// @brief Obtain the result of an operation
+/// This call is needed since the status_success macro may not be available in other programming languages
+/// @param [in] status - Status information
+/// @return True if operation was successful. False otherwise.
+bool status_success_is( t_status status );
+
+
 #pragma GCC visibility pop			// End of public interface
 
 

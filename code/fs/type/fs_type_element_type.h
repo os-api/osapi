@@ -18,7 +18,7 @@
 // *****************************************************************************************
 
 /// @brief The enum represents the possible elements of a file system
-enum osapi_fs_e_element_type
+enum osapi_fs_element_type_E
 {
     osapi_fs_type_unknown		= 0,  ///< Unknown element
     osapi_fs_type_file			= 1,  ///< The element is a file
@@ -33,6 +33,6 @@ enum osapi_fs_e_element_type
     // Other elements
 };
 
-typedef enum osapi_fs_e_element_type	t_fs_eType;
+typedef enum osapi_fs_element_type_E	t_fs_eType;
 
 #endif /* OSAPI_FS_TYPE_ELEMENT_TYPE_H_ */

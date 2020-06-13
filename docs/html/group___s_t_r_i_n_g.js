@@ -1,15 +1,5 @@
 var group___s_t_r_i_n_g =
 [
-    [ "osapi_basic_string", "structosapi__basic__string.html", [
-      [ "csize", "structosapi__basic__string.html#adc47aee778eaba43b0473b07143061cc", null ],
-      [ "ps_location", "structosapi__basic__string.html#a05494f95bfd940bfe7697a8ad6058642", null ],
-      [ "tsize", "structosapi__basic__string.html#aae926eba3aa14c71c8c7ca5960ea49e3", null ]
-    ] ],
-    [ "osapi_wide_string", "structosapi__wide__string.html", [
-      [ "csize", "structosapi__wide__string.html#adc47aee778eaba43b0473b07143061cc", null ],
-      [ "ps_location", "structosapi__wide__string.html#aa278267fc86ccd2043cfdbdfd2326aa0", null ],
-      [ "tsize", "structosapi__wide__string.html#aae926eba3aa14c71c8c7ca5960ea49e3", null ]
-    ] ],
     [ "OSAPI_STRING_NULL_POINTER", "group___s_t_r_i_n_g.html#ga2bd14dd1a612d5e8ffed84f3a54712c7", null ],
     [ "OSAPI_WIDE_CHAR_NULL_POINTER", "group___s_t_r_i_n_g.html#gae44d86109156fda75e3064eead67c6d2", null ],
     [ "OSAPI_WIDE_STRING_NULL_POINTER", "group___s_t_r_i_n_g.html#ga90c0579efa8e0c6a2a230d18efb69231", null ],

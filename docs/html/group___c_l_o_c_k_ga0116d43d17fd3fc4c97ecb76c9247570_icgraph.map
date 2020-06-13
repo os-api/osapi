@@ -1,3 +1,4 @@
 <map id="clock_offset_apply" name="clock_offset_apply">
-<area shape="rect" id="node2" href="$group___c_l_o_c_k.html#gaedd5917db46b102b09b7f203ebc01469" title="Get the current local time from a clock. " alt="" coords="184,5,379,32"/>
+<area shape="rect" id="node1" title="Incorporate a time offset into a new time." alt="" coords="267,5,409,32"/>
+<area shape="rect" id="node2" href="$group___c_l_o_c_k.html#gaedd5917db46b102b09b7f203ebc01469" title="Get the current local time from a clock." alt="" coords="5,5,219,32"/>
 </map>

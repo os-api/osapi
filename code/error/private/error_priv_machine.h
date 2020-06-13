@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_machine_X(a, b, c) [a]=c,
+#define osapi_error_machine_X(a, b, c) [a]=c,
 
-static const char * machine_errors[] =
+static const char * osapi_machine_errors[] =
 {
   #include "error/mappings/table_machine.h"
 };
 
-#undef error_machine_X
+#undef osapi_error_machine_X
 
 #endif /* OSAPI_ERROR_PRIV_MACHINE_H_ */

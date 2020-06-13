@@ -1,0 +1,10 @@
+<map id="osapi_connection_endpoint_S" name="osapi_connection_endpoint_S">
+<area shape="rect" id="node1" title="Define a generic connection endpoint type." alt="" coords="123,541,338,568"/>
+<area shape="rect" id="node2" href="$unionosapi__connection__endpoint___s_1_1osapi__connection__endpoint___u.html" title="Superset of all supported protocol information for the endpoint (based on the protocol field)" alt="" coords="123,452,339,479"/>
+<area shape="rect" id="node3" href="$structosapi__tcp___s.html" title="Define a generic TCP connection type." alt="" coords="133,363,232,389"/>
+<area shape="rect" id="node4" href="$structosapi__common__lport___s.html" title=" " alt="" coords="5,273,179,300"/>
+<area shape="rect" id="node5" href="$structosapi__common__ip___s.html" title="Structure to support IP information." alt="" coords="203,273,357,300"/>
+<area shape="rect" id="node6" href="$unionosapi__common__ip__address___u.html" title="Union of IPv4/v6 addresses." alt="" coords="173,184,387,211"/>
+<area shape="rect" id="node7" href="$unionosapi__common__ipv4__address___u.html" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses." alt="" coords="165,95,395,121"/>
+<area shape="rect" id="node8" href="$structosapi__common__ipv4__address___s.html" title="Structure for a structured IPv4 address." alt="" coords="165,5,395,32"/>
+</map>

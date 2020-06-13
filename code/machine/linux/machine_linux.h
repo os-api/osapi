@@ -14,10 +14,6 @@
 #ifdef OS_LINUX
 
 
-// Make sure that header is easily imported from c++
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 // *****************************************************************************************
 //
@@ -29,24 +25,12 @@ extern "C" {
 #include <ifaddrs.h>
 
 // Generic OSAPI includes
+#include "common/types/common_types_ip.h"
 
 // Own headers
-#include <machine/linux/machine_linux_types.h>
-
-// *****************************************************************************************
-//
-// Section: Function Declarations
-//
-// *****************************************************************************************
-
-static t_status copy_ip			( struct sockaddr * saddress, void * address	);
-static t_status fill_ip_structure	( struct ifaddrs * address, t_ip * ip		);
+#include "machine/linux/machine_linux_types.h"
 
 
-// End of header with C++ declaration
-#ifdef __cplusplus
-}
-#endif
 
 #endif	// End of OS Linux
 

@@ -30,13 +30,13 @@
 // *****************************************************************************************
 
 /// Structure that defines a an element ID
-struct osapi_fs_s_element_id
+struct osapi_fs_element_id_S
 {
   t_fs_id		fsid;			///< POSIX File system ID
   ino_t			eid;			///< POSIX unique identifier for the element inside the file system
 };
 
-typedef struct osapi_fs_s_element_id	t_fs_eid;
+typedef struct osapi_fs_element_id_S	t_fs_eid;
 
 
 

@@ -53,17 +53,21 @@ typedef const char *		t_status_string;
 typedef const char *		t_status_funcname;
 
 /// Definition of opaque status type
-struct s_status
+struct osapi_status_S
 {
   /// For which library is the status available
   t_status_type		type;
+
+  // Error information
   union
   {
-    /// The status can provided by an error code
+    /// The status can be provided by an error code
     t_error		code;
+
     /// The error can also be provided through a string directly
     t_status_string	string;
   };
+
   /// Module that provides the status
   t_module		module;
   /// Function name that provides the status
@@ -71,7 +75,7 @@ struct s_status
 };
 
 /// @brief The status type
-typedef struct s_status		t_status;
+typedef struct osapi_status_S		t_status;
 
 ///@}
 ///@}

@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_sec_X(a, b, c) a b,
-enum sec_X {
+#define osapi_error_sec_X(a, b, c) a b,
+enum osapi_error_sec_E {
 	  #include "error/mappings/table_sec.h"
 };
-#undef error_sec_X
+#undef osapi_error_sec_X
 
 
 #endif /* OSAPI_ERROR_SEC_H_ */

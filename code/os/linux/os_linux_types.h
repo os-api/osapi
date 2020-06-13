@@ -31,5 +31,4 @@
 #define OSAPI_OS_RELEASE_INFO_FILE	"/etc/os-release"
 
 
-
 #endif /* OSAPI_LINUX_TYPES_H_ */

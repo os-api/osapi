@@ -51,7 +51,7 @@ t_status machine_host_getName( t_size maxlen, t_char * hostname	)
   status_reset( & st );
 
   if( hostname == NULL || maxlen <= 0 )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;

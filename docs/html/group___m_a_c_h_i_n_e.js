@@ -1,10 +1,31 @@
 var group___m_a_c_h_i_n_e =
 [
+    [ "machine_cpu_getArch", "group___m_a_c_h_i_n_e.html#ga2c65ebd501eafc8bfcfe5844d2b4669f", null ],
+    [ "machine_cpu_getEndian", "group___m_a_c_h_i_n_e.html#gaca4faaba1e8f050aa3980c652648e86f", null ],
+    [ "machine_cpu_getEndianString", "group___m_a_c_h_i_n_e.html#gaec6584d9edde71814d040f669ebc04db", null ],
+    [ "machine_cpu_getInfo", "group___m_a_c_h_i_n_e.html#gafc5df16394b556892c3c5c7a6e01dcc5", null ],
+    [ "machine_cpu_getSummary", "group___m_a_c_h_i_n_e.html#ga9459ae3f06d4112f7f4fd5b1db521043", null ],
+    [ "machine_cpu_id", "group___m_a_c_h_i_n_e.html#ga3a47065f2bc39aa2058f54512af65dd2", null ],
+    [ "machine_cpu_isFeatureAvailable", "group___m_a_c_h_i_n_e.html#ga9bb98f2aac01a3178894a2039fc1aa64", null ],
+    [ "machine_cpuFeature_count", "group___m_a_c_h_i_n_e.html#gaa93585b3d87d6bf1b5fac429267f3a80", null ],
+    [ "machine_cpuFeature_getAll", "group___m_a_c_h_i_n_e.html#ga007464a92fb26f1e85ec1922435b7408", null ],
+    [ "machine_cpuFeature_getDescription", "group___m_a_c_h_i_n_e.html#ga9469a927c3359bae23817b40d1851cd6", null ],
+    [ "machine_cpuFeature_getListDescription", "group___m_a_c_h_i_n_e.html#ga0203977d8eadf1abd3422b4a7a3e5b26", null ],
+    [ "machine_cpuFeature_getListName", "group___m_a_c_h_i_n_e.html#gab667d2df9a52ac973fadeab90e09c7c5", null ],
+    [ "machine_cpuFeature_getName", "group___m_a_c_h_i_n_e.html#ga5764a66eb65c1fb05e37e57ca7bd7644", null ],
+    [ "machine_cpuFeature_isAvailable", "group___m_a_c_h_i_n_e.html#gad7d906308ecdf02883368b70b292b062", null ],
+    [ "machine_cpuFeature_supports", "group___m_a_c_h_i_n_e.html#ga03c9b27a863ac046c1b394e3ae6e4a31", null ],
+    [ "machine_cpuVendor_getIDFromName", "group___m_a_c_h_i_n_e.html#ga8b26b7f2a21c63ab12b5a80ec4fd7a78", null ],
+    [ "machine_cpuVendor_getName", "group___m_a_c_h_i_n_e.html#gaba1528456559c37e97d63076db614658", null ],
+    [ "machine_cpuVendor_getNameFromId", "group___m_a_c_h_i_n_e.html#gab40095033fce7122f4f67f1d9f3f0901", null ],
     [ "machine_domain_getName", "group___m_a_c_h_i_n_e.html#gaf03844695c691f19b2a475e7f3aecfba", null ],
     [ "machine_domain_setName", "group___m_a_c_h_i_n_e.html#ga46586abc3797db7ab784d254552f7f24", null ],
     [ "machine_host_getName", "group___m_a_c_h_i_n_e.html#gac653f5f7be3743a1ac70231bf04eed3e", null ],
     [ "machine_host_setName", "group___m_a_c_h_i_n_e.html#gaa25cc6036593df2eda1dbde1a8e16d96", null ],
     [ "machine_ip_getList", "group___m_a_c_h_i_n_e.html#gae154564b264b22619c6aa0f8589a0db4", null ],
     [ "machine_ip_getNumber", "group___m_a_c_h_i_n_e.html#ga1ffbf298115346066b57acce93d00f99", null ],
-    [ "machine_module_supported", "group___m_a_c_h_i_n_e.html#gac1d008008f023efbeeab7c3e325cb62e", null ]
+    [ "machine_module_supported", "group___m_a_c_h_i_n_e.html#gac1d008008f023efbeeab7c3e325cb62e", null ],
+    [ "machine_virtual_getInfo", "group___m_a_c_h_i_n_e.html#gae141592d997e4fbc2c99b5dd4d747529", null ],
+    [ "machine_virtual_getVendor", "group___m_a_c_h_i_n_e.html#ga2cd0b1dd160cfc15fc204d4e11924acd", null ],
+    [ "machine_virtual_is", "group___m_a_c_h_i_n_e.html#gaf3d57252a16ed1829363cb33966d34f3", null ]
 ];

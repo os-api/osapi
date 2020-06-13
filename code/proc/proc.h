@@ -32,8 +32,10 @@ extern "C" {
 #include "proc/proc_list.h"
 #include "proc/proc_plan.h"
 #include "proc/proc_signal.h"
+#include "proc/proc_info.h"
 #include "proc/proc_resource.h"
 #include "proc/proc_library.h"
+#include "proc/proc_time.h"
 #include "proc/proc_identity.h"
 #include "proc/proc_instance.h"
 

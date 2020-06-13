@@ -33,7 +33,7 @@
 // *****************************************************************************************
 
 /// Structure containing the file system element generic information
-struct osapi_fs_element_info
+struct osapi_fs_element_info_S
 {
   t_fs_ostate		state;				///< Element state (closed/open)
   t_fs_eType		type;				///< Element type: File, directory, etc.
@@ -55,6 +55,6 @@ struct osapi_fs_element_info
 };
 
 
-typedef struct osapi_fs_element_info 	t_fs_elementInfo;
+typedef struct osapi_fs_element_info_S 	t_fs_elementInfo;
 
 #endif /* OSAPI_FS_TYPE_ELEMENTINFO_H_ */

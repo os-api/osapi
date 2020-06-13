@@ -13,18 +13,22 @@
 // Include protocol IDs
 
 #define osapi_protocol_X(a, b, c) a b,
-enum protocol_X {
-	  #include <general/mappings/table_protocol.h>
+enum osapi_protocol_E {
+	  #include "general/mappings/table_protocol.h"
 };
 #undef osapi_protocol_X
 
 
-#define osapi__protocol_selector_X(a, b, c) a b,
-enum selectors_X {
-	  #include <general/mappings/table_protocol_selector.h>
+#define osapi_protocol_selector_X(a, b, c) a b,
+enum osapi_protocol_selector_E {
+	  #include "general/mappings/table_protocol_selector.h"
 };
-#undef osapi__protocol_selector_X
+#undef osapi_protocol_selector_X
 
+
+// Protocol alias
+#define osapi_protocol_ipv4	osapi_protocol_inet
+#define osapi_protocol_ipv6	osapi_protocol_inet6
 
 
 #endif /* OSAPI_GENERAL_PROTOCOL_H_ */

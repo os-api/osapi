@@ -1,0 +1,4 @@
+<map id="osapi_machine_cpu_summary_S" name="osapi_machine_cpu_summary_S">
+<area shape="rect" id="node1" title="Machine CPU summary information." alt="" coords="5,95,240,121"/>
+<area shape="rect" id="node2" href="$structosapi__machine__cpu__info___s.html" title="CPU ID information (For CPUs that support it)" alt="" coords="24,5,221,32"/>
+</map>

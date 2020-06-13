@@ -37,7 +37,7 @@
 void status_message_cPrint( t_status s )
 {
   printf("V%s: Module %s, function %s with status: %s.\n", osapi_get_version_string(),
-	 osapi_getModule( s.module ),
+	 osapi_module_get( s.module ),
 	 s.funcname,
 	 strerror(s.code) );
 }

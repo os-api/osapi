@@ -177,6 +177,7 @@ t_status fs_directory_getElementList( t_dir * p_dir, t_list * p_list )
 
        if( p_entry == NULL ) break;
 
+       // Not efficient, needs to use macro
        st = common_list_copyTo( (void *) p_entry, sizeof( struct dirent ), (t_size) count + 1, p_list );
 
        if( status_failure( st ) )  break;
@@ -237,17 +238,15 @@ t_status fs_direntry_getName ( const t_dir_entry * p_entry, t_size nameSize, t_c
 
   TRACE_ENTER
 
-  if( p_entry == NULL || p_name == NULL )
+  if( p_entry == NULL || p_name == NULL || nameSize < 2 )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
-  size = strlen( p_entry->d_name ) + 1;	// Make sure we copy the C-String terminator
+  size = strlen( p_entry->d_name );
   if( size == 0 )
     { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
 
-  if( nameSize < size )
-    { status_iset( OSAPI_MODULE_FS, __func__, osapi_fs_error_params, &st ); return st; }
-
-  strncpy( p_name, p_entry->d_name, size );
+  strncpy( p_name, p_entry->d_name, nameSize - 1 );
+  p_name[ nameSize ] = '\0';
 
   TRACE_EXIT
 

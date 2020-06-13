@@ -1,0 +1,4 @@
+<map id="proc_info_getRealMemory" name="proc_info_getRealMemory">
+<area shape="rect" id="node1" title="Extract the size of the process real memory, i.e. ram usage, from the process information." alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="247,5,349,32"/>
+</map>

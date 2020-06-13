@@ -26,7 +26,7 @@
 #include "general/general.h"
 #include "error/modules/error_common.h"
 #include "status/status.h"
-
+#include "status/trace_macros.h"
 
 // Own declarations
 #include "common/common_defs.h"
@@ -53,7 +53,7 @@ t_status common_list_allocate( t_size nItems, t_size itemSize, t_list * p_list )
   else
     {
       t_size bufsize = nItems * itemSize;
-      st = common_memory_allocate( bufsize, &(p_list->mem) );
+      st = common_memory_allocate( bufsize, 0, &(p_list->mem) );
 
       if( status_success( st ) )
 	{
@@ -146,6 +146,27 @@ t_status common_list_getCapacity( const t_list * p_list, t_size * p_size )
 }
 
 
+t_status common_list_hasCapacity( const t_list * p_list, t_size size )
+{
+  t_status	st;
+
+  status_reset( & st );
+
+  TRACE( "Required size: %lu", size )
+
+  if( p_list == NULL || size == 0 )
+    { status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st ); return st; }
+
+  if( is_list_not_allocated( p_list ) )	// Not allocated
+    { status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st ); return st; }
+
+  if( get_list_capacity( p_list ) < size )
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_notEnoughCapacity, &st );
+
+  return st;
+}
+
+
 t_status common_list_getRequiredCapacity( const t_list * p_list, t_size * p_size )
 {
   t_status	st;
@@ -173,18 +194,13 @@ t_status common_list_getData( const t_list * p_list, t_size item, void **  p_dat
   status_reset( & st );
 
   if( p_list == NULL || p_data == NULL )
-      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st );
-  else
-    {
-      if( is_list_not_allocated( p_list ) )	// Not allocated
-	  status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
-      else
-	{
-	  // Get a pointer to the raw memory for item number "item"
+    { status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_params, &st ); return st; }
 
-	  *p_data = get_list_item( p_list, item );
-	}
-    }
+  if( is_list_not_allocated( p_list ) )	// Not allocated
+      status_iset( OSAPI_MODULE_COMMON, __func__,osapi_common_error_canary, &st );
+  else
+      // Get a pointer to the raw memory for item number "item"
+      *p_data = get_list_item( p_list, item );
 
   return st;
 }

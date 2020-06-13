@@ -31,7 +31,7 @@
 
 
 /// Structure containing the C/POSIX file pointer/handler information
-struct osapi_fs_s_file_info
+struct osapi_fs_file_info_S
 {
   t_fs_ostate		state;			///< Current state
   bool			isBuffered;		///< Which open was used? Buffered or not?
@@ -40,7 +40,7 @@ struct osapi_fs_s_file_info
   t_size		block_size;		///< File block size for buffered operations
 };
 
-typedef struct osapi_fs_s_file_info		t_fs_fileInfo;
+typedef struct osapi_fs_file_info_S		t_fs_fileInfo;
 
 
 

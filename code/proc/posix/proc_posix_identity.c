@@ -58,7 +58,7 @@ t_status proc_id_get( t_pid * p_pid )
  status_reset( & st );
 
  if( p_pid == (t_pid) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      *p_pid = (t_pid) getpid();
@@ -77,7 +77,7 @@ t_status proc_id_getParent( t_pid pid, t_pid * p_pid )
  status_reset( & st );
 
  if( pid < 2 || p_pid == (t_pid) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      // If the target process is the current process, use a shortcut to get the parent PID
@@ -118,7 +118,7 @@ t_status proc_id_getSession( t_pid search_pid, t_pid * p_session_id )
  status_reset( & st );
 
  if( search_pid < (t_pid) 0 || p_session_id == (t_pid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      *p_session_id = getsid( search_pid );
@@ -143,7 +143,7 @@ t_status proc_id_getGroup( t_pid search_pid, t_gid * p_group_id )
  status_reset( & st );
 
  if( search_pid < (t_pid) 0 || p_group_id == (t_gid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( search_pid == 0 )
@@ -176,7 +176,7 @@ t_status proc_id_getUser( t_pid search_pid, t_gid * p_user_id )
  status_reset( & st );
 
  if( search_pid < (t_pid) 0 || p_user_id == (t_uid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      if( search_pid == 0 )
@@ -203,14 +203,14 @@ t_status proc_id_toString( t_pid pid, t_size size, t_char * p_string )
  status_reset( & st );
 
  if( pid <= 0 || size <= 0 || p_string == NULL )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      int n = snprintf( p_string, size, "%d", pid );
      if( n < 0 )	// Conversion error
          status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
      else 	// Value was truncated ?
-	 if( n >= size ) status_iset( OSAPI_MODULE_PROC, __func__, e_proc_conversion, &st );
+	 if( n >= size ) status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_conversion, &st );
    }
 
  return st;
@@ -224,14 +224,14 @@ t_status proc_id_fromString( t_char * p_string, t_pid * p_pid )
  status_reset( & st );
 
  if( p_string == NULL || p_pid == (t_pid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      errno = 0;    // To distinguish success/failure after call
      *p_pid = (t_pid) atol( p_string );
      if( errno != 0 )	status_eset( OSAPI_MODULE_PROC, __func__, errno, &st );
      else
-       if( *p_pid < 0 )	status_iset( OSAPI_MODULE_PROC, __func__, e_proc_pid, &st );
+       if( *p_pid < 0 )	status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_pid, &st );
    }
 
  return st;
@@ -245,7 +245,7 @@ t_status proc_id_copy( t_pid source, t_pid * p_target )
  status_reset( & st );
 
  if( source <= 0 || p_target == (t_pid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
      *p_target = source;
 
@@ -259,7 +259,7 @@ t_status proc_id_clear( t_pid * p_pid )
  status_reset( & st );
 
  if( p_pid == (t_pid *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
      *p_pid = 0;
 

@@ -32,13 +32,13 @@
 
 
 /// Structure that holds all file system element information
-struct osapi_fs_s_link
+struct osapi_fs_link_S
 {
   t_fs_elementInfo		element;	///< General element information
   t_fs_linkInfo			link;		///< Link element specific information
 };
 
-typedef struct osapi_fs_s_link			t_link;
+typedef struct osapi_fs_link_S			t_link;
 
 
 

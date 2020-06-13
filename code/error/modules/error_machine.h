@@ -21,11 +21,11 @@
 
 // Include own error definitions
 
-#define error_machine_X(a, b, c) a b,
-enum machine_X {
+#define osapi_error_machine_X(a, b, c) a b,
+enum osapi_error_machine_E {
 	  #include "error/mappings/table_machine.h"
 };
-#undef error_machine_X
+#undef osapi_error_machine_X
 
 
 #endif /* OSAPI_ERROR_MACHINE_H_ */

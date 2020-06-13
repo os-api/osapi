@@ -34,7 +34,7 @@
 // *****************************************************************************************
 
 /// Enumeration of the possible file open locations
-enum osapi_fs_e_file_position
+enum osapi_fs_file_position_E
 {
   osapi_fs_file_position_none		= SEEK_CUR,	///< No file position specified, current location to be used
   osapi_fs_file_position_set		= SEEK_SET,	///< No file position specified, current location to be used
@@ -42,16 +42,16 @@ enum osapi_fs_e_file_position
   osapi_fs_file_position_end		= SEEK_END  	///< Start operating at the end of file
 };
 
-typedef enum osapi_fs_e_file_position		t_file_location;
+typedef enum osapi_fs_file_position_E		t_file_location;
 
 /// Structure that holds all file system element information
-struct osapi_fs_s_file
+struct osapi_fs_file_S
 {
   t_element				element;	///< General element information
   t_fs_fileInfo				file;		///< File element specific information
 };
 
-typedef struct osapi_fs_s_file			t_file;
+typedef struct osapi_fs_file_S			t_file;
 
 
 

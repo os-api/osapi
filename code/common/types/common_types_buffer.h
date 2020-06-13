@@ -31,13 +31,13 @@
 /// Structure supporting a self describing memory/buffer
 /// The reasoning is that naked memory handling is more error prone and encapsulation of
 /// memory supported by a "buffer" type can provided more robust code.
-struct osapi_s_buffer
+struct osapi_buffer_S
 {
   t_size	size;			///< Current capacity usage, i.e. how many bytes are you using of the allocated capacity
   t_memory	mem;			///< Allocated memory
 };
 
-typedef struct osapi_s_buffer		t_buffer;
+typedef struct osapi_buffer_S		t_buffer;
 
 
 #endif /* OSAPI_COMMON_TYPES_BUFFER_H_ */

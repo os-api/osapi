@@ -30,6 +30,7 @@ code/general/library \
 code/io \
 code/io/posix \
 code/log/posix \
+code/machine/cpu \
 code/machine/linux \
 code/machine \
 code/machine/posix \

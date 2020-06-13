@@ -22,6 +22,7 @@ RM := rm -rf
 -include code/os/subdir.mk
 -include code/machine/posix/subdir.mk
 -include code/machine/linux/subdir.mk
+-include code/machine/cpu/subdir.mk
 -include code/machine/subdir.mk
 -include code/log/posix/subdir.mk
 -include code/io/posix/subdir.mk

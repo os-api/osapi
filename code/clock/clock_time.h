@@ -65,7 +65,7 @@ extern "C"
 /// @return Operation status
 t_status clock_time_make( int64_t seconds, uint64_t fraction, t_time_precision precision, t_time * tm );
 
-/// @brief Get the current time in seconds from the epoch
+/// @brief Get the current machine/real time in seconds from the system epoch
 /// @param [out] curtime - Current time
 /// @return Operation status
 t_status clock_time_get( t_time * curtime );
@@ -107,6 +107,8 @@ t_status clock_time_copy( const t_time * source, t_time * target	);
 /// @return Operation status
 t_status clock_time_equal( const t_time * t1, const t_time * t2, bool * result );
 
+// Time offset related functionality
+
 /// @brief Generate a time offset from components
 /// @param [in]  seconds	- Time in seconds from a certain origin
 /// @param [in]  fraction	- The fraction of a second
@@ -126,6 +128,19 @@ t_status clock_offset_copy( const t_time_offset * source, t_time_offset * target
 /// @param [out] result - The result time after applying an offset to a base time
 /// @return Precision time enum
 t_status clock_offset_apply	( t_time * base, t_time_offset * offset, t_time * result );
+
+
+// Virtual time related
+
+/// @brief Get the current virtual (monotonic) time in seconds
+/// @param [out] vtime - Current virtual time
+/// @return Operation status
+t_status clock_vtime_get( t_time * vtime );
+
+/// @brief Get the current monotonic time in the highest available resolution
+/// @param [out] vtime - Current highest precision time
+/// @return Operation status
+t_status clock_vtime_getPrecise( t_time * vtime );
 
 #pragma GCC visibility pop			// End of public interface
 

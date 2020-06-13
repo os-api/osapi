@@ -18,7 +18,7 @@
 
 // System headers
 #include <stdint.h>
-
+#include <stdbool.h>
 
 /// *****************************************************************************************
 ///
@@ -69,25 +69,15 @@ typedef int				t_protocol;
 typedef Byte				t_module;
 
 /// Defines a generic pair name/value structure
-struct s_optional_pair
+struct general_optional_pair_S
 {
   char *	name;	///< The name  part of the pair
   int		value;	///< The value part of the pair
 };
 
 /// The definition of a generic pair type
-typedef struct s_optional_pair	t_option;
+typedef struct general_optional_pair_S	t_option;
 
-// *****************************************************************************************
-//
-// Section: Macro definitions
-//
-// *****************************************************************************************
-
-/// @brief Set a byte to on
-#define	osapi_bit_on(  x )	(x=1)
-/// @brief Set a byte to off
-#define	osapi_bit_off( x )	(x=0)
 
 
 ///@}

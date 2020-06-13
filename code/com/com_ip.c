@@ -41,11 +41,11 @@ t_status com_ip_isV4( t_ip * p_ip, bool * p_result )
   status_reset( & st );
 
   if( p_ip == NULL || p_result == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       *p_result = false;
-      if( p_ip->protocol == e_protocol_ipv4 )	*p_result = true;
+      if( p_ip->protocol == osapi_protocol_ipv4 )	*p_result = true;
     }
 
   return st;
@@ -58,11 +58,11 @@ t_status com_ip_isV6( t_ip * p_ip, bool * p_result )
   status_reset( & st );
 
   if( p_ip == NULL || p_result == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       *p_result = false;
-      if( p_ip->protocol == e_protocol_ipv6 )	*p_result = true;
+      if( p_ip->protocol == osapi_protocol_ipv6 )	*p_result = true;
     }
 
   return st;
@@ -76,7 +76,7 @@ t_status com_ip_isBroadcast( t_ip * p_ip, bool * p_result )
   status_reset( & st );
 
   if( p_ip == NULL || p_result == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       *p_result = false;
@@ -94,7 +94,7 @@ t_status com_ip_isP2P( t_ip * p_ip, bool * p_result )
   status_reset( & st );
 
   if( p_ip == NULL || p_result == NULL )
-      status_iset( OSAPI_MODULE_COM, __func__, e_com_params, &st );
+      status_iset( OSAPI_MODULE_COM, __func__, osapi_com_error_params, &st );
   else
     {
       *p_result = false;

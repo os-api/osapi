@@ -35,15 +35,16 @@
 
 #ifdef OS_LINUX
 
-
-int osapi_verify_baseline( void )
+// Check also the Linux kernel? Is it relevant for the baseline or libc is enough?
+bool osapi_verify_baseline( void )
 {
-  char 		p[ 10 ];	// 10 bytes are more than enough
+  char 		p[ 11 ];	// 10 bytes are more than enough
   char 		*i, *s;
   int 		major = -1;
   int 		minor = -1;
 
   if( strncpy( p, gnu_get_libc_version(), 10 ) != p ) return false;
+  p[ 10 ] = '\0';	// Null terminated
 
   // Get major version from the initial portion of the string
   errno = 0;

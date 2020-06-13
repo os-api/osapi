@@ -21,18 +21,17 @@
 
 // *****************************************************************************************
 //
-// Section: Error Definitions
+// Section: Common Error Definitions
 //
 // *****************************************************************************************
 
-
-#define osapi_common_error_X(a, b, c) [a]=c,
+#define osapi_error_common_X(a, b, c) [a]=c,
 
 static const char * osapi_common_errors[] =
 {
   #include "error/mappings/table_common.h"
 };
 
-#undef osapi_common_error_X
+#undef osapi_error_common_X
 
 #endif /* OSAPI_ERROR_PRIV_COMMON_H_ */

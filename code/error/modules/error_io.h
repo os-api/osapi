@@ -21,10 +21,10 @@
 
 // Include own error definitions
 
-#define error_io_X(a, b, c) a b,
-enum io_X {
+#define osapi_error_io_X(a, b, c) a b,
+enum osapi_error_io_E {
 	  #include "error/mappings/table_io.h"
 };
-#undef error_io_X
+#undef osapi_error_io_X
 
 #endif /* OSAPI_ERROR_IO_H_ */

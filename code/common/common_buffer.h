@@ -37,7 +37,6 @@
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of internal interface
 
 // Buffer related
 t_status	common_buffer_allocate		( t_size bufsize, t_buffer * p_buffer							);
@@ -55,7 +54,6 @@ t_status	common_buffer_copyFrom		( const t_buffer * p_source, t_size targetSize,
 t_status	common_buffer_copyTo		( const void     * p_source, t_size sourceSize, t_buffer * p_target			);
 
 
-#pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

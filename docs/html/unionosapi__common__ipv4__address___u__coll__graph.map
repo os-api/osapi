@@ -1,0 +1,4 @@
+<map id="osapi_common_ipv4_address_U" name="osapi_common_ipv4_address_U">
+<area shape="rect" id="node1" title="Structure to support either raw (bunch of bytes) or structured IPv4 addresses." alt="" coords="5,95,236,121"/>
+<area shape="rect" id="node2" href="$structosapi__common__ipv4__address___s.html" title="Structure for a structured IPv4 address." alt="" coords="6,5,235,32"/>
+</map>

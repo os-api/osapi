@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_os_X(a, b, c) [a]=c,
+#define osapi_error_os_X(a, b, c) [a]=c,
 
-static const char * os_errors[] =
+static const char * osapi_os_errors[] =
 {
   #include "error/mappings/table_os.h"
 };
 
-#undef error_os_X
+#undef osapi_error_os_X
 
 #endif /* OSAPI_ERROR_PRIV_OS_H_ */

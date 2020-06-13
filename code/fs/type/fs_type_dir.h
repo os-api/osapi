@@ -28,13 +28,13 @@
 
 
 /// Structure that holds a directory system element information
-struct osapi_fs_s_dir
+struct osapi_fs_dir_S
 {
   t_element			element;	///< General element information
   t_fs_directoryInfo		dir;		///< Directory element specific information
 };
 
-typedef struct osapi_fs_s_dir			t_dir;
+typedef struct osapi_fs_dir_S			t_dir;
 
 
 

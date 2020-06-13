@@ -39,8 +39,8 @@
 //
 // *****************************************************************************************
 
-
-t_status common_rawMemory_allocate( t_size size, void ** p_mem )
+// The memory type is not currently used, but it's a placeholder to provide support for a better memory management in the future
+t_status common_rawMemory_allocate( t_size size, Byte type, void ** p_mem )
 {
   t_status	st;
 
@@ -106,8 +106,8 @@ t_status common_rawMemory_deallocate( void * p_mem )
   return st;
 }
 
-
-t_status common_memory_allocate( t_size size, t_memory * p_mem )
+// The memory type is not currently used, but it's a placeholder to provide support for a better memory management in the future
+t_status common_memory_allocate( t_size size, Byte type, t_memory * p_mem )
 {
   t_status	st;
 
@@ -288,7 +288,7 @@ t_status common_memory_copy( const t_memory * p_source, t_memory * p_target )
   if( is_memory_allocated( p_target ) && p_target->data != NULL )
       common_memory_deallocate( p_target );	// Ignore return status
 
-  st = common_memory_allocate( p_source->capacity, p_target );
+  st = common_memory_allocate( p_source->capacity, p_source->type, p_target );
 
   if( status_success( st ) )
     {

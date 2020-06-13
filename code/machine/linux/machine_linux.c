@@ -41,9 +41,20 @@ extern int setdomainname(const char *name, size_t len	);
 #include "error/modules/error_machine.h"
 #include "status/status.h"
 
+
 // Own declarations
 #include "machine/machine.h"
-#include <machine/linux/machine_linux.h>
+#include "machine/linux/machine_linux.h"
+
+
+// *****************************************************************************************
+//
+// Section: Internal Function Declarations
+//
+// *****************************************************************************************
+
+static t_status copy_ip			( struct sockaddr * saddress, void * address	);
+static t_status fill_ip_structure	( struct ifaddrs * address, t_ip * ip		);
 
 
 // *****************************************************************************************
@@ -51,6 +62,11 @@ extern int setdomainname(const char *name, size_t len	);
 // Section: Function definition
 //
 // *****************************************************************************************
+
+t_status machine_module_supported( void )
+{
+  RETURN_STATUS_SUCCESS;
+}
 
 
 static t_status copy_ip( struct sockaddr * saddress, void * taddress )
@@ -60,7 +76,7 @@ static t_status copy_ip( struct sockaddr * saddress, void * taddress )
   status_reset( & st );
 
   if( saddress == NULL || taddress == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       if( osapi_is_ipv4_family( saddress->sa_family ) )
@@ -84,7 +100,7 @@ static t_status fill_ip_structure( struct ifaddrs * p_address, t_ip * p_ip )
   status_reset( & st );
 
   if( p_address == NULL || p_ip == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       strncpy( p_ip->interface_name, p_address->ifa_name, OSAPI_INTERFACE_MAX_NAME_SIZE -1 );
@@ -134,7 +150,7 @@ t_status machine_host_setName( t_char * hostname )
   status_reset( & st );
 
   if( hostname == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;
@@ -156,7 +172,7 @@ t_status machine_domain_getName( t_size maxlen, t_char * hostname )
   status_reset( & st );
 
   if( hostname == NULL || maxlen <= 0 )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;
@@ -175,7 +191,7 @@ t_status machine_domain_setName( t_char * hostname )
   status_reset( & st );
 
   if( hostname == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;
@@ -199,11 +215,11 @@ t_status machine_ip_getNumber( t_protocol selector, t_size * number )
   status_reset( & st );
   *number = 0;
 
-  if( selector != e_protocol_ipv4 && selector != e_protocol_ipv6 )
-      selector = e_protocol_ip;
+  if( selector != osapi_protocol_ipv4 && selector != osapi_protocol_ipv6 )
+      selector = osapi_protocol_ip;
 
   if( number == NULL )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;
@@ -245,7 +261,7 @@ t_status machine_ip_getList( t_protocol selector, t_size number, t_ip * p_list )
   status_reset( & st );
 
   if( p_list == NULL || ! osapi_is_ip_valid_selector( selector ) )
-      status_iset( OSAPI_MODULE_MACHINE, __func__, e_machine_params, &st );
+      status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_params, &st );
   else
     {
       errno = 0;

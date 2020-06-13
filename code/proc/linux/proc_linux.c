@@ -141,7 +141,7 @@ t_status proc_info_get( t_pid pid, t_proc_info * p_pinfo )
   status_reset( & st );
 
   if( p_pinfo == (t_proc_info *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
       if( pid > 0 ) st = parse_linux_proc_stat_file( pid, p_pinfo );
 
@@ -163,11 +163,11 @@ t_status posix_get_parent_pid( t_pid childPid, t_pid * p_parentPid )
 
   if( childPid < 2 || p_parentPid == (t_pid *) 0 )
     {
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
       return st;
     }
 
-  status_iset( OSAPI_MODULE_PROC, __func__, e_proc_idNotFound, &st );
+  status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_idNotFound, &st );
 
   p_dir = opendir( OSAPI_FS_PROC_NAME );
 
@@ -206,7 +206,7 @@ t_status proc_instance_getState( t_pid pid, int * p_state )
   status_reset( & st );
 
   if( pid < 1 || p_state == (int *) 0 )
-      status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+      status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
   else
     {
       st = parse_linux_proc_stat_file( pid, &pinfo );
@@ -254,7 +254,7 @@ t_status proc_status_get( t_pid target_pid, t_pid * found_pid, t_proc_status * p
  status_reset( & st );
 
  if( found_pid == (t_pid *) 0 || p_status == (t_proc_status *) 0 )
-     status_iset( OSAPI_MODULE_PROC, __func__, e_proc_params, &st );
+     status_iset( OSAPI_MODULE_PROC, __func__, osapi_proc_error_params, &st );
  else
    {
      *found_pid = waitpid( target_pid, &process_status, WNOHANG | WUNTRACED | WCONTINUED );

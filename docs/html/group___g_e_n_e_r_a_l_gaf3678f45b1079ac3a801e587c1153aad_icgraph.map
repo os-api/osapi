@@ -1,0 +1,4 @@
+<map id="osapi_module_get" name="osapi_module_get">
+<area shape="rect" id="node1" title="Get the module string." alt="" coords="200,5,341,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gae986d7e1130de5edc7ec4e5ba5d8fefe" title="Get the module name that corresponds to the provided status information." alt="" coords="5,5,152,32"/>
+</map>

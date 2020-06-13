@@ -29,13 +29,13 @@
 // *****************************************************************************************
 
 /// Structure that defines a file system permissions
-struct osapi_fs_s_element_permissions
+struct osapi_fs_element_permissions_S
 {
   mode_t		mode;			///< POSIX encoding of an element permissions/type
   // ACL also required
 };
 
-typedef struct osapi_fs_s_element_permissions	t_fs_perm;
+typedef struct osapi_fs_element_permissions_S	t_fs_perm;
 
 
 // *****************************************************************************************

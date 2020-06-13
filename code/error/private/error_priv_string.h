@@ -25,13 +25,13 @@
 //
 // *****************************************************************************************
 
-#define error_string_X(a, b, c) [a]=c,
+#define osapi_error_string_X(a, b, c) [a]=c,
 
-static const char * string_errors[] =
+static const char * osapi_string_errors[] =
 {
   #include "error/mappings/table_string.h"
 };
 
-#undef error_string_X
+#undef osapi_error_string_X
 
 #endif /* OSAPI_ERROR_PRIV_STRING_H_ */

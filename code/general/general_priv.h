@@ -14,7 +14,7 @@
 // Release string
 #define osapi_release_X(a, b, c) c,
 
-static const char * osapi_release[] =
+static const char * osapi_release_string[] =
 {
   #include "general/mappings/table_release.h"
 };
@@ -25,7 +25,7 @@ static const char * osapi_release[] =
 // Version string
 #define osapi_version_X(a, b, c) c,
 
-static const char * osapi_version[] =
+static const char * osapi_version_string[] =
 {
   #include "general/mappings/table_version.h"
 };
@@ -34,20 +34,20 @@ static const char * osapi_version[] =
 
 
 // Version stability string
-#define osapi_quality_X(a, b, c) [a]=c,
+#define osapi_version_quality_X(a, b, c) [a]=c,
 
-static const char * osapi_version_quality[] =
+static const char * osapi_version_quality_string[] =
 {
   #include "general/mappings/table_version_quality.h"
 };
 
-#undef osapi_quality_X
+#undef osapi_version_quality_X
 
 
 // Version stability string
 #define osapi_protocol_X(a, b, c) [a]=c,
 
-static const char * osapi_protocol[] =
+static const char * osapi_protocol_string[] =
 {
   #include "general/mappings/table_protocol.h"
 };
@@ -58,7 +58,7 @@ static const char * osapi_protocol[] =
 // Module strings
 #define osapi_module_X(a, b, c) [a]=c,
 
-static const char * osapi_module_name[] = {
+static const char * osapi_module_name_string[] = {
   #include "general/mappings/table_modules.h"
 };
 

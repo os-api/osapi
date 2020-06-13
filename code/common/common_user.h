@@ -38,8 +38,6 @@
 //
 // *****************************************************************************************
 
-#pragma GCC visibility push(default)		// Start of internal interface
-
 
 // Functions for Users
 t_status	get_userID			( t_uid * p_id		  								);
@@ -54,8 +52,6 @@ t_status	uidTo_string			( t_uid uid, t_size strSize, char * p_string						);
 t_status	uid_compare			( t_uid uid1, t_uid uid2, bool * p_result						);
 t_status	uid_copy			( t_uid source, t_uid * p_target							);
 
-
-#pragma GCC visibility pop			// End of internal interface
 
 // End of header with C++ declaration
 #ifdef __cplusplus

@@ -22,6 +22,7 @@ RM := rm -rf
 -include code/os/subdir.mk
 -include code/machine/posix/subdir.mk
 -include code/machine/linux/subdir.mk
+-include code/machine/cpu/subdir.mk
 -include code/machine/subdir.mk
 -include code/log/posix/subdir.mk
 -include code/io/posix/subdir.mk
@@ -60,7 +61,7 @@ all: libosapi.so
 libosapi.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc -L/usr/lib -shared -p -pg -ftest-coverage -fprofile-arcs -o "libosapi.so" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc -L/usr/lib -shared -pg -o "libosapi.so" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

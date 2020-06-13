@@ -1,3 +1,4 @@
 <map id="clock_time_make" name="clock_time_make">
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type. " alt="" coords="177,5,272,32"/>
+<area shape="rect" id="node1" title="Set the time structure with the supplied data." alt="" coords="5,5,141,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="189,5,292,32"/>
 </map>
