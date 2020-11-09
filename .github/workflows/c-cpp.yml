@@ -1,0 +1,19 @@
+name: C/C++ CI
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: [ubuntu-latest, x64, gpu]
+
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: make
+      env:
+          OSAPI_DIR: ${{GITHUB_WORKSPACE}}
+      run: cd ${{env.OSAPI_DIR}}/Release; make
