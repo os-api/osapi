@@ -1,18 +1,26 @@
-name: C/C++ CI
+name: Production
 
 on:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
+  push:
+    branches:
+      - main
   pull_request:
     branches:
-    - main
+      - main
+  # Also trigger on page_build, as well as release created events
+  page_build:
+  release:
+    types: # This configuration does not affect the page_build event above
+      - created
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: [ubuntu-latest, x64, gpu]
-
     steps:
     - uses: actions/checkout@v2
-      
     - name: make
       env:
           OSAPI_DIR: ${{GITHUB_WORKSPACE}}
