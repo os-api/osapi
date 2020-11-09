@@ -23,5 +23,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: make
       env:
-          OSAPI_DIR: ${{GITHUB_WORKSPACE}}
+          OSAPI_DIR: ${{env.GITHUB_WORKSPACE}}
       run: cd ${{env.OSAPI_DIR}}/Release; make
