@@ -25,6 +25,6 @@ jobs:
       env:
           OSAPI_DIR: ${{env.GITHUB_WORKSPACE}}
       run: make
-      working-directory: ${{env.OSAPI_DIR}}/Release
+      working-directory: ${{env.GITHUB_WORKSPACE}}/Release
       shell: bash
 
