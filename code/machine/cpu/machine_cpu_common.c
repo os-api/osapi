@@ -144,7 +144,7 @@ t_status machine_cpuFeature_getAll( t_cpu_feature_list * p_list )
 
  int vendor_id;
  st = machine_cpuVendor_getIDFromName( vendor, &vendor_id );
- if( status_failure( st) ) return st;
+ if( status_failure( st ) ) return st;
 
  // Forward request to specific CPU vendor API
  switch( vendor_id )

@@ -44,7 +44,7 @@
 // C definitions
 // *****************************************************************************************
 
-#define OSAPI_LANGUAGE			OSAPI_LANGUAGE_C
+#define OSAPI_LANGUAGE				OSAPI_LANGUAGE_C
 #define OSAPI_LANGUAGE_VERSION		__STDC_VERSION__
 
 #include "general/language/general_language_c.h"

@@ -49,7 +49,7 @@ extern "C" {
 
 /// @brief Reset the status type
 /// @param [out] status - status type
-void status_reset( t_status * status );
+void status_instance_clear( t_status * status );
 
 /// @brief Set the status type with the current status information using an error code
 /// @param [in] module - Set the status module
@@ -57,7 +57,7 @@ void status_reset( t_status * status );
 /// @param [in] funcname - Name of the function for which status is being provided
 /// @param [in] error - Error reported
 /// @param [out] status - status type
-void status_set( t_module module, t_status_type type , t_status_funcname funcname, t_error error, t_status * status );
+void status_instance_set( t_module module, t_status_type type , t_status_funcname funcname, t_error error, t_status * status );
 
 /// @brief Set the status type with the current status information using an error string
 /// @param [in] module - Set the status module
@@ -65,7 +65,7 @@ void status_set( t_module module, t_status_type type , t_status_funcname funcnam
 /// @param [in] funcname - Name of the function for which status is being provided
 /// @param [in] errorString - String with the error information
 /// @param [out] status - status type
-void status_setString( t_module module, t_status_type type, t_status_funcname funcname, t_status_string errorString, t_status * status );
+void status_instance_setString( t_module module, t_status_type type, t_status_funcname funcname, t_status_string errorString, t_status * status );
 
 /// @brief Write a message with the status information to Standard output
 /// @param [in] status - Status information
