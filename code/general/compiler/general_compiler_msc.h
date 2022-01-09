@@ -78,8 +78,7 @@
 //
 // *****************************************************************************************
 
-#define OSAPI_ATTRIBUTE_NOINLINE		__declspec(noinline)
-#define OSAPI_ATTRIBUTE_INLINE			__inline
+#define OSAPI_ATTRIBUTE_NOINLINE			__declspec(noinline)
 #define OSAPI_ATTRIBUTE_ALWAYS_INLINE		__forceinline
 
 

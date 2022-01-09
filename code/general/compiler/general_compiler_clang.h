@@ -97,10 +97,9 @@
 // Section: Generic attributes that must present in all C compiler definitions
 //
 // *****************************************************************************************
-// Needs to be verified...
-#define OSAPI_ATTRIBUTE_NOINLINE		__attribute__((noinline))
-#define OSAPI_ATTRIBUTE_INLINE			__attribute__((noinline))
-#define OSAPI_ATTRIBUTE_ALWAYS_INLINE		__attribute__((noinline))
+// inline is already part of the C11 Standard
+#define OSAPI_ATTRIBUTE_NOINLINE			__attribute__((noinline))
+#define OSAPI_ATTRIBUTE_ALWAYS_INLINE		__attribute__((always_inline))
 
 
 // *****************************************************************************************
