@@ -78,11 +78,13 @@ t_status com_semaphore_open( key_t key, int * semid );
 
 /// @brief Locks a given semaphore
 /// @param [in] semid - Semaphore ID
+/// @param [in] wait  - Block until semaphore lock is acquired
 /// @return Operation status
 t_status com_semaphore_lock( int semid, bool wait );
 
 /// @brief Unlocks a given semaphore
 /// @param [in] semid - Semaphore ID
+/// @param [in] wait  - Block until semaphore lock is released
 /// @return Operation status
 t_status com_semaphore_unlock( int semid, bool wait );
 

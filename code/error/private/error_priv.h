@@ -40,6 +40,8 @@
 #include "error/private/error_priv_util.h"
 #include "error/private/error_priv_com.h"
 #include "error/private/error_priv_log.h"
+#include "error/private/error_priv_parallel.h"
+
 
 /// *****************************************************************************************
 ///
@@ -75,19 +77,20 @@ struct osapi_error_S
 
 // The following structure must match exactly the modules defined in general/mappings/table_modules.h
 static const struct osapi_error_S osapi_error_strings[ OSAPI_MODULE_MAX ] = {
-	    { 1,			osapi_error_none 	},
-	    { osapi_common_error_max, 	osapi_common_errors  	},
-	    { osapi_string_error_max,	osapi_string_errors  	},
-	    { osapi_os_error_max,	osapi_os_errors		},
-	    { osapi_machine_error_max, 	osapi_machine_errors 	},
-	    { osapi_proc_error_max, 	osapi_proc_errors	},
-	    { osapi_clock_error_max,	osapi_clock_errors	},
-	    { osapi_sec_error_max,	osapi_sec_errors	},
-	    { osapi_io_error_max,	osapi_io_errors		},
-	    { osapi_log_error_max,	osapi_log_errors	},
-	    { osapi_fs_error_max,	osapi_fs_errors		},
-	    { osapi_com_error_max,	osapi_com_errors	},
-	    { osapi_util_error_max,	osapi_util_errors	},
+	    { 1,							osapi_error_none		},
+	    { osapi_common_error_max, 		osapi_common_errors  	},
+	    { osapi_string_error_max,		osapi_string_errors  	},
+	    { osapi_os_error_max,			osapi_os_errors			},
+	    { osapi_machine_error_max, 		osapi_machine_errors 	},
+	    { osapi_proc_error_max, 		osapi_proc_errors		},
+	    { osapi_clock_error_max,		osapi_clock_errors		},
+	    { osapi_sec_error_max,			osapi_sec_errors		},
+	    { osapi_io_error_max,			osapi_io_errors			},
+	    { osapi_log_error_max,			osapi_log_errors		},
+	    { osapi_fs_error_max,			osapi_fs_errors			},
+	    { osapi_com_error_max,			osapi_com_errors		},
+	    { osapi_util_error_max,			osapi_util_errors		},
+		{ osapi_parallel_error_max,		osapi_parallel_errors	},
 };
 
 

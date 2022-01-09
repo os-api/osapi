@@ -37,6 +37,7 @@ code/machine/posix \
 code/os/linux \
 code/os \
 code/os/posix \
+code/parallel \
 code/proc/linux \
 code/proc/posix \
 code/proc \

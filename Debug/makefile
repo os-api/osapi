@@ -17,6 +17,7 @@ RM := rm -rf
 -include code/proc/posix/subdir.mk
 -include code/proc/linux/subdir.mk
 -include code/proc/subdir.mk
+-include code/parallel/subdir.mk
 -include code/os/posix/subdir.mk
 -include code/os/linux/subdir.mk
 -include code/os/subdir.mk

@@ -52,7 +52,7 @@ extern "C" {
 #pragma GCC visibility push(default)		// Start of public interface
 
 /// @brief Is the string module supported in the platform
-/// return Operation status
+/// @return Operation status
 t_status string_module_supported( void );
 
 #pragma GCC visibility pop			// End of public interface

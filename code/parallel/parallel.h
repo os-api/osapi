@@ -3,12 +3,12 @@
 // File description:
 //
 // Author:	Joao Costa
-// Purpose:	Provide trace API
+// Purpose:	Provide Parallel module API
 //
 // *****************************************************************************************
 
-#ifndef OSAPI_TRACE_H_
-#define OSAPI_TRACE_H_
+#ifndef OSAPI_PARALLEL_H_
+#define OSAPI_PARALLEL_H_
 
 // Make sure that header is easily imported from c++
 #ifdef __cplusplus
@@ -22,53 +22,47 @@ extern "C" {
 //
 // *****************************************************************************************
 
-// Standard C headers
-#include <stdint.h>
-
 // Generic OSAPI includes
+#include "general/general.h"
+#include "status/status_types.h"
+//#include "common/types/common_type_time.h"
 
 // Own declarations
-#include "status/status_types.h"
 
 
 /// *****************************************************************************************
 ///
 ///@addtogroup OSAPI
 ///@{
-///@addtogroup STATUS
-/// @brief The OSAPI status module
+///@addtogroup PARALLEL
+/// @brief The Parallel interface module
 ///@{
 ///
 /// *****************************************************************************************
 
+
 // *****************************************************************************************
 //
-// Section: Status module API
+// Section: OS module API
 //
 // *****************************************************************************************
 
+#pragma GCC visibility push(default)		// Start of public interface
 
-/// @brief OSAPI C Trace function - This function sends the output to standard error
-/// @param [in] func - Name of function
-/// @param [in] sep  - Separator between function and line number
-/// @param [in] line - Line number
-/// @param [in] fmt  - printf format for the remaining arguments
-void osapi_trace( const char * func, const char * sep, uint64_t line, const char * fmt, ... );	// This function will result in warnings from doxygen due to the ... param
+/// @brief Declares if the module is supported on the current implementation
+/// @return SUCCESS or FAILURE
+t_status parallel_module_supported( void );
 
 
-/// @brief OSAPI C General Trace function - The function sends the output to standard error
-/// @param [in] func 	- Name of function
-/// @param [in] line 	- Line number
-/// @param [in] st  	- An operation status
-void osapi_status_trace( const char * func, uint64_t line, t_status st );
+#pragma GCC visibility pop			// End of public interface
 
 ///@}
 ///@}
-
 
 // End of header with C++ declaration
 #ifdef __cplusplus
 }
 #endif
 
-#endif /* OSAPI_TRACE_H_ */
+
+#endif // OSAPI_PARALLEL_H_

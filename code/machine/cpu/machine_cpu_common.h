@@ -44,8 +44,16 @@
 //
 // *****************************************************************************************
 
-
+/// @brief Obtain the AMD CPU available features/functions
+/// @param [in] featLevel - The maximum feature level supported by the CPU
+/// @param [out] p_list   - List of supported CPU features
+/// @return Operation status
 t_status internal_cpu_amd_getFeatures	( uint32_t featLevel, t_cpu_feature_list * p_list );
+
+/// @brief Obtain the Intel CPU available features/functions
+/// @param [in] featLevel - The maximum feature level supported by the CPU
+/// @param [out] p_list   - List of supported CPU features
+/// @return Operation status
 t_status internal_cpu_intel_getFeatures	( uint32_t featLevel, t_cpu_feature_list * p_list );
 
 ///@}

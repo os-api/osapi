@@ -45,7 +45,7 @@ t_status clock_module_supported( void )
   t_status st;
 
   // RETURN_STATUS_SUCCESS;
-  status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_support, &st);
+  status_iset( OSAPI_MODULE_CLOCK, __func__, osapi_clock_error_support, &st );
 
   return st;
 }
