@@ -296,6 +296,26 @@ t_status machine_ip_getList( t_protocol selector, t_size number, t_ip * p_list )
 }
 
 
+t_status machine_device_getNumber( t_size * p_number )
+{
+  t_status st;
+
+  // Unsupported for now
+  status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_support, &st );
+
+  return st;
+}
+
+
+t_status machine_device_getList( t_list * p_list )
+{
+  t_status st;
+
+  // Unsupported for now
+  status_iset( OSAPI_MODULE_MACHINE, __func__, osapi_machine_error_support, &st );
+
+  return st;
+}
 
 
 
