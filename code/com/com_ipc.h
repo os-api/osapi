@@ -21,6 +21,9 @@ extern "C" {
 //
 // *****************************************************************************************
 
+// Import Standard C headers
+#include <stdbool.h>
+
 // Generic OSAPI includes
 #include "general/general.h"
 #include "status/status_types.h"
@@ -76,12 +79,12 @@ t_status com_semaphore_open( key_t key, int * semid );
 /// @brief Locks a given semaphore
 /// @param [in] semid - Semaphore ID
 /// @return Operation status
-t_status com_semaphore_lock( int semid );
+t_status com_semaphore_lock( int semid, bool wait );
 
 /// @brief Unlocks a given semaphore
 /// @param [in] semid - Semaphore ID
 /// @return Operation status
-t_status com_semaphore_unlock( int semid );
+t_status com_semaphore_unlock( int semid, bool wait );
 
 /// @brief Obtains the semaphore value that corresponds to the given ID
 /// @param [in] semid - Semaphore ID
