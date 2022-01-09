@@ -1,5 +1,5 @@
 <map id="error_string_get" name="error_string_get">
 <area shape="rect" id="node1" title="Get the error string for an OSAPI module and error number." alt="" coords="401,5,527,32"/>
 <area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4" title="Get the error message that corresponds to the provided status information." alt="" coords="197,5,353,32"/>
-<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291" title="OSAPI C Trace function The functions sends the output to standard error." alt="" coords="5,5,149,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291" title="OSAPI C General Trace function &#45; The function sends the output to standard error." alt="" coords="5,5,149,32"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="status_message_print" name="status_message_print">
+<area shape="rect" id="node1" title="Write a message with the status information to Standard output." alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gac442b6fb2467970ffa6e9d1d5e2dc0f5" title="Reset the status type." alt="" coords="219,5,381,32"/>
+</map>

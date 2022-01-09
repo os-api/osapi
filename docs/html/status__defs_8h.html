@@ -72,15 +72,17 @@ $(document).ready(function(){initNavTree('status__defs_8h.html',''); initResizab
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
 <code>#include &quot;error/error_types.h&quot;</code><br />
+<code>#include &quot;<a class="el" href="status__macros_8h_source.html">status/status_macros.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for status_defs.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="status__defs_8h__incl.png" border="0" usemap="#code_2status_2status__defs_8h" alt=""/></div>
 <map name="code_2status_2status__defs_8h" id="code_2status_2status__defs_8h">
-<area shape="rect" title="File providing definitions for the status module." alt="" coords="44,5,185,47"/>
-<area shape="rect" title=" " alt="" coords="5,95,88,121"/>
-<area shape="rect" href="error__types_8h_source.html" title=" " alt="" coords="113,95,255,121"/>
-<area shape="rect" title=" " alt="" coords="150,169,218,196"/>
+<area shape="rect" title="File providing definitions for the status module." alt="" coords="45,5,187,47"/>
+<area shape="rect" title=" " alt="" coords="5,169,88,196"/>
+<area shape="rect" href="error__types_8h_source.html" title=" " alt="" coords="141,169,283,196"/>
+<area shape="rect" href="status__macros_8h.html" title="File providing public definitions for the status module." alt="" coords="29,95,203,121"/>
+<area shape="rect" title=" " alt="" coords="178,244,246,271"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -103,38 +105,16 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#abcee5afe14a53976efc4979f4a44fdd6">OSAPI_STATUS_STRING_SIZE</a>&#160;&#160;&#160;101</td></tr>
 <tr class="memdesc:abcee5afe14a53976efc4979f4a44fdd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximum size of the error string The t_status type supports either error code or an error string. This last type, the error string, is limited in size to the this value. <br /></td></tr>
 <tr class="separator:abcee5afe14a53976efc4979f4a44fdd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad2e71e1e20131e4a8404742c5df4b0d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#ad2e71e1e20131e4a8404742c5df4b0d6">status_success</a>(x)&#160;&#160;&#160;( x.code == 0 )</td></tr>
-<tr class="memdesc:ad2e71e1e20131e4a8404742c5df4b0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the operation that returned x was successful.  <a href="status__defs_8h.html#ad2e71e1e20131e4a8404742c5df4b0d6">More...</a><br /></td></tr>
-<tr class="separator:ad2e71e1e20131e4a8404742c5df4b0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a15b01f063b127de8001c8d37d7025923"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a15b01f063b127de8001c8d37d7025923">status_failure</a>(x)&#160;&#160;&#160;( x.code != 0 )</td></tr>
-<tr class="memdesc:a15b01f063b127de8001c8d37d7025923"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the operation that returned x failed.  <a href="status__defs_8h.html#a15b01f063b127de8001c8d37d7025923">More...</a><br /></td></tr>
-<tr class="separator:a15b01f063b127de8001c8d37d7025923"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a925cb09d30445ac088cbc175a08cb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a3a925cb09d30445ac088cbc175a08cb5">status_error</a>(s,  e)&#160;&#160;&#160;( s.code == e )</td></tr>
-<tr class="memdesc:a3a925cb09d30445ac088cbc175a08cb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Match a given error.  <a href="status__defs_8h.html#a3a925cb09d30445ac088cbc175a08cb5">More...</a><br /></td></tr>
-<tr class="separator:a3a925cb09d30445ac088cbc175a08cb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a038ffc69d3e7f6a5beb9ea394d59c2da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a038ffc69d3e7f6a5beb9ea394d59c2da">status_true</a>( x)&#160;&#160;&#160;( <a class="el" href="status__defs_8h.html#a15b01f063b127de8001c8d37d7025923">status_failure</a>( x ) ? 0 : 1 )</td></tr>
-<tr class="memdesc:a038ffc69d3e7f6a5beb9ea394d59c2da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the status result of the operation is true.  <a href="status__defs_8h.html#a038ffc69d3e7f6a5beb9ea394d59c2da">More...</a><br /></td></tr>
-<tr class="separator:a038ffc69d3e7f6a5beb9ea394d59c2da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8ca18eaf3a89a7d6c210f30dde2fa08"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#ac8ca18eaf3a89a7d6c210f30dde2fa08">status_false</a>(x)&#160;&#160;&#160;( <a class="el" href="status__defs_8h.html#ad2e71e1e20131e4a8404742c5df4b0d6">status_success</a>( x ) ? 1 : 0 )</td></tr>
-<tr class="memdesc:ac8ca18eaf3a89a7d6c210f30dde2fa08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if the status result of the operation is true.  <a href="status__defs_8h.html#ac8ca18eaf3a89a7d6c210f30dde2fa08">More...</a><br /></td></tr>
-<tr class="separator:ac8ca18eaf3a89a7d6c210f30dde2fa08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae9bc13c45344daac3fe4339e1f4526db"><td class="memItemLeft" align="right" valign="top"><a id="ae9bc13c45344daac3fe4339e1f4526db"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#ae9bc13c45344daac3fe4339e1f4526db">status_result</a>(x)&#160;&#160;&#160;( x.code == 0 ? true : false )</td></tr>
-<tr class="memdesc:ae9bc13c45344daac3fe4339e1f4526db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the operation status result: success==true/failure==false. <br /></td></tr>
-<tr class="separator:ae9bc13c45344daac3fe4339e1f4526db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad73750d233b4264dc0c88363dd8a99"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#afad73750d233b4264dc0c88363dd8a99">status_unsupported</a>(s)&#160;&#160;&#160;( s.code == OSAPI_ERROR_SUPPORT )</td></tr>
-<tr class="memdesc:afad73750d233b4264dc0c88363dd8a99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find if a module or facility is supported.  <a href="status__defs_8h.html#afad73750d233b4264dc0c88363dd8a99">More...</a><br /></td></tr>
-<tr class="separator:afad73750d233b4264dc0c88363dd8a99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a523cf8da907615d17eaf954a8f2f1f78"><td class="memItemLeft" align="right" valign="top"><a id="a523cf8da907615d17eaf954a8f2f1f78"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a523cf8da907615d17eaf954a8f2f1f78">RETURN_STATUS_SUCCESS</a>&#160;&#160;&#160;{ <a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a> st; <a class="el" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc">status_reset</a>( &amp;st ); return st; }</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a523cf8da907615d17eaf954a8f2f1f78">RETURN_STATUS_SUCCESS</a>&#160;&#160;&#160;{ <a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a> st; st.code = 0; return st; }</td></tr>
 <tr class="memdesc:a523cf8da907615d17eaf954a8f2f1f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">Short notation to set a status type with a default value of success. <br /></td></tr>
 <tr class="separator:a523cf8da907615d17eaf954a8f2f1f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a65138d3ccd51fe3716f91c0c4e421b7e"><td class="memItemLeft" align="right" valign="top"><a id="a65138d3ccd51fe3716f91c0c4e421b7e"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a65138d3ccd51fe3716f91c0c4e421b7e">status_iset</a>(m,  f,  e,  r)&#160;&#160;&#160;<a class="el" href="group___s_t_a_t_u_s.html#ga31cdba26c01a1735a1727e3c59010ec7">status_set</a>( m, <a class="el" href="status__defs_8h.html#a82842307f70d50e4789b932745aaf23dab176b813248afec71639cc83830eca8e">osapi_status_library_osapi</a>, f, e, r )</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#a65138d3ccd51fe3716f91c0c4e421b7e">status_iset</a>(m,  f,  e,  r)&#160;&#160;&#160;<a class="el" href="status__macros_8h.html#a8bf86669252f67c0b9adee9f3e9758cd">status_set</a>( m, <a class="el" href="status__defs_8h.html#a82842307f70d50e4789b932745aaf23dab176b813248afec71639cc83830eca8e">osapi_status_library_osapi</a>, f, e, r )</td></tr>
 <tr class="memdesc:a65138d3ccd51fe3716f91c0c4e421b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status type with OSAPI library information. <br /></td></tr>
 <tr class="separator:a65138d3ccd51fe3716f91c0c4e421b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea5600993ad3666b9867c99605af7c1"><td class="memItemLeft" align="right" valign="top"><a id="aaea5600993ad3666b9867c99605af7c1"></a>
-#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#aaea5600993ad3666b9867c99605af7c1">status_eset</a>(m,  f,  e,  r)&#160;&#160;&#160;<a class="el" href="group___s_t_a_t_u_s.html#ga31cdba26c01a1735a1727e3c59010ec7">status_set</a>( m, <a class="el" href="status__defs_8h.html#a82842307f70d50e4789b932745aaf23da6d9b5ac9f3008129cda4b6a2b00b7a06">osapi_status_library_c</a>,     f, e, r )</td></tr>
+#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="status__defs_8h.html#aaea5600993ad3666b9867c99605af7c1">status_eset</a>(m,  f,  e,  r)&#160;&#160;&#160;<a class="el" href="status__macros_8h.html#a8bf86669252f67c0b9adee9f3e9758cd">status_set</a>( m, <a class="el" href="status__defs_8h.html#a82842307f70d50e4789b932745aaf23da6d9b5ac9f3008129cda4b6a2b00b7a06">osapi_status_library_c</a>,     f, e, r )</td></tr>
 <tr class="memdesc:aaea5600993ad3666b9867c99605af7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set status type with C library information. <br /></td></tr>
 <tr class="separator:aaea5600993ad3666b9867c99605af7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -149,144 +129,7 @@ Enumerations</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>File providing definitions for the status module. </p>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a3a925cb09d30445ac088cbc175a08cb5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a925cb09d30445ac088cbc175a08cb5">&#9670;&nbsp;</a></span>status_error</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_error</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">s, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">e&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;( s.code == e )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Match a given error. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the error code in s is equal to the error e </dd></dl>
-
-</div>
-</div>
-<a id="a15b01f063b127de8001c8d37d7025923"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a15b01f063b127de8001c8d37d7025923">&#9670;&nbsp;</a></span>status_failure</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_failure</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;( x.code != 0 )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns true if the operation that returned x failed. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if failed, False otherwise </dd></dl>
-
-</div>
-</div>
-<a id="ac8ca18eaf3a89a7d6c210f30dde2fa08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac8ca18eaf3a89a7d6c210f30dde2fa08">&#9670;&nbsp;</a></span>status_false</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_false</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;( <a class="el" href="status__defs_8h.html#ad2e71e1e20131e4a8404742c5df4b0d6">status_success</a>( x ) ? 1 : 0 )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if the status result of the operation is true. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if status x failed. False otherwise </dd></dl>
-
-</div>
-</div>
-<a id="ad2e71e1e20131e4a8404742c5df4b0d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2e71e1e20131e4a8404742c5df4b0d6">&#9670;&nbsp;</a></span>status_success</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_success</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;( x.code == 0 )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns true if the operation that returned x was successful. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if success, False otherwise </dd></dl>
-
-</div>
-</div>
-<a id="a038ffc69d3e7f6a5beb9ea394d59c2da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a038ffc69d3e7f6a5beb9ea394d59c2da">&#9670;&nbsp;</a></span>status_true</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_true</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">x</td><td>)</td>
-          <td>&#160;&#160;&#160;( <a class="el" href="status__defs_8h.html#a15b01f063b127de8001c8d37d7025923">status_failure</a>( x ) ? 0 : 1 )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Check if the status result of the operation is true. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the status x was successful. False otherwise </dd></dl>
-
-</div>
-</div>
-<a id="afad73750d233b4264dc0c88363dd8a99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afad73750d233b4264dc0c88363dd8a99">&#9670;&nbsp;</a></span>status_unsupported</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define status_unsupported</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">s</td><td>)</td>
-          <td>&#160;&#160;&#160;( s.code == OSAPI_ERROR_SUPPORT )</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Find if a module or facility is supported. </p>
-<dl class="section return"><dt>Returns</dt><dd>True if the error code is equal to UNSUPPORTED. False otherwise </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a82842307f70d50e4789b932745aaf23d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a82842307f70d50e4789b932745aaf23d">&#9670;&nbsp;</a></span>osapi_status_e_library_id</h2>
 

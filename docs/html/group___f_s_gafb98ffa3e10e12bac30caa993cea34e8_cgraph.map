@@ -1,5 +1,4 @@
 <map id="fs_link_close" name="fs_link_close">
-<area shape="rect" id="node1" title="Close a link." alt="" coords="5,31,112,57"/>
+<area shape="rect" id="node1" title="Close a link." alt="" coords="5,5,112,32"/>
 <area shape="rect" id="node2" href="$group___f_s.html#ga08b0a39d1f5d0305bdcf9448e94c37ea" title="Close a file system element descriptor." alt="" coords="160,5,296,32"/>
-<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="344,31,447,57"/>
 </map>

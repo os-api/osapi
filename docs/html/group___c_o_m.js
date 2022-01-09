@@ -19,10 +19,10 @@ var group___c_o_m =
     [ "com_semaphore_create", "group___c_o_m.html#gaf357d2124345b443d27e28eaca769138", null ],
     [ "com_semaphore_destroy", "group___c_o_m.html#gaae4351286ce0ed417c5531f56cdcf53f", null ],
     [ "com_semaphore_getValue", "group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1", null ],
-    [ "com_semaphore_lock", "group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2", null ],
+    [ "com_semaphore_lock", "group___c_o_m.html#gada6f310d7b8af4e0a5b97a28e8589171", null ],
     [ "com_semaphore_open", "group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0", null ],
     [ "com_semaphore_supported", "group___c_o_m.html#gaba7dbc438706f0a194ad902cb1dfbdbb", null ],
-    [ "com_semaphore_unlock", "group___c_o_m.html#ga467a528ef56f90806497db699ab592d2", null ],
+    [ "com_semaphore_unlock", "group___c_o_m.html#ga31547b225836b4b5cfa5c3230c46be38", null ],
     [ "com_tcp_create", "group___c_o_m.html#ga79dd2a3461c75dc3e88c7a884e88d3fb", null ],
     [ "com_tcp_destroy", "group___c_o_m.html#gacbe543ce70d78fb6f89d31a4ac6e59f6", null ]
 ];

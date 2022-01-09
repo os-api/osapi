@@ -9,6 +9,7 @@ var group___o_s_a_p_i =
     [ "LOG", "group___l_o_g.html", "group___l_o_g" ],
     [ "MACHINE", "group___m_a_c_h_i_n_e.html", "group___m_a_c_h_i_n_e" ],
     [ "OS", "group___o_s.html", "group___o_s" ],
+    [ "PARALLEL", "group___p_a_r_a_l_l_e_l.html", "group___p_a_r_a_l_l_e_l" ],
     [ "PROC", "group___p_r_o_c.html", "group___p_r_o_c" ],
     [ "SEC", "group___s_e_c.html", "group___s_e_c" ],
     [ "STATUS", "group___s_t_a_t_u_s.html", "group___s_t_a_t_u_s" ],

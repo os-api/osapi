@@ -1,5 +1,7 @@
 var group___m_a_c_h_i_n_e =
 [
+    [ "internal_cpu_amd_getFeatures", "group___m_a_c_h_i_n_e.html#ga8bc76e95dc628b9bf4bbe4779cccbbce", null ],
+    [ "internal_cpu_intel_getFeatures", "group___m_a_c_h_i_n_e.html#ga7b46b8079eb27f97ffb732aec021ed11", null ],
     [ "machine_cpu_getArch", "group___m_a_c_h_i_n_e.html#ga2c65ebd501eafc8bfcfe5844d2b4669f", null ],
     [ "machine_cpu_getEndian", "group___m_a_c_h_i_n_e.html#gaca4faaba1e8f050aa3980c652648e86f", null ],
     [ "machine_cpu_getEndianString", "group___m_a_c_h_i_n_e.html#gaec6584d9edde71814d040f669ebc04db", null ],
@@ -18,6 +20,8 @@ var group___m_a_c_h_i_n_e =
     [ "machine_cpuVendor_getIDFromName", "group___m_a_c_h_i_n_e.html#ga8b26b7f2a21c63ab12b5a80ec4fd7a78", null ],
     [ "machine_cpuVendor_getName", "group___m_a_c_h_i_n_e.html#gaba1528456559c37e97d63076db614658", null ],
     [ "machine_cpuVendor_getNameFromId", "group___m_a_c_h_i_n_e.html#gab40095033fce7122f4f67f1d9f3f0901", null ],
+    [ "machine_device_getList", "group___m_a_c_h_i_n_e.html#ga709576c71e4d4c7d270c9f85066d89b1", null ],
+    [ "machine_device_getNumber", "group___m_a_c_h_i_n_e.html#ga2398b2f7ab24ab164b680279772b7adb", null ],
     [ "machine_domain_getName", "group___m_a_c_h_i_n_e.html#gaf03844695c691f19b2a475e7f3aecfba", null ],
     [ "machine_domain_setName", "group___m_a_c_h_i_n_e.html#ga46586abc3797db7ab784d254552f7f24", null ],
     [ "machine_host_getName", "group___m_a_c_h_i_n_e.html#gac653f5f7be3743a1ac70231bf04eed3e", null ],

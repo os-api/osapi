@@ -105,24 +105,24 @@ $(document).ready(function(){initNavTree('trace_8h_source.html',''); initResizab
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e">osapi_trace</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * func, <span class="keyword">const</span> <span class="keywordtype">char</span> * sep, uint64_t line, <span class="keyword">const</span> <span class="keywordtype">char</span> * fmt, ... );</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e">osapi_trace</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * func, <span class="keyword">const</span> <span class="keywordtype">char</span> * sep, uint64_t line, <span class="keyword">const</span> <span class="keywordtype">char</span> * fmt, ... );  <span class="comment">// This function will result in warnings from doxygen due to the ... param</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291">osapi_status_trace</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * func, uint64_t line, <a class="code" href="structosapi__status___s.html">t_status</a> st );</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">// End of header with C++ declaration</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OSAPI_TRACE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291">osapi_status_trace</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * func, uint64_t line, <a class="code" href="structosapi__status___s.html">t_status</a> st );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment">// End of header with C++ declaration</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OSAPI_TRACE_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructosapi__status___s_html"><div class="ttname"><a href="structosapi__status___s.html">osapi_status_S</a></div><div class="ttdoc">Definition of opaque status type.</div><div class="ttdef"><b>Definition:</b> status_types.h:56</div></div>
-<div class="ttc" id="agroup___s_t_a_t_u_s_html_gae385d0106de39caf72e99777f89b588e"><div class="ttname"><a href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e">osapi_trace</a></div><div class="ttdeci">void osapi_trace(const char *func, const char *sep, uint64_t line, const char *fmt,...)</div><div class="ttdoc">OSAPI C Trace function The functions sends the output to standard error.</div><div class="ttdef"><b>Definition:</b> general.c:111</div></div>
-<div class="ttc" id="agroup___s_t_a_t_u_s_html_ga739a8be8c90a5a27a5f92387c958f291"><div class="ttname"><a href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291">osapi_status_trace</a></div><div class="ttdeci">void osapi_status_trace(const char *func, uint64_t line, t_status st)</div><div class="ttdoc">OSAPI C Trace function The functions sends the output to standard error.</div><div class="ttdef"><b>Definition:</b> status.c:183</div></div>
+<div class="ttc" id="agroup___s_t_a_t_u_s_html_gae385d0106de39caf72e99777f89b588e"><div class="ttname"><a href="group___s_t_a_t_u_s.html#gae385d0106de39caf72e99777f89b588e">osapi_trace</a></div><div class="ttdeci">void osapi_trace(const char *func, const char *sep, uint64_t line, const char *fmt,...)</div><div class="ttdoc">OSAPI C Trace function - This function sends the output to standard error.</div><div class="ttdef"><b>Definition:</b> general.c:111</div></div>
+<div class="ttc" id="agroup___s_t_a_t_u_s_html_ga739a8be8c90a5a27a5f92387c958f291"><div class="ttname"><a href="group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291">osapi_status_trace</a></div><div class="ttdeci">void osapi_status_trace(const char *func, uint64_t line, t_status st)</div><div class="ttdoc">OSAPI C General Trace function - The function sends the output to standard error.</div><div class="ttdef"><b>Definition:</b> status.c:199</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

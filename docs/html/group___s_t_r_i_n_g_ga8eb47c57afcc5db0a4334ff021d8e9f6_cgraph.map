@@ -1,6 +1,5 @@
 <map id="string_basic_clone" name="string_basic_clone">
 <area shape="rect" id="node1" title="Clone an OSAPI string." alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="588,31,691,57"/>
-<area shape="rect" id="node3" href="$group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string." alt="" coords="196,31,344,57"/>
-<area shape="rect" id="node4" href="$group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string." alt="" coords="392,81,540,108"/>
+<area shape="rect" id="node2" href="$group___s_t_r_i_n_g.html#ga8efcc29facb1b40a63ef724e5500aa5e" title="Create a new OSAPI string based on a C string." alt="" coords="196,5,344,32"/>
+<area shape="rect" id="node3" href="$group___s_t_r_i_n_g.html#ga91f06c9e6cd81a11363a22d97c3452cf" title="Delete an OSAPI string." alt="" coords="392,5,540,32"/>
 </map>

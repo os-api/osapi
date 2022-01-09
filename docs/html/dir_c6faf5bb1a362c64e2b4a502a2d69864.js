@@ -5,6 +5,7 @@ var dir_c6faf5bb1a362c64e2b4a502a2d69864 =
     [ "posix", "dir_c31e06de69ae7bc1f0a97e5f36b4b06d.html", "dir_c31e06de69ae7bc1f0a97e5f36b4b06d" ],
     [ "machine.h", "machine_8h_source.html", null ],
     [ "machine_cpu.h", "machine__cpu_8h_source.html", null ],
+    [ "machine_device.h", "machine__device_8h_source.html", null ],
     [ "machine_domain.h", "machine__domain_8h_source.html", null ],
     [ "machine_host.h", "machine__host_8h_source.html", null ],
     [ "machine_ip.h", "machine__ip_8h_source.html", null ],

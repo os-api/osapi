@@ -1,7 +1,6 @@
 var dir_955ac4e97693c532650a62732ee014c2 =
 [
     [ "linux", "dir_6744c59418960fc9e1bc96342f5bf29c.html", "dir_6744c59418960fc9e1bc96342f5bf29c" ],
-    [ "mappings", "dir_31f5c2386ee2d3378f7c0e93647883f1.html", "dir_31f5c2386ee2d3378f7c0e93647883f1" ],
     [ "posix", "dir_20540808685da1fc67c2c8f53cb7478e.html", "dir_20540808685da1fc67c2c8f53cb7478e" ],
     [ "type", "dir_ced85d10070a9254059200619fea0fcc.html", "dir_ced85d10070a9254059200619fea0fcc" ],
     [ "proc.h", "proc_8h_source.html", null ],

@@ -1,0 +1,4 @@
+<map id="status_message_retrieve" name="status_message_retrieve">
+<area shape="rect" id="node1" title="Get the status information into a message string." alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gac442b6fb2467970ffa6e9d1d5e2dc0f5" title="Reset the status type." alt="" coords="240,5,403,32"/>
+</map>

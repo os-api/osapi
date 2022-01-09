@@ -87,60 +87,63 @@ $(document).ready(function(){initNavTree('com__ipc_8h_source.html',''); initResi
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Generic OSAPI includes</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;general/general.h&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;status/status_types.h&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// Own declarations</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;com/com_platform.h&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;com/com_types.h&quot;</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// Section: Module API for IPC</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#pragma GCC visibility push(default)        // Start of public interface</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// Functions dealing with semaphores</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaba7dbc438706f0a194ad902cb1dfbdbb">com_semaphore_supported</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaf357d2124345b443d27e28eaca769138">com_semaphore_create</a>( key_t key, <span class="keywordtype">int</span> sem_value, <span class="keywordtype">int</span> sem_options, <span class="keywordtype">int</span> * semid );</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaae4351286ce0ed417c5531f56cdcf53f">com_semaphore_destroy</a>( <span class="keywordtype">int</span> semid );</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0">com_semaphore_open</a>( key_t key, <span class="keywordtype">int</span> * semid );</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2">com_semaphore_lock</a>( <span class="keywordtype">int</span> semid );</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#ga467a528ef56f90806497db699ab592d2">com_semaphore_unlock</a>( <span class="keywordtype">int</span> semid );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1">com_semaphore_getValue</a>( <span class="keywordtype">int</span> semid, <span class="keywordtype">int</span> * <a class="code" href="structosapi__clock___s.html#ad15578a95bbd7f600db26189e9e85610">value</a> );</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#pragma GCC visibility pop          // End of public interface</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Import Standard C headers</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">// Generic OSAPI includes</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;general/general.h&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;status/status_types.h&quot;</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Own declarations</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#include &quot;com/com_platform.h&quot;</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#include &quot;com/com_types.h&quot;</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// Section: Module API for IPC</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">// *****************************************************************************************</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#pragma GCC visibility push(default)        // Start of public interface</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// Functions dealing with semaphores</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaba7dbc438706f0a194ad902cb1dfbdbb">com_semaphore_supported</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaf357d2124345b443d27e28eaca769138">com_semaphore_create</a>( key_t key, <span class="keywordtype">int</span> sem_value, <span class="keywordtype">int</span> sem_options, <span class="keywordtype">int</span> * semid );</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gaae4351286ce0ed417c5531f56cdcf53f">com_semaphore_destroy</a>( <span class="keywordtype">int</span> semid );</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0">com_semaphore_open</a>( key_t key, <span class="keywordtype">int</span> * semid );</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#gada6f310d7b8af4e0a5b97a28e8589171">com_semaphore_lock</a>( <span class="keywordtype">int</span> semid, <span class="keywordtype">bool</span> wait );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#ga31547b225836b4b5cfa5c3230c46be38">com_semaphore_unlock</a>( <span class="keywordtype">int</span> semid, <span class="keywordtype">bool</span> wait );</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<a class="code" href="structosapi__status___s.html">t_status</a> <a class="code" href="group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1">com_semaphore_getValue</a>( <span class="keywordtype">int</span> semid, <span class="keywordtype">int</span> * <a class="code" href="structosapi__clock___s.html#ad15578a95bbd7f600db26189e9e85610">value</a> );</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment">// End of header with C++ declaration</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="preprocessor">#pragma GCC visibility pop          // End of public interface</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OSAPI_COM_IPC_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">// End of header with C++ declaration</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* OSAPI_COM_IPC_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="astructosapi__status___s_html"><div class="ttname"><a href="structosapi__status___s.html">osapi_status_S</a></div><div class="ttdoc">Definition of opaque status type.</div><div class="ttdef"><b>Definition:</b> status_types.h:56</div></div>
-<div class="ttc" id="agroup___c_o_m_html_gafeeede53af9d6a37b1c8f8d4a6d579a2"><div class="ttname"><a href="group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2">com_semaphore_lock</a></div><div class="ttdeci">t_status com_semaphore_lock(int semid)</div><div class="ttdoc">Locks a given semaphore.</div></div>
 <div class="ttc" id="agroup___c_o_m_html_ga80fcdeafd1f52ad6bbddccfcf520f6b1"><div class="ttname"><a href="group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1">com_semaphore_getValue</a></div><div class="ttdeci">t_status com_semaphore_getValue(int semid, int *value)</div><div class="ttdoc">Obtains the semaphore value that corresponds to the given ID.</div></div>
 <div class="ttc" id="agroup___c_o_m_html_gaba7dbc438706f0a194ad902cb1dfbdbb"><div class="ttname"><a href="group___c_o_m.html#gaba7dbc438706f0a194ad902cb1dfbdbb">com_semaphore_supported</a></div><div class="ttdeci">t_status com_semaphore_supported(void)</div><div class="ttdoc">Are semaphores supported in this platform ?</div></div>
+<div class="ttc" id="agroup___c_o_m_html_gada6f310d7b8af4e0a5b97a28e8589171"><div class="ttname"><a href="group___c_o_m.html#gada6f310d7b8af4e0a5b97a28e8589171">com_semaphore_lock</a></div><div class="ttdeci">t_status com_semaphore_lock(int semid, bool wait)</div><div class="ttdoc">Locks a given semaphore.</div></div>
 <div class="ttc" id="astructosapi__clock___s_html_ad15578a95bbd7f600db26189e9e85610"><div class="ttname"><a href="structosapi__clock___s.html#ad15578a95bbd7f600db26189e9e85610">osapi_clock_S::value</a></div><div class="ttdeci">t_time value</div><div class="ttdoc">Time value.</div><div class="ttdef"><b>Definition:</b> clock_type_clock.h:48</div></div>
 <div class="ttc" id="agroup___c_o_m_html_gaae4351286ce0ed417c5531f56cdcf53f"><div class="ttname"><a href="group___c_o_m.html#gaae4351286ce0ed417c5531f56cdcf53f">com_semaphore_destroy</a></div><div class="ttdeci">t_status com_semaphore_destroy(int semid)</div><div class="ttdoc">Destroys the semaphore identified by &quot;semid&quot;.</div></div>
 <div class="ttc" id="agroup___c_o_m_html_gacd9c20cbccd43c9394dde918d9766bd0"><div class="ttname"><a href="group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0">com_semaphore_open</a></div><div class="ttdeci">t_status com_semaphore_open(key_t key, int *semid)</div><div class="ttdoc">Returns the semaphore ID for the provided semaphore key.</div></div>
-<div class="ttc" id="agroup___c_o_m_html_ga467a528ef56f90806497db699ab592d2"><div class="ttname"><a href="group___c_o_m.html#ga467a528ef56f90806497db699ab592d2">com_semaphore_unlock</a></div><div class="ttdeci">t_status com_semaphore_unlock(int semid)</div><div class="ttdoc">Unlocks a given semaphore.</div></div>
+<div class="ttc" id="agroup___c_o_m_html_ga31547b225836b4b5cfa5c3230c46be38"><div class="ttname"><a href="group___c_o_m.html#ga31547b225836b4b5cfa5c3230c46be38">com_semaphore_unlock</a></div><div class="ttdeci">t_status com_semaphore_unlock(int semid, bool wait)</div><div class="ttdoc">Unlocks a given semaphore.</div></div>
 <div class="ttc" id="agroup___c_o_m_html_gaf357d2124345b443d27e28eaca769138"><div class="ttname"><a href="group___c_o_m.html#gaf357d2124345b443d27e28eaca769138">com_semaphore_create</a></div><div class="ttdeci">t_status com_semaphore_create(key_t key, int sem_value, int sem_options, int *semid)</div><div class="ttdoc">Create an IPC semaphore.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

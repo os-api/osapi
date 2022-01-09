@@ -1,4 +1,5 @@
 <map id="status_module_get" name="status_module_get">
-<area shape="rect" id="node1" title="Get the module name that corresponds to the provided status information." alt="" coords="5,5,152,32"/>
-<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#gaf3678f45b1079ac3a801e587c1153aad" title="Get the module string." alt="" coords="200,5,341,32"/>
+<area shape="rect" id="node1" title="Get the module name that corresponds to the provided status information." alt="" coords="5,31,152,57"/>
+<area shape="rect" id="node2" href="$group___g_e_n_e_r_a_l.html#gaf3678f45b1079ac3a801e587c1153aad" title="Get the module string." alt="" coords="211,5,352,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#gac442b6fb2467970ffa6e9d1d5e2dc0f5" title="Reset the status type." alt="" coords="200,56,363,83"/>
 </map>

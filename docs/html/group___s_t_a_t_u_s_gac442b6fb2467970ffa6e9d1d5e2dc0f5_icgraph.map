@@ -1,0 +1,9 @@
+<map id="status_instance_clear" name="status_instance_clear">
+<area shape="rect" id="node1" title="Reset the status type." alt="" coords="432,107,595,133"/>
+<area shape="rect" id="node2" href="$group___s_t_a_t_u_s.html#gafc869841e3c3e9bb119e79662b2f3ddd" title="Get the function name that corresponds to the provided status information." alt="" coords="215,5,366,32"/>
+<area shape="rect" id="node3" href="$group___s_t_a_t_u_s.html#ga085ee1b36a421b1d4ccf1c299104b3a4" title="Get the error message that corresponds to the provided status information." alt="" coords="213,56,369,83"/>
+<area shape="rect" id="node5" href="$group___s_t_a_t_u_s.html#ga188dfc0f7572f604958201a1117b6d2d" title="Write a message with the status information to Standard output." alt="" coords="208,107,373,133"/>
+<area shape="rect" id="node6" href="$group___s_t_a_t_u_s.html#ga7c15f90d430934ede9b1ac5573a268ba" title="Get the status information into a message string." alt="" coords="197,157,384,184"/>
+<area shape="rect" id="node7" href="$group___s_t_a_t_u_s.html#gae986d7e1130de5edc7ec4e5ba5d8fefe" title="Get the module name that corresponds to the provided status information." alt="" coords="217,208,364,235"/>
+<area shape="rect" id="node4" href="$group___s_t_a_t_u_s.html#ga739a8be8c90a5a27a5f92387c958f291" title="OSAPI C General Trace function &#45; The function sends the output to standard error." alt="" coords="5,56,149,83"/>
+</map>

@@ -8,6 +8,7 @@ var dir_64b9227894ab0b67831f037353c114f1 =
     [ "error_log.h", "error__log_8h_source.html", null ],
     [ "error_machine.h", "error__machine_8h_source.html", null ],
     [ "error_os.h", "error__os_8h_source.html", null ],
+    [ "error_parallel.h", "error__parallel_8h_source.html", null ],
     [ "error_proc.h", "error__proc_8h_source.html", null ],
     [ "error_sec.h", "error__sec_8h_source.html", null ],
     [ "error_string.h", "error__string_8h_source.html", null ],

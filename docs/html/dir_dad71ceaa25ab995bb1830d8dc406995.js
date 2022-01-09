@@ -9,6 +9,7 @@ var dir_dad71ceaa25ab995bb1830d8dc406995 =
     [ "error_priv_log.h", "error__priv__log_8h_source.html", null ],
     [ "error_priv_machine.h", "error__priv__machine_8h_source.html", null ],
     [ "error_priv_os.h", "error__priv__os_8h_source.html", null ],
+    [ "error_priv_parallel.h", "error__priv__parallel_8h_source.html", null ],
     [ "error_priv_proc.h", "error__priv__proc_8h_source.html", null ],
     [ "error_priv_sec.h", "error__priv__sec_8h_source.html", null ],
     [ "error_priv_string.h", "error__priv__string_8h_source.html", null ],

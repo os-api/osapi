@@ -141,12 +141,12 @@ Functions</h2></td></tr>
 <tr class="memitem:gacd9c20cbccd43c9394dde918d9766bd0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0">com_semaphore_open</a> (key_t key, int *semid)</td></tr>
 <tr class="memdesc:gacd9c20cbccd43c9394dde918d9766bd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the semaphore ID for the provided semaphore key.  <a href="group___c_o_m.html#gacd9c20cbccd43c9394dde918d9766bd0">More...</a><br /></td></tr>
 <tr class="separator:gacd9c20cbccd43c9394dde918d9766bd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafeeede53af9d6a37b1c8f8d4a6d579a2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2">com_semaphore_lock</a> (int semid)</td></tr>
-<tr class="memdesc:gafeeede53af9d6a37b1c8f8d4a6d579a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks a given semaphore.  <a href="group___c_o_m.html#gafeeede53af9d6a37b1c8f8d4a6d579a2">More...</a><br /></td></tr>
-<tr class="separator:gafeeede53af9d6a37b1c8f8d4a6d579a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga467a528ef56f90806497db699ab592d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#ga467a528ef56f90806497db699ab592d2">com_semaphore_unlock</a> (int semid)</td></tr>
-<tr class="memdesc:ga467a528ef56f90806497db699ab592d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks a given semaphore.  <a href="group___c_o_m.html#ga467a528ef56f90806497db699ab592d2">More...</a><br /></td></tr>
-<tr class="separator:ga467a528ef56f90806497db699ab592d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gada6f310d7b8af4e0a5b97a28e8589171"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#gada6f310d7b8af4e0a5b97a28e8589171">com_semaphore_lock</a> (int semid, bool wait)</td></tr>
+<tr class="memdesc:gada6f310d7b8af4e0a5b97a28e8589171"><td class="mdescLeft">&#160;</td><td class="mdescRight">Locks a given semaphore.  <a href="group___c_o_m.html#gada6f310d7b8af4e0a5b97a28e8589171">More...</a><br /></td></tr>
+<tr class="separator:gada6f310d7b8af4e0a5b97a28e8589171"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga31547b225836b4b5cfa5c3230c46be38"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#ga31547b225836b4b5cfa5c3230c46be38">com_semaphore_unlock</a> (int semid, bool wait)</td></tr>
+<tr class="memdesc:ga31547b225836b4b5cfa5c3230c46be38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlocks a given semaphore.  <a href="group___c_o_m.html#ga31547b225836b4b5cfa5c3230c46be38">More...</a><br /></td></tr>
+<tr class="separator:ga31547b225836b4b5cfa5c3230c46be38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga80fcdeafd1f52ad6bbddccfcf520f6b1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1">com_semaphore_getValue</a> (int semid, int *value)</td></tr>
 <tr class="memdesc:ga80fcdeafd1f52ad6bbddccfcf520f6b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtains the semaphore value that corresponds to the given ID.  <a href="group___c_o_m.html#ga80fcdeafd1f52ad6bbddccfcf520f6b1">More...</a><br /></td></tr>
 <tr class="separator:ga80fcdeafd1f52ad6bbddccfcf520f6b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -600,15 +600,6 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___c_o_m_gaef859d00ff20eae6672555651beca756_cgraph.png" border="0" usemap="#group___c_o_m_gaef859d00ff20eae6672555651beca756_cgraph" alt=""/></div>
-<map name="group___c_o_m_gaef859d00ff20eae6672555651beca756_cgraph" id="group___c_o_m_gaef859d00ff20eae6672555651beca756_cgraph">
-<area shape="rect" title="Verify if the IP is of type broadcast." alt="" coords="5,5,157,32"/>
-<area shape="rect" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="205,5,308,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -647,15 +638,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___c_o_m_gadd441a4281550fdaa36153287caa279a_cgraph.png" border="0" usemap="#group___c_o_m_gadd441a4281550fdaa36153287caa279a_cgraph" alt=""/></div>
-<map name="group___c_o_m_gadd441a4281550fdaa36153287caa279a_cgraph" id="group___c_o_m_gadd441a4281550fdaa36153287caa279a_cgraph">
-<area shape="rect" title="Verify if the IP is of type Point to Point." alt="" coords="5,5,116,32"/>
-<area shape="rect" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="164,5,267,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -694,15 +676,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___c_o_m_gac1e032be250cc6d1e7f9996d1163c939_cgraph.png" border="0" usemap="#group___c_o_m_gac1e032be250cc6d1e7f9996d1163c939_cgraph" alt=""/></div>
-<map name="group___c_o_m_gac1e032be250cc6d1e7f9996d1163c939_cgraph" id="group___c_o_m_gac1e032be250cc6d1e7f9996d1163c939_cgraph">
-<area shape="rect" title="Verify if the IP is Version 4." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="157,5,260,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -741,15 +714,6 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Operation status </dd></dl>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="group___c_o_m_gadbb1b3e62357e8c0daa39c8f8ad51573_cgraph.png" border="0" usemap="#group___c_o_m_gadbb1b3e62357e8c0daa39c8f8ad51573_cgraph" alt=""/></div>
-<map name="group___c_o_m_gadbb1b3e62357e8c0daa39c8f8ad51573_cgraph" id="group___c_o_m_gadbb1b3e62357e8c0daa39c8f8ad51573_cgraph">
-<area shape="rect" title="Verify if the IP is Version 6." alt="" coords="5,5,109,32"/>
-<area shape="rect" href="group___s_t_a_t_u_s.html#gacc5842d4f429b285ca633b21ddfbbcbc" title="Reset the status type." alt="" coords="157,5,260,32"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -891,8 +855,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="gafeeede53af9d6a37b1c8f8d4a6d579a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafeeede53af9d6a37b1c8f8d4a6d579a2">&#9670;&nbsp;</a></span>com_semaphore_lock()</h2>
+<a id="gada6f310d7b8af4e0a5b97a28e8589171"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gada6f310d7b8af4e0a5b97a28e8589171">&#9670;&nbsp;</a></span>com_semaphore_lock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -901,8 +865,18 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a> com_semaphore_lock </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>semid</em></td><td>)</td>
+          <td class="paramname"><em>semid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -911,6 +885,7 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">semid</td><td>- Semaphore ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait</td><td>- Block until semaphore lock is acquired </td></tr>
   </table>
   </dd>
 </dl>
@@ -977,8 +952,8 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a id="ga467a528ef56f90806497db699ab592d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga467a528ef56f90806497db699ab592d2">&#9670;&nbsp;</a></span>com_semaphore_unlock()</h2>
+<a id="ga31547b225836b4b5cfa5c3230c46be38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga31547b225836b4b5cfa5c3230c46be38">&#9670;&nbsp;</a></span>com_semaphore_unlock()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -987,8 +962,18 @@ Here is the call graph for this function:</div>
           <td class="memname"><a class="el" href="group___s_t_a_t_u_s.html#ga0089b901306bbc29df79265a254b10cf">t_status</a> com_semaphore_unlock </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>semid</em></td><td>)</td>
+          <td class="paramname"><em>semid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>wait</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -997,6 +982,7 @@ Here is the call graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">semid</td><td>- Semaphore ID </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">wait</td><td>- Block until semaphore lock is released </td></tr>
   </table>
   </dd>
 </dl>

@@ -1,4 +1,4 @@
 <map id="osapi_machine_vm_s" name="osapi_machine_vm_s">
-<area shape="rect" id="node1" title=" " alt="" coords="29,95,192,121"/>
-<area shape="rect" id="node2" href="$structosapi__machine__hypervisor__s.html" title="&lt; Hypervisor description type" alt="" coords="5,5,216,32"/>
+<area shape="rect" id="node1" title="Virtual Machine description." alt="" coords="29,95,192,121"/>
+<area shape="rect" id="node2" href="$structosapi__machine__hypervisor__s.html" title="Hypervisor description type." alt="" coords="5,5,216,32"/>
 </map>
