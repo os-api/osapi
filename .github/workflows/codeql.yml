@@ -29,14 +29,15 @@ jobs:
       actions: read
       contents: read
       security-events: write
-          
+    
     strategy:
       fail-fast: false
       matrix:
         language: [ 'cpp' ]
         # CodeQL supports [ 'cpp', 'csharp', 'go', 'java', 'javascript', 'python', 'ruby' ]
         # Learn more about CodeQL language support at https://aka.ms/codeql-docs/language-support
-        
+                    
+
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
@@ -67,9 +68,9 @@ jobs:
 
     - run: |
        echo "Run, Build Application using script"
+       echo "OSAPI_DIR=$GITHUB_WORKSPACE" > makefile.init
+       more makefile.init
        cd Release; make
-       env:
-            OSAPI_DIR=$GITHUB_WORKSPACE
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v2
